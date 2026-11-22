@@ -1,0 +1,3 @@
+2026-11-22 17:45:02: unit esr-ag-lrv-k1.service was stopped by the memory guard.
+Reason: memory 3381 MB reached its limit (3500 MB)
+Resize the job (fewer workers, smaller CNFs, cubes, streaming, compiled code) before restarting it.

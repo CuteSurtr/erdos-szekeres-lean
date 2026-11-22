@@ -1,0 +1,26 @@
+comp_audit: 2026-11-21T21:03:29Z sources ok
+comp_audit: 2026-11-21T21:03:31Z pins ok (1.7 s)
+comp_audit: 2026-11-21T21:03:31Z start esr-ag-lcmp-LemmaZ ({'tctl': 85.6, 'ag_mb': 401, 'esr_mb': 18126})
+comp_audit: 2026-11-21T21:03:40Z done esr-ag-lcmp-LemmaZ: lean_rc 0, wall 0:09.49, max RSS 3767 MB, cgroup peak 1053 MB, anon peak 909 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:03:40Z start esr-ag-lcmp-BalancedBudgetsZ ({'tctl': 85.0, 'ag_mb': 401, 'esr_mb': 20089})
+comp_audit: 2026-11-21T21:03:45Z done esr-ag-lcmp-BalancedBudgetsZ: lean_rc 0, wall 0:04.45, max RSS 3164 MB, cgroup peak 327 MB, anon peak 238 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:03:45Z start esr-ag-lcmp-FixedStatesZ ({'tctl': 85.2, 'ag_mb': 400, 'esr_mb': 20064})
+comp_audit: 2026-11-21T21:03:54Z done esr-ag-lcmp-FixedStatesZ: lean_rc 0, wall 0:08.76, max RSS 3592 MB, cgroup peak 767 MB, anon peak 683 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:03:54Z waiting: YIELD False, Tctl 86.6 C, ag 445 MB, esr 20066 MB
+comp_audit: 2026-11-21T21:04:54Z start esr-ag-lcmp-LemmaZStar ({'tctl': 85.9, 'ag_mb': 433, 'esr_mb': 19843})
+comp_audit: 2026-11-21T21:05:04Z done esr-ag-lcmp-LemmaZStar: lean_rc 0, wall 0:09.55, max RSS 3776 MB, cgroup peak 1050 MB, anon peak 909 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:05:04Z start esr-ag-lcmp-BalancedBudgetsZZs ({'tctl': 85.5, 'ag_mb': 464, 'esr_mb': 19885})
+comp_audit: 2026-11-21T21:05:08Z done esr-ag-lcmp-BalancedBudgetsZZs: lean_rc 0, wall 0:03.93, max RSS 3156 MB, cgroup peak 327 MB, anon peak 230 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:05:08Z start esr-ag-lcmp-BalancedBudgetsZZsN ({'tctl': 84.5, 'ag_mb': 464, 'esr_mb': 20848})
+comp_audit: 2026-11-21T21:05:13Z done esr-ag-lcmp-BalancedBudgetsZZsN: lean_rc 0, wall 0:05.40, max RSS 3156 MB, cgroup peak 329 MB, anon peak 237 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:05:13Z start esr-ag-lcmp-Composition305 ({'tctl': 84.8, 'ag_mb': 465, 'esr_mb': 19773})
+comp_audit: 2026-11-21T21:05:17Z done esr-ag-lcmp-Composition305: lean_rc 0, wall 0:03.86, max RSS 3094 MB, cgroup peak 320 MB, anon peak 231 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:05:17Z start esr-ag-lcmp-Composition304 ({'tctl': 85.0, 'ag_mb': 465, 'esr_mb': 19698})
+comp_audit: 2026-11-21T21:05:21Z done esr-ag-lcmp-Composition304: lean_rc 0, wall 0:03.69, max RSS 3101 MB, cgroup peak 316 MB, anon peak 226 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:05:21Z start esr-ag-lcmp-Composition303 ({'tctl': 85.0, 'ag_mb': 465, 'esr_mb': 20255})
+comp_audit: 2026-11-21T21:05:25Z done esr-ag-lcmp-Composition303: lean_rc 0, wall 0:03.88, max RSS 3101 MB, cgroup peak 313 MB, anon peak 226 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:05:25Z start esr-ag-lcmp-Composition306 ({'tctl': 84.6, 'ag_mb': 466, 'esr_mb': 20439})
+comp_audit: 2026-11-21T21:05:29Z done esr-ag-lcmp-Composition306: lean_rc 0, wall 0:03.21, max RSS 3100 MB, cgroup peak 313 MB, anon peak 225 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:05:29Z start esr-ag-lcmp-audit ({'tctl': 84.4, 'ag_mb': 467, 'esr_mb': 19919})
+comp_audit: 2026-11-21T21:05:47Z done esr-ag-lcmp-audit: lean_rc 0, wall 0:17.77, max RSS 3152 MB, cgroup peak 321 MB, anon peak 233 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+comp_audit: 2026-11-21T21:05:51Z audit passed

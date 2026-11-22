@@ -1,0 +1,7 @@
+base rc=0 anon_shmem_max_mb=229 anon_max_mb=229 cgroup_peak_mb=317
+U2080 rc=0 anon_shmem_max_mb=272 anon_max_mb=272 cgroup_peak_mb=571
+/home/jay/research/data/formalize-20261122/s3520-gate/controls/rootmem/Base3520.log:	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.23
+/home/jay/research/data/formalize-20261122/s3520-gate/controls/rootmem/Base3520.log:	Maximum resident set size (kbytes): 3300716
+/home/jay/research/data/formalize-20261122/s3520-gate/logs/RS3520_U2080.log:	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.68
+/home/jay/research/data/formalize-20261122/s3520-gate/logs/RS3520_U2080.log:	Maximum resident set size (kbytes): 3686600
+'RS3520.U2080.root' depends on axioms: [propext, Classical.choice, Quot.sound]

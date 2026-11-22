@@ -1,0 +1,96 @@
+2c2,12
+< """res-slices-fv driver (22 Nov 2026): per slice catalog -> export -> chunk compiles -> Root -> Final, then the Res118
+---
+> """res-slices-fv driver v3 (s3520-gate, 22 Nov 2026): drive.py v2 (6259c258...) plus, for s35_20:
+>   - the SLICES entry of tag 3520 (bb-s1 master 71993a47..., extra de4bcceb..., 4,642 rows);
+>   - per-slice exporter keys: exporter (default tools/slice_export.py; 3520: tools/slice_export_v3.py, which needs
+>     tools/export_es310_w13l.py next to it), exp_args, exp_rt (RuntimeMaxSec), exp_tries, exp_mem (MemoryMax MB),
+>     exp_est (MB); per-slice join_mem / join_est / join_rt for the units that import the slice's whole chunk closure
+>     (its Root and Final, and the Res118 specialisation once the slice is done); start() takes MemoryMax and RuntimeMaxSec;
+>   - FVR_CEST="a,b": chunk compile estimate a + leaves // b MB (default "500,10", the v2 formula);
+>   - unit manifests are cached by mtime (about 3,000 manifests for 3520 are re-read every 15 s otherwise);
+>   - Python helpers run with -I -B (no __pycache__ in the repository's experiments directory).
+> Everything else is v2. v2's docstring follows.
+> res-slices-fv driver (22 Nov 2026): per slice catalog -> export -> chunk compiles -> Root -> Final, then the Res118
+45a56,66
+>     dict(tag="3520", B=35, T=20, master=f"{S}/runs/b35s20/bb-s1/master.json", ctx=f"{S}/runs/b35s20/bb-s1",
+>          extra=f"{S}/inputs/b35s20-v169/extra.json", rows="(Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA)",
+>          rw="rw [List.length_append, List.length_append, Res118.rows_lengths.1, Res118.rows_lengths.2.1, "
+>             "Res118.rows_lengths.2.2.2]",
+>          # a fresh exporter process every FVR_EXPSTOP s (default 1 h): its heap grows across units (gate: 705 MB fresh,
+>          # 1,189 MB after 20 units at ctx-4274); about 12 launches for the whole export
+>          exporter="tools/slice_export_v3.py", exp_args=["--stop-after", os.environ.get("FVR_EXPSTOP", "3600")],
+>          exp_rt=int(os.environ.get("FVR_EXPRT", "7200")), exp_tries=40,
+>          exp_mem=int(os.environ.get("FVR_EXPMEM", "3000")), exp_est=int(os.environ.get("FVR_EXPEST", "1500")),
+>          join_mem=int(os.environ.get("FVR_JOINMEM", "2000")), join_est=int(os.environ.get("FVR_JOINEST", "1500")),
+>          join_rt=int(os.environ.get("FVR_JOINRT", "21600"))),
+50a72,83
+> CEST_A, CEST_B = map(int, os.environ.get("FVR_CEST", "500,10").split(","))
+> RES = {}                                        # unit -> (MemoryMax MB, RuntimeMaxSec) when not (2000, 10800)
+> MANCACHE = {}                                   # manifest path -> (mtime_ns, [(stem, leaves)])
+> 
+> 
+> def man_modules(mf):
+>     st = os.stat(mf).st_mtime_ns
+>     c = MANCACHE.get(mf)
+>     if c is None or c[0] != st:
+>         c = MANCACHE[mf] = (st, [(m["module"].split(".")[-1], m["leaves"])
+>                                  for m in json.loads(Path(mf).read_text())["modules"]])
+>     return c[1]
+101c134
+< def start(unit, cmd, out=None):
+---
+> def start(unit, cmd, out=None, mem=2000, rt=10800):
+103c136
+<             "-p", "MemoryMax=2000M", "-p", "MemorySwapMax=0", "-p", "RuntimeMaxSec=10800", "--nice=10",
+---
+>             "-p", f"MemoryMax={mem}M", "-p", "MemorySwapMax=0", "-p", f"RuntimeMaxSec={rt}", "--nice=10",
+238,242c271,277
+<             if (nunits is None or len(mans) < nunits) and u_exp not in running and tries.get(u_exp, 0) < 3:
+<                 ready.append((u_exp, "exp", u_exp, 0, 1300,
+<                               [PY, "-I", str(D / "tools/slice_export.py"), tag, "--budget", str(s["B"]), "--master", s["master"],
+<                                "--ctxdir", s["ctx"], "--extra", s["extra"], "--out", str(ex), "--unit-leaves", str(UNIT_LEAVES),
+<                                "--chunk-leaves", str(CHUNK_LEAVES)], None, None, str(D / f"logs/exp{tag}")))
+---
+>             if (nunits is None or len(mans) < nunits) and u_exp not in running and tries.get(u_exp, 0) < s.get("exp_tries", 3):
+>                 RES[u_exp] = (s.get("exp_mem", 2000), s.get("exp_rt", 10800))
+>                 ready.append((u_exp, "exp", u_exp, 0, s.get("exp_est", 1300),
+>                               [PY, "-I", "-B", str(D / s.get("exporter", "tools/slice_export.py")), tag, "--budget", str(s["B"]),
+>                                "--master", s["master"], "--ctxdir", s["ctx"], "--extra", s["extra"], "--out", str(ex),
+>                                "--unit-leaves", str(UNIT_LEAVES), "--chunk-leaves", str(CHUNK_LEAVES), *s.get("exp_args", [])],
+>                               None, None, str(D / f"logs/exp{tag}")))
+247,248c282
+<                 for m in json.loads(Path(mf).read_text())["modules"]:
+<                     stem = m["module"].split(".")[-1]
+---
+>                 for stem, mleaves in man_modules(mf):
+254c288
+<                     ready.append((u, "c", stem + tag, m["leaves"], 500 + m["leaves"] // 10,
+---
+>                     ready.append((u, "c", stem + tag, mleaves, CEST_A + mleaves // CEST_B,
+262c296
+<                 r = subprocess.run([PY, "-I", str(D / "tools/root_slice.py"), str(ex)], capture_output=True, text=True)
+---
+>                 r = subprocess.run([PY, "-I", "-B", str(D / "tools/root_slice.py"), str(ex)], capture_output=True, text=True)
+267c301,302
+<                     ready.append((f"esr-fvr-r{tag}", "root", f"root{tag}", 0, 1500,
+---
+>                     RES[f"esr-fvr-r{tag}"] = (s.get("join_mem", 2000), s.get("join_rt", 10800))
+>                     ready.append((f"esr-fvr-r{tag}", "root", f"root{tag}", 0, s.get("join_est", 1500),
+274c309,310
+<                 ready.append((f"esr-fvr-f{tag}", "final", f"final{tag}", 0, 1200,
+---
+>                 RES[f"esr-fvr-f{tag}"] = (s.get("join_mem", 2000), s.get("join_rt", 10800))
+>                 ready.append((f"esr-fvr-f{tag}", "final", f"final{tag}", 0, s.get("join_est", 1200),
+286c322,326
+<             ready.insert(0, ("esr-fvr-spec", "spec", "spec:" + ",".join(sorted(done)), 0, 1500,
+---
+>             big = [s for s in SLICES if s["tag"] in done.values()]
+>             RES["esr-fvr-spec"] = (max([2000] + [s.get("join_mem", 2000) for s in big]),
+>                                    max([10800] + [s.get("join_rt", 10800) for s in big]))
+>             ready.insert(0, ("esr-fvr-spec", "spec", "spec:" + ",".join(sorted(done)), 0,
+>                              max([1500] + [s.get("join_est", 1500) for s in big]),
+320c360
+<             if start(unit, cmd, out):
+---
+>             if start(unit, cmd, out, *RES.get(unit, (2000, 10800))):

@@ -1,0 +1,23 @@
+/home/jay/research/data/formalize-20261122/res118-rowblocks/controls/BadSource.lean:18:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 0
+  g - h ≤ -1
+  f ≥ 0
+  f - g ≥ 1
+  f - h ≤ -1
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑↑(C.owner v)
+ b := ↑↑(C.owner u)
+ c := ↑n
+ d := ↑((ResidualDomains.shape ↑(states u)).getD 0 0)
+ f := ↑↑v
+ g := ↑↑u
+ h := ↑k

@@ -1,0 +1,77 @@
+2026-11-22 16:50:59 driver start (pid 2209300)
+2026-11-22 16:50:59 pins: start
+2026-11-22 16:51:02 pins: ok (2.8 s; 0 findings)
+2026-11-22 16:51:02 shadow: start
+2026-11-22 16:51:02 shadow: ok (0.3 s; 0 findings)
+2026-11-22 16:51:02 support: start
+2026-11-22 16:51:02 start esr-ag-fv4a-sup-FcatZ (src/CompactChecker/FcatZ.lean; gate {'yield': False, 'tctl': 85.4, 'cpu_free': 4, 'ag_mb': 190, 'esr_mb': 2033})
+2026-11-22 16:51:05 done esr-ag-fv4a-sup-FcatZ: lean_rc 0, wall 2.51 s, anon+shmem peak 289 MB, cgroup peak 377 MB, max RSS 3107 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 16:51:05 start esr-ag-fv4a-sup-BridgeZ (src/CompactChecker/BridgeZ.lean; gate {'yield': False, 'tctl': 85.0, 'cpu_free': 4, 'ag_mb': 329, 'esr_mb': 2172})
+2026-11-22 16:51:08 done esr-ag-fv4a-sup-BridgeZ: lean_rc 0, wall 2.89 s, anon+shmem peak 244 MB, cgroup peak 335 MB, max RSS 3147 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 16:51:08 support: ok (5.9 s; 0 findings)
+2026-11-22 16:51:08 res118: start
+2026-11-22 16:51:09 start esr-ag-fv4a-res-Rows (src/Res118/Rows.lean; gate {'yield': False, 'tctl': 84.6, 'cpu_free': 4, 'ag_mb': 101, 'esr_mb': 1948})
+2026-11-22 16:51:17 done esr-ag-fv4a-res-Rows: lean_rc 0, wall 8.67 s, anon+shmem peak 470 MB, cgroup peak 536 MB, max RSS 785 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 16:51:17 start esr-ag-fv4a-res-LemmaA (src/Res118/LemmaA.lean; gate {'yield': False, 'tctl': 84.6, 'cpu_free': 4, 'ag_mb': 23, 'esr_mb': 2423})
+2026-11-22 16:51:25 done esr-ag-fv4a-res-LemmaA: lean_rc 0, wall 7.84 s, anon+shmem peak 712 MB, cgroup peak 800 MB, max RSS 3589 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 16:53:26 start esr-ag-fv4a-res-Glue (src/Res118/Glue.lean; gate {'yield': False, 'tctl': 84.9, 'cpu_free': 5, 'ag_mb': 24, 'esr_mb': 1903})
+2026-11-22 16:53:38 done esr-ag-fv4a-res-Glue: lean_rc 0, wall 12.4 s, anon+shmem peak 1322 MB, cgroup peak 1401 MB, max RSS 4300 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 16:53:38 start esr-ag-fv4a-res-Final (src/Res118/Final.lean; gate {'yield': False, 'tctl': 85.4, 'cpu_free': 5, 'ag_mb': 24, 'esr_mb': 1907})
+2026-11-22 16:53:42 done esr-ag-fv4a-res-Final: lean_rc 0, wall 3.92 s, anon+shmem peak 329 MB, cgroup peak 418 MB, max RSS 3366 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 16:53:42 start esr-ag-fv4a-res-Compose304 (src/Res118/Compose304.lean; gate {'yield': False, 'tctl': 85.8, 'cpu_free': 2, 'ag_mb': 24, 'esr_mb': 1975})
+2026-11-22 16:53:45 done esr-ag-fv4a-res-Compose304: lean_rc 0, wall 2.95 s, anon+shmem peak 268 MB, cgroup peak 340 MB, max RSS 3328 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 16:53:46 res118: ok (157.2 s; 0 findings)
+2026-11-22 16:53:46 audit: start
+2026-11-22 16:53:46 start esr-ag-fv4a-audit (src/Audit.lean; gate {'yield': False, 'tctl': 84.4, 'cpu_free': 2, 'ag_mb': 1667, 'esr_mb': 3705})
+2026-11-22 17:04:30 done esr-ag-fv4a-audit: lean_rc 0, wall 643.78 s, anon+shmem peak 453 MB, cgroup peak 4002 MB, max RSS 14303 MB, events {'low': '0', 'high': '172838', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 17:04:30 FAILED: audit: ["audit: statement of E304Z.Final.forces_304_of_n66_res is not as expected: 'E304Z.Final.forces_304_of_n66_res (n66 : OmissionZRow.N66Bound 55)'"]
+2026-11-22 17:05:33 driver start (pid 2304234)
+2026-11-22 17:05:33 pins: done before (2026-11-22T07:51:02Z), skipped
+2026-11-22 17:05:33 shadow: done before (2026-11-22T07:51:02Z), skipped
+2026-11-22 17:05:33 support: done before (2026-11-22T07:51:08Z), skipped
+2026-11-22 17:05:33 res118: done before (2026-11-22T07:53:46Z), skipped
+2026-11-22 17:05:33 audit: start
+2026-11-22 17:05:33 audit: reusing the compile that ended 2026-11-22T08:04:30Z (same source sha256 and log, lean_rc 0)
+2026-11-22 17:05:33 audit: ok (0.0 s; 0 findings)
+2026-11-22 17:05:33 combined: start
+2026-11-22 17:05:53 driver stopped by hand (waiting at the gate before combined) to add a thermal gate before every step
+2026-11-22 17:07:28 driver start (pid 2312158)
+2026-11-22 17:07:28 pins: done before (2026-11-22T07:51:02Z), skipped
+2026-11-22 17:07:28 shadow: done before (2026-11-22T07:51:02Z), skipped
+2026-11-22 17:07:28 support: done before (2026-11-22T07:51:08Z), skipped
+2026-11-22 17:07:28 res118: done before (2026-11-22T07:53:46Z), skipped
+2026-11-22 17:07:28 audit: done before (2026-11-22T08:05:33Z), skipped
+2026-11-22 17:07:28 combined: start
+2026-11-22 17:07:28 start esr-ag-fv4a-combined (src/FV4A/Combined.lean; gate {'yield': False, 'tctl': 85.9, 'cpu_free': 4, 'ag_mb': 256, 'esr_mb': 2267})
+2026-11-22 17:12:50 done esr-ag-fv4a-combined: lean_rc 0, wall 321.68 s, anon+shmem peak 464 MB, cgroup peak 4002 MB, max RSS 17767 MB, events {'low': '0', 'high': '91822', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 17:12:50 combined: ok (322.2 s; 0 findings)
+2026-11-22 17:12:50 records: start
+2026-11-22 17:16:29 FAILED: records: ['E304Z.C634501: log C634501.log lean_rc 0, errors 0, axiom lines 0, standard True']
+2026-11-22 17:16:59 driver start (pid 2371973)
+2026-11-22 17:16:59 pins: done before (2026-11-22T07:51:02Z), skipped
+2026-11-22 17:16:59 shadow: done before (2026-11-22T07:51:02Z), skipped
+2026-11-22 17:16:59 support: done before (2026-11-22T07:51:08Z), skipped
+2026-11-22 17:16:59 res118: done before (2026-11-22T07:53:46Z), skipped
+2026-11-22 17:16:59 audit: done before (2026-11-22T08:05:33Z), skipped
+2026-11-22 17:16:59 combined: done before (2026-11-22T08:12:50Z), skipped
+2026-11-22 17:16:59 records: start
+2026-11-22 17:20:33 records: ok (214.2 s; 4 findings)
+2026-11-22 17:20:33 reprint: start
+2026-11-22 17:27:30 driver CPUQuota lowered to 20% at runtime (cpu_free was 0; the driver only waits and hashes)
+2026-11-22 17:27:34 start esr-ag-fv4a-reprint (src/Reprint.lean; gate {'yield': False, 'tctl': 84.8, 'cpu_free': 1, 'ag_mb': 2429, 'esr_mb': 5404})
+2026-11-22 17:27:38 done esr-ag-fv4a-reprint: lean_rc 0, wall 3.67 s, anon+shmem peak 219 MB, cgroup peak 305 MB, max RSS 3080 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 17:27:38 reprint: ok (424.7 s; 0 findings)
+2026-11-22 17:27:38 closure: start
+2026-11-22 17:29:32 closure: ok (114.5 s; 0 findings)
+2026-11-22 17:29:32 readonly: start
+2026-11-22 17:29:35 readonly: ok (2.9 s; 1 findings)
+2026-11-22 17:29:35 audit passed (5 findings); result.json written
+2026-11-22 17:40:24 start esr-ag-fv4a-smp-C000001 (src/E304Z/C000001.lean; gate {'yield': False, 'tctl': 84.9, 'cpu_free': 2, 'ag_mb': 922, 'esr_mb': 3614})
+2026-11-22 17:40:33 done esr-ag-fv4a-smp-C000001: lean_rc 0, wall 8.57 s, anon+shmem peak 442 MB, cgroup peak 524 MB, max RSS 3245 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 17:40:33 start esr-ag-fv4a-smp-C751401 (src/E304Z/C751401.lean; gate {'yield': False, 'tctl': 84.8, 'cpu_free': 1, 'ag_mb': 2638, 'esr_mb': 5730})
+2026-11-22 17:40:52 done esr-ag-fv4a-smp-C751401: lean_rc 0, wall 18.4 s, anon+shmem peak 475 MB, cgroup peak 568 MB, max RSS 3277 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 17:40:52 start esr-ag-fv4a-smp-C634501 (src/E304Z/C634501.lean; gate {'yield': False, 'tctl': 84.0, 'cpu_free': 1, 'ag_mb': 1798, 'esr_mb': 4973})
+2026-11-22 17:43:13 done esr-ag-fv4a-smp-C634501: lean_rc 0, wall 140.76 s, anon+shmem peak 759 MB, cgroup peak 912 MB, max RSS 3555 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 17:43:13 start esr-ag-fv4a-smp-S3_7 (src/E304Z/S3_7.lean; gate {'yield': False, 'tctl': 84.8, 'cpu_free': 3, 'ag_mb': 2153, 'esr_mb': 4921})
+2026-11-22 17:43:38 done esr-ag-fv4a-smp-S3_7: lean_rc 0, wall 24.84 s, anon+shmem peak 593 MB, cgroup peak 721 MB, max RSS 5222 MB, events {'low': '0', 'high': '0', 'max': '0', 'oom': '0', 'oom_kill': '0', 'oom_group_kill': '0', 'sock_throttled': '0'}
+2026-11-22 17:43:38 sample rebuild: 3/4 byte-identical; problems []

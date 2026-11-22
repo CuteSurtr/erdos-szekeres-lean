@@ -1,0 +1,141 @@
+.olean serialization took 146ms
+type checking took 260ms
+type checking took 196ms
+type checking took 260ms
+type checking took 381ms
+type checking took 200ms
+type checking took 361ms
+type checking took 417ms
+type checking took 217ms
+type checking took 338ms
+type checking took 315ms
+type checking took 436ms
+type checking took 185ms
+type checking took 262ms
+type checking took 208ms
+type checking took 376ms
+type checking took 174ms
+type checking took 445ms
+type checking took 323ms
+type checking took 471ms
+type checking took 326ms
+type checking took 305ms
+type checking took 326ms
+type checking took 370ms
+type checking took 322ms
+type checking took 367ms
+type checking took 410ms
+type checking took 509ms
+type checking took 373ms
+type checking took 218ms
+type checking took 246ms
+type checking took 377ms
+type checking took 436ms
+type checking took 198ms
+type checking took 426ms
+type checking took 466ms
+type checking took 239ms
+type checking took 323ms
+type checking took 302ms
+type checking took 242ms
+type checking took 289ms
+type checking took 551ms
+type checking took 482ms
+type checking took 661ms
+type checking took 569ms
+type checking took 320ms
+type checking took 417ms
+type checking took 354ms
+type checking took 301ms
+type checking took 304ms
+type checking took 359ms
+type checking took 359ms
+type checking took 516ms
+type checking took 243ms
+type checking took 446ms
+type checking took 160ms
+type checking took 460ms
+type checking took 467ms
+type checking took 391ms
+type checking took 436ms
+type checking took 284ms
+type checking took 474ms
+type checking took 354ms
+type checking took 336ms
+type checking took 309ms
+type checking took 136ms
+type checking took 593ms
+type checking took 267ms
+type checking took 226ms
+type checking took 129ms
+type checking took 312ms
+type checking took 384ms
+type checking took 250ms
+type checking took 267ms
+type checking took 162ms
+type checking took 478ms
+type checking took 367ms
+type checking took 475ms
+type checking took 436ms
+type checking took 226ms
+type checking took 455ms
+type checking took 332ms
+type checking took 466ms
+type checking took 300ms
+type checking took 404ms
+type checking took 235ms
+type checking took 479ms
+type checking took 247ms
+type checking took 252ms
+type checking took 460ms
+type checking took 303ms
+type checking took 397ms
+type checking took 378ms
+type checking took 334ms
+type checking took 354ms
+type checking took 691ms
+type checking took 365ms
+'RS3520.C016104.ex34052' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 392ms
+cumulative profiling times:
+	.olean serialization 146ms
+	attribute application 4.02ms
+	compilation (IR) 19ms
+	compilation (LCNF base) 25.6ms
+	compilation (LCNF mono) 11.4ms
+	elaboration 5.9s
+	fix level params 9ms
+	instantiate metavars 24ms
+	interpretation 2.96ms
+	let-to-have transformation 13.3ms
+	linting 446ms
+	parsing 952ms
+	process pre-definitions 136ms
+	share common exprs 58.7ms
+	tactic execution 139ms
+	type checking 33.7s
+	typeclass inference 1.14s
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R /home/jay/research/data/formalize-20261122/s3520-gate/export/3520/src -o /home/jay/research/data/formalize-20261122/s3520-gate/olean/RS3520/C016104.olean.tmp /home/jay/research/data/formalize-20261122/s3520-gate/export/3520/src/RS3520/C016104.lean"
+	User time (seconds): 44.11
+	System time (seconds): 0.59
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:45.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3585968
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 100105
+	Voluntary context switches: 8312
+	Involuntary context switches: 6751
+	Swaps: 0
+	File system inputs: 6256
+	File system outputs: 8536
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+lean_rc=0

@@ -1,0 +1,6 @@
+leaf 93 [25:0 12:1 16:1 29:1 17:1 37:0] clauses 6
+exe leaf 93 wall=4.34 s maxrss=2309240 KB rc=0
+leaf 131 [25:0 12:0 16:0 29:0 17:0 37:0] clauses 31613
+exe leaf 131 wall=3.47 s maxrss=2315520 KB rc=0
+leaf 0 [25:1 12:1 16:1 29:1 17:1 37:1 40:1 52:1 46:1 44:1 45:1 39:1] clauses 44545
+exe leaf 0 wall=3.18 s maxrss=2319888 KB rc=0

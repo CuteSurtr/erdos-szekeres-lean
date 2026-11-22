@@ -1,0 +1,8 @@
+{"prepass": 110, "of": 110, "leaves_so_far": 1901, "seconds": 0.0}
+{"stopped_before_unit": 0, "seconds": 0.0}
+stop-after 0: rc=0 manifests=0 sources=0
+{"unit": 0, "modules": 1, "leaves": 1907, "min_margin": 1, "seconds": 0.8, "corrupted": null, "nodes": 3813, "maxrss_mb": 39}
+rerun: rc=0 manifests=1
+rerun chunk = controls/v3-3318 chunk (byte-identical)
+{"ref": "/home/jay/research/data/formalize-20261122/s3520-gate/controls/v3-3318", "new": "/home/jay/research/data/formalize-20261122/s3520-gate/controls/stop3318", "units": [0], "modules": 1, "source_bytes": 1871340, "identical": true, "differences": []}
+cmp rc=0

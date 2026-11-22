@@ -1,0 +1,212 @@
+type checking took 640ms
+type checking took 405ms
+type checking took 428ms
+type checking took 430ms
+type checking took 616ms
+type checking took 404ms
+type checking took 300ms
+type checking took 262ms
+type checking took 467ms
+type checking took 567ms
+type checking took 354ms
+type checking took 609ms
+type checking took 432ms
+type checking took 509ms
+type checking took 561ms
+type checking took 499ms
+type checking took 202ms
+type checking took 313ms
+type checking took 179ms
+type checking took 317ms
+type checking took 201ms
+type checking took 216ms
+type checking took 189ms
+type checking took 392ms
+type checking took 234ms
+type checking took 539ms
+type checking took 427ms
+type checking took 514ms
+type checking took 741ms
+type checking took 588ms
+type checking took 479ms
+type checking took 409ms
+type checking took 506ms
+type checking took 447ms
+type checking took 390ms
+type checking took 518ms
+type checking took 339ms
+type checking took 593ms
+type checking took 429ms
+type checking took 522ms
+type checking took 426ms
+type checking took 384ms
+type checking took 121ms
+type checking took 169ms
+type checking took 467ms
+type checking took 186ms
+type checking took 415ms
+type checking took 499ms
+type checking took 253ms
+type checking took 360ms
+type checking took 470ms
+type checking took 360ms
+type checking took 229ms
+type checking took 186ms
+type checking took 607ms
+type checking took 551ms
+type checking took 608ms
+type checking took 671ms
+type checking took 467ms
+type checking took 670ms
+type checking took 458ms
+type checking took 382ms
+type checking took 492ms
+type checking took 759ms
+type checking took 319ms
+type checking took 655ms
+type checking took 377ms
+type checking took 697ms
+type checking took 409ms
+type checking took 482ms
+type checking took 744ms
+type checking took 461ms
+type checking took 423ms
+type checking took 777ms
+type checking took 711ms
+type checking took 432ms
+type checking took 643ms
+type checking took 470ms
+type checking took 273ms
+type checking took 454ms
+type checking took 415ms
+type checking took 573ms
+type checking took 786ms
+type checking took 611ms
+type checking took 309ms
+type checking took 345ms
+type checking took 407ms
+type checking took 218ms
+type checking took 209ms
+type checking took 526ms
+type checking took 675ms
+type checking took 574ms
+type checking took 381ms
+type checking took 500ms
+type checking took 711ms
+type checking took 629ms
+type checking took 635ms
+type checking took 285ms
+type checking took 507ms
+type checking took 504ms
+type checking took 560ms
+type checking took 700ms
+type checking took 711ms
+type checking took 704ms
+type checking took 290ms
+type checking took 266ms
+type checking took 510ms
+type checking took 430ms
+type checking took 318ms
+type checking took 336ms
+type checking took 327ms
+type checking took 281ms
+type checking took 437ms
+type checking took 647ms
+type checking took 461ms
+type checking took 238ms
+type checking took 513ms
+type checking took 204ms
+type checking took 266ms
+type checking took 428ms
+type checking took 310ms
+type checking took 536ms
+type checking took 397ms
+type checking took 391ms
+type checking took 326ms
+type checking took 514ms
+type checking took 324ms
+type checking took 468ms
+type checking took 396ms
+type checking took 325ms
+type checking took 425ms
+type checking took 264ms
+type checking took 379ms
+type checking took 293ms
+type checking took 230ms
+type checking took 224ms
+type checking took 148ms
+type checking took 231ms
+type checking took 286ms
+type checking took 509ms
+type checking took 297ms
+type checking took 391ms
+type checking took 497ms
+type checking took 526ms
+type checking took 614ms
+type checking took 418ms
+type checking took 467ms
+type checking took 367ms
+type checking took 418ms
+type checking took 623ms
+type checking took 574ms
+type checking took 332ms
+type checking took 557ms
+type checking took 667ms
+type checking took 611ms
+type checking took 432ms
+type checking took 252ms
+type checking took 542ms
+type checking took 407ms
+type checking took 607ms
+type checking took 709ms
+type checking took 393ms
+type checking took 690ms
+type checking took 78.olean serialization took 234ms
+6ms
+type checking took 547ms
+type checking took 482ms
+type checking took 375ms
+'RS3520.C208018.ex193952' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 397ms
+cumulative profiling times:
+	.olean serialization 234ms
+	attribute application 7.29ms
+	compilation (IR) 37.7ms
+	compilation (LCNF base) 48.6ms
+	compilation (LCNF mono) 22.5ms
+	elaboration 11.6s
+	fix level params 17.2ms
+	instantiate metavars 51.6ms
+	interpretation 5.9ms
+	let-to-have transformation 24.7ms
+	linting 812ms
+	parsing 1.94s
+	process pre-definitions 264ms
+	share common exprs 124ms
+	tactic execution 272ms
+	type checking 75s
+	typeclass inference 2.33s
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R /home/jay/research/data/formalize-20261122/s3520-gate/export/3520/src -o /home/jay/research/data/formalize-20261122/s3520-gate/olean/RS3520/C208018.olean.tmp /home/jay/research/data/formalize-20261122/s3520-gate/export/3520/src/RS3520/C208018.lean"
+	User time (seconds): 93.26
+	System time (seconds): 1.23
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:35.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3784152
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 169508
+	Voluntary context switches: 16262
+	Involuntary context switches: 16297
+	Swaps: 0
+	File system inputs: 11456
+	File system outputs: 15432
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+lean_rc=0

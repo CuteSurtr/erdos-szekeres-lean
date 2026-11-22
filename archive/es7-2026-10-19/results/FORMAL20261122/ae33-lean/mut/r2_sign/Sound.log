@@ -1,0 +1,99 @@
+AE33Geo/Sound.lean:143:34: error: unsolved goals
+B : Array Pt
+pt : ℕ → Point
+C : Ctx B pt
+w a x y z : ℕ
+ex ey ez : ℤ
+hw : w < 2
+ha : a < 31
+hx : x < 31
+hy : y < 31
+hz : z < 31
+hax : ¬a = x
+hay : ¬a = y
+haz : ¬a = z
+hxy : ¬x = y
+hyz : ¬y = z
+hxz : ¬x = z
+hex : ex = 1 ∨ ex = -1
+hey : ey = 1 ∨ ey = -1
+hez : ez = 1 ∨ ez = -1
+c1 : ex * ey * osgn B a x y = 1
+c2 : ey * ez * osgn B a y z = 1
+c3 : ex * ez * osgn B a x z = 1
+lx : ℤ
+hlx : chi B a x (31 + w) = Term.lit lx
+hlx0 : lx ≠ 0
+hsx : EncB.LitSat (realAssign pt) lx ↔ 0 < orient (pt a) (pt x) (pt (31 + w))
+ly : ℤ
+hly : chi B a y (31 + w) = Term.lit ly
+hly0 : ly ≠ 0
+hsy : EncB.LitSat (realAssign pt) ly ↔ 0 < orient (pt a) (pt y) (pt (31 + w))
+lz : ℤ
+hlz : chi B a z (31 + w) = Term.lit lz
+hlz0 : lz ≠ 0
+hsz : EncB.LitSat (realAssign pt) lz ↔ 0 < orient (pt a) (pt z) (pt (31 + w))
+gx : orient (pt a) (pt x) (pt (31 + w)) ≠ 0
+gy : orient (pt a) (pt y) (pt (31 + w)) ≠ 0
+gz : orient (pt a) (pt z) (pt (31 + w)) ≠ 0
+sx : EncB.LitSat (realAssign pt) (ex * lx) ↔ 0 < ↑ex * orient (pt a) (pt x) (pt (31 + w))
+sy : EncB.LitSat (realAssign pt) (ey * ly) ↔ 0 < ↑ey * orient (pt a) (pt y) (pt (31 + w))
+sz : EncB.LitSat (realAssign pt) (ez * lz) ↔ 0 < ↑ez * orient (pt a) (pt z) (pt (31 + w))
+hex0 : ex * lx ≠ 0
+hey0 : ey * ly ≠ 0
+hez0 : ez * lz ≠ 0
+kXY : 0 < ↑ex * ↑ey * orient (pt a) (pt x) (pt y)
+kYZ : 0 < ↑ey * ↑ez * orient (pt a) (pt y) (pt z)
+kXZ : 0 < ↑ex * ↑ez * orient (pt a) (pt x) (pt z)
+key :
+  ↑ex * ↑ez * orient (pt a) (pt x) (pt z) * (↑ey * orient (pt a) (pt y) (pt (31 + w))) =
+    ↑ey * ↑ez * orient (pt a) (pt y) (pt z) * (↑ex * orient (pt a) (pt x) (pt (31 + w))) +
+      ↑ex * ↑ey * orient (pt a) (pt x) (pt y) * (↑ez * orient (pt a) (pt z) (pt (31 + w)))
+hall : ∀ x ∈ [-(ex * lx), ey * ly, ez * lz], ¬EncB.LitSat (realAssign pt) x
+h✝ :
+  (if
+        (decide (w < 2) && decide (a < 31) && decide (x < 31) && decide (y < 31) && decide (z < 31) && a != x &&
+                                a != y &&
+                              a != z &&
+                            x != y &&
+                          y != z &&
+                        x != z &&
+                      isUnit ex &&
+                    isUnit ey &&
+                  isUnit ez &&
+                ex * ey * osgn B a x y == 1 &&
+              ey * ez * osgn B a y z == 1 &&
+            ex * ez * osgn B a x z == 1) =
+          true then
+      match chi B a x (31 + w), chi B a y (31 + w), chi B a z (31 + w) with
+      | Term.lit lx, Term.lit ly, Term.lit lz =>
+        if
+            bounded (numVars B)
+                (if false = true then [ex * lx, -(ey * ly), ez * lz] else [-(ex * lx), ey * ly, ez * lz]) =
+              true then
+          some (if false = true then [ex * lx, -(ey * ly), ez * lz] else [-(ex * lx), ey * ly, ez * lz])
+        else none
+      | x, x_1, x_2 => none
+    else none) =
+    some [-(ex * lx), ey * ly, ez * lz]
+h :
+  (if bounded (numVars B) [-(ex * lx), ey * ly, ez * lz] = true then some [-(ex * lx), ey * ly, ez * lz] else none) =
+    some [-(ex * lx), ey * ly, ez * lz]
+n1 : ¬EncB.LitSat (realAssign pt) (-(ex * lx))
+n2 : ¬EncB.LitSat (realAssign pt) (ey * ly)
+⊢ ez * lz = ex * lx ∨ -(ez * lz) = ey * ly ∨ -(ez * lz) = ez * lz
+AE33Geo/Sound.lean:308:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.nodup_cons, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵not_or, List.not_mem_nil, not_false_eq_true,
+  ̲  ̲ ̲ ̲List.nodup_nil, and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:429:46: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

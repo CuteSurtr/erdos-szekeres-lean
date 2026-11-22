@@ -1,0 +1,416 @@
+2,4c2,15
+< """s3520-gate (22 Nov 2026): slice_export_w13.py with the context-id fix only (contexts are the sorted placeholder ids,
+< which need not be 0..K-1: bb-s1 of s35_20 has no context 4782). The reference for the byte-identity controls of
+< slice_export_v3.py. Otherwise unchanged.
+---
+> """s3520-gate v3 (22 Nov 2026): slice_export_w13fix.py (= res-slices-fv slice_export_w13.py + the context-id fix) made
+> lean for s35_20, whose contexts reach 320,422 leaves (ctx-4274). The chunk texts and manifests are meant to be byte
+> for byte those of slice_export_w13fix.py (controls in the s3520-gate README); only memory and I/O differ:
+>   - pre-pass streamed: each context gz is inflated in pieces; its header (context, root, missing, occupied) is parsed
+>     from the text before "nodes"; leaves are counted as occurrences of "type":"weighted" / "over_budget" and branches
+>     of "type":"branch"; every "type": must be one of the three, leaves = branches + 1, and the text must end "]}";
+>   - contexts are read node by node (JSON scanner on a sliding window of the inflated text) into flat arrays; the unit
+>     is grafted into an export_es310_w13l.CUnit (flat arrays, zero-first preorder); no context is ever a Python node
+>     list, and no leaf keeps a tuple;
+>   - export_es310_w13l.export_compact writes each module (to a hidden .tmp name) as soon as it has passed its checks;
+>     after the unit's last check the modules are renamed into place and the manifest is written LAST, as before;
+>   - --stop-after S: no new unit is started after S seconds (clean stop before a RuntimeMaxSec; resumable as before).
+> The unit cut, the leaf replays and all refusals are unchanged. NOTHING HERE PROVES ANYTHING: Lean decides every module.
+> 
+8d18
+< NOTHING HERE PROVES ANYTHING: Lean decides every module; this only writes the texts.
+10c20
+<   slice_export.py TAG --budget B --master M --ctxdir DIR --extra EXTRA --out OUT
+---
+>   slice_export_v3.py TAG --budget B --master M --ctxdir DIR --extra EXTRA --out OUT
+12c22
+<                   [--corrupt K:MM] [--no-profile]
+---
+>                   [--corrupt K:MM] [--no-profile] [--stop-after S] [--prepass-only]
+16,17c26,28
+<    path; the context ids must be 0..K-1, once each. A pre-pass reads each context file once (header context = k,
+<    root 0, missing / occupied = the placeholder's path literals with state 0 occupied), counts its leaves and hashes it.
+---
+>    path; the context ids are the sorted placeholder ids (distinct, non-negative; their number = master "contexts").
+>    A pre-pass reads each context file once (header context = k, root 0, missing / occupied = the placeholder's path
+>    literals with state 0 occupied), counts its leaves and hashes it.
+21c32
+< 4. Each unit goes through export_es310.export_context UNCHANGED (zero-first preorder renumbering, both exact leaf
+---
+> 4. Each unit goes through export_es310_w13l.export_compact (export_context's zero-first preorder, both exact leaf
+30d40
+< import gzip
+32a43,44
+> import re
+> import resource
+34a47,48
+> import zlib
+> from array import array
+40,42c54,56
+< sys.path.insert(0, str(Path(__file__).resolve().parent))   # res-slices-fv w13: the widened copy lives in tools/
+< import export_es310_w13 as E  # noqa: E402
+< from export_es311 import read_source, cut  # noqa: E402
+---
+> sys.path.insert(0, str(Path(__file__).resolve().parent))   # the lean copy lives next to this file
+> import export_es310_w13l as E  # noqa: E402
+> from export_es311 import read_source  # noqa: E402
+46a61,65
+> PIECE = 1 << 20                     # compressed bytes inflated per step
+> AHEAD = 1 << 21                     # inflated characters kept ahead of the JSON scanner (a node is a few KB)
+> DEC = json.JSONDecoder()
+> WS = re.compile(r"[ \t\n\r]*")
+> T_CODE = {"branch": E.T_BRANCH, "weighted": E.T_WEIGHTED, "over_budget": E.T_OVER}
+58a78,151
+> def inflate(gz, k):
+>     """The inflated pieces (bytes) of one gzip member; refuses trailing data or a truncated stream."""
+>     d, mv = zlib.decompressobj(16 + zlib.MAX_WBITS), memoryview(gz)
+>     try:
+>         for i in range(0, len(gz), PIECE):
+>             yield d.decompress(mv[i:i + PIECE])
+>         yield d.flush()
+>     except zlib.error as e:
+>         raise E.Refuse(f"context {k}: gzip error {e}")
+>     if not d.eof or d.unused_data:
+>         raise E.Refuse(f"context {k}: the gzip stream is not exactly one complete member")
+> 
+> 
+> def check_header(k, head, path):
+>     """The context header (all keys before "nodes", which must be the last key) against the master path."""
+>     j = head.find(b'"nodes":[')
+>     if j < 0:
+>         raise E.Refuse(f"context {k}: no \"nodes\" array in the first {len(head)} bytes")
+>     try:
+>         d = json.loads(head[:j] + b'"nodes":[]}')
+>     except ValueError:
+>         raise E.Refuse(f"context {k}: the header does not parse")
+>     if d.get("context") != k or d.get("root") != 0:
+>         raise E.Refuse(f"context {k}: header context/root differ")
+>     if path is not None:
+>         mis = sorted(v for v, b in path if b == 1)
+>         occ = sorted([0] + [v for v, b in path if b == 0])
+>         if sorted(d.get("missing", [None])) != mis or sorted(d.get("occupied", [None])) != occ:
+>             raise E.Refuse(f"context {k}: missing/occupied differ from its master path")
+>     return j
+> 
+> 
+> class Local:
+>     """One context as flat arrays indexed by its file node ids (released once the graft has reached every node)."""
+> 
+>     def __init__(self, k):
+>         self.k = k
+>         self.ty, self.vx, self.z, self.o = bytearray(), array("i"), array("i"), array("i")
+>         self.cap, self.wo, self.wn = array("q"), array("q"), array("i")
+>         self.R, self.W = array("i"), array("q")
+> 
+>     def add(self, nd):
+>         t = nd.get("type") if isinstance(nd, dict) else None
+>         i = len(self.ty)
+>         try:
+>             if t == "branch":
+>                 v, zz, oo = nd.get("vertex"), nd.get("zero"), nd.get("one")
+>                 if not (E.is_int(v) and E.is_int(zz) and E.is_int(oo)):
+>                     raise E.Refuse(f"context {self.k}: bad branch node {i}")
+>                 self.vx.append(v); self.z.append(zz); self.o.append(oo); self.cap.append(-1)
+>                 self.wn.append(0)
+>             elif t == "weighted":
+>                 cap, ws = nd.get("capacity"), nd.get("weights")
+>                 if not (E.is_int(cap) and isinstance(ws, list)):
+>                     raise E.Refuse(f"context {self.k}: bad weighted leaf {i}")
+>                 for e in ws:
+>                     if not (isinstance(e, list) and len(e) == 2 and E.is_int(e[0]) and E.is_int(e[1])):
+>                         raise E.Refuse(f"context {self.k}: bad weight entry {e!r} in leaf {i}")
+>                 self.wo.append(len(self.R))
+>                 self.R.extend(e[0] for e in ws)
+>                 self.W.extend(e[1] for e in ws)
+>                 self.vx.append(-1); self.z.append(-1); self.o.append(-1); self.cap.append(cap); self.wn.append(len(ws))
+>                 self.ty.append(E.T_WEIGHTED)
+>                 return
+>             elif t == "over_budget":
+>                 self.vx.append(-1); self.z.append(-1); self.o.append(-1); self.cap.append(-1); self.wn.append(0)
+>             else:
+>                 raise E.Refuse(f"context {self.k}: node {i} has type {t!r}")
+>         except OverflowError:
+>             raise E.Refuse(f"context {self.k}: node {i} has a value outside the compact arrays")
+>         self.wo.append(len(self.R))
+>         self.ty.append(T_CODE[t])
+> 
+> 
+65c158
+<     def load(self, k, path=None):
+---
+>     def raw(self, k):
+71,79c164,236
+<         d = json.loads(gzip.decompress(gz))
+<         if d.get("context") != k or d.get("root") != 0:
+<             raise E.Refuse(f"context {k}: header context/root differ")
+<         if path is not None:
+<             mis = sorted(v for v, b in path if b == 1)
+<             occ = sorted([0] + [v for v, b in path if b == 0])
+<             if sorted(d["missing"]) != mis or sorted(d["occupied"]) != occ:
+<                 raise E.Refuse(f"context {k}: missing/occupied differ from its master path")
+<         return d["nodes"]
+---
+>         return gz
+> 
+>     def count(self, k, path):
+>         """Pre-pass (streamed): (leaves, branches) of context k; checks the header, the node types and the end."""
+>         pats = (b'"type":', b'"type":"branch"', b'"type":"weighted"', b'"type":"over_budget"')
+>         cnt, tails, head, end = [0] * 4, [b""] * 4, b"", b""     # end: the last 16 inflated bytes
+>         for piece in inflate(self.raw(k), k):
+>             if len(head) < 65536:
+>                 head += piece[:65536 - len(head)]
+>             for j, p in enumerate(pats):          # whole occurrences in the piece, then those across its start
+>                 L = len(p) - 1
+>                 cnt[j] += piece.count(p) + (tails[j] + piece[:L]).count(p)
+>                 tails[j] = piece[-L:] if len(piece) >= L else (tails[j] + piece)[-L:]
+>             end = (end + piece[-16:])[-16:]
+>         check_header(k, head, path)
+>         if cnt[0] != cnt[1] + cnt[2] + cnt[3]:
+>             raise E.Refuse(f"context {k}: {cnt[0] - cnt[1] - cnt[2] - cnt[3]} nodes of another type or spelling")
+>         if cnt[2] + cnt[3] != cnt[1] + 1:
+>             raise E.Refuse(f"context {k}: {cnt[2] + cnt[3]} leaves but {cnt[1]} branches")
+>         if not end.rstrip().endswith(b"]}"):
+>             raise E.Refuse(f"context {k}: the text does not end with the nodes array")
+>         return cnt[2] + cnt[3], cnt[1]
+> 
+>     def load_compact(self, k, path):
+>         """Context k as a Local (streamed: the inflated text is never held whole)."""
+>         pieces = inflate(self.raw(k), k)
+>         buf, pos, eof = "", 0, False
+> 
+>         def need(nc):                             # at least nc characters ahead of pos, unless at the end
+>             nonlocal buf, pos, eof
+>             while len(buf) - pos < nc and not eof:
+>                 try:
+>                     data = next(pieces)
+>                 except StopIteration:
+>                     eof = True
+>                     break
+>                 try:
+>                     buf = buf[pos:] + data.decode("ascii")
+>                 except UnicodeDecodeError:
+>                     raise E.Refuse(f"context {k}: the text is not ASCII")
+>                 pos = 0
+>             return len(buf) - pos >= nc
+> 
+>         need(65536)
+>         pos = check_header(k, buf[:65536].encode("ascii"), path) + len('"nodes":[')
+>         loc = Local(k)
+>         need(1)
+>         if buf[pos:pos + 1] == "]":
+>             pos += 1
+>         else:
+>             while True:
+>                 need(AHEAD)
+>                 pos = WS.match(buf, pos).end()
+>                 try:
+>                     nd, end = DEC.raw_decode(buf, pos)
+>                 except ValueError:
+>                     raise E.Refuse(f"context {k}: node {len(loc.ty)} does not parse")
+>                 loc.add(nd)
+>                 pos = WS.match(buf, end).end()
+>                 if not need(1):
+>                     raise E.Refuse(f"context {k}: the text ends inside the nodes array")
+>                 c, pos = buf[pos], pos + 1
+>                 if c == "]":
+>                     break
+>                 if c != ",":
+>                     raise E.Refuse(f"context {k}: {c!r} after node {len(loc.ty) - 1}")
+>         while need(len(buf) - pos + 1):           # the rest of the text must be the closing brace
+>             pass
+>         if buf[pos:].strip() != "}":
+>             raise E.Refuse(f"context {k}: the text does not end with the nodes array")
+>         loc.N = len(loc.ty)
+>         loc.seen, loc.nseen = bytearray(loc.N), 0
+>         return loc
+110,113c267,272
+< def build_unit(t, nodes, ctx, kpath):
+<     """The unit's nodes, zero-first preorder, contexts grafted in."""
+<     out, stack = [], [(None, t, -1, None)]
+<     visited = set()
+---
+> def build_unit_compact(t, nodes, ctx, kpath):
+>     """The unit as a CUnit: zero-first preorder, contexts grafted in (as slice_export_w13.build_unit, then renumber's
+>     checks: every node reached once, branch fields in range, every node of a context reachable)."""
+>     U, n = E.CUnit(), E.N_STATES
+>     mloc = None                                   # master leaves of the unit, as a Local
+>     stack, visited, loaded = [(None, t, -1, 0)], set(), []
+115c274
+<         src, i, par, side = stack.pop()              # src: None (master) or (k, nodes of context k)
+---
+>         src, i, par, side = stack.pop()           # src: None (master) or the Local of a context
+118c277,280
+<             src = (k, ctx.load(k, kpath[k]))
+---
+>             src = ctx.load_compact(k, kpath[k])
+>             src.sid = len(U.sources)
+>             U.sources.append((src.R, src.W))
+>             loaded.append(src)
+120,126c282
+<         cur = nodes if src is None else src[1]
+<         key = (-1 if src is None else src[0], i)
+<         if key in visited:
+<             raise E.Refuse("a node is reached twice while grafting")
+<         visited.add(key)
+<         nd = cur[i]
+<         me = len(out)
+---
+>         me = len(U.ty)
+128,132c284,319
+<             out[par][side] = me
+<         if nd["type"] == "branch":
+<             out.append({"type": "branch", "vertex": nd["vertex"], "zero": None, "one": None})
+<             stack.append((src, nd["one"], me, "one"))
+<             stack.append((src, nd["zero"], me, "zero"))
+---
+>             (U.z if side == 0 else U.o)[par] = me
+>         if src is None:
+>             if i in visited:
+>                 raise E.Refuse("a node is reached twice while grafting")
+>             visited.add(i)
+>             nd = nodes[i]
+>             if nd["type"] == "branch":
+>                 v = nd["vertex"]
+>                 if not (E.is_int(v) and 0 <= v < n):
+>                     raise E.Refuse(f"master node {i}: bad vertex")
+>                 U.ty.append(E.T_BRANCH); U.vx.append(v); U.z.append(-1); U.o.append(-1)
+>                 U.cap.append(-1); U.src.append(-1); U.wo.append(0); U.wn.append(0)
+>                 stack.append((None, nd["one"], me, 1))
+>                 stack.append((None, nd["zero"], me, 0))
+>                 continue
+>             if mloc is None:
+>                 mloc = Local("master")
+>                 mloc.sid = len(U.sources)
+>                 U.sources.append((mloc.R, mloc.W))
+>             mloc.add(nd)
+>             j = len(mloc.ty) - 1
+>             U.ty.append(mloc.ty[j]); U.vx.append(-1); U.z.append(-1); U.o.append(-1)
+>             U.cap.append(mloc.cap[j]); U.src.append(mloc.sid); U.wo.append(mloc.wo[j]); U.wn.append(mloc.wn[j])
+>             continue
+>         if src.seen is None or not 0 <= i < src.N or src.seen[i]:
+>             raise E.Refuse(f"ctx {src.k}: node {i} is reached twice or does not exist (not a tree)")
+>         src.seen[i] = 1
+>         src.nseen += 1
+>         if src.ty[i] == E.T_BRANCH:
+>             v, zz, oo = src.vx[i], src.z[i], src.o[i]
+>             if not (0 <= v < n and 0 <= zz < src.N and 0 <= oo < src.N and zz != oo):
+>                 raise E.Refuse(f"ctx {src.k}: bad branch node {i}")
+>             U.ty.append(E.T_BRANCH); U.vx.append(v); U.z.append(-1); U.o.append(-1)
+>             U.cap.append(-1); U.src.append(-1); U.wo.append(0); U.wn.append(0)
+>             stack.append((src, oo, me, 1))
+>             stack.append((src, zz, me, 0))
+134,135c321,328
+<             out.append(nd)
+<     return out
+---
+>             U.ty.append(src.ty[i]); U.vx.append(-1); U.z.append(-1); U.o.append(-1)
+>             U.cap.append(src.cap[i]); U.src.append(src.sid); U.wo.append(src.wo[i]); U.wn.append(src.wn[i])
+>         if src.nseen == src.N:                    # the whole context is grafted: drop its node arrays
+>             src.ty = src.vx = src.z = src.o = src.cap = src.wo = src.wn = src.seen = None
+>     for src in loaded:
+>         if src.nseen != src.N:
+>             raise E.Refuse(f"ctx {src.k}: {src.N - src.nseen} nodes are not reachable from the root")
+>     return U
+152a346,347
+>     ap.add_argument("--stop-after", type=float)
+>     ap.add_argument("--prepass-only", action="store_true")
+153a349
+>     t_start = time.time()
+189a386,387
+>         if sorted(kleaves) != ids or sorted(ctx.sha) != ids:
+>             raise E.Refuse("prepass.json does not cover exactly the master's contexts")
+191,195c389,394
+<         kleaves = {}
+<         for k in ids:
+<             cn = ctx.load(k, kpath[k])
+<             kleaves[k] = sum(1 for x in cn if x["type"] != "branch")
+<             del cn
+---
+>         kleaves, kbranches = {}, {}
+>         for j, k in enumerate(ids):
+>             kleaves[k], kbranches[k] = ctx.count(k, kpath[k])
+>             if (j + 1) % 500 == 0 or j + 1 == K:
+>                 print(json.dumps({"prepass": j + 1, "of": K, "leaves_so_far": sum(kleaves.values()),
+>                                   "seconds": round(time.time() - t_start, 1)}), flush=True)
+198c397,398
+<               "contexts_digest": sha("".join(f"{k} {ctx.sha[k]}\n" for k in ids).encode())}
+---
+>               "contexts_digest": sha("".join(f"{k} {ctx.sha[k]}\n" for k in ids).encode()),
+>               "branches": kbranches, "prepass": "slice_export_v3 streamed count"}
+240a441,444
+>     if args.prepass_only:
+>         print(json.dumps({"total_leaves": total, "units": len(tops), "contexts": K,
+>                           "seconds": round(time.time() - t_start, 1)}), flush=True)
+>         return
+250a455,457
+>     me_sha = sha(Path(__file__).read_bytes())
+>     core_sha = sha((Path(__file__).resolve().parent / "export_es310_w13l.py").read_bytes())
+>     new = f"-- res-slices-fv residual slice check (Res118 slice B={B}), unit"
+251a459,461
+>         if args.stop_after is not None and time.time() - t_start > args.stop_after:
+>             print(json.dumps({"stopped_before_unit": u, "seconds": round(time.time() - t_start, 1)}), flush=True)
+>             break
+258a469,483
+>         written = []
+> 
+>         def emit(stem, text):                    # header replaced, shape check again, written under a hidden name
+>             if text.count(OLD) != 1:
+>                 raise E.Refuse(f"unit {u}: header comment not found once in {stem}")
+>             text = text.replace(OLD, new)
+>             errs = shapes_es311.check_text(text, "chunk", f"{prefix}.{stem}", sp)
+>             if errs:
+>                 raise E.Refuse(f"unit {u}: {stem} fails the shape check: {errs}")
+>             b = text.encode("utf-8")
+>             tmp = out / "src" / prefix / f".{stem}.lean.tmp"
+>             tmp.write_bytes(b)
+>             written.append((tmp, out / "src" / prefix / f"{stem}.lean"))
+>             return sha(b), len(b)
+> 
+260c485
+<             sub = build_unit(t, nodes, ctx, kpath)
+---
+>             U = build_unit_compact(t, nodes, ctx, kpath)
+263,264c488,490
+<             texts, info = E.export_context(u, ctxline, {"nodes": sub}, rows, args, prefix, code_caches, hashes)
+<             del sub
+---
+>             info = E.export_compact(u, ctxline, U, rows, args, prefix, code_caches, hashes, emit)
+>             nnodes = len(U.ty)
+>             del U
+266,280c492,495
+<             new = f"-- res-slices-fv residual slice check (Res118 slice B={B}), unit"
+<             out_texts = []
+<             for (stem, data), m in zip(texts, info["modules"]):
+<                 text = data.decode("utf-8")
+<                 if text.count(OLD) != 1:
+<                     raise E.Refuse(f"unit {u}: header comment not found once in {stem}")
+<                 text = text.replace(OLD, new)
+<                 errs = shapes_es311.check_text(text, "chunk", m["module"], sp)
+<                 if errs:
+<                     raise E.Refuse(f"unit {u}: {stem} fails the shape check: {errs}")
+<                 b = text.encode("utf-8")
+<                 m["sha256"], m["source_bytes"] = sha(b), len(b)
+<                 out_texts.append((stem, b))
+<             for stem, b in out_texts:
+<                 write_atomic(out / "src" / prefix / f"{stem}.lean", b)
+---
+>             if info["stats"]["leaves"] != cnt[t]:
+>                 raise E.Refuse(f"unit {u}: {info['stats']['leaves']} leaves, expected {cnt[t]}")
+>             for tmp, final in written:
+>                 tmp.replace(final)
+282,283c497
+<                          "exporter_sha256": sha(Path(__file__).read_bytes()),
+<                          "export_es310_sha256": sha((Path(__file__).resolve().parent / "export_es310_w13.py").read_bytes()),
+---
+>                          "exporter_sha256": me_sha, "export_es310_sha256": core_sha,
+287,288d500
+<             if info["stats"]["leaves"] != cnt[t]:
+<                 raise E.Refuse(f"unit {u}: {info['stats']['leaves']} leaves, expected {cnt[t]}")
+292c504,505
+<                               "corrupted": info["corruption"]}), flush=True)
+---
+>                               "corrupted": info["corruption"], "nodes": nnodes,
+>                               "maxrss_mb": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss // 1024}), flush=True)
+293a507,508
+>             for tmp, _ in written:
+>                 tmp.unlink(missing_ok=True)

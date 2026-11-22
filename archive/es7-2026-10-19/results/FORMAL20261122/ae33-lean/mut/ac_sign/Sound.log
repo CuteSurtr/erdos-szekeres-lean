@@ -1,0 +1,69 @@
+AE33Geo/Sound.lean:194:39: error: unsolved goals
+B : Array Pt
+pt : ℕ → Point
+C : Ctx B pt
+w a b c : ℕ
+hw : w < 2
+ha : a < 31
+hb : b < 31
+hc' : c < 31
+hab : ¬a = b
+hbc : ¬b = c
+hac : ¬a = c
+hs : osgn B a b c = 1 ∨ osgn B a b c = -1
+l1 : ℤ
+h1 : chi B a b (31 + w) = Term.lit l1
+h10 : l1 ≠ 0
+hs1 : EncB.LitSat (realAssign pt) l1 ↔ 0 < orient (pt a) (pt b) (pt (31 + w))
+l2 : ℤ
+h2 : chi B b c (31 + w) = Term.lit l2
+h20 : l2 ≠ 0
+hs2 : EncB.LitSat (realAssign pt) l2 ↔ 0 < orient (pt b) (pt c) (pt (31 + w))
+l3 : ℤ
+h3 : chi B c a (31 + w) = Term.lit l3
+h30 : l3 ≠ 0
+hs3 : EncB.LitSat (realAssign pt) l3 ↔ 0 < orient (pt c) (pt a) (pt (31 + w))
+h✝ :
+  (if
+        (decide (w < 2) && decide (a < 31) && decide (b < 31) && decide (c < 31) && a != b && b != c && a != c &&
+            isUnit (osgn B a b c)) =
+          true then
+      match chi B a b (31 + w), chi B b c (31 + w), chi B c a (31 + w) with
+      | Term.lit l1, Term.lit l2, Term.lit l3 =>
+        if bounded (numVars B) [osgn B a b c * l1, osgn B a b c * l2, -(osgn B a b c * l3)] = true then
+          some [osgn B a b c * l1, osgn B a b c * l2, -(osgn B a b c * l3)]
+        else none
+      | x, x_1, x_2 => none
+    else none) =
+    some [osgn B a b c * l1, osgn B a b c * l2, -(osgn B a b c * l3)]
+h :
+  (if bounded (numVars B) [osgn B a b c * l1, osgn B a b c * l2, -(osgn B a b c * l3)] = true then
+      some [osgn B a b c * l1, osgn B a b c * l2, -(osgn B a b c * l3)]
+    else none) =
+    some [osgn B a b c * l1, osgn B a b c * l2, -(osgn B a b c * l3)]
+g1 : orient (pt a) (pt b) (pt (31 + w)) ≠ 0
+g2 : orient (pt b) (pt c) (pt (31 + w)) ≠ 0
+g3 : orient (pt c) (pt a) (pt (31 + w)) ≠ 0
+e1 : EncB.LitSat (realAssign pt) (osgn B a b c * l1) ↔ 0 < ↑(osgn B a b c) * orient (pt a) (pt b) (pt (31 + w))
+e2 : EncB.LitSat (realAssign pt) (osgn B a b c * l2) ↔ 0 < ↑(osgn B a b c) * orient (pt b) (pt c) (pt (31 + w))
+e3 : EncB.LitSat (realAssign pt) (osgn B a b c * l3) ↔ 0 < ↑(osgn B a b c) * orient (pt c) (pt a) (pt (31 + w))
+hO : 0 < ↑(osgn B a b c) * orient (pt a) (pt b) (pt c)
+hall : ∀ x ∈ [osgn B a b c * l1, osgn B a b c * l2, -(osgn B a b c * l3)], ¬EncB.LitSat (realAssign pt) x
+n1 : ¬EncB.LitSat (realAssign pt) (osgn B a b c * l1)
+n2 : ¬EncB.LitSat (realAssign pt) (osgn B a b c * l2)
+⊢ (l3 = l1 ∨ osgn B a b c = 0) ∨ (l3 = l2 ∨ osgn B a b c = 0) ∨ osgn B a b c * l3 = -(osgn B a b c * l3)
+AE33Geo/Sound.lean:308:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.nodup_cons, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵not_or, List.not_mem_nil, not_false_eq_true,
+  ̲  ̲ ̲ ̲List.nodup_nil, and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:429:46: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

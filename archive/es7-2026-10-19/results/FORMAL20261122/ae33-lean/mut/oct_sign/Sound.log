@@ -1,0 +1,62 @@
+AE33Geo/Sound.lean:308:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.nodup_cons, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵not_or, List.not_mem_nil, not_false_eq_true,
+  ̲  ̲ ̲ ̲List.nodup_nil, and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:414:25: error: unsolved goals
+B : Array Pt
+pt : ℕ → Point
+C : Ctx B pt
+w q0 q1 q2 q3 q4 q5 : ℕ
+hw : w < 2
+hlt : ∀ x ∈ [q0, q1, q2, q3, q4, q5], x < 31
+hnd : [q0, q1, q2, q3, q4, q5].Nodup
+hok : ccwOk B [q0, q1, q2, q3, q4, q5] = true
+hq : ∀ x ∈ [q0, q1, q2, q3, q4, q5], x < 31
+l0 : q0 < 31
+l1 : q1 < 31
+l2 : q2 < 31
+l3 : q3 < 31
+l4 : q4 < 31
+l5 : q5 < 31
+d50 : q5 ≠ q0
+d45 : q4 ≠ q5
+d01 : q0 ≠ q1
+m1 : ℤ
+hm1 : chi B q5 q0 (31 + w) = Term.lit m1
+hm10 : m1 ≠ 0
+hsm1 : EncB.LitSat (realAssign pt) m1 ↔ 0 < orient (pt q5) (pt q0) (pt (31 + w))
+m2 : ℤ
+hm2 : chi B q4 q5 (31 + w) = Term.lit m2
+hm20 : m2 ≠ 0
+hsm2 : EncB.LitSat (realAssign pt) m2 ↔ 0 < orient (pt q4) (pt q5) (pt (31 + w))
+m3 : ℤ
+hm3 : chi B q0 q1 (31 + w) = Term.lit m3
+hm30 : m3 ≠ 0
+hsm3 : EncB.LitSat (realAssign pt) m3 ↔ 0 < orient (pt q0) (pt q1) (pt (31 + w))
+hd✝ :
+  (if
+        ((decide (w < 2) && [q0, q1, q2, q3, q4, q5].all fun t => decide (t < 31)) &&
+              decide [q0, q1, q2, q3, q4, q5].Nodup &&
+            ccwOk B [q0, q1, q2, q3, q4, q5]) =
+          true then
+      match chi B q5 q0 (31 + w), chi B q4 q5 (31 + w), chi B q0 q1 (31 + w) with
+      | Term.lit l1, Term.lit l2, Term.lit l3 =>
+        if bounded (numVars B) [l1, l2, -l3] = true then some [l1, l2, -l3] else none
+      | x, x_1, x_2 => none
+    else none) =
+    some [m1, m2, -m3]
+hd : (if bounded (numVars B) [m1, m2, -m3] = true then some [m1, m2, -m3] else none) = some [m1, m2, -m3]
+hall : ∀ x ∈ [m1, m2, -m3], ¬EncB.LitSat (realAssign pt) x
+n1 : ¬EncB.LitSat (realAssign pt) m1
+⊢ -m2 = m1 ∨ -m2 = m2 ∨ m2 = m3
+AE33Geo/Sound.lean:429:46: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

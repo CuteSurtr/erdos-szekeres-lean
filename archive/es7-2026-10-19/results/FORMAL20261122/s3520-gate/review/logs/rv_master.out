@@ -1,0 +1,7 @@
+master sha256 71993a47f134ff06afa1d0029f39b7f6feceaf23bfee17b945e32329498e9dea
+budget 35 root 0 nodes 16347 {'branch': 8173, 'weighted': 94, 'context': 8080} contexts field 8080 master_leaves field 94
+reached all nodes once: yes; placeholders 8080 min 0 max 8080 absent ids [4782] master weighted/over leaves 94
+contexts whose master path repeats a vertex: 0
+contexts.json headers 8080 mismatching their master path: 0
+ctx-4274 Lean path (innermost first): [(109, 2), (75, 2), (133, 1), (33, 2), (25, 2), (17, 2), (20, 1), (56, 1), (45, 2), (36, 2), (54, 2), (98, 2), (44, 1), (0, 2)]
+U2080.root statement equals the expected text: True

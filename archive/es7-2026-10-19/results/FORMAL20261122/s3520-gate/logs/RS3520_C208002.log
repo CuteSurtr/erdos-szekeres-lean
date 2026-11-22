@@ -1,0 +1,195 @@
+.olean serialization took 151ms
+type checking took 449ms
+type checking took 266ms
+type checking took 502ms
+type checking took 388ms
+type checking took 576ms
+type checking took 315ms
+type checking took 423ms
+type checking took 295ms
+type checking took 574ms
+type checking took 312ms
+type checking took 329ms
+type checking took 472ms
+type checking took 516ms
+type checking took 509ms
+type checking took 375ms
+type checking took 423ms
+type checking took 338ms
+type checking took 299ms
+type checking took 450ms
+type checking took 170ms
+type checking took 343ms
+type checking took 209ms
+type checking took 343ms
+type checking took 435ms
+type checking took 419ms
+type checking took 329ms
+type checking took 588ms
+type checking took 570ms
+type checking took 509ms
+type checking took 362ms
+type checking took 316ms
+type checking took 483ms
+type checking took 550ms
+type checking took 525ms
+type checking took 429ms
+type checking took 559ms
+type checking took 256ms
+type checking took 296ms
+type checking took 443ms
+type checking took 331ms
+type checking took 332ms
+type checking took 351ms
+type checking took 473ms
+type checking took 277ms
+type checking took 268ms
+type checking took 217ms
+type checking took 297ms
+type checking took 414ms
+type checking took 182ms
+type checking took 306ms
+type checking took 318ms
+type checking took 435ms
+type checking took 288ms
+type checking took 292ms
+type checking took 450ms
+type checking took 179ms
+type checking took 414ms
+type checking took 363ms
+type checking took 406ms
+type checking took 328ms
+type checking took 533ms
+type checking took 707ms
+type checking took 247ms
+type checking took 480ms
+type checking took 430ms
+type checking took 628ms
+type checking took 438ms
+type checking took 383ms
+type checking took 371ms
+type checking took 489ms
+type checking took 330ms
+type checking took 508ms
+type checking took 541ms
+type checking took 478ms
+type checking took 407ms
+type checking took 491ms
+type checking took 513ms
+type checking took 309ms
+type checking took 506ms
+type checking took 619ms
+type checking took 537ms
+type checking took 436ms
+type checking took 427ms
+type checking took 390ms
+type checking took 269ms
+type checking took 434ms
+type checking took 212ms
+type checking took 435ms
+type checking took 323ms
+type checking took 370ms
+type checking took 476ms
+type checking took 173ms
+type checking took 145ms
+type checking took 354ms
+type checking took 488ms
+type checking took 312ms
+type checking took 269ms
+type checking took 438ms
+type checking took 162ms
+type checking took 395ms
+type checking took 243ms
+type checking took 386ms
+type checking took 360ms
+type checking took 486ms
+type checking took 173ms
+type checking took 173ms
+type checking took 526ms
+type checking took 422ms
+type checking took 218ms
+type checking took 366ms
+type checking took 444ms
+type checking took 321ms
+type checking took 544ms
+type checking took 281ms
+type checking took 415ms
+type checking took 393ms
+type checking took 213ms
+type checking took 251ms
+type checking took 373ms
+type checking took 426ms
+type checking took 306ms
+type checking took 526ms
+type checking took 178ms
+type checking took 534ms
+type checking took 632ms
+type checking took 567ms
+type checking took 648ms
+type checking took 412ms
+type checking took 381ms
+type checking took 730ms
+type checking took 633ms
+type checking took 455ms
+type checking took 509ms
+type checking took 410ms
+type checking took 391ms
+type checking took 554ms
+type checking took 563ms
+type checking took 770ms
+type checking took 398ms
+type checking took 434ms
+type checking took 485ms
+type checking took 574ms
+type checking took 384ms
+type checking took 510ms
+type checking took 494ms
+type checking took 207ms
+type checking took 598ms
+type checking took 497ms
+type checking took 520ms
+type checking took 361ms
+'RS3520.C208002.ex14408' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 358ms
+cumulative profiling times:
+	.olean serialization 151ms
+	attribute application 6.36ms
+	compilation (IR) 30.8ms
+	compilation (LCNF base) 42.5ms
+	compilation (LCNF mono) 19.8ms
+	elaboration 9.49s
+	fix level params 14.8ms
+	instantiate metavars 43.1ms
+	interpretation 5.34ms
+	let-to-have transformation 21.2ms
+	linting 704ms
+	parsing 1.64s
+	process pre-definitions 228ms
+	share common exprs 104ms
+	tactic execution 240ms
+	type checking 61.3s
+	typeclass inference 1.93s
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R /home/jay/research/data/formalize-20261122/s3520-gate/export/3520/src -o /home/jay/research/data/formalize-20261122/s3520-gate/olean/RS3520/C208002.olean.tmp /home/jay/research/data/formalize-20261122/s3520-gate/export/3520/src/RS3520/C208002.lean"
+	User time (seconds): 76.73
+	System time (seconds): 0.68
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:18.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3731992
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 131035
+	Voluntary context switches: 15616
+	Involuntary context switches: 14234
+	Swaps: 0
+	File system inputs: 9576
+	File system outputs: 12944
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+lean_rc=0

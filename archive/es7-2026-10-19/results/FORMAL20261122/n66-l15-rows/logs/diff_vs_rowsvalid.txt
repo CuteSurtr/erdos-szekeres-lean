@@ -1,0 +1,415 @@
+SAME N66R15Enc/Gen.lean = RowEnc/Gen.lean
+SAME N66R15Enc/DataT0.lean = RowEnc/DataT0.lean
+SAME N66R15Enc/DataT1.lean = RowEnc/DataT1.lean
+SAME N66R15Enc/DataT2.lean = RowEnc/DataT2.lean
+SAME N66R15Enc/DataT3.lean = RowEnc/DataT3.lean
+SAME N66R15Enc/DataT.lean = RowEnc/DataT.lean
+SAME N66R15Enc/DataC0.lean = RowEnc/DataC0.lean
+SAME N66R15Enc/DataC1.lean = RowEnc/DataC1.lean
+SAME N66R15Enc/DataC2.lean = RowEnc/DataC2.lean
+SAME N66R15Enc/DataC3.lean = RowEnc/DataC3.lean
+SAME N66R15Enc/DataC.lean = RowEnc/DataC.lean
+SAME N66R15Enc/RowMain.lean = RowEnc/Main.lean
+SAME N66R15Geo/Basic.lean = RowGeo/Basic.lean
+SAME N66R15Geo/Sem.lean = RowGeo/Sem.lean
+SAME N66R15Geo/Eight.lean = RowGeo/Eight.lean
+SAME N66R15Geo/Oct.lean = RowGeo/Oct.lean
+SAME N66R15Geo/Row.lean = RowGeo/Row.lean
+SAME N66R15Geo/Kinds.lean = RowGeo/Kinds.lean
+=== DIFF N66R15Geo/Assembly.lean vs RowGeo/Assembly.lean
+11c11
+< # RowGeo.Assembly: `RowsValid R1_15` modulo the 629 row-certificate verdicts
+---
+> # RowGeo.Assembly: `RowsValid R1` modulo the 629 row-certificate verdicts
+13,18c13,14
+< Copy of n66-rowsvalid's `RowGeo.Assembly` (renamed; rebased on n66-level15's `N66Enc`/`N66Geo`). Level-15 edits:
+< `toFin70` is `RowEnc.toFin70` (Std-only, `RowList`), and the row list is `R1_15` (10,859 rows, n66-level15's
+< `rows_used15.txt` order), the concatenation of the chunk constants `RowEnc.rows<k>` (`rowChunks_fst`).
+< 
+< * Table soundness (`ttB_sound`, `drB_sound`, `canB_sound`) from the kernel checks `RowChk.Tab*` and
+<   n66-level15's `tt_eq`, `can_eq`; `ttQ_eq : ttQ = ttF` from the plain-domain statistics table.
+---
+> * Table soundness (`ttB_sound`, `drB_sound`, `canB_sound`) from the kernel checks `RowChk.Tab*` and n66enc's
+>   `tt_eq`, `can_eq`; `ttQ_eq : ttQ = ttF` from the plain-domain statistics table.
+21,22c17,18
+< * **`rowsValid_R15 : RowCertsUnsat → RowsValid R1_15`**: every row's check is evaluated by the kernel
+<   (`RowChk.chkAll`).
+---
+> * **`rowsValid_R1 : RowCertsUnsat → RowsValid R1`**, where `R1` is the list of the 11,884 rows of `N66Enc.R0`
+>   (same order) and every row's check is evaluated by the kernel (`RowChk.chkAll`).
+27a24,25
+> def toFin70 (x : ℕ) : Fin 70 := ⟨x % 70, Nat.mod_lt _ (by decide)⟩
+> 
+285,286c283,287
+< /-- **`RowsValid R1_15`, Lean-checked modulo the 629 row-certificate verdicts.** -/
+< theorem rowsValid_R15 (hU : RowCertsUnsat) : RowsValid R1_15 := by
+---
+> /-- The 11,884 rows of `N66Enc.R0`, in its order, as kernel-friendly data. -/
+> def R1 : List (List (Fin 70)) := R1nat.map (·.map toFin70)
+> 
+> /-- **`RowsValid R1`, Lean-checked modulo the 629 row-certificate verdicts.** -/
+> theorem rowsValid_R1 (hU : RowCertsUnsat) : RowsValid R1 := by
+289,293c290,292
+<   unfold R1nat15 at hTn
+<   obtain ⟨ch, hch, hTch⟩ := List.mem_flatten.1 hTn
+<   rw [← rowChunks_fst] at hch
+<   obtain ⟨p, hp, rfl⟩ := List.mem_map.1 hch
+<   obtain ⟨hb, rc, hrc⟩ := chkRows_mem (chkAll p hp) Tn hTch
+---
+>   unfold R1nat at hTn
+>   obtain ⟨p, hp, hTp⟩ := List.mem_flatMap.1 hTn
+>   obtain ⟨hb, rc, hrc⟩ := chkRows_mem (chkAll p hp) Tn hTp
+=== DIFF N66R15Geo/End.lean vs RowGeo/End.lean
+4,8c4
+< # RowGeo.End: the bridge from the certified certificate texts
+< 
+< Copy of n66-rowsvalid's `RowGeo.End` (renamed) without its level-14 end part: `R0Parse`, `rowsValid_R0` and
+< `n66_bound_55_of_cubes_rows` are dropped (the level-15 row list `R1_15` is the kernel-checked chunk constants
+< themselves, so no parse equation is needed; the end statements are in `RowGeo.Final`).
+---
+> # RowGeo.End: the bridge from the certified texts, and `N66Bound 55`
+12a9,13
+> * `R0Parse : N66Enc.R0 = R1` — **a named hypothesis** (DESIGN.md F4: the kernel cannot evaluate n66enc's
+>   `include_str`-parsed `R0` under the memory cap); evidence: compiled Lean evaluates `R0 == R1` to `true`
+>   (`Audit/R0Parse.lean`, trust item E4).
+> * **`rowsValid_R0 : RowCertsUnsat → R0Parse → RowsValid N66Enc.R0`** and
+>   **`n66_bound_55_of_cubes_rows : CubesUnsat132 → RowCertsUnsat → R0Parse → N66Bound 55`**.
+81a83,99
+> /-! ## The end statements -/
+> 
+> /-- **Named hypothesis** (not an axiom): n66enc's `R0` (parse of `data/rows_used.txt`) is the kernel-friendly `R1`. -/
+> def R0Parse : Prop := N66Enc.R0 = R1
+> 
+> /-- **`RowsValid R0`, Lean-checked modulo `RowCertsUnsat` and `R0Parse`.** -/
+> theorem rowsValid_R0 (hU : RowCertsUnsat) (hp : R0Parse) : RowsValid N66Enc.R0 := by
+>   unfold R0Parse at hp
+>   rw [hp]
+>   exact rowsValid_R1 hU
+> 
+> /-- **`N66Bound 55`, Lean-checked modulo `CubesUnsat132` (132 verdicts), `RowCertsUnsat` (629 verdicts) and the
+> named hypothesis `R0Parse`.** -/
+> theorem n66_bound_55_of_cubes_rows (hc : N66Enc.CubesUnsat132) (hU : RowCertsUnsat) (hp : R0Parse) :
+>     OmissionZRow.N66Bound 55 :=
+>   N66Geo.n66_bound_55_of_cubes hc (rowsValid_R0 hU hp)
+> 
+84c102,106
+< /-- info: 'RowGeo.rowsValid_R15' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+---
+> /-- info: 'RowGeo.rowsValid_R1' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+> #guard_msgs in
+> #print axioms RowGeo.rowsValid_R1
+> 
+> /-- info: 'RowGeo.n66_bound_55_of_cubes_rows' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+86c108
+< #print axioms RowGeo.rowsValid_R15
+---
+> #print axioms RowGeo.n66_bound_55_of_cubes_rows
+SAME N66R15Chk/Tables.lean = RowChk/Tables.lean
+SAME N66R15Chk/Look.lean = RowChk/Look.lean
+SAME N66R15Chk/TabPs.lean = RowChk/TabPs.lean
+SAME N66R15Chk/TabTt.lean = RowChk/TabTt.lean
+SAME N66R15Chk/TabDr0.lean = RowChk/TabDr0.lean
+SAME N66R15Chk/TabDr1.lean = RowChk/TabDr1.lean
+SAME N66R15Chk/TabDr.lean = RowChk/TabDr.lean
+SAME N66R15Chk/TabCan.lean = RowChk/TabCan.lean
+SAME N66R15Chk/Check.lean = RowChk/Check.lean
+SAME N66R15Chk/CertsOk.lean = RowChk/CertsOk.lean
+SAME N66R15Chk/IsCore.lean = RowChk/IsCore.lean
+SAME N66R15Chk/TabTt0.lean = RowChk/TabTt0.lean
+SAME N66R15Chk/TabTt1.lean = RowChk/TabTt1.lean
+SAME N66R15Chk/TabTt2.lean = RowChk/TabTt2.lean
+SAME N66R15Chk/TabTt3.lean = RowChk/TabTt3.lean
+SAME N66R15Chk/TabTt4.lean = RowChk/TabTt4.lean
+SAME N66R15Chk/TabTt5.lean = RowChk/TabTt5.lean
+SAME N66R15Chk/TabTt6.lean = RowChk/TabTt6.lean
+SAME N66R15Chk/TabTt7.lean = RowChk/TabTt7.lean
+SAME N66R15Chk/TabTt8.lean = RowChk/TabTt8.lean
+SAME N66R15Chk/TabTt9.lean = RowChk/TabTt9.lean
+SAME N66R15Chk/TabTt10.lean = RowChk/TabTt10.lean
+SAME N66R15Chk/TabTt11.lean = RowChk/TabTt11.lean
+SAME N66R15Chk/TabTt12.lean = RowChk/TabTt12.lean
+SAME N66R15Chk/TabTt13.lean = RowChk/TabTt13.lean
+SAME N66R15Chk/certsOkTF0.lean = RowChk/certsOkTF0.lean
+SAME N66R15Chk/certsOkCF0.lean = RowChk/certsOkCF0.lean
+SAME N66R15Chk/certsOkTF1.lean = RowChk/certsOkTF1.lean
+SAME N66R15Chk/certsOkCF1.lean = RowChk/certsOkCF1.lean
+SAME N66R15Chk/certsOkTF2.lean = RowChk/certsOkTF2.lean
+SAME N66R15Chk/certsOkCF2.lean = RowChk/certsOkCF2.lean
+SAME N66R15Chk/certsOkTF3.lean = RowChk/certsOkTF3.lean
+SAME N66R15Chk/certsOkCF3.lean = RowChk/certsOkCF3.lean
+=== DIFF N66R15Enc/Print.lean vs n66-level15 N66E15/Print.lean (N66R15Enc -> N66E15)
+1,3c1
+< import N66E15.Alloc
+< import N66E15.Cover
+< import N66E15.RowList
+---
+> import N66E15.Full
+6,11c4
+< # N66E15.Print: the cube printer's clause selection, rows from `R1_15` (Std-only)
+< 
+< Copy of n66-level15's `N66E15.Print` (namespace `N66E15`) with two edits: the row array is `R1arr :=
+< R1_15.toArray`, built from the kernel-checked chunk constants (`N66E15.RowList`), instead of `R0_15` (an
+< `include_str` parse the kernel cannot evaluate); and the quad-index helper is named `optFin70` (`toFin70` is the row
+< map of `RowList`). The module imports `N66E15.Alloc` and `N66E15.Cover` only, so the exe links no `N66E15.Rows`.
+---
+> # N66E15.Print: the printer's clause selection from runtime data (Std-only)
+14c7
+< printer reads, per leaf, one descriptor per clause (written by n66-level15's untrusted `tools/extract_desc15.py`):
+---
+> printer reads, per leaf, one descriptor per clause (written by the untrusted `tools/extract_desc.py`):
+21c14
+< | `R k` | `rowClause R1_15[k]` |
+---
+> | `R k` | `rowClause R0_15[k]` |
+25,27c18,20
+< Anything else makes `printClauses` return `none` (nothing is printed). Every clause it returns is a member of
+< `fullCnf R1_15 c` (`N66E15.printClause_mem`), whatever the runtime data are; only the text the exe writes is
+< bound by hash (E1).
+---
+> Anything else makes `printClauses` return `none` (nothing is printed). By construction every clause it returns is a
+> member of `fullCnf R0_15 c` (`printClause_mem`, proved in a later milestone), whatever the runtime data are; so their
+> correctness is not trusted, only the text the exe writes is bound by hash (E1).
+31d23
+< open N66E15
+47c39
+< @[irreducible] def R1arr : Array (List (Fin 70)) := R1_15.toArray
+---
+> @[irreducible] def R0arr : Array (List (Fin 70)) := R0_15.toArray
+49c41
+< def optFin70 (n : Nat) : Option (Fin 70) := if h : n < 70 then some ⟨n, h⟩ else none
+---
+> def toFin70 (n : Nat) : Option (Fin 70) := if h : n < 70 then some ⟨n, h⟩ else none
+55,58c47,50
+<     let a ← optFin70 a
+<     let b ← optFin70 b
+<     let c' ← optFin70 c'
+<     let d ← optFin70 d
+---
+>     let a ← toFin70 a
+>     let b ← toFin70 b
+>     let c' ← toFin70 c'
+>     let d ← toFin70 d
+61c53
+<   | .r k => (R1arr[k]?).map fun T => toDimacs (rowClause T)
+---
+>   | .r k => (R0arr[k]?).map fun T => toDimacs (rowClause T)
+=== DIFF N66R15Enc/Main.lean vs n66-level15 N66E15/Main.lean (N66R15Enc -> N66E15)
+5c5
+< # n66r15print: the cube printer exe (modes)
+---
+> # n66print: the printer exe (modes)
+7,12c7,8
+< Copy of n66-level15's `N66E15/Main.lean` (exe `n66print15`) with the row list `R1_15` (kernel-checked chunk
+< constants) in place of `R0_15`; `parseRows`/`parseState` (only for the `full` control) are copied here so that the
+< exe imports no `N66E15.Rows`; mode `rows` added.
+< 
+< * `stats` — sizes of the Lean lists (eager stream, allocation, counter, SB, leaves, R1_15).
+< * `eager` — the DIMACS lines of `eagerStream` (no header).
+---
+> * `stats` — sizes of the Lean lists (eager stream, allocation, counter, SB, leaves, R0_15).
+> * `eager` — the DIMACS lines of `eagerStream` (no header), for comparison with the pinned Python generator.
+14d9
+< * `rows` — `R1_15`, one support per line (for comparison with n66-level15's `rows_used15.txt`).
+22,38c17
+< open N66E15 N66E15
+< 
+< namespace N66E15
+< 
+< /-- A token as a state (`none` unless a decimal below 70); `full` control only. -/
+< def parseState (w : String) : Option (Fin 70) :=
+<   match w.toNat? with
+<   | some n => if h : n < 70 then some ⟨n, h⟩ else none
+<   | none => none
+< 
+< /-- One support per nonempty line; a line with an invalid token is dropped; `full` control only. -/
+< def parseRows (s : String) : List (List (Fin 70)) :=
+<   (s.splitOn "\n").filterMap fun line =>
+<     let ws := (line.splitOn " ").filter (· ≠ "")
+<     if ws.isEmpty then none else ws.mapM parseState
+< 
+< end N66E15
+---
+> open N66E15
+67c46
+<     out.putStrLn s!"card {cardClauses.length} sb {sbClauses.length} leaves {leaves105.length} R1_15 {R1_15.length} chunks {rowsAll.length}"
+---
+>     out.putStrLn s!"card {cardClauses.length} sb {sbClauses.length} leaves {leaves105.length} R0_15 {R0_15.length}"
+80,83d58
+<   | ["rows"] =>
+<     for T in R1_15 do
+<       out.putStrLn (" ".intercalate (T.map fun s => toString s.val))
+<     return 0
+111c86
+<         match optFin70 a, optFin70 b', optFin70 c', optFin70 d with
+---
+>         match toFin70 a, toFin70 b', toFin70 c', toFin70 d with
+123c98
+<     err.putStrLn "usage: n66r15print stats | eager | leaves | rows | trim I DESC | full I ACT ROWS"
+---
+>     err.putStrLn "usage: n66print stats | eager | leaves | trim I DESC | full I ACT ROWS"
+=== DIFF N66R15Enc/Bridge.lean vs n66-level15 N66E15/Bridge.lean (N66R15Enc -> N66E15)
+3c3
+< import N66E15.Bridge
+---
+> import N66E15.DecodeB
+6c6
+< # N66E15.Bridge: from the printed texts to `CubesUnsat105R` (Std-only, theorem side)
+---
+> # N66E15.Bridge: from the printed texts to `CubesUnsat105`, and the cube cover (Std-only, theorem side)
+8,13c8,10
+< Copy of the membership/text part of n66-level15's `N66E15.Bridge` for the printer `N66E15.Print` (rows from
+< `R1_15`). The generic parts (`fullCnf`, `baseS`, `mem_fullS_of_mem_baseS`, `mem_fullS_of_cube`, `mem_quadStream`,
+< `unsat_of_sub`, `no_base_model`) are n66-level15's, used unchanged.
+< 
+< * `printClause_mem`: every clause the printer returns for leaf cube `c` is a clause of `fullCnf R1_15 c`, whatever
+<   the runtime descriptors are.
+---
+> * `printClause_mem`: every clause the printer returns for leaf cube `c` is a clause of `fullCnf R0_15 c`, whatever the
+>   runtime descriptors are (DESIGN.md D3).
+> * `unsat_of_sub`: a sub-list that is unsatisfiable makes the whole list unsatisfiable.
+15,17c12,15
+<   cake_lpr's verdict on that file, trust item E3), then `fullCnf R1_15 c` is unsatisfiable (ENCBLEAN's proved round
+<   trip `EncB.parseDimacs_render`).
+< * `CubesUnsat105R`: the 105 verdicts, as one proposition, on the row list `R1_15`.
+---
+>   cake_lpr's verdict on that file, trust item E3), then `fullCnf R0_15 c` is unsatisfiable. Uses ENCBLEAN's proved
+>   round trip `EncB.parseDimacs_render`.
+> * `covers_leaves`, `no_base_model`: the 105 leaves cover every assignment of the selectors, so refuting
+>   `fullCnf R c` for every leaf refutes the cube-free relaxation `baseCnf R`.
+23d20
+< open N66E15
+25c22,54
+< /-- **Every clause the printer returns is a clause of `fullCnf R1_15 c`.** -/
+---
+> /-! ## Membership of the printed clauses -/
+> 
+> /-- The cube-free part of the relaxation. -/
+> noncomputable def baseS (R : List (List (Fin 70))) : List (List SLit) :=
+>   eagerStream () ++ quadStream ++ fixedUnits ++ R.map rowClause ++ cardClauses ++ sbClauses
+> 
+> noncomputable def baseCnf (R : List (List (Fin 70))) : List (List Int) := (baseS R).map toDimacs
+> 
+> theorem mem_fullS_of_mem_baseS {R : List (List (Fin 70))} {c : Cube} {cl : List SLit} (h : cl ∈ baseS R) :
+>     cl ∈ fullS R c := by
+>   simp only [baseS, fullS, List.mem_append] at h ⊢
+>   rcases h with ((((h | h) | h) | h) | h) | h <;> simp [h]
+> 
+> theorem mem_fullS_of_cube {R : List (List (Fin 70))} {c : Cube} {z : Fin 70 × Bool} (h : z ∈ c) :
+>     cubeUnit z ∈ fullS R c := by
+>   simp only [fullS, List.mem_append]
+>   exact Or.inl (Or.inl (Or.inl (Or.inr (List.mem_map_of_mem h))))
+> 
+> theorem mem_fr70 (a : Fin 70) : a ∈ fr70 := by
+>   unfold fr70 List.finRange
+>   exact List.mem_ofFn.2 ⟨a, rfl⟩
+> 
+> theorem mem_perm4 {a b c d : Fin 70} (h : okQuad a b c d = true) : (a, b, c, d) ∈ perm4 := by
+>   unfold perm4
+>   simp only [List.mem_flatMap, List.mem_filterMap]
+>   exact ⟨a, mem_fr70 a, b, mem_fr70 b, c, mem_fr70 c, d, mem_fr70 d, by simp [h]⟩
+> 
+> theorem mem_quadStream {a b c d : Fin 70} {cl : List SLit} (h : okQuad a b c d = true)
+>     (hc : cl ∈ quadClauses a b c d) : cl ∈ quadStream := by
+>   unfold quadStream
+>   exact List.mem_flatMap.2 ⟨(a, b, c, d), mem_perm4 h, hc⟩
+> 
+> /-- **Every clause the printer returns is a clause of `fullCnf R0_15 c`.** -/
+27c56
+<     cl ∈ fullCnf R1_15 c := by
+---
+>     cl ∈ fullCnf R0_15 c := by
+56c85
+<     simp only [printClause, R1arr, List.getElem?_toArray] at h
+---
+>     simp only [printClause, R0arr, List.getElem?_toArray] at h
+75c104
+<     ∀ cl ∈ L, cl ∈ fullCnf R1_15 c := by
+---
+>     ∀ cl ∈ L, cl ∈ fullCnf R0_15 c := by
+87a117,124
+> /-! ## Sub-lists and the text -/
+> 
+> /-- A refuted sub-list refutes the whole list. -/
+> theorem unsat_of_sub {L F : List (List Int)} (hsub : ∀ cl ∈ L, cl ∈ F) (h : ¬ EncB.DimacsSatisfiable L) :
+>     ¬ EncB.DimacsSatisfiable F := by
+>   rintro ⟨ν, hν⟩
+>   exact h ⟨ν, fun cl hcl => hν cl (hsub cl hcl)⟩
+> 
+99c136
+< E1), then `fullCnf R1_15 c` is unsatisfiable. -/
+---
+> E1), then `fullCnf R0_15 c` is unsatisfiable. -/
+103c140
+<     ¬ EncB.DimacsSatisfiable (fullCnf R1_15 c) :=
+---
+>     ¬ EncB.DimacsSatisfiable (fullCnf R0_15 c) :=
+106,109c143,203
+< /-- **The 105 level-15 cube verdicts, as one proposition**, on the row list `R1_15` (kernel-checked chunk
+< constants). Discharged outside the kernel by `fullUnsat_of_text` and the hash binding M9 (105/105), under trust
+< items E1-E6. -/
+< def CubesUnsat105R : Prop := ∀ c ∈ leaves105, ¬ EncB.DimacsSatisfiable (fullCnf R1_15 c)
+---
+> /-! ## The cover -/
+> 
+> theorem leavesFrom_cover : ∀ (t : SplitTree) (pre : Cube) (x : Fin 70 → Bool), (∀ z ∈ pre, x z.1 = z.2) →
+>     ∃ c ∈ t.leavesFrom pre, ∀ z ∈ c, x z.1 = z.2
+>   | .leaf, pre, x, h => ⟨pre, List.mem_singleton_self _, h⟩
+>   | .node s occ hole, pre, x, h => by
+>     by_cases hs : x s = true
+>     · obtain ⟨c, hc, hcx⟩ := leavesFrom_cover occ (pre ++ [(s, true)]) x (by
+>         intro z hz
+>         rcases List.mem_append.1 hz with hz | hz
+>         · exact h z hz
+>         · simp at hz; subst hz; exact hs)
+>       exact ⟨c, List.mem_append_left _ hc, hcx⟩
+>     · obtain ⟨c, hc, hcx⟩ := leavesFrom_cover hole (pre ++ [(s, false)]) x (by
+>         intro z hz
+>         rcases List.mem_append.1 hz with hz | hz
+>         · exact h z hz
+>         · simp at hz; subst hz; simpa using hs)
+>       exact ⟨c, List.mem_append_right _ hc, hcx⟩
+> 
+> /-- **The leaves of a split tree cover every assignment of the split states.** -/
+> theorem covers_leaves (t : SplitTree) (x : Fin 70 → Bool) : ∃ c ∈ t.leaves, ∀ z ∈ c, x z.1 = z.2 :=
+>   leavesFrom_cover t [] x (fun _ hz => absurd hz List.not_mem_nil)
+> 
+> theorem litSat_cubeUnit (ν : Nat → Bool) (z : Fin 70 × Bool) (h : ν (num (Atom.sel z.1)) = z.2) :
+>     ∀ l ∈ toDimacs (cubeUnit z), EncB.LitSat ν l := by
+>   obtain ⟨s, b⟩ := z
+>   intro l hl
+>   simp only [toDimacs, cubeUnit, List.map_cons, List.map_nil, List.mem_singleton] at hl
+>   subst hl
+>   cases b with
+>   | true =>
+>     simp only [litInt, if_true]
+>     exact (litSat_pos ν _ (num_pos _)).2 h
+>   | false =>
+>     simp only [litInt, Bool.false_eq_true, if_false]
+>     exact (litSat_neg' ν _ (num_pos _)).2 h
+> 
+> /-- **Composition (M3).** If `fullCnf R c` is refuted for every leaf, the cube-free relaxation `baseCnf R` has no
+> model: any model picks, through the cover, the leaf whose units it satisfies. -/
+> theorem no_base_model {R : List (List (Fin 70))}
+>     (h : ∀ c ∈ leaves105, ¬ EncB.DimacsSatisfiable (fullCnf R c)) : ¬ EncB.DimacsSatisfiable (baseCnf R) := by
+>   rintro ⟨ν, hν⟩
+>   obtain ⟨c, hc, hcx⟩ := covers_leaves tree15 (fun s => ν (num (Atom.sel s)))
+>   apply h c hc
+>   refine ⟨ν, fun cl hcl => ?_⟩
+>   obtain ⟨s, hs, rfl⟩ := List.mem_map.1 hcl
+>   simp only [fullS, List.mem_append] at hs
+>   rcases hs with (((((hs | hs) | hs) | hs) | hs) | hs) | hs
+>   · exact hν _ (List.mem_map_of_mem (by simp [baseS, hs]))
+>   · exact hν _ (List.mem_map_of_mem (by simp [baseS, hs]))
+>   · exact hν _ (List.mem_map_of_mem (by simp [baseS, hs]))
+>   · obtain ⟨z, hz, rfl⟩ := List.mem_map.1 hs
+>     obtain ⟨l, hl⟩ : ∃ l, l ∈ toDimacs (cubeUnit z) := ⟨_, List.mem_singleton_self _⟩
+>     exact ⟨l, hl, litSat_cubeUnit ν z (hcx z hz) l hl⟩
+>   · exact hν _ (List.mem_map_of_mem (by simp [baseS, hs]))
+>   · exact hν _ (List.mem_map_of_mem (by simp [baseS, hs]))
+>   · exact hν _ (List.mem_map_of_mem (by simp [baseS, hs]))
+> 
+> /-- **The 105 verdicts refute the cube-free relaxation over R0_15.** -/
+> theorem base_unsat_of_cubes (h : CubesUnsat105) : ¬ EncB.DimacsSatisfiable (baseCnf R0_15) := no_base_model h
+114a209,210
+> #print axioms N66E15.no_base_model
+> #print axioms N66E15.base_unsat_of_cubes

@@ -184,6 +184,13 @@ ES(8) ≤ 311:
 
 ### 4.2 ES(8) ≤ 304 (current best): Lean-checked modulo three hypotheses
 
+**Update 23 Nov 00:45 (formalization wave 5, `FORMAL20261122`).** H1 is discharged by FV304
+(`E304Z.Final.excludes_67`, 22 Nov 12:19). `Combined.es304_l15` takes only cake_lpr verdicts and two slices: ES(8) ≤ 304
+is Lean-checked modulo the 105 level-15 cube verdicts, the 629 row-certificate verdicts and the 2,025 Res118 row
+verdicts (trust items E1-E6), and the slice exclusions s35_19 and s35_20 (EXACT TREE, not in Lean; s35_19's Lean check
+is running). Review of part 2: 8 confirmed, 2 not confirmed (H-T69 has no evidence; the s35_19 switch template is
+not compiled); no fixes. The table below is the 04:25 inventory.
+
 | link | Lean? | git? | build dep | label | evidence [D] | re-checked? | keep-set |
 |---|---|---|---|---|---|---|---|
 | composition `composition_304_z` | yes, ES305N20261119/BalancedBudgetsZ.lean | yes | chain311 (87-module closure, 16.35 GiB peak), `LemmaZ.olean`, library | Lean-checked (bbz.log, 20 Nov) | – | second machine: Mac agent, all 9 files rc 0 (ES8CHECK20261121 §4; agent, unmerged branch, not a person) | git, plus chain311 olean or its rebuild |
@@ -239,6 +246,16 @@ Derivation [R]:
   304 and of the pending 303 and 302.
 
 ### 4.4 `N66Bound 55` (304, 303 and H3) and `N66Bound 54` (302)
+
+**Update 22 Nov ~20:50 (formalization wave 3, `FORMAL20261122`).** `RowGeo.n66_bound_55_of_cubes_rows :
+CubesUnsat132 → RowCertsUnsat → R0Parse → N66Bound 55` compiles with standard axioms: N66Bound 55 is Lean-checked
+modulo the 132 cube verdicts, the 629 row-CNF verdicts and the named hypothesis R0Parse (`N66Enc.R0 = R1`, COMPUTED,
+E4-class). At level 15, `N66G15.n66_bound_54_of_cubes` still takes `RowsValid R0_15` as a hypothesis.
+
+**Update 23 Nov 00:45 (wave 5).** `N66R15.n66_bound_54 : CubesUnsat105R → RowCertsUnsat → N66Bound 54` (and `_55`)
+compiles with standard axioms. It has no R0Parse and no RowsValid hypothesis: the level-15 rows are kernel-checked chunk
+constants, and the cube printer reads the same constants. N66 ≤ 54 is therefore Lean-checked modulo the 105 level-15
+cube verdicts and the 629 row-certificate verdicts (E1-E6). Review: 13 confirmed, 1 not confirmed (off the label's path).
 
 - **N66 ≤ 55** [R N66N20261113, cubes20261115]:
   - The level-14 relaxation is split into cubes; all 132 leaves have a CaDiCaL 2.1.3 LRAT accepted by cake_lpr, and

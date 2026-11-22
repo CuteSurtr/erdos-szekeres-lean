@@ -1,0 +1,6 @@
+export rc=0 {"unit": 2080, "modules": 57, "leaves": 320422, "min_margin": 1, "seconds": 106.2, "corrupted": {"module": "RS3520.C208021", "leaf_node": 231893, "entry_index": 0, "row": 20, "old_weight": 2266, "new_weight": 2265, "old_margin": 1, "new_margin": 0}, "nodes": 640843, "maxrss_mb": 712}
+module 01 unchanged by the corruption (as expected)
+module 20 unchanged by the corruption (as expected)
+module 22 unchanged by the corruption (as expected)
+NEGATIVE CONTROL: corrupted C208021 REJECTED by Lean as expected (rc=1)
+1:/home/jay/research/data/formalize-20261122/s3520-gate/controls/neg2080/src/RS3520/C208021.lean:14:367: error: Tactic `decide` proved that the proposition

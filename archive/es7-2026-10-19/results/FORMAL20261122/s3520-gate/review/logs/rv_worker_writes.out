@@ -1,0 +1,150 @@
+---- 2026-11-22T12:05:21.257Z
+ls -la /home/jay/research/data/formalize-20261122/ ; ls -la /home/jay/research/data/formalize-20261122/res-slices-fv/ ; ls -la /home/jay/research/data/formalize-20261122/s3520-gate 2>&1
+---- 2026-11-22T12:09:59.928Z
+grep -n "s35_20\|rowsA" /home/jay/research/data/formalize-20261122/res118/lean/Res118/Final.lean | head; sha256sum /home/jay/research/data/es308-20261114/runs/b35s20/bb-s1/master.json /home/jay/research/data/es308-20261114/inputs/b35s20-v169/extra.json; grep -rn "119,054,03\|119054034\|119054033" /home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ --include=*.md 2>/dev/null | head -20
+---- 2026-11-22T12:10:06.545Z
+sed -n 1,40p /home/jay/research/data/formalize-20261122/res118/lean/Res118/Final.lean; sha256sum /home/jay/research/data/formalize-20261122/res118/lean/Res118/Final.lean; S=/home/jay/research/data/es308-20261114/runs/b35s20/bb-s1; ls $S | grep -v '^ctx-[0-9]*\.json\.gz$'; ls $S/ctx-4782.json.gz 2>&1; cat $S/SUCCESSOR.json | head -c 600
+---- 2026-11-22T12:15:48.974Z
+D=/home/jay/research/data/formalize-20261122/res-slices-fv; cat $D/lean/RS/FinalTest3520.lean; ls -la $D/olean/RS/ | grep 3520; sha256sum $D/olean/RS/*3520*.olean $D/lean/RS/Bridge3520.lean $D/lean/RS/Cat3520*.lean 2>/dev/null; ls $D/logs | grep 3520
+---- 2026-11-22T12:15:51.022Z
+systemctl --user list-units --no-legend --plain --state=active,activating | awk '{print $1}' | grep -v '^esr-fvr-c3519' | head -60; echo; systemctl --user list-units --no-legend --plain --state=active 'esr-*' 'esv-*' | wc -l; /home/jay/research/lean/erdos-szekeres-lean/.claude/skills/es-research/scripts/cpu_free.sh esr; sensors | grep Tctl; ls /home/jay/research/data/agents-20261121/YIELD 2>&1; free -m; df -h /home/jay/research/data | tail -1
+---- 2026-11-22T12:16:15.581Z
+mkdir -p /home/jay/research/data/formalize-20261122/s3520-gate/{tools,logs,diffs,controls,data,export,olean}; date '+%F %T %Z'; grep -n "4782\|8,080\|8080" /home/jay/research/data/formalize-20261122/res118/README.md | head -5; python3 -I -B -c "
+import json
+m=json.load(open('/home/jay/research/data/es308-20261114/runs/b35s20/bb-s1/master.json'))
+print({k:v for k,v in m.items() if k!='nodes'})
+nodes=m['nodes']; import collections
+print(len(nodes), collections.Counter(n['type'] for n in nodes))
+ids=sorted(n['context'] for n in nodes if n['type']=='context'); print(len(ids), ids[0], ids[-1], set(range(ids[-1]+1))-set(ids))
+"
+---- 2026-11-22T12:22:05.587Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; F=/home/jay/research/data/formalize-20261122/res-slices-fv/tools; cp $F/export_es310_w13.py $F/slice_export_w13.py $F/drive.py $G/tools/; cd $G/tools; sha256sum export_es310_w13.py slice_export_w13.py drive.py; grep -n "^def renumber\|^# writing\|^# ------" export_es310_w13.py
+---- 2026-11-22T12:28:36.043Z
+cat /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/6c432959-c01d-4eea-8e4b-afa192d576dc/tasks/b3d6keovx.output; /home/jay/research/lean/erdos-szekeres-lean/.claude/skills/es-research/scripts/cpu_free.sh esr -v 2>&1 | tail -15; sensors | grep Tctl
+---- 2026-11-22T12:28:53.161Z
+X=/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05; ls $X/*.py | head -40; grep -n "sub" $X/root_es304z.py 2>/dev/null | head -40
+---- 2026-11-22T12:30:15.183Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; S=/home/jay/research/data/es308-20261114; PY=/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python; sha256sum $G/tools/slice_export_v3.py $G/tools/export_es310_w13l.py > $G/data/tools-at-prepass.sha256; cat $G/data/tools-at-prepass.sha256; cd $G && nohup tools/gate_start.sh pre3520 1500 7200 500 90 -p StandardOutput=file:$G/logs/pre3520.out -p StandardError=file:$G/logs/pre3520.err $G/tools/sampled.sh $G/logs/pre3520.mem /usr/bin/time -v $PY -I -B $G/tools/slice_export_v3.py 3520 --budget 35 --master $S/runs/b35s20/bb-s1/master.json --ctxdir $S/runs/b35s20/bb-s1 --extra $S/inputs/b35s20-v169/extra.json --out $G/export/3520 --unit-leaves 40000 --chunk-leaves 8000 --prepass-only > $G/logs/gate_pre3520.txt 2>&1 &
+sleep 5; cat $G/logs/gate_pre3520.txt
+---- 2026-11-22T12:32:02.706Z
+cd /home/jay/research/data/formalize-20261122/s3520-gate/tools && python3 -I -B - <<'EOF'
+s = open("drive_v3.py").read()
+a = '''                    RES[f"esr-fvr-r{tag}"] = (s.get("root_mem", 2000), 10800)'''
+assert s.count(a) == 1
+s = s.replace(a, '''                    RES[f"esr-fvr-r{tag}"] = (s.get("root_mem", 2000), s.get("root_rt", 10800))''')
+a = '''         root_mem=int(os.environ.get("FVR_ROOTMEM", "2000")), root_est=int(os.environ.get("FVR_ROOTEST", "1500"))),'''
+assert s.count(a) == 1
+s = s.replace(a, '''         root_mem=int(os.environ.get("FVR_ROOTMEM", "2000")), root_est=int(os.environ.get("FVR_ROOTEST", "1500")),
+         root_rt=int(os.environ.get("FVR_ROOTRT", "21600"))),''')
+s = s.replace('''    exp_est (MB); per-slice root_mem / root_est for the Root unit; start() takes MemoryMax and RuntimeMaxSec;''',
+              '''    exp_est (MB); per-slice root_mem / root_est / root_rt for the Root unit; start() takes MemoryMax and RuntimeMaxSec;''')
+open("drive_v3.py", "w").write(s)
+EOF
+cd /home/jay/research/data/formalize-20261122/s3520-gate; diff tools/drive.py tools/drive_v3.py > diffs/drive_v2_to_v3.diff; cat > tools/test_drive_v3.py <<'EOF'
+#!/usr/bin/env python3
+"""s3520-gate: offline test of drive_v3.py (import only; main() is not run, nothing is launched or written).
+Checks: the 3520 entry, the Final text against res-slices-fv's compiled glue dry run FinalTest3520.lean, the six-slice
+specialisation text, the exporter command keys, and that the v2 slices are 
+---- 2026-11-22T12:32:25.335Z
+cd /home/jay/research/data/formalize-20261122/s3520-gate; F=/home/jay/research/data/formalize-20261122/res-slices-fv/tools; diff $F/slice_export_w13.py tools/slice_export_w13fix.py > diffs/slice_export_w13_to_w13fix.diff; diff tools/slice_export_w13fix.py tools/slice_export_v3.py > diffs/slice_export_w13fix_to_v3.diff; diff $F/export_es310_w13.py tools/export_es310_w13l.py > diffs/export_es310_w13_to_w13l.diff; diff $F/compile.sh tools/compile.sh > diffs/compile_sh.diff; diff $F/drive.py tools/drive_v3.py > diffs/drive_v2_to_v3.diff; wc -l diffs/*; cat logs/pre3520.out | tail -2
+---- 2026-11-22T12:39:22.620Z
+cd /home/jay/research/data/formalize-20261122/s3520-gate; timeout 60 python3 -I -B - <<'EOF'
+import json
+m = json.load(open('/home/jay/research/data/es308-20261114/runs/b35s20/bb-s1/master.json'))
+nodes = m['nodes']
+sk = json.load(open('export/3520/skeleton.json'))
+print(nodes[12473])
+def under(t):
+    ctxs, wl, st = [], 0, [t]
+    while st:
+        i = st.pop(); nd = nodes[i]
+        if nd['type'] == 'branch': st += [nd['zero'], nd['one']]
+        elif nd['type'] == 'context': ctxs.append(nd['context'])
+        else: wl += 1
+    return ctxs, wl
+cands = []
+for t in sk['tops']:
+    c, wl = under(t['node'])
+    if 169 in c: print('unit of ctx-169:', t['unit'], t['leaves'], c)
+    if wl >= 1 and len(c) >= 3 and 15000 <= t['leaves'] <= 40000: cands.append((t['unit'], t['leaves'], len(c), wl))
+print('multi-context units with master leaves:', len(cands), cands[:8])
+import statistics
+L = [t['leaves'] for t in sk['tops']]
+print('units', len(L), 'median leaves', statistics.median(L), 'max', max(L), '>40000:', sum(x > 40000 for x in L), 'leaves in >40000 units', sum(x for x in L if x > 40000))
+EOF
+---- 2026-11-22T12:41:55.095Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; S=/home/jay/research/data/es308-20261114; PY=/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python; cd $G; { date '+frozen %F %T (after the byte-identity controls 3318, 3520 u1793, u161)'; sha256sum tools/slice_export_v3.py tools/export_es310_w13l.py tools/slice_export_w13fix.py tools/export_es310_w13.py tools/compile.sh tools/compile_loop.sh tools/subroot.py tools/drive_v3.py; } > data/tools-frozen.sha256; cat data/tools-frozen.sha256; diff <(sed -n 2,3p data/tools-frozen.sha256) <(cat data/tools-at-prepass.sha256 | sed 's|/home/jay/research/data/formalize-20261122/s3520-gate/||') && echo "v3 unchanged since the pre-pass"; timeout 5400 tools/gate_start.sh exp4274 3000 3600 1000 90 -p StandardOutput=file:$G/logs/exp4274.out -p StandardError=file:$G/logs/exp4274.err $G/tools/sampled.sh $G/logs/exp4274.mem /usr/bin/time -v $PY -I -B $G/tools/slice_export_v3.py 3520 --budget 35 --master $S/runs/b35s20/bb-s1/master.json --ctxdir $S/runs/b35s20/bb-s1 --extra $S/inputs/b35s20-v169/extra.json --out $G/export/3520 --unit-leaves 40000 --chunk-leaves 8000 --units 2080:2081 > logs/gate_exp4274.txt 2>&1; tail -2 logs/gate_exp4274.txt
+---- 2026-11-22T12:52:05.917Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; C=$G/controls/rootmem; F=/home/jay/research/data/formalize-20261122/res-slices-fv; { echo "-- s3520-gate: import-memory test (22 Nov 2026): the finished RS3519 chunk oleans of res-slices-fv (listed $(date '+%F %T'), read-only) and the gate's 68 RS3520 chunk modules; no proofs here."; ls $F/olean/RS3519/ | grep '\.olean$' | sed 's/\.olean$//' | sort | sed 's/^/import RS3519./'; ls $G/export/3520/src/RS3520/ | grep '^C.*\.lean$' | sed 's/\.lean$//' | sort | sed 's/^/import RS3520./'; echo "open CompactChecker"; echo "#check @split_pm"; } > $C/ImpTest.lean; grep -c '^import' $C/ImpTest.lean; ls $F/olean/RS3519/ | grep '\.olean$' | sed 's|^|'$F'/olean/RS3519/|' | xargs stat -c %s | awk '{s+=$1} END{print "RS3519 olean bytes", s}'; cat $G/logs/loop_c2080a.out $G/logs/loop_c2080b.out | wc -l
+---- 2026-11-22T12:52:29.674Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; C=$G/controls/rootmem; head -n -2 $C/run.sh > $C/run.tmp && mv $C/run.tmp $C/run.sh; sed -i 's|# 320,422 leaves, 61 split_pm joins), and (3) ImpTest (311 chunk imports: 243 finished RS3519 oleans of res-slices-fv,|# 320,422 leaves, 61 split_pm joins), each under sampled.sh (anon + shmem of this unit, every 0.5 s). ImpTest: imptest.sh.|; /^# read-only, and the 68 gate modules), each under sampled.sh/d' $C/run.sh; chmod +x $C/run.sh; cat > $C/imptest.sh <<'EOF'
+#!/bin/bash
+# s3520-gate (22 Nov 2026): import-memory test. Writes ImpTest.lean importing every finished RS3519 chunk olean of
+# res-slices-fv (listed now; finished oleans are not written any more; read-only) and every gate RS3520 chunk module
+# with an olean, then compiles it under sampled.sh. No proofs; only the import cost is measured.
+set -u
+G=/home/jay/research/data/formalize-20261122/s3520-gate; C=$G/controls/rootmem; F=/home/jay/research/data/formalize-20261122/res-slices-fv
+{ echo "-- s3520-gate import-memory test, listed $(date '+%F %T')"
+  ls $F/olean/RS3519/ | grep '\.olean$' | sed 's/\.olean$//' | sort | sed 's/^/import RS3519./'
+  ls $G/olean/RS3520/ | grep '^C.*\.olean$' | sed 's/\.olean$//' | sort | sed 's/^/import RS3520./'
+  echo "open CompactChecker"; echo "#check @split_pm"; } > $C/ImpTest.lean
+n19=$(grep -c '^import RS3519' $C/ImpTest.lean); n20=$(grep -c '^import RS3520' $C/ImpTest.lean)
+b19=$(grep '^import RS3519' $C/ImpTest.lean | sed "s|impo
+---- 2026-11-22T12:55:17.603Z
+ls /home/jay/research/data/fv304-20261120/ 2>/dev/null | head -30; ls /home/jay/research/data/fv304-20261120/logs/ 2>/dev/null | head; grep -l "Maximum resident" /home/jay/research/data/fv304-20261120/logs/lean/*Root* /home/jay/research/data/fv304-20261120/logs/lean/*Final* /home/jay/research/data/fv304-20261120/logs/lean/*S1* 2>/dev/null | head
+---- 2026-11-22T12:55:23.334Z
+F=/home/jay/research/data/fv304-20261120; grep -E "Elapsed|Maximum resident|User time" $F/logs/lean/Root.log $F/logs/lean/Final.log; grep -iE "root|final" $F/run.tsv | head -5; head -1 $F/run.tsv; ls $F/logs/lean/ | grep -c "^s-S"; grep -E "Elapsed|Maximum resident" $F/logs/lean/s-S12_376.log; grep -c "^import" $F/export/src/E304Z/Root.lean 2>/dev/null; grep -c "^import" $F/export/src/E304Z/S12_376.lean 2>/dev/null
+---- 2026-11-22T12:55:58.576Z
+du -sh /home/jay/research/data/fv304-20261120/olean/E304Z 2>/dev/null; ls /home/jay/research/data/fv304-20261120/olean/E304Z | wc -l; G=/home/jay/research/data/formalize-20261122/s3520-gate; ls $G/olean/RS3520/ | grep -c C2080; date +%T
+---- 2026-11-22T13:29:43.842Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; cd $G; timeout 60 python3 -I -B tools/calib_gate.py export/3520 3520 2080 161 1793 > logs/calib_gate.out; cat logs/calib_gate.out; timeout 60 python3 -I -B tools/plan_numbers.py | tee logs/plan_numbers.out; timeout 120 python3 -I -B tools/axlines_view.py $G/axview $G/export/3520 3520 2080 161 1793 | tee logs/axlines_view.out; f=logs/RS3520_U2080.log; tail -1 $f; grep -cxF "'RS3520.U2080.root' depends on axioms: [propext, Classical.choice, Quot.sound]" $f; sha256sum /home/jay/research/data/formalize-20261122/res-slices-fv/tools/axlines.py
+---- 2026-11-22T13:30:50.936Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; cd $G; mv data/tools-frozen.sha256 data/tools-frozen-2141.sha256; { echo "# s3520-gate final tool hashes $(date '+%F %T'); exporter files identical to the 21:41:55 freeze (data/tools-frozen-2141.sha256); drive_v3.py changed after it (join_* keys, 21:58) and re-tested"; sha256sum tools/slice_export_v3.py tools/export_es310_w13l.py tools/drive_v3.py tools/slice_export_w13fix.py tools/export_es310_w13.py tools/compile.sh tools/compile_loop.sh tools/subroot.py tools/sampled.sh tools/gate_start.sh tools/axlines_view.py tools/cmp_export.py tools/check_prepass.py tools/calib_gate.py tools/plan_numbers.py tools/test_drive_v3.py tools/test_drive_v3_sandbox.py; } > data/tools-frozen.sha256; grep -v '^#' data/tools-frozen.sha256 | sha256sum -c --quiet && echo "all match"; diff <(grep -E "slice_export_v3|export_es310_w13l" data/tools-frozen-2141.sha256) <(grep -E "slice_export_v3|export_es310_w13l" data/tools-frozen.sha256) && echo "exporter unchanged since 21:41:55"; F=/home/jay/research/data/formalize-20261122/res-slices-fv/tools; diff $F/slice_export_w13.py tools/slice_export_w13fix.py > diffs/slice_export_w13_to_w13fix.diff; diff tools/slice_export_w13fix.py tools/slice_export_v3.py > diffs/slice_export_w13fix_to_v3.diff; diff $F/export_es310_w13.py tools/export_es310_w13l.py > diffs/export_es310_w13_to_w13l.diff; diff $F/compile.sh tools/compile.sh > diffs/compile_sh.diff; diff $F/drive.py tools/drive_v3.py > diffs/drive_v2_to
+---- 2026-11-22T13:33:09.147Z
+cd /home/jay/research/data/formalize-20261122/s3520-gate && python3 -I -B - <<'EOF'
+p = "README.md"
+s = open(p).read()
+def rep(a, b):
+    global s
+    assert s.count(a) == 1, a[:60]
+    s = s.replace(a, b)
+old_head = s[s.index("- **21:46 KST: M0–M4 done;"):s.index("- 21:16 KST: plan and pre-registration written")]
+rep(old_head, """- **22:40 KST: GATE PASSED; all milestones M0–M8 done. The campaign is NOT launched** (`LAUNCH_PLAN.md`).
+- **What Lean checked here** (lean v4.24.0, bare `lean -j1`, read-only LEAN_PATH, the campaign's catalog `RS.Cat3520`
+  and checker): all **57 chunk modules of ctx-4274** (unit 2080, the largest context, 320,422 leaves) and the
+  context-level theorem
+  `RS3520.U2080.root : ¬ ∃ holes : Fin 154 → ℕ, FFeas fcatS3520 4642 154 35 (pmask (zerosF 154) [(109, 2), (75, 2),
+  (133, 1), (33, 2), (25, 2), (17, 2), (20, 1), (56, 1), (45, 2), (36, 2), (54, 2), (98, 2), (44, 1), (0, 2)]) holes`
+  with axioms `[propext, Classical.choice, Quot.sound]` (`logs/RS3520_U2080.log`, lean_rc 0); plus the 11 chunk
+  modules of units 161 and 1793. That is 3 of the 3,212 units (387,322 of 119,054,033 leaves). **Nothing about
+  `s35_20` as a whole is claimed**; `RS.s35_20` does not exist yet.
+- Gate results:
+  - pre-pass (streamed, all 8,080 contexts) equal to the independent T7 record for every context (gz sha256, leaves,
+    nodes); `total_leaves` **119,054,033** = the pre-registered count (COMPUTED);
+  - the lean exporter v3 is **byte-identical** to the reference on 33
+---- 2026-11-22T13:38:35.734Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; cd $G; date +%T; python3 -I -B -c "
+import json; sk=json.load(open('export/3520/skeleton.json'))
+t={x['unit']:x['leaves'] for x in sk['tops']}
+for a,b in ((2060,2081),(2070,2081),(2075,2081)): print(a,b, sum(t[u] for u in range(a,b)), [t[u] for u in range(a,b)])"; cat > controls/ctl_stopafter.sh <<'EOF'
+#!/bin/bash
+# s3520-gate control (22 Nov 2026): --stop-after. Slice 3318 with v3 into a fresh directory with --stop-after 0 must
+# print "stopped_before_unit", exit 0 and write no manifest; the rerun without the flag must give the same chunk as
+# controls/v3-3318 (byte-identical).
+set -u
+G=/home/jay/research/data/formalize-20261122/s3520-gate; C=$G/controls; O=$C/stop3318
+PY=/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python
+L=/home/jay/research/data/lo33-20261113/bb_66_55_leanrows
+XTRA=/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/data/cert_66_55_leanrows/extra_66_55_leanrows.json
+A=(3318 --budget 33 --master $L/master.json --ctxdir $L --extra $XTRA --unit-leaves 40000 --chunk-leaves 8000 --out $O)
+rm -rf $O
+$PY -I -B $G/tools/slice_export_v3.py "${A[@]}" --stop-after 0; rc=$?
+echo "stop-after 0: rc=$rc manifests=$(ls $O/ctx | wc -l) sources=$(ls $O/src/RS3318 | wc -l)"
+$PY -I -B $G/tools/slice_export_v3.py "${A[@]}"; rc=$?
+echo "rerun: rc=$rc manifests=$(ls $O/ctx | wc -l)"
+cmp $O/src/RS3318/C000001.lean $C/v3-3318/src/RS3318/C000001.lean && echo "rerun chunk = 
+---- 2026-11-22T13:38:46.487Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; S=/home/jay/research/data/es308-20261114; PY=/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python; cd $G; mkdir -p scratch/multi3520; cp -p export/3520/prepass.json scratch/multi3520/; timeout 5400 tools/gate_start.sh stopafter 2000 900 300 90 -p StandardOutput=file:$G/controls/ctl_stopafter.log -p StandardError=file:$G/controls/ctl_stopafter.err $G/controls/ctl_stopafter.sh > logs/gate_stopafter.txt 2>&1; tail -1 logs/gate_stopafter.txt; timeout 5400 tools/gate_start.sh multi 3000 3600 1000 90 -p StandardOutput=file:$G/logs/multi3520.out -p StandardError=file:$G/logs/multi3520.err $G/tools/sampled.sh $G/logs/multi3520.mem /usr/bin/time -v $PY -I -B $G/tools/slice_export_v3.py 3520 --budget 35 --master $S/runs/b35s20/bb-s1/master.json --ctxdir $S/runs/b35s20/bb-s1 --extra $S/inputs/b35s20-v169/extra.json --out $G/scratch/multi3520 --unit-leaves 40000 --chunk-leaves 8000 --units 2060:2081 > logs/gate_multi.txt 2>&1; tail -1 logs/gate_multi.txt; until ! systemctl --user is-active --quiet esr-s20-g-stopafter; do sleep 3; done; cat controls/ctl_stopafter.log controls/ctl_stopafter.err
+---- 2026-11-22T13:47:08.235Z
+G=/home/jay/research/data/formalize-20261122/s3520-gate; cd $G; F=/home/jay/research/data/formalize-20261122/res-slices-fv/tools; diff $F/drive.py tools/drive_v3.py > diffs/drive_v2_to_v3.diff; { echo "# s3520-gate final tool hashes $(date '+%F %T'); exporter files identical to the 21:41:55 freeze (data/tools-frozen-2141.sha256); drive_v3.py changed after it (join_* keys 21:58; hourly exporter restart and MemoryMax 3000M defaults 22:45) and re-tested (logs/test_drive_v3*.out)"; sha256sum tools/slice_export_v3.py tools/export_es310_w13l.py tools/drive_v3.py tools/slice_export_w13fix.py tools/export_es310_w13.py tools/compile.sh tools/compile_loop.sh tools/subroot.py tools/sampled.sh tools/gate_start.sh tools/axlines_view.py tools/cmp_export.py tools/check_prepass.py tools/calib_gate.py tools/plan_numbers.py tools/test_drive_v3.py tools/test_drive_v3_sandbox.py; } > data/tools-frozen.sha256; grep -v '^#' data/tools-frozen.sha256 | sha256sum -c --quiet && echo "tools-frozen ok"; diff <(grep -E "slice_export_v3|export_es310_w13l" data/tools-frozen-2141.sha256) <(grep -E "slice_export_v3|export_es310_w13l" data/tools-frozen.sha256) && echo "exporter unchanged since 21:41:55"; grep drive_v3 data/tools-frozen.sha256; python3 -I -B tools/test_drive_v3.py > logs/test_drive_v3.out 2>&1 && tail -1 logs/test_drive_v3.out; systemctl --user list-units --no-legend --plain 'esr-s20-*' | wc -l; date +%T
+flagged 25

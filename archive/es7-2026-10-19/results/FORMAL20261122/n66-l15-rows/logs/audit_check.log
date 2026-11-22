@@ -1,0 +1,135 @@
+N66R15.n66_bound_54 : N66R15Enc.CubesUnsat105R → N66R15Geo.RowCertsUnsat → OmissionZRow.N66Bound 54
+N66R15.n66_bound_55 : N66R15Enc.CubesUnsat105R → N66R15Geo.RowCertsUnsat → OmissionZRow.N66Bound 55
+N66R15.cubesUnsat105R_of_texts : (∀ c ∈ N66E15.leaves105,
+    ∃ ds L,
+      N66R15Enc.printClauses c ds = some L ∧
+        N66R15Enc.litsBounded N66E15.nvHeader L = true ∧
+          ∀ (nv : ℕ) (F : List (List ℤ)),
+            EncB.parseDimacs (EncB.render N66E15.nvHeader L) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+  N66R15Enc.CubesUnsat105R
+N66R15.rowCertsUnsat_of_texts : (∀ t ∈ N66R15Enc.templates,
+    t = N66R15Enc.tmpl208 ∨
+      ∀ (nv : ℕ) (F : List (List ℤ)),
+        EncB.parseDimacs (N66R15Enc.certText t) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+  (∃ idx F,
+      N66R15Enc.subCnfChecked N66R15Enc.tmpl208 idx = some F ∧
+        ∀ (nv : ℕ) (G : List (List ℤ)),
+          EncB.parseDimacs (EncB.render (N66R15Enc.nvOf N66R15Enc.tmpl208.n) F) = some (nv, G) →
+            ¬EncB.DimacsSatisfiable G) →
+    (∀ k ∈ N66R15Enc.cores,
+        ∀ (nv : ℕ) (F : List (List ℤ)),
+          EncB.parseDimacs (N66R15Enc.certText k) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+      N66R15Geo.RowCertsUnsat
+N66R15Geo.rowsValid_R15 : N66R15Geo.RowCertsUnsat → N66G15.RowsValid N66R15Enc.R1_15
+@N66R15Geo.n66_bound_54_of_rows : ∀ {R : List (List (Fin 70))},
+  (∀ c ∈ N66E15.leaves105, ¬EncB.DimacsSatisfiable (N66E15.fullCnf R c)) → N66G15.RowsValid R → OmissionZRow.N66Bound 54
+@N66R15Enc.fullUnsat_of_text : ∀ {c : N66E15.Cube} {ds : List N66R15Enc.Desc} {L : List (List ℤ)},
+  N66R15Enc.printClauses c ds = some L →
+    N66R15Enc.litsBounded N66E15.nvHeader L = true →
+      (∀ (nv : ℕ) (F : List (List ℤ)),
+          EncB.parseDimacs (EncB.render N66E15.nvHeader L) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+        ¬EncB.DimacsSatisfiable (N66E15.fullCnf N66R15Enc.R1_15 c)
+@N66R15Geo.certUnsat_of_text : ∀ {t : N66R15Enc.Cert},
+  N66R15Enc.certOk t = true →
+    (∀ (nv : ℕ) (F : List (List ℤ)),
+        EncB.parseDimacs (N66R15Enc.certText t) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+      ¬EncB.DimacsSatisfiable (N66R15Enc.certCnf t)
+@N66R15Geo.subUnsat_of_text : ∀ {t : N66R15Enc.Cert},
+  N66R15Enc.certOk t = true →
+    ∀ {idx : List ℕ} {F : List (List ℤ)},
+      N66R15Enc.subCnfChecked t idx = some F →
+        (∀ (nv : ℕ) (G : List (List ℤ)),
+            EncB.parseDimacs (EncB.render (N66R15Enc.nvOf t.n) F) = some (nv, G) → ¬EncB.DimacsSatisfiable G) →
+          ¬EncB.DimacsSatisfiable (N66R15Enc.certCnf t)
+N66R15Chk.rowChunks_fst : List.map Prod.fst N66R15Chk.rowChunks = N66R15Enc.rowsAll
+def OmissionZRow.N66Bound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : Configuration n),
+    ¬c.HasCap 6 → ¬c.HasCup 6 → ¬HasConvexNGon 8 (Finset.image c.point Finset.univ) → n ≤ B
+def N66R15Enc.CubesUnsat105R : Prop :=
+∀ c ∈ N66E15.leaves105, ¬EncB.DimacsSatisfiable (N66E15.fullCnf N66R15Enc.R1_15 c)
+def N66R15Geo.RowCertsUnsat : Prop :=
+(∀ t ∈ N66R15Enc.templates, ¬EncB.DimacsSatisfiable (N66R15Enc.certCnf t)) ∧
+  ∀ k ∈ N66R15Enc.cores, ¬EncB.DimacsSatisfiable (N66R15Enc.certCnf k)
+def N66R15Enc.R1_15 : List (List (Fin 70)) :=
+List.map (fun x => List.map N66R15Enc.toFin70 x) N66R15Enc.R1nat15
+def N66R15Enc.R1nat15 : List (List ℕ) :=
+N66R15Enc.rowsAll.flatten
+def N66R15Enc.toFin70 : ℕ → Fin 70 :=
+fun x => ⟨x % 70, ⋯⟩
+def N66E15.fullCnf : List (List (Fin 70)) → N66E15.Cube → List (List ℤ) :=
+fun R c => List.map N66E15.toDimacs (N66E15.fullS R c)
+def N66E15.fullS : List (List (Fin 70)) → N66E15.Cube → List (List N66E15.SLit) :=
+fun R c =>
+  N66E15.eagerStream () ++ N66E15.quadStream ++ N66E15.fixedUnits ++ List.map N66E15.cubeUnit c ++
+        List.map N66E15.rowClause R ++
+      N66E15.cardClauses ++
+    N66E15.sbClauses
+def N66G15.RowsValid : List (List (Fin 70)) → Prop :=
+fun R => ∀ T ∈ R, N66G15.RowValid T
+def N66G15.RowValid : List (Fin 70) → Prop :=
+fun T => ∀ (n : ℕ) (c : Configuration n), N66G15.InClass c → ∃ s ∈ T, ¬N66G15.n66Occ c.cup n s
+def N66G15.InClass : {n : ℕ} → Configuration n → Prop :=
+fun {n} c => ¬c.HasCap 6 ∧ ¬c.HasCup 6 ∧ ¬HasConvexNGon 8 (Finset.image c.point Finset.univ)
+def EncB.DimacsSatisfiable : List (List ℤ) → Prop :=
+fun cls => ∃ ν, EncB.DimacsSat cls ν
+def EncB.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
+fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = true ∨ l < 0 ∧ ν l.natAbs = false
+'N66R15.n66_bound_54' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15.n66_bound_55' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15.cubesUnsat105R_of_texts' depends on axioms: [propext, Quot.sound]
+'N66R15.rowCertsUnsat_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.n66_bound_54_of_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.gaps_proved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.rowsValid_R15' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.chkRow_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.chkRows_mem' depends on axioms: [propext, Quot.sound]
+'N66R15Geo.certUnsat_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.subUnsat_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.rowValid_of_cert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.rowValid_tau' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.rowValid_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Geo.ttB_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66R15Enc.printClause_mem' depends on axioms: [propext, Quot.sound]
+'N66R15Enc.fullUnsat_of_text' depends on axioms: [propext, Quot.sound]
+'N66R15Chk.rowChunks_fst' does not depend on any axioms
+'N66R15Chk.chkAll' depends on axioms: [propext, Quot.sound]
+'N66R15Chk.chk0' depends on axioms: [propext, Quot.sound]
+'N66R15Chk.chk108' depends on axioms: [propext, Quot.sound]
+'N66R15Chk.certsOkT' depends on axioms: [propext]
+'N66R15Chk.certsOkC' depends on axioms: [propext]
+'N66R15Chk.cores_isCore' depends on axioms: [propext]
+'N66R15Chk.tt_all' depends on axioms: [propext]
+'N66R15Chk.ps_all' depends on axioms: [propext]
+'N66R15Chk.dr_all' depends on axioms: [propext]
+'N66R15Chk.can_all' depends on axioms: [propext]
+'check_end_unfolded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'check_R1_15_unfolded' does not depend on any axioms
+'check_chunks' does not depend on any axioms
+'check_rows' does not depend on any axioms
+'check_templates' does not depend on any axioms
+'check_cores' depends on axioms: [propext]
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R . N66R15Aud/Check.lean"
+	User time (seconds): 7.83
+	System time (seconds): 0.43
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3567692
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 75832
+	Voluntary context switches: 1571
+	Involuntary context switches: 371
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rc=0

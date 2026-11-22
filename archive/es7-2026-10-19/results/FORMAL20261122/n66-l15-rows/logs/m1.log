@@ -1,0 +1,33 @@
+== start 2026-11-22 21:57:37 exe 65865b1e8e57dfe204ac8bbe3fa31cedb0e0cb6f52d6d53e1c7e69cf40104884
+eager 1489581
+pairClauses 43343 posClauses 9812 thresh 9660 triple 1206254 ceue 220512
+alloc 1647847 pair 16905 orient 54740 convex 916895 chain 652176 ceue 6240 cnt 795 sbe 26
+card 1628 sb 79 leaves 105 R1_15 10859 chunks 109
+num sel0 988541 sel69 988610 firstcnt (some 1647027) lastsbe 1647847
+stats wall=3.11 s maxrss=2320812 KB
+rows print f45e25f16007012e637d7e97a476ceb4eebe11d797a83c1a1c0907b9af2f0511  rows_used15.txt f45e25f16007012e637d7e97a476ceb4eebe11d797a83c1a1c0907b9af2f0511  ROWS_MATCH
+exe 65865b1e8e57dfe204ac8bbe3fa31cedb0e0cb6f52d6d53e1c7e69cf40104884
+inputs 2a3dcc95c519925d4a37e50c0717a6d60ed10c009c105a8785bd67fcc4e81d8d 3f629bf104b1e11cb07126c0934cba56ae9ae7d9fe550699183c2e58d852289f 
+leaf 0 clauses 9710990 act 683670 rows 15648 bad 0
+full wall=11.96 s maxrss=2384352 KB
+leaf 0 oooooo_40o_52o_46o_44o_45o_39o
+recorded full_cnf_sha256 (campaign, cert.json): 49e02c9b442311d4669425d72a99953faf287fe0176b65798f54648cc2acbbbc 49e02c9b442311d4669425d72a99953faf287fe0176b65798f54648cc2acbbbc
+lean full print:                               49e02c9b442311d4669425d72a99953faf287fe0176b65798f54648cc2acbbbc
+FULL_MATCH
+exe 65865b1e8e57dfe204ac8bbe3fa31cedb0e0cb6f52d6d53e1c7e69cf40104884
+inputs 2a3dcc95c519925d4a37e50c0717a6d60ed10c009c105a8785bd67fcc4e81d8d 3f629bf104b1e11cb07126c0934cba56ae9ae7d9fe550699183c2e58d852289f 
+leaf 22 clauses 9710987 act 683670 rows 15648 bad 0
+full wall=11.93 s maxrss=2383664 KB
+leaf 22 ooohoo_40h_52o_46o
+recorded full_cnf_sha256 (campaign, cert.json): dd8d447834f16b542b0d6ac91a74294742d2070b2c674030fe885b109e2a3a34 dd8d447834f16b542b0d6ac91a74294742d2070b2c674030fe885b109e2a3a34
+lean full print:                               dd8d447834f16b542b0d6ac91a74294742d2070b2c674030fe885b109e2a3a34
+FULL_MATCH
+== largest leaf (22) timed 2026-11-22 21:58:08
+e326108f0b4a11f68da65dec6cffea0a0d87160561e4715c27507cf7ca653530  -
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.17
+	Maximum resident set size (kbytes): 2471080
+	Exit status: 0
+== trims 2026-11-22 21:58:13
+MATCH 105 DIFFER 0
+distinct printed hashes 98
+== done 2026-11-22 22:05:40 exe 65865b1e8e57dfe204ac8bbe3fa31cedb0e0cb6f52d6d53e1c7e69cf40104884

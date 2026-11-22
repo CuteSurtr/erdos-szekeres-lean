@@ -1,0 +1,62 @@
+{
+ "blocks": {
+  "P": 812,
+  "Q": 208,
+  "U": 35,
+  "A": 970
+ },
+ "f_lo_lists_match_states": true,
+ "slices": {
+  "b33s18": {
+   "sha256": "1d6141afc91e3a4af67d713293f12a872c4d153e555e297b3d55028d9197d26d",
+   "capacity_F": true,
+   "capacity_Lo": true,
+   "unit_rhs_all_1": true,
+   "unit_rows_equal_in_order": true,
+   "unit_rows": 0
+  },
+  "b34s18": {
+   "sha256": "1b72eb934e00c7f5968cca0192f27829bfe145fe0a32e0e4c1d715fc1a86c098",
+   "capacity_F": true,
+   "capacity_Lo": true,
+   "unit_rhs_all_1": true,
+   "unit_rows_equal_in_order": true,
+   "unit_rows": 1020
+  },
+  "b34s19": {
+   "sha256": "770d276db7b51d369e9a6fa1b9f36abb15d2539d224a71b19bf5fa738cbd9983",
+   "capacity_F": true,
+   "capacity_Lo": true,
+   "unit_rhs_all_1": true,
+   "unit_rows_equal_in_order": true,
+   "unit_rows": 812
+  },
+  "b35s18": {
+   "sha256": "c9c922c0a113c78effbbbef330c000af90b528152c9c511592f6210c1040caa7",
+   "capacity_F": true,
+   "capacity_Lo": true,
+   "unit_rhs_all_1": true,
+   "unit_rows_equal_in_order": true,
+   "unit_rows": 1020
+  },
+  "b35s19": {
+   "sha256": "1257c4a15a52d89451b7c73736d6182fd859892febdea421e7e4a72b74f5f25c",
+   "capacity_F": true,
+   "capacity_Lo": true,
+   "unit_rhs_all_1": true,
+   "unit_rows_equal_in_order": true,
+   "unit_rows": 1055
+  },
+  "b35s20": {
+   "sha256": "de4bcceba6d0c80ce6f63cbef15822cac8300780607c738569999a7d94b81916",
+   "capacity_F": true,
+   "capacity_Lo": true,
+   "unit_rhs_all_1": true,
+   "unit_rows_equal_in_order": false,
+   "unit_rows": 1990
+  }
+ },
+ "nine_rows_cover_F_three_times": true,
+ "rows_lean_sha256": "08e8ab2a0ac9b5a68061f054b15bb9cc53330fb1f0e57071d0456319927529b8",
+ "ok": false
+}

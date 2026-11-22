@@ -1,0 +1,22 @@
+2c2,5
+< """res-slices-fv w13 (22 Nov 2026 evening): slice_export.py with export_es310_w13 (13-bit row digits, J = K << 13, for
+---
+> """s3520-gate (22 Nov 2026): slice_export_w13.py with the context-id fix only (contexts are the sorted placeholder ids,
+> which need not be 0..K-1: bb-s1 of s35_20 has no context 4782). The reference for the byte-identity controls of
+> slice_export_v3.py. Otherwise unchanged.
+> res-slices-fv w13 (22 Nov 2026 evening): slice_export.py with export_es310_w13 (13-bit row digits, J = K << 13, for
+175,176c178,180
+<     if sorted(kpath) != list(range(K)) or master.get("contexts", K) != K:
+<         raise E.Refuse("context ids are not 0..K-1")
+---
+>     ids = sorted(kpath)                          # s3520-gate: the placeholder ids, not range(K)
+>     if any(type(k) is not int or k < 0 for k in ids) or master.get("contexts", K) != K:
+>         raise E.Refuse("context ids are not distinct non-negative integers, or their number differs")
+188c192
+<         for k in range(K):
+---
+>         for k in ids:
+194c198
+<               "contexts_digest": sha("".join(f"{k} {ctx.sha[k]}\n" for k in range(K)).encode())}
+---
+>               "contexts_digest": sha("".join(f"{k} {ctx.sha[k]}\n" for k in ids).encode())}

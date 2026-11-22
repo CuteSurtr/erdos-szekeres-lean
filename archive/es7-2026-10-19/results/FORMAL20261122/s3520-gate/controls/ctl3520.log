@@ -1,0 +1,6 @@
+ref unit 1793 rc=0 anon_shmem_max_mb=398 anon_max_mb=398 cgroup_peak_mb=458
+v3 unit 1793 rc=0 anon_shmem_max_mb=103 anon_max_mb=103 cgroup_peak_mb=458
+ref unit 161 rc=0 anon_shmem_max_mb=903 anon_max_mb=903 cgroup_peak_mb=1037
+v3 unit 161 rc=0 anon_shmem_max_mb=166 anon_max_mb=166 cgroup_peak_mb=1037
+{"ref": "/home/jay/research/data/formalize-20261122/s3520-gate/controls/ref3520", "new": "/home/jay/research/data/formalize-20261122/s3520-gate/export/3520", "units": [1793, 161], "modules": 11, "source_bytes": 56324233, "identical": true, "differences": []}
+cmp rc=0

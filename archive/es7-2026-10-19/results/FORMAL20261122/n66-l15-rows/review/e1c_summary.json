@@ -1,0 +1,28 @@
+{
+ "exe": "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/bin/n66r15print",
+ "exe_sha_expected": "65865b1e8e57dfe204ac8bbe3fa31cedb0e0cb6f52d6d53e1c7e69cf40104884",
+ "campaign_status_sha256": "4802dc9a946cefa3b855b8c495becc0fb33491a89e5472c9722ccb9d0c8138f5",
+ "vfy15_summary_sha256": "87b82b7a0029496176bdffdeabb87d95bd7f03eba844e576f31b826084927181",
+ "stats": "eager 1489581\npairClauses 43343 posClauses 9812 thresh 9660 triple 1206254 ceue 220512\nalloc 1647847 pair 16905 orient 54740 convex 916895 chain 652176 ceue 6240 cnt 795 sbe 26\ncard 1628 sb 79 leaves 105 R1_15 10859 chunks 109\nnum sel0 988541 sel69 988610 firstcnt (some 1647027) lastsbe 1647847\n",
+ "rows_rc": 0,
+ "rows_equal_rows_used15": true,
+ "rows_equal_own_eval_dump": true,
+ "rows_sha256": "f45e25f16007012e637d7e97a476ceb4eebe11d797a83c1a1c0907b9af2f0511",
+ "leaves_count": 105,
+ "leaves_equal_own_eval_dump": true,
+ "leafmap_bijection": true,
+ "leaves_MATCH": 105,
+ "leaves_E2ok": 105,
+ "distinct_texts": 98,
+ "total_bytes": 1860488455,
+ "max_rss_kb": 2471108,
+ "indices_covered": true,
+ "controls": [
+  "PASS",
+  "PASS",
+  "PASS",
+  "PASS",
+  "PASS"
+ ],
+ "exe_sha_end": "65865b1e8e57dfe204ac8bbe3fa31cedb0e0cb6f52d6d53e1c7e69cf40104884"
+}

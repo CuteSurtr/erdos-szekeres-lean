@@ -1,0 +1,249 @@
+1a2,3
+> # s3520-gate (22 Nov 2026): export_es310_w13.py (res-slices-fv, 05c41a58...) plus CUnit and export_compact, a
+> # lean export_context on flat arrays (below export_context); nothing else is changed.
+611a614,858
+> 
+> # ----------------------------------------------------------------------------------------------
+> # s3520-gate (22 Nov 2026): export_context on a compact unit, lean. Same texts, checks and manifest fields as
+> # export_context above; only the data layout differs (flat typed arrays instead of node dicts and per-leaf tuples),
+> # and each module text is handed to emit() as soon as it has passed its checks (no text is kept).
+> 
+> class CUnit:
+>     """A unit in zero-first preorder as flat arrays (built by slice_export_v3.build_unit_compact).
+>     ty/vx/z/o as renumber() returns them (vx, z, o = -1 at leaves); a weighted leaf x has capacity cap[x] and the
+>     weight entries sources[src[x]] = (rows array, weights array) at [wo[x], wo[x] + wn[x]), in file order."""
+> 
+>     def __init__(self):
+>         self.ty, self.vx, self.z, self.o = array("b"), array("i"), array("i"), array("i")
+>         self.cap, self.src, self.wo, self.wn = array("q"), array("i"), array("q"), array("i")
+>         self.sources = []
+> 
+> 
+> def export_compact(k, ctxline, U, rows, args, prefix, code_caches, hashes, emit):
+>     """export_context on the CUnit U. emit(stem, text) receives each module text after its checks and returns
+>     (sha256, bytes) of the text it wrote; those are the module's "sha256" and "source_bytes". U.sources is dropped
+>     after the leaf replay. Returns info (without texts)."""
+>     n, m = N_STATES, len(rows)
+>     ty, vx, z, o = U.ty, U.vx, U.z, U.o
+>     try:
+>         parent, dec, count, size = shape_info(ty, z, o, 0)   # export_es311.py:167-193 (re-asserts preorder)
+>     except AssertionError as e:
+>         raise Refuse(f"ctx {k}: shape_info: {e}")
+>     base = base_path_of(ctxline)
+>     N = len(ty)
+> 
+>     def full(j):
+>         return path_of(j, parent, dec, vx, None) + base   # export_es311.py:196-203
+> 
+>     # Leaf replay 1 (exact full-load margin), as export_context. Leaf ordinal i = lid[x]: type lty[i], capacity
+>     # lcap[i], demand sum lD[i], margin lmar[i], normalized entries er/ew[eo[i]:eo[i + 1]], mask masks[i*n:(i+1)*n].
+>     lid = array("i", [-1]) * N
+>     lty, masks = bytearray(), bytearray()
+>     lcap, lD, lmar = array("q"), array("q"), array("q")
+>     eo, er, ew = array("q", [0]), array("i"), array("q")
+>     wmax, nover, nweighted = 0, 0, 0
+>     for x in range(N):
+>         if ty[x] == T_BRANCH:
+>             continue
+>         mask = bytearray(n)
+>         for v, d in full(x):
+>             if mask[v]:
+>                 raise Refuse(f"ctx {k}: a state is fixed twice on the path of local node {x}")
+>             mask[v] = d
+>         missing = {v for v in range(n) if mask[v] == 1}
+>         lid[x] = len(lty)
+>         if ty[x] == T_OVER:
+>             if not len(missing) > BUDGET:
+>                 raise Refuse(f"ctx {k}: over-budget leaf {x} has only {len(missing)} missing states")
+>             lty.append(T_OVER); lcap.append(0); lD.append(0); lmar.append(0); eo.append(len(er)); masks += mask
+>             nover += 1
+>             continue
+>         cap = U.cap[x]
+>         if not cap >= 0:
+>             raise Refuse(f"ctx {k}: bad weighted leaf {x}")
+>         R, W = U.sources[U.src[x]]
+>         a = U.wo[x]
+>         ws = list(zip(R[a:a + U.wn[x]], W[a:a + U.wn[x]]))
+>         for e in ws:
+>             if not (0 <= e[0] < m and e[1] >= 0):
+>                 raise Refuse(f"ctx {k}: bad weight entry {list(e)!r} in leaf {x}")
+>         occupied = {v for v in range(n) if mask[v] == 2}
+>         ent = normalize(rows, ws, missing)                                # export_es311.py:220-221
+>         margin = full_load_margin(n, rows, BUDGET, missing, occupied, cap, ent)
+>         if margin < 1:
+>             raise Refuse(f"ctx {k}: leaf {x} has full-load margin {margin} < 1")
+>         D = sum(w * rows[r][1] for r, w in ent)
+>         wmax = max([wmax] + [w for _, w in ent])
+>         try:
+>             lty.append(T_WEIGHTED); lcap.append(cap); lD.append(D); lmar.append(margin)
+>             for r, w in ent:
+>                 er.append(r)
+>                 ew.append(w)
+>         except OverflowError:
+>             raise Refuse(f"ctx {k}: leaf {x}: a value exceeds the compact arrays")
+>         eo.append(len(er))
+>         masks += mask
+>         nweighted += 1
+>     U.sources = None                                                   # lean: the raw weights are not needed now
+> 
+>     def leaf(x):                                                       # export_context's leaf[x]
+>         i = lid[x]
+>         if lty[i] == T_OVER:
+>             return (T_OVER,)
+>         return (T_WEIGHTED, lcap[i], lD[i], lmar[i], list(zip(er[eo[i]:eo[i + 1]], ew[eo[i]:eo[i + 1]])),
+>                 bytes(masks[i * n:(i + 1) * n]))
+> 
+>     K = 1 << max(17, wmax.bit_length())
+>     assert m.bit_length() <= 13                                        # res-slices-fv w13 (was: == 12)
+>     J = K << 13                                                        # res-slices-fv w13 (was: K << m.bit_length())
+>     k_word, L, B = args.per_word, args.chunk_leaves, args.block_leaves
+>     srs, skeleton = cut(0, L, ty, z, o, count)                         # export_es311.py:310
+>     if any(u >= SKEL_STRIDE for u in skeleton):
+>         raise Refuse(f"ctx {k}: a skeleton node id is >= {SKEL_STRIDE}")
+>     modules, cur, cur_leaves = [], [], 0                               # export_es311.py:311-318
+>     for s in srs:
+>         if cur and cur_leaves + count[s] > L:
+>             modules.append(cur)
+>             cur, cur_leaves = [], 0
+>         cur.append(s)
+>         cur_leaves += count[s]
+>     modules.append(cur)
+>     if len(modules) > 99:
+>         raise Refuse(f"ctx {k}: {len(modules)} modules (> 99); raise --chunk-leaves")
+>     if sum(count[s] for s in srs) != count[0] or count[0] != nweighted + nover:
+>         raise Refuse(f"ctx {k}: subtree roots do not cover the leaves")
+>     M0 = f"(zerosF {n})"
+>     params = f"{CAT} {m} {n} {BUDGET}"
+>     sp = shapes_es311.side_params({"catalog": CATMOD, "rows": m, "states": n, "budget": BUDGET,
+>                                    "catalog_base": CATALOG_BASE, "prefix": prefix})
+> 
+>     def feas(p):
+>         return f"¬ ∃ holes : Fin {n} → ℕ, FFeas {params} (pmask {M0} {lean_path(p)}) holes"
+> 
+>     mods, corrupt_info = [], None
+>     lean_failures = 0
+>     for i, mod in enumerate(modules):
+>         mm = i + 1
+>         stem = f"C{k:04d}{mm:02d}"
+>         name = f"{prefix}.{stem}"
+>         mod_leaves = sum(count[s] for s in mod)
+>         lines = [f"import {CATMOD}", "import CompactChecker.Path", "open CompactChecker",
+>                  "set_option maxRecDepth 100000", *OPTS,
+>                  *([] if args.no_profile else ["set_option profiler true"]),
+>                  f"namespace {name}",
+>                  f"-- ES(8) <= 310 compact check (budget-64 campaign), balanced side, context {k}, "
+>                  f"module {mm} of {len(modules)}",
+>                  f"-- tree gz sha256 {hashes['gz']}; tree json sha256 {hashes['json']}; "
+>                  f"result sha256 {hashes['result']}; source sha256 {hashes['source']}",
+>                  f"-- {mod_leaves} leaves under subtree roots {mod}; budget {BUDGET}; "
+>                  f"context path (innermost first) {lean_path(base)}",
+>                  f"-- chunk limit {L}, block limit {B}, K {K}, J {J}, {k_word} entries per word"]
+>         mod_leaf_ids = [x for s in mod for x in range(s, s + size[s]) if ty[x] != T_BRANCH]
+>         corrupt_leaf = None
+>         if args.corrupt == mm:                                         # export_es311.py:363-365
+>             cands = [x for x in mod_leaf_ids if lty[lid[x]] == T_WEIGHTED]
+>             if not cands:
+>                 raise Refuse(f"ctx {k}: --corrupt {mm}: the module has no weighted leaf")
+>             corrupt_leaf = min(cands, key=lambda x: (lmar[lid[x]], x))
+>         nblocks, entries, words_n, bases = 0, 0, 0, []
+>         margins = [lmar[lid[x]] for x in mod_leaf_ids if lty[lid[x]] == T_WEIGHTED]
+>         for s in mod:
+>             blocks, uppers = cut(s, B, ty, z, o, count)                # export_es311.py:367
+>             for b in blocks:
+>                 leaves = [x for x in range(b, b + size[b]) if ty[x] != T_BRANCH]
+>                 maxd = max([lD[lid[x]] for x in leaves if lty[lid[x]] == T_WEIGHTED] + [1])
+>                 base0 = 1 << maxd.bit_length()                         # export_es311.py:370-371
+>                 bases.append(base0)
+>                 cc = code_caches.setdefault(base0, {})                 # kept across contexts
+> 
+>                 def term(x):
+>                     nonlocal entries, words_n, corrupt_info, lean_failures
+>                     if ty[x] == T_BRANCH:
+>                         return f"(.split {vx[x]} {term(z[x])} {term(o[x])})"
+>                     rec = leaf(x)
+>                     if rec[0] == T_OVER:
+>                         return ".overBudget"
+>                     _, cap, D, margin, ent, mask = rec
+>                     if x == corrupt_leaf:                              # export_es311.py:383-405
+>                         found = None
+>                         missing = {v for v in range(n) if mask[v] == 1}
+>                         occupied = {v for v in range(n) if mask[v] == 2}
+>                         for e in range(len(ent)):
+>                             for w in (ent[e][1] - 1, ent[e][1] + 1, 0):
+>                                 if w < 0 or w >= K:
+>                                     continue
+>                                 trial = list(ent)
+>                                 trial[e] = (trial[e][0], w)
+>                                 mg = full_load_margin(n, rows, BUDGET, missing, occupied, cap, trial)
+>                                 if mg <= 0:
+>                                     found = (e, w, mg)
+>                                     break
+>                             if found:
+>                                 break
+>                         if not found:
+>                             raise Refuse(f"ctx {k}: no single-weight corruption found")
+>                         corrupt_info = {"module": name, "leaf_node": x, "entry_index": found[0],
+>                                         "row": ent[found[0]][0], "old_weight": ent[found[0]][1],
+>                                         "new_weight": found[1], "old_margin": margin,
+>                                         "new_margin": found[2]}
+>                         ent = list(ent)
+>                         ent[found[0]] = (ent[found[0]][0], found[1])
+>                     codes = [r * K + w for r, w in ent]
+>                     words = pack_words(codes, k_word, J)               # export_es311.py:238-240
+>                     entries += len(codes)
+>                     words_n += len(words)
+>                     ok = lean_leaf_test(n, rows, m, BUDGET, base0, K, J, k_word, cap, mask, words, cc)
+>                     if not ok:
+>                         lean_failures += 1
+>                         if x != corrupt_leaf:
+>                             raise Refuse(f"ctx {k}: the Lean leaf test fails on local node {x}")
+>                     elif x == corrupt_leaf:
+>                         raise Refuse(f"ctx {k}: the corrupted leaf {x} passes the Lean leaf test")
+>                     return f"(.leaf {cap} (natlits% [{', '.join(map(str, words))}]))"
+> 
+>                 p = full(b)
+>                 lines.append(f"noncomputable def b{b} : PTree := {term(b)}")
+>                 lines.append(f"theorem chk{b} : checkF2 {params} {base0} {K} {J} {k_word} b{b} "
+>                              f"(pmask {M0} {lean_path(p)}) = true := by decide +kernel")
+>                 lines.append(f"theorem ex{b} : {feas(p)} :=")
+>                 lines.append(f"  checkF2_feas {params} {CATALOG_BASE} {base0} {K} {J} {k_word} "
+>                              f"{CAT}_wf b{b} _ chk{b}")
+>                 nblocks += 1
+>             for u in reversed(uppers):                                 # export_es311.py:424-427
+>                 p = full(u)
+>                 lines.append(f"theorem ex{u} : {feas(p)} :=")
+>                 lines.append(f"  split_pm {params} {M0} {lean_path(p)} {vx[u]} ex{z[u]} ex{o[u]}")
+>         for s in mod:
+>             lines.append(f"#print axioms ex{s}")
+>         lines.append(f"end {name}")
+>         text = "\n".join(lines) + "\n"
+>         del lines
+>         errs = shapes_es311.check_text(text, "chunk", name, sp)
+>         if errs:
+>             raise Refuse(f"ctx {k}: module {name} fails the line-shape check: {errs}")
+>         if text.count("(.leaf ") + text.count(".overBudget") != mod_leaves:
+>             raise Refuse(f"ctx {k}: module {name} leaf-term count differs")
+>         h, nbytes = emit(stem, text)                                   # lean: written now, not kept
+>         del text
+>         mods.append({"module": name, "file": f"src/{prefix}/{stem}.lean", "sha256": h,
+>                      "source_bytes": nbytes, "leaves": mod_leaves,
+>                      "subtree_roots": [[s, count[s]] for s in mod], "blocks": nblocks, "entries": entries,
+>                      "words": words_n, "min_margin": min(margins) if margins else None,
+>                      "max_base": max(bases), "corrupted": corrupt_leaf is not None})
+>     if args.corrupt is not None and corrupt_info is None:
+>         raise Refuse(f"ctx {k}: --corrupt {args.corrupt}: no such module or no weighted leaf")
+>     if lean_failures != (1 if args.corrupt is not None else 0):
+>         raise Refuse(f"ctx {k}: {lean_failures} Lean leaf-test failures")
+>     margins = [lmar[i] for i in range(len(lty)) if lty[i] == T_WEIGHTED]
+>     info = {
+>         "K": K, "J": J, "base_path": [list(d) for d in base],
+>         "modules": mods,
+>         "skeleton": [{"u": u, "vertex": vx[u], "zero": z[u], "one": o[u]} for u in skeleton],
+>         "subtree_roots": [[s, count[s]] for s in srs],
+>         "stats": {"leaves": count[0], "nodes": N, "weighted": nweighted, "over_budget": nover,
+>                   "min_margin": min(margins) if margins else None, "max_weight": wmax,
+>                   "entries": sum(x["entries"] for x in mods), "words": sum(x["words"] for x in mods),
+>                   "lean_test_failures": lean_failures},
+>         "corruption": corrupt_info,
+>     }
+>     return info

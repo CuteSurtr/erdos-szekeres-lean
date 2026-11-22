@@ -1,0 +1,12 @@
+#!/bin/bash
+# fake exe for the run.sh selftest: prints variants of a reference file
+r=$2
+case $1 in
+  eq) cat "$r";;
+  diff) sed '2s/^./X/' "$r";;
+  short) head -c 100 "$r";;
+  long) cat "$r"; echo extra;;
+  seg) tail -n +2 "$r" | head -n 3;;
+  segbad) tail -n +2 "$r" | head -n 4;;
+  fail) cat "$r"; echo boom >&2; exit 3;;
+esac

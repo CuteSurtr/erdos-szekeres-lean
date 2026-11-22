@@ -1,0 +1,118 @@
+{
+ "lean_path": [
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean",
+  "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean",
+  "/home/jay/research/data/bal186-20261119/zrow/leanz/olean",
+  "/home/jay/research/data/fv304-20261120/olean",
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean",
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean",
+  "/home/jay/research/data/formalize-20261122/combined/links",
+  "/home/jay/research/data/formalize-20261122/combined/out",
+  "/home/jay/research/data/formalize-20261122/n66-level15/build/olean",
+  "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/olean"
+ ],
+ "roots": 20,
+ "duplicates": {},
+ "negative_control": {
+  "added_root": "/home/jay/research/data/formalize-20261122/n66-rowsvalid/build/olean",
+  "refused": true,
+  "duplicates": [
+   "RowEnc/Main.olean"
+  ],
+  "n_duplicates": 1
+ },
+ "n66_oleans": 149,
+ "by_store": {
+  "/home/jay/research/data/formalize-20261122/n66-level15/build/olean": 33,
+  "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/olean": 116
+ },
+ "newest_n66_olean_mtime": "2026-11-22 21:57:15",
+ "marker2_mtime": 1795358886.1603518,
+ "n66_oleans_digest": "280d4d14929d9d42fcd48c3c88246c93ad89c0132753c8f5e2d5bff472707472",
+ "n66_oleans_tsv_sha256": "591934dcfde4a56722d0379f89727f6e532a43d01991f1d8ea720fc45b6407be",
+ "level15_review_pins": [
+  {
+   "file": "/home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66G15/End.olean",
+   "review_sha256": "2540e5642e7448e5109b19fee81f8245edfb3ee33fffccedddc4e17f77d07728",
+   "now": "2540e5642e7448e5109b19fee81f8245edfb3ee33fffccedddc4e17f77d07728",
+   "ok": true
+  },
+  {
+   "file": "/home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66G15/Assembly.olean",
+   "review_sha256": "ade1c981ecf920f4e7abbffc9175546dd31a71ad166b173e66eae69dc3de5eee",
+   "now": "ade1c981ecf920f4e7abbffc9175546dd31a71ad166b173e66eae69dc3de5eee",
+   "ok": true
+  },
+  {
+   "file": "/home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66E15/Full.olean",
+   "review_sha256": "8d0b09fd69a796835e78c648de01947d702c72fdb9913857e6af847cdb22fbf2",
+   "now": "8d0b09fd69a796835e78c648de01947d702c72fdb9913857e6af847cdb22fbf2",
+   "ok": true
+  },
+  {
+   "file": "/home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66E15/Rows.olean",
+   "review_sha256": "ebf7d6382bbfae878f04a466159d29b099366e4d00b93a7a7eda666fe554903a",
+   "now": "ebf7d6382bbfae878f04a466159d29b099366e4d00b93a7a7eda666fe554903a",
+   "ok": true
+  },
+  {
+   "file": "/home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66E15/Cover.olean",
+   "review_sha256": "d31087c767b013a3b917cd9a0f7f1d8a11102de9697ca3f5ea4ce687601df50b",
+   "now": "d31087c767b013a3b917cd9a0f7f1d8a11102de9697ca3f5ea4ce687601df50b",
+   "ok": true
+  },
+  {
+   "file": "/home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66E15/Bridge.olean",
+   "review_sha256": "c6504d62efa2c6665614a75ca17f2f8b9d20899e29f9c031a289482ee005e5ae",
+   "now": "c6504d62efa2c6665614a75ca17f2f8b9d20899e29f9c031a289482ee005e5ae",
+   "ok": true
+  },
+  {
+   "file": "/home/jay/research/data/bal186-20261119/zrow/leanz/olean/LemmaZ.olean",
+   "review_sha256": "ef249ba167372ac31f995027299efa1eeddac251ff73e4ef093a990ab02c353c",
+   "now": "ef249ba167372ac31f995027299efa1eeddac251ff73e4ef093a990ab02c353c",
+   "ok": true
+  },
+  {
+   "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean/EncB/Render.olean",
+   "review_sha256": "df40602c1c919e1e57471724a5591be561c6383501e55409247e8189505310cd",
+   "now": "df40602c1c919e1e57471724a5591be561c6383501e55409247e8189505310cd",
+   "ok": true
+  },
+  {
+   "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean/EncB/Dimacs.olean",
+   "review_sha256": "5c8ea03dce2c38a0650bcd1067356334171dbf7acd9b634238ac9aa490ac3746",
+   "now": "5c8ea03dce2c38a0650bcd1067356334171dbf7acd9b634238ac9aa490ac3746",
+   "ok": true
+  }
+ ],
+ "manifests": {
+  "/home/jay/research/data/formalize-20261122/n66-l15-rows/logs/source_manifest.sha256": {
+   "entries": 148,
+   "bad": []
+  },
+  "/home/jay/research/data/formalize-20261122/n66-l15-rows/logs/freeze_manifest.sha256": {
+   "entries": 152,
+   "bad": []
+  },
+  "/home/jay/research/data/formalize-20261122/n66-level15/logs/final_source_manifest.sha256": {
+   "entries": 59,
+   "bad": []
+  },
+  "/home/jay/research/data/formalize-20261122/n66-level15/logs/freeze_manifest.sha256": {
+   "entries": 39,
+   "bad": []
+  }
+ },
+ "problems": []
+}

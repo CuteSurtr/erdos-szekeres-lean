@@ -1,0 +1,6 @@
+contexts 8080 T7 8080 summary contexts 8080 | prepass mismatches vs T7: 0 []
+T7 context leaves 119053939 + master leaves 94 = 119054033 | T7 summary leaves 119054034 (includes the pending state-0-missing leaf: 1 ) | skeleton total_leaves 119054033
+T7 nodes: sum(context nodes) 238099798 + master nodes 16347 - placeholders 8080 = 238108065 | summary nodes 238116145
+contexts digest from T7 hashes b3fd865d3c2fdd263626816847ac6da6be97810a35c85990acda76d21847b29c | skeleton b3fd865d3c2fdd263626816847ac6da6be97810a35c85990acda76d21847b29c | prepass b3fd865d3c2fdd263626816847ac6da6be97810a35c85990acda76d21847b29c
+skeleton: units 3212 example top {'node': 12473, 'unit': 2080, 'leaves': 320422}
+sum of unit leaves 119054033

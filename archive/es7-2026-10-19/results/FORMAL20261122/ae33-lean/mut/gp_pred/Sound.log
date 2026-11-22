@@ -1,0 +1,79 @@
+Try this:
+  ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+AE33Geo/Sound.lean:337:35: error: unsolved goals
+B : Array Pt
+pt : ℕ → Point
+C : Ctx B pt
+e f g h i : ℕ
+cl : List ℤ
+he : e < 31 + 2
+hf : f < 31 + 2
+hg : g < 31 + 2
+hh : h < 31 + 2
+hi : i < 31 + 2
+hef : ¬e = f
+heg : ¬e = g
+heh : ¬e = h
+hei : ¬e = i
+hfg : ¬f = g
+hfh : ¬f = h
+hfi : ¬f = i
+hhi : ¬h = i
+hgh : ¬g = h
+hgi : ¬g = i
+s0 s1 s2 s3 s4 s5 : ℤ
+hd✝ :
+  (if
+        (decide (e < 31 + 2) && decide (f < 31 + 2) && decide (g < 31 + 2) && decide (h < 31 + 2) &&
+              decide (i < 31 + 2) &&
+            decide [e, f, g, h, i].Nodup) =
+          true then
+      forbidClause (numVars B) [chi B e f g, chi B e h i, chi B e f h, chi B e g i, chi B e f i, chi B e g h]
+        [s0, s1, s2, s3, s4, s5] gpPred
+    else none) =
+    some cl
+hd :
+  forbidClause (numVars B) [chi B e f g, chi B e h i, chi B e f h, chi B e g i, chi B e f i, chi B e g h]
+      [s0, s1, s2, s3, s4, s5] gpPred =
+    some cl
+hunit : ∀ s ∈ [s0, s1, s2, s3, s4, s5], s = 1 ∨ s = -1
+hterm :
+  ∀ r < [chi B e f g, chi B e h i, chi B e f h, chi B e g i, chi B e f i, chi B e g h].length,
+    (∀ (c : ℤ),
+        [chi B e f g, chi B e h i, chi B e f h, chi B e g i, chi B e f i, chi B e g h].getD r (Term.const 0) =
+            Term.const c →
+          c = [s0, s1, s2, s3, s4, s5].getD r 0) ∧
+      ∀ (l : ℤ),
+        [chi B e f g, chi B e h i, chi B e f h, chi B e g i, chi B e f i, chi B e g h].getD r (Term.const 0) =
+            Term.lit l →
+          (if ([s0, s1, s2, s3, s4, s5].getD r 0 == 1) = true then -l else l) ∈ cl
+hlen : True
+f1 : s0 * s1 = s2 * s3
+f2 : s2 * s3 = s4 * s5
+hall : ∀ x ∈ cl, ¬EncB.LitSat (realAssign pt) x
+t0 : 0 < ↑s0 * orient (pt e) (pt f) (pt g)
+t1 : 0 < ↑s1 * orient (pt e) (pt h) (pt i)
+t2 : 0 < ↑s2 * orient (pt e) (pt f) (pt h)
+t3 : 0 < ↑s3 * orient (pt e) (pt g) (pt i)
+t4 : 0 < ↑s4 * orient (pt e) (pt f) (pt i)
+t5 : 0 < ↑s5 * orient (pt e) (pt g) (pt h)
+⊢ s2 * s3 = -(s2 * s3)
+AE33Geo/Sound.lean:308:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.nodup_cons, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵not_or, List.not_mem_nil, not_false_eq_true,
+  ̲  ̲ ̲ ̲List.nodup_nil, and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:429:46: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

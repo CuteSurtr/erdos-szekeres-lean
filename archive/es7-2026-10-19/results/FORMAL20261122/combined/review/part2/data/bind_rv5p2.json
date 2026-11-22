@@ -1,0 +1,107 @@
+{
+ "cake_lpr_sha256": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+ "exe_pins_in_manifests": {
+  "n66r15print": true,
+  "r15rowprint": true,
+  "rowprint": true
+ },
+ "campaign_status_sha256": "4802dc9a946cefa3b855b8c495becc0fb33491a89e5472c9722ccb9d0c8138f5",
+ "leafmap_bijection": true,
+ "cert_ids": {
+  "templates": 421,
+  "cores": 208
+ },
+ "sample_leaves": [
+  1,
+  73,
+  83,
+  96,
+  100
+ ],
+ "sample_templates": [
+  81,
+  88,
+  253
+ ],
+ "sample_cores": [
+  143
+ ],
+ "bound": 14,
+ "items": 14,
+ "cakes": [
+  {
+   "label": "cube_hhhohh",
+   "cnf_sha": "93548e48070ecd84d62a45419e5b1d6fff7dd55d8fd5913197da7ddf0954f25d",
+   "lrat_sha": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "lrat_ref": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 38016,
+   "wall_s": 0.01,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  },
+  {
+   "label": "cube_oooooo_40o_52o_46o_44o_45o_39h",
+   "cnf_sha": "0f75e41f396b080de6c4ecd54e3d6844a2c99e5f38c96e76237c97b5c5acd242",
+   "lrat_sha": "de80c9c9e72830ed97b83fb9b245e73212ddd493cbdd40fbd4ef14d64baec4fc",
+   "lrat_ref": "de80c9c9e72830ed97b83fb9b245e73212ddd493cbdd40fbd4ef14d64baec4fc",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 2052032,
+   "wall_s": 7.24,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  },
+  {
+   "label": "cert_T_353be094d7133e97",
+   "cnf_sha": "a9bdf0d444310b3053039ebbd4ebe42dbddb43da555d1d8b06d2019cec0a3cdc",
+   "lrat_sha": "fec092035bbe8f638171dbdb0f85abdbc15ecd15693973f6a4cb39487172f19a",
+   "lrat_ref": "fec092035bbe8f638171dbdb0f85abdbc15ecd15693973f6a4cb39487172f19a",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 1756228,
+   "wall_s": 0.9,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  },
+  {
+   "label": "cert_C_a9efadb30e6901b4",
+   "cnf_sha": "29e415b7e173497a9165bfce7814f49952dc72d2feb4774ae92284435513f6ea",
+   "lrat_sha": "7a5c2352b00edfd8b69843b8bb447d45709734d8ef4c82c9c017bd364ad66e3f",
+   "lrat_ref": "7a5c2352b00edfd8b69843b8bb447d45709734d8ef4c82c9c017bd364ad66e3f",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 2050908,
+   "wall_s": 4.73,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  },
+  {
+   "label": "NEG_T_353be094d7133e97_cnf_with_C_a9efadb30e6901b4_lrat",
+   "cnf_sha": "a9bdf0d444310b3053039ebbd4ebe42dbddb43da555d1d8b06d2019cec0a3cdc",
+   "lrat_sha": "7a5c2352b00edfd8b69843b8bb447d45709734d8ef4c82c9c017bd364ad66e3f",
+   "lrat_ref": null,
+   "exact_lines": 0,
+   "cake_rc": 0,
+   "rss_kb": 1754176,
+   "wall_s": 0.88,
+   "expected": "REJECT",
+   "result": "REJECT_OK"
+  },
+  {
+   "label": "row_A397",
+   "cnf_sha": "2980321825ad82476b9ff21602c57fb5ac8d70511e85c7b20821f7aa72c9936e",
+   "lrat_sha": "2952b15969cfead96d3ca4ff3846f1581224c0f8cb99cd660687cd8c47cf4fcb",
+   "lrat_ref": "2952b15969cfead96d3ca4ff3846f1581224c0f8cb99cd660687cd8c47cf4fcb",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 111788,
+   "wall_s": 0.05,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  }
+ ],
+ "seconds": 48.5,
+ "problems": []
+}

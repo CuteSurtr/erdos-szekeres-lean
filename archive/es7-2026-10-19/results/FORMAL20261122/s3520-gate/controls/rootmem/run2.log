@@ -1,0 +1,8 @@
+base r1 rc=0 anon_shmem_max_mb=213 anon_max_mb=213 cgroup_peak_mb=316
+Imp2080 r1 rc=0 anon_shmem_max_mb=236 anon_max_mb=236 cgroup_peak_mb=318 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.76
+base r2 rc=0 anon_shmem_max_mb=227 anon_max_mb=227 cgroup_peak_mb=318
+Imp2080 r2 rc=0 anon_shmem_max_mb=233 anon_max_mb=233 cgroup_peak_mb=319 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.42
+imports: RS3519 320 (2003883928 olean bytes), RS3520 67 (421831872 olean bytes)
+ImpTest rc=0 anon_shmem_max_mb=255 anon_max_mb=255 cgroup_peak_mb=2121
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.46
+	Maximum resident set size (kbytes): 5482744

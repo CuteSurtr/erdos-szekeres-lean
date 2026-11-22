@@ -1,0 +1,148 @@
+== 2026-11-22 20:17:21 lean ReviewRows.lean (LEAN_PATH ends with build2/olean)
+RowGeo.n66_bound_55_of_cubes_rows : N66Enc.CubesUnsat132 →
+  RowGeo.RowCertsUnsat → RowGeo.R0Parse → OmissionZRow.N66Bound 55
+RowGeo.rowsValid_R0 : RowGeo.RowCertsUnsat → RowGeo.R0Parse → N66Geo.RowsValid N66Enc.R0
+RowGeo.rowsValid_R1 : RowGeo.RowCertsUnsat → N66Geo.RowsValid RowGeo.R1
+@RowGeo.certUnsat_of_text : ∀ {t : RowEnc.Cert},
+  RowEnc.certOk t = true →
+    (∀ (nv : ℕ) (F : List (List ℤ)), EncB.parseDimacs (RowEnc.certText t) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+      ¬EncB.DimacsSatisfiable (RowEnc.certCnf t)
+@RowGeo.subUnsat_of_text : ∀ {t : RowEnc.Cert},
+  RowEnc.certOk t = true →
+    ∀ {idx : List ℕ} {F : List (List ℤ)},
+      RowEnc.subCnfChecked t idx = some F →
+        (∀ (nv : ℕ) (G : List (List ℤ)),
+            EncB.parseDimacs (EncB.render (RowEnc.nvOf t.n) F) = some (nv, G) → ¬EncB.DimacsSatisfiable G) →
+          ¬EncB.DimacsSatisfiable (RowEnc.certCnf t)
+RowGeo.chkRow_sound : RowGeo.RowCertsUnsat →
+  ∀ {T : List ℕ},
+    (∀ x ∈ T, x < 70) → ∀ {rc : RowChk.RC}, RowChk.chkRow T rc = true → N66Geo.RowValid (List.map RowGeo.toFin70 T)
+N66Geo.n66_bound_55_of_cubes : N66Enc.CubesUnsat132 → N66Geo.RowsValid N66Enc.R0 → OmissionZRow.N66Bound 55
+def RowGeo.RowCertsUnsat : Prop :=
+(∀ t ∈ RowEnc.templates, ¬EncB.DimacsSatisfiable (RowEnc.certCnf t)) ∧
+  ∀ k ∈ RowEnc.cores, ¬EncB.DimacsSatisfiable (RowEnc.certCnf k)
+def RowGeo.R0Parse : Prop :=
+N66Enc.R0 = RowGeo.R1
+def RowGeo.R1 : List (List (Fin 70)) :=
+List.map (fun x => List.map RowGeo.toFin70 x) RowChk.R1nat
+def RowGeo.toFin70 : ℕ → Fin 70 :=
+fun x => ⟨x % 70, ⋯⟩
+def RowChk.R1nat : List (List ℕ) :=
+List.flatMap Prod.fst RowChk.rowChunks
+def RowEnc.certCnf : RowEnc.Cert → List (List ℤ) :=
+fun t =>
+  have m := EncB.numberMap (RowEnc.allocCodes t.n);
+  List.map (fun cl => List.map (RowEnc.toLit m) cl) (RowEnc.clsS t)
+def RowEnc.certText : RowEnc.Cert → String :=
+fun t => EncB.render (RowEnc.nvOf t.n) (RowEnc.certCnf t)
+def RowEnc.subCnfChecked : RowEnc.Cert → List ℕ → Option (List (List ℤ)) :=
+fun t idx =>
+  have A := (RowEnc.certCnf t).toArray;
+  List.mapM (fun i => A[i]?) idx
+inductive RowEnc.Cert : Type
+number of parameters: 0
+constructors:
+RowEnc.Cert.tmpl : ℕ → List RowEnc.Test → Option (List (List ℕ)) → RowEnc.Cert
+RowEnc.Cert.core : List (Fin 70) → Option (List (List ℕ)) → RowEnc.Cert
+def RowEnc.nvOf : ℕ → ℕ :=
+fun n => (RowEnc.alloc n).length
+def RowEnc.certOk : RowEnc.Cert → Bool :=
+fun x =>
+  match x with
+  | RowEnc.Cert.tmpl n ts o => decide (n ≤ 32) && ts.all (RowEnc.testOk n) && RowEnc.octsOk n o
+  | RowEnc.Cert.core S o => decide (S.length ≤ 32) && RowEnc.octsOk S.length o
+def RowChk.coreOk : RowEnc.Cert → Bool :=
+fun k => RowEnc.certOk k && RowEnc.strictUp (RowChk.coreStates k)
+def N66Geo.RowsValid : List (List (Fin 70)) → Prop :=
+fun R => ∀ T ∈ R, N66Geo.RowValid T
+def N66Geo.RowValid : List (Fin 70) → Prop :=
+fun T => ∀ (n : ℕ) (c : Configuration n), N66Geo.InClass c → ∃ s ∈ T, ¬N66Geo.n66Occ c.cup n s
+def N66Geo.InClass : {n : ℕ} → Configuration n → Prop :=
+fun {n} c => ¬c.HasCap 6 ∧ ¬c.HasCup 6 ∧ ¬HasConvexNGon 8 (Finset.image c.point Finset.univ)
+def N66Geo.n66Occ : (ℕ → ℕ → ℕ → Bool) → ℕ → Fin 70 → Prop :=
+fun cup n s => ∃ v < n, N66Geo.idxOf cup v = ↑s
+def N66Geo.idxOf : (ℕ → ℕ → ℕ → Bool) → ℕ → ℕ :=
+fun cup v => List.idxOf (N66Geo.profOf cup v) N66Enc.stateList
+def N66Geo.profOf : (ℕ → ℕ → ℕ → Bool) → ℕ → N66Enc.Prof :=
+fun cup v => (column cup v 0, column cup v 1, column cup v 2, column cup v 3)
+def N66Enc.CubesUnsat132 : Prop :=
+∀ c ∈ N66Enc.leaves132, ¬EncB.DimacsSatisfiable (N66Enc.fullCnf N66Enc.R0 c)
+@[irreducible] def N66Enc.R0 : List (List (Fin 70)) :=
+N66Enc.parseRows N66Enc.rowsText
+def EncB.DimacsSatisfiable : List (List ℤ) → Prop :=
+fun cls => ∃ ν, EncB.DimacsSat cls ν
+def EncB.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
+fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = true ∨ l < 0 ∧ ν l.natAbs = false
+def OmissionZRow.N66Bound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : Configuration n),
+    ¬c.HasCap 6 → ¬c.HasCup 6 → ¬HasConvexNGon 8 (Finset.image c.point Finset.univ) → n ≤ B
+'RowGeo.n66_bound_55_of_cubes_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowsValid_R0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowsValid_R1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.certUnsat_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.subUnsat_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.certCnf_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.chkRow_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.chkRows_mem' depends on axioms: [propext, Quot.sound]
+'RowGeo.rowValid_sig' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowValid_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowValid_of_cert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.certCnf_sat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowValid_tau' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowValid_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.allTests_good' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.sat_oct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.no_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.ttQ_eq' depends on axioms: [propext, Quot.sound]
+'RowGeo.ttB_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.drB_sound' depends on axioms: [propext, Quot.sound]
+'RowGeo.canB_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.goodN_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowChk.chkAll' depends on axioms: [propext, Quot.sound]
+'RowChk.chk0' depends on axioms: [propext, Quot.sound]
+'RowChk.chk118' depends on axioms: [propext, Quot.sound]
+'RowChk.certsOkT' depends on axioms: [propext]
+'RowChk.certsOkC' depends on axioms: [propext]
+'RowChk.cores_isCore' depends on axioms: [propext]
+'RowChk.tt_all' depends on axioms: [propext]
+'RowChk.ps_all' depends on axioms: [propext]
+'RowChk.dr_all' depends on axioms: [propext]
+'RowChk.can_all' depends on axioms: [propext]
+'N66Geo.n66_bound_55_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.mirror_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_end_unfolded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_rowsR1_unfolded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_rowsR0_unfolded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_R0Parse_unfolded' depends on axioms: [propext]
+'review_idx208' does not depend on any axioms
+'review_n208' does not depend on any axioms
+'review_discharge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_templates_length' does not depend on any axioms
+'review_cores_length' depends on axioms: [propext]
+'review_chunks_length' does not depend on any axioms
+R1 11884 templates 421 cores 208 chunks 119
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 ReviewRows.lean"
+	User time (seconds): 15.31
+	System time (seconds): 0.49
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:15.92
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3474068
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 209
+	Minor (reclaiming a frame) page faults: 94874
+	Voluntary context switches: 2563
+	Involuntary context switches: 979
+	Swaps: 0
+	File system inputs: 39312
+	File system outputs: 1048
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rc=0

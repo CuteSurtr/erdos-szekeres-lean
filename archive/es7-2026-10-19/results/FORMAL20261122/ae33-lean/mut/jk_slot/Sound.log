@@ -1,0 +1,109 @@
+AE33Geo/Sound.lean:308:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.nodup_cons, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵not_or, List.not_mem_nil, not_false_eq_true,
+  ̲  ̲ ̲ ̲List.nodup_nil, and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:429:46: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:496:21: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  chi B (Q1.getD j 0) (Q1.getD ((j + 1) % 6) 0) 32
+in the target expression
+  (match (Term.lit k1).neg, Term.lit k2, Term.lit k3,
+      (chi B ((List.take i Q ++ [31] ++ List.drop i Q).getD j 0)
+          ((List.take i Q ++ [31] ++ List.drop i Q).getD ((j + 1) % 6) 0) (31 + 1)).neg,
+      chi B ((List.take i Q ++ [31] ++ List.drop i Q).getD ((j + 5) % 6) 0)
+        ((List.take i Q ++ [31] ++ List.drop i Q).getD j 0) (31 + 1),
+      chi B ((List.take i Q ++ [31] ++ List.drop i Q).getD ((j + 1) % 6) 0)
+        ((List.take i Q ++ [31] ++ List.drop i Q).getD ((j + 2) % 6) 0) (31 + 1) with
+    | Term.lit c1, Term.lit c2, Term.lit c3, Term.lit c4, Term.lit c5, Term.lit c6 =>
+      if
+          (taut (sortLits [-c1, -c2, -c3, -c4, -c5, -c6]) || (sortLits [-c1, -c2, -c3, -c4, -c5, -c6]).isEmpty ||
+              !bounded (numVars B) (sortLits [-c1, -c2, -c3, -c4, -c5, -c6])) =
+            true then
+        none
+      else some (sortLits [-c1, -c2, -c3, -c4, -c5, -c6])
+    | x, x_1, x_2, x_3, x_4, x_5 => none) =
+    some cl
+
+B : Array Pt
+pt : ℕ → Point
+C : Ctx B pt
+Q : List ℕ
+i j : ℕ
+cl : List ℤ
+hd✝ :
+  (if
+        ((Q.length == 5 && Q.all fun t => decide (t < 31)) && decide Q.Nodup && ccwOk B Q && decide (i < 5) &&
+            decide (j < 6)) =
+          true then
+      jkClause B Q i j
+    else none) =
+    some cl
+hlen : Q.length = 5
+hlt : ∀ x ∈ Q, x < 31
+hnd : Q.Nodup
+hok : ccwOk B Q = true
+hi : i < 5
+hj : j < 6
+hQ : ∀ x ∈ Q, x < 31
+Q1 : List ℕ := List.take (i + 1) Q ++ [31] ++ List.drop (i + 1) Q
+hQ1 : Q1 = List.take (i + 1) Q ++ [31] ++ List.drop (i + 1) Q
+hQ1len : Q1.length = 6
+hQ1lt : ∀ x ∈ Q1, x < 32
+hQ1nd : Q1.Nodup
+mQ : ∀ r < 5, Q.getD r 0 < 31
+mQ1 : ∀ r < 6, Q1.getD r 0 < 32
+dQ : ∀ (a b : ℕ), a < 5 → b < 5 → a ≠ b → Q.getD a 0 ≠ Q.getD b 0
+dQ1 : ∀ (a b : ℕ), a < 6 → b < 6 → a ≠ b → Q1.getD a 0 ≠ Q1.getD b 0
+hm5 : ∀ (r : ℕ), r % 5 < 5
+hm6 : ∀ (r : ℕ), r % 6 < 6
+k1 : ℤ
+hk1 : chi B (Q.getD i 0) (Q.getD ((i + 1) % 5) 0) 31 = Term.lit k1
+hk10 : k1 ≠ 0
+hsk1 : EncB.LitSat (realAssign pt) k1 ↔ 0 < orient (pt (Q.getD i 0)) (pt (Q.getD ((i + 1) % 5) 0)) (pt 31)
+k2 : ℤ
+hk2 : chi B (Q.getD ((i + 4) % 5) 0) (Q.getD i 0) 31 = Term.lit k2
+hk20 : k2 ≠ 0
+hsk2 : EncB.LitSat (realAssign pt) k2 ↔ 0 < orient (pt (Q.getD ((i + 4) % 5) 0)) (pt (Q.getD i 0)) (pt 31)
+k3 : ℤ
+hd :
+  (match (Term.lit k1).neg, Term.lit k2, Term.lit k3,
+      (chi B ((List.take i Q ++ [31] ++ List.drop i Q).getD j 0)
+          ((List.take i Q ++ [31] ++ List.drop i Q).getD ((j + 1) % 6) 0) (31 + 1)).neg,
+      chi B ((List.take i Q ++ [31] ++ List.drop i Q).getD ((j + 5) % 6) 0)
+        ((List.take i Q ++ [31] ++ List.drop i Q).getD j 0) (31 + 1),
+      chi B ((List.take i Q ++ [31] ++ List.drop i Q).getD ((j + 1) % 6) 0)
+        ((List.take i Q ++ [31] ++ List.drop i Q).getD ((j + 2) % 6) 0) (31 + 1) with
+    | Term.lit c1, Term.lit c2, Term.lit c3, Term.lit c4, Term.lit c5, Term.lit c6 =>
+      if
+          (taut (sortLits [-c1, -c2, -c3, -c4, -c5, -c6]) || (sortLits [-c1, -c2, -c3, -c4, -c5, -c6]).isEmpty ||
+              !bounded (numVars B) (sortLits [-c1, -c2, -c3, -c4, -c5, -c6])) =
+            true then
+        none
+      else some (sortLits [-c1, -c2, -c3, -c4, -c5, -c6])
+    | x, x_1, x_2, x_3, x_4, x_5 => none) =
+    some cl
+hk3 : chi B (Q.getD ((i + 1) % 5) 0) (Q.getD ((i + 2) % 5) 0) 31 = Term.lit k3
+hk30 : k3 ≠ 0
+hsk3 : EncB.LitSat (realAssign pt) k3 ↔ 0 < orient (pt (Q.getD ((i + 1) % 5) 0)) (pt (Q.getD ((i + 2) % 5) 0)) (pt 31)
+k4 : ℤ
+hk4 : chi B (Q1.getD j 0) (Q1.getD ((j + 1) % 6) 0) 32 = Term.lit k4
+hk40 : k4 ≠ 0
+hsk4 : EncB.LitSat (realAssign pt) k4 ↔ 0 < orient (pt (Q1.getD j 0)) (pt (Q1.getD ((j + 1) % 6) 0)) (pt 32)
+k5 : ℤ
+hk5 : chi B (Q1.getD ((j + 5) % 6) 0) (Q1.getD j 0) 32 = Term.lit k5
+hk50 : k5 ≠ 0
+hsk5 : EncB.LitSat (realAssign pt) k5 ↔ 0 < orient (pt (Q1.getD ((j + 5) % 6) 0)) (pt (Q1.getD j 0)) (pt 32)
+k6 : ℤ
+hk6 : chi B (Q1.getD ((j + 1) % 6) 0) (Q1.getD ((j + 2) % 6) 0) 32 = Term.lit k6
+hk60 : k6 ≠ 0
+hsk6 : EncB.LitSat (realAssign pt) k6 ↔ 0 < orient (pt (Q1.getD ((j + 1) % 6) 0)) (pt (Q1.getD ((j + 2) % 6) 0)) (pt 32)
+⊢ ∃ l ∈ cl, EncB.LitSat (realAssign pt) l

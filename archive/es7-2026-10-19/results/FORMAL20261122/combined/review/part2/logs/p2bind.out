@@ -1,0 +1,150 @@
+LEAF 1 oooooo_40o_52o_46o_44o_45o_39h BOUND 6433737 2349560
+LEAF 73 hooooh BOUND 112 2320680
+LEAF 83 hohoho BOUND 19316569 2426896
+LEAF 96 hhohhh BOUND 8246480 2367204
+LEAF 100 hhhohh BOUND 112 2320964
+CERT t 81 T_353be094d7133e97 BOUND 18770571 357208
+CERT t 88 T_3b1b391e5c00e11a BOUND 24392225 436984
+CERT t 253 T_9ef27b31c6dc654f BOUND 24391835 437040
+CERT c 143 C_a9efadb30e6901b4 BOUND 72424962 1216192
+T208 BOUND 245753 3002920
+ROW P 90 BOUND 9058975
+ROW Q 138 BOUND 5829702
+ROW U 24 BOUND 5824933
+ROW A 397 BOUND 977198
+CAKE {"label": "cube_hhhohh", "cnf_sha": "93548e48070ecd84d62a45419e5b1d6fff7dd55d8fd5913197da7ddf0954f25d", "lrat_sha": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54", "lrat_ref": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54", "exact_lines": 1, "cake_rc": 0, "rss_kb": 38016, "wall_s": 0.01, "expected": "ACCEPT", "result": "ACCEPT_OK"}
+CAKE {"label": "cube_oooooo_40o_52o_46o_44o_45o_39h", "cnf_sha": "0f75e41f396b080de6c4ecd54e3d6844a2c99e5f38c96e76237c97b5c5acd242", "lrat_sha": "de80c9c9e72830ed97b83fb9b245e73212ddd493cbdd40fbd4ef14d64baec4fc", "lrat_ref": "de80c9c9e72830ed97b83fb9b245e73212ddd493cbdd40fbd4ef14d64baec4fc", "exact_lines": 1, "cake_rc": 0, "rss_kb": 2052032, "wall_s": 7.24, "expected": "ACCEPT", "result": "ACCEPT_OK"}
+CAKE {"label": "cert_T_353be094d7133e97", "cnf_sha": "a9bdf0d444310b3053039ebbd4ebe42dbddb43da555d1d8b06d2019cec0a3cdc", "lrat_sha": "fec092035bbe8f638171dbdb0f85abdbc15ecd15693973f6a4cb39487172f19a", "lrat_ref": "fec092035bbe8f638171dbdb0f85abdbc15ecd15693973f6a4cb39487172f19a", "exact_lines": 1, "cake_rc": 0, "rss_kb": 1756228, "wall_s": 0.9, "expected": "ACCEPT", "result": "ACCEPT_OK"}
+CAKE {"label": "cert_C_a9efadb30e6901b4", "cnf_sha": "29e415b7e173497a9165bfce7814f49952dc72d2feb4774ae92284435513f6ea", "lrat_sha": "7a5c2352b00edfd8b69843b8bb447d45709734d8ef4c82c9c017bd364ad66e3f", "lrat_ref": "7a5c2352b00edfd8b69843b8bb447d45709734d8ef4c82c9c017bd364ad66e3f", "exact_lines": 1, "cake_rc": 0, "rss_kb": 2050908, "wall_s": 4.73, "expected": "ACCEPT", "result": "ACCEPT_OK"}
+CAKE {"label": "NEG_T_353be094d7133e97_cnf_with_C_a9efadb30e6901b4_lrat", "cnf_sha": "a9bdf0d444310b3053039ebbd4ebe42dbddb43da555d1d8b06d2019cec0a3cdc", "lrat_sha": "7a5c2352b00edfd8b69843b8bb447d45709734d8ef4c82c9c017bd364ad66e3f", "lrat_ref": null, "exact_lines": 0, "cake_rc": 0, "rss_kb": 1754176, "wall_s": 0.88, "expected": "REJECT", "result": "REJECT_OK"}
+CAKE {"label": "row_A397", "cnf_sha": "2980321825ad82476b9ff21602c57fb5ac8d70511e85c7b20821f7aa72c9936e", "lrat_sha": "2952b15969cfead96d3ca4ff3846f1581224c0f8cb99cd660687cd8c47cf4fcb", "lrat_ref": "2952b15969cfead96d3ca4ff3846f1581224c0f8cb99cd660687cd8c47cf4fcb", "exact_lines": 1, "cake_rc": 0, "rss_kb": 111788, "wall_s": 0.05, "expected": "ACCEPT", "result": "ACCEPT_OK"}
+{
+ "cake_lpr_sha256": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+ "exe_pins_in_manifests": {
+  "n66r15print": true,
+  "r15rowprint": true,
+  "rowprint": true
+ },
+ "campaign_status_sha256": "4802dc9a946cefa3b855b8c495becc0fb33491a89e5472c9722ccb9d0c8138f5",
+ "leafmap_bijection": true,
+ "cert_ids": {
+  "templates": 421,
+  "cores": 208
+ },
+ "sample_leaves": [
+  1,
+  73,
+  83,
+  96,
+  100
+ ],
+ "sample_templates": [
+  81,
+  88,
+  253
+ ],
+ "sample_cores": [
+  143
+ ],
+ "bound": 14,
+ "items": 14,
+ "cakes": [
+  {
+   "label": "cube_hhhohh",
+   "cnf_sha": "93548e48070ecd84d62a45419e5b1d6fff7dd55d8fd5913197da7ddf0954f25d",
+   "lrat_sha": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "lrat_ref": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 38016,
+   "wall_s": 0.01,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  },
+  {
+   "label": "cube_oooooo_40o_52o_46o_44o_45o_39h",
+   "cnf_sha": "0f75e41f396b080de6c4ecd54e3d6844a2c99e5f38c96e76237c97b5c5acd242",
+   "lrat_sha": "de80c9c9e72830ed97b83fb9b245e73212ddd493cbdd40fbd4ef14d64baec4fc",
+   "lrat_ref": "de80c9c9e72830ed97b83fb9b245e73212ddd493cbdd40fbd4ef14d64baec4fc",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 2052032,
+   "wall_s": 7.24,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  },
+  {
+   "label": "cert_T_353be094d7133e97",
+   "cnf_sha": "a9bdf0d444310b3053039ebbd4ebe42dbddb43da555d1d8b06d2019cec0a3cdc",
+   "lrat_sha": "fec092035bbe8f638171dbdb0f85abdbc15ecd15693973f6a4cb39487172f19a",
+   "lrat_ref": "fec092035bbe8f638171dbdb0f85abdbc15ecd15693973f6a4cb39487172f19a",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 1756228,
+   "wall_s": 0.9,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  },
+  {
+   "label": "cert_C_a9efadb30e6901b4",
+   "cnf_sha": "29e415b7e173497a9165bfce7814f49952dc72d2feb4774ae92284435513f6ea",
+   "lrat_sha": "7a5c2352b00edfd8b69843b8bb447d45709734d8ef4c82c9c017bd364ad66e3f",
+   "lrat_ref": "7a5c2352b00edfd8b69843b8bb447d45709734d8ef4c82c9c017bd364ad66e3f",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 2050908,
+   "wall_s": 4.73,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  },
+  {
+   "label": "NEG_T_353be094d7133e97_cnf_with_C_a9efadb30e6901b4_lrat",
+   "cnf_sha": "a9bdf0d444310b3053039ebbd4ebe42dbddb43da555d1d8b06d2019cec0a3cdc",
+   "lrat_sha": "7a5c2352b00edfd8b69843b8bb447d45709734d8ef4c82c9c017bd364ad66e3f",
+   "lrat_ref": null,
+   "exact_lines": 0,
+   "cake_rc": 0,
+   "rss_kb": 1754176,
+   "wall_s": 0.88,
+   "expected": "REJECT",
+   "result": "REJECT_OK"
+  },
+  {
+   "label": "row_A397",
+   "cnf_sha": "2980321825ad82476b9ff21602c57fb5ac8d70511e85c7b20821f7aa72c9936e",
+   "lrat_sha": "2952b15969cfead96d3ca4ff3846f1581224c0f8cb99cd660687cd8c47cf4fcb",
+   "lrat_ref": "2952b15969cfead96d3ca4ff3846f1581224c0f8cb99cd660687cd8c47cf4fcb",
+   "exact_lines": 1,
+   "cake_rc": 0,
+   "rss_kb": 111788,
+   "wall_s": 0.05,
+   "expected": "ACCEPT",
+   "result": "ACCEPT_OK"
+  }
+ ],
+ "seconds": 48.5,
+ "problems": []
+}
+	Command being timed: "/usr/bin/python3 -I -B tools/rv5p2_bind.py"
+	User time (seconds): 45.20
+	System time (seconds): 3.13
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:48.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3002920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1267241
+	Voluntary context switches: 60078
+	Involuntary context switches: 33627
+	Swaps: 0
+	File system inputs: 276344
+	File system outputs: 913632
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

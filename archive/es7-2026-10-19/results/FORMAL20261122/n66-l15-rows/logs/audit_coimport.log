@@ -1,0 +1,43 @@
+N66R15.n66_bound_54 : N66R15Enc.CubesUnsat105R → N66R15Geo.RowCertsUnsat → OmissionZRow.N66Bound 54
+N66R15.n66_bound_55 : N66R15Enc.CubesUnsat105R → N66R15Geo.RowCertsUnsat → OmissionZRow.N66Bound 55
+RowGeo.residual_bound_118_of_texts : OmissionZRow.N66Bound 55 →
+  RowGeo.RowsTextUnsat Res118.rowsP →
+    RowGeo.RowsTextUnsat Res118.rowsQ →
+      RowGeo.RowsTextUnsat Res118.rowsU →
+        RowGeo.RowsTextUnsat Res118.rowsA →
+          Res118.ResSliceExcludes [] 33 18 →
+            Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 34 18 →
+              Res118.ResSliceExcludes Res118.rowsP 34 19 →
+                Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 35 18 →
+                  Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsU) 35 19 →
+                    Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA) 35 20 →
+                      Partition.ResidualBound 118
+N66Geo.n66_bound_55_of_cubes : N66Enc.CubesUnsat132 → N66Geo.RowsValid N66Enc.R0 → OmissionZRow.N66Bound 55
+OmissionBalancedZZsN.composition_302_n54 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69 →
+  OmissionZRow.N66Bound 54 → Partition.ResidualBound 118 → ForcesConvexNGon 302 8
+'coimport_res118' depends on axioms: [propext, Classical.choice, Quot.sound]
+'coimport_302' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R . N66R15Aud/CoImport.lean"
+	User time (seconds): 3.49
+	System time (seconds): 0.41
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3534108
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 73853
+	Voluntary context switches: 130
+	Involuntary context switches: 76
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rc=0

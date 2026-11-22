@@ -1,0 +1,85 @@
+{
+ "log": "/home/jay/research/data/formalize-20261122/combined/review/logs/RV5Review.log",
+ "nmodules": 13638,
+ "mod_lines": 13638,
+ "pin_classes": {
+  "comp-audit closure.tsv+fv304-audit closure_combined.tsv+library.json": 4873,
+  "comp-audit closure.tsv+fv304-audit closure_combined.tsv+library.json+sevenfold oleans_before": 10,
+  "fv304-audit closure_combined.tsv+library.json": 69,
+  "sevenfold oleans_before": 16,
+  "res118-rowblocks manifest": 10,
+  "chain311 build.tsv+fv304-audit closure_combined.tsv": 108,
+  "comp-audit closure.tsv+fv304-audit closure_combined.tsv": 1,
+  "fv304-audit closure_combined.tsv+res118 olean_sha256": 4,
+  "final311-compact.json+fv304-audit closure_combined.tsv": 8,
+  "final311-compact.json": 2,
+  "res118 olean_sha256": 1,
+  "NO PIN": 5,
+  "res-slices-fv audit-3318.json": 5,
+  "res-slices-fv audit-3418.json": 12,
+  "res-slices-fv audit-3518.json": 48,
+  "res-slices-fv audit-3419.json": 155,
+  "fv304-audit closure_combined.tsv": 8219,
+  "chain311 build.tsv+comp-audit closure.tsv+fv304-audit closure_combined.tsv": 87,
+  "comp-audit closure.tsv+fv304-audit closure_combined.tsv+res118 olean_sha256": 1,
+  "comp-audit closure.tsv": 4
+ },
+ "no_pin": [
+  "RS.Lib",
+  "Combined.Residual",
+  "Combined.ES304",
+  "Combined.ES303",
+  "Combined.ES302"
+ ],
+ "hash_modes": {
+  "direct": 13638
+ },
+ "only_in_reviewer_closure": [
+  "Combined.ES302",
+  "Combined.ES303",
+  "Combined.ES304"
+ ],
+ "only_in_worker_closure": [],
+ "worker_closure_equal": 13635,
+ "e304z_modules": 8217,
+ "e304z_digest": "fa02576ef5752c7fa509ea9f74b95feb46e4fdce9de26292b6df19c654b36c76",
+ "e304z_digest_fv304_audit_recorded": "fa02576ef5752c7fa509ea9f74b95feb46e4fdce9de26292b6df19c654b36c76",
+ "companions": {
+  "companions": 3464,
+  "in_fv304_table": 3464,
+  "equal": 3464,
+  "diff": []
+ },
+ "newest_imported_mtime": 1795342241.595337,
+ "newest_imported_file": "/home/jay/research/data/formalize-20261122/res-slices-fv/olean/RS/Final3419.olean",
+ "worker_out_oleans": {
+  "Residual": "cdadeb8cd48908519e9a82be6d8cd178fe2aefbfcfb8a5d0f6b35a0a8e08690d",
+  "ES303": "ebf1b4b3e656a8fe6fa2a323aea6fbe86265a912459919199bfefc2144ee36ae",
+  "ES302": "57476735e5b08c14200189ebe6d7ac8f3801c770813921f6509ac04e0875bd51",
+  "ES304": "fac38b7e2ce8c1fc54d308c76f19602ce44ecceceebeab33312451d547545715"
+ },
+ "problems": []
+}
+	Command being timed: "/usr/bin/python3 -I -B /home/jay/research/data/formalize-20261122/combined/review/tools/rv5_audit.py"
+	User time (seconds): 14.90
+	System time (seconds): 2.67
+	Percent of CPU this job got: 46%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:38.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 53744
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 19413
+	Voluntary context switches: 20203
+	Involuntary context switches: 1261
+	Swaps: 0
+	File system inputs: 61737456
+	File system outputs: 8928
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

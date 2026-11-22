@@ -1,0 +1,34 @@
+RowGeo/Oct.lean:47:10: warning: This simp argument is unused:
+  Nat.lt_irrefl
+
+Hint: Omit it from the simp argument list.
+  simp only [CF, ori3, h1, h2, h3, h4, h5, h6, n1, n2, n3, n4, n5, n6, if_true, if_false,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵l̵t̵_̵i̵r̵r̵e̵f̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RowGeo/Oct.lean:114:13: warning: `Finset.card_insert_of_not_mem` has been deprecated: Use `Finset.card_insert_of_notMem` instead
+RowGeo/Oct.lean:115:6: warning: `Finset.card_insert_of_not_mem` has been deprecated: Use `Finset.card_insert_of_notMem` instead
+RowGeo/Oct.lean:115:58: warning: `Finset.card_insert_of_not_mem` has been deprecated: Use `Finset.card_insert_of_notMem` instead
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R . -o /home/jay/research/data/formalize-20261122/n66-rowsvalid/build2/olean/RowGeo/Oct.olean RowGeo/Oct.lean"
+	User time (seconds): 5.33
+	System time (seconds): 0.41
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3336196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 70538
+	Voluntary context switches: 278
+	Involuntary context switches: 51
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 3144
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

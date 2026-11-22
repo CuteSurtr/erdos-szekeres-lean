@@ -1,0 +1,41 @@
+modules in closure 5151 | missing []
+    1732 from /home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean
+     130 from /home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean
+      84 from /home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean
+    2825 from /home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean
+       2 from /home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean
+      13 from /home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean
+       9 from /home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean
+       4 from /home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean
+      12 from /home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+     140 from /home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean
+      17 from /home/jay/research/data/formalize-20261122/res-slices-fv/olean
+     108 from /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean
+       1 from /home/jay/research/data/bal186-20261119/zrow/leanz/olean
+       5 from /home/jay/research/data/formalize-20261122/res118/olean
+      69 from /home/jay/research/data/formalize-20261122/s3520-gate/olean
+modules found in more than one LEAN_PATH dir: 6
+   CompactChecker.Packed dirs 2 distinct realpaths 1 distinct contents 1
+   CompactChecker.Fast dirs 2 distinct realpaths 1 distinct contents 1
+   CompactChecker.WordPack dirs 2 distinct realpaths 1 distinct contents 1
+   CompactChecker.Split dirs 2 distinct realpaths 1 distinct contents 1
+   CompactChecker.Fast2 dirs 2 distinct realpaths 1 distinct contents 1
+   CompactChecker.Path dirs 2 distinct realpaths 1 distinct contents 1
+RS3520.* modules 69 not from the gate olean dir: []
+  pin CompactChecker.Bridge311Res: 21dc7075517ff3cf in final311-compact.json: True (provider /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Bridge311Res.olean)
+  pin CompactChecker.Fast: 1e55d4aa6a683f34 in final311-compact.json: True (provider /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Fast.olean)
+  pin CompactChecker.Fast2: 14ce7ba1c6515c41 in final311-compact.json: True (provider /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Fast2.olean)
+  pin CompactChecker.Fcat2650: 2b6c9f27f4683707 in final311-compact.json: True (provider /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Fcat2650.olean)
+  pin CompactChecker.Packed: d0186d8387cd9e92 in final311-compact.json: True (provider /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Packed.olean)
+  pin CompactChecker.Path: c0e64d18168c9f9f in final311-compact.json: True (provider /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Path.olean)
+  pin CompactChecker.Split: 9d6e752b82da2425 in final311-compact.json: True (provider /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Split.olean)
+  pin CompactChecker.WordPack: bbd6dbe5ab9ae50e in final311-compact.json: True (provider /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/WordPack.olean)
+  RS olean RS.Bridge3520: 11dfffa7d302b60e listed in res-slices-fv data/cat3520.json: False
+  RS olean RS.Cat3520: 247855f59c7dcf14 listed in res-slices-fv data/cat3520.json: False
+  RS olean RS.Cat3520_p0: f790423202fd2e2c listed in res-slices-fv data/cat3520.json: False
+  RS olean RS.Cat3520_p1: 53624fc28038d83b listed in res-slices-fv data/cat3520.json: False
+  RS olean RS.Cat3520_p2: 1e4d334e9fe68678 listed in res-slices-fv data/cat3520.json: False
+  RS olean RS.Cat3520_p3: d5b3ddc3f34a2f1e listed in res-slices-fv data/cat3520.json: False
+  RS olean RS.Cat3520_p4: 5ce3953ce5c4e288 listed in res-slices-fv data/cat3520.json: False
+  RS olean RS.Cat3520_p5: c66baffdaabc8fe2 listed in res-slices-fv data/cat3520.json: False
+  RS olean RS.Lib: 952b115c1cc7360a listed in res-slices-fv data/cat3520.json: False

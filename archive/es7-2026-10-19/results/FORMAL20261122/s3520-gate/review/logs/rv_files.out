@@ -1,0 +1,8 @@
+unit 0161: modules 8, leaves 47865 (expected 47865; T7 ctx-169 leaves 47865), CPU 596.2 s = 0.01246 s/leaf, source 836 B/leaf, olean 1129 B/leaf, base_path -
+unit 1793: modules 3, leaves 19035 (expected 19035; ), CPU 220.5 s = 0.01158 s/leaf, source 856 B/leaf, olean 1153 B/leaf, base_path -
+unit 2080: modules 57, leaves 320422 (expected 320422; T7 ctx-4274 leaves 320422), CPU 4037.9 s = 0.01260 s/leaf, source 816 B/leaf, olean 1103 B/leaf, base_path [[109, 2], [75, 2], [133, 1], [33, 2], [25, 2], [17, 2], [20, 1], [56, 1], [45, 2], [36, 2], [54, 2], [98, 2], [44, 1], [0, 2]]
+ALL: modules 68, leaves 387322, CPU 4854.6 s = 0.01253 s/leaf, source 821 B/leaf, olean 1108 B/leaf
+per-module s/leaf min 0.0112 max 0.0142; source B/leaf 761-872; olean B/leaf 1032-1168
+max sampled anon+shmem 748 MB (C208024, 7999 leaves); max RSS 3757 MB
+axiom targets 75, whole standard lines 73; not whole: [('RS3520.C208014', 'ex148045'), ('RS3520.C208053', 'ex584381')]
+problems: none

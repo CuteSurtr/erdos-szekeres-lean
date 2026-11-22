@@ -1,8 +1,6 @@
 # STATUS20261121_1930: Linux session of 21 November 2026 from 19:15 KST (handoff, updated as it goes)
 
-**Status: RESUMED 22 Nov 03:48 (owner: "start to research ES and #810 by utilizing all of these"); RUNNING.** Stopped 03:00–03:48 (§6). New caps (owner, about 03:55): memory at most 80 % in use, CPU at most 90 % (§6, "Resumed"). **ES(8) ≤ 303 established at 06:21** ([ES303N20261120](../ES303N20261120/README.md); computer-assisted, unrefereed). Nothing has been committed, pushed or e-mailed in this session.
-03:00:00 and 03:00:05; there was no kernel OOM kill. State at the stop and the resume commands are in §6. ES(8) ≤ 304 ([ES304N20261119](../ES304N20261119/README.md)) is unchanged: the budget-68 checks for 303 were stopped
-unfinished. Nothing has been committed, pushed or e-mailed in this session.
+**Status (23 Nov 00:50): STOPPED FOR THE NIGHT; four jobs keep running unattended (§6, "Night of 22-23 Nov").** Owner, about 21:55: no new agents, stop after formalization wave 5. ES(8) ≤ 303 established 22 Nov 06:21 ([ES303N20261120](../ES303N20261120/README.md); computer-assisted, unrefereed). Commits of this session: b01f0acd9, 708f7c917, 7c1562871 and 59becd99c (pushed), and the wave-5 commit that carries this page (owner, about 22:00: commit and push at wrap-up). Nothing was e-mailed.
 - The Mac pushed its own handoff, `STATUS20261121`, on the unmerged branch `origin/es-mac-2026-11-21`. That name and the
   Mac's record names (ES8CHECK20261121, M57R36N20261121, M57R36E20261121, PREFIX20261121) are taken. This Linux page uses a
   time suffix.
@@ -62,6 +60,37 @@ axioms).
 - (9) b69 checks prepared: v5n54, chain302, rows binding, pre-registration; review 6/6.
 | as stated; no record label changes except 304's Lean status; unrefereed | `~/research/data/formalize-20261122/*`,
 `bal186-20261119/b69prep`, `r36-linux-20261121/caseA/v3` |
+| 22 Nov ~20:50 | **Formalization wave 3 finished, all reviewed** (record `FORMAL20261122`):
+- Res118 row blocks: 5 of 5 confirmed; 2,025 of 2,025 rows bound by hash; E2 evidence copied into the record.
+- **N66 rows (level 14): partial.** `RowGeo.n66_bound_55_of_cubes_rows : CubesUnsat132 → RowCertsUnsat → R0Parse →
+  N66Bound 55`. So N66Bound 55 is Lean-checked modulo 132 cube verdicts, 629 row-CNF verdicts and **R0Parse**
+  (`N66Enc.R0 = R1`, evidence COMPUTED by `#eval`, E4-class; the kernel cannot evaluate the `include_str` row list).
+  Review: 11 confirmed, 2 not confirmed (the target without R0Parse; the T208 sub-list print not independently
+  reproduced, about 3 GB). Always quote the label with R0Parse named.
+- N66 ≤ 54 at level 15: 11 confirmed; RowsValid R0_15 and the 302 plug are not claimed.
+- χ_rainbow = 6 (182 vertices) and AE33 radius 1: 5 of 5 confirmed each.
+- s35_19 Lean check running unattended (`esr-fvr-drv`, 3 compiles; HEURISTIC end 23 Nov 05:00–08:30). s35_20
+  feasibility: the 4,642-row catalog needs a 13-bit exporter (built and controlled); cost 360–440 CPU-h and
+  246–297 GB with chunk sources, 140–169 GB without (HEURISTIC, from s35_19's calibration). | Lean-checked modulo
+  the named hypotheses | `FORMAL20261122` |
+| 22 Nov ~21:45 | **Wave 4 finished, all reviewed.** b69 check preparation 6 of 6; FV304 audit 5 of 5; P2 census 3 of 3: the reviewer re-ran shards 301, 246 and 223 with their own PRUNE checker and got identical counts and outputs; the one survivor (shard 301) complements to the notes' unique 15-vertex graph; wording fixes only. M(16) run 4 + 1 not confirmed (stale self-test documentation, known). Rung-36 RQ1 8 of 8; n66enc byte identity 8 of 8; small slices 5 of 5. **M(16) disk:** kept proofs grow about 13 GB/h (43.3 GB at 21:44; 17,308 cubes certified, about 2.5 MB each; 49,182 open). 12 of 209 hard subtrees closed so far, at 400–4,900 CPU-s each (HEURISTIC; the earliest closed are likely the easiest). The run pauses itself at 250 GB of kept proofs. Owner decision pending. | as stated | `e810-linux-20261121/{p2-census,m16-le72-run}` |
+| 23 Nov 00:43 | **Formalization wave 5 finished, all reviewed** (record `FORMAL20261122`):
+- **N66 ≤ 54 without R0Parse.** `N66R15.n66_bound_54 : CubesUnsat105R → RowCertsUnsat → N66Bound 54` (and `_55`). The
+  level-15 rows are kernel-checked chunk constants, and the cube printer reads the same constants (105 of 105 trims
+  byte-identical to the certified files). N66 ≤ 54 is Lean-checked modulo the 105 level-15 cube verdicts and the 629
+  row-certificate verdicts (E1-E6). Review: 13 confirmed, 1 not confirmed (the co-import compile was not re-run; off the
+  label's path); no fixes.
+- **End theorems.** `Combined.es304`, `es303`, `es302` and `residual_bound_118` (part 1; review: 8 confirmed, 2 not
+  confirmed: H-T69 has no evidence, and the s35_19 switch template is not compiled) and their level-15 instances `*_l15`
+  (part 2; review: 8 confirmed, 2 not confirmed, the same two). **ES(8) ≤ 304 is Lean-checked modulo the 105 + 629 + 2,025 cake_lpr verdicts (E1-E6) and the
+  slices s35_19 and s35_20** (EXACT TREE, not in Lean). 303 adds the budget-68 tree (EXACT TREE by two checks). 302 adds
+  the budget-69 tree, which does not exist yet, so `es302_l15` is not a bound claim.
+- **s35_20 launch gate passed (acceptance item 3 only through re-prints); not launched.** The largest context (320,422 leaves, 57 chunk modules) and its context
+  theorem compile: 3 of 3,212 units. The new exporter writes the reference's bytes. Cost 383-417 CPU-h; disk 228-239 GB
+  with the chunk sources kept or about 140 GB without (HEURISTIC). Review: 12 confirmed, 2 not confirmed (acceptance
+  item 3 met only through re-prints; `FVR_JOBS=4` in LAUNCH_PLAN §5 contradicts its §6.5). 4 LAUNCH_PLAN fixes are due
+  before launch.
+| Lean-checked modulo the named hypotheses; no record label changes; unrefereed | `FORMAL20261122` |
 | 22 Nov 16:45 | **N66 ≤ 54.** The L15 campaign ended at 13:07 with 105 certified leaves and a complete cover. vfy15 did
 all four checks on all 105 (fresh cake_lpr, trim ⊆ cert, cert = F_c + units, rows). Own exact partition on the cube
 literals and on the real unit literals (measure 1). L = 15 confirmed; F_c `2f78368f…` | CERTIFIED + PROVED (written model, L =
@@ -185,6 +214,59 @@ finished. None of the workers' claims below reached the verifier stage: they are
   - Exhaustive one-point relocation repairs neither (COMPUTED by the finder).
 
 ## 6. Resume
+
+### Night of 22-23 Nov (stopped 00:50; owner: "do not add new agents from now on, formalize wave 5 1122 finishes then we call it a day")
+
+- **No agents or workflows run.** Formalization wave 5 (`formalize-wave5-1122`, 21:05 to 00:43) is in §4 and in
+  `FORMAL20261122`.
+- **Left running unattended** (owner: "Keep them running"). State at 00:24-00:28 on 23 Nov:
+
+| unit | job | state | deadline |
+|---|---|---|---|
+| `esr-bal-zbs69` | budget-69 finder (`zrow/zbs54_finder.sh 69 16 16384`; CPUQuota 1400 %, CPUs 5-15,21-31) | 21,684 of 32,334 contexts closed after 7.8 h | 26 Nov 03:45 |
+| `esr-fvr-drv` + 3 `esr-fvr-c3519-*` | s35_19 Lean check (`res-slices-fv/tools/drive.py`, `FVR_JOBS=3`) | 626 of about 1,412 modules; no root or final yet | driver 23 Nov 21:03 |
+| `esr-p2-census` | #810 P2 census (4 shard workers, CPUs 0-4,16-20) | 190 of 512 shards, 1 survivor (shard 301), 0 mismatches against the notes | 24 Nov 16:45 |
+| `esr-m16-cnc` | M(16) ≤ 72 cube-and-conquer (3 lanes) | 32,249 cubes certified, 0 SAT, 0 rejected, 0 errors; 49,268 open; kept proofs 79.9 GB | 24 Nov 17:29; it pauses itself at 250 GB of kept proofs |
+| `esr-memguard-1122f`, `esv-memguard-1122c` | memory guards (`esr 36000 bal=9500 ag=8000 r36=8500 m16=6000 p2=4000 fvr=10000 dlt=7000 n66=4000 s20=8000`; `esv 4000 fv=4000`) | – | none |
+
+- About 24 threads are busy, under the cap of 28. The yield guard runs as a background shell of the main session and ends
+  with it; the b69 watcher already exited (8 h heartbeat). The memory guards stay.
+- **Nothing new starts** (owner): not b69's checks when the finder ends, not the s35_20 campaign, not rung-36 case A.
+- **Next steps, each after the owner's OK and an advisor check:**
+  - b69 finder ended: its checks are prepared in `bal186-20261119/b69prep` (v5n54 assembly, chain302; review 6 of 6).
+  - s35_19 finished: accept it by `res-slices-fv/README.md` §9, then compile `combined/src/Combined/Switch3519L15.lean`
+    (`combined/README.md` §2.9).
+  - s35_20: apply the 4 fixes in `s3520-gate/review/VERIFY_s35_20-gate.md` to LAUNCH_PLAN first, and set `FVR_JOINMEM`
+    from the s35_19 Root measurement.
+- **Open owner questions:**
+  1. Delete Lean chunk sources once their olean exists (regenerable; s35_20 needs 228-239 GB with them, about 140 GB
+     without)?
+  2. Clean up C42 and C43a (8.1 GB) and C44 (20.7 GB, the FV304 export)?
+  3. M(16): keep the 250 GB cap on kept proofs (set by the agent), raise it, or re-check and then delete? At 13.4 GB/h
+     (21:44 to 00:28) the run reaches the cap around 13:00 on 23 Nov and pauses (HEURISTIC).
+  4. s35_20: how many compiles (more than 3 needs the owner's OK), and when?
+  5. Older: merging `origin/es-mac-2026-11-21`; e-mails (owner only).
+- **Restart commands** (only if a unit stopped; each resumes from its own state; start the guards first, and stop
+  `esr-fvr-drv` before touching a guard):
+
+```bash
+G=/home/jay/research/lean/erdos-szekeres-lean/.claude/skills/es-research/scripts/memguard.sh
+systemd-run --user --unit=esr-memguard-1123 -p CPUQuota=30% -p MemoryMax=200M -p MemorySwapMax=0 --nice=5 \
+  $G esr 36000 bal=9500 ag=8000 r36=8500 m16=6000 p2=4000 fvr=10000 dlt=7000 n66=4000 s20=8000
+systemd-run --user --unit=esv-memguard-1123 -p CPUQuota=20% -p MemoryMax=200M -p MemorySwapMax=0 --nice=5 \
+  -E LOG=/home/jay/research/data/memguard-20261119.log $G esv 4000 fv=4000
+systemd-run --user --unit=esr-bal-zbs69 -p CPUQuota=1400% -p MemoryMax=8G -p MemorySwapMax=0 -p RuntimeMaxSec=259200 \
+  --nice=10 --working-directory=/home/jay/research/data/bal186-20261119/zrow \
+  /usr/bin/taskset -c 5-15,21-31 ./zbs54_finder.sh 69 16 16384
+systemd-run --user --unit=esr-fvr-drv -p CPUQuota=20% -p MemoryMax=400M -p MemorySwapMax=0 -p RuntimeMaxSec=86400 \
+  --nice=10 -E FVR_JOBS=3 --working-directory=/home/jay/research/data/formalize-20261122/res-slices-fv \
+  /home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -I tools/drive.py
+systemd-run --user --unit=esr-p2-census -p CPUQuota=400% -p MemoryMax=3600M -p MemorySwapMax=0 -p RuntimeMaxSec=172800 \
+  --nice=10 --working-directory=/home/jay/research/data/e810-linux-20261121/p2-census \
+  /usr/bin/taskset -c 0-4,16-20 tools/p2_driver.sh
+systemd-run --user --unit=esr-m16-cnc -p CPUQuota=300% -p MemoryMax=5400M -p MemorySwapMax=0 -p RuntimeMaxSec=172800 \
+  --nice=10 --working-directory=/home/jay/research/data/e810-linux-20261121/m16-le72-run tools/restart_with_preflight.sh
+```
 
 ### Resumed 22 Nov 03:48 (owner: research ES and #810 with the new tools; fully use the PC)
 

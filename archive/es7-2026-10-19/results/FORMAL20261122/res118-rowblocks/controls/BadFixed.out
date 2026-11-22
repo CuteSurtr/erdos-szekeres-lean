@@ -1,0 +1,6 @@
+/home/jay/research/data/formalize-20261122/res118-rowblocks/controls/BadFixed.lean:12:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  ttB ↑(states i) ↑(states l) ↑(states j) = true
+but is expected to have type
+  ttB ↑(states i) ↑(states j) ↑(states l) = true

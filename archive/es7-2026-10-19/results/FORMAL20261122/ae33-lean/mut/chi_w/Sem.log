@@ -1,0 +1,177 @@
+AE33Geo/Sem.lean:73:41: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1̵,̵ ̵h̵2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:73:45: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2̵,̵ ̵h̵3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:73:49: warning: This simp argument is unused:
+  h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h̵3̵,̵ ̵Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:73:87: warning: This simp argument is unused:
+  Nat.lt_asymm h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:76:42: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1̵,̵ ̵h̵2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:76:50: warning: This simp argument is unused:
+  h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h̵3̵,̵ ̵Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:76:71: warning: This simp argument is unused:
+  Nat.lt_asymm h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:78:41: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1̵,̵ ̵h̵2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:78:70: warning: This simp argument is unused:
+  Nat.lt_asymm h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:78:87: warning: This simp argument is unused:
+  Nat.lt_asymm h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:80:46: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2̵,̵ ̵h̵3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:80:50: warning: This simp argument is unused:
+  h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h̵3̵,̵ ̵Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:80:71: warning: This simp argument is unused:
+  Nat.lt_asymm h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:82:45: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2̵,̵ ̵h̵3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:82:53: warning: This simp argument is unused:
+  Nat.lt_asymm h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵2, Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:82:87: warning: This simp argument is unused:
+  Nat.lt_asymm h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:85:54: warning: This simp argument is unused:
+  Nat.lt_asymm h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵2, Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:85:71: warning: This simp argument is unused:
+  Nat.lt_asymm h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:85:88: warning: This simp argument is unused:
+  Nat.lt_asymm h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:125:24: error: unsolved goals
+B : Array Pt
+hB : B.size = 31
+pt : ℕ → Point
+i j k : ℕ
+hi : i < 33
+hj : j < 33
+hk : k < 33
+hij : i ≠ j
+hjk : j ≠ k
+hik : i ≠ k
+hnew : 31 ≤ i ∨ 31 ≤ j ∨ 31 ≤ k
+hgp : orient (pt i) (pt j) (pt k) ≠ 0
+a0 : ℕ := (sort3 i j k).1
+ha0 : a0 = (sort3 i j k).1
+a1 : ℕ := (sort3 i j k).2.1
+h01 : a0 < a1
+ha1 : a1 = (sort3 i j k).2.1
+a2 : ℕ := (sort3 i j k).2.2.1
+h12 : a1 < a2
+hmi : i = a0 ∨ i = a1 ∨ i = a2
+hmj : j = a0 ∨ j = a1 ∨ j = a2
+hmk : k = a0 ∨ k = a1 ∨ k = a2
+ha2 : a2 = (sort3 i j k).2.2.1
+s : ℤ := (sort3 i j k).2.2.2
+hs : s = 1 ∨ s = -1
+hor : ∀ (f : ℕ → Point), orient (f i) (f j) (f k) = ↑s * orient (f a0) (f a1) (f a2)
+hsdef : s = (sort3 i j k).2.2.2
+ho : orient (pt i) (pt j) (pt k) = ↑s * orient (pt a0) (pt a1) (pt a2)
+h2 : 31 ≤ a2
+h2' : a2 < 33
+ha1' : ¬a1 < 31
+e1 : a1 = 31
+e2 : a2 = 32
+⊢ -(s * (931 + ↑a0)) = s * (931 + ↑a0)

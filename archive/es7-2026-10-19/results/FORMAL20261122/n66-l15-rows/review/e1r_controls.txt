@@ -1,0 +1,6 @@
+a T0 print vs T1 CNF	0	False	PASS
+b template index 421	2	0	bad arguments
+Command exited with non-zero status 2	PASS
+c sub-list with an out-of-range index (template 0)	1	0	index out of range
+Command exited with non-zero status 1	PASS
+d T208 sub-list with the last index dropped	0	False	86c9c7528ef55ba72b29c3f031952ae7ed2701d13c0612cb3728941feef786d0	PASS

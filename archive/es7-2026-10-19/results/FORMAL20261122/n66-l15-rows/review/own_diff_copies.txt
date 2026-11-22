@@ -1,0 +1,140 @@
+SAME RowEnc/Gen -> N66R15Enc/Gen
+SAME RowEnc/DataT0 -> N66R15Enc/DataT0
+SAME RowEnc/DataT1 -> N66R15Enc/DataT1
+SAME RowEnc/DataT2 -> N66R15Enc/DataT2
+SAME RowEnc/DataT3 -> N66R15Enc/DataT3
+SAME RowEnc/DataT -> N66R15Enc/DataT
+SAME RowEnc/DataC0 -> N66R15Enc/DataC0
+SAME RowEnc/DataC1 -> N66R15Enc/DataC1
+SAME RowEnc/DataC2 -> N66R15Enc/DataC2
+SAME RowEnc/DataC3 -> N66R15Enc/DataC3
+SAME RowEnc/DataC -> N66R15Enc/DataC
+SAME RowEnc/Main -> N66R15Enc/RowMain
+SAME RowGeo/Basic -> N66R15Geo/Basic
+SAME RowGeo/Sem -> N66R15Geo/Sem
+SAME RowGeo/Eight -> N66R15Geo/Eight
+SAME RowGeo/Oct -> N66R15Geo/Oct
+SAME RowGeo/Row -> N66R15Geo/Row
+SAME RowGeo/Kinds -> N66R15Geo/Kinds
+DIFF RowGeo/Assembly -> N66R15Geo/Assembly
+11c11
+< # N66R15Geo.Assembly: `RowsValid R1` modulo the 629 row-certificate verdicts
+---
+> # N66R15Geo.Assembly: `RowsValid R1_15` modulo the 629 row-certificate verdicts
+13,14c13,18
+< * Table soundness (`ttB_sound`, `drB_sound`, `canB_sound`) from the kernel checks `N66R15Chk.Tab*` and n66enc's
+<   `tt_eq`, `can_eq`; `ttQ_eq : ttQ = ttF` from the plain-domain statistics table.
+---
+> Copy of n66-rowsvalid's `RowGeo.Assembly` (renamed; rebased on n66-level15's `N66E15`/`N66G15`). Level-15 edits:
+> `toFin70` is `N66R15Enc.toFin70` (Std-only, `RowList`), and the row list is `R1_15` (10,859 rows, n66-level15's
+> `rows_used15.txt` order), the concatenation of the chunk constants `N66R15Enc.rows<k>` (`rowChunks_fst`).
+> 
+> * Table soundness (`ttB_sound`, `drB_sound`, `canB_sound`) from the kernel checks `N66R15Chk.Tab*` and
+>   n66-level15's `tt_eq`, `can_eq`; `ttQ_eq : ttQ = ttF` from the plain-domain statistics table.
+17,18c21,22
+< * **`rowsValid_R1 : RowCertsUnsat → RowsValid R1`**, where `R1` is the list of the 11,884 rows of `N66E15.R0`
+<   (same order) and every row's check is evaluated by the kernel (`N66R15Chk.chkAll`).
+---
+> * **`rowsValid_R15 : RowCertsUnsat → RowsValid R1_15`**: every row's check is evaluated by the kernel
+>   (`N66R15Chk.chkAll`).
+24,25d27
+< def toFin70 (x : ℕ) : Fin 70 := ⟨x % 70, Nat.mod_lt _ (by decide)⟩
+< 
+283,287c285,286
+< /-- The 11,884 rows of `N66E15.R0`, in its order, as kernel-friendly data. -/
+< def R1 : List (List (Fin 70)) := R1nat.map (·.map toFin70)
+< 
+< /-- **`RowsValid R1`, Lean-checked modulo the 629 row-certificate verdicts.** -/
+< theorem rowsValid_R1 (hU : RowCertsUnsat) : RowsValid R1 := by
+---
+> /-- **`RowsValid R1_15`, Lean-checked modulo the 629 row-certificate verdicts.** -/
+> theorem rowsValid_R15 (hU : RowCertsUnsat) : RowsValid R1_15 := by
+290,292c289,293
+<   unfold R1nat at hTn
+<   obtain ⟨p, hp, hTp⟩ := List.mem_flatMap.1 hTn
+<   obtain ⟨hb, rc, hrc⟩ := chkRows_mem (chkAll p hp) Tn hTp
+---
+>   unfold R1nat15 at hTn
+>   obtain ⟨ch, hch, hTch⟩ := List.mem_flatten.1 hTn
+>   rw [← rowChunks_fst] at hch
+>   obtain ⟨p, hp, rfl⟩ := List.mem_map.1 hch
+>   obtain ⟨hb, rc, hrc⟩ := chkRows_mem (chkAll p hp) Tn hTch
+DIFF RowGeo/End -> N66R15Geo/End
+4c4,8
+< # N66R15Geo.End: the bridge from the certified texts, and `N66Bound 55`
+---
+> # N66R15Geo.End: the bridge from the certified certificate texts
+> 
+> Copy of n66-rowsvalid's `RowGeo.End` (renamed) without its level-14 end part: `R0Parse`, `rowsValid_R0` and
+> `n66_bound_55_of_cubes_rows` are dropped (the level-15 row list `R1_15` is the kernel-checked chunk constants
+> themselves, so no parse equation is needed; the end statements are in `N66R15Geo.Final`).
+9,13d12
+< * `R0Parse : N66E15.R0 = R1` — **a named hypothesis** (DESIGN.md F4: the kernel cannot evaluate n66enc's
+<   `include_str`-parsed `R0` under the memory cap); evidence: compiled Lean evaluates `R0 == R1` to `true`
+<   (`Audit/R0Parse.lean`, trust item E4).
+< * **`rowsValid_R0 : RowCertsUnsat → R0Parse → RowsValid N66E15.R0`** and
+<   **`n66_bound_55_of_cubes_rows : CubesUnsat132 → RowCertsUnsat → R0Parse → N66Bound 55`**.
+83,99d81
+< /-! ## The end statements -/
+< 
+< /-- **Named hypothesis** (not an axiom): n66enc's `R0` (parse of `data/rows_used.txt`) is the kernel-friendly `R1`. -/
+< def R0Parse : Prop := N66E15.R0 = R1
+< 
+< /-- **`RowsValid R0`, Lean-checked modulo `RowCertsUnsat` and `R0Parse`.** -/
+< theorem rowsValid_R0 (hU : RowCertsUnsat) (hp : R0Parse) : RowsValid N66E15.R0 := by
+<   unfold R0Parse at hp
+<   rw [hp]
+<   exact rowsValid_R1 hU
+< 
+< /-- **`N66Bound 55`, Lean-checked modulo `CubesUnsat132` (132 verdicts), `RowCertsUnsat` (629 verdicts) and the
+< named hypothesis `R0Parse`.** -/
+< theorem n66_bound_55_of_cubes_rows (hc : N66E15.CubesUnsat132) (hU : RowCertsUnsat) (hp : R0Parse) :
+<     OmissionZRow.N66Bound 55 :=
+<   N66G15.n66_bound_55_of_cubes hc (rowsValid_R0 hU hp)
+< 
+102,106c84
+< /-- info: 'N66R15Geo.rowsValid_R1' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+< #guard_msgs in
+< #print axioms N66R15Geo.rowsValid_R1
+< 
+< /-- info: 'N66R15Geo.n66_bound_55_of_cubes_rows' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+---
+> /-- info: 'N66R15Geo.rowsValid_R15' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+108c86
+< #print axioms N66R15Geo.n66_bound_55_of_cubes_rows
+---
+> #print axioms N66R15Geo.rowsValid_R15
+SAME RowChk/Tables -> N66R15Chk/Tables
+SAME RowChk/Look -> N66R15Chk/Look
+SAME RowChk/TabPs -> N66R15Chk/TabPs
+SAME RowChk/TabTt -> N66R15Chk/TabTt
+SAME RowChk/TabDr0 -> N66R15Chk/TabDr0
+SAME RowChk/TabDr1 -> N66R15Chk/TabDr1
+SAME RowChk/TabDr -> N66R15Chk/TabDr
+SAME RowChk/TabCan -> N66R15Chk/TabCan
+SAME RowChk/Check -> N66R15Chk/Check
+SAME RowChk/CertsOk -> N66R15Chk/CertsOk
+SAME RowChk/IsCore -> N66R15Chk/IsCore
+SAME RowChk/TabTt0 -> N66R15Chk/TabTt0
+SAME RowChk/TabTt1 -> N66R15Chk/TabTt1
+SAME RowChk/TabTt2 -> N66R15Chk/TabTt2
+SAME RowChk/TabTt3 -> N66R15Chk/TabTt3
+SAME RowChk/TabTt4 -> N66R15Chk/TabTt4
+SAME RowChk/TabTt5 -> N66R15Chk/TabTt5
+SAME RowChk/TabTt6 -> N66R15Chk/TabTt6
+SAME RowChk/TabTt7 -> N66R15Chk/TabTt7
+SAME RowChk/TabTt8 -> N66R15Chk/TabTt8
+SAME RowChk/TabTt9 -> N66R15Chk/TabTt9
+SAME RowChk/TabTt10 -> N66R15Chk/TabTt10
+SAME RowChk/TabTt11 -> N66R15Chk/TabTt11
+SAME RowChk/TabTt12 -> N66R15Chk/TabTt12
+SAME RowChk/TabTt13 -> N66R15Chk/TabTt13
+SAME RowChk/certsOkTF0 -> N66R15Chk/certsOkTF0
+SAME RowChk/certsOkCF0 -> N66R15Chk/certsOkCF0
+SAME RowChk/certsOkTF1 -> N66R15Chk/certsOkTF1
+SAME RowChk/certsOkCF1 -> N66R15Chk/certsOkCF1
+SAME RowChk/certsOkTF2 -> N66R15Chk/certsOkTF2
+SAME RowChk/certsOkCF2 -> N66R15Chk/certsOkCF2
+SAME RowChk/certsOkTF3 -> N66R15Chk/certsOkTF3
+SAME RowChk/certsOkCF3 -> N66R15Chk/certsOkCF3
+total 53: SAME 51 DIFF 2

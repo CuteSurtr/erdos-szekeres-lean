@@ -1,0 +1,6 @@
+a tampered descriptor (leaf 0, first line E k -> E k+1)	0	445e1031a8f0b14851630ce4e4f401cd7baf4113b347245ffc3ef1c9a02a6eb0	False	PASS
+b leaf index 105	1	0	no such leaf
+Command exited with non-zero status 1	PASS
+c leaf 1 descriptors printed as leaf 0	0	d8f06d90e7490d8b21c37a9921d667d80c040d6aefe831e19d6b6401379f8baa	False	False	leaf 0 [25:1 12:1 16:1 29:1 17:1 37:1 40:1 52:1 46:1 44:1 45:1 39:1] clauses 106250	PASS
+d tampered copy of leaf 73's trim.cnf (first clause literal negated)	0	93548e48070ecd84d62a45419e5b1d6fff7dd55d8fd5913197da7ddf0954f25d	False	0d9cdb6a7176948fad97b51224a12bbd381ed8eaafb9f4720aafacd6da51d166	PASS
+e comparator self-test: leaf 5 with its recorded hash last digit changed	False	PASS

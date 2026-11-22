@@ -1,0 +1,75 @@
+{
+ "stores": [
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean",
+  "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean",
+  "/home/jay/research/data/bal186-20261119/zrow/leanz/olean",
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean",
+  "/home/jay/research/data/formalize-20261122/n66-level15/build/olean",
+  "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/olean"
+ ],
+ "missing_stores": [
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean"
+ ],
+ "modules_on_path": 9606,
+ "modules_with_two_or_more_providers": 0,
+ "dups_sample": {},
+ "key_providers": {
+  "LemmaZ": [
+   "/home/jay/research/data/bal186-20261119/zrow/leanz/olean"
+  ],
+  "EncB.Render": [
+   "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean"
+  ],
+  "EncB.Dimacs": [
+   "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean"
+  ],
+  "N66E15.Full": [
+   "/home/jay/research/data/formalize-20261122/n66-level15/build/olean"
+  ],
+  "N66E15.Bridge": [
+   "/home/jay/research/data/formalize-20261122/n66-level15/build/olean"
+  ],
+  "N66E15.Cover": [
+   "/home/jay/research/data/formalize-20261122/n66-level15/build/olean"
+  ],
+  "N66G15.End": [
+   "/home/jay/research/data/formalize-20261122/n66-level15/build/olean"
+  ],
+  "N66G15.Assembly": [
+   "/home/jay/research/data/formalize-20261122/n66-level15/build/olean"
+  ],
+  "N66R15Geo.Final": [
+   "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/olean"
+  ],
+  "N66R15Enc.RowList": [
+   "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/olean"
+  ],
+  "N66R15Enc.Bridge": [
+   "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/olean"
+  ],
+  "N66R15Chk.RowsAll": [
+   "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/olean"
+  ],
+  "N66Enc.Rows": [],
+  "N66Geo.End": [],
+  "RowEnc.Gen": [],
+  "RowGeo.End": [],
+  "RowChk.Check": [],
+  "N66E15.Rows": [
+   "/home/jay/research/data/formalize-20261122/n66-level15/build/olean"
+  ]
+ },
+ "worker_oleans": 116,
+ "freshness_problems": [],
+ "ir_c_files": 43,
+ "ir_problems": []
+}

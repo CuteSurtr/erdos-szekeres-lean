@@ -1,0 +1,57 @@
+EncB_Gen cc wall=3.42 s maxrss=109488 KB
+EncB_Dimacs cc wall=0.11 s maxrss=78092 KB
+EncB_Coded cc wall=0.82 s maxrss=91904 KB
+EncB_Cover cc wall=0.10 s maxrss=78000 KB
+EncB_Render cc wall=0.47 s maxrss=81832 KB
+N66E15_States cc wall=0.50 s maxrss=86768 KB
+N66E15_Atoms cc wall=0.38 s maxrss=84564 KB
+N66E15_Clauses cc wall=0.70 s maxrss=87028 KB
+N66E15_Alloc cc wall=0.25 s maxrss=81720 KB
+N66E15_Cover cc wall=0.10 s maxrss=77408 KB
+N66R15Enc_RowsD0 cc wall=3.59 s maxrss=224496 KB
+N66R15Enc_RowsD1 cc wall=3.69 s maxrss=242032 KB
+N66R15Enc_RowsD10 cc wall=2.43 s maxrss=201684 KB
+N66R15Enc_RowsD11 cc wall=5.96 s maxrss=251632 KB
+N66R15Enc_RowsD12 cc wall=5.04 s maxrss=232644 KB
+N66R15Enc_RowsD13 cc wall=3.66 s maxrss=226500 KB
+N66R15Enc_RowsD14 cc wall=4.32 s maxrss=216940 KB
+N66R15Enc_RowsD15 cc wall=4.75 s maxrss=217712 KB
+N66R15Enc_RowsD16 cc wall=2.92 s maxrss=221608 KB
+N66R15Enc_RowsD17 cc wall=4.38 s maxrss=204588 KB
+N66R15Enc_RowsD18 cc wall=3.06 s maxrss=211472 KB
+N66R15Enc_RowsD19 cc wall=3.08 s maxrss=217664 KB
+N66R15Enc_RowsD2 cc wall=5.41 s maxrss=248500 KB
+N66R15Enc_RowsD20 cc wall=3.20 s maxrss=195156 KB
+N66R15Enc_RowsD21 cc wall=3.93 s maxrss=204808 KB
+N66R15Enc_RowsD22 cc wall=2.92 s maxrss=206164 KB
+N66R15Enc_RowsD23 cc wall=2.41 s maxrss=197600 KB
+N66R15Enc_RowsD24 cc wall=2.33 s maxrss=198580 KB
+N66R15Enc_RowsD25 cc wall=4.05 s maxrss=194912 KB
+N66R15Enc_RowsD26 cc wall=2.31 s maxrss=186148 KB
+N66R15Enc_RowsD27 cc wall=0.48 s maxrss=94588 KB
+N66R15Enc_RowsD3 cc wall=5.48 s maxrss=239260 KB
+N66R15Enc_RowsD4 cc wall=5.92 s maxrss=250512 KB
+N66R15Enc_RowsD5 cc wall=3.43 s maxrss=234896 KB
+N66R15Enc_RowsD6 cc wall=3.46 s maxrss=232672 KB
+N66R15Enc_RowsD7 cc wall=4.32 s maxrss=243272 KB
+N66R15Enc_RowsD8 cc wall=4.80 s maxrss=230312 KB
+N66R15Enc_RowsD9 cc wall=5.56 s maxrss=233892 KB
+N66R15Enc_RowList cc wall=0.19 s maxrss=78588 KB
+N66R15Enc_Print cc wall=0.26 s maxrss=81040 KB
+N66R15Enc_Main cc wall=0.78 s maxrss=102404 KB
+N66R15Enc_Gen cc wall=0.78 s maxrss=90624 KB
+N66R15Enc_DataT0 cc wall=61.13 s maxrss=1041860 KB
+N66R15Enc_DataT1 cc wall=60.50 s maxrss=1103108 KB
+N66R15Enc_DataT2 cc wall=59.09 s maxrss=1041244 KB
+N66R15Enc_DataT3 cc wall=50.37 s maxrss=901616 KB
+N66R15Enc_DataT cc wall=0.48 s maxrss=84136 KB
+N66R15Enc_DataC0 cc wall=68.28 s maxrss=1078804 KB
+N66R15Enc_DataC1 cc wall=64.82 s maxrss=1070760 KB
+N66R15Enc_DataC2 cc wall=66.30 s maxrss=1109792 KB
+N66R15Enc_DataC3 cc wall=62.19 s maxrss=1054100 KB
+N66R15Enc_DataC cc wall=0.27 s maxrss=79744 KB
+N66R15Enc_RowMain cc wall=0.20 s maxrss=82644 KB
+cube link: EncB_Coded.o EncB_Cover.o EncB_Dimacs.o EncB_Gen.o EncB_Render.o N66E15_Alloc.o N66E15_Atoms.o N66E15_Clauses.o N66E15_Cover.o N66E15_States.o N66R15Enc_RowsD0.o N66R15Enc_RowsD10.o N66R15Enc_RowsD11.o N66R15Enc_RowsD12.o N66R15Enc_RowsD13.o N66R15Enc_RowsD14.o N66R15Enc_RowsD15.o N66R15Enc_RowsD16.o N66R15Enc_RowsD17.o N66R15Enc_RowsD18.o N66R15Enc_RowsD19.o N66R15Enc_RowsD1.o N66R15Enc_RowsD20.o N66R15Enc_RowsD21.o N66R15Enc_RowsD22.o N66R15Enc_RowsD23.o N66R15Enc_RowsD24.o N66R15Enc_RowsD25.o N66R15Enc_RowsD26.o N66R15Enc_RowsD27.o N66R15Enc_RowsD2.o N66R15Enc_RowsD3.o N66R15Enc_RowsD4.o N66R15Enc_RowsD5.o N66R15Enc_RowsD6.o N66R15Enc_RowsD7.o N66R15Enc_RowsD8.o N66R15Enc_RowsD9.o N66R15Enc_RowList.o N66R15Enc_Print.o N66R15Enc_Main.o 
+row link:  EncB_Coded.o EncB_Cover.o EncB_Dimacs.o EncB_Gen.o EncB_Render.o N66E15_States.o N66R15Enc_Gen.o N66R15Enc_DataC0.o N66R15Enc_DataC1.o N66R15Enc_DataC2.o N66R15Enc_DataC3.o N66R15Enc_DataC.o N66R15Enc_DataT0.o N66R15Enc_DataT1.o N66R15Enc_DataT2.o N66R15Enc_DataT3.o N66R15Enc_DataT.o N66R15Enc_RowMain.o 
+65865b1e8e57dfe204ac8bbe3fa31cedb0e0cb6f52d6d53e1c7e69cf40104884  /home/jay/research/data/formalize-20261122/n66-l15-rows/build/bin/n66r15print
+6b9af2c60542adbb5a422d8f14a26a8ca6a149db21527480c1f1f9e6486e2f4a  /home/jay/research/data/formalize-20261122/n66-l15-rows/build/bin/r15rowprint

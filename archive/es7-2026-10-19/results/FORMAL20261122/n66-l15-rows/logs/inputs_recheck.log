@@ -1,0 +1,22 @@
+== inputs re-check 2026-11-22 22:40:47 (reference: logs/stats15.log, 2026-11-22 21:11:40.457941556 +0900)
+-- n66-level15 manifests (run inside n66-level15)
+final_source_manifest: 59 OK, 0 not OK
+freeze_manifest: 39 OK, 0 not OK
+oleans newer than logs/stats15.log: 0
+-- n66-rowsvalid sources (its logs/source_manifest.sha256, RowEnc/RowGeo/RowChk entries) and data
+Row* sources: 84 OK, 0 not OK
+322134bf7ced9d7fb766ad87a35c23b0701c657ef56cad3b0aeca7f7c7f7419f  data/certs_manifest.tsv
+4b78ab703f5ebb9f5dd7e0ee70ec55ae4727916d519fb96d2c7958be331d6f5d  data/trim208.idx
+5c350d25d255498edc2492b6b04cfe384d0e9fc4543a17ca3c4f133b44062247  logs/cake.tsv
+   (m9rows used: manifest 322134bf…, trim208.idx 4b78ab70…, cake.tsv 5c350d25…)
+   copies-time Row* source hashes not OK: 0
+-- LemmaZ.olean
+ef249ba167372ac31f995027299efa1eeddac251ff73e4ef093a990ab02c353c  /home/jay/research/data/bal186-20261119/zrow/leanz/olean/LemmaZ.olean
+-- record pins
+4802dc9a946cefa3b855b8c495becc0fb33491a89e5472c9722ccb9d0c8138f5  /home/jay/research/data/n66-20261113/p2/c15/campaign_status.json
+87b82b7a0029496176bdffdeabb87d95bd7f03eba844e576f31b826084927181  /home/jay/research/data/n66-20261113/vfy15/summary.json
+f45e25f16007012e637d7e97a476ceb4eebe11d797a83c1a1c0907b9af2f0511  /home/jay/research/data/formalize-20261122/n66-level15/lean/N66E15/data/rows_used15.txt
+-- this dir: freeze, freshness
+freeze check: 152 OK, 0 not OK
+modules 116 problems 0
+-- ENCBLEAN olean store: files newer than logs/stats15.log: 0

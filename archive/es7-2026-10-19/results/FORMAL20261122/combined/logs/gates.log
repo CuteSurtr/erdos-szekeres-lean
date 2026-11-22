@@ -1,0 +1,23 @@
+2026-11-22 21:19:14 gate ok for esr-ag-lcb-links: tctl=76 free=4 ag_anon=2MB
+2026-11-22 21:19:23 gate ok for esr-ag-lcb-res: tctl=74 free=2 ag_anon=2MB
+2026-11-22 21:19:47 gate ok for esr-ag-lcb-es303: tctl=75 free=2 ag_anon=2MB
+2026-11-22 21:19:59 gate ok for esr-ag-lcb-es302: tctl=75 free=2 ag_anon=2MB
+2026-11-22 21:20:23 gate ok for esr-ag-lcb-es304: tctl=74 free=2 ag_anon=2MB
+2026-11-22 21:30:10 gate ok for esr-ag-lcb-es302b: tctl=78 free=1 ag_anon=642MB
+2026-11-22 21:30:23 gate ok for esr-ag-lcb-ctl: tctl=77 free=1 ag_anon=855MB
+2026-11-22 21:30:41 gate ok for esr-ag-lcb-audit: tctl=77 free=1 ag_anon=245MB
+2026-11-22 21:32:17 gate wait 1 for audit2: yield=0 tctl=79 free=0 ag_anon=641MB mine=0
+2026-11-22 21:33:17 gate ok for esr-ag-lcb-audit2: tctl=79 free=1 ag_anon=729MB
+2026-11-22 21:36:21 gate wait 1 for audit3: yield=0 tctl=79 free=0 ag_anon=693MB mine=0
+2026-11-22 21:37:21 gate wait 2 for audit3: yield=0 tctl=80 free=0 ag_anon=729MB mine=0
+2026-11-22 21:38:21 gate wait 3 for audit3: yield=0 tctl=80 free=0 ag_anon=846MB mine=0
+2026-11-22 21:39:21 gate ok for esr-ag-lcb-audit3: tctl=80 free=2 ag_anon=896MB
+2026-11-22 21:43:30 gate wait 1 for audit4: yield=0 tctl=80 free=0 ag_anon=789MB mine=0
+2026-11-22 21:44:30 gate wait 2 for audit4: yield=0 tctl=81 free=0 ag_anon=332MB mine=0
+2026-11-22 21:45:30 gate wait 3 for audit4: yield=0 tctl=81 free=0 ag_anon=1307MB mine=0
+2026-11-22 21:46:30 gate wait 4 for audit4: yield=0 tctl=81 free=0 ag_anon=1534MB mine=0
+2026-11-22 21:47:30 gate wait 5 for audit4: yield=0 tctl=80 free=0 ag_anon=1615MB mine=0
+2026-11-22 21:48:30 gate wait 6 for audit4: yield=0 tctl=80 free=0 ag_anon=1158MB mine=0
+2026-11-22 21:49:30 gate wait 7 for audit4: yield=0 tctl=81 free=0 ag_anon=1585MB mine=0
+2026-11-22 21:50:31 gate wait 8 for audit4: yield=0 tctl=81 free=0 ag_anon=1355MB mine=0
+2026-11-22 21:51:31 gate ok for esr-ag-lcb-audit4: tctl=83 free=2 ag_anon=1340MB

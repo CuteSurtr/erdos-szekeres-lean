@@ -1,0 +1,37 @@
+controls/BadSwap.lean:15:83: error: Application type mismatch: The last
+  RS.s34_18
+argument has type
+  Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 34 18
+but is expected to have type
+  Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 35 18
+in the application
+  RowGeo.residual_bound_118_of_texts n66 hP hQ hU hA RS.s33_18 RS.s34_18 RS.s34_19 RS.s34_18
+Command exited with non-zero status 1
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R controls controls/BadSwap.lean"
+	User time (seconds): 1.85
+	System time (seconds): 0.51
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4621140
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 83476
+	Voluntary context switches: 14
+	Involuntary context switches: 81
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+lean_rc=1
+cgroup memory.peak: 336429056
+cgroup memory.swap.peak: 0
+cgroup anon+shmem peak (sampled every 0.2 s): 255901696
+cgroup memory.events: low 0 high 0 max 0 oom 0 oom_kill 0 oom_group_kill 0 sock_throttled 0 

@@ -1,0 +1,53 @@
+{
+ "R0_dropped_lines": 0,
+ "R0_equals_R1": true,
+ "R0_len": 11884,
+ "R1_all_below_70": true,
+ "R1_len": 11884,
+ "R1_rows_sorted_nodup": true,
+ "R1nat_def": true,
+ "T208_id": "849f8a5e23a1fc77",
+ "chk_theorems": 119,
+ "chunk_pairs_consistent": true,
+ "chunks": 119,
+ "core_n_range": [
+  13,
+  26
+ ],
+ "cores_list_is_core0_207": true,
+ "docstring_ids_match_manifest_C": true,
+ "docstring_ids_match_manifest_T": true,
+ "dump_R1_equals_rows_used": true,
+ "dump_cores_n_match_manifest": true,
+ "dump_templates_n_match_manifest": true,
+ "just_defs": 119,
+ "kinds": {
+  "co": 197,
+  "cy": 52,
+  "mc": 195,
+  "mt": 5616,
+  "tr": 5824
+ },
+ "kinds_summary": {
+  "core(co)": 197,
+  "cycle(cy)": 52,
+  "mirror(mt+mc)": 5811,
+  "transported(tr)": 5824
+ },
+ "manifest_C_idx_0_207": true,
+ "manifest_T_idx_0_420": true,
+ "manifest_rows": 629,
+ "octs_none_cores": 8,
+ "octs_none_templates": 83,
+ "rows_defs": 119,
+ "rows_used_sha256": "236e46de2d9a075a5f6b240f54ff60d818a2cc37a6d7716a4a6711113018a609",
+ "rows_vs_certs_per_chunk_equal": true,
+ "template_n_range": [
+  9,
+  29
+ ],
+ "templates_list_is_tmpl0_420": true,
+ "vb_json_cnf_sha256_eq_manifest": 629,
+ "vb_json_missing": [],
+ "vb_json_verdict_exact": 628
+}

@@ -1,0 +1,112 @@
+/home/jay/research/data/formalize-20261122/s3520-gate/controls/neg2080/src/RS3520/C208021.lean:14:367: error: Tactic `decide` proved that the proposition
+  checkF2 fcatS3520 4642 154 35 536870912 16777216 137438953472 16 b231858
+      (pmask (zerosF 154)
+        [(113, 2), (47, 2), (34, 2), (119, 2), (58, 2), (103, 2), (26, 2), (49, 2), (121, 1), (120, 1), (8, 2), (88, 2),
+          (109, 2), (75, 2), (133, 1), (33, 2), (25, 2), (17, 2), (20, 1), (56, 1), (45, 2), (36, 2), (54, 2), (98, 2),
+          (44, 1), (0, 2)]) =
+    true
+is false
+type checking took 261ms
+type checking took 341ms
+type checking took 414ms
+type checking took 323ms
+type checking took 529ms
+type checking took 566ms
+type checking took 239ms
+type checking took 433ms
+type checking took 406ms
+type checking took 350ms
+type checking took 462ms
+type checking took 207ms
+type checking took 439ms
+type checking took 186ms
+type checking took 529ms
+type checking took 334ms
+type checking took 309ms
+type checking took 441ms
+type checking took 302ms
+type checking took 319ms
+type checking took 272ms
+type checking took 351ms
+type checking took 353ms
+type checking took 306ms
+type checking took 397ms
+type checking took 337ms
+type checking took 427ms
+type checking took 281ms
+type checking took 373ms
+type checking took 440ms
+type checking took 392ms
+type checking took 445ms
+type checking took 417ms
+type checking took 422ms
+type checking took 459ms
+type checking took 540ms
+type checking took 533ms
+type checking took 344ms
+type checking took 486ms
+type checking took 616ms
+type checking took 436ms
+type checking took 419ms
+type checking took 189ms
+type checking took 513ms
+type checking took 346ms
+type checking took 409ms
+type checking took 263ms
+type checking took 400ms
+type checking took 216ms
+type checking took 193ms
+type checking took 316ms
+type checking took 402ms
+type checking took 357ms
+type checking took 205ms
+type checking took 352ms
+type checking took 392ms
+type checking took 404ms
+type checking took 304ms
+type checking took 526ms
+type checking took 371ms
+'RS3520.C208021.ex231852' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+elaboration took 369ms
+cumulative profiling times:
+	attribute application 2.72ms
+	compilation (IR) 12.3ms
+	compilation (LCNF base) 17ms
+	compilation (LCNF mono) 7.64ms
+	elaboration 4.01s
+	fix level params 5.97ms
+	instantiate metavars 17ms
+	interpretation 2.15ms
+	let-to-have transformation 8.66ms
+	linting 302ms
+	parsing 635ms
+	process pre-definitions 87.4ms
+	share common exprs 40.4ms
+	tactic execution 91.6ms
+	type checking 22.7s
+	typeclass inference 758ms
+Command exited with non-zero status 1
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R /home/jay/research/data/formalize-20261122/s3520-gate/controls/neg2080/src -o /home/jay/research/data/formalize-20261122/s3520-gate/controls/olean-neg/RS3520/C208021.olean.tmp /home/jay/research/data/formalize-20261122/s3520-gate/controls/neg2080/src/RS3520/C208021.lean"
+	User time (seconds): 30.64
+	System time (seconds): 0.56
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:31.50
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3498484
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 8
+	Minor (reclaiming a frame) page faults: 95140
+	Voluntary context switches: 5894
+	Involuntary context switches: 5363
+	Swaps: 0
+	File system inputs: 1664
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+lean_rc=1

@@ -1,0 +1,82 @@
+== 2026-11-22 19:18:52 lean Audit/Final 
+RowGeo.rowsValid_R1 : RowGeo.RowCertsUnsat → N66Geo.RowsValid RowGeo.R1
+RowGeo.rowsValid_R0 : RowGeo.RowCertsUnsat → RowGeo.R0Parse → N66Geo.RowsValid N66Enc.R0
+RowGeo.n66_bound_55_of_cubes_rows : N66Enc.CubesUnsat132 →
+  RowGeo.RowCertsUnsat → RowGeo.R0Parse → OmissionZRow.N66Bound 55
+@RowGeo.certUnsat_of_text : ∀ {t : RowEnc.Cert},
+  RowEnc.certOk t = true →
+    (∀ (nv : ℕ) (F : List (List ℤ)), EncB.parseDimacs (RowEnc.certText t) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+      ¬EncB.DimacsSatisfiable (RowEnc.certCnf t)
+@RowGeo.subUnsat_of_text : ∀ {t : RowEnc.Cert},
+  RowEnc.certOk t = true →
+    ∀ {idx : List ℕ} {F : List (List ℤ)},
+      RowEnc.subCnfChecked t idx = some F →
+        (∀ (nv : ℕ) (G : List (List ℤ)),
+            EncB.parseDimacs (EncB.render (RowEnc.nvOf t.n) F) = some (nv, G) → ¬EncB.DimacsSatisfiable G) →
+          ¬EncB.DimacsSatisfiable (RowEnc.certCnf t)
+@RowGeo.rowValid_of_cert : ∀ {t : RowEnc.Cert},
+  t.n ≤ 32 →
+    RowGeo.TestsOk t →
+      RowEnc.octsOk t.n t.octs = true →
+        ∀ (σ : List (Fin 70)),
+          σ.length = t.n →
+            σ.Nodup →
+              (∀ x ∈ t.tests, RowGeo.Good (fun i => σ.getD i 0) x) →
+                ¬EncB.DimacsSatisfiable (RowEnc.certCnf t) → N66Geo.RowValid σ
+@RowGeo.rowValid_tau : ∀ {S : List (Fin 70)}, N66Geo.RowValid S → N66Geo.RowValid (List.map N66Geo.tau S)
+RowGeo.rowValid_cycle : ∀ (L : List (Fin 70)),
+  L.length = 8 →
+    L.Nodup →
+      (∀ (i j k : ℕ), i < j → j < k → k < 8 → N66Enc.tt (L.getD i 0) (L.getD j 0) (L.getD k 0) = true) →
+        N66Geo.RowValid L
+def RowGeo.RowCertsUnsat : Prop :=
+(∀ t ∈ RowEnc.templates, ¬EncB.DimacsSatisfiable (RowEnc.certCnf t)) ∧
+  ∀ k ∈ RowEnc.cores, ¬EncB.DimacsSatisfiable (RowEnc.certCnf k)
+def RowGeo.R0Parse : Prop :=
+N66Enc.R0 = RowGeo.R1
+def N66Geo.RowValid : List (Fin 70) → Prop :=
+fun T => ∀ (n : ℕ) (c : ErdosSzekeres.Omission.Configuration n), N66Geo.InClass c → ∃ s ∈ T, ¬N66Geo.n66Occ c.cup n s
+'RowGeo.rowsValid_R1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowsValid_R0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.n66_bound_55_of_cubes_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.certUnsat_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.subUnsat_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.chkRow_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.ttB_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.drB_sound' depends on axioms: [propext, Quot.sound]
+'RowGeo.canB_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowValid_of_cert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowValid_tau' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.rowValid_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowGeo.sat_oct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowChk.chkAll' depends on axioms: [propext, Quot.sound]
+'RowChk.certsOkT' depends on axioms: [propext]
+'RowChk.certsOkC' depends on axioms: [propext]
+'RowChk.tt_all' depends on axioms: [propext]
+'RowChk.ps_all' depends on axioms: [propext]
+'RowChk.dr_all' depends on axioms: [propext]
+'RowChk.can_all' depends on axioms: [propext]
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R . -o /home/jay/research/data/formalize-20261122/n66-rowsvalid/build/olean/Audit/Final.olean -i /home/jay/research/data/formalize-20261122/n66-rowsvalid/build/olean/Audit/Final.ilean Audit/Final.lean"
+	User time (seconds): 6.93
+	System time (seconds): 0.43
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.38
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3293572
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 70435
+	Voluntary context switches: 425
+	Involuntary context switches: 202
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 88
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rc=0
