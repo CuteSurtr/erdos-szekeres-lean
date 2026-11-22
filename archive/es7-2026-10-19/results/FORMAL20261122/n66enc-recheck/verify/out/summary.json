@@ -1,0 +1,159 @@
+{
+ "runs": 268,
+ "exe_sha_all_frozen": true,
+ "exe_hashes": [
+  [
+   "start",
+   "2026-11-22 17:31:30",
+   "98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46",
+   "98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46"
+  ],
+  [
+   "end",
+   "2026-11-22 18:07:45",
+   "98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46",
+   "98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46"
+  ]
+ ],
+ "leaves": {
+  "run_ok": true,
+  "lines": 132,
+  "leaves_differing": [],
+  "perm": {
+   "leaf_order_len": 132,
+   "leaf_order_distinct": 132,
+   "certified": 132,
+   "leaf_order_is_perm_of_certified": true
+  },
+  "stderr": "",
+  "verdict": "MATCH"
+ },
+ "eager": {
+  "conds": {
+   "run_ok": true,
+   "cmp_equal": true,
+   "bytes": true,
+   "lines": true,
+   "printed_eq_segment": true,
+   "eq_claimed": true,
+   "header_ok": true,
+   "stderr_empty": true
+  },
+  "printed_sha": "27b6b91009e6b782d051dba0bedfbdecd5e309acb79de9f2182dcd5f74007ff4",
+  "bytes": "75331749",
+  "lines": "1489581",
+  "rss_kb": "2308508",
+  "verdict": "MATCH"
+ },
+ "full131": {
+  "conds": {
+   "run_ok": true,
+   "cmp_equal": true,
+   "printed_eq_fresh": true,
+   "recorded_agree": true,
+   "printed_eq_recorded": true,
+   "bytes": true,
+   "lines": true,
+   "stderr": true,
+   "eq_claimed": true,
+   "py_fresh_eq": true
+  },
+  "stderr": "leaf 131 clauses 9436588 act 660810 rows 15648 bad 0",
+  "rss_kb": "2368868",
+  "ctl": {
+   "act131": "/home/jay/research/data/formalize-20261122/n66enc-recheck/verify/ctl/hhhhhh/act.txt",
+   "act131_sha256": "071ccaf177e513903404ae0702974d1f7f060ad9f317717bccf897362f647f29",
+   "rows131": "/home/jay/research/data/formalize-20261122/n66enc-recheck/verify/ctl/hhhhhh/rows.txt",
+   "rows131_sha256": "3f629bf104b1e11cb07126c0934cba56ae9ae7d9fe550699183c2e58d852289f",
+   "neg_act131_sha256": "e5b3c4e6c5758a84939f1492ec923f10d38f5924a3cd98c789b15a1568979732",
+   "neg_desc131_sha256": "510f8e4ae2ed59afef09ab798112e9771f3503b9fd7edbf9ee12b6734fdf716d",
+   "neg_desc_first_line": [
+    "E 15",
+    "E 16"
+   ],
+   "compare": {
+    "worker_act": "071ccaf177e513903404ae0702974d1f7f060ad9f317717bccf897362f647f29",
+    "worker_rows": "3f629bf104b1e11cb07126c0934cba56ae9ae7d9fe550699183c2e58d852289f",
+    "encoder_act": "071ccaf177e513903404ae0702974d1f7f060ad9f317717bccf897362f647f29",
+    "encoder_rows": "3f629bf104b1e11cb07126c0934cba56ae9ae7d9fe550699183c2e58d852289f",
+    "worker_neg_desc": "510f8e4ae2ed59afef09ab798112e9771f3503b9fd7edbf9ee12b6734fdf716d"
+   }
+  },
+  "verdict": "MATCH"
+ },
+ "trims": {
+  "done": 132,
+  "match": 132,
+  "not_match": [],
+  "failed_conds": {},
+  "distinct": 125,
+  "shared_groups": {
+   "06250f3407be9aa6d7a43d3f3c225a3d232e107bcef3cbb484f8ce7be662ab06": {
+    "leaves": [
+     93,
+     96,
+     104,
+     106,
+     115,
+     117,
+     125,
+     127
+    ],
+    "bytes": 112
+   }
+  },
+  "up_refuted_leaves_campaign": [
+   93,
+   96,
+   104,
+   106,
+   115,
+   117,
+   125,
+   127
+  ],
+  "total_bytes": 1183383419,
+  "max_rss_kb": 2407524
+ },
+ "negfull": {
+  "rc": "0",
+  "stderr": "leaf 131 clauses 9436576 act 660809 rows 15648 bad 0",
+  "cmp": "- /home/jay/research/data/n66-20261113/p2/c14/hhhhhh/it1/cert.cnf differ: byte 20, line 1",
+  "cmprc": "1",
+  "printed_sha": "b694e6a4d5d0cd822d18acadcbf4c9b8ffe2914121711d0faf1034356099de31",
+  "bytes": "664234239",
+  "lines": "9436577",
+  "eq_worker_sha": true,
+  "differs_from_recorded": true,
+  "ok": true
+ },
+ "negtrim": {
+  "rc": "0",
+  "stderr": "leaf 131 [25:0 12:0 16:0 29:0 17:0 37:0] clauses 31613",
+  "cmp": "- /home/jay/research/data/n66-20261113/p2/c14/hhhhhh/it1/trim.cnf differ: byte 21, line 2",
+  "cmprc": "1",
+  "printed_sha": "7b4e6eb2f79acbd783b5bbc3396681a486fdde23f082b36ceef1b229a6d59dda",
+  "bytes": "1669718",
+  "lines": "31614",
+  "eq_worker_sha": true,
+  "differs_from_recorded": true,
+  "ok": true
+ },
+ "fullext": {
+  "done": 131,
+  "match": 131,
+  "first27_done": 27,
+  "first27_match": 27,
+  "not_match": {},
+  "out_of_scope": [],
+  "inputs_same_as_131": 132
+ },
+ "memory": {
+  "max_exe_rss_kb": 2407524,
+  "at": "trim:97",
+  "pct_of_3000MiB": 78.37,
+  "max_unit_anon_kb_sampled": 2402988,
+  "anon_at": "trim:66",
+  "anon_pct_of_3000MiB": 78.22
+ }
+}

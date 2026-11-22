@@ -45,6 +45,23 @@ rises. The block before the stop averaged about 2,800 s of wall time per 1,000 c
 | time | result | label | record |
 |---|---|---|---|
 | 19:55 | Rung N = 36 of the M(5;7) owner model, **case B** (`c36_tle22`): cake_lpr accepted the 13 Nov CaDiCaL 2.1.3 proof (heap 6,000 MB, 176 s; CNF `08b8ea9c…`, LRAT `a0d2cb92…` re-hashed) | **CERTIFIED** (modulo the written arguments of ETV7SAT §2) | [ETV7SAT20261113](../ETV7SAT20261113/README.md) §6.2 update |
+| 22 Nov ~19:30 | **Lean verification, wave 4 and formalization wave 3** (each item has an independent review; standard
+axioms).
+- (1) FV304 closing audit passed: 13,199-module closure, one provider each. Finding: 4 chunk logs had profiler-garbled
+  axiom lines, all re-printed standard. **ES(8) ≤ 304 is Lean-checked modulo N66Bound 55 and ResidualBound 118.**
+  The combined `FV4A.forces_304_of_slices_rows_n66` (modulo N66Bound 55, 4 row blocks, 6 slices) compiles.
+- (2) Residual slices in Lean: `RS.s33_18`, `RS.s34_18`, `RS.s35_18` (reviewed) and `RS.s34_19` (compiled, rc 0,
+  standard; not yet reviewed). Remaining: s35_19 and s35_20.
+- (3) The four Res118 row blocks are Lean-checked modulo per-row cake_lpr verdicts (E1–E6).
+- (4) `N66G15.n66_bound_54_of_cubes : CubesUnsat105 → RowsValid R0_15 → N66Bound 54`.
+- (5) The N66 encoder's byte identity was re-run with the frozen exe: all MATCH.
+- (6) #810: χ_rainbow(G) = 6 for the 182-vertex graph, Lean-checked modulo the 4,404 verdicts (the 6-colouring half
+  is unconditional).
+- (7) AE33 radius 1 is Lean-checked modulo the 203 verdicts (review pending).
+- (8) Rung-36 driver v3 (RQ1): review 8/8; ready to launch.
+- (9) b69 checks prepared: v5n54, chain302, rows binding, pre-registration; review 6/6.
+| as stated; no record label changes except 304's Lean status; unrefereed | `~/research/data/formalize-20261122/*`,
+`bal186-20261119/b69prep`, `r36-linux-20261121/caseA/v3` |
 | 22 Nov 16:45 | **N66 ≤ 54.** The L15 campaign ended at 13:07 with 105 certified leaves and a complete cover. vfy15 did
 all four checks on all 105 (fresh cake_lpr, trim ⊆ cert, cert = F_c + units, rows). Own exact partition on the cube
 literals and on the real unit literals (measure 1). L = 15 confirmed; F_c `2f78368f…` | CERTIFIED + PROVED (written model, L =

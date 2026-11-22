@@ -1,0 +1,187 @@
+'AE33Geo.ae33_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AE33Geo.ae33_radius1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AE33Geo.ae33_radius0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AE33Geo.cnf_sat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AE33.texts_iff_cnfs' depends on axioms: [propext, Quot.sound]
+'AE33Geo.clauseOf_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AE33.parse_cnfText' depends on axioms: [propext, Quot.sound]
+'AE33Geo.pair_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AE33Geo.pairs_cover' depends on axioms: [propext, Quot.sound]
+'AE33Geo.pairOfIdx_of_mem' depends on axioms: [propext]
+'AE33Geo.mem_of_any' depends on axioms: [propext, Quot.sound]
+AE33Geo.ae33_pair : AE33.TextsUnsat203 →
+  ∀ (i : Fin 203) (P : Fin 31 → ErdosSzekeres.Point),
+    AE33Geo.Realizes (AE33.baseOf ↑i) P ∨ AE33Geo.RealizesMirror (AE33.baseOf ↑i) P →
+      ∀ (p q : ErdosSzekeres.Point),
+        ErdosSzekeres.GeneralPosition (Insert.insert p (Insert.insert q (Finset.image P Finset.univ))) →
+          (Insert.insert p (Insert.insert q (Finset.image P Finset.univ))).card = 33 →
+            AE33Geo.ConvexNGonThrough 7 (Insert.insert p (Insert.insert q (Finset.image P Finset.univ))) p ∨
+              AE33Geo.ConvexNGonThrough 7 (Insert.insert p (Insert.insert q (Finset.image P Finset.univ))) q
+AE33Geo.ae33_radius1 : AE33.TextsUnsat203 →
+  ∀ (S : Finset ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      S.card = 33 →
+        ∀ (u v : ℕ),
+          u < 33 →
+            v < 33 →
+              u ≠ v →
+                ∀ (φ : ℕ → ErdosSzekeres.Point),
+                  (∀ w < 33, w ≠ u → w ≠ v → φ w ∈ S) →
+                    (∀ (a b : ℕ), a < 33 → b < 33 → a ≠ u → a ≠ v → b ≠ u → b ≠ v → φ a = φ b → a = b) →
+                      AE33Geo.OTEmb φ u v ∨ AE33Geo.OTEmbMirror φ u v → ErdosSzekeres.HasConvexNGon 7 S
+AE33Geo.ae33_radius0 : AE33.TextsUnsat203 →
+  ∀ (S : Finset ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      S.card = 33 →
+        ∀ w < 33,
+          ∀ (φ : ℕ → ErdosSzekeres.Point),
+            (∀ x < 33, x ≠ w → φ x ∈ S) →
+              (∀ (a b : ℕ), a < 33 → b < 33 → a ≠ w → b ≠ w → φ a = φ b → a = b) →
+                AE33Geo.OTEmb φ w w ∨ AE33Geo.OTEmbMirror φ w w → ErdosSzekeres.HasConvexNGon 7 S
+@AE33Geo.cnf_sat : ∀ {B : Array AE33.Pt} {pt : ℕ → ErdosSzekeres.Point},
+  AE33Geo.Ctx B pt → EncB.DimacsSatisfiable (AE33.cnf B)
+@AE33Geo.clauseOf_sound : ∀ {B : Array AE33.Pt} {pt : ℕ → ErdosSzekeres.Point},
+  AE33Geo.Ctx B pt →
+    ∀ {d : AE33.Desc} {cl : List ℤ},
+      AE33.clauseOf B d = Option.some cl → ∃ l ∈ cl, EncB.LitSat (AE33Geo.realAssign pt) l
+AE33.texts_iff_cnfs : AE33.TextsUnsat203 ↔ AE33.CnfsUnsat203
+AE33.parse_cnfText : ∀ (i : ℕ),
+  EncB.parseDimacs (AE33.cnfText i) = Option.some (AE33.numVars (AE33.baseOf i), AE33.cnf (AE33.baseOf i))
+@AE33Geo.pair_of_unsat : ∀ {B : Array AE33.Pt},
+  B.size = 31 →
+    ¬EncB.DimacsSatisfiable (AE33.cnf B) →
+      ∀ (P : Fin 31 → ErdosSzekeres.Point),
+        AE33Geo.Realizes B P ∨ AE33Geo.RealizesMirror B P →
+          ∀ (p q : ErdosSzekeres.Point),
+            ErdosSzekeres.GeneralPosition (Insert.insert p (Insert.insert q (Finset.image P Finset.univ))) →
+              (Insert.insert p (Insert.insert q (Finset.image P Finset.univ))).card = 33 →
+                AE33Geo.ConvexNGonThrough 7 (Insert.insert p (Insert.insert q (Finset.image P Finset.univ))) p ∨
+                  AE33Geo.ConvexNGonThrough 7 (Insert.insert p (Insert.insert q (Finset.image P Finset.univ))) q
+AE33Geo.pairs_cover : ∀ v < 33,
+  ∀ u < v, (AE33.pairs203.toList.any fun pr => pr.1 == u && pr.2 == v) = Bool.true ∨ u ∉ AE33.hept ∧ v ∉ AE33.hept
+def AE33.TextsUnsat203 : Prop :=
+∀ i < 203,
+  ∀ (nv : ℕ) (F : List (List ℤ)), EncB.parseDimacs (AE33.cnfText i) = Option.some (nv, F) → ¬EncB.DimacsSatisfiable F
+def AE33.CnfsUnsat203 : Prop :=
+∀ i < 203, ¬EncB.DimacsSatisfiable (AE33.cnf (AE33.baseOf i))
+def AE33.cnfText : ℕ → String :=
+fun i => EncB.render (AE33.numVars (AE33.baseOf i)) (AE33.cnf (AE33.baseOf i))
+def AE33.cnf : Array AE33.Pt → List (List ℤ) :=
+fun B => List.filterMap (AE33.clauseB B) (AE33.gen B).toList
+def AE33.clauseB : Array AE33.Pt → AE33.Desc → Option (List ℤ) :=
+fun B d =>
+  match AE33.clauseOf B d with
+  | Option.some cl => if AE33.bounded (AE33.numVars B) cl = Bool.true then Option.some cl else Option.none
+  | Option.none => Option.none
+def AE33.numVars : Array AE33.Pt → ℕ :=
+fun B => AE33.numVarsN B.size
+def AE33.numVarsN : ℕ → ℕ :=
+fun n => 2 * AE33.n2 n + n
+def AE33.n2 : ℕ → ℕ :=
+fun n => n * (n - 1) / 2
+def AE33.baseOf : ℕ → Array AE33.Pt :=
+fun i => AE33.base (AE33.pairOfIdx i).1 (AE33.pairOfIdx i).2
+def AE33.pairOfIdx : ℕ → ℕ × ℕ :=
+fun i => AE33.pairs203.getD i (0, 0)
+def AE33.base : ℕ → ℕ → Array AE33.Pt :=
+fun u v => (List.map (fun i => AE33.ae33.getD i (0, 0)) (AE33.keepIdx u v)).toArray
+def AE33.keepIdx : ℕ → ℕ → List ℕ :=
+fun u v => List.filter (fun i => i != u && i != v) (List.range 33)
+def AE33.hept : List ℕ :=
+[14, 15, 17, 20, 23, 32, 25]
+def AE33.iorient : AE33.Pt → AE33.Pt → AE33.Pt → ℤ :=
+fun a b c => (b.1 - a.1) * (c.2 - a.2) - (b.2 - a.2) * (c.1 - a.1)
+@[reducible] def AE33.Pt : Type :=
+ℤ × ℤ
+def AE33Geo.Realizes : Array AE33.Pt → (Fin 31 → ErdosSzekeres.Point) → Prop :=
+fun B P =>
+  ∀ (i j k : Fin 31),
+    0 < ErdosSzekeres.orient (P i) (P j) (P k) ↔
+      0 < AE33.iorient (B.getD ↑i (0, 0)) (B.getD ↑j (0, 0)) (B.getD ↑k (0, 0))
+def AE33Geo.RealizesMirror : Array AE33.Pt → (Fin 31 → ErdosSzekeres.Point) → Prop :=
+fun B P =>
+  ∀ (i j k : Fin 31),
+    0 < ErdosSzekeres.orient (P i) (P j) (P k) ↔
+      AE33.iorient (B.getD ↑i (0, 0)) (B.getD ↑j (0, 0)) (B.getD ↑k (0, 0)) < 0
+def AE33Geo.ConvexNGonThrough : ℕ → Finset ErdosSzekeres.Point → ErdosSzekeres.Point → Prop :=
+fun m S x => ∃ t ⊆ S, t.card = m ∧ ErdosSzekeres.ConvexPosition t ∧ x ∈ t
+def AE33Geo.OTEmb : (ℕ → ErdosSzekeres.Point) → ℕ → ℕ → Prop :=
+fun φ u v =>
+  ∀ (a b c : ℕ),
+    a < 33 →
+      b < 33 →
+        c < 33 →
+          a ≠ u →
+            a ≠ v →
+              b ≠ u →
+                b ≠ v →
+                  c ≠ u →
+                    c ≠ v →
+                      (0 < ErdosSzekeres.orient (φ a) (φ b) (φ c) ↔
+                        0 < AE33.iorient (AE33.ae33.getD a (0, 0)) (AE33.ae33.getD b (0, 0)) (AE33.ae33.getD c (0, 0)))
+def AE33Geo.OTEmbMirror : (ℕ → ErdosSzekeres.Point) → ℕ → ℕ → Prop :=
+fun φ u v =>
+  ∀ (a b c : ℕ),
+    a < 33 →
+      b < 33 →
+        c < 33 →
+          a ≠ u →
+            a ≠ v →
+              b ≠ u →
+                b ≠ v →
+                  c ≠ u →
+                    c ≠ v →
+                      (0 < ErdosSzekeres.orient (φ a) (φ b) (φ c) ↔
+                        AE33.iorient (AE33.ae33.getD a (0, 0)) (AE33.ae33.getD b (0, 0)) (AE33.ae33.getD c (0, 0)) < 0)
+structure AE33Geo.Ctx (B : Array AE33.Pt) (pt : ℕ → ErdosSzekeres.Point) : Prop
+number of parameters: 2
+fields:
+  AE33Geo.Ctx.size : B.size = 31
+  AE33Geo.Ctx.real : AE33Geo.Realizes31 B pt
+  AE33Geo.Ctx.gp : ∀ (i j k : ℕ),
+      i < 33 → j < 33 → k < 33 → i ≠ j → j ≠ k → i ≠ k → ErdosSzekeres.orient (pt i) (pt j) (pt k) ≠ 0
+  AE33Geo.Ctx.no7 : ∀ (L : List ℕ),
+      L.length = 7 → (∀ x ∈ L, x < 33) → AE33Geo.PosChain (fun r => pt (L.getD r 0)) 7 → 31 ∉ L ∧ 32 ∉ L
+constructor:
+  AE33Geo.Ctx.mk {B : Array AE33.Pt} {pt : ℕ → ErdosSzekeres.Point} (size : B.size = 31)
+    (real : AE33Geo.Realizes31 B pt)
+    (gp :
+      ∀ (i j k : ℕ), i < 33 → j < 33 → k < 33 → i ≠ j → j ≠ k → i ≠ k → ErdosSzekeres.orient (pt i) (pt j) (pt k) ≠ 0)
+    (no7 :
+      ∀ (L : List ℕ),
+        L.length = 7 → (∀ x ∈ L, x < 33) → AE33Geo.PosChain (fun r => pt (L.getD r 0)) 7 → 31 ∉ L ∧ 32 ∉ L) :
+    AE33Geo.Ctx B pt
+def AE33Geo.Realizes31 : Array AE33.Pt → (ℕ → ErdosSzekeres.Point) → Prop :=
+fun B pt =>
+  ∀ (i j k : ℕ),
+    i < 31 →
+      j < 31 →
+        k < 31 →
+          (0 < ErdosSzekeres.orient (pt i) (pt j) (pt k) ↔
+            0 < AE33.iorient (B.getD i (0, 0)) (B.getD j (0, 0)) (B.getD k (0, 0)))
+def AE33Geo.PosChain : (ℕ → ErdosSzekeres.Point) → ℕ → Prop :=
+fun X m => ∀ (a b c : ℕ), a < b → b < c → c < m → 0 < ErdosSzekeres.orient (X a) (X b) (X c)
+@[reducible] def ErdosSzekeres.Point : Type :=
+Fin 2 → ℝ
+def ErdosSzekeres.orient.{u_1} : {R : Type u_1} → [CommRing R] → (Fin 2 → R) → (Fin 2 → R) → (Fin 2 → R) → R :=
+fun {R} [CommRing R] a b c => (b 0 - a 0) * (c 1 - a 1) - (b 1 - a 1) * (c 0 - a 0)
+def ErdosSzekeres.GeneralPosition : Finset ErdosSzekeres.Point → Prop :=
+fun s => ∀ a ∈ s, ∀ b ∈ s, ∀ c ∈ s, a ≠ b → a ≠ c → b ≠ c → ¬Collinear ℝ {a, b, c}
+def ErdosSzekeres.ConvexPosition : Finset ErdosSzekeres.Point → Prop :=
+fun s => ConvexIndependent ℝ fun p => ↑p
+def ErdosSzekeres.HasConvexNGon : ℕ → Finset ErdosSzekeres.Point → Prop :=
+fun n s => ∃ t ⊆ s, t.card = n ∧ ErdosSzekeres.ConvexPosition t
+def EncB.DimacsSatisfiable : List (List ℤ) → Prop :=
+fun cls => ∃ ν, EncB.DimacsSat cls ν
+def EncB.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
+fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = Bool.true ∨ l < 0 ∧ ν l.natAbs = Bool.false
+def EncB.parseDimacs : String → Option (ℕ × List (List ℤ)) :=
+fun s => EncB.parseDimacsChars s.data
+def EncB.render : ℕ → List (List ℤ) → String :=
+fun nv F => EncB.headerR nv F.length ++ EncB.bodyR F
+'review_rs1_pair_unfolded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_rs2_radius1_unfolded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_rs3_radius0_natural' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_rs4_pair_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_rs5_radius1_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+Fidelity wall=5.22 s maxrss=3105828 KB

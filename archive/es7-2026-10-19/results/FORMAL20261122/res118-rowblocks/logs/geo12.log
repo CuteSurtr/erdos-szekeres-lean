@@ -1,0 +1,64 @@
+== RowGeo.Text 2026-11-22T18:17:01+09:00
+RowGeo.Text rc=1 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.23 	Maximum resident set size (kbytes): 423332 
+cgroup memory.peak: 104112128
+STOP at Text
+RowGeo/Text.lean:73:25: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ 1
+  b - d ≤ 0
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑k
+ b := ↑i
+ c := ↑j
+ d := ↑?m.31
+RowGeo/Text.lean:73:36: error: unsolved goals
+k i j : Nat
+hi : i < k
+hj : j < k
+hij : i ≠ j
+h✝ : ¬i < j
+⊢ j = sorry
+RowGeo/Text.lean:83:4: error: Tactic `assumption` failed
+
+case isFalse.isTrue
+k i j : Nat
+hi : i < k
+hj : j < k
+hij : i ≠ j
+cup : Bool
+t : Nat
+h1 : min i j < max i j
+h2 : max i j < k
+h✝¹ : ¬t ≤ 1
+h✝ : cup = true
+⊢ LOk k (if 6 < t then Lit.const false else Lit.atom (Atm.cup (min i j) (max i j) t) true)
+RowGeo/Text.lean:84:75: error: Tactic `apply` failed: could not unify the conclusion of `pair_alloc h1 h2`
+  Atm.code ?m.102 ∈ allocCodes k
+with the goal
+  match if 4 < t then Lit.const false else Lit.atom (Atm.cap (min i j) (max i j) t) true with
+  | Lit.const b => True
+  | Lit.atom a pos => a.code ∈ allocCodes k
+
+Note: The full type of `pair_alloc h1 h2` is
+  ?m.102 ∈
+      [Atm.bef (min i j) (max i j), Atm.cap (min i j) (max i j) 2, Atm.cap (min i j) (max i j) 3,
+        Atm.cap (min i j) (max i j) 4, Atm.cup (min i j) (max i j) 2, Atm.cup (min i j) (max i j) 3,
+        Atm.cup (min i j) (max i j) 4, Atm.cup (min i j) (max i j) 5, Atm.cup (min i j) (max i j) 6] →
+    Atm.code ?m.102 ∈ allocCodes k
+
+case isFalse.isFalse.false
+k i j : Nat
+hi : i < k
+hj : j < k
+hij : i ≠ j
+t : Nat
+h1 : min i j < max i j
+h2 : max i j < k
+h✝¹ : ¬t ≤ 1
+h✝ : ¬false = true

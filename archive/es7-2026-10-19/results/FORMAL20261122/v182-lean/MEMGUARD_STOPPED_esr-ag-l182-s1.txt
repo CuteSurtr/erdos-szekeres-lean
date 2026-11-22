@@ -1,0 +1,3 @@
+2026-11-22 18:26:15: unit esr-ag-l182-s1.service was stopped by the memory guard.
+Reason: memory 3373 MB reached its limit (3500 MB)
+Resize the job (fewer workers, smaller CNFs, cubes, streaming, compiled code) before restarting it.

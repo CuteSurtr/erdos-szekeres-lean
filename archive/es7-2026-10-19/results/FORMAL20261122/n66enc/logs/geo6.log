@@ -1,0 +1,25 @@
+N66Geo/Assembly.lean:34:58: error: Invalid projection: Type of
+  q
+is not known; cannot resolve projection `1`
+N66Geo/Assembly.lean:34:66: error: Invalid projection: Type of
+  q
+is not known; cannot resolve projection `2`
+N66Geo/Assembly.lean:34:76: error: Invalid projection: Type of
+  p
+is not known; cannot resolve projection `1`
+N66Geo/Assembly.lean:34:84: error: Invalid projection: Type of
+  p
+is not known; cannot resolve projection `2`
+N66Geo/Assembly.lean:101:69: error: Application type mismatch: The argument
+  hlex
+has type
+  LexOcc (n66Occ c'.cup n)
+but is expected to have type
+  M.Lex
+in the application
+  holds_sb M hlex
+'N66Geo.signotope_of_config' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.n66_bound_55_of_gaps' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+Assembly lean wall=2.66 s maxrss=3191304 KB
+rc=1

@@ -1,0 +1,15 @@
+== outside-write check 2026-11-22 18:10:26 (reference: logs/n66enc_manifest_check.log, written before any work)
+ref mtime 2026-11-22 17:42:59.697435940
+files newer than ref under /home/jay/research/lean/erdos-szekeres-lean/.lake/build: 0
+files newer than ref under /home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake: 0
+files newer than ref under /home/jay/research/data/bal186-20261119/zrow/leanz/olean: 0
+files newer than ref under /home/jay/research/data/formalize-20261122/n66enc: 0
+== sources vs build: Lean sources newer than End.olean / exe
+newer than End.olean: /home/jay/research/data/formalize-20261122/n66-level15/check/Check15.lean
+(none listed = none)
+== MEMGUARD_STOPPED files in the work dir: 0
+unit esr-ag-l15-build1: Result=exit-code ExecMainStatus=127 
+unit esr-ag-l15-build2: Result=success ExecMainStatus=0 
+unit esr-ag-l15-m1: Result=success ExecMainStatus=0 
+unit esr-ag-l15-m9: Result=success ExecMainStatus=0 
+unit esr-ag-l15-rows: Result=success ExecMainStatus=0 

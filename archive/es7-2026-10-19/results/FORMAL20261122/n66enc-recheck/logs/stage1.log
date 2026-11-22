@@ -1,0 +1,7 @@
+2026-11-22 16:39:54 selftest PASS (14 cases)
+2026-11-22 16:39:54 exe /home/jay/research/data/formalize-20261122/n66enc-recheck/bin/n66print sha256 98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46 (frozen); original /home/jay/research/data/formalize-20261122/n66enc/build/bin/n66print sha256 98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46
+2026-11-22 16:39:56 leaves: MATCH rss=2311432 KB wall=1.96 s
+2026-11-22 16:39:58 eager: MATCH rss=2311484 KB wall=2.29 s
+2026-11-22 16:40:05 full:131: MATCH rss=2368720 KB wall=6.84 s
+2026-11-22 16:40:13 negfull:131: CONTROL_OK rss=2368608 KB wall=8.14 s
+2026-11-22 16:40:13 stage1 end: {"stage": "stage1", "updated": "2026-11-22 16:40:13", "exe": "/home/jay/research/data/formalize-20261122/n66enc-recheck/bin/n66print", "exe_sha256": "98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46", "frozen": "98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46", "pieces": 4, "verdicts": {"CONTROL_OK": 1, "MATCH": 3}, "max_exe_rss_kb": 2368720, "exe_sha256_end": "98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46", "original_sha256_end": "98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46", "cgroup_memory_peak_bytes_incl_page_cache": 3147083776}

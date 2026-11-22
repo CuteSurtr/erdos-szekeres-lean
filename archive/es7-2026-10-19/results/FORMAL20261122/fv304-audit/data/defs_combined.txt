@@ -1,0 +1,28 @@
+def Res118.BlockValid : List (List ℕ) → Prop :=
+fun rows => ∀ s ∈ rows, Res118.ValidUnitRow s
+def Res118.ValidUnitRow : List ℕ → Prop :=
+fun s =>
+  ∀ (n : ℕ) (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 6)
+    (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ))
+    (noJunction : ErdosSzekeres.Omission.Subsets.NoJunctionOn c.cup (Finset.range n)),
+    0 < n →
+      1 ≤ ∑ i ∈ Res118.lsupp s, OmissionResidual32Transfer.holesOf (c.residualOccupied noCap noOctagon noJunction) i
+def Res118.ResSliceExcludes : List (List ℕ) → ℕ → ℕ → Prop :=
+fun rows B T =>
+  ¬∃ holes,
+      (∀ (i : Fin 154), holes i ≤ 1) ∧
+        holes 0 = 0 ∧
+          (∀ (r : Fin 2650),
+              OmissionResidual32Bridge2650.demand2650 r ≤ ∑ i ∈ OmissionResidual32Bridge2650.support2650 r, holes i) ∧
+            T ≤ ∑ i ∈ Res118.F, holes i ∧
+              B - T ≤ ∑ i ∈ Res118.Lo, holes i ∧ (∀ s ∈ rows, 1 ≤ ∑ i ∈ Res118.lsupp s, holes i) ∧ ∑ i, holes i ≤ B
+def Res118.lsupp : List ℕ → Finset (Fin 154) :=
+fun s => {i | ↑i ∈ s}
+def Res118.F : Finset (Fin 154) :=
+{i | ¬Res118.InLo i}
+def Res118.Lo : Finset (Fin 154) :=
+Finset.filter Res118.InLo Finset.univ
+def Res118.InLo : Fin 154 → Prop :=
+fun i => Res118.loProfile (ErdosSzekeres.Omission.ResidualCatalog.catalog.getD ↑i []) = true
+def Res118.loProfile : List ℕ → Bool :=
+fun xs => decide (xs.getD 0 0 ≤ 4)

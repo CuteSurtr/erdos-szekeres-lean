@@ -1,0 +1,18 @@
+# hash7810.sh 2026-11-22T06:44:23+09:00 host jay-B850M-AORUS-ELITE-WIFI6E-ICE Tctl +80.0°C
+script sha256 c37c854fe38765d4ecacc8d1f9cc7c38fd961abc51a65822489146c973339386
+source EncB/Coded.lean 2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f
+source EncB/Cover.lean c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98
+source EncB/Dimacs.lean 48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8
+source EncB/Emit.lean 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f
+source EncB/Gen.lean ec97b3355b9cfe39f85e9b011ae91c429b5e3764683b9d601cd25a2360a02adf
+source EncB/Render.lean c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82
+source lakefile.toml 780b7d570523cc37606848d451a0aba686925a3ea0e9f647cbc161f6cf0b1842
+exe copy /home/jay/research/data/formalize-20261122/sevenfold/bin/encb_dimacs sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (pin 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368)
+records: C7UPPER/SHA256SUMS.txt b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2; C6C7REVIEW/replay.json B7.cnf b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2; C7UPPER/logs/check_B_full.log b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2
+verdict record C6C7REVIEW/replay.json B7: cnf proof verdict cake_lpr complete = b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2 75f9bd350186724a85e949b05315369d88ef887c9953e0048810b67e8172550e replayed_VERIFIED_UNSAT 2fee767af4478ed817f8bdf6feea5866e5e59f1f67c2a4477e98ee961612881d True
+cake logs: C6C7REVIEW/logs/cake_B7.log 's ' lines 1, VERIFIED 1; C7UPPER/logs/cake_B.out 's ' lines 1, VERIFIED 1; proof in check_B_full.log 75f9bd350186724a85e949b05315369d88ef887c9953e0048810b67e8172550e
+verdict binding: ok
+stderr: {"m": 7, "K": 8, "t": 10, "nv": 80080, "ncl": 2748538, "encoder": "encB", "codesDecode": true} 18.29 s wall, 609340 KB max RSS 
+text sha256 b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2 header 'p cnf 80080 2748538' bytes 67820434
+exe copy after run 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368
+MATCH (7,8,10) twin-base = the CNF of the verdict record (C6C7REVIEW B7, s VERIFIED UNSAT): PASS

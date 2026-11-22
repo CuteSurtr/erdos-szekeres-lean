@@ -1,0 +1,40 @@
+'N66G15.n66_bound_54_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66E15.fullUnsat_of_text' depends on axioms: [propext, Quot.sound]
+'N66E15.printClause_mem' depends on axioms: [propext, Quot.sound]
+'N66E15.printClauses_mem' depends on axioms: [propext, Quot.sound]
+'N66E15.base_unsat_of_cubes' depends on axioms: [propext, Quot.sound]
+'N66G15.no_model_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holes_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.capCup55_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.mirror_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.lexChoice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.leaves105_length' depends on axioms: [propext]
+'N66G15.n66Bound_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]
+N66G15.n66_bound_54_of_cubes : N66E15.CubesUnsat105 → N66G15.RowsValid N66E15.R0_15 → OmissionZRow.N66Bound 54
+def OmissionZRow.N66Bound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : Configuration n),
+    ¬c.HasCap 6 → ¬c.HasCup 6 → ¬HasConvexNGon 8 (Finset.image c.point Finset.univ) → n ≤ B
+def N66E15.CubesUnsat105 : Prop :=
+∀ c ∈ N66E15.leaves105, ¬EncB.DimacsSatisfiable (N66E15.fullCnf N66E15.R0_15 c)
+def N66E15.fullCnf : List (List (Fin 70)) → N66E15.Cube → List (List ℤ) :=
+fun R c => List.map N66E15.toDimacs (N66E15.fullS R c)
+def N66E15.fullS : List (List (Fin 70)) → N66E15.Cube → List (List N66E15.SLit) :=
+fun R c =>
+  N66E15.eagerStream () ++ N66E15.quadStream ++ N66E15.fixedUnits ++ List.map N66E15.cubeUnit c ++
+        List.map N66E15.rowClause R ++
+      N66E15.cardClauses ++
+    N66E15.sbClauses
+def N66E15.leaves105 : List N66E15.Cube :=
+N66E15.tree15.leaves
+@[irreducible] def N66E15.R0_15 : List (List (Fin 70)) :=
+N66E15.parseRows N66E15.rowsText
+def N66G15.RowsValid : List (List (Fin 70)) → Prop :=
+fun R => ∀ T ∈ R, N66G15.RowValid T
+def N66G15.RowValid : List (Fin 70) → Prop :=
+fun T => ∀ (n : ℕ) (c : Configuration n), N66G15.InClass c → ∃ s ∈ T, ¬N66G15.n66Occ c.cup n s
+def N66G15.InClass : {n : ℕ} → Configuration n → Prop :=
+fun {n} c => ¬c.HasCap 6 ∧ ¬c.HasCup 6 ∧ ¬HasConvexNGon 8 (Finset.image c.point Finset.univ)
+'check15_unfolded' depends on axioms: [propext, Classical.choice, Quot.sound]
+Check15 lean wall=4.66 s maxrss=3202656 KB

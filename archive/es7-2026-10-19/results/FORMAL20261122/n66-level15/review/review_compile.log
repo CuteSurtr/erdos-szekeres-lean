@@ -1,0 +1,243 @@
+== start 2026-11-22 18:30:34
+LEAN_PATH=/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean:/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean:/home/jay/research/data/bal186-20261119/zrow/leanz/olean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean:/home/jay/research/data/formalize-20261122/n66-level15/build/olean
+== olean hashes
+2540e5642e7448e5109b19fee81f8245edfb3ee33fffccedddc4e17f77d07728  /home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66G15/End.olean
+ade1c981ecf920f4e7abbffc9175546dd31a71ad166b173e66eae69dc3de5eee  /home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66G15/Assembly.olean
+8d0b09fd69a796835e78c648de01947d702c72fdb9913857e6af847cdb22fbf2  /home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66E15/Full.olean
+ebf7d6382bbfae878f04a466159d29b099366e4d00b93a7a7eda666fe554903a  /home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66E15/Rows.olean
+d31087c767b013a3b917cd9a0f7f1d8a11102de9697ca3f5ea4ce687601df50b  /home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66E15/Cover.olean
+c6504d62efa2c6665614a75ca17f2f8b9d20899e29f9c031a289482ee005e5ae  /home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66E15/Bridge.olean
+ef249ba167372ac31f995027299efa1eeddac251ff73e4ef093a990ab02c353c  /home/jay/research/data/bal186-20261119/zrow/leanz/olean/LemmaZ.olean
+df40602c1c919e1e57471724a5591be561c6383501e55409247e8189505310cd  /home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean/EncB/Render.olean
+5c8ea03dce2c38a0650bcd1067356334171dbf7acd9b634238ac9aa490ac3746  /home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean/EncB/Dimacs.olean
+e00bdfd81db2017bc8cce60b7f495c96a7bcabd3be270ce6e2f90589eab80d60  ReviewL15.lean
+== shadow check: LemmaZ / N66E15 / N66G15 / EncB on the LEAN_PATH (each should appear once)
+/home/jay/research/data/bal186-20261119/zrow/leanz/olean/LemmaZ.olean
+/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean/EncB.olean
+/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean/EncB
+/home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66E15
+/home/jay/research/data/formalize-20261122/n66-level15/build/olean/N66G15
+== compile
+'N66G15.n66_bound_54_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66E15.fullUnsat_of_text' depends on axioms: [propext, Quot.sound]
+'N66E15.base_unsat_of_cubes' depends on axioms: [propext, Quot.sound]
+'N66G15.holds_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holes_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.leaves105_length' depends on axioms: [propext]
+'N66E15.printClause_mem' depends on axioms: [propext, Quot.sound]
+'N66E15.printClauses_mem' depends on axioms: [propext, Quot.sound]
+'N66E15.no_base_model' depends on axioms: [propext, Quot.sound]
+'N66E15.covers_leaves' depends on axioms: [propext]
+'N66E15.unsat_of_sub' does not depend on any axioms
+'N66E15.dimacsSat_of_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66E15.stateListOk_true' does not depend on any axioms
+'N66G15.no_model_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_baseS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_sb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.lexChoice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_thresh' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_triple' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_ceue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_quad' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.holds_eager_of_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.mirror_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.capCup55_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.signotope_of_config' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.n66Bound_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.n66_bound_54_of_gaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.n66_bound_54_of_gaps2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.n66_bound_54_of_gaps3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.n66_bound_54_of_gaps4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.n66_bound_54_of_gaps5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66G15.n66_bound_54_of_capCup55' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_render' depends on axioms: [propext, Quot.sound]
+N66G15.n66_bound_54_of_cubes : N66E15.CubesUnsat105 → N66G15.RowsValid N66E15.R0_15 → OmissionZRow.N66Bound 54
+@N66E15.fullUnsat_of_text : ∀ {c : N66E15.Cube} {ds : List N66E15.Desc} {L : List (List ℤ)},
+  N66E15.printClauses c ds = some L →
+    N66E15.litsBounded N66E15.nvHeader L = true →
+      (∀ (nv : ℕ) (F : List (List ℤ)),
+          EncB.parseDimacs (EncB.render N66E15.nvHeader L) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+        ¬EncB.DimacsSatisfiable (N66E15.fullCnf N66E15.R0_15 c)
+N66E15.base_unsat_of_cubes : N66E15.CubesUnsat105 → ¬EncB.DimacsSatisfiable (N66E15.baseCnf N66E15.R0_15)
+N66G15.holds_card : ∀ (M : N66G15.Model), M.holes ≤ 15 → M.Holds N66E15.cardClauses
+N66G15.holes_le : ∀ (M : N66G15.Model), 55 ≤ M.n → M.holes ≤ 15
+N66G15.leaves105_length : N66E15.leaves105.length = 105
+def OmissionZRow.N66Bound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : Configuration n),
+    ¬c.HasCap 6 → ¬c.HasCup 6 → ¬HasConvexNGon 8 (Finset.image c.point Finset.univ) → n ≤ B
+def N66E15.CubesUnsat105 : Prop :=
+∀ c ∈ N66E15.leaves105, ¬EncB.DimacsSatisfiable (N66E15.fullCnf N66E15.R0_15 c)
+def N66E15.fullCnf : List (List (Fin 70)) → N66E15.Cube → List (List ℤ) :=
+fun R c => List.map N66E15.toDimacs (N66E15.fullS R c)
+def N66E15.fullS : List (List (Fin 70)) → N66E15.Cube → List (List N66E15.SLit) :=
+fun R c =>
+  N66E15.eagerStream () ++ N66E15.quadStream ++ N66E15.fixedUnits ++ List.map N66E15.cubeUnit c ++
+        List.map N66E15.rowClause R ++
+      N66E15.cardClauses ++
+    N66E15.sbClauses
+def N66E15.baseS : List (List (Fin 70)) → List (List N66E15.SLit) :=
+fun R =>
+  N66E15.eagerStream () ++ N66E15.quadStream ++ N66E15.fixedUnits ++ List.map N66E15.rowClause R ++
+      N66E15.cardClauses ++
+    N66E15.sbClauses
+def N66E15.leaves105 : List N66E15.Cube :=
+N66E15.tree15.leaves
+def N66E15.SplitTree.leaves : N66E15.SplitTree → List N66E15.Cube :=
+fun t => t.leavesFrom []
+def N66E15.SplitTree.leavesFrom : N66E15.SplitTree → N66E15.Cube → List N66E15.Cube :=
+fun x x_1 =>
+  N66E15.SplitTree.brecOn (motive := fun x => N66E15.Cube → List N66E15.Cube) x
+    (fun x f x_2 =>
+      (match (motive :=
+          (x : N66E15.SplitTree) →
+            N66E15.Cube →
+              N66E15.SplitTree.below (motive := fun x => N66E15.Cube → List N66E15.Cube) x → List N66E15.Cube)
+          x, x_2 with
+        | N66E15.SplitTree.leaf, pre => fun x => [pre]
+        | N66E15.SplitTree.node s occ hole, pre => fun x => x.1.1 (pre ++ [(s, true)]) ++ x.2.1 (pre ++ [(s, false)]))
+        f)
+    x_1
+@[irreducible] def N66E15.R0_15 : List (List (Fin 70)) :=
+N66E15.parseRows N66E15.rowsText
+def N66E15.parseRows : String → List (List (Fin 70)) :=
+fun s =>
+  List.filterMap
+    (fun line =>
+      have ws := List.filter (fun x => decide (x ≠ "")) line.splitOn;
+      if ws.isEmpty = true then none else List.mapM N66E15.parseState ws)
+    (s.splitOn "\n")
+def N66E15.toDimacs : List N66E15.SLit → List ℤ :=
+fun cl => List.map N66E15.litInt cl
+def N66E15.litInt : N66E15.SLit → ℤ :=
+fun l => if l.1 = true then ↑(N66E15.num l.2) else -↑(N66E15.num l.2)
+def N66E15.cubeUnit : Fin 70 × Bool → List N66E15.SLit :=
+fun z => [(z.2, N66E15.Atom.sel z.1)]
+def N66E15.rowClause : List (Fin 70) → List N66E15.SLit :=
+fun T => List.map (fun s => (false, N66E15.Atom.sel s)) T
+def N66E15.fixedUnits : List (List N66E15.SLit) :=
+[[(true, N66E15.Atom.sel 0)], [(true, N66E15.Atom.sel 1)]]
+@[irreducible] def N66E15.cardClauses : List (List N66E15.SLit) :=
+List.flatMap
+  (fun i' =>
+    (if N66E15.needAux (i' + 1) 1 = true then [[(N66E15.holeLit (i' + 1)).neg, N66E15.sAux (i' + 1) 1]] else []) ++
+      N66E15.diagClauses (N66E15.kBound + 1) (i' + 1) 1)
+  (List.range (N66E15.nLits - 1))
+def N66E15.kBound : ℕ :=
+15
+def N66E15.nLits : ℕ :=
+68
+def N66E15.nvHeader : ℕ :=
+1647847
+def N66E15.printClause : N66E15.Cube → N66E15.Desc → Option (List ℤ) :=
+fun c x =>
+  match x with
+  | N66E15.Desc.e k => N66E15.eagerArr[k]?
+  | N66E15.Desc.q a b c' d j => do
+    let a ← N66E15.toFin70 a
+    let b ← N66E15.toFin70 b
+    let c' ← N66E15.toFin70 c'
+    let d ← N66E15.toFin70 d
+    if N66E15.okQuad a b c' d = true then Option.map N66E15.toDimacs (N66E15.quadClauses a b c' d)[j]? else none
+  | N66E15.Desc.u k => Option.map N66E15.toDimacs (N66E15.fixedUnits ++ List.map N66E15.cubeUnit c)[k]?
+  | N66E15.Desc.r k => Option.map (fun T => N66E15.toDimacs (N66E15.rowClause T)) N66E15.R0arr[k]?
+  | N66E15.Desc.k k => Option.map N66E15.toDimacs N66E15.cardArr[k]?
+  | N66E15.Desc.s k => Option.map N66E15.toDimacs N66E15.sbArr[k]?
+def N66E15.printClauses : N66E15.Cube → List N66E15.Desc → Option (List (List ℤ)) :=
+fun c ds => List.mapM (N66E15.printClause c) ds
+def N66E15.litsBounded : ℕ → List (List ℤ) → Bool :=
+fun nv F => F.all fun cl => cl.all fun l => decide (l ≠ 0) && decide (l.natAbs ≤ nv)
+def N66G15.RowsValid : List (List (Fin 70)) → Prop :=
+fun R => ∀ T ∈ R, N66G15.RowValid T
+def N66G15.RowValid : List (Fin 70) → Prop :=
+fun T => ∀ (n : ℕ) (c : Configuration n), N66G15.InClass c → ∃ s ∈ T, ¬N66G15.n66Occ c.cup n s
+def N66G15.InClass : {n : ℕ} → Configuration n → Prop :=
+fun {n} c => ¬c.HasCap 6 ∧ ¬c.HasCup 6 ∧ ¬HasConvexNGon 8 (Finset.image c.point Finset.univ)
+def N66G15.n66Occ : (ℕ → ℕ → ℕ → Bool) → ℕ → Fin 70 → Prop :=
+fun cup n s => ∃ v < n, N66G15.idxOf cup v = ↑s
+def N66G15.idxOf : (ℕ → ℕ → ℕ → Bool) → ℕ → ℕ :=
+fun cup v => List.idxOf (N66G15.profOf cup v) N66E15.stateList
+def N66G15.profOf : (ℕ → ℕ → ℕ → Bool) → ℕ → N66E15.Prof :=
+fun cup v => (column cup v 0, column cup v 1, column cup v 2, column cup v 3)
+def N66G15.Model.holes : N66G15.Model → ℕ :=
+fun M => M.holesUpTo 68
+def N66G15.Model.holesUpTo : N66G15.Model → ℕ → ℕ :=
+fun M a => (List.filter (fun i => decide ¬M.occ ⟨(i + 2) % 70, ⋯⟩) (List.range a)).length
+def ErdosSzekeres.Omission.ActualRanks.column : (ℕ → ℕ → ℕ → Bool) → ℕ → ℕ → ℕ :=
+fun cup v i => (Finset.range v).sup fun u => if i + 1 ≤ (labels cup u v).1 then (labels cup u v).2 else 0
+def ErdosSzekeres.Omission.ActualRanks.labels : (ℕ → ℕ → ℕ → Bool) → ℕ → ℕ → StateInterface.Label :=
+fun cup u v => (rank cup false u v - 1, rank cup true u v - 1)
+def ErdosSzekeres.Omission.ActualRanks.rank : (ℕ → ℕ → ℕ → Bool) → Bool → ℕ → ℕ → ℕ :=
+fun cup color u v => if h : u < v then (lengths cup color u v).max' ⋯ else 0
+inductive ErdosSzekeres.Omission.ActualRanks.EndingPath : (ℕ → ℕ → ℕ → Bool) → Bool → ℕ → ℕ → ℕ → Prop
+number of parameters: 2
+constructors:
+ErdosSzekeres.Omission.ActualRanks.EndingPath.pair : ∀ {cup : ℕ → ℕ → ℕ → Bool} {color : Bool} {u v : ℕ},
+  u < v → EndingPath cup color u v 2
+ErdosSzekeres.Omission.ActualRanks.EndingPath.step : ∀ {cup : ℕ → ℕ → ℕ → Bool} {color : Bool} {t u v l : ℕ},
+  EndingPath cup color t u l → u < v → cup t u v = color → EndingPath cup color u v (l + 1)
+structure ErdosSzekeres.Omission.Configuration (n : ℕ) : Type
+number of parameters: 1
+fields:
+  ErdosSzekeres.Omission.Configuration.point : Fin n → Point
+  ErdosSzekeres.Omission.Configuration.xOrder : StrictMono fun i => self.point i 0
+  ErdosSzekeres.Omission.Configuration.generalPosition : ∀ (i j k : Fin n),
+      i < j → j < k → orient (self.point i) (self.point j) (self.point k) ≠ 0
+constructor:
+  ErdosSzekeres.Omission.Configuration.mk {n : ℕ} (point : Fin n → Point) (xOrder : StrictMono fun i => point i 0)
+    (generalPosition : ∀ (i j k : Fin n), i < j → j < k → orient (point i) (point j) (point k) ≠ 0) : Configuration n
+def ErdosSzekeres.Omission.Configuration.cup : {n : ℕ} → Configuration n → ℕ → ℕ → ℕ → Bool :=
+fun {n} c i j k =>
+  if h : i < n ∧ j < n ∧ k < n then decide (0 < orient (c.point ⟨i, ⋯⟩) (c.point ⟨j, ⋯⟩) (c.point ⟨k, ⋯⟩)) else false
+def ErdosSzekeres.Omission.Configuration.HasCap : {n : ℕ} → Configuration n → ℕ → Prop :=
+fun {n} c k =>
+  ∃ f, StrictMono f ∧ ∀ (i j l : Fin k), i < j → j < l → orient (c.point (f i)) (c.point (f j)) (c.point (f l)) < 0
+def ErdosSzekeres.Omission.Configuration.HasCup : {n : ℕ} → Configuration n → ℕ → Prop :=
+fun {n} c k =>
+  ∃ f, StrictMono f ∧ ∀ (i j l : Fin k), i < j → j < l → 0 < orient (c.point (f i)) (c.point (f j)) (c.point (f l))
+def ErdosSzekeres.HasConvexNGon : ℕ → Finset Point → Prop :=
+fun n s => ∃ t ⊆ s, t.card = n ∧ ConvexPosition t
+def ErdosSzekeres.ConvexPosition : Finset Point → Prop :=
+fun s => ConvexIndependent ℝ fun p => ↑p
+def ErdosSzekeres.orient.{u_1} : {R : Type u_1} → [CommRing R] → (Fin 2 → R) → (Fin 2 → R) → (Fin 2 → R) → R :=
+fun {R} [CommRing R] a b c => (b 0 - a 0) * (c 1 - a 1) - (b 1 - a 1) * (c 0 - a 0)
+def EncB.DimacsSatisfiable : List (List ℤ) → Prop :=
+fun cls => ∃ ν, EncB.DimacsSat cls ν
+def EncB.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
+fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = true ∨ l < 0 ∧ ν l.natAbs = false
+def EncB.LitSat : (ℕ → Bool) → ℤ → Prop :=
+fun ν z => 0 < z ∧ ν z.natAbs = true ∨ z < 0 ∧ ν z.natAbs = false
+def EncB.render : ℕ → List (List ℤ) → String :=
+fun nv F => EncB.headerR nv F.length ++ EncB.bodyR F
+'check15_unfolded_recheck' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review15_unfolded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review15_contra' depends on axioms: [propext, Classical.choice, Quot.sound]
+leaves105 105 R0_15 10859 rowsText bytes 465335 stateList 70 sbPairs 27
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 ReviewL15.lean"
+	User time (seconds): 7.86
+	System time (seconds): 0.43
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3219712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5
+	Minor (reclaiming a frame) page faults: 68704
+	Voluntary context switches: 1827
+	Involuntary context switches: 1354
+	Swaps: 0
+	File system inputs: 1696
+	File system outputs: 1872
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+lean_rc=0
+== end 2026-11-22 18:30:42

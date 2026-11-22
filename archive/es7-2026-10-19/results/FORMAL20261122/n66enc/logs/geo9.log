@@ -1,0 +1,5 @@
+'N66Geo.leaves132_length' depends on axioms: [propext]
+'N66Geo.n66Bound_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.holds_eager_of_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+Facts lean wall=2.02 s maxrss=3199244 KB
+rc=0

@@ -1,0 +1,27 @@
+{
+ "exe_sha_start": "b0b270cb5840bb92151900b77eb76ff8be1b71efd3dee93dbfe198ed6a531c5d",
+ "list_len": 4404,
+ "list_eq_my_reading": true,
+ "base_sha": "c3ae52244554013383f1447b981a3a8f10132a50ec45b0a4f74f3e7248807074",
+ "base_ok": true,
+ "files_written": 4404,
+ "file_names_ok": true,
+ "pieces_ok": 4404,
+ "fails": [],
+ "independent_combos": {
+  "wave1": 1623,
+  "recheck+rebuild": 2781
+ },
+ "equal_to_worker_tsv": true,
+ "distinct_printed_hashes": 4404,
+ "ctl_flipped_hash_fails": true,
+ "ctl_neighbour_record_fails": true,
+ "ctl_unlisted_cube036": [
+  false,
+  "verdict,cakeline,noindep",
+  ""
+ ],
+ "ctl_unlisted_cube036_fails": true,
+ "exe_sha_end": "b0b270cb5840bb92151900b77eb76ff8be1b71efd3dee93dbfe198ed6a531c5d",
+ "ALL_OK": true
+}

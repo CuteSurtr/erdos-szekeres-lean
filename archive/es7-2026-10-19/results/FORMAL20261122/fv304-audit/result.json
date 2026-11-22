@@ -1,0 +1,342 @@
+{
+ "verdict": "audit passed",
+ "utc": "2026-11-22T08:29:35Z",
+ "findings": [
+  "records: 6 contexts [752, 753, 3342, 3343, 4208, 7514] carry exporter sha256 ['9fbce4ce0fbd'] (pilot version, not in git) instead of the git HEAD export_es304z.py eee1151c51d4; Lean checked their chunks like all others",
+  "records: 4 logs lack a well-formed axiom line for the source's #print (profiler stderr spliced into it): ['E304Z.C260801', 'E304Z.C311801', 'E304Z.C325201', 'E304Z.C634501']; re-printed from the oleans in step reprint",
+  "records: FV304's driver accepted ['E304Z.C634501'] with 0 axiom lines and no ALERT (drive_es304z.verdict counts 'depends on axioms' substrings; a split line counts 0 = 0 standard)",
+  "records: 26 modules have no run.tsv row (pilot compiles or driver restarts): ['E304Z.C075201', 'E304Z.C075202', 'E304Z.C075203', 'E304Z.C075204', 'E304Z.C075301', 'E304Z.C126501', 'E304Z.C128701', 'E304Z.C128801', 'E304Z.C135601', 'E304Z.C135701', 'E304Z.C135801', 'E304Z.C135901', 'E304Z.C137001', 'E304Z.C137201', 'E304Z.C137301', 'E304Z.C137401', 'E304Z.C255301', 'E304Z.C255401', 'E304Z.C255501', 'E304Z.C255601']; their per-module logs were used",
+  "readonly: repo: 3 files newer than the marker outside the read-only stores (not written by this audit, which has no repo writes): ['/home/jay/research/lean/erdos-szekeres-lean/.git/objects/ce/b5b8819787f00cbf941c58c56e896d0bd90d11', '/home/jay/research/lean/erdos-szekeres-lean/.git/objects/cb/dc11f0ee460fd73cc47ed241e779699f9e6240', '/home/jay/research/lean/erdos-szekeres-lean/.git/objects/55/d09e7432d6badbb1b8d64ec5c1c9c8201a8226']"
+ ],
+ "steps": {
+  "pins": {
+   "ok": true,
+   "utc_end": "2026-11-22T07:51:02Z",
+   "seconds": 2.8
+  },
+  "shadow": {
+   "ok": true,
+   "utc_end": "2026-11-22T07:51:02Z",
+   "seconds": 0.3
+  },
+  "support": {
+   "ok": true,
+   "utc_end": "2026-11-22T07:51:08Z",
+   "seconds": 5.9
+  },
+  "res118": {
+   "ok": true,
+   "utc_end": "2026-11-22T07:53:46Z",
+   "seconds": 157.2
+  },
+  "audit": {
+   "ok": true,
+   "utc_end": "2026-11-22T08:05:33Z",
+   "seconds": 0.0
+  },
+  "combined": {
+   "ok": true,
+   "utc_end": "2026-11-22T08:12:50Z",
+   "seconds": 322.2
+  },
+  "records": {
+   "ok": true,
+   "utc_end": "2026-11-22T08:20:33Z",
+   "seconds": 214.2
+  },
+  "reprint": {
+   "ok": true,
+   "utc_end": "2026-11-22T08:27:38Z",
+   "seconds": 424.7
+  },
+  "closure": {
+   "ok": true,
+   "utc_end": "2026-11-22T08:29:32Z",
+   "seconds": 114.5
+  },
+  "readonly": {
+   "ok": true,
+   "utc_end": "2026-11-22T08:29:35Z",
+   "seconds": 2.9
+  }
+ },
+ "statements": {
+  "E304Z.Final.excludes_67": "E304Z.Final.excludes_67 : OmissionBalancedZ.ExcludesHoleBudgetZ 67",
+  "E304Z.Final.forces_304_of_n66_res": "E304Z.Final.forces_304_of_n66_res (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 304 8",
+  "E304Z.root": "E304Z.root : \u00ac\u2203 holes, CompactChecker.FFeas CompactChecker.fcatZ 3132 252 67 (CompactChecker.pmask (CompactChecker.zerosF 252) []) holes",
+  "FV4A.forces_304_of_slices_rows_n66": "FV4A.forces_304_of_slices_rows_n66 (n66 : OmissionZRow.N66Bound 55) (vP : Res118.BlockValid Res118.rowsP) (vQ : Res118.BlockValid Res118.rowsQ) (vU : Res118.BlockValid Res118.rowsU) (vA : Res118.BlockValid Res118.rowsA) (s33_18 : Res118.ResSliceExcludes [] 33 18) (s34_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 34 18) (s34_19 : Res118.ResSliceExcludes Res118.rowsP 34 19) (s35_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 35 18) (s35_19 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsU) 35 19) (s35_20 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA) 35 20) : ErdosSzekeres.ForcesConvexNGon 304 8"
+ },
+ "axioms": {
+  "E304Z.Final.excludes_67": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.Final.forces_304_of_n66_res": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.root": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.C260801.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.C325201.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.C311801.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.C634501.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "FV4A.forces_304_of_slices_rows_n66": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "Res118.forces_304_of_slices": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "Res118.residual_bound_118_of_slices": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ]
+ },
+ "closure": {
+  "audit": {
+   "modules": 13199,
+   "tsv": "/home/jay/research/data/formalize-20261122/fv304-audit/data/closure_audit.tsv",
+   "tsv_sha256": "fa81fcce0eb56d16a1f0bb9bfa5d7d213bd9588dbc5580c7072a1050736eae53",
+   "by_root": {
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean": 1732,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean": 130,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean": 84,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean": 2825,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean": 2,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean": 13,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean": 9,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean": 4,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean": 12,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean": 72,
+    "/home/jay/research/data/fv304-20261120/olean": 8228,
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean": 87,
+    "/home/jay/research/data/bal186-20261119/zrow/leanz/olean": 1
+   },
+   "pin_status": {
+    "311 route record | ok": 8,
+    "ES305 pin = comp-audit rebuild | ok": 1,
+    "chain311 build.tsv | ok": 87,
+    "comp-audit rebuild | ok": 1,
+    "first recorded here (FV304 run.tsv has no hash) | ok": 8217,
+    "library.json | ok": 4883,
+    "rebuilt here from git HEAD source | ok": 2
+   },
+   "digest_all": "84fdbbe978f877083d56c93f813d78d488a9a12919f0369094b64cc30e0f2fee",
+   "digest_e304z": "fa02576ef5752c7fa509ea9f74b95feb46e4fdce9de26292b6df19c654b36c76",
+   "e304z_modules": 8217
+  },
+  "combined": {
+   "modules": 13382,
+   "tsv": "/home/jay/research/data/formalize-20261122/fv304-audit/data/closure_combined.tsv",
+   "tsv_sha256": "c49920ad97ff3c7e9f340c204ddecea8250f714a0abaa37d4d3abc7b8adbd7a5",
+   "by_root": {
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean": 1732,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean": 130,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean": 84,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean": 2825,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean": 2,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean": 13,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean": 9,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean": 4,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean": 12,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean": 141,
+    "/home/jay/research/data/fv304-20261120/olean": 8228,
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean": 195,
+    "/home/jay/research/data/bal186-20261119/zrow/leanz/olean": 1,
+    "/home/jay/research/data/formalize-20261122/fv304-audit/olean": 6
+   },
+   "pin_status": {
+    "311 route record | ok": 8,
+    "ES305 pin = comp-audit rebuild | ok": 1,
+    "chain311 build.tsv | ok": 195,
+    "comp-audit rebuild | ok": 1,
+    "first recorded here (FV304 run.tsv has no hash) | ok": 8217,
+    "library.json | ok": 4952,
+    "rebuilt here from git HEAD source | ok": 2,
+    "this build | ok": 6
+   },
+   "digest_all": "a8c7004950cc601e13006e777f284627c6842281afb8e872aeb0e8a39470bea6",
+   "digest_e304z": "fa02576ef5752c7fa509ea9f74b95feb46e4fdce9de26292b6df19c654b36c76",
+   "e304z_modules": 8217
+  }
+ },
+ "combined_olean_sha256": "9e71de8761341db1afaadce264c9b4e60c206b8d7d70ebf636db650ac6a19ca8",
+ "units": {
+  "sup-FcatZ": {
+   "wall_s": 2.51,
+   "anon_peak_mb": 289,
+   "cg_peak_mb": 377,
+   "max_rss_mb": 3107,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  },
+  "sup-BridgeZ": {
+   "wall_s": 2.89,
+   "anon_peak_mb": 244,
+   "cg_peak_mb": 335,
+   "max_rss_mb": 3147,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  },
+  "res-Rows": {
+   "wall_s": 8.67,
+   "anon_peak_mb": 470,
+   "cg_peak_mb": 536,
+   "max_rss_mb": 785,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  },
+  "res-LemmaA": {
+   "wall_s": 7.84,
+   "anon_peak_mb": 712,
+   "cg_peak_mb": 800,
+   "max_rss_mb": 3589,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  },
+  "res-Glue": {
+   "wall_s": 12.4,
+   "anon_peak_mb": 1322,
+   "cg_peak_mb": 1401,
+   "max_rss_mb": 4300,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  },
+  "res-Final": {
+   "wall_s": 3.92,
+   "anon_peak_mb": 329,
+   "cg_peak_mb": 418,
+   "max_rss_mb": 3366,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  },
+  "res-Compose304": {
+   "wall_s": 2.95,
+   "anon_peak_mb": 268,
+   "cg_peak_mb": 340,
+   "max_rss_mb": 3328,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  },
+  "audit": {
+   "wall_s": 643.78,
+   "anon_peak_mb": 453,
+   "cg_peak_mb": 4002,
+   "max_rss_mb": 14303,
+   "events": {
+    "low": "0",
+    "high": "172838",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  },
+  "combined": {
+   "wall_s": 321.68,
+   "anon_peak_mb": 464,
+   "cg_peak_mb": 4002,
+   "max_rss_mb": 17767,
+   "events": {
+    "low": "0",
+    "high": "91822",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  },
+  "reprint": {
+   "wall_s": 3.67,
+   "anon_peak_mb": 219,
+   "cg_peak_mb": 305,
+   "max_rss_mb": 3080,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   }
+  }
+ }
+}

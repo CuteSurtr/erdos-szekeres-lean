@@ -1,0 +1,8 @@
+# hidden-assumption scan of the worker's Lean sources (2026-11-22T07:04:54+09:00)
+## pattern: axiom|opaque|unsafe|extern|implemented_by|csimp|macro|syntax|elab|notation|infix|instance|attribute|set_option|local|sorry|native_decide|admit|ofReduceBool|Lean.trust|debug.|autoImplicit
+Res118/Glue.lean:78:set_option maxRecDepth 100000 in
+Res118/Glue.lean:84:set_option maxRecDepth 100000 in
+Res118/Final.lean:18:set_option maxRecDepth 100000 in
+Res118/LemmaA.lean:32:instance : DecidablePred InLo := fun _ => inferInstanceAs (Decidable (_ = true))
+## Rows.lean lines that are not row literals, defs, comments or brackets:
+0

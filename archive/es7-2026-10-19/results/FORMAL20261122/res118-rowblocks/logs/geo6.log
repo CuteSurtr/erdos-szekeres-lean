@@ -1,0 +1,9 @@
+== RowGeo.Geo 2026-11-22T18:13:12+09:00
+RowGeo.Geo rc=1 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.21 	Maximum resident set size (kbytes): 3193984 
+cgroup memory.peak: 325754880
+STOP at Geo
+RowGeo/Geo.lean:36:46: error(lean.unknownIdentifier): Unknown identifier `Coupled.Allowed`
+RowGeo/Geo.lean:37:18: error(lean.unknownIdentifier): Unknown identifier `Coupled.Allowed`
+RowGeo/Geo.lean:55:4: error(lean.unknownIdentifier): Unknown identifier `Coupled.emptyCheck`
+RowGeo/Geo.lean:57:9: error(lean.unknownIdentifier): Unknown identifier `Coupled.emptyCheck`
+rc=1

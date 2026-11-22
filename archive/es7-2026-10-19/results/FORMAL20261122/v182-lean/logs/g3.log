@@ -1,0 +1,75 @@
+V182Geo/Sound.lean:120:16: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  EncB.LitSat (ind ψ) (-lit ?m.312 c)
+in the target expression
+  0 < -lit f c ∧ ind ψ (-lit f c).natAbs = true ∨ -lit f c < 0 ∧ ind ψ (-lit f c).natAbs = false
+
+case pos
+ψ : Sym2 V → Fin 5
+hψ : IsRainbowS ψ
+hu : UnitsHold ψ
+e c : ℕ
+hc : c ∈ (List.range 5).reverse
+f : ℕ
+hf : f ∈ (List.filter (fun f => decide (e < f) && conflict e f) (List.range numE)).reverse
+hcl : [-lit e c, -lit f c] ∈ aloCls ++ confCls ++ amoCls ++ surjCls ++ unitCls
+h✝¹ : [-lit e c, -lit f c] ∈ aloCls ++ confCls ++ amoCls ++ surjCls
+h✝ : [-lit e c, -lit f c] ∈ aloCls ++ confCls ++ amoCls
+h : [-lit e c, -lit f c] ∈ aloCls ++ confCls
+h2✝¹ :
+  [-lit e c, -lit f c] ∈
+    List.flatMap
+      (fun e =>
+        List.flatMap (fun c => List.map (fun f => [-lit e c, -lit f c]) (partnersDesc e)) (List.range 5).reverse)
+      (List.range numE).reverse
+h2✝ :
+  [-lit e c, -lit f c] ∈
+    List.flatMap (fun c => List.map (fun f => [-lit e c, -lit f c]) (partnersDesc e)) (List.range 5).reverse
+h2 : [-lit e c, -lit f c] ∈ List.map (fun f => [-lit e c, -lit f c]) (partnersDesc e)
+hc5 : c < 5
+hf' : decide (e < f) = true ∧ conflict e f = true
+hne : ψ (edgeOfIdx e) ≠ ψ (edgeOfIdx f)
+hec : ↑(ψ (edgeOfIdx e)) = c
+⊢ 0 < -lit f c ∧ ind ψ (-lit f c).natAbs = true ∨ -lit f c < 0 ∧ ind ψ (-lit f c).natAbs = false
+V182Geo/Sound.lean:135:14: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  EncB.LitSat (ind ψ) (-lit ?m.476 c2)
+in the target expression
+  0 < -lit e c2 ∧ ind ψ (-lit e c2).natAbs = true ∨ -lit e c2 < 0 ∧ ind ψ (-lit e c2).natAbs = false
+
+case pos
+ψ : Sym2 V → Fin 5
+hψ : IsRainbowS ψ
+hu : UnitsHold ψ
+e c1 : ℕ
+hc1 : c1 ∈ List.range 5
+c2 : ℕ
+hc2 : c2 ∈ List.filter (fun x => decide (c1 < x)) (List.range 5)
+hcl : [-lit e c1, -lit e c2] ∈ aloCls ++ confCls ++ amoCls ++ surjCls ++ unitCls
+h✝ : [-lit e c1, -lit e c2] ∈ aloCls ++ confCls ++ amoCls ++ surjCls
+h : [-lit e c1, -lit e c2] ∈ aloCls ++ confCls ++ amoCls
+h3✝¹ :
+  [-lit e c1, -lit e c2] ∈
+    List.flatMap
+      (fun e =>
+        List.flatMap
+          (fun c1 =>
+            List.map (fun c2 => [-lit e c1, -lit e c2]) (List.filter (fun x => decide (c1 < x)) (List.range 5)))
+          (List.range 5))
+      (List.range numE)
+h3✝ :
+  [-lit e c1, -lit e c2] ∈
+    List.flatMap
+      (fun c1 => List.map (fun c2 => [-lit e c1, -lit e c2]) (List.filter (fun x => decide (c1 < x)) (List.range 5)))
+      (List.range 5)
+h3 :
+  [-lit e c1, -lit e c2] ∈
+    List.map (fun c2 => [-lit e c1, -lit e c2]) (List.filter (fun x => decide (c1 < x)) (List.range 5))
+hc1' : c1 < 5
+hc2' : c2 ∈ List.range 5 ∧ decide (c1 < c2) = true
+hc2'' : c2 < 5
+hlt : c1 < c2
+hec : ↑(ψ (edgeOfIdx e)) = c1
+⊢ 0 < -lit e c2 ∧ ind ψ (-lit e c2).natAbs = true ∨ -lit e c2 < 0 ∧ ind ψ (-lit e c2).natAbs = false
+V182Geo/Sound.lean:214:15: error: ambiguous term, use fully qualified name, possible interpretations [V182Enc.star, @Star.star]
+Command exited with non-zero status 1
+Sound lean wall=1.93 s maxrss=1556084 KB
+EXIT 1

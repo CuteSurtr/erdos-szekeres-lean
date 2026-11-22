@@ -1,0 +1,29 @@
+{
+ "v169": {
+  "table": "/home/jay/research/data/roadmap-20261115/pm1115/p307v/lrat-b35s20-v169/lrat-results.tsv",
+  "table_sha256": "a80cbba552f288f66da7e096dbea5ccd8d2eab59bb7abdb506d8d3ef85a6e0d2",
+  "row_file": "/home/jay/research/data/es308-20261114/inputs/b35s20-v169/extra.json",
+  "row_file_sha256": "de4bcceba6d0c80ce6f63cbef15822cac8300780607c738569999a7d94b81916",
+  "jobs": 1994,
+  "support_mismatch": 0,
+  "indices_cover_all_unit_rows": true
+ },
+ "b35s19v16": {
+  "table": "/home/jay/research/data/roadmap-20261115/pm1115/p307v/lrat-b35s19-v16/lrat-results.tsv",
+  "table_sha256": "3b3155e99587f80ee3f8b530caa188f6287d42e17140a02a44c6c3d8e45855d7",
+  "row_file": "/home/jay/research/data/es308-20261114/inputs/b35s19-v16/extra.json",
+  "row_file_sha256": "1257c4a15a52d89451b7c73736d6182fd859892febdea421e7e4a72b74f5f25c",
+  "jobs": 1057,
+  "support_mismatch": 0,
+  "indices_cover_all_unit_rows": true
+ },
+ "verify308_s18v13": {
+  "table": "/home/jay/research/data/verify308-20261114/out/lrat/lrat-results.tsv",
+  "table_sha256": "8c87f057f1edbe8a7fc83c1eef7e42602d53404263b186e9deae153245312b8a",
+  "row_file": "/home/jay/research/data/es308-20261114/inputs/s18-v13/extra.json",
+  "row_file_sha256": "1b72eb934e00c7f5968cca0192f27829bfe145fe0a32e0e4c1d715fc1a86c098",
+  "jobs": 1020,
+  "support_mismatch": 0,
+  "indices_cover_all_unit_rows": true
+ }
+}

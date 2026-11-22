@@ -1,0 +1,15 @@
+N66Geo/Small.lean:40:40: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [fixedUnits, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hcl
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Geo/Small.lean:69:47: error: typeclass instance problem is stuck, it is often due to metavariables
+  GetElem? (List (Fin 70 × Fin 70)) ?m.46 (Fin 70 × Fin 70) (?m.67 j p)
+'N66Geo.holds_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.lexChoice' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'N66Geo.holes_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+Small lean wall=2.42 s maxrss=3225908 KB
+rc=1

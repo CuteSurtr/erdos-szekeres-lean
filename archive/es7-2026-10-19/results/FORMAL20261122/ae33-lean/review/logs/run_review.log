@@ -1,0 +1,33 @@
+LP_GEO=/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean:/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean:/home/jay/research/data/formalize-20261122/ae33-lean/review/olean
+AE33Enc.Basic rc=0 errors=0 AE33Enc.Basic wall=0.29 s maxrss=385216 KB
+AE33Enc.Clause rc=0 errors=0 AE33Enc.Clause wall=0.57 s maxrss=391900 KB
+AE33Enc.Gen rc=0 errors=0 AE33Enc.Gen wall=0.97 s maxrss=426792 KB
+AE33Enc.Data rc=0 errors=0 AE33Enc.Data wall=0.44 s maxrss=419516 KB
+AE33Enc.Bridge rc=0 errors=0 AE33Enc.Bridge wall=0.43 s maxrss=422052 KB
+AE33Geo.Slot rc=0 errors=0 AE33Geo.Slot wall=6.12 s maxrss=2069732 KB
+AE33Geo.Sem rc=0 errors=0 AE33Geo.Sem wall=10.30 s maxrss=3362716 KB
+AE33Geo.Sound rc=0 errors=0 AE33Geo.Sound wall=9.95 s maxrss=2201900 KB
+AE33Geo.Pair rc=0 errors=0 AE33Geo.Pair wall=8.39 s maxrss=4034408 KB
+AE33Geo.Radius1 rc=0 errors=0 AE33Geo.Radius1 wall=11.72 s maxrss=4239740 KB
+rebuild rc=0
+fidelity rc=0
+olean same AE33Enc/Basic 9940a5c594f73f39d510d9813ab57d75c335e3bbb376a5fd364516b2a11fb846
+olean same AE33Enc/Clause a88ea67328b873eadfda3a5ef70210237712d84e315312521eee6bcbfe32b878
+olean same AE33Enc/Gen ad86684639dd74b5d325357e6d476e45ee2f31ad4c3036c05fbc40505c26079b
+olean same AE33Enc/Data 46e0d16124a7f1ded6997b981b82b14010578258367e109e2f498ea501bd0e00
+olean same AE33Enc/Bridge d1795b4bf06734f3133894b718571cd20317e6b2f1e92e516ac346a4ae05d5fd
+olean same AE33Geo/Slot aebdfe949527b4ec6bca34505cf172573277061668a147f20394de79209f8455
+olean same AE33Geo/Sem c19528c7f3e97fcf31d38998b1addc16672a85e2b33f16a70a2ee8685efdfae3
+olean same AE33Geo/Sound a756fe58aa76ff71669fbe1b241e502685ea96b3f2e89aac76a9d638e86109ac
+olean same AE33Geo/Pair f28d7fc086d1a12fa8da14820669477ed90d11f6c9997c2cd146c412e02b51ef
+olean same AE33Geo/Radius1 1438d9028b122e138477f8ac82f5db6e711312d03314510977aef596ca76f210
+exe sha256 start 22e0574334a92de970f8f8af8206ddc902c4eeeecf17bdcc8d03971ac46ed748
+exe cnf 109 wall=13.75 s maxrss=391560 KB
+sample 109 ae_d14_26 exe_sha=251ca131852d1c4e7b78c6b28c6ff97c9d263f13093f6b0ee7960d4aadec5a20 kept_sha=251ca131852d1c4e7b78c6b28c6ff97c9d263f13093f6b0ee7960d4aadec5a20 cmp_same=1 bytes=29443198 header=p cnf 961 1093392
+exe cnf 110 wall=14.56 s maxrss=391300 KB
+sample 110 ae_d14_27 exe_sha=251ca131852d1c4e7b78c6b28c6ff97c9d263f13093f6b0ee7960d4aadec5a20 kept_sha=251ca131852d1c4e7b78c6b28c6ff97c9d263f13093f6b0ee7960d4aadec5a20 cmp_same=1 bytes=29443198 header=p cnf 961 1093392
+exe cnf 202 wall=13.20 s maxrss=408768 KB
+sample 202 ae_d31_32 exe_sha=754d820817697ae0511661031ee2f8e6d748cd7b51124c1bad1d816f153563e5 kept_sha=754d820817697ae0511661031ee2f8e6d748cd7b51124c1bad1d816f153563e5 cmp_same=1 bytes=30784382 header=p cnf 961 1141436
+exe sha256 end 22e0574334a92de970f8f8af8206ddc902c4eeeecf17bdcc8d03971ac46ed748
+cgroup memory.peak=1537 MB
+rc=0

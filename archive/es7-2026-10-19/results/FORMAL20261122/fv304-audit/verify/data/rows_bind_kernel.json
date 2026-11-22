@@ -1,0 +1,116 @@
+{
+ "blocks": {
+  "P": 812,
+  "Q": 208,
+  "U": 35,
+  "A": 970
+ },
+ "distinct_rows": 2021,
+ "U_and_A_common": 4,
+ "slices": {
+  "b33s18": {
+   "sha256": "1d6141afc91e3a4af67d713293f12a872c4d153e555e297b3d55028d9197d26d",
+   "hash_ok": true,
+   "capacity_ok": true,
+   "unit_rows": 0,
+   "rows_equal_in_order": true,
+   "rows_equal_as_sets": true,
+   "B": 33,
+   "T": 18,
+   "blocks": []
+  },
+  "s18-v13": {
+   "sha256": "1b72eb934e00c7f5968cca0192f27829bfe145fe0a32e0e4c1d715fc1a86c098",
+   "hash_ok": true,
+   "capacity_ok": true,
+   "unit_rows": 1020,
+   "rows_equal_in_order": true,
+   "rows_equal_as_sets": true,
+   "B": 34,
+   "T": 18,
+   "blocks": [
+    "P",
+    "Q"
+   ]
+  },
+  "s19": {
+   "sha256": "770d276db7b51d369e9a6fa1b9f36abb15d2539d224a71b19bf5fa738cbd9983",
+   "hash_ok": true,
+   "capacity_ok": true,
+   "unit_rows": 812,
+   "rows_equal_in_order": true,
+   "rows_equal_as_sets": true,
+   "B": 34,
+   "T": 19,
+   "blocks": [
+    "P"
+   ]
+  },
+  "b35s18-v13": {
+   "sha256": "c9c922c0a113c78effbbbef330c000af90b528152c9c511592f6210c1040caa7",
+   "hash_ok": true,
+   "capacity_ok": true,
+   "unit_rows": 1020,
+   "rows_equal_in_order": true,
+   "rows_equal_as_sets": true,
+   "B": 35,
+   "T": 18,
+   "blocks": [
+    "P",
+    "Q"
+   ]
+  },
+  "b35s19-v16": {
+   "sha256": "1257c4a15a52d89451b7c73736d6182fd859892febdea421e7e4a72b74f5f25c",
+   "hash_ok": true,
+   "capacity_ok": true,
+   "unit_rows": 1055,
+   "rows_equal_in_order": true,
+   "rows_equal_as_sets": true,
+   "B": 35,
+   "T": 19,
+   "blocks": [
+    "P",
+    "Q",
+    "U"
+   ]
+  },
+  "b35s20-v169": {
+   "sha256": "de4bcceba6d0c80ce6f63cbef15822cac8300780607c738569999a7d94b81916",
+   "hash_ok": true,
+   "capacity_ok": true,
+   "unit_rows": 1990,
+   "rows_equal_in_order": true,
+   "rows_equal_as_sets": true,
+   "B": 35,
+   "T": 20,
+   "blocks": [
+    "P",
+    "Q",
+    "A"
+   ]
+  }
+ },
+ "kernel": {
+  "P": {
+   "rows": 812,
+   "equal_source": true
+  },
+  "Q": {
+   "rows": 208,
+   "equal_source": true
+  },
+  "U": {
+   "rows": 35,
+   "equal_source": true
+  },
+  "A": {
+   "rows": 970,
+   "equal_source": true
+  },
+  "fIndices_equal": true,
+  "loIndices_equal": true
+ },
+ "problems": [],
+ "ok": true
+}

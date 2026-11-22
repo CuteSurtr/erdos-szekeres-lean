@@ -1,0 +1,21 @@
+Alloc lean wall=0.23 s maxrss=381108 KB
+Cover lean wall=0.27 s maxrss=384224 KB
+Rows lean wall=0.22 s maxrss=377328 KB
+Full lean wall=0.24 s maxrss=371156 KB
+Print lean wall=0.36 s maxrss=387624 KB
+Main lean wall=1.56 s maxrss=394644 KB
+N66Enc/DecodeA.lean:97:44: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Atom.cnt.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:104:44: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Atom.sbe.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DecodeA lean wall=5.51 s maxrss=472524 KB

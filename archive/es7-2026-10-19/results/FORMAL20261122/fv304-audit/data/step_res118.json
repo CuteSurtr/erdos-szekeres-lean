@@ -1,0 +1,367 @@
+{
+ "rebuilds": {
+  "Res118.Rows": {
+   "job": "res-Rows",
+   "unit": "esr-ag-fv4a-res-Rows",
+   "utc_end": "2026-11-22T07:51:17Z",
+   "seconds": 8.8,
+   "gate": {
+    "yield": false,
+    "tctl": 84.6,
+    "cpu_free": 4,
+    "ag_mb": 101,
+    "esr_mb": 1948
+   },
+   "systemd_run_rc": 0,
+   "systemd_run_stderr": "",
+   "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/Res118/Rows.lean",
+   "src_sha256": "d19bbdbd252441324d36e60bd34801a2d7f4b52025a831b802790b01a34e41a8",
+   "lean_rc": 0,
+   "exit_status": 0,
+   "signal": false,
+   "wall_s": 8.67,
+   "user_s": 8.4,
+   "max_rss_mb": 785,
+   "major_faults": 0,
+   "cg_peak_mb": 536,
+   "anon_peak_mb": 470,
+   "killed_80": false,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   },
+   "errors": [],
+   "sorry": false,
+   "axioms": [],
+   "olean": "/home/jay/research/data/formalize-20261122/fv304-audit/olean/Res118/Rows.olean",
+   "olean_sha256": "7d8fa1d2e9492923e94f3e6ec15ad016c2a0caba19f78b58ac121d178abcee87",
+   "res118_olean_sha256": "7d8fa1d2e9492923e94f3e6ec15ad016c2a0caba19f78b58ac121d178abcee87",
+   "byte_identical": true
+  },
+  "Res118.LemmaA": {
+   "job": "res-LemmaA",
+   "unit": "esr-ag-fv4a-res-LemmaA",
+   "utc_end": "2026-11-22T07:51:25Z",
+   "seconds": 8.0,
+   "gate": {
+    "yield": false,
+    "tctl": 84.6,
+    "cpu_free": 4,
+    "ag_mb": 23,
+    "esr_mb": 2423
+   },
+   "systemd_run_rc": 0,
+   "systemd_run_stderr": "",
+   "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/Res118/LemmaA.lean",
+   "src_sha256": "dea2773271e556bbfbbf5d1cf27c2ab0dbf7b8f2e98dfd24a163cfc6bd083a85",
+   "lean_rc": 0,
+   "exit_status": 0,
+   "signal": false,
+   "wall_s": 7.84,
+   "user_s": 7.31,
+   "max_rss_mb": 3589,
+   "major_faults": 0,
+   "cg_peak_mb": 800,
+   "anon_peak_mb": 712,
+   "killed_80": false,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   },
+   "errors": [],
+   "sorry": false,
+   "axioms": [
+    [
+     "Res118.Lo_eq",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.F_eq",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.Lo_card",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.F_card",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.sum_Lo_add_sum_F",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.loOwners_no_cup",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.loOwners_no_cap",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.lo_row",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ]
+   ],
+   "olean": "/home/jay/research/data/formalize-20261122/fv304-audit/olean/Res118/LemmaA.olean",
+   "olean_sha256": "135216d007a02e061fb86e19420c08b806879b795fa202bc0aa77f592f137b29",
+   "res118_olean_sha256": "135216d007a02e061fb86e19420c08b806879b795fa202bc0aa77f592f137b29",
+   "byte_identical": true
+  },
+  "Res118.Glue": {
+   "job": "res-Glue",
+   "unit": "esr-ag-fv4a-res-Glue",
+   "utc_end": "2026-11-22T07:53:38Z",
+   "seconds": 12.4,
+   "gate": {
+    "yield": false,
+    "tctl": 84.9,
+    "cpu_free": 5,
+    "ag_mb": 24,
+    "esr_mb": 1903
+   },
+   "systemd_run_rc": 0,
+   "systemd_run_stderr": "",
+   "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/Res118/Glue.lean",
+   "src_sha256": "50f9d6c10691f8376edea80f67b1e2ac0e5384718ec4c5017e2e6f7c3ab13a29",
+   "lean_rc": 0,
+   "exit_status": 0,
+   "signal": false,
+   "wall_s": 12.4,
+   "user_s": 11.79,
+   "max_rss_mb": 4300,
+   "major_faults": 2,
+   "cg_peak_mb": 1401,
+   "anon_peak_mb": 1322,
+   "killed_80": false,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   },
+   "errors": [],
+   "sorry": false,
+   "axioms": [
+    [
+     "Res118.nine_demands",
+     [
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.nine_mult",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.three_hF",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.hF18",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.hLo",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.slice_false",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "Res118.residual_bound_118_of_blocks",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ]
+   ],
+   "olean": "/home/jay/research/data/formalize-20261122/fv304-audit/olean/Res118/Glue.olean",
+   "olean_sha256": "64b1888fc98286a0af83f4b0e50331080c9739dd8800f8e21eb50fdcea464432",
+   "res118_olean_sha256": "64b1888fc98286a0af83f4b0e50331080c9739dd8800f8e21eb50fdcea464432",
+   "byte_identical": true
+  },
+  "Res118.Final": {
+   "job": "res-Final",
+   "unit": "esr-ag-fv4a-res-Final",
+   "utc_end": "2026-11-22T07:53:42Z",
+   "seconds": 4.1,
+   "gate": {
+    "yield": false,
+    "tctl": 85.4,
+    "cpu_free": 5,
+    "ag_mb": 24,
+    "esr_mb": 1907
+   },
+   "systemd_run_rc": 0,
+   "systemd_run_stderr": "",
+   "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/Res118/Final.lean",
+   "src_sha256": "7f9198b7660c2ff6329fe5ac3a640b1efa0e09d68f60b65c263cb3cc2713d83b",
+   "lean_rc": 0,
+   "exit_status": 0,
+   "signal": false,
+   "wall_s": 3.92,
+   "user_s": 3.42,
+   "max_rss_mb": 3366,
+   "major_faults": 0,
+   "cg_peak_mb": 418,
+   "anon_peak_mb": 329,
+   "killed_80": false,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   },
+   "errors": [],
+   "sorry": false,
+   "axioms": [
+    [
+     "Res118.rows_lengths",
+     []
+    ],
+    [
+     "Res118.residual_bound_118_of_slices",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ]
+   ],
+   "olean": "/home/jay/research/data/formalize-20261122/fv304-audit/olean/Res118/Final.olean",
+   "olean_sha256": "0d325186525ccc3b80bfd2e8f5b2075f5c8b8321a5a2430152ac5ed23674d821",
+   "res118_olean_sha256": "0d325186525ccc3b80bfd2e8f5b2075f5c8b8321a5a2430152ac5ed23674d821",
+   "byte_identical": true
+  },
+  "Res118.Compose304": {
+   "job": "res-Compose304",
+   "unit": "esr-ag-fv4a-res-Compose304",
+   "utc_end": "2026-11-22T07:53:45Z",
+   "seconds": 3.1,
+   "gate": {
+    "yield": false,
+    "tctl": 85.8,
+    "cpu_free": 2,
+    "ag_mb": 24,
+    "esr_mb": 1975
+   },
+   "systemd_run_rc": 0,
+   "systemd_run_stderr": "",
+   "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/Res118/Compose304.lean",
+   "src_sha256": "e8040287f5be312858f6a625f9b9685627ba0e366c1cb9abbab7161f2b87b699",
+   "lean_rc": 0,
+   "exit_status": 0,
+   "signal": false,
+   "wall_s": 2.95,
+   "user_s": 2.58,
+   "max_rss_mb": 3328,
+   "major_faults": 0,
+   "cg_peak_mb": 340,
+   "anon_peak_mb": 268,
+   "killed_80": false,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   },
+   "errors": [],
+   "sorry": false,
+   "axioms": [
+    [
+     "Res118.forces_304_of_slices",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ]
+   ],
+   "olean": "/home/jay/research/data/formalize-20261122/fv304-audit/olean/Res118/Compose304.olean",
+   "olean_sha256": "64af03bacb8e789a7c983bc284554e7287653c3e7f74c99badf7e38e08514e49",
+   "res118_olean_sha256": "64af03bacb8e789a7c983bc284554e7287653c3e7f74c99badf7e38e08514e49",
+   "byte_identical": true
+  }
+ },
+ "problems": [],
+ "findings": [],
+ "ok": true,
+ "utc_end": "2026-11-22T07:53:46Z",
+ "seconds": 157.2
+}

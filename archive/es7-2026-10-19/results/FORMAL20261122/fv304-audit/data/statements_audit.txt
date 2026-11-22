@@ -1,0 +1,6 @@
+E304Z.Final.excludes_67 : OmissionBalancedZ.ExcludesHoleBudgetZ 67
+E304Z.Final.forces_304_of_n66_res (n66 : OmissionZRow.N66Bound 55)
+  (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 304 8
+E304Z.root :
+  ¬∃ holes,
+      CompactChecker.FFeas CompactChecker.fcatZ 3132 252 67 (CompactChecker.pmask (CompactChecker.zerosF 252) []) holes

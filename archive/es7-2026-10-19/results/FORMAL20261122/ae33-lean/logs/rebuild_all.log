@@ -1,0 +1,194 @@
+AE33Enc.Basic wall=0.28 s maxrss=383092 KB
+AE33Enc.Clause wall=0.50 s maxrss=391552 KB
+AE33Enc.Gen wall=0.99 s maxrss=428820 KB
+AE33Enc.Data wall=0.44 s maxrss=419304 KB
+AE33Enc/Main.lean:20:8: warning: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+AE33Enc.Main wall=0.33 s maxrss=417828 KB
+'AE33.mem_cnf' depends on axioms: [propext, Quot.sound]
+'AE33.parse_cnfText' depends on axioms: [propext, Quot.sound]
+'AE33.texts_iff_cnfs' depends on axioms: [propext, Quot.sound]
+AE33Enc.Bridge wall=0.41 s maxrss=421192 KB
+AE33Geo.Slot wall=6.77 s maxrss=2069716 KB
+AE33Geo/Sem.lean:73:41: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1̵,̵ ̵h̵2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:73:45: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2̵,̵ ̵h̵3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:73:49: warning: This simp argument is unused:
+  h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h̵3̵,̵ ̵Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:73:87: warning: This simp argument is unused:
+  Nat.lt_asymm h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:76:42: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1̵,̵ ̵h̵2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:76:50: warning: This simp argument is unused:
+  h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h̵3̵,̵ ̵Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:76:71: warning: This simp argument is unused:
+  Nat.lt_asymm h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:78:41: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1̵,̵ ̵h̵2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:78:70: warning: This simp argument is unused:
+  Nat.lt_asymm h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:78:87: warning: This simp argument is unused:
+  Nat.lt_asymm h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:80:46: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2̵,̵ ̵h̵3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:80:50: warning: This simp argument is unused:
+  h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h̵3̵,̵ ̵Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:80:71: warning: This simp argument is unused:
+  Nat.lt_asymm h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:82:45: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2̵,̵ ̵h̵3, Nat.lt_asymm h1, Nat.lt_asymm h2,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:82:53: warning: This simp argument is unused:
+  Nat.lt_asymm h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵2, Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:82:87: warning: This simp argument is unused:
+  Nat.lt_asymm h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:85:54: warning: This simp argument is unused:
+  Nat.lt_asymm h1
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵2, Nat.lt_asymm h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:85:71: warning: This simp argument is unused:
+  Nat.lt_asymm h2
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2̵,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sem.lean:85:88: warning: This simp argument is unused:
+  Nat.lt_asymm h3
+
+Hint: Omit it from the simp argument list.
+  simp [sort3, h1, h2, h3, Nat.lt_asymm h1, Nat.lt_asymm h2,̵ ̵N̵a̵t̵.̵l̵t̵_̵a̵s̵y̵m̵m̵ ̵h̵3̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo.Sem wall=10.48 s maxrss=3363008 KB
+AE33Geo/Sound.lean:308:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.nodup_cons, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵not_or, List.not_mem_nil, not_false_eq_true,
+  ̲  ̲ ̲ ̲List.nodup_nil, and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:429:46: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo.Sound wall=11.02 s maxrss=2199744 KB
+'AE33Geo.cnf_sat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AE33Geo.ae33_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+AE33Geo.Pair wall=8.85 s maxrss=4036252 KB
+'AE33Geo.ae33_radius1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AE33Geo.ae33_radius0' depends on axioms: [propext, Classical.choice, Quot.sound]
+AE33Geo.Radius1 wall=14.59 s maxrss=4239612 KB
+AE33Geo.Audit wall=3.85 s maxrss=3097576 KB
+rebuild rc=0
+olean same ./AE33Enc/Basic.olean
+olean same ./AE33Enc/Bridge.olean
+olean same ./AE33Enc/Clause.olean
+olean same ./AE33Enc/Data.olean
+olean same ./AE33Enc/Gen.olean
+olean same ./AE33Enc/Main.olean
+olean DIFF ./AE33Geo/Audit.olean
+olean same ./AE33Geo/Pair.olean
+olean same ./AE33Geo/Radius1.olean
+olean same ./AE33Geo/Sem.olean
+olean same ./AE33Geo/Slot.olean
+olean same ./AE33Geo/Sound.olean
+cgroup memory.peak=1533 MB
+rebuild exit=0

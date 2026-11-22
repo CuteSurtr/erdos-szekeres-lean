@@ -1,0 +1,36 @@
+{
+ "exe_sha256": "eabe37912b332a844e8731d21f3bf4612a6ad2348a54a8d576c90c13476bd496",
+ "inputs": {
+  "/home/jay/research/data/roadmap-20261115/pm1115/p307v/lrat-b35s20-v169/lrat-summary.json": {
+   "sha256": "f80a720e3216b8b035fef6ee8713d0cfb0255772fb32ce5da78f1aa4bf3c1ec4",
+   "expected": "f80a720e3216b8b035fef6ee8713d0cfb0255772fb32ce5da78f1aa4bf3c1ec4"
+  },
+  "/home/jay/research/data/roadmap-20261115/pm1115/p307v/lrat-b35s19-v16/lrat-summary.json": {
+   "sha256": "7b8d9eca5dad3cb7b679954bd9fcc20069fd1bce23b421878317e108795aa8ab",
+   "expected": "7b8d9eca5dad3cb7b679954bd9fcc20069fd1bce23b421878317e108795aa8ab"
+  },
+  "/home/jay/research/data/roadmap-20261115/pm1115/p307v/lrat-b35s20-v169/lrat-results.tsv": {
+   "sha256": "a80cbba552f288f66da7e096dbea5ccd8d2eab59bb7abdb506d8d3ef85a6e0d2"
+  },
+  "/home/jay/research/data/roadmap-20261115/pm1115/p307v/lrat-b35s19-v16/lrat-results.tsv": {
+   "sha256": "3b3155e99587f80ee3f8b530caa188f6287d42e17140a02a44c6c3d8e45855d7"
+  },
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/pool_inventory.json": {
+   "sha256": "eef46b757c12c8b920bc4883dd893c811f31a5d1786c7902d27a912188630cc4"
+  }
+ },
+ "rows": 2025,
+ "counts": {
+  "BOUND": 2025
+ },
+ "distinct_supports": 2021,
+ "fresh_files_hashed": 2025,
+ "controls": {
+  "out_of_range_refused": true,
+  "unknown_block_refused": true,
+  "mutated_support": "28,40,46,49,54,59,66,69,76,78,93,95,106",
+  "mutated_hash_differs": true
+ },
+ "seconds": 770.0,
+ "limit_per_block": null
+}

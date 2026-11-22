@@ -1,0 +1,18 @@
+AE33Geo/Sound.lean:308:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.nodup_cons, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵not_or, List.not_mem_nil, not_false_eq_true,
+  ̲  ̲ ̲ ̲List.nodup_nil, and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:429:46: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Sound lean wall=12.10 s maxrss=2198856 KB
+cgroup memory.peak=425 MB
+rc=0

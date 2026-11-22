@@ -1,0 +1,65 @@
+== RowGeo.Members 2026-11-22T18:12:42+09:00
+RowGeo.Members rc=0 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.79 	Maximum resident set size (kbytes): 420564 
+== RowGeo.Bridge 2026-11-22T18:12:44+09:00
+RowGeo.Bridge rc=1 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.20 	Maximum resident set size (kbytes): 3209152 
+STOP at Bridge
+RowGeo/Bridge.lean:57:79: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:58:44: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:56:78: error: unsolved goals
+k : ℕ
+hk : 0 < k
+i j : ℕ
+hi : i < k
+hj : j < k
+b : Bool
+⊢ Expr.atom (Atom.before (fk hk (i % 16)) (fk hk (j % 16))) b = Expr.atom (Atom.before (fk hk i) (fk hk j)) b
+RowGeo/Bridge.lean:64:67: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:65:82: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:71:80: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:72:80: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:93:79: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:94:44: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:94:90: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:92:92: error: unsolved goals
+k : ℕ
+hk : 0 < k
+i j l : ℕ
+hi : i < k
+hj : j < k
+hl : l < k
+b : Bool
+⊢ Expr.atom (Atom.positive (fk hk (i % 16)) (fk hk (j % 16)) (fk hk (l % 16))) b =
+    Expr.atom (Atom.positive (fk hk i) (fk hk j) (fk hk l)) b
+RowGeo/Bridge.lean:106:72: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:76: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:106:72: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:76: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:106:72: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:76: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:106:72: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:76: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:106:72: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:76: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:108:48: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:106:72: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:20: error(lean.unknownIdentifier): Unknown identifier `h16`
+RowGeo/Bridge.lean:107:48: error(lean.unknownIdentifier): Unknown identifier `h16`

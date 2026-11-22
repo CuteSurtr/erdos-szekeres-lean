@@ -1,0 +1,11 @@
+N66Geo/Owners.lean:47:77: error: failed to synthesize
+  Decidable
+    (∀ a < 5,
+      ∀ b < 5, ∀ c < 5, ∀ d < 5, b ≤ a → c ≤ b → d ≤ c → (stateList.any fun p => decide (p = (a, b, c, d))) = true)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'N66Geo.profOf_mem' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'N66Geo.idxOf_injective' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+Owners lean wall=1.88 s maxrss=3204128 KB
+rc=1

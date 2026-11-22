@@ -1,0 +1,34 @@
+{
+ "time": "2026-11-22 19:10:36",
+ "exe_sha256_start": "22e0574334a92de970f8f8af8206ddc902c4eeeecf17bdcc8d03971ac46ed748",
+ "exe_sha256_end": "22e0574334a92de970f8f8af8206ddc902c4eeeecf17bdcc8d03971ac46ed748",
+ "hashes_203_tsv_sha256": "90cbb85d506d390e8d6a226296cc7581eeecee10611dce20f2f896031dc2b010",
+ "hashes_203_tsv_expected": "90cbb85d506d390e8d6a226296cc7581eeecee10611dce20f2f896031dc2b010",
+ "rows": 203,
+ "match": 203,
+ "fail": [],
+ "distinct_exe_hashes": 194,
+ "pts_rc": 0,
+ "pts_sha256": "cb6a5327b26b869ab39baadf0ade737882f8473dc1ccfbd377d06405a59eb54d",
+ "pts_equals_ae33_txt": true,
+ "refusal_controls": {
+  "cnf 203": {
+   "rc": 1,
+   "stdout_bytes": 0
+  },
+  "cnf x": {
+   "rc": 1,
+   "stdout_bytes": 0
+  },
+  "cnf -1": {
+   "rc": 1,
+   "stdout_bytes": 0
+  },
+  "(no args)": {
+   "rc": 1,
+   "stdout_bytes": 0
+  }
+ },
+ "total_wall_s": 2804.5,
+ "PASS": false
+}

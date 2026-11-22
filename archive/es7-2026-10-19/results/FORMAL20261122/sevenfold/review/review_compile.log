@@ -1,0 +1,269 @@
+# 2026-11-22T07:09:28+09:00 LEAN_PATH=/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/geo/.lake/packages/aesop/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/geo/.lake/packages/batteries/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/geo/.lake/packages/importGraph/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/geo/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/geo/.lake/packages/mathlib/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/geo/.lake/packages/plausible/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/geo/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/geo/.lake/packages/Qq/.lake/build/lib/lean:/home/jay/research/data/formalize-20261122/sevenfold/olean
+'EncB.Geo7.sevenfold_es8_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.sevenfold_es8_order7_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.sevenfold70_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.geo7Bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.modelO_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.exists_perturbation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_satisfiable_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.no_modelO_7810_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.text7810_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.sevenfold_es8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_satisfiable_7810' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.sevenfold_octagon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_base7810' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB7810_unsat_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.no_modelO_7810_of_bytes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.sevenfold70_of_no_modelO' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.layerLab_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.invariant_seventh_of_order7' depends on axioms: [propext, Classical.choice, Quot.sound]
+EncB.Geo7.sevenfold_es8_of_text : (∀ (nv : ℕ) (G : List (List ℤ)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G) →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) S →
+        65 ≤ S.card → ErdosSzekeres.HasConvexNGon 8 S
+EncB.Geo7.sevenfold_es8_order7_of_text : (∀ (nv : ℕ) (G : List (List ℤ)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G) →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ∀ (j : ℕ),
+        1 ≤ j ∧ j ≤ 6 →
+          ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi * ↑j / 7)) S →
+            65 ≤ S.card → ErdosSzekeres.HasConvexNGon 8 S
+EncB.Geo7.sevenfold70_of_unsat : ¬EncB.DimacsSatisfiable (EncB.encB 7 8 10) → ErdosSzekeres.LayerLemma.Sevenfold70
+EncB.Geo7.geo7Bridge : EncB.Geo7.Geo7Bridge
+@EncB.Geo7.modelO_of_counterexample : ∀ {m K t : ℕ},
+  3 ≤ m →
+    4 ≤ K →
+      K ≤ 2 * m →
+        ∀ {T : Finset ErdosSzekeres.Point} {c : ErdosSzekeres.Point},
+          ErdosSzekeres.GeneralPosition T →
+            c ∉ T →
+              ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / ↑m)) T →
+                ¬ErdosSzekeres.HasConvexNGon K T → T.card = m * t → Nonempty (EncB.ModelO m K t)
+@EncB.Geo7.exists_perturbation : ∀ {m t : ℕ} {T : Finset ErdosSzekeres.Point} {c : ErdosSzekeres.Point}
+  (L : EncB.Geo7.LayerLab m t T c) {v : ℝ},
+  0 < v →
+    (∀ (a b d : EncB.Pt),
+        EncB.PtOk m t a →
+          EncB.PtOk m t b → EncB.PtOk m t d → EncB.Distinct3 a b d → ErdosSzekeres.orient (L.P a) (L.P b) (L.P d) ≠ 0) →
+      ∃ η,
+        0 < η ∧
+          (∀ (a b d : EncB.Pt),
+              EncB.PtOk m t a →
+                EncB.PtOk m t b →
+                  EncB.PtOk m t d →
+                    EncB.Distinct3 a b d →
+                      (0 < ErdosSzekeres.orient (L.Pη η a) (L.Pη η b) (L.Pη η d) ↔
+                        0 < ErdosSzekeres.orient (L.P a) (L.P b) (L.P d))) ∧
+            (∀ (i j : ℕ), i < t → j < t → i ≠ j → ∀ (k : ℤ), L.ψ i + ↑i * η - (L.ψ j + ↑j * η) ≠ ↑k * v) ∧
+              ∀ i < t, L.ψ i + ↑i * η < 2 * Real.pi / ↑m
+@EncB.encB_satisfiable_odd : ∀ {m K t : ℕ},
+  m % 2 = 1 → 2 ≤ m → ∀ (M : EncB.ModelO m K t), EncB.DimacsSatisfiable (EncB.encB m K t)
+EncB.no_modelO_7810_of_text : (∀ (nv : ℕ) (G : List (List ℤ)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G) →
+  ∀ (a : EncB.ModelO 7 8 10), False
+EncB.text7810_iff : (∀ (nv : ℕ) (G : List (List ℤ)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G) ↔
+  ¬EncB.DimacsSatisfiable (EncB.encB 7 8 10)
+EncB.Geo7.sevenfold_es8 : ¬EncB.DimacsSatisfiable (EncB.encB 7 8 10) →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) S →
+        65 ≤ S.card → ErdosSzekeres.HasConvexNGon 8 S
+ErdosSzekeres.LayerLemma.sevenfold_octagon : ErdosSzekeres.LayerLemma.Sevenfold70 →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) S →
+        65 ≤ S.card → ErdosSzekeres.HasConvexNGon 8 S
+@EncB.Geo7.invariant_seventh_of_order7 : ∀ {S : Finset ErdosSzekeres.Point} {c : ErdosSzekeres.Point} {j : ℕ},
+  1 ≤ j ∧ j ≤ 6 →
+    ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi * ↑j / 7)) S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) S
+EncB.Geo7.sevenfold_es8_of_text : ∀
+  (h :
+    ∀ (nv : Nat) (G : List.{0} (List.{0} Int)),
+      @Eq.{1} (Option.{0} (Prod.{0, 0} Nat (List.{0} (List.{0} Int))))
+          (EncB.parseDimacs
+            (EncB.cnfText
+              (EncB.encode (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 10) (instOfNatNat (nat_lit 10))))
+              (@List.nil.{0} Int)))
+          (@Option.some.{0} (Prod.{0, 0} Nat (List.{0} (List.{0} Int)))
+            (@Prod.mk.{0, 0} Nat (List.{0} (List.{0} Int)) nv G)) →
+        Not (EncB.DimacsSatisfiable G))
+  (S : Finset.{0} ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S)
+  (hinv :
+    ErdosSzekeres.LayerLemma.Invariant
+      (ErdosSzekeres.LayerLemma.rotAbout c
+        (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+          (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+            (@OfNat.ofNat.{0} Real (nat_lit 2)
+              (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+                (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                  (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))))))
+            Real.pi)
+          (@OfNat.ofNat.{0} Real (nat_lit 7)
+            (@instOfNatAtLeastTwo.{0} Real (nat_lit 7) Real.instNatCast
+              (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 6) (instOfNatNat (nat_lit 6)))
+                (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5)))))))))
+      S)
+  (hcard :
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 65) (instOfNatNat (nat_lit 65)))
+      (@Finset.card.{0} ErdosSzekeres.Point S)),
+  ErdosSzekeres.HasConvexNGon (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))) S
+@[reducible] def ErdosSzekeres.Point : Type :=
+Fin 2 → ℝ
+def ErdosSzekeres.GeneralPosition : Finset ErdosSzekeres.Point → Prop :=
+fun s => ∀ a ∈ s, ∀ b ∈ s, ∀ c ∈ s, a ≠ b → a ≠ c → b ≠ c → ¬Collinear ℝ {a, b, c}
+def ErdosSzekeres.ConvexPosition : Finset ErdosSzekeres.Point → Prop :=
+fun s => ConvexIndependent ℝ fun p => ↑p
+def ErdosSzekeres.HasConvexNGon : ℕ → Finset ErdosSzekeres.Point → Prop :=
+fun n s => ∃ t ⊆ s, t.card = n ∧ ErdosSzekeres.ConvexPosition t
+def ErdosSzekeres.LayerLemma.Invariant : (ErdosSzekeres.Point → ErdosSzekeres.Point) →
+  Finset ErdosSzekeres.Point → Prop :=
+fun f S => ∀ p ∈ S, f p ∈ S
+def ErdosSzekeres.LayerLemma.rotAbout : ErdosSzekeres.Point → ℝ → ErdosSzekeres.Point → ErdosSzekeres.Point :=
+fun c θ p =>
+  ![c 0 + Real.cos θ * (p 0 - c 0) - Real.sin θ * (p 1 - c 1),
+    c 1 + Real.sin θ * (p 0 - c 0) + Real.cos θ * (p 1 - c 1)]
+def ErdosSzekeres.LayerLemma.Sevenfold70 : Prop :=
+∀ (T : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition T →
+    c ∉ T →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) T →
+        T.card = 70 → ErdosSzekeres.HasConvexNGon 8 T
+def EncB.Geo7.Geo7Bridge : Prop :=
+∀ (T : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition T →
+    c ∉ T →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) T →
+        T.card = 70 → ¬ErdosSzekeres.HasConvexNGon 8 T → Nonempty (EncB.ModelO 7 8 10)
+def EncB.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
+fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = true ∨ l < 0 ∧ ν l.natAbs = false
+def EncB.DimacsSatisfiable : List (List ℤ) → Prop :=
+fun cls => ∃ ν, EncB.DimacsSat cls ν
+def EncB.cnfText : EncB.Enc → List ℤ → String :=
+fun e cube => EncB.renderCube e.nv e.clauses (EncB.bodyR e.clauses) cube
+def EncB.renderCube : ℕ → List (List ℤ) → String → List ℤ → String :=
+fun nv F bodyF cube => EncB.headerR nv (EncB.cubeCnf F cube).length ++ EncB.cubeBodyR bodyF cube
+def EncB.encode : ℕ → ℕ → ℕ → EncB.Enc :=
+fun m K t =>
+  have cls := EncB.genCoded m K t;
+  have codes := EncB.allCodesOf m K t cls;
+  have nm := EncB.numberMap codes;
+  { clauses := List.map (fun cl => List.map (EncB.renumberLit nm) cl) cls, nv := codes.length, codes := codes,
+    nmap := nm }
+def EncB.encB : ℕ → ℕ → ℕ → List (List ℤ) :=
+fun m K t => (EncB.encode m K t).clauses
+def EncB.numVars : ℕ → ℕ → ℕ → ℕ :=
+fun m K t => (EncB.encode m K t).nv
+def EncB.cubeCnf : List (List ℤ) → List ℤ → List (List ℤ) :=
+fun F cube => F ++ List.map (fun z => [z]) cube
+def EncB.parseDimacs : String → Option (ℕ × List (List ℤ)) :=
+fun s => EncB.parseDimacsChars s.data
+structure EncB.ModelO (m K t : ℕ) : Type
+number of parameters: 3
+fields:
+  EncB.ModelO.chi : EncB.Pt → EncB.Pt → EncB.Pt → Bool
+  EncB.ModelO.psiLt : ℕ → ℕ → Bool
+  EncB.ModelO.hb : ℕ → Bool
+  EncB.ModelO.psiLt_irrefl : ∀ (i : ℕ), self.psiLt i i = false
+  EncB.ModelO.psiLt_trans : ∀ (i j k : ℕ), self.psiLt i j = true → self.psiLt j k = true → self.psiLt i k = true
+  EncB.ModelO.psiLt_total : ∀ (i j : ℕ), i < t → j < t → i ≠ j → self.psiLt i j = true ∨ self.psiLt j i = true
+  EncB.ModelO.psiLt_zero : ∀ (i : ℕ), 0 < i → i < t → self.psiLt 0 i = true
+  EncB.ModelO.hb_zero : self.hb 0 = true
+  EncB.ModelO.chi_rot : ∀ (a b d : EncB.Pt),
+      EncB.PtOk m t a →
+        EncB.PtOk m t b → EncB.PtOk m t d → self.chi (EncB.rot m a) (EncB.rot m b) (EncB.rot m d) = self.chi a b d
+  EncB.ModelO.chi_cycle : ∀ (a b d : EncB.Pt),
+      EncB.PtOk m t a → EncB.PtOk m t b → EncB.PtOk m t d → EncB.Distinct3 a b d → self.chi b d a = self.chi a b d
+  EncB.ModelO.chi_swap : ∀ (a b d : EncB.Pt),
+      EncB.PtOk m t a → EncB.PtOk m t b → EncB.PtOk m t d → EncB.Distinct3 a b d → self.chi a d b = !self.chi a b d
+  EncB.ModelO.ruleA : ∀ (a b d : EncB.Pt),
+      EncB.PtOk m t a →
+        EncB.PtOk m t b →
+          EncB.PtOk m t d →
+            EncB.Distinct3 a b d →
+              EncB.AltCCW (2 * m) self.psiLt (EncB.liftO self.hb a) (EncB.liftO self.hb b) (EncB.liftO self.hb d) →
+                self.chi a b d = true
+  EncB.ModelO.ruleB : ∀ (a b d : EncB.Pt),
+      EncB.PtOk m t a →
+        EncB.PtOk m t b →
+          EncB.PtOk m t d →
+            EncB.Distinct3 a b d →
+              EncB.BlockCCW (2 * m) self.psiLt (EncB.liftO self.hb a) (EncB.liftO self.hb b) (EncB.liftO self.hb d) →
+                b.1 ≤ a.1 → b.1 ≤ d.1 → self.chi a b d = true
+  EncB.ModelO.nest : ∀ (i j k : ℕ), i < j → j < t → k < m → self.chi (i, 0) (i, 1) (j, k) = true
+  EncB.ModelO.noChain : ∀ i < t,
+      ∀ (q : ℕ → EncB.Pt),
+        (∀ s < K - 1, EncB.InQ m t i (q s)) →
+          (∀ (s : ℕ), s + 1 < K - 1 → self.chi (i, 0) (q s) (q (s + 1)) = true) →
+            (∀ (s : ℕ), s + 2 < K - 1 → self.chi (q s) (q (s + 1)) (q (s + 2)) = true) → False
+constructor:
+  EncB.ModelO.mk {m K t : ℕ} (chi : EncB.Pt → EncB.Pt → EncB.Pt → Bool) (psiLt : ℕ → ℕ → Bool) (hb : ℕ → Bool)
+    (psiLt_irrefl : ∀ (i : ℕ), psiLt i i = false)
+    (psiLt_trans : ∀ (i j k : ℕ), psiLt i j = true → psiLt j k = true → psiLt i k = true)
+    (psiLt_total : ∀ (i j : ℕ), i < t → j < t → i ≠ j → psiLt i j = true ∨ psiLt j i = true)
+    (psiLt_zero : ∀ (i : ℕ), 0 < i → i < t → psiLt 0 i = true) (hb_zero : hb 0 = true)
+    (chi_rot :
+      ∀ (a b d : EncB.Pt),
+        EncB.PtOk m t a →
+          EncB.PtOk m t b → EncB.PtOk m t d → chi (EncB.rot m a) (EncB.rot m b) (EncB.rot m d) = chi a b d)
+    (chi_cycle :
+      ∀ (a b d : EncB.Pt),
+        EncB.PtOk m t a → EncB.PtOk m t b → EncB.PtOk m t d → EncB.Distinct3 a b d → chi b d a = chi a b d)
+    (chi_swap :
+      ∀ (a b d : EncB.Pt),
+        EncB.PtOk m t a → EncB.PtOk m t b → EncB.PtOk m t d → EncB.Distinct3 a b d → chi a d b = !chi a b d)
+    (ruleA :
+      ∀ (a b d : EncB.Pt),
+        EncB.PtOk m t a →
+          EncB.PtOk m t b →
+            EncB.PtOk m t d →
+              EncB.Distinct3 a b d →
+                EncB.AltCCW (2 * m) psiLt (EncB.liftO hb a) (EncB.liftO hb b) (EncB.liftO hb d) → chi a b d = true)
+    (ruleB :
+      ∀ (a b d : EncB.Pt),
+        EncB.PtOk m t a →
+          EncB.PtOk m t b →
+            EncB.PtOk m t d →
+              EncB.Distinct3 a b d →
+                EncB.BlockCCW (2 * m) psiLt (EncB.liftO hb a) (EncB.liftO hb b) (EncB.liftO hb d) →
+                  b.1 ≤ a.1 → b.1 ≤ d.1 → chi a b d = true)
+    (nest : ∀ (i j k : ℕ), i < j → j < t → k < m → chi (i, 0) (i, 1) (j, k) = true)
+    (noChain :
+      ∀ i < t,
+        ∀ (q : ℕ → EncB.Pt),
+          (∀ s < K - 1, EncB.InQ m t i (q s)) →
+            (∀ (s : ℕ), s + 1 < K - 1 → chi (i, 0) (q s) (q (s + 1)) = true) →
+              (∀ (s : ℕ), s + 2 < K - 1 → chi (q s) (q (s + 1)) (q (s + 2)) = true) → False) :
+    EncB.ModelO m K t
+def ConvexIndependent.{u_1, u_2, u_3} : (𝕜 : Type u_1) →
+  {E : Type u_2} →
+    {ι : Type u_3} →
+      [inst : Semiring 𝕜] → [PartialOrder 𝕜] → [inst_2 : AddCommGroup E] → [Module 𝕜 E] → (ι → E) → Prop :=
+fun 𝕜 {E} {ι} [Semiring 𝕜] [PartialOrder 𝕜] [AddCommGroup E] [Module 𝕜 E] p =>
+  ∀ (s : Set ι) (x : ι), p x ∈ (convexHull 𝕜) (p '' s) → x ∈ s
+def Collinear.{u_1, u_2, u_3} : (k : Type u_1) →
+  {V : Type u_2} →
+    {P : Type u_3} →
+      [inst : DivisionRing k] → [inst_1 : AddCommGroup V] → [Module k V] → [AddTorsor V P] → Set P → Prop :=
+fun k {V} {P} [DivisionRing k] [AddCommGroup V] [Module k V] [AddTorsor V P] s => Module.rank k ↥(vectorSpan k s) ≤ 1
+'review_D2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_D2_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_D2_order7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_D2_rot_only' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_D2_concl_only' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_h_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'review_def_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+axiom scan own (13): 402 constants in 13 modules (missing: []); union of axioms used: [propext,
+ Classical.choice,
+ Quot.sound]; axiom declarations: []
+axiom scan vendored (32): 1792 constants in 32 modules (missing: []); union of axioms used: [propext,
+ Classical.choice,
+ Quot.sound]; axiom declarations: []
+rc=0 2026-11-22T07:09:41+09:00
+olean store unchanged during the compile

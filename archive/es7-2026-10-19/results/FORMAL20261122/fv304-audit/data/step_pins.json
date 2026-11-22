@@ -1,0 +1,161 @@
+{
+ "check_pins_es304z": {
+  "rc": 0,
+  "result": {
+   "library": {
+    "library_pinned_verified": 4952,
+    "library_digest_sha256": "39bc40235acc18c3046a9fe2a68cf5f2560fc5c0b25ae96861ee4496645c44c0",
+    "library_pinned_utc": "2026-11-06T00:11:21Z"
+   },
+   "route_inputs": 13,
+   "catalogs_equal": {
+    "BalancedProof/Catalog.olean": true,
+    "BalancedCoverCutsV2.olean": true
+   },
+   "symlinks_ok": true,
+   "problems": []
+  },
+  "stderr": "",
+  "script_sha256": "b484b16eda357fc93f35ff400731010f84aee6848b25aa0ef3fd7b6a1d1491ca"
+ },
+ "lake_roots": [
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean",
+  "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean"
+ ],
+ "lake_oleans_newer_than_freeze": 0,
+ "library_pinned": 4952,
+ "library_written_utc": "2026-11-06T00:11:21Z",
+ "library_digest_sha256": "39bc40235acc18c3046a9fe2a68cf5f2560fc5c0b25ae96861ee4496645c44c0",
+ "chain311_modules": 196,
+ "chain311_verified": 196,
+ "lemmaz_olean_sha256": "ef249ba167372ac31f995027299efa1eeddac251ff73e4ef093a990ab02c353c",
+ "balancedbudgetsz_olean_sha256": "38d8f8aed92e5e2fefbd86bf46607f920eea28dc5b757a5a30e26734b0cbe71a",
+ "git": {
+  "experiments/omission-compact-checker-2026-11-05/CompactChecker/FcatZ.lean": {
+   "work": "da544bd95576acb24319931d9673b0c8431e7b0bade7f8c921df4128c457c040",
+   "git_head": "da544bd95576acb24319931d9673b0c8431e7b0bade7f8c921df4128c457c040",
+   "record_pin": null
+  },
+  "experiments/omission-compact-checker-2026-11-05/CompactChecker/BridgeZ.lean": {
+   "work": "382bf3bc9ae0b5ea720f1603bd1e56d740640e399946d162f0f8ad65bb3bb0ea",
+   "git_head": "382bf3bc9ae0b5ea720f1603bd1e56d740640e399946d162f0f8ad65bb3bb0ea",
+   "record_pin": null
+  },
+  "experiments/omission-compact-checker-2026-11-05/drive_es304z.py": {
+   "work": "9ed2ab91abee1ff782b72e21769ffb3bd6d79cdd1e723ca5b0ea5165e76ddde0",
+   "git_head": "9ed2ab91abee1ff782b72e21769ffb3bd6d79cdd1e723ca5b0ea5165e76ddde0",
+   "record_pin": null
+  },
+  "experiments/omission-compact-checker-2026-11-05/export_es304z.py": {
+   "work": "eee1151c51d49f60a364f3358d1e3110dbc0740e54bdb37ab70cc41a2d118870",
+   "git_head": "eee1151c51d49f60a364f3358d1e3110dbc0740e54bdb37ab70cc41a2d118870",
+   "record_pin": null
+  },
+  "experiments/omission-compact-checker-2026-11-05/root_es304z.py": {
+   "work": "d42bee9a29c524a86974ad5464898c3549ac47e195cd5698388dde00db4b6762",
+   "git_head": "d42bee9a29c524a86974ad5464898c3549ac47e195cd5698388dde00db4b6762",
+   "record_pin": null
+  },
+  "experiments/omission-compact-checker-2026-11-05/lean_es304z.sh": {
+   "work": "faaa1e87eaf8016929226bb53145b981d71ec45cc30c7c3d77016271ac083ee1",
+   "git_head": "faaa1e87eaf8016929226bb53145b981d71ec45cc30c7c3d77016271ac083ee1",
+   "record_pin": null
+  },
+  "experiments/omission-compact-checker-2026-11-05/mk_ctx_es304z.py": {
+   "work": "03303fcbc62dd2bd4bae9a9809fea4c692c8943275cd9f0ea5c06bcb8c241518",
+   "git_head": "03303fcbc62dd2bd4bae9a9809fea4c692c8943275cd9f0ea5c06bcb8c241518",
+   "record_pin": null
+  },
+  "experiments/omission-compact-checker-2026-11-05/check_pins_es304z.py": {
+   "work": "b484b16eda357fc93f35ff400731010f84aee6848b25aa0ef3fd7b6a1d1491ca",
+   "git_head": "b484b16eda357fc93f35ff400731010f84aee6848b25aa0ef3fd7b6a1d1491ca",
+   "record_pin": null
+  },
+  "experiments/omission-compact-checker-2026-11-05/drive_es310.py": {
+   "work": "7992026f1e94a98cdd1412e8272a30b3559120ce8364ab9c943d75e6534bdd5f",
+   "git_head": "7992026f1e94a98cdd1412e8272a30b3559120ce8364ab9c943d75e6534bdd5f",
+   "record_pin": null
+  },
+  "experiments/omission-compact-checker-2026-11-05/export_es310.py": {
+   "work": "29854a3799db7ebdb29311255c2a089a0f2c9957beaa2d839583d50033920b1f",
+   "git_head": "29854a3799db7ebdb29311255c2a089a0f2c9957beaa2d839583d50033920b1f",
+   "record_pin": null
+  },
+  "archive/es7-2026-10-19/results/ES305N20261119/LemmaZ.lean": {
+   "work": "e6b28efaa80cb2158180daf12dd4ce76cf2b86cc833ae9d79b1c08ffca005d65",
+   "git_head": "e6b28efaa80cb2158180daf12dd4ce76cf2b86cc833ae9d79b1c08ffca005d65",
+   "record_pin": "e6b28efaa80cb2158180daf12dd4ce76cf2b86cc833ae9d79b1c08ffca005d65"
+  },
+  "archive/es7-2026-10-19/results/ES305N20261119/BalancedBudgetsZ.lean": {
+   "work": "3e0651a023a58df5a9a0fff4c7d0fc1c5859dfe40b67e9a4e17cdc313224ab1a",
+   "git_head": "3e0651a023a58df5a9a0fff4c7d0fc1c5859dfe40b67e9a4e17cdc313224ab1a",
+   "record_pin": "3e0651a023a58df5a9a0fff4c7d0fc1c5859dfe40b67e9a4e17cdc313224ab1a"
+  }
+ },
+ "route_record": {
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/logs/es311/final311-compact.json",
+  "sha256": "cc43fdf0710e902f26fea45b97f27d8214bc67a48c9f5d54d716fdcbd22e7667",
+  "verified": true,
+  "route": "same",
+  "inputs": {
+   "CompactChecker/Bridge311Bal": "08e7fc1b807459a82408fd6bcd810d87757c48958db7e80f53056b598871c4b7",
+   "CompactChecker/Bridge311Res": "21dc7075517ff3cf6ba468a93bfdf718fd66986a41b906c6e775547825f84d71",
+   "CompactChecker/Fast": "1e55d4aa6a683f34148ec7b1e4ef9f8c1da0186059aac21185ef426ef98dfe35",
+   "CompactChecker/Fast2": "14ce7ba1c6515c419fc3a1a2ad12946f606076df83595679b9eb0132bda8e51e",
+   "CompactChecker/Fcat2650": "2b6c9f27f46837077b0bf390daba860c03d330cb84f145e6d091201787acde2c",
+   "CompactChecker/Fcat62": "a532a3ce3968a5f96c5254fb741749aebf59c6fa8c76dc2122d5629e36fa55b0",
+   "CompactChecker/Packed": "d0186d8387cd9e924511fb588a03d6d6d1e2b2c19c1dd06f533151ba523a7cd9",
+   "CompactChecker/Path": "c0e64d18168c9f9fa2bf8bd01ffeb7967e92e80ca815f67804aa2d9cfaec4fd1",
+   "CompactChecker/Split": "9d6e752b82da2425f9bde5ca7e27b5a8efddb49ea109df6f780078121668e8e9",
+   "CompactChecker/WordPack": "bbd6dbe5ab9ae50e449d48c49dc2b929aadca1a3481d2d718de68ad9bed2552f",
+   "ext/BalancedProof/Catalog": "d650caa857c8351dfd842004c11dedd326433a84e219f630211e980a21251c64",
+   "ext/BalancedCoverCutsV2": "6f7f0ba1fa02149418c24b2d137341a2b556440352d2de7e6dd740b8fd9b0aa0",
+   "ext/Residual32Bridge2650/Catalog": "4fe35a09c81e5c1ed530d3f2b7daa7ec93f65ecca286d2beab66fc6feb369df8"
+  }
+ },
+ "fv304_compactchecker_symlinks": {
+  "Cat62.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Cat62.olean",
+  "Fast.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Fast.olean",
+  "Bridge311Defs.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Bridge311Defs.olean",
+  "Chunk733.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Chunk733.olean",
+  "Bridge311Res.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Bridge311Res.olean",
+  "Split.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Split.olean",
+  "Chunk95777B.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Chunk95777B.olean",
+  "Fcat2650.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Fcat2650.olean",
+  "Fcat62.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Fcat62.olean",
+  "Chunk733F.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Chunk733F.olean",
+  "Chunk733G4.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Chunk733G4.olean",
+  "Chunk733Raw.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Chunk733Raw.olean",
+  "Bridge311Bal.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Bridge311Bal.olean",
+  "WordPack.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/WordPack.olean",
+  "Chunk733W4.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Chunk733W4.olean",
+  "Fast2.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Fast2.olean",
+  "Chunk733W2.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Chunk733W2.olean",
+  "Chunk733G4Reject.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Chunk733G4Reject.olean",
+  "Packed.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Packed.olean",
+  "Chunk95777W4.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Chunk95777W4.olean",
+  "Path.olean": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Path.olean"
+ },
+ "fv304_compactchecker_plain": [
+  "BridgeZ.olean",
+  "FcatZ.olean"
+ ],
+ "lean_binary": "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+ "lean_binary_sha256": "8fadc3ed92cc9decb94c96ee9c0876e91e03a3a5e69138f32114f02789e2766c",
+ "lean_version": "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+ "lean_path_txt_sha256": "65463fd5680b9f1ccadb2e7ea0bb9a2820d5d4d5ae445d61318834d477f4a2cf",
+ "problems": [],
+ "findings": [],
+ "ok": true,
+ "utc_end": "2026-11-22T07:51:02Z",
+ "seconds": 2.8
+}

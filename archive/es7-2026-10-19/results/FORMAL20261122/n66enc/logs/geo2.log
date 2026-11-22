@@ -1,0 +1,43 @@
+N66Geo/Tail.lean:93:30: error: failed to synthesize
+  Decidable (M.occ ⟨i + 1, ?m.14⟩)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+N66Geo/Tail.lean:97:16: error: Application type mismatch: The argument
+  Nat.mod_eq_of_lt hi
+has type
+  i % 69 = i
+but is expected to have type
+  ↑?m.35 = ↑?m.36
+in the application
+  Fin.ext (Nat.mod_eq_of_lt hi)
+N66Geo/Tail.lean:135:8: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f - g ≤ 0
+  1 ≤ e ≤ 14
+  e - f ≤ 0
+  e - h ≥ 1
+  1 ≤ d ≤ 66
+  0 ≤ c ≤ 66
+  0 ≤ b ≤ 14
+where
+ b := ↑M.holes
+ c := ↑i'
+ d := ↑a
+ e := ↑j
+ f := ↑(M.holesUpTo a)
+ g := ↑(M.holesUpTo a.succ)
+ h := ↑(M.holesUpTo (a + 1))
+N66Geo/Tail.lean:114:29: warning: This simp argument is unused:
+  Bool.not_false
+
+Hint: Omit it from the simp argument list.
+  simp only [SLit.neg,̵ ̵B̵o̵o̵l̵.̵n̵o̵t̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'N66Geo.holds_card' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+Tail lean wall=2.28 s maxrss=3197740 KB
+rc=1

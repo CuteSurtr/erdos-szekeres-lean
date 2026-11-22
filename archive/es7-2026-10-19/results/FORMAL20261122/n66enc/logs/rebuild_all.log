@@ -1,0 +1,168 @@
+States lean wall=1.43 s maxrss=554548 KB
+Atoms lean wall=0.50 s maxrss=391372 KB
+Clauses lean wall=0.52 s maxrss=394388 KB
+Alloc lean wall=0.18 s maxrss=380620 KB
+Cover lean wall=0.18 s maxrss=384284 KB
+Rows lean wall=0.15 s maxrss=377400 KB
+Full lean wall=0.12 s maxrss=371760 KB
+Print lean wall=0.24 s maxrss=387780 KB
+Main lean wall=0.43 s maxrss=395440 KB
+N66Enc/DecodeA.lean:97:44: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Atom.cnt.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:104:44: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Atom.sbe.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DecodeA lean wall=5.71 s maxrss=469940 KB
+'N66Enc.ofCode_code' depends on axioms: [propext, Quot.sound]
+'N66Enc.decodeNum_num' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Enc.dimacsSat_of_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+DecodeB lean wall=0.39 s maxrss=391864 KB
+'N66Enc.printClause_mem' depends on axioms: [propext, Quot.sound]
+'N66Enc.fullUnsat_of_text' depends on axioms: [propext, Quot.sound]
+'N66Enc.no_base_model' depends on axioms: [propext, Quot.sound]
+'N66Enc.base_unsat_of_cubes' depends on axioms: [propext, Quot.sound]
+Bridge lean wall=0.59 s maxrss=403124 KB
+'N66Geo.no_model_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.holds_baseS' depends on axioms: [propext, Classical.choice, Quot.sound]
+Model lean wall=1.83 s maxrss=3184392 KB
+N66Geo/Tail.lean:191:34: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'N66Geo.holds_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.holds_sb' depends on axioms: [propext, Classical.choice, Quot.sound]
+Tail lean wall=3.19 s maxrss=3222820 KB
+'N66Geo.signotope_of_config' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.n66_bound_55_of_gaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+Assembly lean wall=2.01 s maxrss=3201844 KB
+'N66Geo.leaves132_length' depends on axioms: [propext]
+'N66Geo.n66Bound_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.holds_eager_of_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+Facts lean wall=1.85 s maxrss=3200048 KB
+'N66Geo.profOf_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.idxOf_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+Owners lean wall=2.42 s maxrss=3370536 KB
+N66Geo/Small.lean:40:40: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [fixedUnits, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hcl
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'N66Geo.holds_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.lexChoice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.holes_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Small lean wall=2.85 s maxrss=3234184 KB
+'N66Geo.n66_bound_55_of_gaps2' depends on axioms: [propext, Classical.choice, Quot.sound]
+Final lean wall=1.89 s maxrss=3190300 KB
+N66Geo/Families.lean:33:60: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_flatMap, List.mem_map, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hcl
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Geo/Families.lean:87:47: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_append, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hcl
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'N66Geo.holds_thresh' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.holds_ceue' depends on axioms: [propext, Classical.choice, Quot.sound]
+Families lean wall=2.38 s maxrss=3198176 KB
+N66Geo/Sem.lean:78:83: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+N66Geo/Sem.lean:78:83: warning: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'N66Geo.agree_befLit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.agree_oriLit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.agree_geAtom' depends on axioms: [propext, Classical.choice, Quot.sound]
+Sem lean wall=2.46 s maxrss=3201172 KB
+N66Geo/Triple.lean:147:30: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hcl
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'N66Geo.holds_triple' depends on axioms: [propext, Classical.choice, Quot.sound]
+Triple lean wall=2.90 s maxrss=3211236 KB
+N66Geo/Quad.lean:44:34: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [bad4, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hq
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Geo/Quad.lean:115:30: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hcl
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'N66Geo.holds_quad' depends on axioms: [propext, Classical.choice, Quot.sound]
+Quad lean wall=2.83 s maxrss=3206340 KB
+'N66Geo.n66_bound_55_of_gaps3' depends on axioms: [propext, Classical.choice, Quot.sound]
+Final3 lean wall=1.75 s maxrss=3191796 KB
+'N66Geo.holds_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+Pos lean wall=2.59 s maxrss=3228628 KB
+'N66Geo.n66_bound_55_of_gaps4' depends on axioms: [propext, Classical.choice, Quot.sound]
+Final4 lean wall=1.78 s maxrss=3192056 KB
+'N66Geo.holds_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+Pair lean wall=2.96 s maxrss=3224760 KB
+'N66Geo.n66_bound_55_of_gaps5' depends on axioms: [propext, Classical.choice, Quot.sound]
+Final5 lean wall=2.14 s maxrss=3193580 KB
+'N66Geo.labels_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.column_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+MirrorA lean wall=1.79 s maxrss=3206056 KB
+'N66Geo.idxOf_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.mirror_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+MirrorB lean wall=3.88 s maxrss=3361708 KB
+'N66Geo.n66_bound_55_of_capCup55' depends on axioms: [propext, Classical.choice, Quot.sound]
+Final6 lean wall=1.66 s maxrss=3191920 KB
+'N66Geo.capCup55_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+CapCup lean wall=51.14 s maxrss=3825284 KB
+End lean wall=1.98 s maxrss=3207364 KB
+== audit (forbidden tokens in lean/; comments included)
+audit: none found
+	Command being timed: "/home/jay/research/data/formalize-20261122/n66enc/tools/rebuild_all.sh"
+	User time (seconds): 100.35
+	System time (seconds): 8.45
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:48.94
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3825284
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 34
+	Minor (reclaiming a frame) page faults: 1599198
+	Voluntary context switches: 28960
+	Involuntary context switches: 1216
+	Swaps: 0
+	File system inputs: 2344
+	File system outputs: 45608
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rc=0

@@ -1,0 +1,33 @@
+== RowGeo.Decode 2026-11-22T18:12:27+09:00
+RowGeo.Decode rc=0 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.51 	Maximum resident set size (kbytes): 462032 
+== RowGeo.Members 2026-11-22T18:12:31+09:00
+RowGeo.Members rc=1 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.46 	Maximum resident set size (kbytes): 404524 
+STOP at Members
+RowGeo/Members.lean:40:55: warning: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+RowGeo/Members.lean:50:9: error: Application type mismatch: The argument
+  hp
+has type
+  i < j ∧ ∀ (a' : Nat), False → j < a'
+but is expected to have type
+  i < j
+in the application
+  And.intro hp
+RowGeo/Members.lean:56:17: error: Application type mismatch: The argument
+  hp.right
+has type
+  j < l ∧ ∀ (a' : Nat), False → l < a'
+but is expected to have type
+  j < l
+in the application
+  And.intro hp.right
+RowGeo/Members.lean:63:27: error: Application type mismatch: The argument
+  hp.right.right
+has type
+  c < d ∧ ∀ (a' : Nat), False → d < a'
+but is expected to have type
+  c < d
+in the application
+  And.intro hp.right.right
+rc=1

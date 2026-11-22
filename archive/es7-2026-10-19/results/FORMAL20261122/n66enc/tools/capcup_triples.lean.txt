@@ -1,0 +1,130 @@
+  have t012 : 0 < orient P0 P1 P2 := L012
+  have t013 : 0 < orient P0 P1 P3 := L013
+  have t014 : 0 < orient P0 P1 P4 := L014
+  have t015 : 0 < orient P0 P1 P5 := mixed_pos P0 P4 P0 P1 P5 x04 x01 x05 x54
+    (le_of_eq (by unfold orient; ring)) (le_of_lt L014) (by rw [show orient P0 P4 P5 = -(orient P0 P5 P4) by unfold orient; ring]; linarith [U054])
+  have t016 : 0 < orient P0 P1 P6 := mixed_pos P0 P4 P0 P1 P6 x04 x01 x06 x64
+    (le_of_eq (by unfold orient; ring)) (le_of_lt L014) (by rw [show orient P0 P4 P6 = -(orient P0 P6 P4) by unfold orient; ring]; linarith [U064])
+  have t017 : 0 < orient P0 P1 P7 := mixed_pos P0 P4 P0 P1 P7 x04 x01 x07 x74
+    (le_of_eq (by unfold orient; ring)) (le_of_lt L014) (by rw [show orient P0 P4 P7 = -(orient P0 P7 P4) by unfold orient; ring]; linarith [U074])
+  have t023 : 0 < orient P0 P2 P3 := L023
+  have t024 : 0 < orient P0 P2 P4 := L024
+  have t025 : 0 < orient P0 P2 P5 := mixed_pos P0 P4 P0 P2 P5 x04 x02 x05 x54
+    (le_of_eq (by unfold orient; ring)) (le_of_lt L024) (by rw [show orient P0 P4 P5 = -(orient P0 P5 P4) by unfold orient; ring]; linarith [U054])
+  have t026 : 0 < orient P0 P2 P6 := mixed_pos P0 P4 P0 P2 P6 x04 x02 x06 x64
+    (le_of_eq (by unfold orient; ring)) (le_of_lt L024) (by rw [show orient P0 P4 P6 = -(orient P0 P6 P4) by unfold orient; ring]; linarith [U064])
+  have t027 : 0 < orient P0 P2 P7 := mixed_pos P0 P4 P0 P2 P7 x04 x02 x07 x74
+    (le_of_eq (by unfold orient; ring)) (le_of_lt L024) (by rw [show orient P0 P4 P7 = -(orient P0 P7 P4) by unfold orient; ring]; linarith [U074])
+  have t034 : 0 < orient P0 P3 P4 := L034
+  have t035 : 0 < orient P0 P3 P5 := mixed_pos P0 P4 P0 P3 P5 x04 x03 x05 x54
+    (le_of_eq (by unfold orient; ring)) (le_of_lt L034) (by rw [show orient P0 P4 P5 = -(orient P0 P5 P4) by unfold orient; ring]; linarith [U054])
+  have t036 : 0 < orient P0 P3 P6 := mixed_pos P0 P4 P0 P3 P6 x04 x03 x06 x64
+    (le_of_eq (by unfold orient; ring)) (le_of_lt L034) (by rw [show orient P0 P4 P6 = -(orient P0 P6 P4) by unfold orient; ring]; linarith [U064])
+  have t037 : 0 < orient P0 P3 P7 := mixed_pos P0 P4 P0 P3 P7 x04 x03 x07 x74
+    (le_of_eq (by unfold orient; ring)) (le_of_lt L034) (by rw [show orient P0 P4 P7 = -(orient P0 P7 P4) by unfold orient; ring]; linarith [U074])
+  have t045 : 0 < orient P0 P4 P5 := by
+    have e : orient P0 P4 P5 = -(orient P0 P5 P4) := by unfold orient; ring
+    rw [e]; linarith [U054]
+  have t046 : 0 < orient P0 P4 P6 := by
+    have e : orient P0 P4 P6 = -(orient P0 P6 P4) := by unfold orient; ring
+    rw [e]; linarith [U064]
+  have t047 : 0 < orient P0 P4 P7 := by
+    have e : orient P0 P4 P7 = -(orient P0 P7 P4) := by unfold orient; ring
+    rw [e]; linarith [U074]
+  have t056 : 0 < orient P0 P5 P6 := by
+    have e : orient P0 P5 P6 = -(orient P0 P6 P5) := by unfold orient; ring
+    rw [e]; linarith [U065]
+  have t057 : 0 < orient P0 P5 P7 := by
+    have e : orient P0 P5 P7 = -(orient P0 P7 P5) := by unfold orient; ring
+    rw [e]; linarith [U075]
+  have t067 : 0 < orient P0 P6 P7 := by
+    have e : orient P0 P6 P7 = -(orient P0 P7 P6) := by unfold orient; ring
+    rw [e]; linarith [U076]
+  have t123 : 0 < orient P1 P2 P3 := L123
+  have t124 : 0 < orient P1 P2 P4 := L124
+  have t125 : 0 < orient P1 P2 P5 := mixed_pos P0 P4 P1 P2 P5 x04 x12 x05 x54
+    (le_of_lt (by rw [show orient P1 P2 P0 = orient P0 P1 P2 by unfold orient; ring]; exact L012)) (le_of_lt L124) (by rw [show orient P0 P4 P5 = -(orient P0 P5 P4) by unfold orient; ring]; linarith [U054])
+  have t126 : 0 < orient P1 P2 P6 := mixed_pos P0 P4 P1 P2 P6 x04 x12 x06 x64
+    (le_of_lt (by rw [show orient P1 P2 P0 = orient P0 P1 P2 by unfold orient; ring]; exact L012)) (le_of_lt L124) (by rw [show orient P0 P4 P6 = -(orient P0 P6 P4) by unfold orient; ring]; linarith [U064])
+  have t127 : 0 < orient P1 P2 P7 := mixed_pos P0 P4 P1 P2 P7 x04 x12 x07 x74
+    (le_of_lt (by rw [show orient P1 P2 P0 = orient P0 P1 P2 by unfold orient; ring]; exact L012)) (le_of_lt L124) (by rw [show orient P0 P4 P7 = -(orient P0 P7 P4) by unfold orient; ring]; linarith [U074])
+  have t134 : 0 < orient P1 P3 P4 := L134
+  have t135 : 0 < orient P1 P3 P5 := mixed_pos P0 P4 P1 P3 P5 x04 x13 x05 x54
+    (le_of_lt (by rw [show orient P1 P3 P0 = orient P0 P1 P3 by unfold orient; ring]; exact L013)) (le_of_lt L134) (by rw [show orient P0 P4 P5 = -(orient P0 P5 P4) by unfold orient; ring]; linarith [U054])
+  have t136 : 0 < orient P1 P3 P6 := mixed_pos P0 P4 P1 P3 P6 x04 x13 x06 x64
+    (le_of_lt (by rw [show orient P1 P3 P0 = orient P0 P1 P3 by unfold orient; ring]; exact L013)) (le_of_lt L134) (by rw [show orient P0 P4 P6 = -(orient P0 P6 P4) by unfold orient; ring]; linarith [U064])
+  have t137 : 0 < orient P1 P3 P7 := mixed_pos P0 P4 P1 P3 P7 x04 x13 x07 x74
+    (le_of_lt (by rw [show orient P1 P3 P0 = orient P0 P1 P3 by unfold orient; ring]; exact L013)) (le_of_lt L134) (by rw [show orient P0 P4 P7 = -(orient P0 P7 P4) by unfold orient; ring]; linarith [U074])
+  have t145 : 0 < orient P1 P4 P5 := mixed_pos P0 P4 P1 P4 P5 x04 x14 x05 x54
+    (le_of_lt (by rw [show orient P1 P4 P0 = orient P0 P1 P4 by unfold orient; ring]; exact L014)) (le_of_eq (by unfold orient; ring)) (by rw [show orient P0 P4 P5 = -(orient P0 P5 P4) by unfold orient; ring]; linarith [U054])
+  have t146 : 0 < orient P1 P4 P6 := mixed_pos P0 P4 P1 P4 P6 x04 x14 x06 x64
+    (le_of_lt (by rw [show orient P1 P4 P0 = orient P0 P1 P4 by unfold orient; ring]; exact L014)) (le_of_eq (by unfold orient; ring)) (by rw [show orient P0 P4 P6 = -(orient P0 P6 P4) by unfold orient; ring]; linarith [U064])
+  have t147 : 0 < orient P1 P4 P7 := mixed_pos P0 P4 P1 P4 P7 x04 x14 x07 x74
+    (le_of_lt (by rw [show orient P1 P4 P0 = orient P0 P1 P4 by unfold orient; ring]; exact L014)) (le_of_eq (by unfold orient; ring)) (by rw [show orient P0 P4 P7 = -(orient P0 P7 P4) by unfold orient; ring]; linarith [U074])
+  have t156 : 0 < orient P1 P5 P6 := by
+    have h := mixed_neg P0 P4 P6 P5 P1 x04 x65 x01 x14
+      (by rw [show orient P6 P5 P0 = orient P0 P6 P5 by unfold orient; ring]; exact le_of_lt U065) (le_of_lt U654) (by rw [show orient P0 P4 P1 = -(orient P0 P1 P4) by unfold orient; ring]; linarith [L014])
+    rw [show orient P1 P5 P6 = -(orient P6 P5 P1) by unfold orient; ring]; linarith
+  have t157 : 0 < orient P1 P5 P7 := by
+    have h := mixed_neg P0 P4 P7 P5 P1 x04 x75 x01 x14
+      (by rw [show orient P7 P5 P0 = orient P0 P7 P5 by unfold orient; ring]; exact le_of_lt U075) (le_of_lt U754) (by rw [show orient P0 P4 P1 = -(orient P0 P1 P4) by unfold orient; ring]; linarith [L014])
+    rw [show orient P1 P5 P7 = -(orient P7 P5 P1) by unfold orient; ring]; linarith
+  have t167 : 0 < orient P1 P6 P7 := by
+    have h := mixed_neg P0 P4 P7 P6 P1 x04 x76 x01 x14
+      (by rw [show orient P7 P6 P0 = orient P0 P7 P6 by unfold orient; ring]; exact le_of_lt U076) (le_of_lt U764) (by rw [show orient P0 P4 P1 = -(orient P0 P1 P4) by unfold orient; ring]; linarith [L014])
+    rw [show orient P1 P6 P7 = -(orient P7 P6 P1) by unfold orient; ring]; linarith
+  have t234 : 0 < orient P2 P3 P4 := L234
+  have t235 : 0 < orient P2 P3 P5 := mixed_pos P0 P4 P2 P3 P5 x04 x23 x05 x54
+    (le_of_lt (by rw [show orient P2 P3 P0 = orient P0 P2 P3 by unfold orient; ring]; exact L023)) (le_of_lt L234) (by rw [show orient P0 P4 P5 = -(orient P0 P5 P4) by unfold orient; ring]; linarith [U054])
+  have t236 : 0 < orient P2 P3 P6 := mixed_pos P0 P4 P2 P3 P6 x04 x23 x06 x64
+    (le_of_lt (by rw [show orient P2 P3 P0 = orient P0 P2 P3 by unfold orient; ring]; exact L023)) (le_of_lt L234) (by rw [show orient P0 P4 P6 = -(orient P0 P6 P4) by unfold orient; ring]; linarith [U064])
+  have t237 : 0 < orient P2 P3 P7 := mixed_pos P0 P4 P2 P3 P7 x04 x23 x07 x74
+    (le_of_lt (by rw [show orient P2 P3 P0 = orient P0 P2 P3 by unfold orient; ring]; exact L023)) (le_of_lt L234) (by rw [show orient P0 P4 P7 = -(orient P0 P7 P4) by unfold orient; ring]; linarith [U074])
+  have t245 : 0 < orient P2 P4 P5 := mixed_pos P0 P4 P2 P4 P5 x04 x24 x05 x54
+    (le_of_lt (by rw [show orient P2 P4 P0 = orient P0 P2 P4 by unfold orient; ring]; exact L024)) (le_of_eq (by unfold orient; ring)) (by rw [show orient P0 P4 P5 = -(orient P0 P5 P4) by unfold orient; ring]; linarith [U054])
+  have t246 : 0 < orient P2 P4 P6 := mixed_pos P0 P4 P2 P4 P6 x04 x24 x06 x64
+    (le_of_lt (by rw [show orient P2 P4 P0 = orient P0 P2 P4 by unfold orient; ring]; exact L024)) (le_of_eq (by unfold orient; ring)) (by rw [show orient P0 P4 P6 = -(orient P0 P6 P4) by unfold orient; ring]; linarith [U064])
+  have t247 : 0 < orient P2 P4 P7 := mixed_pos P0 P4 P2 P4 P7 x04 x24 x07 x74
+    (le_of_lt (by rw [show orient P2 P4 P0 = orient P0 P2 P4 by unfold orient; ring]; exact L024)) (le_of_eq (by unfold orient; ring)) (by rw [show orient P0 P4 P7 = -(orient P0 P7 P4) by unfold orient; ring]; linarith [U074])
+  have t256 : 0 < orient P2 P5 P6 := by
+    have h := mixed_neg P0 P4 P6 P5 P2 x04 x65 x02 x24
+      (by rw [show orient P6 P5 P0 = orient P0 P6 P5 by unfold orient; ring]; exact le_of_lt U065) (le_of_lt U654) (by rw [show orient P0 P4 P2 = -(orient P0 P2 P4) by unfold orient; ring]; linarith [L024])
+    rw [show orient P2 P5 P6 = -(orient P6 P5 P2) by unfold orient; ring]; linarith
+  have t257 : 0 < orient P2 P5 P7 := by
+    have h := mixed_neg P0 P4 P7 P5 P2 x04 x75 x02 x24
+      (by rw [show orient P7 P5 P0 = orient P0 P7 P5 by unfold orient; ring]; exact le_of_lt U075) (le_of_lt U754) (by rw [show orient P0 P4 P2 = -(orient P0 P2 P4) by unfold orient; ring]; linarith [L024])
+    rw [show orient P2 P5 P7 = -(orient P7 P5 P2) by unfold orient; ring]; linarith
+  have t267 : 0 < orient P2 P6 P7 := by
+    have h := mixed_neg P0 P4 P7 P6 P2 x04 x76 x02 x24
+      (by rw [show orient P7 P6 P0 = orient P0 P7 P6 by unfold orient; ring]; exact le_of_lt U076) (le_of_lt U764) (by rw [show orient P0 P4 P2 = -(orient P0 P2 P4) by unfold orient; ring]; linarith [L024])
+    rw [show orient P2 P6 P7 = -(orient P7 P6 P2) by unfold orient; ring]; linarith
+  have t345 : 0 < orient P3 P4 P5 := mixed_pos P0 P4 P3 P4 P5 x04 x34 x05 x54
+    (le_of_lt (by rw [show orient P3 P4 P0 = orient P0 P3 P4 by unfold orient; ring]; exact L034)) (le_of_eq (by unfold orient; ring)) (by rw [show orient P0 P4 P5 = -(orient P0 P5 P4) by unfold orient; ring]; linarith [U054])
+  have t346 : 0 < orient P3 P4 P6 := mixed_pos P0 P4 P3 P4 P6 x04 x34 x06 x64
+    (le_of_lt (by rw [show orient P3 P4 P0 = orient P0 P3 P4 by unfold orient; ring]; exact L034)) (le_of_eq (by unfold orient; ring)) (by rw [show orient P0 P4 P6 = -(orient P0 P6 P4) by unfold orient; ring]; linarith [U064])
+  have t347 : 0 < orient P3 P4 P7 := mixed_pos P0 P4 P3 P4 P7 x04 x34 x07 x74
+    (le_of_lt (by rw [show orient P3 P4 P0 = orient P0 P3 P4 by unfold orient; ring]; exact L034)) (le_of_eq (by unfold orient; ring)) (by rw [show orient P0 P4 P7 = -(orient P0 P7 P4) by unfold orient; ring]; linarith [U074])
+  have t356 : 0 < orient P3 P5 P6 := by
+    have h := mixed_neg P0 P4 P6 P5 P3 x04 x65 x03 x34
+      (by rw [show orient P6 P5 P0 = orient P0 P6 P5 by unfold orient; ring]; exact le_of_lt U065) (le_of_lt U654) (by rw [show orient P0 P4 P3 = -(orient P0 P3 P4) by unfold orient; ring]; linarith [L034])
+    rw [show orient P3 P5 P6 = -(orient P6 P5 P3) by unfold orient; ring]; linarith
+  have t357 : 0 < orient P3 P5 P7 := by
+    have h := mixed_neg P0 P4 P7 P5 P3 x04 x75 x03 x34
+      (by rw [show orient P7 P5 P0 = orient P0 P7 P5 by unfold orient; ring]; exact le_of_lt U075) (le_of_lt U754) (by rw [show orient P0 P4 P3 = -(orient P0 P3 P4) by unfold orient; ring]; linarith [L034])
+    rw [show orient P3 P5 P7 = -(orient P7 P5 P3) by unfold orient; ring]; linarith
+  have t367 : 0 < orient P3 P6 P7 := by
+    have h := mixed_neg P0 P4 P7 P6 P3 x04 x76 x03 x34
+      (by rw [show orient P7 P6 P0 = orient P0 P7 P6 by unfold orient; ring]; exact le_of_lt U076) (le_of_lt U764) (by rw [show orient P0 P4 P3 = -(orient P0 P3 P4) by unfold orient; ring]; linarith [L034])
+    rw [show orient P3 P6 P7 = -(orient P7 P6 P3) by unfold orient; ring]; linarith
+  have t456 : 0 < orient P4 P5 P6 := by
+    have e : orient P4 P5 P6 = -(orient P6 P5 P4) := by unfold orient; ring
+    rw [e]; linarith [U654]
+  have t457 : 0 < orient P4 P5 P7 := by
+    have e : orient P4 P5 P7 = -(orient P7 P5 P4) := by unfold orient; ring
+    rw [e]; linarith [U754]
+  have t467 : 0 < orient P4 P6 P7 := by
+    have e : orient P4 P6 P7 = -(orient P7 P6 P4) := by unfold orient; ring
+    rw [e]; linarith [U764]
+  have t567 : 0 < orient P5 P6 P7 := by
+    have e : orient P5 P6 P7 = -(orient P7 P6 P5) := by unfold orient; ring
+    rw [e]; linarith [U765]

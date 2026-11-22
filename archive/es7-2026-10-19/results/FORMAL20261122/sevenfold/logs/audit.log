@@ -1,0 +1,6 @@
+check 1: logs/encb_vendor.sha256: 16 files
+check 1: logs/geo_vendor.sha256: 16 files
+check 2: 13 own files scanned
+check 3: 13 declarations mention the instance, all terms
+check 4: 45 modules, last build rc=0 and source unchanged since
+AUDIT PASS

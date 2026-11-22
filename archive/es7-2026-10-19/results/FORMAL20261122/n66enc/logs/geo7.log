@@ -1,0 +1,14 @@
+N66Geo/Assembly.lean:35:41: error: typeclass instance problem is stuck, it is often due to metavariables
+  GetElem? (List (Fin 70 × Fin 70)) ?m.20 (Fin 70 × Fin 70) (?m.54 j p t q)
+N66Geo/Assembly.lean:103:37: error: Function expected at
+  hlex
+but this term has type
+  LexOcc (n66Occ c'.cup n)
+
+Note: Expected a function because this term is being applied to the argument
+  j
+'N66Geo.signotope_of_config' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.n66_bound_55_of_gaps' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+Assembly lean wall=2.85 s maxrss=3191756 KB
+rc=1

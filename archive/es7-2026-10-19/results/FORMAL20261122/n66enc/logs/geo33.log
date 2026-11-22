@@ -1,0 +1,68 @@
+N66Geo/Pair.lean:158:6: error: Tactic `apply` failed: could not unify the conclusion of `hown ?m.524 ?m.525`
+  ∃ l ∈ ?m.524 ++ [N66Enc.guard u, N66Enc.guard v], Agree M l
+with the goal
+  ∃
+    l ∈
+      [(befLit u v).neg] ++ gePart false i j (a' + 1) ++ (gePart true i j (b' + 1) ++ [N66Enc.guard u, N66Enc.guard v]),
+    M.meaning l.2 = l.1
+
+Note: The full type of `hown ?m.524 ?m.525` is
+  (∀ (X Y : ℕ),
+      X < Y →
+        Y < M.n →
+          idxOf M.cup X = ↑u → idxOf M.cup Y = ↑v → ∃ l ∈ ?m.524 ++ [N66Enc.guard u, N66Enc.guard v], Agree M l) →
+    ∃ l ∈ ?m.524 ++ [N66Enc.guard u, N66Enc.guard v], Agree M l
+
+case isFalse.isFalse
+M : Model
+i j u v : Fin 70
+hij : i ≠ j
+huv : u = i ∧ v = j ∨ u = j ∧ v = i
+hne : u ≠ v
+hgeq : ∀ (cup : Bool) (k : ℕ), geAtom cup i j k = geAtom cup u v k
+hown :
+  ∀ (pre : List SLit),
+    (befLit u v).neg ∈ pre →
+      (∀ (X Y : ℕ),
+          X < Y →
+            Y < M.n →
+              idxOf M.cup X = ↑u → idxOf M.cup Y = ↑v → ∃ l ∈ pre ++ [N66Enc.guard u, N66Enc.guard v], Agree M l) →
+        ∃ l ∈ pre ++ [N66Enc.guard u, N66Enc.guard v], Agree M l
+h✝ : ¬(!can u v) = true
+a' : ℕ
+ha' : a' < 4
+b' : ℕ
+hb' : b' < 4
+hnot : ¬domRef (prof u) (prof v) (a' + 1, b' + 1) = true
+hcl✝ :
+  [(befLit u v).neg] ++ gePart false i j (a' + 1) ++ gePart true i j (b' + 1) ++ [N66Enc.guard u, N66Enc.guard v] ∈
+    List.flatMap
+      (fun a' =>
+        List.filterMap
+          (fun b' =>
+            if domRef (prof u) (prof v) (a' + 1, b' + 1) = true then none
+            else
+              some
+                ([(befLit u v).neg] ++ gePart false i j (a' + 1) ++ gePart true i j (b' + 1) ++
+                  [N66Enc.guard u, N66Enc.guard v]))
+          (List.range 4))
+      (List.range 4)
+hcl :
+  [(befLit u v).neg] ++ gePart false i j (a' + 1) ++ gePart true i j (b' + 1) ++ [N66Enc.guard u, N66Enc.guard v] ∈
+    List.filterMap
+      (fun b' =>
+        if domRef (prof u) (prof v) (a' + 1, b' + 1) = true then none
+        else
+          some
+            ([(befLit u v).neg] ++ gePart false i j (a' + 1) ++ gePart true i j (b' + 1) ++
+              [N66Enc.guard u, N66Enc.guard v]))
+      (List.range 4)
+⊢ ∃
+    l ∈
+      [(befLit u v).neg] ++ gePart false i j (a' + 1) ++ (gePart true i j (b' + 1) ++ [N66Enc.guard u, N66Enc.guard v]),
+    M.meaning l.2 = l.1
+N66Geo/Pair.lean:158:23: error: `simp` made no progress
+'N66Geo.holds_pair' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+Pair lean wall=3.43 s maxrss=3208016 KB
+rc=1

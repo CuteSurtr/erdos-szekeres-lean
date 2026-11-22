@@ -1,0 +1,289 @@
+SRC_OK 15 files = manifest
+ENCB_SRC_EQ_GIT_HEAD Gen ec97b3355b9cfe39f85e9b011ae91c429b5e3764683b9d601cd25a2360a02adf
+ENCB_SRC_EQ_GIT_HEAD Dimacs 48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8
+ENCB_SRC_EQ_GIT_HEAD Coded 2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f
+ENCB_SRC_EQ_GIT_HEAD Cover c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98
+ENCB_SRC_EQ_GIT_HEAD Render c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82
+EncB.Gen lean wall=1.48 s maxrss=417864 KB
+ENCB_OLEAN_SAME Gen
+ENCB_IR_SAME Gen
+EncB.Dimacs lean wall=0.72 s maxrss=394648 KB
+ENCB_OLEAN_SAME Dimacs
+ENCB_IR_SAME Dimacs
+EncB.Coded lean wall=2.02 s maxrss=435156 KB
+ENCB_OLEAN_SAME Coded
+ENCB_IR_SAME Coded
+EncB.Cover lean wall=0.28 s maxrss=391048 KB
+ENCB_OLEAN_SAME Cover
+ENCB_IR_SAME Cover
+EncB.Render lean wall=3.00 s maxrss=500676 KB
+ENCB_OLEAN_SAME Render
+ENCB_IR_SAME Render
+V182Enc/Gen lean wall=0.31 s maxrss=387612 KB
+OLEAN_SAME_AS_WORKER V182Enc/Gen
+V182Enc/Main lean wall=0.29 s maxrss=386328 KB
+OLEAN_SAME_AS_WORKER V182Enc/Main
+V182Geo/Defs.lean:119:80: warning: unused variable `u`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+V182Geo/Defs.lean:119:82: warning: unused variable `v`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+V182Geo/Defs lean wall=1.26 s maxrss=1547220 KB
+OLEAN_SAME_AS_WORKER V182Geo/Defs
+V182Geo/Masks lean wall=3.31 s maxrss=1732340 KB
+OLEAN_SAME_AS_WORKER V182Geo/Masks
+V182Geo/Sound lean wall=1.64 s maxrss=1560840 KB
+OLEAN_SAME_AS_WORKER V182Geo/Sound
+V182Geo/Cover lean wall=5.16 s maxrss=2003944 KB
+OLEAN_SAME_AS_WORKER V182Geo/Cover
+V182Geo/Norm.lean:244:39: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [unitPairs, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hec
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+V182Geo/Norm lean wall=5.65 s maxrss=2122240 KB
+OLEAN_SAME_AS_WORKER V182Geo/Norm
+V182Geo/SixData lean wall=0.18 s maxrss=368960 KB
+OLEAN_SAME_AS_WORKER V182Geo/SixData
+V182Chk/WalkDefs lean wall=0.22 s maxrss=378464 KB
+OLEAN_SAME_AS_WORKER V182Chk/WalkDefs
+V182Ctl/WalkMut lean wall=0.66 s maxrss=461088 KB
+OLEAN_SAME_AS_WORKER V182Ctl/WalkMut
+V182Chk/WalkA lean wall=21.48 s maxrss=1785968 KB
+OLEAN_SAME_AS_WORKER V182Chk/WalkA
+V182Chk/WalkB lean wall=18.33 s maxrss=1678380 KB
+OLEAN_SAME_AS_WORKER V182Chk/WalkB
+V182Chk/Walk lean wall=0.73 s maxrss=389436 KB
+OLEAN_SAME_AS_WORKER V182Chk/Walk
+V182Geo/Six.lean:92:8: warning: unused variable `u`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+V182Geo/Six.lean:92:10: warning: unused variable `v`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+V182Geo/Six lean wall=2.00 s maxrss=1629520 KB
+OLEAN_SAME_AS_WORKER V182Geo/Six
+chiRainbow_eq_six' : (∀ q ∈ pieces,
+    ∀ (nv : ℕ) (F : List (List ℤ)), EncB.parseDimacs (pieceText q) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+  chiRainbow = 6
+def V182Geo.PieceVerdicts : Prop :=
+∀ q ∈ pieces, ∀ (nv : ℕ) (F : List (List ℤ)), EncB.parseDimacs (pieceText q) = some (nv, F) → ¬EncB.DimacsSatisfiable F
+def V182Geo.RainbowColorable : ℕ → Prop :=
+fun k => ∃ col, IsRainbow col
+def V182Geo.IsRainbow.{u_1} : {α : Type u_1} → (↑G.edgeSet → α) → Prop :=
+fun {α} col =>
+  ∀ (a b c d : V) (h : IsFourCycle a b c d),
+    [col ⟨s(a, b), ⋯⟩, col ⟨s(b, c), ⋯⟩, col ⟨s(c, d), ⋯⟩, col ⟨s(d, a), ⋯⟩].Nodup
+structure V182Geo.IsFourCycle (a b c d : V) : Prop
+number of parameters: 4
+fields:
+  V182Geo.IsFourCycle.ne_ab : a ≠ b
+  V182Geo.IsFourCycle.ne_ac : a ≠ c
+  V182Geo.IsFourCycle.ne_ad : a ≠ d
+  V182Geo.IsFourCycle.ne_bc : b ≠ c
+  V182Geo.IsFourCycle.ne_bd : b ≠ d
+  V182Geo.IsFourCycle.ne_cd : c ≠ d
+  V182Geo.IsFourCycle.ab : G.Adj a b
+  V182Geo.IsFourCycle.bc : G.Adj b c
+  V182Geo.IsFourCycle.cd : G.Adj c d
+  V182Geo.IsFourCycle.da : G.Adj d a
+constructor:
+  V182Geo.IsFourCycle.mk {a b c d : V} (ne_ab : a ≠ b) (ne_ac : a ≠ c) (ne_ad : a ≠ d) (ne_bc : b ≠ c) (ne_bd : b ≠ d)
+    (ne_cd : c ≠ d) (ab : G.Adj a b) (bc : G.Adj b c) (cd : G.Adj c d) (da : G.Adj d a) : IsFourCycle a b c d
+def V182Geo.G : SimpleGraph V :=
+{ Adj := Adj, symm := G._proof_2, loopless := G._proof_3 }
+def V182Geo.Adj : V → V → Prop :=
+fun u v => ↑u ⊆ ↑v ∧ (↑v).card = (↑u).card + 1 ∨ ↑v ⊆ ↑u ∧ (↑u).card = (↑v).card + 1
+@[reducible] def V182Geo.V : Type :=
+{ s // 3 ≤ s.card ∧ s.card ≤ 5 }
+V182Geo/End lean wall=2.71 s maxrss=1857800 KB
+OLEAN_SAME_AS_WORKER V182Geo/End
+MODULES_EXIT 0
+chiRainbow_eq_six : PieceVerdicts → chiRainbow = 6
+chiRainbow_eq_six' : (∀ q ∈ pieces,
+    ∀ (nv : ℕ) (F : List (List ℤ)), EncB.parseDimacs (pieceText q) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+  chiRainbow = 6
+not_rainbowColorable_five : PieceVerdicts → ¬RainbowColorable 5
+rainbowColorable_six : RainbowColorable 6
+pieces_shape : pieces.length = 4404 ∧
+  (List.filter (fun q => q.2.isNone) pieces).length = 84 ∧
+    splitSet.length = 36 ∧ splitSet.Nodup ∧ ∀ n ∈ splitSet, n < 120
+def V182Geo.chiRainbow : ℕ :=
+sInf {k | RainbowColorable k}
+def V182Geo.RainbowColorable : ℕ → Prop :=
+fun k => ∃ col, IsRainbow col
+def V182Geo.IsRainbow.{u_1} : {α : Type u_1} → (↑G.edgeSet → α) → Prop :=
+fun {α} col =>
+  ∀ (a b c d : V) (h : IsFourCycle a b c d),
+    [col ⟨s(a, b), ⋯⟩, col ⟨s(b, c), ⋯⟩, col ⟨s(c, d), ⋯⟩, col ⟨s(d, a), ⋯⟩].Nodup
+structure V182Geo.IsFourCycle (a b c d : V) : Prop
+number of parameters: 4
+fields:
+  V182Geo.IsFourCycle.ne_ab : a ≠ b
+  V182Geo.IsFourCycle.ne_ac : a ≠ c
+  V182Geo.IsFourCycle.ne_ad : a ≠ d
+  V182Geo.IsFourCycle.ne_bc : b ≠ c
+  V182Geo.IsFourCycle.ne_bd : b ≠ d
+  V182Geo.IsFourCycle.ne_cd : c ≠ d
+  V182Geo.IsFourCycle.ab : G.Adj a b
+  V182Geo.IsFourCycle.bc : G.Adj b c
+  V182Geo.IsFourCycle.cd : G.Adj c d
+  V182Geo.IsFourCycle.da : G.Adj d a
+constructor:
+  V182Geo.IsFourCycle.mk {a b c d : V} (ne_ab : a ≠ b) (ne_ac : a ≠ c) (ne_ad : a ≠ d) (ne_bc : b ≠ c) (ne_bd : b ≠ d)
+    (ne_cd : c ≠ d) (ab : G.Adj a b) (bc : G.Adj b c) (cd : G.Adj c d) (da : G.Adj d a) : IsFourCycle a b c d
+def V182Geo.G : SimpleGraph V :=
+{ Adj := Adj, symm := G._proof_2, loopless := G._proof_3 }
+def V182Geo.Adj : V → V → Prop :=
+fun u v => ↑u ⊆ ↑v ∧ (↑v).card = (↑u).card + 1 ∨ ↑v ⊆ ↑u ∧ (↑u).card = (↑v).card + 1
+@[reducible] def V182Geo.V : Type :=
+{ s // 3 ≤ s.card ∧ s.card ≤ 5 }
+def V182Geo.PieceVerdicts : Prop :=
+∀ q ∈ pieces, ∀ (nv : ℕ) (F : List (List ℤ)), EncB.parseDimacs (pieceText q) = some (nv, F) → ¬EncB.DimacsSatisfiable F
+def V182Enc.pieces : List (ℕ × Option ℕ) :=
+List.flatMap
+  (fun n => if splitSet.contains n = true then List.map (fun m => (n, some m)) (List.range 120) else [(n, none)])
+  (List.range 120)
+def V182Enc.splitSet : List ℕ :=
+have y :=
+  have y :=
+    have y := [115, 116, 117, 118, 119];
+    105 :: 106 :: 107 :: 114 :: y;
+  have y := 94 :: 95 :: 102 :: 103 :: 104 :: y;
+  90 :: 91 :: 92 :: 93 :: y;
+have y :=
+  have y := 79 :: 80 :: 81 :: 82 :: 83 :: y;
+  45 :: 46 :: 47 :: 78 :: y;
+have y := 40 :: 41 :: 42 :: 43 :: 44 :: y;
+36 :: 37 :: 38 :: 39 :: y
+def V182Enc.pieceText : ℕ × Option ℕ → String :=
+fun q => EncB.renderCube nVars baseCnf (EncB.bodyR baseCnf) (pieceCube q)
+def V182Enc.pieceCube : ℕ × Option ℕ → List ℤ :=
+fun x =>
+  match x with
+  | (n, none) => starUnits y1Star n
+  | (n, some m) => starUnits y1Star n ++ starUnits y2Star m
+def V182Enc.starUnits : List ℕ → ℕ → List ℤ :=
+fun S n => List.zipWith lit S (perms5.getD n [])
+def V182Enc.y1Star : List ℕ :=
+[5, 43, 50, 57, 64]
+def V182Enc.y2Star : List ℕ :=
+[13, 44, 74, 81, 88]
+def V182Enc.perms5 : List (List ℕ) :=
+permsOf 5 (List.range 5)
+def V182Enc.permsOf : ℕ → List ℕ → List (List ℕ) :=
+fun x x_1 =>
+  Nat.brecOn (motive := fun x => List ℕ → List (List ℕ)) x
+    (fun x f x_2 =>
+      (match (motive := (x : ℕ) → List ℕ → Nat.below (motive := fun x => List ℕ → List (List ℕ)) x → List (List ℕ)) x,
+          x_2 with
+        | 0, x => fun x => [[]]
+        | k.succ, l => fun x => List.flatMap (fun a => List.map (fun x => a :: x) (x.1 (l.erase a))) l)
+        f)
+    x_1
+def V182Enc.baseCnf : List (List ℤ) :=
+aloCls ++ confCls ++ amoCls ++ surjCls ++ unitCls
+def V182Enc.nVars : ℕ :=
+2800
+def V182Enc.lit : ℕ → ℕ → ℤ :=
+fun e c => ↑(5 * e + c + 1)
+def EncB.parseDimacs : String → Option (ℕ × List (List ℤ)) :=
+fun s => EncB.parseDimacsChars s.data
+def EncB.parseDimacsChars : List Char → Option (ℕ × List (List ℤ)) :=
+fun cs =>
+  match EncB.stripPrefix ['p', ' ', 'c', 'n', 'f', ' '] cs with
+  | none => none
+  | some r1 =>
+    match EncB.parseNatTerm ' ' r1 with
+    | none => none
+    | some (nv, r2) =>
+      match EncB.parseNatTerm '\n' r2 with
+      | none => none
+      | some (nc, r3) =>
+        match EncB.runBody nv { mode := EncB.LineMode.start, cur := [], done := [] } r3 with
+        | none => none
+        | some st => if st.mode = EncB.LineMode.start ∧ st.done.length = nc then some (nv, st.done.reverse) else none
+def EncB.DimacsSatisfiable : List (List ℤ) → Prop :=
+fun cls => ∃ ν, EncB.DimacsSat cls ν
+def EncB.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
+fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = true ∨ l < 0 ∧ ν l.natAbs = false
+def EncB.renderCube : ℕ → List (List ℤ) → String → List ℤ → String :=
+fun nv F bodyF cube => EncB.headerR nv (EncB.cubeCnf F cube).length ++ EncB.cubeBodyR bodyF cube
+def EncB.cubeCnf : List (List ℤ) → List ℤ → List (List ℤ) :=
+fun F cube => F ++ List.map (fun z => [z]) cube
+def EncB.bodyR : List (List ℤ) → String :=
+fun F => List.foldl EncB.pushClauseR "" F
+def EncB.headerR : ℕ → ℕ → String :=
+fun nv nc => (EncB.pushNat ((EncB.pushNat "p cnf " nv).push ' ') nc).push '\n'
+def EncB.cubeBodyR : String → List ℤ → String :=
+fun bodyF cube => List.foldl EncB.pushClauseR bodyF (List.map (fun z => [z]) cube)
+def EncB.pushClauseR : String → List ℤ → String :=
+fun s cl =>
+  match cl with
+  | [] => ((s.push ' ').push '0').push '\n'
+  | l :: ls =>
+    (((List.foldl (fun acc x => EncB.pushInt (acc.push ' ') x) (EncB.pushInt s l) ls).push ' ').push '0').push '\n'
+'V182Geo.chiRainbow_eq_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.chiRainbow_eq_six'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.not_rainbowColorable_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.rainbowColorable_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.pieces_shape' does not depend on any axioms
+'V182Geo.chiRainbow_eq_six_of' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.normalize' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.norm_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.exists_piece' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.no_normal_colouring' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.baseCnf_sat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.baseCnf_wf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.piece_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.cyc_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.conflict_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.col6_rainbow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V182Geo.walk_all' depends on axioms: [propext, Quot.sound]
+'V182Geo.walk_spec' depends on axioms: [propext, Quot.sound]
+'V182Ctl.ctl_orig' depends on axioms: [propext]
+'V182Ctl.ctl_mut' depends on axioms: [propext]
+'EncB.parseDimacs_renderCube' depends on axioms: [propext, Quot.sound]
+Audit lean wall=2.09 s maxrss=1525240 KB
+AUDIT_EXIT 0
+Sanity.lean:13:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'sanity_not_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sanity_pv_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sanity_pv_unfold' depends on axioms: [propext, Quot.sound]
+Sanity lean wall=1.01 s maxrss=1531856 KB
+SANITY_EXIT 0
+MY_EXE b0b270cb5840bb92151900b77eb76ff8be1b71efd3dee93dbfe198ed6a531c5d
+EXE_REPRODUCES_FROZEN
+EXE_SAME_AS_M9_FILE
+GEN_IR_SAME_AS_M9
+MAIN_IR_SAME_AS_M9
+COMPILE_REVIEW_DONE
+	Command being timed: "/home/jay/research/data/formalize-20261122/v182-lean/review/tools/compile_review.sh"
+	User time (seconds): 76.87
+	System time (seconds): 3.97
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:21.38
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2122240
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 45
+	Minor (reclaiming a frame) page faults: 790276
+	Voluntary context switches: 66833
+	Involuntary context switches: 26587
+	Swaps: 0
+	File system inputs: 8640
+	File system outputs: 43560
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+COMPILE_RC 0

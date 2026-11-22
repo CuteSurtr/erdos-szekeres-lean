@@ -1,0 +1,3 @@
+2026-11-22 06:54:11: unit esr-ag-lenc6-t7.service was stopped by the memory guard.
+Reason: memory 2440 MB reached its limit (2500 MB)
+Resize the job (fewer workers, smaller CNFs, cubes, streaming, compiled code) before restarting it.

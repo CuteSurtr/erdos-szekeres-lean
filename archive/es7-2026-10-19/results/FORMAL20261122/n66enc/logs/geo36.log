@@ -1,0 +1,37 @@
+N66Geo/MirrorA.lean:58:28: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ 1
+where
+ b := ↑⊥
+ c := ↑i
+N66Geo/MirrorA.lean:91:12: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  labels cup' ?m.207 v
+in the target expression
+  (fun u => if i + 1 ≤ (labels cup' u v).1 then (labels cup' u v).2 else 0) u ≤
+    (Finset.range v).sup fun u => if i + 1 ≤ (labels cup' u v).1 then (labels cup' u v).2 else 0
+
+n : ℕ
+cup cup' : ℕ → ℕ → ℕ → Bool
+hneg : ∀ (i j k : ℕ), i < j → j < k → k < n → cup' i j k = !cup i j k
+v : ℕ
+hv : v < n
+hb : ∀ u < v, (labels cup u v).1 ≤ 4
+i : ℕ
+G : ℕ := column cup' v i
+hG : G = column cup' v i
+hGle : G ≤ 4
+a u : ℕ
+hu : u < v
+h1 : a + 1 ≤ (labels cup u v).1
+h2 : i + 1 ≤ (labels cup u v).2
+this :
+  (fun u => if i + 1 ≤ (labels cup' u v).1 then (labels cup' u v).2 else 0) u ≤
+    (Finset.range v).sup fun u => if i + 1 ≤ (labels cup' u v).1 then (labels cup' u v).2 else 0
+⊢ (labels cup u v).1 ≤ (Finset.range v).sup fun u => if i + 1 ≤ (labels cup' u v).1 then (labels cup' u v).2 else 0
+'N66Geo.labels_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.column_swap' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+MirrorA lean wall=2.50 s maxrss=3196496 KB
+rc=1

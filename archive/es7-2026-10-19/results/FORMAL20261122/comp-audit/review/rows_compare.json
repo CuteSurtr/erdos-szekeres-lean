@@ -1,0 +1,150 @@
+{
+ "hashes": {
+  "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json": {
+   "sha256": "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72",
+   "record": "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72",
+   "ok": true
+  },
+  "/home/jay/research/data/bal186-20261119/zrow/balz.rows": {
+   "sha256": "7076dd8212c382caf19b7fe39fca9b81de9ae8fba9150727efa1997d54f6288f",
+   "record": "7076dd8212c382caf19b7fe39fca9b81de9ae8fba9150727efa1997d54f6288f",
+   "ok": true
+  },
+  "/home/jay/research/data/bal186-20261119/zrow/balz_m0.rows": {
+   "sha256": "6fb2337976f23ffd328f3704d6905af57441009ff5d469316e264b816250f055",
+   "record": "6fb2337976f23ffd328f3704d6905af57441009ff5d469316e264b816250f055",
+   "ok": true
+  },
+  "/home/jay/research/data/bal186-20261119/zrow/zrow.json": {
+   "sha256": "b43ba5f80582f7754fe6acf04cbbf81fc7822a5f784fb8c5ddedf643cce51258",
+   "record": "b43ba5f80582f7754fe6acf04cbbf81fc7822a5f784fb8c5ddedf643cce51258",
+   "ok": true
+  },
+  "/home/jay/research/data/bal186-20261119/zrow/balzs.rows": {
+   "sha256": "9135465aac32b575d3f859192891b5088b6a23c6d521687aef1b032e64e2f2b8",
+   "record": "9135465aac32b575d3f859192891b5088b6a23c6d521687aef1b032e64e2f2b8",
+   "ok": true
+  },
+  "/home/jay/research/data/bal186-20261119/zrow/zstar.json": {
+   "sha256": "26d8886058cc53972dfe274e04150c4aee0ff4fffafb974a8c7c89cd57cef328",
+   "record": "26d8886058cc53972dfe274e04150c4aee0ff4fffafb974a8c7c89cd57cef328",
+   "ok": true
+  },
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/data/zstar.json": {
+   "sha256": "26d8886058cc53972dfe274e04150c4aee0ff4fffafb974a8c7c89cd57cef328",
+   "record": "26d8886058cc53972dfe274e04150c4aee0ff4fffafb974a8c7c89cd57cef328",
+   "ok": true
+  },
+  "/home/jay/research/data/bal186-20261119/zrow/zzs_rows.json": {
+   "sha256": "dc6a410f9fa164ee5565fd9827f4697af052b311afda6d806a136c0cd3d896d3",
+   "record": "dc6a410f9fa164ee5565fd9827f4697af052b311afda6d806a136c0cd3d896d3",
+   "ok": true
+  },
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/data/zzs_rows.json": {
+   "sha256": "dc6a410f9fa164ee5565fd9827f4697af052b311afda6d806a136c0cd3d896d3",
+   "record": "dc6a410f9fa164ee5565fd9827f4697af052b311afda6d806a136c0cd3d896d3",
+   "ok": true
+  },
+  "/home/jay/research/data/bal186-20261119/zrow/balzs_n54.rows": {
+   "sha256": "9e2dc29a81b54cdc0b4977d433f31d2c1fbcb64a0c4a11d8c18fdda517b66ebb",
+   "record": "9e2dc29a",
+   "ok": true
+  },
+  "/home/jay/research/data/bal186-20261119/zrow/zzs_rows_n54.json": {
+   "sha256": "8419984cc6477d76a32b383dd1f0b05f94aac53efdfd3047085be97e83480a6a",
+   "record": "8419984c",
+   "ok": true
+  },
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/data/zzs_rows_n54.json": {
+   "sha256": "8419984cc6477d76a32b383dd1f0b05f94aac53efdfd3047085be97e83480a6a",
+   "record": "8419984c",
+   "ok": true
+  }
+ },
+ "source_hashes": {
+  "catalog": "17080b3c93264fcffd6b5b075ec00c2e713a01914290e3d11e53e516b648583c",
+  "cuts": "a79cf10030df67ae1cc2d5910a3bac5aedb69eb6e6284cb63b53873ac5bd64dc",
+  "lemmaz": "e6b28efaa80cb2158180daf12dd4ce76cf2b86cc833ae9d79b1c08ffca005d65",
+  "lemmazs": "47bd1f5618ee515b4f9f5c398bd6239b1c650a16dc6aa1ae687b7dafd49fd61c",
+  "catdata": "f32737e1bacaef8261a53a9b69333d463dc1e1e770cddbd6041910924a6f42c5"
+ },
+ "olean_dump_vs_source_rows": {
+  "olean_rows_dumped": 2624,
+  "mismatches": []
+ },
+ "row_provenance": {
+  "olean_dump": [
+   0,
+   2623
+  ],
+  "source_level": [
+   2624,
+   2684
+  ],
+  "cuts": "source_level (0-445)"
+ },
+ "source_support_duplicates": 0,
+ "rows_vs_json": {
+  "lean": 3131,
+  "json": 3131,
+  "mismatches": 0,
+  "first": [],
+  "json_dup_support_entries": 0
+ },
+ "catalog_vs_json_states": {
+  "mismatches": [],
+  "state0": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "state1": [
+   1,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "checks": {
+  "zIndices strictly increasing (Z_eq pins Lean Z to it)": true,
+  "zsIndices strictly increasing (Zs_eq pins Lean Z* to it)": true,
+  "Lean catalog: Z from profiles == zIndices": true,
+  "Lean catalog: Z* from profiles == zsIndices": true,
+  "Lean Z == JSON-states Z (check A)": true,
+  "Lean Z == zrow.json support (check B)": true,
+  "zrow.json rhs == 15": true,
+  "Lean Z* == JSON-states Z* (check A)": true,
+  "Lean Z* == zstar.json": true,
+  "|Z| == |Z*| == 70, disjoint": true,
+  "0 in Z, 1 in Z, 0,1 not in Z*": true,
+  "zzs_rows.json == [(Z,15), (Z*,15)]": true,
+  "zzs_rows_n54.json == [(Z,16), (Z*,16)]": true,
+  "zstar.json: zrow copy == record copy": true,
+  "zzs_rows.json: zrow copy == record copy": true,
+  "zzs_rows_n54.json: zrow copy == record copy": true,
+  "balz.rows == Lean rows + [15]": true,
+  "balzs.rows == Lean rows + [15, 15]": true,
+  "balzs_n54.rows == Lean rows + [16, 16]": true,
+  "balz_m0.rows == state 0 removed, rhs lowered where 0 in support": true
+ },
+ "non_vacuity": {
+  "all-ones (sum 252) satisfies 3,131 rows + Z@15": true,
+  "h0=h1=0, rest 1 (sum 250) satisfies 3,131 rows + Z@15 + Z*@15": true,
+  "same vector satisfies Z@17 + Z*@17": true,
+  "max demand": 55,
+  "min (|support| - demand) over Lean rows": 7,
+  "min (|support minus {0,1}| - demand) over Lean rows": 6,
+  "rows with demand 0": 0
+ },
+ "rows_with_demand_ge_8": [
+  [
+   2905,
+   55,
+   252
+  ]
+ ],
+ "bad": []
+}

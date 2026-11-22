@@ -1,0 +1,58 @@
+chiRainbow_eq_six' : (∀ q ∈ pieces,
+    ∀ (nv : ℕ) (F : List (List ℤ)), EncB.parseDimacs (pieceText q) = some (nv, F) → ¬EncB.DimacsSatisfiable F) →
+  chiRainbow = 6
+def V182Geo.PieceVerdicts : Prop :=
+∀ q ∈ pieces, ∀ (nv : ℕ) (F : List (List ℤ)), EncB.parseDimacs (pieceText q) = some (nv, F) → ¬EncB.DimacsSatisfiable F
+def V182Geo.RainbowColorable : ℕ → Prop :=
+fun k => ∃ col, IsRainbow col
+def V182Geo.IsRainbow.{u_1} : {α : Type u_1} → (↑G.edgeSet → α) → Prop :=
+fun {α} col =>
+  ∀ (a b c d : V) (h : IsFourCycle a b c d),
+    [col ⟨s(a, b), ⋯⟩, col ⟨s(b, c), ⋯⟩, col ⟨s(c, d), ⋯⟩, col ⟨s(d, a), ⋯⟩].Nodup
+structure V182Geo.IsFourCycle (a b c d : V) : Prop
+number of parameters: 4
+fields:
+  V182Geo.IsFourCycle.ne_ab : a ≠ b
+  V182Geo.IsFourCycle.ne_ac : a ≠ c
+  V182Geo.IsFourCycle.ne_ad : a ≠ d
+  V182Geo.IsFourCycle.ne_bc : b ≠ c
+  V182Geo.IsFourCycle.ne_bd : b ≠ d
+  V182Geo.IsFourCycle.ne_cd : c ≠ d
+  V182Geo.IsFourCycle.ab : G.Adj a b
+  V182Geo.IsFourCycle.bc : G.Adj b c
+  V182Geo.IsFourCycle.cd : G.Adj c d
+  V182Geo.IsFourCycle.da : G.Adj d a
+constructor:
+  V182Geo.IsFourCycle.mk {a b c d : V} (ne_ab : a ≠ b) (ne_ac : a ≠ c) (ne_ad : a ≠ d) (ne_bc : b ≠ c) (ne_bd : b ≠ d)
+    (ne_cd : c ≠ d) (ab : G.Adj a b) (bc : G.Adj b c) (cd : G.Adj c d) (da : G.Adj d a) : IsFourCycle a b c d
+def V182Geo.G : SimpleGraph V :=
+{ Adj := Adj, symm := G._proof_2, loopless := G._proof_3 }
+def V182Geo.Adj : V → V → Prop :=
+fun u v => ↑u ⊆ ↑v ∧ (↑v).card = (↑u).card + 1 ∨ ↑v ⊆ ↑u ∧ (↑u).card = (↑v).card + 1
+@[reducible] def V182Geo.V : Type :=
+{ s // 3 ≤ s.card ∧ s.card ≤ 5 }
+V182Geo/End lean wall=1.46 s maxrss=1538076 KB
+	Command being timed: "/home/jay/research/data/formalize-20261122/v182-lean/tools/build_mod.sh V182Geo/End"
+	User time (seconds): 1.24
+	System time (seconds): 0.21
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1538076
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35743
+	Voluntary context switches: 576
+	Involuntary context switches: 275
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 104
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+EXIT 0

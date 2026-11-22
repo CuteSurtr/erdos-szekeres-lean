@@ -1,0 +1,26 @@
+FV4A.forces_304_of_slices_rows_n66 (n66 : OmissionZRow.N66Bound 55) (vP : Res118.BlockValid Res118.rowsP)
+  (vQ : Res118.BlockValid Res118.rowsQ) (vU : Res118.BlockValid Res118.rowsU) (vA : Res118.BlockValid Res118.rowsA)
+  (s33_18 : Res118.ResSliceExcludes [] 33 18) (s34_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 34 18)
+  (s34_19 : Res118.ResSliceExcludes Res118.rowsP 34 19)
+  (s35_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 35 18)
+  (s35_19 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsU) 35 19)
+  (s35_20 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA) 35 20) :
+  ErdosSzekeres.ForcesConvexNGon 304 8
+Res118.forces_304_of_slices (trees : OmissionBalancedZ.ExcludesHoleBudgetZ 67) (n66 : OmissionZRow.N66Bound 55)
+  (vP : Res118.BlockValid Res118.rowsP) (vQ : Res118.BlockValid Res118.rowsQ) (vU : Res118.BlockValid Res118.rowsU)
+  (vA : Res118.BlockValid Res118.rowsA) (s33_18 : Res118.ResSliceExcludes [] 33 18)
+  (s34_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 34 18)
+  (s34_19 : Res118.ResSliceExcludes Res118.rowsP 34 19)
+  (s35_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 35 18)
+  (s35_19 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsU) 35 19)
+  (s35_20 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA) 35 20) :
+  ErdosSzekeres.ForcesConvexNGon 304 8
+Res118.residual_bound_118_of_slices (n66 : OmissionZRow.N66Bound 55) (vP : Res118.BlockValid Res118.rowsP)
+  (vQ : Res118.BlockValid Res118.rowsQ) (vU : Res118.BlockValid Res118.rowsU) (vA : Res118.BlockValid Res118.rowsA)
+  (s33_18 : Res118.ResSliceExcludes [] 33 18) (s34_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 34 18)
+  (s34_19 : Res118.ResSliceExcludes Res118.rowsP 34 19)
+  (s35_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 35 18)
+  (s35_19 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsU) 35 19)
+  (s35_20 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA) 35 20) :
+  ErdosSzekeres.Omission.Partition.ResidualBound 118
+E304Z.Final.excludes_67 : OmissionBalancedZ.ExcludesHoleBudgetZ 67

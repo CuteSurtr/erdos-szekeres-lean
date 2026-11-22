@@ -1,0 +1,67 @@
+type checking took 812ms
+type checking took 460ms
+type checking took 696ms
+type checking took 884ms
+type checking took 932ms
+type checking took 497ms
+type checking took 1.13s
+type checking took 591ms
+type checking took 708ms
+type checking took 452ms
+type checking took 752ms
+type checking took 443ms
+type checking took 668ms
+type checking took 584ms
+type checking took 695ms
+type checking took 1.03s
+type checking took 991ms
+type checking took 691ms
+type checking took 1.34s
+'E304Z.C751401.ex0' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 154ms
+cumulative profiling times:
+	.olean serialization 48.5ms
+	attribute application 0.856ms
+	compilation (IR) 3.65ms
+	compilation (LCNF base) 4.86ms
+	compilation (LCNF mono) 2.29ms
+	elaboration 1.42s
+	fix level params 1.89ms
+	instantiate metavars 4.17ms
+	interpretation 0.589ms
+	let-to-have transformation 3.14ms
+	linting 92ms
+	parsing 195ms
+	process pre-definitions 35.4ms
+	share common exprs 17.1ms
+	tactic execution 26.4ms
+	type checking 14.4s
+	typeclass inference 175ms
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R /home/jay/research/data/formalize-20261122/fv304-audit/src -o /home/jay/research/data/formalize-20261122/fv304-audit/recompile/E304Z/C751401.olean.tmp /home/jay/research/data/formalize-20261122/fv304-audit/src/E304Z/C751401.lean"
+	User time (seconds): 17.52
+	System time (seconds): 0.52
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:18.40
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3355268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 88660
+	Voluntary context switches: 2024
+	Involuntary context switches: 2224
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 3760
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+lean_rc=0
+cgroup memory.peak: 595972096
+cgroup memory.swap.peak: 0
+cgroup anon+shmem peak (sampled every 0.2 s): 497717248
+cgroup memory.events: low 0 high 0 max 0 oom 0 oom_kill 0 oom_group_kill 0 sock_throttled 0 

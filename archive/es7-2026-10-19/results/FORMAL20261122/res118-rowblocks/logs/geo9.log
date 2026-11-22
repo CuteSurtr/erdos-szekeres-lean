@@ -1,0 +1,35 @@
+== RowGeo.Sound 2026-11-22T18:14:18+09:00
+RowGeo.Sound rc=1 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.43 	Maximum resident set size (kbytes): 3230628 
+cgroup memory.peak: 330805248
+STOP at Sound
+RowGeo/Sound.lean:131:18: error: Tactic `subst` failed: invalid equality proof, it is not of the form (x = t) or (t = x)
+  (cl = threshClause false i j 2 ∨
+      cl = threshClause false i j 3 ∨
+        cl = threshClause true i j 2 ∨
+          cl = threshClause true i j 3 ∨ cl = threshClause true i j 4 ∨ cl = threshClause true i j 5) ∨
+    cl ∈ dirPart S i j
+
+case cons.cons.nil.inl
+S : List ℕ
+hS : WF S
+n : ℕ
+C : Context S.length n (statesOf S ⋯)
+hk : 0 < S.length
+h16 : S.length ≤ 16
+cl : List Lit
+hcl : cl ∈ pairPart S
+i j : ℕ
+hp : [i, j] ∈ combs 2 (List.range S.length)
+hij : i < j
+hjk : j < S.length
+hik : i < S.length
+hne : fk hk i ≠ fk hk j
+th : ∀ (cup : Bool) (t : ℕ), C.clause (List.map (toExpr hk) (threshClause cup i j t))
+h✝ :
+  (cl = threshClause false i j 2 ∨
+      cl = threshClause false i j 3 ∨
+        cl = threshClause true i j 2 ∨
+          cl = threshClause true i j 3 ∨ cl = threshClause true i j 4 ∨ cl = threshClause true i j 5) ∨
+    cl ∈ dirPart S i j
+⊢ C.clause (List.map (toExpr ⋯) cl)
+rc=1

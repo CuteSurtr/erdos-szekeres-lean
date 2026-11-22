@@ -1,0 +1,958 @@
+{
+ "started_utc": "2026-11-21T21:03:29Z",
+ "verdict": "audit passed",
+ "steps": {
+  "sources": [
+   {
+    "module": "LemmaZ",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/LemmaZ.lean",
+    "sha256": "e6b28efaa80cb2158180daf12dd4ce76cf2b86cc833ae9d79b1c08ffca005d65",
+    "record_sha256": "e6b28efaa80cb2158180daf12dd4ce76cf2b86cc833ae9d79b1c08ffca005d65",
+    "git_head": "e6b28efaa80cb2158180daf12dd4ce76cf2b86cc833ae9d79b1c08ffca005d65"
+   },
+   {
+    "module": "BalancedBudgetsZ",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/BalancedBudgetsZ.lean",
+    "sha256": "3e0651a023a58df5a9a0fff4c7d0fc1c5859dfe40b67e9a4e17cdc313224ab1a",
+    "record_sha256": "3e0651a023a58df5a9a0fff4c7d0fc1c5859dfe40b67e9a4e17cdc313224ab1a",
+    "git_head": "3e0651a023a58df5a9a0fff4c7d0fc1c5859dfe40b67e9a4e17cdc313224ab1a"
+   },
+   {
+    "module": "FixedStatesZ",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/FixedStatesZ.lean",
+    "sha256": "20945f03e3c2ea7623f8cebcfd92622a3b13cf49c01bb20c863d71d2a2818988",
+    "record_sha256": "20945f03e3c2ea7623f8cebcfd92622a3b13cf49c01bb20c863d71d2a2818988",
+    "git_head": "20945f03e3c2ea7623f8cebcfd92622a3b13cf49c01bb20c863d71d2a2818988"
+   },
+   {
+    "module": "LemmaZStar",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/LemmaZStar.lean",
+    "sha256": "47bd1f5618ee515b4f9f5c398bd6239b1c650a16dc6aa1ae687b7dafd49fd61c",
+    "record_sha256": "47bd1f5618ee515b4f9f5c398bd6239b1c650a16dc6aa1ae687b7dafd49fd61c",
+    "git_head": "47bd1f5618ee515b4f9f5c398bd6239b1c650a16dc6aa1ae687b7dafd49fd61c"
+   },
+   {
+    "module": "BalancedBudgetsZZs",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZs.lean",
+    "sha256": "7684a1deb0297c7444b1719d0403d1e814ddbab3623ec5c13320294f03278a8e",
+    "record_sha256": "7684a1deb0297c7444b1719d0403d1e814ddbab3623ec5c13320294f03278a8e",
+    "git_head": "7684a1deb0297c7444b1719d0403d1e814ddbab3623ec5c13320294f03278a8e"
+   },
+   {
+    "module": "BalancedBudgetsZZsN",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZsN.lean",
+    "sha256": "4cfface86e87798e34e60c98228a757505f13ea491c763a2caa67b73b41203f7",
+    "record_sha256": "4cfface86e87798e34e60c98228a757505f13ea491c763a2caa67b73b41203f7",
+    "git_head": "4cfface86e87798e34e60c98228a757505f13ea491c763a2caa67b73b41203f7"
+   },
+   {
+    "module": "Composition305",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/Composition305.lean",
+    "sha256": "d7d1b2c30d6986ab5104630054e663bb5639e0f67fb3fa03ab1ef5c82b05eeae",
+    "record_sha256": "d7d1b2c30d6986ab5104630054e663bb5639e0f67fb3fa03ab1ef5c82b05eeae",
+    "git_head": "d7d1b2c30d6986ab5104630054e663bb5639e0f67fb3fa03ab1ef5c82b05eeae"
+   },
+   {
+    "module": "Composition304",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES304N20261119/Composition304.lean",
+    "sha256": "a58df4a713d6c37247f9930accbf46d7f9dd31db351bf463b21ff8150f34fe96",
+    "record_sha256": "a58df4a713d6c37247f9930accbf46d7f9dd31db351bf463b21ff8150f34fe96",
+    "git_head": "a58df4a713d6c37247f9930accbf46d7f9dd31db351bf463b21ff8150f34fe96"
+   },
+   {
+    "module": "Composition303",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/Composition303.lean",
+    "sha256": "bbecd6cf67b12cfa377f7f252923a0b910e27f20ea10e4174d131d358cfe426e",
+    "record_sha256": "bbecd6cf67b12cfa377f7f252923a0b910e27f20ea10e4174d131d358cfe426e",
+    "git_head": "bbecd6cf67b12cfa377f7f252923a0b910e27f20ea10e4174d131d358cfe426e"
+   },
+   {
+    "module": "Composition306",
+    "record_file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES306N20261119/Composition306.lean",
+    "sha256": "c87f171a235e1009fd2e5e2a7faf26c3fcaf3daa2a9a72108e54bb4ea93ad23d",
+    "record_sha256": null,
+    "git_head": "c87f171a235e1009fd2e5e2a7faf26c3fcaf3daa2a9a72108e54bb4ea93ad23d"
+   }
+  ],
+  "pins": {
+   "lean_toolchain_sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+   "lake_manifest_sha256": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7",
+   "roots": [
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean",
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean"
+   ],
+   "absent_roots_no_pins": [
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean"
+   ],
+   "library_pinned": 4952,
+   "library_written_utc": "2026-11-06T00:11:21Z",
+   "library_digest_sha256": "39bc40235acc18c3046a9fe2a68cf5f2560fc5c0b25ae96861ee4496645c44c0",
+   "lake_oleans_newer_than_freeze": 0,
+   "chain311_modules": 196,
+   "chain311_verified": 196,
+   "lean_binary_sha256": "8fadc3ed92cc9decb94c96ee9c0876e91e03a3a5e69138f32114f02789e2766c",
+   "seconds": 1.7,
+   "problems": []
+  },
+  "compiles": [
+   {
+    "job": "LemmaZ",
+    "gate": {
+     "tctl": 85.6,
+     "ag_mb": 401,
+     "esr_mb": 18126
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-LemmaZ.service\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 9.566s\n             CPU time consumed: 9.107s\n                   Memory peak: 1G (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:09.49",
+    "user_s": 8.1,
+    "max_rss_mb": 3767,
+    "cg_peak_mb": 1053,
+    "anon_peak_mb": 909,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "OmissionZRow.Z_eq",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionZRow.z_row",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/LemmaZ.olean",
+    "olean_sha256": "ef249ba167372ac31f995027299efa1eeddac251ff73e4ef093a990ab02c353c"
+   },
+   {
+    "job": "BalancedBudgetsZ",
+    "gate": {
+     "tctl": 85.0,
+     "ag_mb": 401,
+     "esr_mb": 20089
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-BalancedBudgetsZ.service\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 4.565s\n             CPU time consumed: 4.462s\n                   Memory peak: 327M (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:04.45",
+    "user_s": 3.88,
+    "max_rss_mb": 3164,
+    "cg_peak_mb": 327,
+    "anon_peak_mb": 238,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "OmissionBalancedZ.feasible_holes_z",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZ.composition_305_z",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZ.composition_304_z",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/BalancedBudgetsZ.olean",
+    "olean_sha256": "38d8f8aed92e5e2fefbd86bf46607f920eea28dc5b757a5a30e26734b0cbe71a"
+   },
+   {
+    "job": "FixedStatesZ",
+    "gate": {
+     "tctl": 85.2,
+     "ag_mb": 400,
+     "esr_mb": 20064
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-FixedStatesZ.service\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 8.879s\n             CPU time consumed: 8.775s\n                   Memory peak: 767.4M (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:08.76",
+    "user_s": 8.04,
+    "max_rss_mb": 3592,
+    "cg_peak_mb": 767,
+    "anon_peak_mb": 683,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "OmissionBalancedZF.feasible_holes_zf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZF.composition_304_zf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZF.composition_303_zf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/FixedStatesZ.olean",
+    "olean_sha256": "fdd1900d9118cab5b013f1957178c160fe938bdc6873000a62755ca33c6e390c"
+   },
+   {
+    "job": "LemmaZStar",
+    "gate": {
+     "tctl": 85.9,
+     "ag_mb": 433,
+     "esr_mb": 19843
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-LemmaZStar.service\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 9.748s\n             CPU time consumed: 9.492s\n                   Memory peak: 1G (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:09.55",
+    "user_s": 8.09,
+    "max_rss_mb": 3776,
+    "cg_peak_mb": 1050,
+    "anon_peak_mb": 909,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "OmissionZStarRow.Zs_eq",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionZStarRow.zs_row",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/LemmaZStar.olean",
+    "olean_sha256": "1a741fa05068b4c1f0e09465fe218df793d3e30bbb27e2b99a7ca9a32b555102"
+   },
+   {
+    "job": "BalancedBudgetsZZs",
+    "gate": {
+     "tctl": 85.5,
+     "ag_mb": 464,
+     "esr_mb": 19885
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-BalancedBudgetsZZs.service; invocation ID: b4f9959c1c094caaae8a2447a24a0ff7\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 4.155s\n             CPU time consumed: 3.929s\n                   Memory peak: 327.3M (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:03.93",
+    "user_s": 3.24,
+    "max_rss_mb": 3156,
+    "cg_peak_mb": 327,
+    "anon_peak_mb": 230,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "OmissionBalancedZZsF.balanced_bound_of_hole_budget_zzsf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsF.composition_301_zzsf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/BalancedBudgetsZZs.olean",
+    "olean_sha256": "c53030beac0b3238982b3b15fd4e11d5f0fa7e8486a870adb848d58e52f01791"
+   },
+   {
+    "job": "BalancedBudgetsZZsN",
+    "gate": {
+     "tctl": 84.5,
+     "ag_mb": 464,
+     "esr_mb": 20848
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-BalancedBudgetsZZsN.service; invocation ID: aafbbe7ec4434a9c948f07e0869a3a29\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 5.480s\n             CPU time consumed: 5.378s\n                   Memory peak: 328.6M (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:05.40",
+    "user_s": 4.3,
+    "max_rss_mb": 3156,
+    "cg_peak_mb": 329,
+    "anon_peak_mb": 237,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "OmissionBalancedZZsN.balanced_bound_of_hole_budget_zzsn",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsN.composition_302_n54",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsN.composition_301_n53",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/BalancedBudgetsZZsN.olean",
+    "olean_sha256": "b11c8bd8a0cd19b87e04b8e815bab75402116a77b9acf1bfb5d3eca7d55e4fef"
+   },
+   {
+    "job": "Composition305",
+    "gate": {
+     "tctl": 84.8,
+     "ag_mb": 465,
+     "esr_mb": 19773
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-Composition305.service\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 3.971s\n             CPU time consumed: 3.855s\n                   Memory peak: 319.7M (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:03.86",
+    "user_s": 2.79,
+    "max_rss_mb": 3094,
+    "cg_peak_mb": 320,
+    "anon_peak_mb": 231,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "composition_305",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "avoiding_304",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/Composition305.olean",
+    "olean_sha256": "94e5257e170ec2cde931402abfe2d618793834218df044d126398a4ad8f7b2f8"
+   },
+   {
+    "job": "Composition304",
+    "gate": {
+     "tctl": 85.0,
+     "ag_mb": 465,
+     "esr_mb": 19698
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-Composition304.service; invocation ID: 7a1feee88fe0469baf43b4d937debdcd\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 3.740s\n             CPU time consumed: 3.653s\n                   Memory peak: 315.8M (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:03.69",
+    "user_s": 2.77,
+    "max_rss_mb": 3101,
+    "cg_peak_mb": 316,
+    "anon_peak_mb": 226,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "composition_304",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "avoiding_303",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/Composition304.olean",
+    "olean_sha256": "88029bb32ed86adf5801b7a06e3bf4626ac59c5a4008569af11224d81606f6ce"
+   },
+   {
+    "job": "Composition303",
+    "gate": {
+     "tctl": 85.0,
+     "ag_mb": 465,
+     "esr_mb": 20255
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-Composition303.service; invocation ID: 707b5543b03943618f8760bcf68bcc60\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 3.960s\n             CPU time consumed: 3.871s\n                   Memory peak: 313.4M (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:03.88",
+    "user_s": 3.24,
+    "max_rss_mb": 3101,
+    "cg_peak_mb": 313,
+    "anon_peak_mb": 226,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "composition_303",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "avoiding_302",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/Composition303.olean",
+    "olean_sha256": "ae3961f3c767ae83744b9ee3dd9a144f3556a3b658e5bdd3eb825fe155017c20"
+   },
+   {
+    "job": "Composition306",
+    "gate": {
+     "tctl": 84.6,
+     "ag_mb": 466,
+     "esr_mb": 20439
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-Composition306.service\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 3.375s\n             CPU time consumed: 3.225s\n                   Memory peak: 312.8M (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:03.21",
+    "user_s": 2.62,
+    "max_rss_mb": 3100,
+    "cg_peak_mb": 313,
+    "anon_peak_mb": 225,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "composition_306",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "avoiding_305",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/out/olean/Composition306.olean",
+    "olean_sha256": "1cc3daf27a8c670dfdb0bdcfd45623ab90eee5ae24b4ea085226e2e2934fd1e3"
+   },
+   {
+    "job": "audit",
+    "gate": {
+     "tctl": 84.4,
+     "ag_mb": 467,
+     "esr_mb": 19919
+    },
+    "systemd_run_rc": 0,
+    "systemd_run_stderr": "Running as unit: esr-ag-lcmp-audit.service; invocation ID: 0998050a732d47a7a33b760999601e8c\n          Finished with result: success\nMain processes terminated with: code=exited, status=0/SUCCESS\n               Service runtime: 17.991s\n             CPU time consumed: 17.746s\n                   Memory peak: 321.1M (swap: 0B)",
+    "lean_rc": 0,
+    "exit_status": 0,
+    "signal": false,
+    "wall": "0:17.77",
+    "user_s": 16.77,
+    "max_rss_mb": 3152,
+    "cg_peak_mb": 321,
+    "anon_peak_mb": 233,
+    "swap_peak": 0,
+    "events": {
+     "low": "0",
+     "high": "0",
+     "max": "0",
+     "oom": "0",
+     "oom_kill": "0",
+     "oom_group_kill": "0",
+     "sock_throttled": "0"
+    },
+    "errors": [],
+    "sorry": false,
+    "axioms": [
+     [
+      "OmissionBalancedZ.composition_304_z",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZ.composition_305_z",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZF.composition_304_zf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZF.composition_303_zf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsF.composition_303_zzsf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsF.composition_302_zzsf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsF.composition_301_zzsf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsF.composition_300_zzsf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsN.composition_302_n54",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsN.composition_301_n53",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "composition_304",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "composition_303",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "composition_305",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "composition_306",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionZRow.z_row",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionZStarRow.zs_row",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsN.z_row_of",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsN.zs_row_of",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZ.balanced_bound_of_hole_budget_z",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsF.balanced_bound_of_hole_budget_zzsf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsN.balanced_bound_of_hole_budget_zzsn",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionZRow.Z_eq",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionZStarRow.Zs_eq",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZ.feasible_holes_z",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZF.feasible_holes_zf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZF.balanced_bound_of_hole_budget_zf",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "OmissionBalancedZZsN.zzsn_55_iff",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "avoiding_302",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "avoiding_303",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "avoiding_304",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ],
+     [
+      "avoiding_305",
+      [
+       "Classical.choice",
+       "Quot.sound",
+       "propext"
+      ]
+     ]
+    ],
+    "olean": "/home/jay/research/data/formalize-20261122/comp-audit/audit/Audit.olean",
+    "olean_sha256": "3a3c815bb0943579aa5162df3322c7ab04334ac0adcbc05fb41864740d6ffd86"
+   }
+  ],
+  "audit": {
+   "names": 31,
+   "modules": 4980,
+   "closure_rows": 4980,
+   "closure_tsv_sha256": "ea90547ab2d20e9e867b4ded2d4ed397908a08d0e43bf637ab01d87dc6416cf6",
+   "axioms_txt_sha256": "52e6c7cc6c90d8d14c49101c685dd10e5bc1f315864037c5cfcd67d8d189ee24",
+   "by_root": {
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean": 0,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean": 84,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean": 13,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean": 130,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean": 12,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean": 2,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean": 4,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean": 9,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean": 2825,
+    "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean": 72,
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean": 1732,
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean": 87,
+    "/home/jay/research/data/formalize-20261122/comp-audit/out/olean": 10
+   },
+   "companions": 3464,
+   "companions_digest": "9b3b8546f02fcd8759d39caf99923d4d49b6b343505105d6f7641fe50ea3b6c4",
+   "negative_control": {
+    "added_root": "/home/jay/research/data/bal186-20261119/zrow/leanz/olean",
+    "refused": true,
+    "duplicates": {
+     "LemmaZ.olean": [
+      "/home/jay/research/data/formalize-20261122/comp-audit/out/olean",
+      "/home/jay/research/data/bal186-20261119/zrow/leanz/olean"
+     ]
+    }
+   },
+   "older_copies_equal": {
+    "/home/jay/research/data/bal186-20261119/zrow/leanz/olean/LemmaZ.olean": true,
+    "/home/jay/research/data/fv304-20261120/olean/BalancedBudgetsZ.olean": true,
+    "/home/jay/research/data/bal186-20261119/zrow/leanzs/olean/FixedStatesZ.olean": true,
+    "/home/jay/research/data/bal186-20261119/zrow/leanzs/olean/LemmaZStar.olean": true,
+    "/home/jay/research/data/bal186-20261119/zrow/leanzs/olean/BalancedBudgetsZZs.olean": true
+   },
+   "problems": []
+  }
+ },
+ "ended_utc": "2026-11-21T21:05:51Z"
+}

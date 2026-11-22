@@ -1,0 +1,75 @@
+{
+ "time": "2026-11-22 19:11:39",
+ "exe_sha256_start": "22e0574334a92de970f8f8af8206ddc902c4eeeecf17bdcc8d03971ac46ed748",
+ "exe_sha256_end": "22e0574334a92de970f8f8af8206ddc902c4eeeecf17bdcc8d03971ac46ed748",
+ "hashes_203_tsv_sha256": "90cbb85d506d390e8d6a226296cc7581eeecee10611dce20f2f896031dc2b010",
+ "hashes_203_tsv_expected": "90cbb85d506d390e8d6a226296cc7581eeecee10611dce20f2f896031dc2b010",
+ "rows": 203,
+ "match": 203,
+ "fail": [],
+ "distinct_exe_hashes": 194,
+ "distinct_recorded_hashes": 194,
+ "duplicate_groups_identical": true,
+ "recorded_duplicate_groups": [
+  [
+   "ae_d14_20",
+   "ae_d15_20"
+  ],
+  [
+   "ae_d14_26",
+   "ae_d14_27"
+  ],
+  [
+   "ae_d15_26",
+   "ae_d15_27"
+  ],
+  [
+   "ae_d17_26",
+   "ae_d17_27"
+  ],
+  [
+   "ae_d20_26",
+   "ae_d20_27"
+  ],
+  [
+   "ae_d23_26",
+   "ae_d23_27"
+  ],
+  [
+   "ae_d25_26",
+   "ae_d25_27"
+  ],
+  [
+   "ae_d26_32",
+   "ae_d27_32"
+  ],
+  [
+   "ae_d9_14",
+   "ae_d9_15"
+  ]
+ ],
+ "pts_rc": 0,
+ "pts_sha256": "cb6a5327b26b869ab39baadf0ade737882f8473dc1ccfbd377d06405a59eb54d",
+ "pts_equals_ae33_txt": true,
+ "refusal_controls": {
+  "cnf 203": {
+   "rc": 1,
+   "stdout_bytes": 0
+  },
+  "cnf x": {
+   "rc": 1,
+   "stdout_bytes": 0
+  },
+  "cnf -1": {
+   "rc": 1,
+   "stdout_bytes": 0
+  },
+  "(no args)": {
+   "rc": 1,
+   "stdout_bytes": 0
+  }
+ },
+ "total_wall_s": 2804.5,
+ "PASS": true
+}
+rc=0

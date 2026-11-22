@@ -1,0 +1,84 @@
+{
+ "sample": {
+  "E304Z.C000001": {
+   "source_sha256": "7b2b382b4840ceaae8b28a44666dd6b92414fd135cd8a242feed7e9cb32ba138",
+   "lean_rc": 0,
+   "axioms": [
+    [
+     "E304Z.C000001.ex0",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ]
+   ],
+   "wall_s": 8.57,
+   "anon_peak_mb": 442,
+   "rebuilt_sha256": "c3222df25946d9b70f2c8e99476c34f3cbf42dc4aee813329f20182077830465",
+   "fv304_sha256": "c3222df25946d9b70f2c8e99476c34f3cbf42dc4aee813329f20182077830465",
+   "byte_identical": true
+  },
+  "E304Z.C751401": {
+   "source_sha256": "8d2c83d33cc23f7852660489b16a90b4c3da7d218509a5f2174b1636e7eded51",
+   "lean_rc": 0,
+   "axioms": [
+    [
+     "E304Z.C751401.ex0",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ]
+   ],
+   "wall_s": 18.4,
+   "anon_peak_mb": 475,
+   "rebuilt_sha256": "35822323c3273336df36cdd86c4afbb355ac4ea4cba1ac14a0214a331f790190",
+   "fv304_sha256": "586c1dd1c0f2e806b5ae3da52af74012c7ff98baee227aa88014becd1e3d8143",
+   "byte_identical": false
+  },
+  "E304Z.C634501": {
+   "source_sha256": "b26f634ab91b75e8445a01ee79b6923780c0a8f2621ab8ab8a69c4be919f4d3e",
+   "lean_rc": 0,
+   "axioms": [],
+   "wall_s": 140.76,
+   "anon_peak_mb": 759,
+   "rebuilt_sha256": "5c7da916e056f5a6f130ebd8aec9ba38fb2707c466a88f571553aa1d88bcee78",
+   "fv304_sha256": "5c7da916e056f5a6f130ebd8aec9ba38fb2707c466a88f571553aa1d88bcee78",
+   "byte_identical": true
+  },
+  "E304Z.S3_7": {
+   "source_sha256": "78096969b88b57271902f854b87513aaff9c6e90db6db0f0147125ae82de42b8",
+   "lean_rc": 0,
+   "axioms": [
+    [
+     "E304Z.S3_7.root",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ]
+   ],
+   "wall_s": 24.84,
+   "anon_peak_mb": 593,
+   "rebuilt_sha256": "7fca1bcf3922dbaadfc45fb63dfa67986f4201acc295ca6163d32482e8ef898e",
+   "fv304_sha256": "7fca1bcf3922dbaadfc45fb63dfa67986f4201acc295ca6163d32482e8ef898e",
+   "byte_identical": true
+  }
+ },
+ "problems": [],
+ "all_byte_identical": false,
+ "pilot_module_name_rebuild": {
+  "module": "E304Z.C751401",
+  "main_module_name": "src.E304Z.C751401",
+  "how": "lean -j1 -R <work dir> src/E304Z/C751401.lean (= the pilot compile: cwd export/, path src/E304Z/C751401.lean)",
+  "log": "logs/smp-pilotname-C751401.log",
+  "rebuilt_sha256": "586c1dd1c0f2e806b5ae3da52af74012c7ff98baee227aa88014becd1e3d8143",
+  "fv304_sha256": "586c1dd1c0f2e806b5ae3da52af74012c7ff98baee227aa88014becd1e3d8143",
+  "byte_identical": true
+ },
+ "note": "C751401 differs when rebuilt as E304Z.C751401 and is byte-identical when rebuilt as src.E304Z.C751401, the main-module name of the pilot compile; the 7 pilot.tsv modules (C334301 C751401 C420801 C075201-04) were compiled that way (their logs). The C634501 rebuild log again has its axiom line split by profiler output; its axioms are in step_reprint.json.",
+ "all_reproduced_with_their_module_names": true
+}

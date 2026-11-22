@@ -1,0 +1,79 @@
+N66Enc/DecodeA.lean:33:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.capGe.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:40:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.cupGe.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:47:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.orient.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:54:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.convex.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:68:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.chC.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:75:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.chU.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:82:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.ce.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:89:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.ue.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:96:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.cnt.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:96:69: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.add_sub_cancel_left, Atom.cnt.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:103:69: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.add_sub_cancel_left, Atom.sbe.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DecodeA lean wall=4.89 s maxrss=469892 KB
+rc=0

@@ -1,0 +1,185 @@
+{
+ "campaign_status_sha256": "4802dc9a946cefa3b855b8c495becc0fb33491a89e5472c9722ccb9d0c8138f5",
+ "campaign": {
+  "cubes": 146,
+  "certified": 105,
+  "split": 41,
+  "other_status": [],
+  "final": true,
+  "cover": {
+   "leaves": 105,
+   "leaf_cover_ok": true,
+   "certified_leaves": 105,
+   "certified_cover_ok": true
+  }
+ },
+ "dump_leaves": 105,
+ "worker_leaf_order_equal": true,
+ "sbPairs_len": 27,
+ "vfy15_summary_sha256": "87b82b7a0029496176bdffdeabb87d95bd7f03eba844e576f31b826084927181",
+ "per_leaf_counts": {
+  "cert_ok": 105,
+  "verify_ok": 105,
+  "cake_out_exact": 105,
+  "cake_cmd": 105,
+  "cake_attempt_ok": 105,
+  "mtime_order": 105,
+  "vfy15_ok": 105,
+  "vfy15_raw_ok": 105
+ },
+ "fv66_bad_nonzero": [],
+ "cake_attempts_multi": [
+  [
+   "ooohoh",
+   [
+    [
+     2000,
+     false
+    ],
+    [
+     3200,
+     true
+    ]
+   ]
+  ]
+ ],
+ "vfy15_lrat_from": [
+  "lrat_from=zst"
+ ],
+ "up_refuted": [
+  "hooooh",
+  "hooohh",
+  "hohooh",
+  "hohohh",
+  "hhoooh",
+  "hhoohh",
+  "hhhooh",
+  "hhhohh"
+ ],
+ "trim_sha_distinct": 98,
+ "rows_file_sha256": "f45e25f16007012e637d7e97a476ceb4eebe11d797a83c1a1c0907b9af2f0511",
+ "rows_dump_eq_file": true,
+ "rowsText_eq_file": true,
+ "R0_15_rows": 10859,
+ "rows_structure_bad": 0,
+ "row_len_min_max": [
+  8,
+  29
+ ],
+ "used_rows_union": 10859,
+ "used_rows_demands": [
+  1
+ ],
+ "R0_15_eq_union_used_rows": true,
+ "no_justification_file": [
+  [
+   "hooooh",
+   0
+  ],
+  [
+   "hooohh",
+   0
+  ],
+  [
+   "hohooh",
+   0
+  ],
+  [
+   "hohohh",
+   0
+  ],
+  [
+   "hhoooh",
+   0
+  ],
+  [
+   "hhoohh",
+   0
+  ],
+  [
+   "hhhooh",
+   0
+  ],
+  [
+   "hhhohh",
+   0
+  ]
+ ],
+ "rows_without_demand1_justification": 0,
+ "justification_kinds_per_row": {
+  "transported": 5318,
+  "mirror": 5292,
+  "core": 197,
+  "cycle": 52
+ },
+ "stateList_eq_own": true,
+ "random_subsets": {
+  "count": 3000,
+  "seed": 20261122,
+  "size_min_max": [
+   8,
+   49
+  ],
+  "subsets_with_full_row": 0
+ },
+ "selftests": {
+  "6cup": true,
+  "6cap": true,
+  "octagon": true,
+  "heptagon_no_octagon": true,
+  "collinear_rejected": true,
+  "cap_triple_states": true,
+  "cup_triple_states": true
+ },
+ "fails": [],
+ "verdict": "PASS"
+}
+{
+ "id": {
+  "n": 50,
+  "max_cap_path": 5,
+  "max_cup_path": 5,
+  "capcup55_octagon": false,
+  "in_class": true,
+  "distinct_states": 50,
+  "states_absent_from_list": 0,
+  "rows_fully_occupied": 0,
+  "rows_tight": 789,
+  "states_eq_etv668": true,
+  "holes_eq_etv668": true
+ },
+ "x_reflect": {
+  "n": 50,
+  "max_cap_path": 5,
+  "max_cup_path": 5,
+  "capcup55_octagon": false,
+  "in_class": true,
+  "distinct_states": 50,
+  "states_absent_from_list": 0,
+  "rows_fully_occupied": 0,
+  "rows_tight": 294
+ },
+ "y_reflect": {
+  "n": 50,
+  "max_cap_path": 5,
+  "max_cup_path": 5,
+  "capcup55_octagon": false,
+  "in_class": true,
+  "distinct_states": 50,
+  "states_absent_from_list": 0,
+  "rows_fully_occupied": 0,
+  "rows_tight": 789,
+  "states_eq_tau_of_id": true
+ },
+ "xy_reflect": {
+  "n": 50,
+  "max_cap_path": 5,
+  "max_cup_path": 5,
+  "capcup55_octagon": false,
+  "in_class": true,
+  "distinct_states": 50,
+  "states_absent_from_list": 0,
+  "rows_fully_occupied": 0,
+  "rows_tight": 284
+ }
+}

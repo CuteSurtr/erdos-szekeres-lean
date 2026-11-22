@@ -1,0 +1,15 @@
+AE33Geo/Radius1.lean:36:2: error: failed to synthesize
+  Decidable (∀ v < 33, ∀ u < v, (u, v) ∈ pairs203.toList ∨ u ∉ hept ∧ v ∉ hept)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+AE33Geo/Radius1.lean:56:50: warning: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [keepIdx, List.mem_filter, List.mem_range,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'AE33Geo.ae33_radius1' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+Radius1 lean wall=7.88 s maxrss=3977204 KB
+rc=1

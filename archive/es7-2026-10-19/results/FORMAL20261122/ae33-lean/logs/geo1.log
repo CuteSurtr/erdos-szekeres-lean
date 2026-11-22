@@ -1,0 +1,353 @@
+AE33Geo/Slot.lean:148:71: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (?m.184 :: ?m.185)[?m.186]?
+in the target expression
+  ([t] ++ List.drop (j + 1) c)[r - (j + 1)]?.getD 0 = c[r - 1]?.getD 0
+
+case neg
+c : List ℕ
+m j t r : ℕ
+hm : c.length = m
+hj : j < m
+htl : (List.take (j + 1) c).length = j + 1
+h1 : ¬r < j + 1
+h2 : ¬r = j + 1
+⊢ ([t] ++ List.drop (j + 1) c)[r - (j + 1)]?.getD 0 = c[r - 1]?.getD 0
+AE33Geo/Slot.lean:184:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if r + (m - 1 - j) < m - 1 + 1 then ?m.787 else ?m.788
+in the target expression
+  P (c.getD ((r + (m - 1 - j) + j + 1) % m) 0) = P (c.getD r 0)
+
+case pos
+P : ℕ → Point
+c : List ℕ
+m : ℕ
+hm : c.length = m
+hm3 : 3 ≤ m
+hc : PosChain (fun r => P (c.getD r 0)) m
+j : ℕ
+hj : j < m
+t : ℕ
+h1 : 0 < orient (P (c.getD ((j + m - 1) % m) 0)) (P (c.getD j 0)) (P t)
+h2 : orient (P (c.getD j 0)) (P (c.getD ((j + 1) % m) 0)) (P t) < 0
+h3 : 0 < orient (P (c.getD ((j + 1) % m) 0)) (P (c.getD ((j + 2) % m) 0)) (P t)
+hrot : PosChain (fun r => P (c.getD ((r + (j + 1) % m) % m) 0)) m
+em : ∀ (r : ℕ), (r + (j + 1) % m) % m = (r + j + 1) % m
+hrot' : PosChain (fun r => P (c.getD ((r + j + 1) % m) 0)) (m - 1 + 1)
+e0 : (0 + j + 1) % m = (j + 1) % m
+e1 : (1 + j + 1) % m = (j + 2) % m
+e2 : (m - 1 - 1 + j + 1) % m = (j + m - 1) % m
+e3 : (m - 1 + j + 1) % m = j
+hch : PosChain (fun r => if r < m - 1 + 1 then (fun r => P (c.getD ((r + j + 1) % m) 0)) r else P t) (m + 1)
+hm' : m - 1 + 2 = m + 1
+hfin :
+  PosChain
+    (fun r =>
+      if (r + (m - 1 - j)) % (m + 1) < m - 1 + 1 then
+        (fun r => P (c.getD ((r + j + 1) % m) 0)) ((r + (m - 1 - j)) % (m + 1))
+      else P t)
+    (m + 1)
+r : ℕ
+hr : r < m + 1
+ha : r + (m - 1 - j) < m - 1 + 1
+hb : r < j + 1
+⊢ P (c.getD ((r + (m - 1 - j) + j + 1) % m) 0) = P (c.getD r 0)
+AE33Geo/Slot.lean:187:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (r + (m - 1 - j)) % (m + 1)
+in the target expression
+  r = j + 1
+
+case pos
+P : ℕ → Point
+c : List ℕ
+m : ℕ
+hm : c.length = m
+hm3 : 3 ≤ m
+hc : PosChain (fun r => P (c.getD r 0)) m
+j : ℕ
+hj : j < m
+t : ℕ
+h1 : 0 < orient (P (c.getD ((j + m - 1) % m) 0)) (P (c.getD j 0)) (P t)
+h2 : orient (P (c.getD j 0)) (P (c.getD ((j + 1) % m) 0)) (P t) < 0
+h3 : 0 < orient (P (c.getD ((j + 1) % m) 0)) (P (c.getD ((j + 2) % m) 0)) (P t)
+hrot : PosChain (fun r => P (c.getD ((r + (j + 1) % m) % m) 0)) m
+em : ∀ (r : ℕ), (r + (j + 1) % m) % m = (r + j + 1) % m
+hrot' : PosChain (fun r => P (c.getD ((r + j + 1) % m) 0)) (m - 1 + 1)
+e0 : (0 + j + 1) % m = (j + 1) % m
+e1 : (1 + j + 1) % m = (j + 2) % m
+e2 : (m - 1 - 1 + j + 1) % m = (j + m - 1) % m
+e3 : (m - 1 + j + 1) % m = j
+hch : PosChain (fun r => if r < m - 1 + 1 then (fun r => P (c.getD ((r + j + 1) % m) 0)) r else P t) (m + 1)
+hm' : m - 1 + 2 = m + 1
+hfin :
+  PosChain
+    (fun r =>
+      if (r + (m - 1 - j)) % (m + 1) < m - 1 + 1 then
+        (fun r => P (c.getD ((r + j + 1) % m) 0)) ((r + (m - 1 - j)) % (m + 1))
+      else P t)
+    (m + 1)
+r : ℕ
+hr : r < m + 1
+ha : (r + (m - 1 - j)) % (m + 1) < m - 1 + 1
+hb : ¬r < j + 1
+hc' : r = j + 1
+⊢ P (c.getD (((r + (m - 1 - j)) % (m + 1) + j + 1) % m) 0) = P t
+AE33Geo/Slot.lean:189:4: error: Tactic `subst` failed: did not find equation for eliminating 'hb'
+
+case neg
+P : ℕ → Point
+c : List ℕ
+m : ℕ
+hm : c.length = m
+hm3 : 3 ≤ m
+hc : PosChain (fun r => P (c.getD r 0)) m
+j : ℕ
+hj : j < m
+t : ℕ
+h1 : 0 < orient (P (c.getD ((j + m - 1) % m) 0)) (P (c.getD j 0)) (P t)
+h2 : orient (P (c.getD j 0)) (P (c.getD ((j + 1) % m) 0)) (P t) < 0
+h3 : 0 < orient (P (c.getD ((j + 1) % m) 0)) (P (c.getD ((j + 2) % m) 0)) (P t)
+hrot : PosChain (fun r => P (c.getD ((r + (j + 1) % m) % m) 0)) m
+em : ∀ (r : ℕ), (r + (j + 1) % m) % m = (r + j + 1) % m
+hrot' : PosChain (fun r => P (c.getD ((r + j + 1) % m) 0)) (m - 1 + 1)
+e0 : (0 + j + 1) % m = (j + 1) % m
+e1 : (1 + j + 1) % m = (j + 2) % m
+e2 : (m - 1 - 1 + j + 1) % m = (j + m - 1) % m
+e3 : (m - 1 + j + 1) % m = j
+hch : PosChain (fun r => if r < m - 1 + 1 then (fun r => P (c.getD ((r + j + 1) % m) 0)) r else P t) (m + 1)
+hm' : m - 1 + 2 = m + 1
+hfin :
+  PosChain
+    (fun r =>
+      if (r + (m - 1 - j)) % (m + 1) < m - 1 + 1 then
+        (fun r => P (c.getD ((r + j + 1) % m) 0)) ((r + (m - 1 - j)) % (m + 1))
+      else P t)
+    (m + 1)
+r : ℕ
+hr : r < m + 1
+ha : (r + (m - 1 - j)) % (m + 1) < m - 1 + 1
+hb : ¬r < j + 1
+hc' : ¬r = j + 1
+⊢ P (c.getD (((r + (m - 1 - j)) % (m + 1) + j + 1) % m) 0) = P (c.getD (r - 1) 0)
+AE33Geo/Slot.lean:192:4: error: Tactic `rfl` failed: The left-hand side
+  P t
+is not definitionally equal to the right-hand side
+  P (c.getD r 0)
+
+case pos
+P : ℕ → Point
+c : List ℕ
+m : ℕ
+hm : c.length = m
+hm3 : 3 ≤ m
+hc : PosChain (fun r => P (c.getD r 0)) m
+j : ℕ
+hj : j < m
+t : ℕ
+h1 : 0 < orient (P (c.getD ((j + m - 1) % m) 0)) (P (c.getD j 0)) (P t)
+h2 : orient (P (c.getD j 0)) (P (c.getD ((j + 1) % m) 0)) (P t) < 0
+h3 : 0 < orient (P (c.getD ((j + 1) % m) 0)) (P (c.getD ((j + 2) % m) 0)) (P t)
+hrot : PosChain (fun r => P (c.getD ((r + (j + 1) % m) % m) 0)) m
+em : ∀ (r : ℕ), (r + (j + 1) % m) % m = (r + j + 1) % m
+hrot' : PosChain (fun r => P (c.getD ((r + j + 1) % m) 0)) (m - 1 + 1)
+e0 : (0 + j + 1) % m = (j + 1) % m
+e1 : (1 + j + 1) % m = (j + 2) % m
+e2 : (m - 1 - 1 + j + 1) % m = (j + m - 1) % m
+e3 : (m - 1 + j + 1) % m = j
+hch : PosChain (fun r => if r < m - 1 + 1 then (fun r => P (c.getD ((r + j + 1) % m) 0)) r else P t) (m + 1)
+hm' : m - 1 + 2 = m + 1
+hfin :
+  PosChain
+    (fun r =>
+      if (r + (m - 1 - j)) % (m + 1) < m - 1 + 1 then
+        (fun r => P (c.getD ((r + j + 1) % m) 0)) ((r + (m - 1 - j)) % (m + 1))
+      else P t)
+    (m + 1)
+r : ℕ
+hr : r < m + 1
+ha : ¬(r + (m - 1 - j)) % (m + 1) < m - 1 + 1
+hd : r < j + 1
+⊢ P t = P (c.getD r 0)
+AE33Geo/Slot.lean:193:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (r + (m - 1 - j)) % (m + 1)
+in the target expression
+  ¬r < j + 1
+
+case pos
+P : ℕ → Point
+c : List ℕ
+m : ℕ
+hm : c.length = m
+hm3 : 3 ≤ m
+hc : PosChain (fun r => P (c.getD r 0)) m
+j : ℕ
+hj : j < m
+t : ℕ
+h1 : 0 < orient (P (c.getD ((j + m - 1) % m) 0)) (P (c.getD j 0)) (P t)
+h2 : orient (P (c.getD j 0)) (P (c.getD ((j + 1) % m) 0)) (P t) < 0
+h3 : 0 < orient (P (c.getD ((j + 1) % m) 0)) (P (c.getD ((j + 2) % m) 0)) (P t)
+hrot : PosChain (fun r => P (c.getD ((r + (j + 1) % m) % m) 0)) m
+em : ∀ (r : ℕ), (r + (j + 1) % m) % m = (r + j + 1) % m
+hrot' : PosChain (fun r => P (c.getD ((r + j + 1) % m) 0)) (m - 1 + 1)
+e0 : (0 + j + 1) % m = (j + 1) % m
+e1 : (1 + j + 1) % m = (j + 2) % m
+e2 : (m - 1 - 1 + j + 1) % m = (j + m - 1) % m
+e3 : (m - 1 + j + 1) % m = j
+hch : PosChain (fun r => if r < m - 1 + 1 then (fun r => P (c.getD ((r + j + 1) % m) 0)) r else P t) (m + 1)
+hm' : m - 1 + 2 = m + 1
+hfin :
+  PosChain
+    (fun r =>
+      if (r + (m - 1 - j)) % (m + 1) < m - 1 + 1 then
+        (fun r => P (c.getD ((r + j + 1) % m) 0)) ((r + (m - 1 - j)) % (m + 1))
+      else P t)
+    (m + 1)
+r : ℕ
+hr : r < m + 1
+ha : ¬(r + (m - 1 - j)) % (m + 1) < m - 1 + 1
+hd : ¬r < j + 1
+h✝ : r = j + 1
+⊢ P t = P t
+AE33Geo/Slot.lean:195:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (r + (m - 1 - j)) % (m + 1)
+in the target expression
+  P t = P (c.getD (r - 1) 0)
+
+case neg
+P : ℕ → Point
+c : List ℕ
+m : ℕ
+hm : c.length = m
+hm3 : 3 ≤ m
+hc : PosChain (fun r => P (c.getD r 0)) m
+j : ℕ
+hj : j < m
+t : ℕ
+h1 : 0 < orient (P (c.getD ((j + m - 1) % m) 0)) (P (c.getD j 0)) (P t)
+h2 : orient (P (c.getD j 0)) (P (c.getD ((j + 1) % m) 0)) (P t) < 0
+h3 : 0 < orient (P (c.getD ((j + 1) % m) 0)) (P (c.getD ((j + 2) % m) 0)) (P t)
+hrot : PosChain (fun r => P (c.getD ((r + (j + 1) % m) % m) 0)) m
+em : ∀ (r : ℕ), (r + (j + 1) % m) % m = (r + j + 1) % m
+hrot' : PosChain (fun r => P (c.getD ((r + j + 1) % m) 0)) (m - 1 + 1)
+e0 : (0 + j + 1) % m = (j + 1) % m
+e1 : (1 + j + 1) % m = (j + 2) % m
+e2 : (m - 1 - 1 + j + 1) % m = (j + m - 1) % m
+e3 : (m - 1 + j + 1) % m = j
+hch : PosChain (fun r => if r < m - 1 + 1 then (fun r => P (c.getD ((r + j + 1) % m) 0)) r else P t) (m + 1)
+hm' : m - 1 + 2 = m + 1
+hfin :
+  PosChain
+    (fun r =>
+      if (r + (m - 1 - j)) % (m + 1) < m - 1 + 1 then
+        (fun r => P (c.getD ((r + j + 1) % m) 0)) ((r + (m - 1 - j)) % (m + 1))
+      else P t)
+    (m + 1)
+r : ℕ
+hr : r < m + 1
+ha : ¬(r + (m - 1 - j)) % (m + 1) < m - 1 + 1
+hd : ¬r < j + 1
+h✝ : ¬r = j + 1
+⊢ P t = P (c.getD (r - 1) 0)
+AE33Geo/Slot.lean:193:21: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  e ≥ 1
+  e - f + g ≤ 0
+  e + g ≥ 3
+  d ≥ 0
+  b ≥ 0
+  a ≥ 0
+where
+ a := ↑(j + 1) % ↑m
+ b := ↑(j + 2) % ↑m
+ d := ↑(j + m - 1) % ↑m
+ e := ↑r
+ f := ↑(r + (m - 1 - j)) % ↑(m + 1)
+ g := ↑(m - (1 + j))
+AE33Geo/Slot.lean:211:11: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  -orient ?a ?b ?c
+in the target expression
+  orient (X a) (X b) (X c) ≠ 0
+
+case inl.inr.inl
+X : ℕ → Point
+m : ℕ
+hX : PosChain X m
+a b c : ℕ
+ha : a < m
+hb : b < m
+hc : c < m
+hab : a ≠ b
+hbc : b ≠ c
+hac : a ≠ c
+h1 : a < b
+h2 : b > c
+h3 : a < c
+⊢ orient (X a) (X b) (X c) ≠ 0
+AE33Geo/Slot.lean:211:11: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  -orient ?a ?b ?c
+in the target expression
+  orient (X a) (X b) (X c) ≠ 0
+
+case inr.inl.inl
+X : ℕ → Point
+m : ℕ
+hX : PosChain X m
+a b c : ℕ
+ha : a < m
+hb : b < m
+hc : c < m
+hab : a ≠ b
+hbc : b ≠ c
+hac : a ≠ c
+h1 : a > b
+h2 : b < c
+h3 : a < c
+⊢ orient (X a) (X b) (X c) ≠ 0
+AE33Geo/Slot.lean:211:11: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  -orient ?a ?b ?c
+in the target expression
+  orient (X a) (X b) (X c) ≠ 0
+
+case inr.inr.inr
+X : ℕ → Point
+m : ℕ
+hX : PosChain X m
+a b c : ℕ
+ha : a < m
+hb : b < m
+hc : c < m
+hab : a ≠ b
+hbc : b ≠ c
+hac : a ≠ c
+h1 : a > b
+h2 : b > c
+h3 : a > c
+⊢ orient (X a) (X b) (X c) ≠ 0
+Command exited with non-zero status 1
+Slot lean wall=5.70 s maxrss=2045340 KB
+Command exited with non-zero status 1
+	Command being timed: "tools/build_geo.sh Slot"
+	User time (seconds): 5.32
+	System time (seconds): 0.32
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.71
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2045340
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 46182
+	Voluntary context switches: 2650
+	Involuntary context switches: 2457
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+rc=1

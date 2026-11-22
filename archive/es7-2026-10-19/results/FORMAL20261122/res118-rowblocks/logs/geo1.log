@@ -1,0 +1,63 @@
+== RowGeo.Decode 2026-11-22T18:11:44+09:00
+RowGeo.Decode rc=1 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.22 	Maximum resident set size (kbytes): 402840 
+STOP at Decode
+RowGeo/Decode.lean:31:48: error: Invalid field `norm`: The environment does not contain `RowEnc.Atm.norm`
+  a
+has type
+  Atm
+RowGeo/Decode.lean:36:16: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+RowGeo/Decode.lean:40:16: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+RowGeo/Decode.lean:44:16: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+RowGeo/Decode.lean:48:16: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+RowGeo/Decode.lean:52:16: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+RowGeo/Decode.lean:34:33: warning: This simp argument is unused:
+  Atm.norm
+
+Hint: Omit it from the simp argument list.
+  simp only [Atm.code, ofCode,̵ ̵A̵t̵m̵.̵n̵o̵r̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RowGeo/Decode.lean:38:33: warning: This simp argument is unused:
+  Atm.norm
+
+Hint: Omit it from the simp argument list.
+  simp only [Atm.code, ofCode,̵ ̵A̵t̵m̵.̵n̵o̵r̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RowGeo/Decode.lean:42:33: warning: This simp argument is unused:
+  Atm.norm
+
+Hint: Omit it from the simp argument list.
+  simp only [Atm.code, ofCode,̵ ̵A̵t̵m̵.̵n̵o̵r̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RowGeo/Decode.lean:46:33: warning: This simp argument is unused:
+  Atm.norm
+
+Hint: Omit it from the simp argument list.
+  simp only [Atm.code, ofCode,̵ ̵A̵t̵m̵.̵n̵o̵r̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RowGeo/Decode.lean:50:33: warning: This simp argument is unused:
+  Atm.norm
+
+Hint: Omit it from the simp argument list.
+  simp only [Atm.code, ofCode,̵ ̵A̵t̵m̵.̵n̵o̵r̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RowGeo/Decode.lean:54:30: error: Invalid field `norm`: The environment does not contain `RowEnc.Atm.norm`
+  a
+has type
+  Atm
+RowGeo/Decode.lean:54:44: error: Invalid field `norm`: The environment does not contain `RowEnc.Atm.norm`
+  a
+has type
+  Atm
+RowGeo/Decode.lean:55:25: warning: This simp argument is unused:
+  Atm.norm
+

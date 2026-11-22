@@ -1,0 +1,10 @@
+spot 98 ae_d14_15 cnf_sha=0a6038c70a18922c verdict_lines=1 lines=1
+spot 99 ae_d14_16 cnf_sha=79fc7e95554a5d27 verdict_lines=1 lines=1
+negctl lrat(98) vs cnf(99): verdict_lines=0 first_line=c Checking failed at line: 0. Reason: clause not empty or singleton after reduct
+spot 0 ae_d0_14 cnf_sha=f5d3c01ec0f7444a verdict_lines=1 lines=1
+negctl lrat(99) vs cnf(0): verdict_lines=0 first_line=c Checking failed at line: 0. Reason: clause not empty or singleton after reduct
+spot 41 ae_d5_32 cnf_sha=20f2ae5e9e05b328 verdict_lines=1 lines=1
+negctl lrat(0) vs cnf(41): verdict_lines=0 first_line=c Checking failed at line: 0. Reason: clause not empty or singleton after reduct
+spot 13 ae_d1_32 cnf_sha=8dad6d5a8a95127a verdict_lines=1 lines=1
+negctl lrat(41) vs cnf(13): verdict_lines=0 first_line=c Checking failed at line: 0. Reason: clause not empty or singleton after reduct
+cgroup memory.peak=1797 MB

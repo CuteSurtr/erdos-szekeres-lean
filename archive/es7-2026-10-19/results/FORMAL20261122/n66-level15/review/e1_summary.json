@@ -1,0 +1,43 @@
+{
+ "runs": 105,
+ "indices_exactly_0_to_104": true,
+ "match": 105,
+ "bad": [],
+ "distinct_printed_texts": 98,
+ "shared_texts": {
+  "93548e48070ecd84d62a45419e5b1d6fff7dd55d8fd5913197da7ddf0954f25d": [
+   "hooooh",
+   "hooohh",
+   "hohooh",
+   "hohohh",
+   "hhoooh",
+   "hhoohh",
+   "hhhooh",
+   "hhhohh"
+  ]
+ },
+ "up_refuted_share_one_text": true,
+ "total_bytes": 1860488455,
+ "max_exe_rss_kb": 2462796,
+ "exe_leaves_eq_dump": true,
+ "controls": [
+  "a mutated-E rc=0 bytes=5996751 sha=445e1031a8f0b14851630ce4e4f401cd7baf4113b347245ffc3ef1c9a02a6eb0 ref=b7cdd8f9e70ed6e509e270df0019bfa6613f5c6f0ffd8d3588f3c597e6e69408 cmp=1",
+  "b index105 rc=1 stdout_bytes=0 stderr=no such leaf ",
+  "c badquad rc=1 stdout_bytes=0 stderr=invalid descriptor ",
+  "d swapped rc=0 sha=d8f06d90e7490d8b21c37a9921d667d80c040d6aefe831e19d6b6401379f8baa ref0=b7cdd8f9e70ed6e509e270df0019bfa6613f5c6f0ffd8d3588f3c597e6e69408 ref1=0f75e41f396b080de6c4ecd54e3d6844a2c99e5f38c96e76237c97b5c5acd242"
+ ],
+ "exe_hash_log": [
+  "start 2026-11-22 18:40:32",
+  "exe start 63d7fc9913fc1d80c423512470370644c62643c7ea785343ddb27426cb35a229",
+  "loop end 2026-11-22 18:47:47",
+  "exe ctl-a 63d7fc9913fc1d80c423512470370644c62643c7ea785343ddb27426cb35a229",
+  "exe ctl-b 63d7fc9913fc1d80c423512470370644c62643c7ea785343ddb27426cb35a229",
+  "exe ctl-c 63d7fc9913fc1d80c423512470370644c62643c7ea785343ddb27426cb35a229",
+  "exe ctl-d 63d7fc9913fc1d80c423512470370644c62643c7ea785343ddb27426cb35a229",
+  "exe leaves 63d7fc9913fc1d80c423512470370644c62643c7ea785343ddb27426cb35a229",
+  "leaves rc/maxrss/wall 0 2311640 3.02",
+  "exe end 63d7fc9913fc1d80c423512470370644c62643c7ea785343ddb27426cb35a229",
+  "end 2026-11-22 18:48:03"
+ ],
+ "verdict": "PASS"
+}

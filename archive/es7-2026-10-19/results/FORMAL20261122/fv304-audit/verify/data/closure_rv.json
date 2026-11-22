@@ -1,0 +1,70 @@
+{
+ "started": "2026-11-22 18:41:41",
+ "modules_in_rv_env": 13388,
+ "closures": {
+  "E304Z.Final": {
+   "pinned_library": 4883,
+   "pinned_chain311": 87,
+   "pinned_route": 8,
+   "pinned_fixed": 4,
+   "e304z_unpinned": 8217,
+   "other_unpinned": [],
+   "multi_root": [],
+   "no_root": [],
+   "tsv_mismatch": [],
+   "pin_mismatch": [],
+   "modules": 13199,
+   "tsv_rows": 13199,
+   "tsv_module_set_equal": true,
+   "tsv_digest": "84fdbbe978f877083d56c93f813d78d488a9a12919f0369094b64cc30e0f2fee"
+  },
+  "FV4A.Combined": {
+   "pinned_library": 4952,
+   "pinned_chain311": 195,
+   "pinned_route": 8,
+   "pinned_fixed": 10,
+   "e304z_unpinned": 8217,
+   "other_unpinned": [],
+   "multi_root": [],
+   "no_root": [],
+   "tsv_mismatch": [],
+   "pin_mismatch": [],
+   "modules": 13382,
+   "tsv_rows": 13382,
+   "tsv_module_set_equal": true,
+   "tsv_digest": "a8c7004950cc601e13006e777f284627c6842281afb8e872aeb0e8a39470bea6"
+  }
+ },
+ "companions": {
+  "count": 3464,
+  "roots": [
+   "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean"
+  ],
+  "comp_audit_format_digest_now": "9b3b8546f02fcd8759d39caf99923d4d49b6b343505105d6f7641fe50ea3b6c4",
+  "equals_comp_audit_0605": true,
+  "set_equals_comp_audit": true
+ },
+ "mtime_order_violations": [],
+ "mtime_order_violations_count": 0,
+ "sources": {
+  "chunks_checked": 8207,
+  "mismatch": [],
+  "manifest_modules": 8207,
+  "no_manifest": {
+   "E304Z.Final": "1fcaabf0c353f322a97f723301f1693814babf952731ceac04013990115a9525",
+   "E304Z.Root": "a0ce03afde4035234a4302ca878b25c86adeca913a6c2f9c4eb133a88c2e8ec3",
+   "E304Z.S3_0": "b42ff79ff5f728015cb582fe7f96f4785ca1340db82b8be9361fef4636fe0442",
+   "E304Z.S3_1": "84db0992f902ad7b331a36a362d73b01beca801a42cc7ca279d97d10e702ebe6",
+   "E304Z.S3_2": "46db1fcfe0bb46c4aa1f644c3a2448def91db23086ee45c184cae5c454966411",
+   "E304Z.S3_3": "0ed6b29001503ea2de3808f188ba33a2133fbc2d3a55f42a474bccb0b190e3c0",
+   "E304Z.S3_4": "4e799a25106e85847844716053a26f79e22183af670037288be63594d2c675eb",
+   "E304Z.S3_5": "8dfda198512db6d99d9ba683bad4fe2bc05dda65f502ce8825c6f3a2f302d629",
+   "E304Z.S3_6": "1fa91039d2153d2e5aac3f6443dd460e55e1ebf004208ff4a491d5c21a5dca23",
+   "E304Z.S3_7": "78096969b88b57271902f854b87513aaff9c6e90db6db0f0147125ae82de42b8"
+  }
+ },
+ "files_hashed": 13382,
+ "problems": [],
+ "ok": true,
+ "finished": "2026-11-22 18:42:48"
+}

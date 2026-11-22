@@ -1,0 +1,66 @@
+== RowGeo.Geo 2026-11-22T18:13:38+09:00
+RowGeo.Geo rc=0 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.59 	Maximum resident set size (kbytes): 3212044 
+== RowGeo.Sound 2026-11-22T18:13:41+09:00
+RowGeo.Sound rc=1 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.56 	Maximum resident set size (kbytes): 3226856 
+cgroup memory.peak: 336162816
+STOP at Sound
+RowGeo/Sound.lean:81:62: error: unsolved goals
+S : List ℕ
+hS : WF S
+u : ℕ
+hu : u < S.length
+⊢ S[⟨u, hu⟩] = S[u]
+RowGeo/Sound.lean:108:81: error: unsolved goals
+S : List ℕ
+hS : WF S
+n : ℕ
+C : Context S.length n (statesOf S ⋯)
+u v : ℕ
+hu : u < S.length
+hv : v < S.length
+huv : u ≠ v
+hk : 0 < S.length
+h16 : S.length ≤ 16
+hne : fk hk u ≠ fk hk v
+h✝ : ¬emptyB (S.getD u 0) (S.getD v 0) = true
+z : ℕ × ℕ
+hz : z ∈ List.filter (fun z => !allowedB (S.getD u 0) (S.getD v 0) z) grid46
+hcl✝ :
+  RowEnc.domainClause u v z.1 z.2 ∈
+    sourceClause u v (h1 (S.getD u 0)) ::
+      if emptyB (S.getD u 0) (S.getD v 0) = true then [emptyClause u v]
+      else
+        List.map (fun z => RowEnc.domainClause u v z.1 z.2)
+          (List.filter (fun z => !allowedB (S.getD u 0) (S.getD v 0) z) grid46)
+hcl :
+  RowEnc.domainClause u v z.1 z.2 ∈
+    List.map (fun z => RowEnc.domainClause u v z.1 z.2)
+      (List.filter (fun z => !allowedB (S.getD u 0) (S.getD v 0) z) grid46)
+ha : Allowed (statesOf S ⋯) (fk hk u) (fk hk v) (z.1, z.2)
+this : allowedB (S.getD u 0) (S.getD v 0) (z.1, z.2) = true
+hz' : allowedB (S[u]?.getD 0) (S[v]?.getD 0) z = false
+⊢ False
+RowGeo/Sound.lean:113:18: error: Ambiguous term
+  domainClause
+Possible interpretations:
+  Coupled.domainClause : Fin ?m.275 → Fin ?m.275 → ℕ → ℕ → List (Expr ?m.275)
+  
+  RowEnc.domainClause : ℕ → ℕ → ℕ → ℕ → List Lit
+RowGeo/Sound.lean:113:6: error: Type mismatch: After simplification, term
+  Context.domain_clause C (fk hk u) (fk hk v) hne z.1 z.2 hna
+ has type
+  C.clause
+    [(before (fk hk u) (fk hk v)).neg, (ge false (fk hk u) (fk hk v) z.1).neg, ge false (fk hk u) (fk hk v) (z.1 + 1),
+      (ge true (fk hk u) (fk hk v) z.2).neg, ge true (fk hk u) (fk hk v) (z.2 + 1)]
+but is expected to have type
+  C.clause (List.map (toExpr ⋯) (RowEnc.domainClause u v z.1 z.2))
+RowGeo/Sound.lean:112:14: warning: This simp argument is unused:
+  this
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵h̵i̵s̵]̵ ̵at hz'
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RowGeo/Sound.lean:130:50: error: Tactic `subst` failed: invalid equality proof, it is not of the form (x = t) or (t = x)
+  cl = threshClause false i j 3 ∨
+    cl = threshClause true i j 2 ∨

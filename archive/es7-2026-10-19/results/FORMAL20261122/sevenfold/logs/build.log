@@ -1,0 +1,2606 @@
+=== 2026-11-22T06:05:36+09:00 std EncBO.Probe (cf8ea84125b63a44)
+@encB_satisfiable : ∀ {m K t : Nat}, m % 2 = 0 → 2 ≤ m → ∀ (M : Model m K t), DimacsSatisfiable (encB m K t)
+parseDimacs_render : ∀ (nv : Nat) (F : List (List Int)),
+  (∀ (cl : List Int), cl ∈ F → ∀ (l : Int), l ∈ cl → l ≠ 0 ∧ l.natAbs ≤ nv) → parseDimacs (render nv F) = some (nv, F)
+@encB_wf : ∀ {m K t : Nat} (cl : List Int), cl ∈ encB m K t → ∀ (l : Int), l ∈ cl → l ≠ 0 ∧ l.natAbs ≤ numVars m K t
+Rules.sortSix : Rules.SortSixStmt
+wordSpec : WordSpec
+@Rules.patternCore_cases : ∀ {m : Nat} {orbVar : List Pt → Option Nat} {c : List Pt} {v : Nat} {objs : List Obj}
+  {l : Int},
+  (Rules.patternCore m orbVar c v objs).fst = some l →
+    ((pairs (List.map (fun o => (o.J, o.r)) objs)).any fun kk => kk.fst == kk.snd) = false ∧
+      (((List.map (fun x => x.kind) (insSort Obj.lt objs) = [1, 0, 1, 0, 1, 0] ∨
+            List.map (fun x => x.kind) (insSort Obj.lt objs) = [0, 1, 0, 1, 0, 1]) ∧
+          l =
+            if permSign (List.map (fun x => x.idx) (List.filter (fun x => x.kind == 1) (insSort Obj.lt objs))) > 0 then
+              ↑v
+            else -↑v) ∨
+        ∃ st,
+          st < 6 ∧
+            (List.map (fun x => x.kind) (insSort Obj.lt objs)).getD (st % 6) 0 = 1 ∧
+              (List.map (fun x => x.kind) (insSort Obj.lt objs)).getD ((st + 1) % 6) 0 = 1 ∧
+                (List.map (fun x => x.kind) (insSort Obj.lt objs)).getD ((st + 2) % 6) 0 = 1 ∧
+                  (c.getD ((insSort Obj.lt objs).getD ((st + 1) % 6) default).idx (0, 0)).fst ≤
+                      (c.getD ((insSort Obj.lt objs).getD (st % 6) default).idx (0, 0)).fst ∧
+                    (c.getD ((insSort Obj.lt objs).getD ((st + 1) % 6) default).idx (0, 0)).fst ≤
+                        (c.getD ((insSort Obj.lt objs).getD ((st + 2) % 6) default).idx (0, 0)).fst ∧
+                      olit m orbVar (c.getD ((insSort Obj.lt objs).getD (st % 6) default).idx (0, 0))
+                          (c.getD ((insSort Obj.lt objs).getD ((st + 1) % 6) default).idx (0, 0))
+                          (c.getD ((insSort Obj.lt objs).getD ((st + 2) % 6) default).idx (0, 0)) =
+                        some l)
+'EncB.wordSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.32
+	Maximum resident set size (kbytes): 373100
+rc=0
+=== 2026-11-22T06:08:34+09:00 std EncBO.ModelO (88dde50d90c70274)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.30
+	Maximum resident set size (kbytes): 420944
+rc=0
+=== 2026-11-22T06:10:14+09:00 std EncBO.Probe2 (3dc3a447438a8950)
+EncBO/Probe2.lean:15:12: error: Tactic `rfl` failed: The left-hand side
+  (have objs :=
+      List.flatMap
+        (fun pi =>
+          match pi with
+          | (p, idx) =>
+            match
+              have J := (2 * p.snd + h p.fst) % (2 * m);
+              (J, (J + m) % (2 * m)) with
+            | (J, Ja) =>
+              [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+        (c.zip (List.range c.length));
+    have keys := List.map (fun o => (o.J, o.r)) objs;
+    if ((pairs keys).any fun kk => kk.fst == kk.snd) = true then (none, 1)
+    else
+      have objs := insSort Obj.lt objs;
+      have kinds := List.map (fun x => x.kind) objs;
+      have v' := ↑v;
+      if (kinds == [1, 0, 1, 0, 1, 0] || kinds == [0, 1, 0, 1, 0, 1]) = true then
+        have seq := List.map (fun x => x.idx) (List.filter (fun x => x.kind == 1) objs);
+        (some (if permSign seq > 0 then v' else -v'), 0)
+      else
+        have isP := fun x => kinds.getD (x % 6) 0 == 1;
+        match List.find? (fun x => isP x && isP (x + 1) && isP (x + 2)) (List.range 6) with
+        | none => (none, 1)
+        | some st =>
+          have seq := List.map (fun r => (objs.getD ((st + r) % 6) default).idx) [0, 1, 2];
+          have a := c.getD (seq.getD 0 0) (0, 0);
+          have b := c.getD (seq.getD 1 0) (0, 0);
+          have cc := c.getD (seq.getD 2 0) (0, 0);
+          if (decide (b.fst ≤ a.fst) && decide (b.fst ≤ cc.fst)) = true then
+            match olit m orbVar a b cc with
+            | none => (none, 1)
+            | some l => (some l, 0)
+          else (none, 0)).fst
+is not definitionally equal to the right-hand side
+  (have keys :=
+      List.map (fun o => (o.J, o.r))
+        (List.flatMap
+          (fun pi =>
+            match pi with
+            | (p, idx) =>
+              match
+                have J := (2 * p.snd + h p.fst) % (2 * m);
+                (J, (J + m) % (2 * m)) with
+              | (J, Ja) =>
+                [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+          (c.zip (List.range c.length)));
+    if ((pairs keys).any fun kk => kk.fst == kk.snd) = true then (none, if false = true then 1 else 0)
+    else
+      have objs :=
+        insSort Obj.lt
+          (List.flatMap
+            (fun pi =>
+              match pi with
+              | (p, idx) =>
+                match
+                  have J := (2 * p.snd + h p.fst) % (2 * m);
+                  (J, (J + m) % (2 * m)) with
+                | (J, Ja) =>
+                  [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+            (c.zip (List.range c.length)));
+      have kinds := List.map (fun x => x.kind) objs;
+      have v' := ↑v;
+      if (kinds == [1, 0, 1, 0, 1, 0] || kinds == [0, 1, 0, 1, 0, 1]) = true then
+        have seq := List.map (fun x => x.idx) (List.filter (fun x => x.kind == 1) objs);
+        (some (if permSign seq > 0 then v' else -v'), 0)
+      else
+        have isP := fun x => kinds.getD (x % 6) 0 == 1;
+        match List.find? (fun x => isP x && isP (x + 1) && isP (x + 2)) (List.range 6) with
+        | none => (none, 1)
+        | some st =>
+          have seq := List.map (fun r => (objs.getD ((st + r) % 6) default).idx) [0, 1, 2];
+          have a := c.getD (seq.getD 0 0) (0, 0);
+          have b := c.getD (seq.getD 1 0) (0, 0);
+          have cc := c.getD (seq.getD 2 0) (0, 0);
+          if (decide (b.fst ≤ a.fst) && decide (b.fst ≤ cc.fst)) = true then
+            match olit m orbVar a b cc with
+            | none => (none, 1)
+            | some l => (some l, 0)
+          else (none, 0)).fst
+
+case isTrue
+m : Nat
+orbVar : List Pt → Option Nat
+c : List Pt
+v : Nat
+rk h : Nat → Nat
+h✝ : true = true
+⊢ (have objs :=
+        List.flatMap
+          (fun pi =>
+            match pi with
+            | (p, idx) =>
+              match
+                have J := (2 * p.snd + h p.fst) % (2 * m);
+                (J, (J + m) % (2 * m)) with
+              | (J, Ja) =>
+                [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+          (c.zip (List.range c.length));
+      have keys := List.map (fun o => (o.J, o.r)) objs;
+      if ((pairs keys).any fun kk => kk.fst == kk.snd) = true then (none, 1)
+      else
+        have objs := insSort Obj.lt objs;
+        have kinds := List.map (fun x => x.kind) objs;
+        have v' := ↑v;
+        if (kinds == [1, 0, 1, 0, 1, 0] || kinds == [0, 1, 0, 1, 0, 1]) = true then
+          have seq := List.map (fun x => x.idx) (List.filter (fun x => x.kind == 1) objs);
+          (some (if permSign seq > 0 then v' else -v'), 0)
+        else
+          have isP := fun x => kinds.getD (x % 6) 0 == 1;
+          match List.find? (fun x => isP x && isP (x + 1) && isP (x + 2)) (List.range 6) with
+          | none => (none, 1)
+          | some st =>
+            have seq := List.map (fun r => (objs.getD ((st + r) % 6) default).idx) [0, 1, 2];
+            have a := c.getD (seq.getD 0 0) (0, 0);
+            have b := c.getD (seq.getD 1 0) (0, 0);
+            have cc := c.getD (seq.getD 2 0) (0, 0);
+            if (decide (b.fst ≤ a.fst) && decide (b.fst ≤ cc.fst)) = true then
+              match olit m orbVar a b cc with
+              | none => (none, 1)
+              | some l => (some l, 0)
+            else (none, 0)).fst =
+    (have keys :=
+        List.map (fun o => (o.J, o.r))
+          (List.flatMap
+            (fun pi =>
+              match pi with
+              | (p, idx) =>
+                match
+                  have J := (2 * p.snd + h p.fst) % (2 * m);
+                  (J, (J + m) % (2 * m)) with
+                | (J, Ja) =>
+                  [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+            (c.zip (List.range c.length)));
+      if ((pairs keys).any fun kk => kk.fst == kk.snd) = true then (none, if false = true then 1 else 0)
+      else
+        have objs :=
+          insSort Obj.lt
+            (List.flatMap
+              (fun pi =>
+                match pi with
+                | (p, idx) =>
+                  match
+                    have J := (2 * p.snd + h p.fst) % (2 * m);
+                    (J, (J + m) % (2 * m)) with
+                  | (J, Ja) =>
+                    [{ J := J, r := rk p.fst, kind := 1, idx := idx },
+                      { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+              (c.zip (List.range c.length)));
+        have kinds := List.map (fun x => x.kind) objs;
+        have v' := ↑v;
+        if (kinds == [1, 0, 1, 0, 1, 0] || kinds == [0, 1, 0, 1, 0, 1]) = true then
+          have seq := List.map (fun x => x.idx) (List.filter (fun x => x.kind == 1) objs);
+          (some (if permSign seq > 0 then v' else -v'), 0)
+        else
+          have isP := fun x => kinds.getD (x % 6) 0 == 1;
+          match List.find? (fun x => isP x && isP (x + 1) && isP (x + 2)) (List.range 6) with
+          | none => (none, 1)
+          | some st =>
+            have seq := List.map (fun r => (objs.getD ((st + r) % 6) default).idx) [0, 1, 2];
+            have a := c.getD (seq.getD 0 0) (0, 0);
+            have b := c.getD (seq.getD 1 0) (0, 0);
+            have cc := c.getD (seq.getD 2 0) (0, 0);
+            if (decide (b.fst ≤ a.fst) && decide (b.fst ≤ cc.fst)) = true then
+              match olit m orbVar a b cc with
+              | none => (none, 1)
+              | some l => (some l, 0)
+            else (none, 0)).fst
+EncBO/Probe2.lean:15:12: error: Tactic `rfl` failed: The left-hand side
+  (have objs :=
+      List.flatMap
+        (fun pi =>
+          match pi with
+          | (p, idx) =>
+            match (p.snd, (p.snd + m / 2) % m) with
+            | (J, Ja) =>
+              [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+        (c.zip (List.range c.length));
+    have keys := List.map (fun o => (o.J, o.r)) objs;
+    if ((pairs keys).any fun kk => kk.fst == kk.snd) = true then (none, 0)
+    else
+      have objs := insSort Obj.lt objs;
+      have kinds := List.map (fun x => x.kind) objs;
+      have v' := ↑v;
+      if (kinds == [1, 0, 1, 0, 1, 0] || kinds == [0, 1, 0, 1, 0, 1]) = true then
+        have seq := List.map (fun x => x.idx) (List.filter (fun x => x.kind == 1) objs);
+        (some (if permSign seq > 0 then v' else -v'), 0)
+      else
+        have isP := fun x => kinds.getD (x % 6) 0 == 1;
+        match List.find? (fun x => isP x && isP (x + 1) && isP (x + 2)) (List.range 6) with
+        | none => (none, 1)
+        | some st =>
+          have seq := List.map (fun r => (objs.getD ((st + r) % 6) default).idx) [0, 1, 2];
+          have a := c.getD (seq.getD 0 0) (0, 0);
+          have b := c.getD (seq.getD 1 0) (0, 0);
+          have cc := c.getD (seq.getD 2 0) (0, 0);
+          if (decide (b.fst ≤ a.fst) && decide (b.fst ≤ cc.fst)) = true then
+            match olit m orbVar a b cc with
+            | none => (none, 1)
+            | some l => (some l, 0)
+          else (none, 0)).fst
+is not definitionally equal to the right-hand side
+  (have keys :=
+      List.map (fun o => (o.J, o.r))
+        (List.flatMap
+          (fun pi =>
+            match pi with
+            | (p, idx) =>
+              match
+                have J := (2 * p.snd + h p.fst) % (2 * m);
+                (J, (J + m) % (2 * m)) with
+              | (J, Ja) =>
+                [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+          (c.zip (List.range c.length)));
+    if ((pairs keys).any fun kk => kk.fst == kk.snd) = true then (none, if false = true then 1 else 0)
+    else
+      have objs :=
+        insSort Obj.lt
+          (List.flatMap
+            (fun pi =>
+              match pi with
+              | (p, idx) =>
+                match
+                  have J := (2 * p.snd + h p.fst) % (2 * m);
+                  (J, (J + m) % (2 * m)) with
+                | (J, Ja) =>
+                  [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+            (c.zip (List.range c.length)));
+      have kinds := List.map (fun x => x.kind) objs;
+      have v' := ↑v;
+      if (kinds == [1, 0, 1, 0, 1, 0] || kinds == [0, 1, 0, 1, 0, 1]) = true then
+        have seq := List.map (fun x => x.idx) (List.filter (fun x => x.kind == 1) objs);
+        (some (if permSign seq > 0 then v' else -v'), 0)
+      else
+        have isP := fun x => kinds.getD (x % 6) 0 == 1;
+        match List.find? (fun x => isP x && isP (x + 1) && isP (x + 2)) (List.range 6) with
+        | none => (none, 1)
+        | some st =>
+          have seq := List.map (fun r => (objs.getD ((st + r) % 6) default).idx) [0, 1, 2];
+          have a := c.getD (seq.getD 0 0) (0, 0);
+          have b := c.getD (seq.getD 1 0) (0, 0);
+          have cc := c.getD (seq.getD 2 0) (0, 0);
+          if (decide (b.fst ≤ a.fst) && decide (b.fst ≤ cc.fst)) = true then
+            match olit m orbVar a b cc with
+            | none => (none, 1)
+            | some l => (some l, 0)
+          else (none, 0)).fst
+
+case isFalse
+m : Nat
+orbVar : List Pt → Option Nat
+c : List Pt
+v : Nat
+rk h : Nat → Nat
+h✝ : ¬true = true
+⊢ (have objs :=
+        List.flatMap
+          (fun pi =>
+            match pi with
+            | (p, idx) =>
+              match (p.snd, (p.snd + m / 2) % m) with
+              | (J, Ja) =>
+                [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+          (c.zip (List.range c.length));
+      have keys := List.map (fun o => (o.J, o.r)) objs;
+      if ((pairs keys).any fun kk => kk.fst == kk.snd) = true then (none, 0)
+      else
+        have objs := insSort Obj.lt objs;
+        have kinds := List.map (fun x => x.kind) objs;
+        have v' := ↑v;
+        if (kinds == [1, 0, 1, 0, 1, 0] || kinds == [0, 1, 0, 1, 0, 1]) = true then
+          have seq := List.map (fun x => x.idx) (List.filter (fun x => x.kind == 1) objs);
+          (some (if permSign seq > 0 then v' else -v'), 0)
+        else
+          have isP := fun x => kinds.getD (x % 6) 0 == 1;
+          match List.find? (fun x => isP x && isP (x + 1) && isP (x + 2)) (List.range 6) with
+          | none => (none, 1)
+          | some st =>
+            have seq := List.map (fun r => (objs.getD ((st + r) % 6) default).idx) [0, 1, 2];
+            have a := c.getD (seq.getD 0 0) (0, 0);
+            have b := c.getD (seq.getD 1 0) (0, 0);
+            have cc := c.getD (seq.getD 2 0) (0, 0);
+            if (decide (b.fst ≤ a.fst) && decide (b.fst ≤ cc.fst)) = true then
+              match olit m orbVar a b cc with
+              | none => (none, 1)
+              | some l => (some l, 0)
+            else (none, 0)).fst =
+    (have keys :=
+        List.map (fun o => (o.J, o.r))
+          (List.flatMap
+            (fun pi =>
+              match pi with
+              | (p, idx) =>
+                match
+                  have J := (2 * p.snd + h p.fst) % (2 * m);
+                  (J, (J + m) % (2 * m)) with
+                | (J, Ja) =>
+                  [{ J := J, r := rk p.fst, kind := 1, idx := idx }, { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+            (c.zip (List.range c.length)));
+      if ((pairs keys).any fun kk => kk.fst == kk.snd) = true then (none, if false = true then 1 else 0)
+      else
+        have objs :=
+          insSort Obj.lt
+            (List.flatMap
+              (fun pi =>
+                match pi with
+                | (p, idx) =>
+                  match
+                    have J := (2 * p.snd + h p.fst) % (2 * m);
+                    (J, (J + m) % (2 * m)) with
+                  | (J, Ja) =>
+                    [{ J := J, r := rk p.fst, kind := 1, idx := idx },
+                      { J := Ja, r := rk p.fst, kind := 0, idx := idx }])
+              (c.zip (List.range c.length)));
+        have kinds := List.map (fun x => x.kind) objs;
+        have v' := ↑v;
+        if (kinds == [1, 0, 1, 0, 1, 0] || kinds == [0, 1, 0, 1, 0, 1]) = true then
+          have seq := List.map (fun x => x.idx) (List.filter (fun x => x.kind == 1) objs);
+          (some (if permSign seq > 0 then v' else -v'), 0)
+        else
+          have isP := fun x => kinds.getD (x % 6) 0 == 1;
+          match List.find? (fun x => isP x && isP (x + 1) && isP (x + 2)) (List.range 6) with
+          | none => (none, 1)
+          | some st =>
+            have seq := List.map (fun r => (objs.getD ((st + r) % 6) default).idx) [0, 1, 2];
+            have a := c.getD (seq.getD 0 0) (0, 0);
+            have b := c.getD (seq.getD 1 0) (0, 0);
+            have cc := c.getD (seq.getD 2 0) (0, 0);
+            if (decide (b.fst ≤ a.fst) && decide (b.fst ≤ cc.fst)) = true then
+              match olit m orbVar a b cc with
+              | none => (none, 1)
+              | some l => (some l, 0)
+            else (none, 0)).fst
+EncBO/Probe2.lean:19:87: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [patternLit, patternCore, objsOdd, ite_true, Bool.false_eq_true, if_false,̵ ̵i̵f̵_̵t̵r̵u̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/Probe2.lean:28:4: error: Tactic `rfl` failed: The left-hand side
+  (if
+        ((pairs
+                (List.map (fun o => (o.J, o.r))
+                  (List.flatMap
+                    (fun pi =>
+                      [{
+                          J :=
+                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                          r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                        {
+                          J :=
+                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                          r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                    (c.zip (List.range c.length))))).any
+            fun kk => kk.fst == kk.snd) =
+          true then
+      (none, 1)
+    else
+      if
+          (List.map (fun x => x.kind)
+                  (insSort Obj.lt
+                    (List.flatMap
+                      (fun pi =>
+                        [{
+                            J :=
+                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                            r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                          {
+                            J :=
+                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                            r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                      (c.zip (List.range c.length)))) ==
+                [1, 0, 1, 0, 1, 0] ||
+              List.map (fun x => x.kind)
+                  (insSort Obj.lt
+                    (List.flatMap
+                      (fun pi =>
+                        [{
+                            J :=
+                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                            r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                          {
+                            J :=
+                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                            r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                      (c.zip (List.range c.length)))) ==
+                [0, 1, 0, 1, 0, 1]) =
+            true then
+        (some
+            (if
+                permSign
+                    (List.map (fun x => x.idx)
+                      (List.filter (fun x => x.kind == 1)
+                        (insSort Obj.lt
+                          (List.flatMap
+                            (fun pi =>
+                              [{
+                                  J :=
+                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                  r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                {
+                                  J :=
+                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                  r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                            (c.zip (List.range c.length)))))) >
+                  0 then
+              ↑v
+            else -↑v),
+          0)
+      else
+        match
+          List.find?
+            (fun x =>
+              (List.map (fun x => x.kind)
+                          (insSort Obj.lt
+                            (List.flatMap
+                              (fun pi =>
+                                [{
+                                    J :=
+                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                    r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                  {
+                                    J :=
+                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                    r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                              (c.zip (List.range c.length))))).getD
+                      (x % 6) 0 ==
+                    1 &&
+                  (List.map (fun x => x.kind)
+                          (insSort Obj.lt
+                            (List.flatMap
+                              (fun pi =>
+                                [{
+                                    J :=
+                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                    r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                  {
+                                    J :=
+                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                    r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                              (c.zip (List.range c.length))))).getD
+                      ((x + 1) % 6) 0 ==
+                    1 &&
+                (List.map (fun x => x.kind)
+                        (insSort Obj.lt
+                          (List.flatMap
+                            (fun pi =>
+                              [{
+                                  J :=
+                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                  r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                {
+                                  J :=
+                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                  r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                            (c.zip (List.range c.length))))).getD
+                    ((x + 2) % 6) 0 ==
+                  1)
+            (List.range 6) with
+        | none => (none, 1)
+        | some st =>
+          if
+              (decide
+                    ((c.getD
+                          ((List.map
+                                (fun r =>
+                                  ((insSort Obj.lt
+                                          (List.flatMap
+                                            (fun pi =>
+                                              [{
+                                                  J :=
+                                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                                  r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                                {
+                                                  J :=
+                                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                                  r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                            (c.zip (List.range c.length)))).getD
+                                      ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            1 0)
+                          (0, 0)).fst ≤
+                      (c.getD
+                          ((List.map
+                                (fun r =>
+                                  ((insSort Obj.lt
+                                          (List.flatMap
+                                            (fun pi =>
+                                              [{
+                                                  J :=
+                                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                                  r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                                {
+                                                  J :=
+                                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                                  r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                            (c.zip (List.range c.length)))).getD
+                                      ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            0 0)
+                          (0, 0)).fst) &&
+                  decide
+                    ((c.getD
+                          ((List.map
+                                (fun r =>
+                                  ((insSort Obj.lt
+                                          (List.flatMap
+                                            (fun pi =>
+                                              [{
+                                                  J :=
+                                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                                  r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                                {
+                                                  J :=
+                                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                                  r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                            (c.zip (List.range c.length)))).getD
+                                      ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            1 0)
+                          (0, 0)).fst ≤
+                      (c.getD
+                          ((List.map
+                                (fun r =>
+                                  ((insSort Obj.lt
+                                          (List.flatMap
+                                            (fun pi =>
+                                              [{
+                                                  J :=
+                                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                                  r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                                {
+                                                  J :=
+                                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                                  r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                            (c.zip (List.range c.length)))).getD
+                                      ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            2 0)
+                          (0, 0)).fst)) =
+                true then
+            match
+              olit m orbVar
+                (c.getD
+                  ((List.map
+                        (fun r =>
+                          ((insSort Obj.lt
+                                  (List.flatMap
+                                    (fun pi =>
+                                      [{
+                                          J :=
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                          r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                        {
+                                          J :=
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                          r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                    (c.zip (List.range c.length)))).getD
+                              ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    0 0)
+                  (0, 0))
+                (c.getD
+                  ((List.map
+                        (fun r =>
+                          ((insSort Obj.lt
+                                  (List.flatMap
+                                    (fun pi =>
+                                      [{
+                                          J :=
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                          r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                        {
+                                          J :=
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                          r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                    (c.zip (List.range c.length)))).getD
+                              ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    1 0)
+                  (0, 0))
+                (c.getD
+                  ((List.map
+                        (fun r =>
+                          ((insSort Obj.lt
+                                  (List.flatMap
+                                    (fun pi =>
+                                      [{
+                                          J :=
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                          r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                        {
+                                          J :=
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                          r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                    (c.zip (List.range c.length)))).getD
+                              ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    2 0)
+                  (0, 0)) with
+            | none => (none, 1)
+            | some l => (some l, 0)
+          else (none, 0)).fst
+is not definitionally equal to the right-hand side
+  (if ((pairs (List.map (fun o => (o.J, o.r)) (objsOdd m rk h c))).any fun kk => kk.fst == kk.snd) = true then
+      (none, if false = true then 1 else 0)
+    else
+      if
+          (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c)) == [1, 0, 1, 0, 1, 0] ||
+              List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c)) == [0, 1, 0, 1, 0, 1]) =
+            true then
+        (some
+            (if
+                permSign
+                    (List.map (fun x => x.idx)
+                      (List.filter (fun x => x.kind == 1) (insSort Obj.lt (objsOdd m rk h c)))) >
+                  0 then
+              ↑v
+            else -↑v),
+          0)
+      else
+        match
+          List.find?
+            (fun x =>
+              (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD (x % 6) 0 == 1 &&
+                  (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD ((x + 1) % 6) 0 == 1 &&
+                (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD ((x + 2) % 6) 0 == 1)
+            (List.range 6) with
+        | none => (none, 1)
+        | some st =>
+          if
+              (decide
+                    ((c.getD
+                          ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            1 0)
+                          (0, 0)).fst ≤
+                      (c.getD
+                          ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            0 0)
+                          (0, 0)).fst) &&
+                  decide
+                    ((c.getD
+                          ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            1 0)
+                          (0, 0)).fst ≤
+                      (c.getD
+                          ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            2 0)
+                          (0, 0)).fst)) =
+                true then
+            match
+              olit m orbVar
+                (c.getD
+                  ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    0 0)
+                  (0, 0))
+                (c.getD
+                  ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    1 0)
+                  (0, 0))
+                (c.getD
+                  ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    2 0)
+                  (0, 0)) with
+            | none => (none, 1)
+            | some l => (some l, 0)
+          else (none, 0)).fst
+
+case isTrue
+m : Nat
+orbVar : List Pt → Option Nat
+c : List Pt
+v : Nat
+rk h : Nat → Nat
+h✝ : true = true
+⊢ (if
+          ((pairs
+                  (List.map (fun o => (o.J, o.r))
+                    (List.flatMap
+                      (fun pi =>
+                        [{
+                            J :=
+                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                            r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                          {
+                            J :=
+                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                            r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                      (c.zip (List.range c.length))))).any
+              fun kk => kk.fst == kk.snd) =
+            true then
+        (none, 1)
+      else
+        if
+            (List.map (fun x => x.kind)
+                    (insSort Obj.lt
+                      (List.flatMap
+                        (fun pi =>
+                          [{
+                              J :=
+                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                              r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                            {
+                              J :=
+                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                              r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                        (c.zip (List.range c.length)))) ==
+                  [1, 0, 1, 0, 1, 0] ||
+                List.map (fun x => x.kind)
+                    (insSort Obj.lt
+                      (List.flatMap
+                        (fun pi =>
+                          [{
+                              J :=
+                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                              r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                            {
+                              J :=
+                                ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                    ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                              r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                        (c.zip (List.range c.length)))) ==
+                  [0, 1, 0, 1, 0, 1]) =
+              true then
+          (some
+              (if
+                  permSign
+                      (List.map (fun x => x.idx)
+                        (List.filter (fun x => x.kind == 1)
+                          (insSort Obj.lt
+                            (List.flatMap
+                              (fun pi =>
+                                [{
+                                    J :=
+                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                    r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                  {
+                                    J :=
+                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                    r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                              (c.zip (List.range c.length)))))) >
+                    0 then
+                ↑v
+              else -↑v),
+            0)
+        else
+          match
+            List.find?
+              (fun x =>
+                (List.map (fun x => x.kind)
+                            (insSort Obj.lt
+                              (List.flatMap
+                                (fun pi =>
+                                  [{
+                                      J :=
+                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                      r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                    {
+                                      J :=
+                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                      r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                (c.zip (List.range c.length))))).getD
+                        (x % 6) 0 ==
+                      1 &&
+                    (List.map (fun x => x.kind)
+                            (insSort Obj.lt
+                              (List.flatMap
+                                (fun pi =>
+                                  [{
+                                      J :=
+                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                      r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                    {
+                                      J :=
+                                        ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                            ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                      r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                (c.zip (List.range c.length))))).getD
+                        ((x + 1) % 6) 0 ==
+                      1 &&
+                  (List.map (fun x => x.kind)
+                          (insSort Obj.lt
+                            (List.flatMap
+                              (fun pi =>
+                                [{
+                                    J :=
+                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                    r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                  {
+                                    J :=
+                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                    r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                              (c.zip (List.range c.length))))).getD
+                      ((x + 2) % 6) 0 ==
+                    1)
+              (List.range 6) with
+          | none => (none, 1)
+          | some st =>
+            if
+                (decide
+                      ((c.getD
+                            ((List.map
+                                  (fun r =>
+                                    ((insSort Obj.lt
+                                            (List.flatMap
+                                              (fun pi =>
+                                                [{
+                                                    J :=
+                                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) %
+                                                            (2 * m)).fst,
+                                                    r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                                  {
+                                                    J :=
+                                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) %
+                                                            (2 * m)).snd,
+                                                    r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                              (c.zip (List.range c.length)))).getD
+                                        ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              1 0)
+                            (0, 0)).fst ≤
+                        (c.getD
+                            ((List.map
+                                  (fun r =>
+                                    ((insSort Obj.lt
+                                            (List.flatMap
+                                              (fun pi =>
+                                                [{
+                                                    J :=
+                                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) %
+                                                            (2 * m)).fst,
+                                                    r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                                  {
+                                                    J :=
+                                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) %
+                                                            (2 * m)).snd,
+                                                    r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                              (c.zip (List.range c.length)))).getD
+                                        ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              0 0)
+                            (0, 0)).fst) &&
+                    decide
+                      ((c.getD
+                            ((List.map
+                                  (fun r =>
+                                    ((insSort Obj.lt
+                                            (List.flatMap
+                                              (fun pi =>
+                                                [{
+                                                    J :=
+                                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) %
+                                                            (2 * m)).fst,
+                                                    r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                                  {
+                                                    J :=
+                                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) %
+                                                            (2 * m)).snd,
+                                                    r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                              (c.zip (List.range c.length)))).getD
+                                        ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              1 0)
+                            (0, 0)).fst ≤
+                        (c.getD
+                            ((List.map
+                                  (fun r =>
+                                    ((insSort Obj.lt
+                                            (List.flatMap
+                                              (fun pi =>
+                                                [{
+                                                    J :=
+                                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) %
+                                                            (2 * m)).fst,
+                                                    r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                                  {
+                                                    J :=
+                                                      ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                          ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) %
+                                                            (2 * m)).snd,
+                                                    r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                              (c.zip (List.range c.length)))).getD
+                                        ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              2 0)
+                            (0, 0)).fst)) =
+                  true then
+              match
+                olit m orbVar
+                  (c.getD
+                    ((List.map
+                          (fun r =>
+                            ((insSort Obj.lt
+                                    (List.flatMap
+                                      (fun pi =>
+                                        [{
+                                            J :=
+                                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                            r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                          {
+                                            J :=
+                                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                            r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                      (c.zip (List.range c.length)))).getD
+                                ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      0 0)
+                    (0, 0))
+                  (c.getD
+                    ((List.map
+                          (fun r =>
+                            ((insSort Obj.lt
+                                    (List.flatMap
+                                      (fun pi =>
+                                        [{
+                                            J :=
+                                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                            r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                          {
+                                            J :=
+                                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                            r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                      (c.zip (List.range c.length)))).getD
+                                ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      1 0)
+                    (0, 0))
+                  (c.getD
+                    ((List.map
+                          (fun r =>
+                            ((insSort Obj.lt
+                                    (List.flatMap
+                                      (fun pi =>
+                                        [{
+                                            J :=
+                                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).fst,
+                                            r := rk pi.fst.fst, kind := 1, idx := pi.snd },
+                                          {
+                                            J :=
+                                              ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m),
+                                                  ((2 * pi.fst.snd + h pi.fst.fst) % (2 * m) + m) % (2 * m)).snd,
+                                            r := rk pi.fst.fst, kind := 0, idx := pi.snd }])
+                                      (c.zip (List.range c.length)))).getD
+                                ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      2 0)
+                    (0, 0)) with
+              | none => (none, 1)
+              | some l => (some l, 0)
+            else (none, 0)).fst =
+    (if ((pairs (List.map (fun o => (o.J, o.r)) (objsOdd m rk h c))).any fun kk => kk.fst == kk.snd) = true then
+        (none, if false = true then 1 else 0)
+      else
+        if
+            (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c)) == [1, 0, 1, 0, 1, 0] ||
+                List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c)) == [0, 1, 0, 1, 0, 1]) =
+              true then
+          (some
+              (if
+                  permSign
+                      (List.map (fun x => x.idx)
+                        (List.filter (fun x => x.kind == 1) (insSort Obj.lt (objsOdd m rk h c)))) >
+                    0 then
+                ↑v
+              else -↑v),
+            0)
+        else
+          match
+            List.find?
+              (fun x =>
+                (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD (x % 6) 0 == 1 &&
+                    (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD ((x + 1) % 6) 0 == 1 &&
+                  (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD ((x + 2) % 6) 0 == 1)
+              (List.range 6) with
+          | none => (none, 1)
+          | some st =>
+            if
+                (decide
+                      ((c.getD
+                            ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              1 0)
+                            (0, 0)).fst ≤
+                        (c.getD
+                            ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              0 0)
+                            (0, 0)).fst) &&
+                    decide
+                      ((c.getD
+                            ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              1 0)
+                            (0, 0)).fst ≤
+                        (c.getD
+                            ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              2 0)
+                            (0, 0)).fst)) =
+                  true then
+              match
+                olit m orbVar
+                  (c.getD
+                    ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      0 0)
+                    (0, 0))
+                  (c.getD
+                    ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      1 0)
+                    (0, 0))
+                  (c.getD
+                    ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      2 0)
+                    (0, 0)) with
+              | none => (none, 1)
+              | some l => (some l, 0)
+            else (none, 0)).fst
+EncBO/Probe2.lean:29:4: error: Tactic `rfl` failed: The left-hand side
+  (if
+        ((pairs
+                (List.map (fun o => (o.J, o.r))
+                  (List.flatMap
+                    (fun pi =>
+                      [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                          idx := pi.snd },
+                        { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                          idx := pi.snd }])
+                    (c.zip (List.range c.length))))).any
+            fun kk => kk.fst == kk.snd) =
+          true then
+      (none, 0)
+    else
+      if
+          (List.map (fun x => x.kind)
+                  (insSort Obj.lt
+                    (List.flatMap
+                      (fun pi =>
+                        [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                            idx := pi.snd },
+                          { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                            idx := pi.snd }])
+                      (c.zip (List.range c.length)))) ==
+                [1, 0, 1, 0, 1, 0] ||
+              List.map (fun x => x.kind)
+                  (insSort Obj.lt
+                    (List.flatMap
+                      (fun pi =>
+                        [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                            idx := pi.snd },
+                          { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                            idx := pi.snd }])
+                      (c.zip (List.range c.length)))) ==
+                [0, 1, 0, 1, 0, 1]) =
+            true then
+        (some
+            (if
+                permSign
+                    (List.map (fun x => x.idx)
+                      (List.filter (fun x => x.kind == 1)
+                        (insSort Obj.lt
+                          (List.flatMap
+                            (fun pi =>
+                              [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                  idx := pi.snd },
+                                { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                                  idx := pi.snd }])
+                            (c.zip (List.range c.length)))))) >
+                  0 then
+              ↑v
+            else -↑v),
+          0)
+      else
+        match
+          List.find?
+            (fun x =>
+              (List.map (fun x => x.kind)
+                          (insSort Obj.lt
+                            (List.flatMap
+                              (fun pi =>
+                                [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                    idx := pi.snd },
+                                  { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                                    idx := pi.snd }])
+                              (c.zip (List.range c.length))))).getD
+                      (x % 6) 0 ==
+                    1 &&
+                  (List.map (fun x => x.kind)
+                          (insSort Obj.lt
+                            (List.flatMap
+                              (fun pi =>
+                                [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                    idx := pi.snd },
+                                  { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                                    idx := pi.snd }])
+                              (c.zip (List.range c.length))))).getD
+                      ((x + 1) % 6) 0 ==
+                    1 &&
+                (List.map (fun x => x.kind)
+                        (insSort Obj.lt
+                          (List.flatMap
+                            (fun pi =>
+                              [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                  idx := pi.snd },
+                                { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                                  idx := pi.snd }])
+                            (c.zip (List.range c.length))))).getD
+                    ((x + 2) % 6) 0 ==
+                  1)
+            (List.range 6) with
+        | none => (none, 1)
+        | some st =>
+          if
+              (decide
+                    ((c.getD
+                          ((List.map
+                                (fun r =>
+                                  ((insSort Obj.lt
+                                          (List.flatMap
+                                            (fun pi =>
+                                              [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                                  kind := 1, idx := pi.snd },
+                                                { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                                  kind := 0, idx := pi.snd }])
+                                            (c.zip (List.range c.length)))).getD
+                                      ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            1 0)
+                          (0, 0)).fst ≤
+                      (c.getD
+                          ((List.map
+                                (fun r =>
+                                  ((insSort Obj.lt
+                                          (List.flatMap
+                                            (fun pi =>
+                                              [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                                  kind := 1, idx := pi.snd },
+                                                { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                                  kind := 0, idx := pi.snd }])
+                                            (c.zip (List.range c.length)))).getD
+                                      ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            0 0)
+                          (0, 0)).fst) &&
+                  decide
+                    ((c.getD
+                          ((List.map
+                                (fun r =>
+                                  ((insSort Obj.lt
+                                          (List.flatMap
+                                            (fun pi =>
+                                              [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                                  kind := 1, idx := pi.snd },
+                                                { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                                  kind := 0, idx := pi.snd }])
+                                            (c.zip (List.range c.length)))).getD
+                                      ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            1 0)
+                          (0, 0)).fst ≤
+                      (c.getD
+                          ((List.map
+                                (fun r =>
+                                  ((insSort Obj.lt
+                                          (List.flatMap
+                                            (fun pi =>
+                                              [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                                  kind := 1, idx := pi.snd },
+                                                { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                                  kind := 0, idx := pi.snd }])
+                                            (c.zip (List.range c.length)))).getD
+                                      ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            2 0)
+                          (0, 0)).fst)) =
+                true then
+            match
+              olit m orbVar
+                (c.getD
+                  ((List.map
+                        (fun r =>
+                          ((insSort Obj.lt
+                                  (List.flatMap
+                                    (fun pi =>
+                                      [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                          idx := pi.snd },
+                                        { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                          kind := 0, idx := pi.snd }])
+                                    (c.zip (List.range c.length)))).getD
+                              ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    0 0)
+                  (0, 0))
+                (c.getD
+                  ((List.map
+                        (fun r =>
+                          ((insSort Obj.lt
+                                  (List.flatMap
+                                    (fun pi =>
+                                      [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                          idx := pi.snd },
+                                        { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                          kind := 0, idx := pi.snd }])
+                                    (c.zip (List.range c.length)))).getD
+                              ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    1 0)
+                  (0, 0))
+                (c.getD
+                  ((List.map
+                        (fun r =>
+                          ((insSort Obj.lt
+                                  (List.flatMap
+                                    (fun pi =>
+                                      [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                          idx := pi.snd },
+                                        { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                          kind := 0, idx := pi.snd }])
+                                    (c.zip (List.range c.length)))).getD
+                              ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    2 0)
+                  (0, 0)) with
+            | none => (none, 1)
+            | some l => (some l, 0)
+          else (none, 0)).fst
+is not definitionally equal to the right-hand side
+  (if ((pairs (List.map (fun o => (o.J, o.r)) (objsOdd m rk h c))).any fun kk => kk.fst == kk.snd) = true then
+      (none, if false = true then 1 else 0)
+    else
+      if
+          (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c)) == [1, 0, 1, 0, 1, 0] ||
+              List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c)) == [0, 1, 0, 1, 0, 1]) =
+            true then
+        (some
+            (if
+                permSign
+                    (List.map (fun x => x.idx)
+                      (List.filter (fun x => x.kind == 1) (insSort Obj.lt (objsOdd m rk h c)))) >
+                  0 then
+              ↑v
+            else -↑v),
+          0)
+      else
+        match
+          List.find?
+            (fun x =>
+              (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD (x % 6) 0 == 1 &&
+                  (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD ((x + 1) % 6) 0 == 1 &&
+                (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD ((x + 2) % 6) 0 == 1)
+            (List.range 6) with
+        | none => (none, 1)
+        | some st =>
+          if
+              (decide
+                    ((c.getD
+                          ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            1 0)
+                          (0, 0)).fst ≤
+                      (c.getD
+                          ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            0 0)
+                          (0, 0)).fst) &&
+                  decide
+                    ((c.getD
+                          ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            1 0)
+                          (0, 0)).fst ≤
+                      (c.getD
+                          ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                [0, 1, 2]).getD
+                            2 0)
+                          (0, 0)).fst)) =
+                true then
+            match
+              olit m orbVar
+                (c.getD
+                  ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    0 0)
+                  (0, 0))
+                (c.getD
+                  ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    1 0)
+                  (0, 0))
+                (c.getD
+                  ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                        [0, 1, 2]).getD
+                    2 0)
+                  (0, 0)) with
+            | none => (none, 1)
+            | some l => (some l, 0)
+          else (none, 0)).fst
+
+case isFalse
+m : Nat
+orbVar : List Pt → Option Nat
+c : List Pt
+v : Nat
+rk h : Nat → Nat
+h✝ : ¬true = true
+⊢ (if
+          ((pairs
+                  (List.map (fun o => (o.J, o.r))
+                    (List.flatMap
+                      (fun pi =>
+                        [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                            idx := pi.snd },
+                          { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                            idx := pi.snd }])
+                      (c.zip (List.range c.length))))).any
+              fun kk => kk.fst == kk.snd) =
+            true then
+        (none, 0)
+      else
+        if
+            (List.map (fun x => x.kind)
+                    (insSort Obj.lt
+                      (List.flatMap
+                        (fun pi =>
+                          [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                              idx := pi.snd },
+                            { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                              idx := pi.snd }])
+                        (c.zip (List.range c.length)))) ==
+                  [1, 0, 1, 0, 1, 0] ||
+                List.map (fun x => x.kind)
+                    (insSort Obj.lt
+                      (List.flatMap
+                        (fun pi =>
+                          [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                              idx := pi.snd },
+                            { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                              idx := pi.snd }])
+                        (c.zip (List.range c.length)))) ==
+                  [0, 1, 0, 1, 0, 1]) =
+              true then
+          (some
+              (if
+                  permSign
+                      (List.map (fun x => x.idx)
+                        (List.filter (fun x => x.kind == 1)
+                          (insSort Obj.lt
+                            (List.flatMap
+                              (fun pi =>
+                                [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                    idx := pi.snd },
+                                  { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                                    idx := pi.snd }])
+                              (c.zip (List.range c.length)))))) >
+                    0 then
+                ↑v
+              else -↑v),
+            0)
+        else
+          match
+            List.find?
+              (fun x =>
+                (List.map (fun x => x.kind)
+                            (insSort Obj.lt
+                              (List.flatMap
+                                (fun pi =>
+                                  [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                      idx := pi.snd },
+                                    { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                                      idx := pi.snd }])
+                                (c.zip (List.range c.length))))).getD
+                        (x % 6) 0 ==
+                      1 &&
+                    (List.map (fun x => x.kind)
+                            (insSort Obj.lt
+                              (List.flatMap
+                                (fun pi =>
+                                  [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                      idx := pi.snd },
+                                    { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                                      idx := pi.snd }])
+                                (c.zip (List.range c.length))))).getD
+                        ((x + 1) % 6) 0 ==
+                      1 &&
+                  (List.map (fun x => x.kind)
+                          (insSort Obj.lt
+                            (List.flatMap
+                              (fun pi =>
+                                [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst, kind := 1,
+                                    idx := pi.snd },
+                                  { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst, kind := 0,
+                                    idx := pi.snd }])
+                              (c.zip (List.range c.length))))).getD
+                      ((x + 2) % 6) 0 ==
+                    1)
+              (List.range 6) with
+          | none => (none, 1)
+          | some st =>
+            if
+                (decide
+                      ((c.getD
+                            ((List.map
+                                  (fun r =>
+                                    ((insSort Obj.lt
+                                            (List.flatMap
+                                              (fun pi =>
+                                                [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                                    kind := 1, idx := pi.snd },
+                                                  { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                                    kind := 0, idx := pi.snd }])
+                                              (c.zip (List.range c.length)))).getD
+                                        ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              1 0)
+                            (0, 0)).fst ≤
+                        (c.getD
+                            ((List.map
+                                  (fun r =>
+                                    ((insSort Obj.lt
+                                            (List.flatMap
+                                              (fun pi =>
+                                                [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                                    kind := 1, idx := pi.snd },
+                                                  { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                                    kind := 0, idx := pi.snd }])
+                                              (c.zip (List.range c.length)))).getD
+                                        ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              0 0)
+                            (0, 0)).fst) &&
+                    decide
+                      ((c.getD
+                            ((List.map
+                                  (fun r =>
+                                    ((insSort Obj.lt
+                                            (List.flatMap
+                                              (fun pi =>
+                                                [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                                    kind := 1, idx := pi.snd },
+                                                  { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                                    kind := 0, idx := pi.snd }])
+                                              (c.zip (List.range c.length)))).getD
+                                        ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              1 0)
+                            (0, 0)).fst ≤
+                        (c.getD
+                            ((List.map
+                                  (fun r =>
+                                    ((insSort Obj.lt
+                                            (List.flatMap
+                                              (fun pi =>
+                                                [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                                    kind := 1, idx := pi.snd },
+                                                  { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                                    kind := 0, idx := pi.snd }])
+                                              (c.zip (List.range c.length)))).getD
+                                        ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              2 0)
+                            (0, 0)).fst)) =
+                  true then
+              match
+                olit m orbVar
+                  (c.getD
+                    ((List.map
+                          (fun r =>
+                            ((insSort Obj.lt
+                                    (List.flatMap
+                                      (fun pi =>
+                                        [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                            kind := 1, idx := pi.snd },
+                                          { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                            kind := 0, idx := pi.snd }])
+                                      (c.zip (List.range c.length)))).getD
+                                ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      0 0)
+                    (0, 0))
+                  (c.getD
+                    ((List.map
+                          (fun r =>
+                            ((insSort Obj.lt
+                                    (List.flatMap
+                                      (fun pi =>
+                                        [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                            kind := 1, idx := pi.snd },
+                                          { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                            kind := 0, idx := pi.snd }])
+                                      (c.zip (List.range c.length)))).getD
+                                ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      1 0)
+                    (0, 0))
+                  (c.getD
+                    ((List.map
+                          (fun r =>
+                            ((insSort Obj.lt
+                                    (List.flatMap
+                                      (fun pi =>
+                                        [{ J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).fst, r := rk pi.fst.fst,
+                                            kind := 1, idx := pi.snd },
+                                          { J := (pi.fst.snd, (pi.fst.snd + m / 2) % m).snd, r := rk pi.fst.fst,
+                                            kind := 0, idx := pi.snd }])
+                                      (c.zip (List.range c.length)))).getD
+                                ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      2 0)
+                    (0, 0)) with
+              | none => (none, 1)
+              | some l => (some l, 0)
+            else (none, 0)).fst =
+    (if ((pairs (List.map (fun o => (o.J, o.r)) (objsOdd m rk h c))).any fun kk => kk.fst == kk.snd) = true then
+        (none, if false = true then 1 else 0)
+      else
+        if
+            (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c)) == [1, 0, 1, 0, 1, 0] ||
+                List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c)) == [0, 1, 0, 1, 0, 1]) =
+              true then
+          (some
+              (if
+                  permSign
+                      (List.map (fun x => x.idx)
+                        (List.filter (fun x => x.kind == 1) (insSort Obj.lt (objsOdd m rk h c)))) >
+                    0 then
+                ↑v
+              else -↑v),
+            0)
+        else
+          match
+            List.find?
+              (fun x =>
+                (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD (x % 6) 0 == 1 &&
+                    (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD ((x + 1) % 6) 0 == 1 &&
+                  (List.map (fun x => x.kind) (insSort Obj.lt (objsOdd m rk h c))).getD ((x + 2) % 6) 0 == 1)
+              (List.range 6) with
+          | none => (none, 1)
+          | some st =>
+            if
+                (decide
+                      ((c.getD
+                            ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              1 0)
+                            (0, 0)).fst ≤
+                        (c.getD
+                            ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              0 0)
+                            (0, 0)).fst) &&
+                    decide
+                      ((c.getD
+                            ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              1 0)
+                            (0, 0)).fst ≤
+                        (c.getD
+                            ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                                  [0, 1, 2]).getD
+                              2 0)
+                            (0, 0)).fst)) =
+                  true then
+              match
+                olit m orbVar
+                  (c.getD
+                    ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      0 0)
+                    (0, 0))
+                  (c.getD
+                    ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      1 0)
+                    (0, 0))
+                  (c.getD
+                    ((List.map (fun r => ((insSort Obj.lt (objsOdd m rk h c)).getD ((st + r) % 6) default).idx)
+                          [0, 1, 2]).getD
+                      2 0)
+                    (0, 0)) with
+              | none => (none, 1)
+              | some l => (some l, 0)
+            else (none, 0)).fst
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.43
+	Maximum resident set size (kbytes): 387540
+rc=1
+=== 2026-11-22T06:10:59+09:00 std EncBO.SoundO (1a6808b8f69c7911)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.49
+	Maximum resident set size (kbytes): 396708
+rc=0
+=== 2026-11-22T06:11:00+09:00 std EncBO.RulesO (a602a5e15cfba4a6)
+EncBO/RulesO.lean:36:87: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [patternLit, patternCore, objsOdd, ite_true, Bool.false_eq_true, if_false,̵ ̵i̵f̵_̵t̵r̵u̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/RulesO.lean:84:49: error: unsolved goals
+psiLt : Nat → Nat → Bool
+hb : Nat → Bool
+rk : Nat → Nat
+a b d : Pt
+h : RkMono psiLt rk [a, b, d]
+⊢ liftO hb a = a ∨ liftO hb a = b ∨ liftO hb a = d
+EncBO/RulesO.lean:84:49: error: unsolved goals
+psiLt : Nat → Nat → Bool
+hb : Nat → Bool
+rk : Nat → Nat
+a b d : Pt
+h : RkMono psiLt rk [a, b, d]
+⊢ liftO hb b = a ∨ liftO hb b = b ∨ liftO hb b = d
+EncBO/RulesO.lean:84:49: error: unsolved goals
+psiLt : Nat → Nat → Bool
+hb : Nat → Bool
+rk : Nat → Nat
+a b d : Pt
+h : RkMono psiLt rk [a, b, d]
+⊢ liftO hb d = a ∨ liftO hb d = b ∨ liftO hb d = d
+'EncB.patternSpecO' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+EncBO/RulesO.lean:140:0: error: ❌️ Docstring on `#guard_msgs` does not match generated message:
+
+- info: 'EncB.patternSpecO' depends on axioms: [propext, Classical.choice, Quot.sound]
++ info: 'EncB.patternSpecO' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.67
+	Maximum resident set size (kbytes): 397972
+rc=1
+=== 2026-11-22T06:11:19+09:00 std EncBO.RulesO (34f2c0f5ef5ac00c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.98
+	Maximum resident set size (kbytes): 407088
+rc=0
+=== 2026-11-22T06:13:04+09:00 std EncBO.AngO (e75ab74015a5ef01)
+EncBO/AngO.lean:45:13: warning: This simp argument is unused:
+  List.mem_map
+
+Hint: Omit it from the simp argument list.
+  simp only [L̵i̵s̵t̵.̵m̵e̵m̵_̵m̵a̵p̵,̵ ̵↓reduceIte] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/AngO.lean:61:13: warning: This simp argument is unused:
+  List.mem_map
+
+Hint: Omit it from the simp argument list.
+  simp only [L̵i̵s̵t̵.̵m̵e̵m̵_̵m̵a̵p̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/AngO.lean:96:31: warning: This simp argument is unused:
+  List.lookup
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵l̵o̵o̵k̵u̵p̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/AngO.lean:97:36: warning: This simp argument is unused:
+  List.lookup
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵l̵o̵o̵k̵u̵p̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.64
+	Maximum resident set size (kbytes): 418120
+rc=0
+=== 2026-11-22T06:13:42+09:00 std EncBO.SatisfiableO (a85749ebe7456be1)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.26
+	Maximum resident set size (kbytes): 389628
+rc=0
+=== 2026-11-22T06:13:42+09:00 std EncBO.Compose7 (261997c4fb27541a)
+EncBO/Compose7.lean:54:34: warning: unused variable `nv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+EncBO/Compose7.lean:54:37: warning: unused variable `G`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.33
+	Maximum resident set size (kbytes): 385140
+rc=0
+=== build_std 2026-11-22T06:15:12+09:00
+=== 2026-11-22T06:15:12+09:00 std EncB.Gen (ec97b3355b9cfe39)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.12
+	Maximum resident set size (kbytes): 410860
+rc=0
+=== 2026-11-22T06:15:13+09:00 std EncB.Dimacs (48cbeac96e085d2e)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.53
+	Maximum resident set size (kbytes): 393856
+rc=0
+=== 2026-11-22T06:15:14+09:00 std EncB.Coded (2727e00bbd4ce9ea)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.78
+	Maximum resident set size (kbytes): 434704
+rc=0
+=== 2026-11-22T06:15:16+09:00 std EncB.Cover (c59425acb5ba5e1d)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.22
+	Maximum resident set size (kbytes): 389956
+rc=0
+=== 2026-11-22T06:15:16+09:00 std EncB.Model (42240829ba35fc95)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.35
+	Maximum resident set size (kbytes): 393656
+rc=0
+=== 2026-11-22T06:15:16+09:00 std EncB.ModelLemmas (db0d368be4481a34)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.88
+	Maximum resident set size (kbytes): 413852
+rc=0
+=== 2026-11-22T06:15:17+09:00 std EncB.SortLemmas (103f5bd10b8bde07)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.56
+	Maximum resident set size (kbytes): 421640
+rc=0
+=== 2026-11-22T06:15:18+09:00 std EncB.SoundOlit (48631ae6e2c94f88)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.88
+	Maximum resident set size (kbytes): 413112
+rc=0
+=== 2026-11-22T06:15:19+09:00 std EncB.SoundOrbit (ce93c2011e6de490)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.61
+	Maximum resident set size (kbytes): 407072
+rc=0
+=== 2026-11-22T06:15:19+09:00 std EncB.SoundChain (d2d5908189a9bf53)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.70
+	Maximum resident set size (kbytes): 410156
+rc=0
+=== 2026-11-22T06:15:20+09:00 std EncB.SoundAng (6fa1ad05bf38519f)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.86
+	Maximum resident set size (kbytes): 439648
+rc=0
+=== 2026-11-22T06:15:21+09:00 std EncB.SoundRules (8cb4637efd3736a4)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.07
+	Maximum resident set size (kbytes): 438896
+rc=0
+=== 2026-11-22T06:15:23+09:00 std EncB.SoundWord (c1bdb4175ee548b8)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.55
+	Maximum resident set size (kbytes): 415720
+rc=0
+=== 2026-11-22T06:15:25+09:00 std EncB.Satisfiable (5c908151d342184a)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.30
+	Maximum resident set size (kbytes): 387412
+rc=0
+=== 2026-11-22T06:15:25+09:00 std EncB.Render (c8d6aed7e539db2c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.60
+	Maximum resident set size (kbytes): 495724
+rc=0
+=== 2026-11-22T06:15:28+09:00 std EncB.Compose (fe9cf37e1c157712)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.45
+	Maximum resident set size (kbytes): 390060
+rc=0
+=== 2026-11-22T06:15:28+09:00 std EncBO.ModelO (88dde50d90c70274)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.37
+	Maximum resident set size (kbytes): 422616
+rc=0
+=== 2026-11-22T06:15:29+09:00 std EncBO.SoundO (1a6808b8f69c7911)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.62
+	Maximum resident set size (kbytes): 397884
+rc=0
+=== 2026-11-22T06:15:30+09:00 std EncBO.RulesO (34f2c0f5ef5ac00c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.44
+	Maximum resident set size (kbytes): 407996
+rc=0
+=== 2026-11-22T06:15:32+09:00 std EncBO.AngO (e75ab74015a5ef01)
+EncBO/AngO.lean:45:13: warning: This simp argument is unused:
+  List.mem_map
+
+Hint: Omit it from the simp argument list.
+  simp only [L̵i̵s̵t̵.̵m̵e̵m̵_̵m̵a̵p̵,̵ ̵↓reduceIte] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/AngO.lean:61:13: warning: This simp argument is unused:
+  List.mem_map
+
+Hint: Omit it from the simp argument list.
+  simp only [L̵i̵s̵t̵.̵m̵e̵m̵_̵m̵a̵p̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/AngO.lean:96:31: warning: This simp argument is unused:
+  List.lookup
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵l̵o̵o̵k̵u̵p̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/AngO.lean:97:36: warning: This simp argument is unused:
+  List.lookup
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵l̵o̵o̵k̵u̵p̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.66
+	Maximum resident set size (kbytes): 416496
+rc=0
+=== 2026-11-22T06:15:32+09:00 std EncBO.SatisfiableO (a85749ebe7456be1)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.36
+	Maximum resident set size (kbytes): 389900
+rc=0
+=== 2026-11-22T06:15:33+09:00 std EncBO.Compose7 (261997c4fb27541a)
+EncBO/Compose7.lean:54:34: warning: unused variable `nv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+EncBO/Compose7.lean:54:37: warning: unused variable `G`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.39
+	Maximum resident set size (kbytes): 384492
+rc=0
+=== 2026-11-22T06:16:07+09:00 geo Geo7.Main7 (dcd310286e69627c)
+'EncB.Geo7.sevenfold70_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.sevenfold_es8_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.72
+	Maximum resident set size (kbytes): 2383888
+rc=0
+=== 2026-11-22T06:20:41+09:00 geo Geo7.PolarData (2a031933b002e812)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.20
+	Maximum resident set size (kbytes): 2374736
+rc=0
+=== 2026-11-22T06:20:44+09:00 geo Geo7.ArcData (ddb4b8e804ab1219)
+'EncB.Geo7.polar_ruleA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.polar_ruleB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.objLt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.rdir_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_objLt_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_objLt_iff_inArc_odir' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.arcFrame' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.33
+	Maximum resident set size (kbytes): 2469204
+rc=0
+=== 2026-11-22T06:21:59+09:00 geo Geo7.LayerLab (e2c006be247345f6)
+Geo7/LayerLab.lean:47:23: error(lean.unknownIdentifier): Unknown identifier `Lab.exists_layer_polar`
+Geo7/LayerLab.lean:47:2: error: expected a term of the shape `∀ xs, ∃ a, p xs a` or `∀ xs, p xs ∧ q xs`
+'EncB.Geo7.layerLab_of_counterexample' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.68
+	Maximum resident set size (kbytes): 2391184
+rc=1
+=== 2026-11-22T06:22:08+09:00 geo Geo7.LayerLab (759d4a34afac9135)
+'EncB.Geo7.layerLab_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.49
+	Maximum resident set size (kbytes): 2442188
+rc=0
+=== 2026-11-22T06:22:10+09:00 geo Geo7.LayerBasic (abc7bfa98295ba02)
+Geo7/LayerBasic.lean:13:53: error: unexpected token '('; expected command
+'EncB.Geo7.lab_P_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_orient_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_nest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_noChain' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.59
+	Maximum resident set size (kbytes): 2428256
+rc=1
+=== 2026-11-22T06:22:25+09:00 geo Geo7.LayerBasic (49ec461a8819e6b8)
+'EncB.Geo7.lab_P_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_orient_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_nest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_noChain' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.61
+	Maximum resident set size (kbytes): 2439148
+rc=0
+=== 2026-11-22T06:24:12+09:00 geo Geo7.Perturb (e0cef224577253b1)
+'EncB.Geo7.exists_perturbation' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.14
+	Maximum resident set size (kbytes): 2441384
+rc=0
+=== 2026-11-22T06:25:27+09:00 geo Geo7.ModelOfLab (db0ee5528cb1f22d)
+'EncB.Geo7.modelO_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.00
+	Maximum resident set size (kbytes): 2449860
+rc=0
+=== 2026-11-22T06:26:38+09:00 geo Geo7.Main7 (f1f8dfde6819ce49)
+EncB.Geo7.sevenfold_es8_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) S)
+  (hcard : 65 ≤ S.card) : ErdosSzekeres.HasConvexNGon 8 S
+EncB.Geo7.sevenfold70_of_unsat (h : ¬EncB.DimacsSatisfiable (EncB.encB 7 8 10)) : ErdosSzekeres.LayerLemma.Sevenfold70
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.02
+	Maximum resident set size (kbytes): 2414096
+rc=0
+=== build_self 2026-11-22T06:28:36+09:00
+=== 2026-11-22T06:28:36+09:00 self ErdosSzekeres.Definitions (2425500eefd181ad)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.37
+	Maximum resident set size (kbytes): 1968168
+rc=0
+=== 2026-11-22T06:28:37+09:00 self ErdosSzekeres.Orientation (f67955ac70916031)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.29
+	Maximum resident set size (kbytes): 1544176
+rc=0
+=== 2026-11-22T06:28:39+09:00 self ErdosSzekeres.Basic (13667aa2d3dc83ef)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.73
+	Maximum resident set size (kbytes): 1978172
+rc=0
+=== 2026-11-22T06:28:40+09:00 self ErdosSzekeres.OrientationGeometry (c7db9bbbb65eb4cd)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.70
+	Maximum resident set size (kbytes): 1997780
+rc=0
+=== 2026-11-22T06:28:42+09:00 self ErdosSzekeres.Suk.TriangleOrder (6447cd4833d4724d)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.12
+	Maximum resident set size (kbytes): 2021516
+rc=0
+=== 2026-11-22T06:28:45+09:00 self ErdosSzekeres.Suk.BaseChart (08d0e856f0054a3a)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.12
+	Maximum resident set size (kbytes): 2017680
+rc=0
+=== 2026-11-22T06:28:47+09:00 self ErdosSzekeres.Suk.BaseOrder (d21becd29e84c3a6)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.93
+	Maximum resident set size (kbytes): 2013076
+rc=0
+=== 2026-11-22T06:28:49+09:00 self ErdosSzekeres.Suk.FourPoint (f3783fe9766f4d8f)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.53
+	Maximum resident set size (kbytes): 1972236
+rc=0
+=== 2026-11-22T06:28:51+09:00 self ErdosSzekeres.Suk.SupportingLines (6a8e1267768587a5)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.91
+	Maximum resident set size (kbytes): 2009580
+rc=0
+=== 2026-11-22T06:28:55+09:00 self ErdosSzekeres.Suk.OrientationClique (cf63d5219b47009e)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.82
+	Maximum resident set size (kbytes): 1987996
+rc=0
+=== 2026-11-22T06:28:57+09:00 self ES8Geo.KeyOrder (6e34096cff52b862)
+'KeyOrder.cell_lt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.cell_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.cell_lt_iff_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.cell_lt_iff_rank_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.reduce_mod_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.antipode_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.antipode_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.reduced_lt_iff_key' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.61
+	Maximum resident set size (kbytes): 2190920
+rc=0
+=== 2026-11-22T06:29:02+09:00 self ES8Geo.Capstone2 (f8c3930c242703fb)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:29.03
+	Maximum resident set size (kbytes): 2679932
+rc=0
+=== 2026-11-22T06:29:31+09:00 self ES8Geo.OrbitConsistency (9b843180ac3827b7)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.60
+	Maximum resident set size (kbytes): 2337472
+rc=0
+=== 2026-11-22T06:29:36+09:00 self ES8Geo.Orbit (0de95ad32f5e61d9)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.37
+	Maximum resident set size (kbytes): 2368440
+rc=0
+=== 2026-11-22T06:29:37+09:00 self ES8Geo.Interface (972ffde08436c17c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.54
+	Maximum resident set size (kbytes): 2389160
+rc=0
+=== 2026-11-22T06:29:39+09:00 self ES8Geo.Labelling (489ba89f8d6fa8a5)
+'EncB.Geo.labelling_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.32
+	Maximum resident set size (kbytes): 2447596
+rc=0
+=== 2026-11-22T06:29:42+09:00 self Geo7.PolarData (2a031933b002e812)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.56
+	Maximum resident set size (kbytes): 2390712
+rc=0
+=== 2026-11-22T06:29:44+09:00 self Geo7.ArcData (ddb4b8e804ab1219)
+'EncB.Geo7.polar_ruleA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.polar_ruleB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.objLt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.rdir_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_objLt_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_objLt_iff_inArc_odir' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.arcFrame' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.05
+	Maximum resident set size (kbytes): 2472444
+rc=0
+=== 2026-11-22T06:29:52+09:00 self Geo7.LayerLab (759d4a34afac9135)
+'EncB.Geo7.layerLab_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.36
+	Maximum resident set size (kbytes): 2443056
+rc=0
+=== 2026-11-22T06:29:55+09:00 self Geo7.LayerBasic (49ec461a8819e6b8)
+'EncB.Geo7.lab_P_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_orient_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_nest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_noChain' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.47
+	Maximum resident set size (kbytes): 2441384
+rc=0
+=== 2026-11-22T06:30:01+09:00 self Geo7.Perturb (e0cef224577253b1)
+'EncB.Geo7.exists_perturbation' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.25
+	Maximum resident set size (kbytes): 2442952
+rc=0
+=== 2026-11-22T06:30:04+09:00 self Geo7.ModelOfLab (db0ee5528cb1f22d)
+'EncB.Geo7.modelO_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.16
+	Maximum resident set size (kbytes): 2451364
+rc=0
+=== 2026-11-22T06:30:07+09:00 self Geo7.Main7 (f1f8dfde6819ce49)
+EncB.Geo7.sevenfold_es8_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) S)
+  (hcard : 65 ≤ S.card) : ErdosSzekeres.HasConvexNGon 8 S
+EncB.Geo7.sevenfold70_of_unsat (h : ¬EncB.DimacsSatisfiable (EncB.encB 7 8 10)) : ErdosSzekeres.LayerLemma.Sevenfold70
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.52
+	Maximum resident set size (kbytes): 2411620
+rc=0
+=== 2026-11-22T06:31:07+09:00 self Geo7.Main7 (b26fb96fb681efd8)
+EncB.Geo7.sevenfold_es8_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) S)
+  (hcard : 65 ≤ S.card) : ErdosSzekeres.HasConvexNGon 8 S
+EncB.Geo7.sevenfold70_of_unsat (h : ¬EncB.DimacsSatisfiable (EncB.encB 7 8 10)) : ErdosSzekeres.LayerLemma.Sevenfold70
+EncB.Geo7.sevenfold_es8_order7_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S) (j : ℕ)
+  (hj : 1 ≤ j ∧ j ≤ 6)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi * ↑j / 7)) S)
+  (hcard : 65 ≤ S.card) : ErdosSzekeres.HasConvexNGon 8 S
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.57
+	Maximum resident set size (kbytes): 2421824
+rc=0
+=== build_all 2026-11-22T06:35:49+09:00
+=== 2026-11-22T06:35:49+09:00 std EncB.Gen (ec97b3355b9cfe39)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.08
+	Maximum resident set size (kbytes): 418148
+rc=0
+=== 2026-11-22T06:35:50+09:00 std EncB.Dimacs (48cbeac96e085d2e)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.60
+	Maximum resident set size (kbytes): 394396
+rc=0
+=== 2026-11-22T06:35:51+09:00 std EncB.Coded (2727e00bbd4ce9ea)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.70
+	Maximum resident set size (kbytes): 435696
+rc=0
+=== 2026-11-22T06:35:53+09:00 std EncB.Cover (c59425acb5ba5e1d)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.31
+	Maximum resident set size (kbytes): 390912
+rc=0
+=== 2026-11-22T06:35:53+09:00 std EncB.Model (42240829ba35fc95)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.40
+	Maximum resident set size (kbytes): 394696
+rc=0
+=== 2026-11-22T06:35:54+09:00 std EncB.ModelLemmas (db0d368be4481a34)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.29
+	Maximum resident set size (kbytes): 415884
+rc=0
+=== 2026-11-22T06:35:55+09:00 std EncB.SortLemmas (103f5bd10b8bde07)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.84
+	Maximum resident set size (kbytes): 422668
+rc=0
+=== 2026-11-22T06:35:56+09:00 std EncB.SoundOlit (48631ae6e2c94f88)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.08
+	Maximum resident set size (kbytes): 415780
+rc=0
+=== 2026-11-22T06:35:57+09:00 std EncB.SoundOrbit (ce93c2011e6de490)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.81
+	Maximum resident set size (kbytes): 407436
+rc=0
+=== 2026-11-22T06:35:58+09:00 std EncB.SoundChain (d2d5908189a9bf53)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.82
+	Maximum resident set size (kbytes): 410312
+rc=0
+=== 2026-11-22T06:35:59+09:00 std EncB.SoundAng (6fa1ad05bf38519f)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.89
+	Maximum resident set size (kbytes): 442592
+rc=0
+=== 2026-11-22T06:35:59+09:00 std EncB.SoundRules (8cb4637efd3736a4)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.82
+	Maximum resident set size (kbytes): 439712
+rc=0
+=== 2026-11-22T06:36:01+09:00 std EncB.SoundWord (c1bdb4175ee548b8)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.13
+	Maximum resident set size (kbytes): 417112
+rc=0
+=== 2026-11-22T06:36:02+09:00 std EncB.Satisfiable (5c908151d342184a)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.31
+	Maximum resident set size (kbytes): 388268
+rc=0
+=== 2026-11-22T06:36:03+09:00 std EncB.Render (c8d6aed7e539db2c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.57
+	Maximum resident set size (kbytes): 497092
+rc=0
+=== 2026-11-22T06:36:05+09:00 std EncB.Compose (fe9cf37e1c157712)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.42
+	Maximum resident set size (kbytes): 390624
+rc=0
+=== 2026-11-22T06:36:06+09:00 std EncBO.ModelO (88dde50d90c70274)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.36
+	Maximum resident set size (kbytes): 417444
+rc=0
+=== 2026-11-22T06:36:07+09:00 std EncBO.SoundO (1a6808b8f69c7911)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.61
+	Maximum resident set size (kbytes): 398416
+rc=0
+=== 2026-11-22T06:36:08+09:00 std EncBO.RulesO (34f2c0f5ef5ac00c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.55
+	Maximum resident set size (kbytes): 408124
+rc=0
+=== 2026-11-22T06:36:09+09:00 std EncBO.AngO (e75ab74015a5ef01)
+EncBO/AngO.lean:45:13: warning: This simp argument is unused:
+  List.mem_map
+
+Hint: Omit it from the simp argument list.
+  simp only [L̵i̵s̵t̵.̵m̵e̵m̵_̵m̵a̵p̵,̵ ̵↓reduceIte] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/AngO.lean:61:13: warning: This simp argument is unused:
+  List.mem_map
+
+Hint: Omit it from the simp argument list.
+  simp only [L̵i̵s̵t̵.̵m̵e̵m̵_̵m̵a̵p̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/AngO.lean:96:31: warning: This simp argument is unused:
+  List.lookup
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵l̵o̵o̵k̵u̵p̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EncBO/AngO.lean:97:36: warning: This simp argument is unused:
+  List.lookup
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵l̵o̵o̵k̵u̵p̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.93
+	Maximum resident set size (kbytes): 418200
+rc=0
+=== 2026-11-22T06:36:10+09:00 std EncBO.SatisfiableO (a85749ebe7456be1)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.36
+	Maximum resident set size (kbytes): 390492
+rc=0
+=== 2026-11-22T06:36:11+09:00 std EncBO.Compose7 (261997c4fb27541a)
+EncBO/Compose7.lean:54:34: warning: unused variable `nv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+EncBO/Compose7.lean:54:37: warning: unused variable `G`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.38
+	Maximum resident set size (kbytes): 385108
+rc=0
+=== build_self 2026-11-22T06:36:11+09:00
+=== 2026-11-22T06:36:11+09:00 self ErdosSzekeres.Definitions (2425500eefd181ad)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.01
+	Maximum resident set size (kbytes): 1968288
+rc=0
+=== 2026-11-22T06:36:12+09:00 self ErdosSzekeres.Orientation (f67955ac70916031)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.86
+	Maximum resident set size (kbytes): 1544476
+rc=0
+=== 2026-11-22T06:36:13+09:00 self ErdosSzekeres.Basic (13667aa2d3dc83ef)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.08
+	Maximum resident set size (kbytes): 1978468
+rc=0
+=== 2026-11-22T06:36:14+09:00 self ErdosSzekeres.OrientationGeometry (c7db9bbbb65eb4cd)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.23
+	Maximum resident set size (kbytes): 1997912
+rc=0
+=== 2026-11-22T06:36:15+09:00 self ErdosSzekeres.Suk.TriangleOrder (6447cd4833d4724d)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.37
+	Maximum resident set size (kbytes): 2021468
+rc=0
+=== 2026-11-22T06:36:19+09:00 self ErdosSzekeres.Suk.BaseChart (08d0e856f0054a3a)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.67
+	Maximum resident set size (kbytes): 2017936
+rc=0
+=== 2026-11-22T06:36:21+09:00 self ErdosSzekeres.Suk.BaseOrder (d21becd29e84c3a6)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.07
+	Maximum resident set size (kbytes): 2013212
+rc=0
+=== 2026-11-22T06:36:24+09:00 self ErdosSzekeres.Suk.FourPoint (f3783fe9766f4d8f)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.70
+	Maximum resident set size (kbytes): 1966828
+rc=0
+=== 2026-11-22T06:36:25+09:00 self ErdosSzekeres.Suk.SupportingLines (6a8e1267768587a5)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.19
+	Maximum resident set size (kbytes): 2010296
+rc=0
+=== 2026-11-22T06:36:28+09:00 self ErdosSzekeres.Suk.OrientationClique (cf63d5219b47009e)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.59
+	Maximum resident set size (kbytes): 1986288
+rc=0
+=== 2026-11-22T06:36:30+09:00 self ES8Geo.KeyOrder (6e34096cff52b862)
+'KeyOrder.cell_lt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.cell_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.cell_lt_iff_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.cell_lt_iff_rank_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.reduce_mod_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.antipode_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.antipode_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.reduced_lt_iff_key' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.29
+	Maximum resident set size (kbytes): 2193032
+rc=0
+=== 2026-11-22T06:36:34+09:00 self ES8Geo.Capstone2 (f8c3930c242703fb)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:30.66
+	Maximum resident set size (kbytes): 2693824
+rc=0
+=== 2026-11-22T06:37:05+09:00 self ES8Geo.OrbitConsistency (9b843180ac3827b7)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.28
+	Maximum resident set size (kbytes): 2338224
+rc=0
+=== 2026-11-22T06:37:09+09:00 self ES8Geo.Orbit (0de95ad32f5e61d9)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.35
+	Maximum resident set size (kbytes): 2370648
+rc=0
+=== 2026-11-22T06:37:11+09:00 self ES8Geo.Interface (972ffde08436c17c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.45
+	Maximum resident set size (kbytes): 2390764
+rc=0
+=== 2026-11-22T06:37:12+09:00 self ES8Geo.Labelling (489ba89f8d6fa8a5)
+'EncB.Geo.labelling_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.94
+	Maximum resident set size (kbytes): 2450620
+rc=0
+=== 2026-11-22T06:37:15+09:00 self Geo7.PolarData (2a031933b002e812)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.59
+	Maximum resident set size (kbytes): 2390220
+rc=0
+=== 2026-11-22T06:37:17+09:00 self Geo7.ArcData (ddb4b8e804ab1219)
+'EncB.Geo7.polar_ruleA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.polar_ruleB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.objLt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.rdir_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_objLt_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_objLt_iff_inArc_odir' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.arcFrame' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.37
+	Maximum resident set size (kbytes): 2475860
+rc=0
+=== 2026-11-22T06:37:25+09:00 self Geo7.LayerLab (759d4a34afac9135)
+'EncB.Geo7.layerLab_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.50
+	Maximum resident set size (kbytes): 2444384
+rc=0
+=== 2026-11-22T06:37:28+09:00 self Geo7.LayerBasic (49ec461a8819e6b8)
+'EncB.Geo7.lab_P_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_orient_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_nest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_noChain' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.70
+	Maximum resident set size (kbytes): 2442216
+rc=0
+=== 2026-11-22T06:37:34+09:00 self Geo7.Perturb (e0cef224577253b1)
+'EncB.Geo7.exists_perturbation' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.04
+	Maximum resident set size (kbytes): 2442896
+rc=0
+=== 2026-11-22T06:37:37+09:00 self Geo7.ModelOfLab (db0ee5528cb1f22d)
+'EncB.Geo7.modelO_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.19
+	Maximum resident set size (kbytes): 2452004
+rc=0
+=== 2026-11-22T06:37:41+09:00 self Geo7.Main7 (b26fb96fb681efd8)
+EncB.Geo7.sevenfold_es8_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) S)
+  (hcard : 65 ≤ S.card) : ErdosSzekeres.HasConvexNGon 8 S
+EncB.Geo7.sevenfold70_of_unsat (h : ¬EncB.DimacsSatisfiable (EncB.encB 7 8 10)) : ErdosSzekeres.LayerLemma.Sevenfold70
+EncB.Geo7.sevenfold_es8_order7_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 7 8 10) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S) (j : ℕ)
+  (hj : 1 ≤ j ∧ j ≤ 6)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi * ↑j / 7)) S)
+  (hcard : 65 ≤ S.card) : ErdosSzekeres.HasConvexNGon 8 S
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.90
+	Maximum resident set size (kbytes): 2426684
+rc=0
+=== build_all 2026-11-22T06:41:47+09:00
+=== 2026-11-22T06:41:47+09:00 std EncB.Gen (ec97b3355b9cfe39)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.11
+	Maximum resident set size (kbytes): 417828
+rc=0
+=== 2026-11-22T06:41:48+09:00 std EncB.Dimacs (48cbeac96e085d2e)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.61
+	Maximum resident set size (kbytes): 394412
+rc=0
+=== 2026-11-22T06:41:49+09:00 std EncB.Coded (2727e00bbd4ce9ea)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.83
+	Maximum resident set size (kbytes): 433652
+rc=0
+=== 2026-11-22T06:41:51+09:00 std EncB.Cover (c59425acb5ba5e1d)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.24
+	Maximum resident set size (kbytes): 390488
+rc=0
+=== 2026-11-22T06:41:51+09:00 std EncB.Model (42240829ba35fc95)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.37
+	Maximum resident set size (kbytes): 394672
+rc=0
+=== 2026-11-22T06:41:51+09:00 std EncB.ModelLemmas (db0d368be4481a34)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.37
+	Maximum resident set size (kbytes): 415724
+rc=0
+=== 2026-11-22T06:41:53+09:00 std EncB.SortLemmas (103f5bd10b8bde07)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.90
+	Maximum resident set size (kbytes): 422848
+rc=0
+=== 2026-11-22T06:41:54+09:00 std EncB.SoundOlit (48631ae6e2c94f88)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.13
+	Maximum resident set size (kbytes): 413768
+rc=0
+=== 2026-11-22T06:41:55+09:00 std EncB.SoundOrbit (ce93c2011e6de490)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.04
+	Maximum resident set size (kbytes): 407616
+rc=0
+=== 2026-11-22T06:41:56+09:00 std EncB.SoundChain (d2d5908189a9bf53)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.96
+	Maximum resident set size (kbytes): 408616
+rc=0
+=== 2026-11-22T06:41:57+09:00 std EncB.SoundAng (6fa1ad05bf38519f)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.93
+	Maximum resident set size (kbytes): 440776
+rc=0
+=== 2026-11-22T06:41:58+09:00 std EncB.SoundRules (8cb4637efd3736a4)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.67
+	Maximum resident set size (kbytes): 436936
+rc=0
+=== 2026-11-22T06:42:00+09:00 std EncB.SoundWord (c1bdb4175ee548b8)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.43
+	Maximum resident set size (kbytes): 410236
+rc=0
+=== 2026-11-22T06:42:02+09:00 std EncB.Satisfiable (5c908151d342184a)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.33
+	Maximum resident set size (kbytes): 387964
+rc=0
+=== 2026-11-22T06:42:02+09:00 std EncB.Render (c8d6aed7e539db2c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.67
+	Maximum resident set size (kbytes): 494936
+rc=0
+=== 2026-11-22T06:42:05+09:00 std EncB.Compose (fe9cf37e1c157712)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.45
+	Maximum resident set size (kbytes): 390364
+rc=0
+=== 2026-11-22T06:42:05+09:00 std EncBO.ModelO (88dde50d90c70274)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.26
+	Maximum resident set size (kbytes): 422880
+rc=0
+=== 2026-11-22T06:42:07+09:00 std EncBO.SoundO (1a6808b8f69c7911)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.63
+	Maximum resident set size (kbytes): 397896
+rc=0
+=== 2026-11-22T06:42:07+09:00 std EncBO.RulesO (34f2c0f5ef5ac00c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.58
+	Maximum resident set size (kbytes): 406668
+rc=0
+=== 2026-11-22T06:42:09+09:00 std EncBO.AngO (63a1bbfccfbf0ad1)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.84
+	Maximum resident set size (kbytes): 415756
+rc=0
+=== 2026-11-22T06:42:10+09:00 std EncBO.SatisfiableO (a85749ebe7456be1)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.42
+	Maximum resident set size (kbytes): 390012
+rc=0
+=== 2026-11-22T06:42:10+09:00 std EncBO.Compose7 (919ba7c2a0955bf1)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.49
+	Maximum resident set size (kbytes): 384764
+rc=0
+=== build_self 2026-11-22T06:42:11+09:00
+=== 2026-11-22T06:42:11+09:00 self ErdosSzekeres.Definitions (2425500eefd181ad)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.65
+	Maximum resident set size (kbytes): 1967684
+rc=0
+=== 2026-11-22T06:42:12+09:00 self ErdosSzekeres.Orientation (f67955ac70916031)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.41
+	Maximum resident set size (kbytes): 1544768
+rc=0
+=== 2026-11-22T06:42:14+09:00 self ErdosSzekeres.Basic (13667aa2d3dc83ef)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.24
+	Maximum resident set size (kbytes): 1978464
+rc=0
+=== 2026-11-22T06:42:15+09:00 self ErdosSzekeres.OrientationGeometry (c7db9bbbb65eb4cd)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.47
+	Maximum resident set size (kbytes): 1997412
+rc=0
+=== 2026-11-22T06:42:17+09:00 self ErdosSzekeres.Suk.TriangleOrder (6447cd4833d4724d)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.98
+	Maximum resident set size (kbytes): 2021916
+rc=0
+=== 2026-11-22T06:42:20+09:00 self ErdosSzekeres.Suk.BaseChart (08d0e856f0054a3a)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.48
+	Maximum resident set size (kbytes): 2018124
+rc=0
+=== 2026-11-22T06:42:22+09:00 self ErdosSzekeres.Suk.BaseOrder (d21becd29e84c3a6)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.27
+	Maximum resident set size (kbytes): 2014060
+rc=0
+=== 2026-11-22T06:42:24+09:00 self ErdosSzekeres.Suk.FourPoint (f3783fe9766f4d8f)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.76
+	Maximum resident set size (kbytes): 1972320
+rc=0
+=== 2026-11-22T06:42:26+09:00 self ErdosSzekeres.Suk.SupportingLines (6a8e1267768587a5)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.00
+	Maximum resident set size (kbytes): 2006892
+rc=0
+=== 2026-11-22T06:42:30+09:00 self ErdosSzekeres.Suk.OrientationClique (cf63d5219b47009e)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.21
+	Maximum resident set size (kbytes): 1987696
+rc=0
+=== 2026-11-22T06:42:32+09:00 self ES8Geo.KeyOrder (6e34096cff52b862)
+'KeyOrder.cell_lt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.cell_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.cell_lt_iff_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.cell_lt_iff_rank_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.reduce_mod_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.antipode_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.antipode_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KeyOrder.reduced_lt_iff_key' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.06
+	Maximum resident set size (kbytes): 2191876
+rc=0
+=== 2026-11-22T06:42:37+09:00 self ES8Geo.Capstone2 (f8c3930c242703fb)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:29.36
+	Maximum resident set size (kbytes): 2677508
+rc=0
+=== 2026-11-22T06:43:06+09:00 self ES8Geo.OrbitConsistency (9b843180ac3827b7)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.72
+	Maximum resident set size (kbytes): 2336924
+rc=0
+=== 2026-11-22T06:43:11+09:00 self ES8Geo.Orbit (0de95ad32f5e61d9)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.41
+	Maximum resident set size (kbytes): 2370292
+rc=0
+=== 2026-11-22T06:43:12+09:00 self ES8Geo.Interface (972ffde08436c17c)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.64
+	Maximum resident set size (kbytes): 2389792
+rc=0
+=== 2026-11-22T06:43:14+09:00 self ES8Geo.Labelling (489ba89f8d6fa8a5)
+'EncB.Geo.labelling_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.73
+	Maximum resident set size (kbytes): 2448220
+rc=0
+=== 2026-11-22T06:43:18+09:00 self Geo7.PolarData (2a031933b002e812)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.39
+	Maximum resident set size (kbytes): 2390792
+rc=0
+=== 2026-11-22T06:43:19+09:00 self Geo7.ArcData (ddb4b8e804ab1219)
+'EncB.Geo7.polar_ruleA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.polar_ruleB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.objLt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.rdir_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_objLt_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.ccwIn_objLt_iff_inArc_odir' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.Arc.arcFrame' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.19
+	Maximum resident set size (kbytes): 2476536
+rc=0
+=== 2026-11-22T06:43:27+09:00 self Geo7.LayerLab (759d4a34afac9135)
+'EncB.Geo7.layerLab_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.92
+	Maximum resident set size (kbytes): 2443744
+rc=0
+=== 2026-11-22T06:43:30+09:00 self Geo7.LayerBasic (49ec461a8819e6b8)
+'EncB.Geo7.lab_P_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_P_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_orient_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_chi_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_nest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo7.lab_noChain' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.36
+	Maximum resident set size (kbytes): 2439136
+rc=0
+=== 2026-11-22T06:43:36+09:00 self Geo7.Perturb (e0cef224577253b1)
+'EncB.Geo7.exists_perturbation' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.85
+	Maximum resident set size (kbytes): 2442176
+rc=0
+=== 2026-11-22T06:43:40+09:00 self Geo7.ModelOfLab (db0ee5528cb1f22d)
+'EncB.Geo7.modelO_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.94
+	Maximum resident set size (kbytes): 2455452
+rc=0
+=== 2026-11-22T06:43:43+09:00 self Geo7.Main7 (78f4f9d565e26daf)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.21
+	Maximum resident set size (kbytes): 2425368
+rc=0

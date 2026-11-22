@@ -1,0 +1,19 @@
+N66Geo/CapCup.lean:231:120: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+N66Geo/CapCup.lean:229:63: error: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+N66Geo/CapCup.lean:95:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'N66Geo.capCup55_holds' does not depend on any axioms
+Command exited with non-zero status 1
+CapCup lean wall=17.96 s maxrss=3350876 KB
+rc=1

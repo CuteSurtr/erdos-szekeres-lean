@@ -1,0 +1,36 @@
+{
+ "exe_sha256": "b0b270cb5840bb92151900b77eb76ff8be1b71efd3dee93dbfe198ed6a531c5d",
+ "sources": {
+  "Gen.lean": "6d03f39a3214c7a40da903b879e61a07f27014a33c8a7c31cd5cf214a4a3bab7",
+  "Main.lean": "e418a316a8de004375e69c93589739ea7a99591b913f547417ee3b8ed1bc285b"
+ },
+ "base_printed_sha256": "c3ae52244554013383f1447b981a3a8f10132a50ec45b0a4f74f3e7248807074",
+ "base_match": true,
+ "pieces": 4404,
+ "distinct_tags": 4404,
+ "direct": 84,
+ "split": 36,
+ "split_complete": true,
+ "cover_shape": true,
+ "match": 4404,
+ "independent_source_counts": {
+  "wave1": 1623,
+  "recheck": 2781,
+  "rebuild": 2781
+ },
+ "controls": {
+  "unlisted_cube036_not_certified": true,
+  "cube036_detail": {
+   "campaign_rows": 1,
+   "campaign_verdict": false,
+   "campaign_sha": true,
+   "file_sha": true,
+   "campaign_out": false,
+   "independent": ""
+  },
+  "piece_mode_eq_all_mode": true,
+  "shifted_record_fails": true,
+  "exact_line_rejects_variants": true
+ },
+ "ALL_OK": true
+}

@@ -1,0 +1,28 @@
+== start 2026-11-22 17:49:35
+{"leaf": 0, "cube": "oooooo_40o_52o_46o_44o_45o_39o", "state_file": "/home/jay/research/data/n66-20261113/p2/c15/oooooo_40o_52o_46o_44o_45o_39o_L15.json", "activated": 683670, "sorted": true, "layout_activated": 683670, "rows": 15648, "rows_equal_layout": true, "q_json": 676907, "q_tau_closure": 683670, "act_eq_q_tau_closure": true, "cnf_sha256": "49e02c9b442311d4669425d72a99953faf287fe0176b65798f54648cc2acbbbc", "cert_full_cnf_sha256": "49e02c9b442311d4669425d72a99953faf287fe0176b65798f54648cc2acbbbc"}
+exe 63d7fc9913fc1d80c423512470370644c62643c7ea785343ddb27426cb35a229
+leaf 0 clauses 9710990 act 683670 rows 15648 bad 0
+full wall=12.82 s maxrss=2368996 KB
+leaf 0 oooooo_40o_52o_46o_44o_45o_39o
+recorded full_cnf_sha256 (campaign, cert.json): 49e02c9b442311d4669425d72a99953faf287fe0176b65798f54648cc2acbbbc 49e02c9b442311d4669425d72a99953faf287fe0176b65798f54648cc2acbbbc
+lean full print:                               49e02c9b442311d4669425d72a99953faf287fe0176b65798f54648cc2acbbbc
+FULL_MATCH
+{"leaf": 22, "cube": "ooohoo_40h_52o_46o", "state_file": "/home/jay/research/data/n66-20261113/p2/c15/ooohoo_40h_52o_46o_L15.json", "activated": 683670, "sorted": true, "layout_activated": 683670, "rows": 15648, "rows_equal_layout": true, "q_json": 676907, "q_tau_closure": 683670, "act_eq_q_tau_closure": true, "cnf_sha256": "dd8d447834f16b542b0d6ac91a74294742d2070b2c674030fe885b109e2a3a34", "cert_full_cnf_sha256": "dd8d447834f16b542b0d6ac91a74294742d2070b2c674030fe885b109e2a3a34"}
+exe 63d7fc9913fc1d80c423512470370644c62643c7ea785343ddb27426cb35a229
+leaf 22 clauses 9710987 act 683670 rows 15648 bad 0
+full wall=11.23 s maxrss=2367604 KB
+leaf 22 ooohoo_40h_52o_46o
+recorded full_cnf_sha256 (campaign, cert.json): dd8d447834f16b542b0d6ac91a74294742d2070b2c674030fe885b109e2a3a34 dd8d447834f16b542b0d6ac91a74294742d2070b2c674030fe885b109e2a3a34
+lean full print:                               dd8d447834f16b542b0d6ac91a74294742d2070b2c674030fe885b109e2a3a34
+FULL_MATCH
+== extract 2026-11-22 17:50:04
+105 logs/extract_all.jsonl
+== largest leaf (22) timed 2026-11-22 17:51:06
+e326108f0b4a11f68da65dec6cffea0a0d87160561e4715c27507cf7ca653530  -
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.04
+	Maximum resident set size (kbytes): 2462728
+	Exit status: 0
+== trims 2026-11-22 17:51:11
+MATCH 105 DIFFER 0
+distinct printed hashes 98
+== done 2026-11-22 17:58:33

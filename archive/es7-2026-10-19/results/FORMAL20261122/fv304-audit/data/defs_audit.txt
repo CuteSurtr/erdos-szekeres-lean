@@ -1,0 +1,20 @@
+def OmissionBalancedZ.ExcludesHoleBudgetZ : ℕ → Prop :=
+fun budget =>
+  ¬∃ holes,
+      (∀ (i : Fin 252), holes i ≤ 1) ∧
+        (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧
+          (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧
+            15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ ∑ i, holes i ≤ budget
+def OmissionZRow.N66Bound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : ErdosSzekeres.Omission.Configuration n),
+    ¬c.HasCap 6 → ¬c.HasCup 6 → ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) → n ≤ B
+def ErdosSzekeres.Omission.Partition.ResidualBound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : ErdosSzekeres.Omission.Configuration n),
+    ¬c.HasCap 6 →
+      ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) →
+        ErdosSzekeres.Omission.Subsets.NoJunctionOn c.cup (Finset.range n) → n ≤ B
+def ErdosSzekeres.ForcesConvexNGon : ℕ → ℕ → Prop :=
+fun N n =>
+  ∀ (s : Finset ErdosSzekeres.Point), ErdosSzekeres.GeneralPosition s → N ≤ s.card → ErdosSzekeres.HasConvexNGon n s

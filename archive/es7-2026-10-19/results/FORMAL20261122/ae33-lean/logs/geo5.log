@@ -1,0 +1,321 @@
+AE33Geo/Sound.lean:44:6: error: unsolved goals
+case neg
+x a b : ℤ
+rest' : List ℤ
+ih : x ∈ dedupAdj (b :: rest') ↔ x ∈ b :: rest'
+e : dedupAdj (a :: b :: rest') = if (a == b) = true then dedupAdj (b :: rest') else a :: dedupAdj (b :: rest')
+h : ¬(a == b) = true
+⊢ x = a ∨ x = b ∨ x ∈ rest' ↔ x ∈ a :: b :: rest'
+AE33Geo/Sound.lean:128:23: error: unsolved goals
+B : Array Pt
+pt : ℕ → Point
+C : Ctx B pt
+w a x y z : ℕ
+ex ey ez : ℤ
+hw : w < 2
+ha : a < 31
+hx : x < 31
+hy : y < 31
+hz : z < 31
+hax : ¬a = x
+hay : ¬a = y
+haz : ¬a = z
+hxy : ¬x = y
+hyz : ¬y = z
+hxz : ¬x = z
+hex : ex = 1 ∨ ex = -1
+hey : ey = 1 ∨ ey = -1
+hez : ez = 1 ∨ ez = -1
+c1 : ex * ey * osgn B a x y = 1
+c2 : ey * ez * osgn B a y z = 1
+c3 : ex * ez * osgn B a x z = 1
+lx : ℤ
+hlx : chi B a x (31 + w) = Term.lit lx
+hlx0 : lx ≠ 0
+hsx : EncB.LitSat (realAssign pt) lx ↔ 0 < orient (pt a) (pt x) (pt (31 + w))
+ly : ℤ
+hly : chi B a y (31 + w) = Term.lit ly
+hly0 : ly ≠ 0
+hsy : EncB.LitSat (realAssign pt) ly ↔ 0 < orient (pt a) (pt y) (pt (31 + w))
+lz : ℤ
+hlz : chi B a z (31 + w) = Term.lit lz
+hlz0 : lz ≠ 0
+hsz : EncB.LitSat (realAssign pt) lz ↔ 0 < orient (pt a) (pt z) (pt (31 + w))
+gx : orient (pt a) (pt x) (pt (31 + w)) ≠ 0
+gy : orient (pt a) (pt y) (pt (31 + w)) ≠ 0
+gz : orient (pt a) (pt z) (pt (31 + w)) ≠ 0
+sx : EncB.LitSat (realAssign pt) (ex * lx) ↔ 0 < ↑ex * orient (pt a) (pt x) (pt (31 + w))
+sy : EncB.LitSat (realAssign pt) (ey * ly) ↔ 0 < ↑ey * orient (pt a) (pt y) (pt (31 + w))
+sz : EncB.LitSat (realAssign pt) (ez * lz) ↔ 0 < ↑ez * orient (pt a) (pt z) (pt (31 + w))
+hex0 : ex * lx ≠ 0
+hey0 : ey * ly ≠ 0
+hez0 : ez * lz ≠ 0
+kXY : 0 < ↑ex * ↑ey * orient (pt a) (pt x) (pt y)
+kYZ : 0 < ↑ey * ↑ez * orient (pt a) (pt y) (pt z)
+kXZ : 0 < ↑ex * ↑ez * orient (pt a) (pt x) (pt z)
+key :
+  ↑ex * ↑ez * orient (pt a) (pt x) (pt z) * (↑ey * orient (pt a) (pt y) (pt (31 + w))) =
+    ↑ey * ↑ez * orient (pt a) (pt y) (pt z) * (↑ex * orient (pt a) (pt x) (pt (31 + w))) +
+      ↑ex * ↑ey * orient (pt a) (pt x) (pt y) * (↑ez * orient (pt a) (pt z) (pt (31 + w)))
+h✝¹ : false = true
+h✝ : bounded (numVars B) [ex * lx, -(ey * ly), ez * lz] = true
+hall : ∀ x ∈ [ex * lx, -(ey * ly), ez * lz], ¬EncB.LitSat (realAssign pt) x
+⊢ ?m.901 = ex * lx ∨ ?m.901 = -(ey * ly) ∨ ?m.901 = ez * lz
+AE33Geo/Sound.lean:139:23: error: unsolved goals
+B : Array Pt
+pt : ℕ → Point
+C : Ctx B pt
+w a x y z : ℕ
+ex ey ez : ℤ
+hw : w < 2
+ha : a < 31
+hx : x < 31
+hy : y < 31
+hz : z < 31
+hax : ¬a = x
+hay : ¬a = y
+haz : ¬a = z
+hxy : ¬x = y
+hyz : ¬y = z
+hxz : ¬x = z
+hex : ex = 1 ∨ ex = -1
+hey : ey = 1 ∨ ey = -1
+hez : ez = 1 ∨ ez = -1
+c1 : ex * ey * osgn B a x y = 1
+c2 : ey * ez * osgn B a y z = 1
+c3 : ex * ez * osgn B a x z = 1
+lx : ℤ
+hlx : chi B a x (31 + w) = Term.lit lx
+hlx0 : lx ≠ 0
+hsx : EncB.LitSat (realAssign pt) lx ↔ 0 < orient (pt a) (pt x) (pt (31 + w))
+ly : ℤ
+hly : chi B a y (31 + w) = Term.lit ly
+hly0 : ly ≠ 0
+hsy : EncB.LitSat (realAssign pt) ly ↔ 0 < orient (pt a) (pt y) (pt (31 + w))
+lz : ℤ
+hlz : chi B a z (31 + w) = Term.lit lz
+hlz0 : lz ≠ 0
+hsz : EncB.LitSat (realAssign pt) lz ↔ 0 < orient (pt a) (pt z) (pt (31 + w))
+gx : orient (pt a) (pt x) (pt (31 + w)) ≠ 0
+gy : orient (pt a) (pt y) (pt (31 + w)) ≠ 0
+gz : orient (pt a) (pt z) (pt (31 + w)) ≠ 0
+sx : EncB.LitSat (realAssign pt) (ex * lx) ↔ 0 < ↑ex * orient (pt a) (pt x) (pt (31 + w))
+sy : EncB.LitSat (realAssign pt) (ey * ly) ↔ 0 < ↑ey * orient (pt a) (pt y) (pt (31 + w))
+sz : EncB.LitSat (realAssign pt) (ez * lz) ↔ 0 < ↑ez * orient (pt a) (pt z) (pt (31 + w))
+hex0 : ex * lx ≠ 0
+hey0 : ey * ly ≠ 0
+hez0 : ez * lz ≠ 0
+kXY : 0 < ↑ex * ↑ey * orient (pt a) (pt x) (pt y)
+kYZ : 0 < ↑ey * ↑ez * orient (pt a) (pt y) (pt z)
+kXZ : 0 < ↑ex * ↑ez * orient (pt a) (pt x) (pt z)
+key :
+  ↑ex * ↑ez * orient (pt a) (pt x) (pt z) * (↑ey * orient (pt a) (pt y) (pt (31 + w))) =
+    ↑ey * ↑ez * orient (pt a) (pt y) (pt z) * (↑ex * orient (pt a) (pt x) (pt (31 + w))) +
+      ↑ex * ↑ey * orient (pt a) (pt x) (pt y) * (↑ez * orient (pt a) (pt z) (pt (31 + w)))
+h✝¹ : true = true
+h✝ : bounded (numVars B) [ex * lx, -(ey * ly), ez * lz] = true
+hall : ∀ x ∈ [ex * lx, -(ey * ly), ez * lz], ¬EncB.LitSat (realAssign pt) x
+n1 : ¬EncB.LitSat (realAssign pt) (ex * lx)
+⊢ ?m.967 = ex * lx ∨ ?m.967 = -(ey * ly) ∨ ?m.967 = ez * lz
+AE33Geo/Sound.lean:93:105: error: unsolved goals
+case neg
+B : Array Pt
+pt : ℕ → Point
+C : Ctx B pt
+w a x y z : ℕ
+ex ey ez : ℤ
+pol : Bool
+cl : List ℤ
+hc :
+  (decide (w < 2) && decide (a < 31) && decide (x < 31) && decide (y < 31) && decide (z < 31) && a != x && a != y &&
+                        a != z &&
+                      x != y &&
+                    y != z &&
+                  x != z &&
+                isUnit ex &&
+              isUnit ey &&
+            isUnit ez &&
+          ex * ey * osgn B a x y == 1 &&
+        ey * ez * osgn B a y z == 1 &&
+      ex * ez * osgn B a x z == 1) =
+    true
+h✝ : ¬pol = true
+h :
+  (match chi B a x (31 + w), chi B a y (31 + w), chi B a z (31 + w) with
+    | Term.lit lx, Term.lit ly, Term.lit lz =>
+      if bounded (numVars B) [-(ex * lx), ey * ly, -(ez * lz)] = true then some [-(ex * lx), ey * ly, -(ez * lz)]
+      else none
+    | x, x_1, x_2 => none) =
+    some cl
+⊢ ∃ l ∈ cl, EncB.LitSat (realAssign pt) l
+AE33Geo/Sound.lean:125:15: warning: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵ ̵if_false] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:125:35: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Bool.false_eq_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:135:15: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵f̵_̵t̵r̵u̵e̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:201:25: warning: unused name: hb
+AE33Geo/Sound.lean:202:2: error: Dependent elimination failed: Failed to solve equation
+  some cl =
+    Decidable.rec (fun h => (fun x => none) h)
+      (fun h =>
+        (fun x =>
+            some
+              (sortLits
+                (List.filterMap
+                  (fun ts =>
+                    match ts.1 with
+                    | Term.lit l => some (if (ts.2 == 1) = true then -l else l)
+                    | Term.const s => none)
+                  (terms.zip sg))))
+          h)
+      (instDecidableEqBool
+        (bounded nv
+            (sortLits
+              (List.filterMap
+                (fun ts =>
+                  match ts.1 with
+                  | Term.lit l => some (if (ts.2 == 1) = true then -l else l)
+                  | Term.const s => none)
+                (terms.zip sg))) &&
+          !(sortLits
+                (List.filterMap
+                  (fun ts =>
+                    match ts.1 with
+                    | Term.lit l => some (if (ts.2 == 1) = true then -l else l)
+                    | Term.const s => none)
+                  (terms.zip sg))).isEmpty)
+        true)
+AE33Geo/Sound.lean:281:2: error: linarith failed to find a contradiction
+case pos.cons.cons.cons.cons.nil
+B : Array Pt
+pt : ℕ → Point
+C : Ctx B pt
+a b : ℕ
+cl : List ℤ
+ha : a < 31
+hb : b < 31
+hab : ¬a = b
+s2 : ℤ
+hlen : True
+hall : ∀ x ∈ cl, ¬EncB.LitSat (realAssign pt) x
+t2 : 0 < ↑s2 * orient (pt a) (pt b) (pt 32)
+u0 : s2 = 1 ∨ s2 = -1
+t0 : 0 < ↑s2 * orient (pt b) (pt 31) (pt 32)
+f1 : s2 = - -s2
+f2 : - -s2 = s2
+f3 : s2 = - -s2
+hd :
+  forbidClause (numVars B) [chi B b 31 (31 + 1), chi B a 31 (31 + 1), chi B a b (31 + 1), chi B a b 31]
+      [s2, -s2, s2, -s2] radPred =
+    some cl
+hunit : ∀ s ∈ [s2, -s2, s2, -s2], s = 1 ∨ s = -1
+hterm :
+  ∀ r < [chi B b 31 (31 + 1), chi B a 31 (31 + 1), chi B a b (31 + 1), chi B a b 31].length,
+    (∀ (c : ℤ),
+        [chi B b 31 (31 + 1), chi B a 31 (31 + 1), chi B a b (31 + 1), chi B a b 31].getD r (Term.const 0) =
+            Term.const c →
+          c = [s2, -s2, s2, -s2].getD r 0) ∧
+      ∀ (l : ℤ),
+        [chi B b 31 (31 + 1), chi B a 31 (31 + 1), chi B a b (31 + 1), chi B a b 31].getD r (Term.const 0) =
+            Term.lit l →
+          (if ([s2, -s2, s2, -s2].getD r 0 == 1) = true then -l else l) ∈ cl
+hid :
+  orient (pt b) (pt 31) (pt 32) - orient (pt a) (pt 31) (pt 32) + orient (pt a) (pt b) (pt 32) -
+      orient (pt a) (pt b) (pt 31) =
+    0
+t1 : 0 < -↑s2 * orient (pt a) (pt 31) (pt 32)
+t3 : 0 < -↑s2 * orient (pt a) (pt b) (pt 31)
+⊢ False
+failed
+AE33Geo/Sound.lean:289:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.nodup_cons, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵not_or, List.not_mem_nil, not_false_eq_true,
+  ̲  ̲ ̲ ̲List.nodup_nil, and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:408:101: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  i ≤ -1
+  h ≤ -1
+  g ≤ -1
+  f ≥ 33
+  0 ≤ e ≤ 30
+  0 ≤ d ≤ 30
+  d - e ≤ -1
+  0 ≤ c ≤ 30
+  0 ≤ b ≤ 30
+  b - c ≤ -1
+  b - e ≥ 1
+  0 ≤ a ≤ 1
+where
+ a := ↑w
+ b := ↑q0
+ c := ↑q1
+ d := ↑q4
+ e := ↑q5
+ f := ↑q2
+ g := m3
+ h := m2
+ i := m1
+AE33Geo/Sound.lean:408:46: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AE33Geo/Sound.lean:431:17: error: Application type mismatch: The argument
+  List.mem_of_mem_take hx
+has type
+  x ∈ Q
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  hQ (List.mem_of_mem_take hx)
+AE33Geo/Sound.lean:431:44: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 32
+  0 ≤ b ≤ 5
+  0 ≤ a ≤ 4
+where
+ a := ↑i
+ b := ↑j
+ c := ↑x
+AE33Geo/Sound.lean:433:17: error: Application type mismatch: The argument
+  List.mem_of_mem_drop hx
+has type
+  x ∈ Q
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  hQ (List.mem_of_mem_drop hx)
+AE33Geo/Sound.lean:433:44: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 32
+  0 ≤ b ≤ 5
+  0 ≤ a ≤ 4
+where
+ a := ↑i
+ b := ↑j
+ c := ↑x
+Command exited with non-zero status 1
+Sound lean wall=9.60 s maxrss=2158672 KB
+rc=1

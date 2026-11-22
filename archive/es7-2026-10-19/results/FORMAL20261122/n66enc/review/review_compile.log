@@ -1,0 +1,118 @@
+LEAN_PATH=/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean:/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean:/home/jay/research/data/bal186-20261119/zrow/leanz/olean:/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean:/home/jay/research/data/formalize-20261122/n66enc/build/olean
+2cea02a566e69b2f4eaac4db2616b3d2652e2206b81c3192ecb02177f7c70d1e  /home/jay/research/data/formalize-20261122/n66enc/build/olean/N66Geo/End.olean
+1be391edeebf573e980a3c02e382febd720d3493cd48e3ee58e66d7aea4aa9c9  /home/jay/research/data/formalize-20261122/n66enc/build/olean/N66Enc/Full.olean
+a994090cd0ab58be6d7c3ec9bcc11dc4639a8a591fe6a1dba70c659277bbff5f  /home/jay/research/data/formalize-20261122/n66enc/build/olean/N66Enc/Rows.olean
+ef249ba167372ac31f995027299efa1eeddac251ff73e4ef093a990ab02c353c  /home/jay/research/data/bal186-20261119/zrow/leanz/olean/LemmaZ.olean
+'N66Geo.n66_bound_55_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Enc.fullUnsat_of_text' depends on axioms: [propext, Quot.sound]
+'N66Enc.printClause_mem' depends on axioms: [propext, Quot.sound]
+'N66Enc.printClauses_mem' depends on axioms: [propext, Quot.sound]
+'N66Enc.base_unsat_of_cubes' depends on axioms: [propext, Quot.sound]
+'N66Geo.no_model_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.capCup55_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.mirror_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.lexChoice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.holes_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.leaves132_length' depends on axioms: [propext]
+'N66Geo.n66Bound_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]
+N66Geo.n66_bound_55_of_cubes : N66Enc.CubesUnsat132 → N66Geo.RowsValid N66Enc.R0 → OmissionZRow.N66Bound 55
+def OmissionZRow.N66Bound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : Configuration n),
+    ¬c.HasCap 6 → ¬c.HasCup 6 → ¬HasConvexNGon 8 (Finset.image c.point Finset.univ) → n ≤ B
+def N66Enc.CubesUnsat132 : Prop :=
+∀ c ∈ N66Enc.leaves132, ¬EncB.DimacsSatisfiable (N66Enc.fullCnf N66Enc.R0 c)
+def N66Enc.fullCnf : List (List (Fin 70)) → N66Enc.Cube → List (List ℤ) :=
+fun R c => List.map N66Enc.toDimacs (N66Enc.fullS R c)
+def N66Enc.fullS : List (List (Fin 70)) → N66Enc.Cube → List (List N66Enc.SLit) :=
+fun R c =>
+  N66Enc.eagerStream () ++ N66Enc.quadStream ++ N66Enc.fixedUnits ++ List.map N66Enc.cubeUnit c ++
+        List.map N66Enc.rowClause R ++
+      N66Enc.cardClauses ++
+    N66Enc.sbClauses
+def N66Enc.leaves132 : List N66Enc.Cube :=
+N66Enc.tree14.leaves
+@[irreducible] def N66Enc.R0 : List (List (Fin 70)) :=
+N66Enc.parseRows N66Enc.rowsText
+def N66Geo.RowsValid : List (List (Fin 70)) → Prop :=
+fun R => ∀ T ∈ R, N66Geo.RowValid T
+def N66Geo.RowValid : List (Fin 70) → Prop :=
+fun T => ∀ (n : ℕ) (c : Configuration n), N66Geo.InClass c → ∃ s ∈ T, ¬N66Geo.n66Occ c.cup n s
+def N66Geo.InClass : {n : ℕ} → Configuration n → Prop :=
+fun {n} c => ¬c.HasCap 6 ∧ ¬c.HasCup 6 ∧ ¬HasConvexNGon 8 (Finset.image c.point Finset.univ)
+def N66Geo.n66Occ : (ℕ → ℕ → ℕ → Bool) → ℕ → Fin 70 → Prop :=
+fun cup n s => ∃ v < n, N66Geo.idxOf cup v = ↑s
+def N66Geo.idxOf : (ℕ → ℕ → ℕ → Bool) → ℕ → ℕ :=
+fun cup v => List.idxOf (N66Geo.profOf cup v) N66Enc.stateList
+def N66Geo.profOf : (ℕ → ℕ → ℕ → Bool) → ℕ → N66Enc.Prof :=
+fun cup v => (column cup v 0, column cup v 1, column cup v 2, column cup v 3)
+def ErdosSzekeres.Omission.ActualRanks.column : (ℕ → ℕ → ℕ → Bool) → ℕ → ℕ → ℕ :=
+fun cup v i => (Finset.range v).sup fun u => if i + 1 ≤ (labels cup u v).1 then (labels cup u v).2 else 0
+def ErdosSzekeres.Omission.ActualRanks.labels : (ℕ → ℕ → ℕ → Bool) → ℕ → ℕ → StateInterface.Label :=
+fun cup u v => (rank cup false u v - 1, rank cup true u v - 1)
+def ErdosSzekeres.Omission.ActualRanks.rank : (ℕ → ℕ → ℕ → Bool) → Bool → ℕ → ℕ → ℕ :=
+fun cup color u v => if h : u < v then (lengths cup color u v).max' ⋯ else 0
+inductive ErdosSzekeres.Omission.ActualRanks.EndingPath : (ℕ → ℕ → ℕ → Bool) → Bool → ℕ → ℕ → ℕ → Prop
+number of parameters: 2
+constructors:
+ErdosSzekeres.Omission.ActualRanks.EndingPath.pair : ∀ {cup : ℕ → ℕ → ℕ → Bool} {color : Bool} {u v : ℕ},
+  u < v → EndingPath cup color u v 2
+ErdosSzekeres.Omission.ActualRanks.EndingPath.step : ∀ {cup : ℕ → ℕ → ℕ → Bool} {color : Bool} {t u v l : ℕ},
+  EndingPath cup color t u l → u < v → cup t u v = color → EndingPath cup color u v (l + 1)
+structure ErdosSzekeres.Omission.Configuration (n : ℕ) : Type
+number of parameters: 1
+fields:
+  ErdosSzekeres.Omission.Configuration.point : Fin n → Point
+  ErdosSzekeres.Omission.Configuration.xOrder : StrictMono fun i => self.point i 0
+  ErdosSzekeres.Omission.Configuration.generalPosition : ∀ (i j k : Fin n),
+      i < j → j < k → orient (self.point i) (self.point j) (self.point k) ≠ 0
+constructor:
+  ErdosSzekeres.Omission.Configuration.mk {n : ℕ} (point : Fin n → Point) (xOrder : StrictMono fun i => point i 0)
+    (generalPosition : ∀ (i j k : Fin n), i < j → j < k → orient (point i) (point j) (point k) ≠ 0) : Configuration n
+def ErdosSzekeres.Omission.Configuration.cup : {n : ℕ} → Configuration n → ℕ → ℕ → ℕ → Bool :=
+fun {n} c i j k =>
+  if h : i < n ∧ j < n ∧ k < n then decide (0 < orient (c.point ⟨i, ⋯⟩) (c.point ⟨j, ⋯⟩) (c.point ⟨k, ⋯⟩)) else false
+def ErdosSzekeres.Omission.Configuration.HasCap : {n : ℕ} → Configuration n → ℕ → Prop :=
+fun {n} c k =>
+  ∃ f, StrictMono f ∧ ∀ (i j l : Fin k), i < j → j < l → orient (c.point (f i)) (c.point (f j)) (c.point (f l)) < 0
+def ErdosSzekeres.Omission.Configuration.HasCup : {n : ℕ} → Configuration n → ℕ → Prop :=
+fun {n} c k =>
+  ∃ f, StrictMono f ∧ ∀ (i j l : Fin k), i < j → j < l → 0 < orient (c.point (f i)) (c.point (f j)) (c.point (f l))
+def ErdosSzekeres.HasConvexNGon : ℕ → Finset Point → Prop :=
+fun n s => ∃ t ⊆ s, t.card = n ∧ ConvexPosition t
+def ErdosSzekeres.ConvexPosition : Finset Point → Prop :=
+fun s => ConvexIndependent ℝ fun p => ↑p
+def ErdosSzekeres.orient.{u_1} : {R : Type u_1} → [CommRing R] → (Fin 2 → R) → (Fin 2 → R) → (Fin 2 → R) → R :=
+fun {R} [CommRing R] a b c => (b 0 - a 0) * (c 1 - a 1) - (b 1 - a 1) * (c 0 - a 0)
+def EncB.DimacsSatisfiable : List (List ℤ) → Prop :=
+fun cls => ∃ ν, EncB.DimacsSat cls ν
+def EncB.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
+fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = true ∨ l < 0 ∧ ν l.natAbs = false
+def EncB.LitSat : (ℕ → Bool) → ℤ → Prop :=
+fun ν z => 0 < z ∧ ν z.natAbs = true ∨ z < 0 ∧ ν z.natAbs = false
+'review_unfolded' depends on axioms: [propext, Classical.choice, Quot.sound]
+leaves132 132 R0 11884 rowsText bytes 507715 stateList 70
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 ReviewN66.lean"
+	User time (seconds): 3.48
+	System time (seconds): 0.33
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3216216
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 153
+	Minor (reclaiming a frame) page faults: 67636
+	Voluntary context switches: 882
+	Involuntary context switches: 55
+	Swaps: 0
+	File system inputs: 42240
+	File system outputs: 2016
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+lean_rc=0

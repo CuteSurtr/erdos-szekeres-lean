@@ -1,0 +1,110 @@
+{
+ "modules": [
+  "E304Z.C260801",
+  "E304Z.C311801",
+  "E304Z.C325201",
+  "E304Z.C634501"
+ ],
+ "source_sha256": "654fdc50913d7cb0e08441ba749848285e6ebe80bd1389a1003a93ce2b53bf12",
+ "unit": {
+  "job": "reprint",
+  "unit": "esr-ag-fv4a-reprint",
+  "utc_end": "2026-11-22T08:27:38Z",
+  "seconds": 3.7,
+  "gate": {
+   "yield": false,
+   "tctl": 84.8,
+   "cpu_free": 1,
+   "ag_mb": 2429,
+   "esr_mb": 5404
+  },
+  "systemd_run_rc": 0,
+  "systemd_run_stderr": "",
+  "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/Reprint.lean",
+  "src_sha256": "654fdc50913d7cb0e08441ba749848285e6ebe80bd1389a1003a93ce2b53bf12",
+  "lean_rc": 0,
+  "exit_status": 0,
+  "signal": false,
+  "wall_s": 3.67,
+  "user_s": 3.08,
+  "max_rss_mb": 3080,
+  "major_faults": 239,
+  "cg_peak_mb": 305,
+  "anon_peak_mb": 219,
+  "killed_80": false,
+  "events": {
+   "low": "0",
+   "high": "0",
+   "max": "0",
+   "oom": "0",
+   "oom_kill": "0",
+   "oom_group_kill": "0",
+   "sock_throttled": "0"
+  },
+  "errors": [],
+  "sorry": false,
+  "axioms": [
+   [
+    "E304Z.C260801.ex0",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ],
+   [
+    "E304Z.C311801.ex0",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ],
+   [
+    "E304Z.C325201.ex0",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ],
+   [
+    "E304Z.C634501.ex0",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ]
+  ],
+  "olean": null,
+  "olean_sha256": null
+ },
+ "axioms": {
+  "E304Z.C260801.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.C311801.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.C325201.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.C634501.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ]
+ },
+ "problems": [],
+ "findings": [],
+ "ok": true,
+ "utc_end": "2026-11-22T08:27:38Z",
+ "seconds": 424.7
+}

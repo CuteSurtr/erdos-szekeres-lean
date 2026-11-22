@@ -1,0 +1,25 @@
+{"exe_sha_start": "b0b270cb5840bb92151900b77eb76ff8be1b71efd3dee93dbfe198ed6a531c5d", "list_len": 4404, "list_eq_my_reading": true, "base_sha": "c3ae52244554013383f1447b981a3a8f10132a50ec45b0a4f74f3e7248807074", "base_ok": true, "files_written": 4404, "file_names_ok": true, "pieces_ok": 4404, "fails": [], "independent_combos": {"wave1": 1623, "recheck+rebuild": 2781}, "equal_to_worker_tsv": true, "distinct_printed_hashes": 4404, "ctl_flipped_hash_fails": true, "ctl_neighbour_record_fails": true, "ctl_unlisted_cube036": [false, "verdict,cakeline,noindep", ""], "ctl_unlisted_cube036_fails": true, "exe_sha_end": "b0b270cb5840bb92151900b77eb76ff8be1b71efd3dee93dbfe198ed6a531c5d", "ALL_OK": true}
+	Command being timed: "/usr/bin/python3 -I -B /home/jay/research/data/formalize-20261122/v182-lean/review/tools/hashcheck.py /home/jay/research/data/formalize-20261122/v182-lean/review/logs /home/jay/research/data/formalize-20261122/v182-lean/review/tmp_hb"
+	User time (seconds): 28.89
+	System time (seconds): 1.04
+	Percent of CPU this job got: 90%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:33.02
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 51692
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18470
+	Voluntary context switches: 17685
+	Involuntary context switches: 516
+	Swaps: 0
+	File system inputs: 2866616
+	File system outputs: 2819544
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+HASHCHECK_RC 0

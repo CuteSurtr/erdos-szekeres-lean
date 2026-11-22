@@ -1,0 +1,81 @@
+Alloc lean wall=0.25 s maxrss=380988 KB
+Cover lean wall=0.25 s maxrss=384340 KB
+Rows lean wall=0.19 s maxrss=377776 KB
+Full lean wall=0.14 s maxrss=371716 KB
+Print lean wall=0.26 s maxrss=387872 KB
+Main lean wall=0.36 s maxrss=395916 KB
+N66Enc/DecodeA.lean:97:44: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Atom.cnt.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Enc/DecodeA.lean:104:44: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Atom.sbe.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DecodeA lean wall=5.13 s maxrss=469388 KB
+'N66Enc.ofCode_code' depends on axioms: [propext, Quot.sound]
+'N66Enc.decodeNum_num' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Enc.dimacsSat_of_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+DecodeB lean wall=0.35 s maxrss=390988 KB
+N66Enc/Bridge.lean:43:12: error(lean.unknownIdentifier): Unknown constant `List.mem_finRange`
+N66Enc/Bridge.lean:43:36: error(lean.unknownIdentifier): Unknown constant `List.mem_finRange`
+N66Enc/Bridge.lean:43:60: error(lean.unknownIdentifier): Unknown constant `List.mem_finRange`
+N66Enc/Bridge.lean:43:84: error(lean.unknownIdentifier): Unknown constant `List.mem_finRange`
+N66Enc/Bridge.lean:67:4: error: Tactic `split` failed: Could not split an `if` or `match` expression in the type
+  okQuad ⟨a, ha⟩ ⟨b, hb⟩ ⟨c', hc⟩ ⟨d', hd⟩ = true ∧
+    ∃ a_1, (quadClauses ⟨a, ha⟩ ⟨b, hb⟩ ⟨c', hc⟩ ⟨d', hd⟩)[j]? = some a_1 ∧ toDimacs a_1 = cl
+of `h`
+
+Hint: If you meant to destruct this conjunction, use the `cases` tactic instead
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+case q.isTrue.isTrue.isTrue.isTrue
+c : Cube
+cl : List Int
+a b c' d' j : Nat
+ha : a < 70
+hb : b < 70
+hc : c' < 70
+hd : d' < 70
+h :
+  okQuad ⟨a, ha⟩ ⟨b, hb⟩ ⟨c', hc⟩ ⟨d', hd⟩ = true ∧
+    ∃ a_1, (quadClauses ⟨a, ha⟩ ⟨b, hb⟩ ⟨c', hc⟩ ⟨d', hd⟩)[j]? = some a_1 ∧ toDimacs a_1 = cl
+⊢ cl ∈ List.map toDimacs (fullS R0 c)
+'N66Enc.printClause_mem' depends on axioms: [propext, sorryAx, Quot.sound]
+'N66Enc.fullUnsat_of_text' depends on axioms: [propext, sorryAx, Quot.sound]
+'N66Enc.no_base_model' depends on axioms: [propext, Quot.sound]
+'N66Enc.base_unsat_of_cubes' depends on axioms: [propext, Quot.sound]
+Command exited with non-zero status 1
+Bridge lean wall=0.64 s maxrss=391752 KB
+Command exited with non-zero status 1
+	Command being timed: "/home/jay/research/data/formalize-20261122/n66enc/tools/build.sh Alloc Cover Rows Full Print Main DecodeA DecodeB Bridge"
+	User time (seconds): 7.10
+	System time (seconds): 0.47
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.61
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 469388
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 7
+	Minor (reclaiming a frame) page faults: 79466
+	Voluntary context switches: 4507
+	Involuntary context switches: 92
+	Swaps: 0
+	File system inputs: 840
+	File system outputs: 10112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+rc=1

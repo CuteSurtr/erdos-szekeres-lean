@@ -1,0 +1,48 @@
+{
+ "roots14": [
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean",
+  "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean",
+  "/home/jay/research/data/bal186-20261119/zrow/leanz/olean",
+  "/home/jay/research/data/fv304-20261120/olean"
+ ],
+ "files_per_root": {
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean": 0,
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean": 169,
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean": 13,
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean": 130,
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean": 12,
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean": 2,
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean": 4,
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean": 9,
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean": 7002,
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean": 210,
+  "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean": 5653,
+  "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean": 196,
+  "/home/jay/research/data/bal186-20261119/zrow/leanz/olean": 1,
+  "/home/jay/research/data/fv304-20261120/olean": 8244,
+  "/home/jay/research/data/formalize-20261122/fv304-audit/olean": 6,
+  "/home/jay/research/data/formalize-20261122/res118/olean": 13
+ },
+ "dups_fv304_path": {},
+ "dups_with_audit_root": {},
+ "negative_control_with_res118_root": [
+  "BalancedBudgetsZ.olean",
+  "CompactChecker/Fast.olean",
+  "CompactChecker/Fast2.olean",
+  "CompactChecker/Packed.olean",
+  "CompactChecker/Path.olean",
+  "CompactChecker/Split.olean",
+  "CompactChecker/WordPack.olean"
+ ],
+ "ok": true
+}

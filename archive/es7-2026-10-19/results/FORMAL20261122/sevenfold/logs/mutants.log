@@ -1,0 +1,9 @@
+# mutants.sh 2026-11-22T06:33:47+09:00
+MUTANT ruleA_at_m: KILLED at EncBO.RulesO: EncBO/RulesO.lean:124:82: error: Application type mismatch: The argument
+MUTANT hbit_swapped: KILLED at EncBO.ModelO: EncBO/ModelO.lean:207:83: error: unsolved goals
+MUTANT no_hb_zero: KILLED at EncBO.RulesO: EncBO/RulesO.lean:116:19: error: Invalid field `hb_zero`: The environment does not contain `EncB.ModelO.hb_zero`
+MUTANT ruleB_no_outer: KILLED at EncBO.RulesO: EncBO/RulesO.lean:138:17: error: Function expected at
+MUTANT nest_shifted: KILLED at EncBO.SoundO: EncBO/SoundO.lean:66:62: error: Application type mismatch: The argument
+MUTANT control_docstring_only_expect_SURVIVED: SURVIVED (all of EncBO.ModelO EncBO.SoundO EncBO.RulesO EncBO.AngO EncBO.SatisfiableO EncBO.Compose7 compiled)
+MUTANT hbP_wrong_threshold: KILLED at Geo7.ModelOfLab: Geo7/ModelOfLab.lean:67:4: error: linarith failed to find a contradiction
+MUTANT perturb_all_layers_same: KILLED at Geo7.Perturb: Geo7/Perturb.lean:49:43: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern

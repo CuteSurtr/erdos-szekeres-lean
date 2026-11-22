@@ -1,0 +1,81 @@
+T4.lean:18:31: error: unexpected token 'set_option'; expected '#guard_msgs', 'abbrev', 'add_decl_doc', 'axiom', 'binder_predicate', 'builtin_dsimproc', 'builtin_dsimproc_decl', 'builtin_grind_propagator', 'builtin_initialize', 'builtin_simproc', 'builtin_simproc_decl', 'class', 'declare_simp_like_tactic', 'declare_syntax_cat', 'def', 'dsimproc', 'dsimproc_decl', 'elab', 'elab_rules', 'example', 'grind_propagator', 'inductive', 'infix', 'infixl', 'infixr', 'initialize', 'instance', 'macro', 'macro_rules', 'notation', 'opaque', 'postfix', 'prefix', 'recommended_spelling', 'register_error_explanation', 'register_tactic_tag', 'simproc', 'simproc_decl', 'structure', 'syntax', 'tactic_extension', 'theorem' or 'unif_hint'
+T4.lean:34:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.capGe.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:41:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.cupGe.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:48:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.orient.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:55:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.convex.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:69:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.chC.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:76:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.chU.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:83:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.ce.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:90:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.ue.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:97:15: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.cnt.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:97:69: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.add_sub_cancel_left, Atom.cnt.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T4.lean:104:69: warning: This simp argument is unused:
+  d70_val
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.add_sub_cancel_left, Atom.sbe.injEq, Fin.ext_iff,̵ ̵d̵7̵0̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Command exited with non-zero status 1
+T4.lean wall=4.85 s maxrss=438160 KB
+rc=1

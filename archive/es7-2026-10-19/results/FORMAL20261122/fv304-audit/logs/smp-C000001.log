@@ -1,0 +1,57 @@
+type checking took 389ms
+type checking took 653ms
+type checking took 788ms
+type checking took 678ms
+type checking took 1.03s
+type checking took 420ms
+type checking took 668ms
+type checking took 656ms
+type checking took 948ms
+'E304Z.C000001.ex0' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 159ms
+cumulative profiling times:
+	.olean serialization 11.7ms
+	attribute application 0.404ms
+	compilation (IR) 1.8ms
+	compilation (LCNF base) 2.31ms
+	compilation (LCNF mono) 1.02ms
+	elaboration 683ms
+	fix level params 0.787ms
+	instantiate metavars 1.68ms
+	interpretation 0.244ms
+	let-to-have transformation 1.38ms
+	linting 42.6ms
+	parsing 81.1ms
+	process pre-definitions 15.6ms
+	share common exprs 5.86ms
+	tactic execution 11.7ms
+	type checking 6.24s
+	typeclass inference 70.1ms
+	Command being timed: "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R /home/jay/research/data/formalize-20261122/fv304-audit/src -o /home/jay/research/data/formalize-20261122/fv304-audit/recompile/E304Z/C000001.olean.tmp /home/jay/research/data/formalize-20261122/fv304-audit/src/E304Z/C000001.lean"
+	User time (seconds): 8.01
+	System time (seconds): 0.37
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.57
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3323208
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 81728
+	Voluntary context switches: 651
+	Involuntary context switches: 570
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1904
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+lean_rc=0
+cgroup memory.peak: 549654528
+cgroup memory.swap.peak: 0
+cgroup anon+shmem peak (sampled every 0.2 s): 463642624
+cgroup memory.events: low 0 high 0 max 0 oom 0 oom_kill 0 oom_group_kill 0 sock_throttled 0 

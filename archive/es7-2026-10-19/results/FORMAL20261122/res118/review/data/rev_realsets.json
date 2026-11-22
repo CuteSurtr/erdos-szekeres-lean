@@ -1,0 +1,43 @@
+{
+ "full_parts": 42,
+ "not_residual": 0,
+ "configs": 1302,
+ "base_viol": 0,
+ "extra_viol": 0,
+ "h0_hole": 0,
+ "configs_with_tight_extra_row": 204,
+ "max_n": 57,
+ "min_holes": 97,
+ "files": {
+  "witness8.txt": {
+   "points": 64,
+   "sha256": "59552ebc03eed84c76241ee3d280c8879337ca990c411a6a1dfde5d40c7cf7c8"
+  },
+  "ot0000.txt": {
+   "points": 64,
+   "sha256": "59552ebc03eed84c76241ee3d280c8879337ca990c411a6a1dfde5d40c7cf7c8"
+  },
+  "ot0001m.txt": {
+   "points": 64,
+   "sha256": "0b11692a1f6f92c32980d3b5a4e7bd48abebb2b922a7aeb2846a06ce36227f43"
+  },
+  "ot0002.txt": {
+   "points": 64,
+   "sha256": "9c00090c3ab7f82f51426c8865208337c0b07d702c7bf63e1ba7167807a209bf"
+  },
+  "ot0004m.txt": {
+   "points": 64,
+   "sha256": "fc8ddec4d66df49c3385ee9ccc679139203e4e022b7e976af1eb8fe545a15c72"
+  },
+  "ot0005.txt": {
+   "points": 64,
+   "sha256": "50c10d70301cd5032c800b10325b70b9bb07442920535e21cd2ff143ee57f074"
+  },
+  "ot0006.txt": {
+   "points": 64,
+   "sha256": "fe21eb8f3724d334efe6a5f87c45d351ff46793de9e870e157efd77be4aabfed"
+  }
+ },
+ "extra_rows_tested": 2025,
+ "seconds": 42.4
+}

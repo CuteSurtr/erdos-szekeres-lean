@@ -1,0 +1,9 @@
+T1.lean:20:13: warning: This simp argument is unused:
+  Nat.add_sub_cancel_left
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵_̵l̵e̵f̵t̵,̵ ̵Atom.convex.injEq, Fin.ext_iff, d70_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+T1.lean wall=1.23 s maxrss=394140 KB
+rc=0

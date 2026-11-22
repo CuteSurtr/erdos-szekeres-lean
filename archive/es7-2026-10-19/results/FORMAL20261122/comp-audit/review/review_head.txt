@@ -1,0 +1,274 @@
+'OmissionBalancedZ.composition_304_z' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZ.composition_305_z' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZF.composition_304_zf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZF.composition_303_zf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsF.composition_303_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsF.composition_302_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsF.composition_301_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsF.composition_300_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsN.composition_302_n54' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsN.composition_301_n53' depends on axioms: [propext, Classical.choice, Quot.sound]
+'composition_304' depends on axioms: [propext, Classical.choice, Quot.sound]
+'composition_303' depends on axioms: [propext, Classical.choice, Quot.sound]
+'composition_305' depends on axioms: [propext, Classical.choice, Quot.sound]
+'composition_306' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionZRow.z_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionZStarRow.zs_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsN.z_row_of' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsN.zs_row_of' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZ.balanced_bound_of_hole_budget_z' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsF.balanced_bound_of_hole_budget_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsN.balanced_bound_of_hole_budget_zzsn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionZRow.Z_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionZStarRow.Zs_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZ.feasible_holes_z' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZF.feasible_holes_zf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZF.balanced_bound_of_hole_budget_zf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsN.zzsn_55_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'avoiding_302' depends on axioms: [propext, Classical.choice, Quot.sound]
+'avoiding_303' depends on axioms: [propext, Classical.choice, Quot.sound]
+'avoiding_304' depends on axioms: [propext, Classical.choice, Quot.sound]
+'avoiding_305' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZF.zero_mem_occupied' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZF.one_mem_occupied' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsF.feasible_holes_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsN.feasible_holes_zzsn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionZRow.Z_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionZStarRow.Zs_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalanced.all_geometric_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BalancedCoverCutsV2.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.Partition.forces_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.Partition.avoiding_card_le_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OmissionBalancedZ.composition_304_z : OmissionBalancedZ.ExcludesHoleBudgetZ 67 →
+  OmissionZRow.N66Bound 55 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 304 8
+OmissionBalancedZ.composition_305_z : OmissionBalancedZ.ExcludesHoleBudgetZ 66 →
+  OmissionZRow.N66Bound 55 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 305 8
+OmissionBalancedZF.composition_304_zf : OmissionBalancedZF.ExcludesHoleBudgetZF 67 →
+  OmissionZRow.N66Bound 55 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 304 8
+OmissionBalancedZF.composition_303_zf : OmissionBalancedZF.ExcludesHoleBudgetZF 68 →
+  OmissionZRow.N66Bound 55 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 303 8
+OmissionBalancedZZsF.composition_303_zzsf : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 68 →
+  OmissionZRow.N66Bound 55 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 303 8
+OmissionBalancedZZsF.composition_302_zzsf : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 69 →
+  OmissionZRow.N66Bound 55 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 302 8
+OmissionBalancedZZsF.composition_301_zzsf : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 70 →
+  OmissionZRow.N66Bound 55 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 301 8
+OmissionBalancedZZsF.composition_300_zzsf : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 71 →
+  OmissionZRow.N66Bound 55 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 300 8
+OmissionBalancedZZsN.composition_302_n54 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69 →
+  OmissionZRow.N66Bound 54 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 302 8
+OmissionBalancedZZsN.composition_301_n53 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 17 70 →
+  OmissionZRow.N66Bound 53 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 301 8
+composition_304 : ErdosSzekeres.Omission.Partition.BalancedBound 184 →
+  ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 304 8
+composition_303 : ErdosSzekeres.Omission.Partition.BalancedBound 183 →
+  ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 303 8
+composition_305 : ErdosSzekeres.Omission.Partition.BalancedBound 185 →
+  ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 305 8
+composition_306 : ErdosSzekeres.Omission.Partition.BalancedBound 186 →
+  ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 306 8
+@OmissionZRow.z_row : ∀ {n : ℕ},
+  OmissionZRow.N66Bound 55 →
+    ∀ (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7),
+      ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) →
+        15 ≤ (OmissionZRow.Z \ c.occupied noCap noCup).card
+@OmissionZStarRow.zs_row : ∀ {n : ℕ},
+  OmissionZRow.N66Bound 55 →
+    ∀ (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7),
+      ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) →
+        15 ≤ (OmissionZStarRow.Zs \ c.occupied noCap noCup).card
+@OmissionBalancedZZsN.z_row_of : ∀ {B n : ℕ},
+  OmissionZRow.N66Bound B →
+    ∀ (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7),
+      ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) →
+        70 - B ≤ (OmissionZRow.Z \ c.occupied noCap noCup).card
+@OmissionBalancedZZsN.zs_row_of : ∀ {B n : ℕ},
+  OmissionZRow.N66Bound B →
+    ∀ (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7),
+      ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) →
+        70 - B ≤ (OmissionZStarRow.Zs \ c.occupied noCap noCup).card
+@OmissionBalancedZ.balanced_bound_of_hole_budget_z : ∀ {budget : ℕ},
+  OmissionZRow.N66Bound 55 →
+    OmissionBalancedZ.ExcludesHoleBudgetZ budget → ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)
+@OmissionBalancedZZsF.balanced_bound_of_hole_budget_zzsf : ∀ {budget : ℕ},
+  budget ≤ 249 →
+    OmissionZRow.N66Bound 55 →
+      OmissionBalancedZZsF.ExcludesHoleBudgetZZsF budget → ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)
+@OmissionBalancedZZsN.balanced_bound_of_hole_budget_zzsn : ∀ {B budget : ℕ},
+  budget ≤ 249 →
+    OmissionZRow.N66Bound B →
+      OmissionBalancedZZsN.ExcludesHoleBudgetZZsN (70 - B) budget →
+        ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)
+OmissionZRow.Z_eq : ∀ (i : Fin 252), i ∈ OmissionZRow.Z ↔ ↑i ∈ OmissionZRow.zIndices
+OmissionZStarRow.Zs_eq : ∀ (i : Fin 252), i ∈ OmissionZStarRow.Zs ↔ ↑i ∈ OmissionZStarRow.zsIndices
+OmissionBalancedZ.feasible_holes_z : OmissionZRow.N66Bound 55 →
+  ∀ {n : ℕ} (c : ErdosSzekeres.Omission.Configuration n),
+    ¬c.HasCap 7 →
+      ¬c.HasCup 7 →
+        ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) →
+          ∃ holes,
+            (∀ (i : Fin 252), holes i ≤ 1) ∧
+              (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧
+                (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧
+                  15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ ∑ i, holes i + n = 252
+OmissionBalancedZF.feasible_holes_zf : OmissionZRow.N66Bound 55 →
+  ∀ {n : ℕ} (c : ErdosSzekeres.Omission.Configuration n),
+    ¬c.HasCap 7 →
+      ¬c.HasCup 7 →
+        ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) →
+          2 ≤ n →
+            ∃ holes,
+              holes 0 = 0 ∧
+                holes 1 = 0 ∧
+                  (∀ (i : Fin 252), holes i ≤ 1) ∧
+                    (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧
+                      (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧
+                        15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ ∑ i, holes i + n = 252
+@OmissionBalancedZF.balanced_bound_of_hole_budget_zf : ∀ {budget : ℕ},
+  budget ≤ 249 →
+    OmissionZRow.N66Bound 55 →
+      OmissionBalancedZF.ExcludesHoleBudgetZF budget → ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)
+OmissionBalancedZZsN.zzsn_55_iff : ∀ (b : ℕ),
+  OmissionBalancedZZsN.ExcludesHoleBudgetZZsN (70 - 55) b ↔ OmissionBalancedZZsF.ExcludesHoleBudgetZZsF b
+avoiding_302 : ErdosSzekeres.Omission.Partition.BalancedBound 183 →
+  ErdosSzekeres.Omission.Partition.ResidualBound 118 →
+    ∀ (S : Finset ErdosSzekeres.Point),
+      ErdosSzekeres.GeneralPosition S → ¬ErdosSzekeres.HasConvexNGon 8 S → S.card ≤ 302
+avoiding_303 : ErdosSzekeres.Omission.Partition.BalancedBound 184 →
+  ErdosSzekeres.Omission.Partition.ResidualBound 118 →
+    ∀ (S : Finset ErdosSzekeres.Point),
+      ErdosSzekeres.GeneralPosition S → ¬ErdosSzekeres.HasConvexNGon 8 S → S.card ≤ 303
+avoiding_304 : ErdosSzekeres.Omission.Partition.BalancedBound 185 →
+  ErdosSzekeres.Omission.Partition.ResidualBound 118 →
+    ∀ (S : Finset ErdosSzekeres.Point),
+      ErdosSzekeres.GeneralPosition S → ¬ErdosSzekeres.HasConvexNGon 8 S → S.card ≤ 304
+avoiding_305 : ErdosSzekeres.Omission.Partition.BalancedBound 186 →
+  ErdosSzekeres.Omission.Partition.ResidualBound 118 →
+    ∀ (S : Finset ErdosSzekeres.Point),
+      ErdosSzekeres.GeneralPosition S → ¬ErdosSzekeres.HasConvexNGon 8 S → S.card ≤ 305
+@[reducible] def ErdosSzekeres.Point : Type :=
+Fin 2 → ℝ
+def ErdosSzekeres.GeneralPosition : Finset ErdosSzekeres.Point → Prop :=
+fun s => ∀ a ∈ s, ∀ b ∈ s, ∀ c ∈ s, a ≠ b → a ≠ c → b ≠ c → ¬Collinear ℝ {a, b, c}
+def ErdosSzekeres.ConvexPosition : Finset ErdosSzekeres.Point → Prop :=
+fun s => ConvexIndependent ℝ fun p => ↑p
+def ErdosSzekeres.HasConvexNGon : ℕ → Finset ErdosSzekeres.Point → Prop :=
+fun n s => ∃ t ⊆ s, t.card = n ∧ ErdosSzekeres.ConvexPosition t
+def ErdosSzekeres.ForcesConvexNGon : ℕ → ℕ → Prop :=
+fun N n =>
+  ∀ (s : Finset ErdosSzekeres.Point), ErdosSzekeres.GeneralPosition s → N ≤ s.card → ErdosSzekeres.HasConvexNGon n s
+def ErdosSzekeres.orient.{u_1} : {R : Type u_1} → [CommRing R] → (Fin 2 → R) → (Fin 2 → R) → (Fin 2 → R) → R :=
+fun {R} [CommRing R] a b c => (b 0 - a 0) * (c 1 - a 1) - (b 1 - a 1) * (c 0 - a 0)
+structure ErdosSzekeres.Omission.Configuration (n : ℕ) : Type
+number of parameters: 1
+fields:
+  ErdosSzekeres.Omission.Configuration.point : Fin n → ErdosSzekeres.Point
+  ErdosSzekeres.Omission.Configuration.xOrder : StrictMono fun i => self.point i 0
+  ErdosSzekeres.Omission.Configuration.generalPosition : ∀ (i j k : Fin n),
+      i < j → j < k → ErdosSzekeres.orient (self.point i) (self.point j) (self.point k) ≠ 0
+constructor:
+  ErdosSzekeres.Omission.Configuration.mk {n : ℕ} (point : Fin n → ErdosSzekeres.Point)
+    (xOrder : StrictMono fun i => point i 0)
+    (generalPosition : ∀ (i j k : Fin n), i < j → j < k → ErdosSzekeres.orient (point i) (point j) (point k) ≠ 0) :
+    ErdosSzekeres.Omission.Configuration n
+def ErdosSzekeres.Omission.Configuration.HasCap : {n : ℕ} → ErdosSzekeres.Omission.Configuration n → ℕ → Prop :=
+fun {n} c k =>
+  ∃ f,
+    StrictMono f ∧
+      ∀ (i j l : Fin k), i < j → j < l → ErdosSzekeres.orient (c.point (f i)) (c.point (f j)) (c.point (f l)) < 0
+def ErdosSzekeres.Omission.Configuration.HasCup : {n : ℕ} → ErdosSzekeres.Omission.Configuration n → ℕ → Prop :=
+fun {n} c k =>
+  ∃ f,
+    StrictMono f ∧
+      ∀ (i j l : Fin k), i < j → j < l → 0 < ErdosSzekeres.orient (c.point (f i)) (c.point (f j)) (c.point (f l))
+def ErdosSzekeres.Omission.Configuration.cup : {n : ℕ} → ErdosSzekeres.Omission.Configuration n → ℕ → ℕ → ℕ → Bool :=
+fun {n} c i j k =>
+  if h : i < n ∧ j < n ∧ k < n then decide (0 < ErdosSzekeres.orient (c.point ⟨i, ⋯⟩) (c.point ⟨j, ⋯⟩) (c.point ⟨k, ⋯⟩))
+  else false
+def ErdosSzekeres.Omission.Configuration.occupied : {n : ℕ} →
+  (c : ErdosSzekeres.Omission.Configuration n) → ¬c.HasCap 7 → ¬c.HasCup 7 → Finset (Fin 252) :=
+fun {n} c noCap noCup => Finset.image (c.balancedOwner noCap noCup) Finset.univ
+def ErdosSzekeres.Omission.Configuration.balancedOwner : {n : ℕ} →
+  (c : ErdosSzekeres.Omission.Configuration n) → ¬c.HasCap 7 → ¬c.HasCup 7 → Fin n → Fin 252 :=
+fun {n} c noCap noCup => ErdosSzekeres.Omission.BalancedCatalog.ownerIndex n c.cup ⋯ ⋯
+def ErdosSzekeres.Omission.Subsets.JunctionOn : (ℕ → ℕ → ℕ → Bool) → Finset ℕ → ℕ → Prop :=
+fun cup S u =>
+  ∃ xs ys a b,
+    (xs ++ [a, u]).length = 6 ∧
+      (u :: b :: ys).length = 5 ∧
+        (ErdosSzekeres.Omission.ActualRanks.colorConfig cup true).Cup (xs ++ [a, u]) ∧
+          (ErdosSzekeres.Omission.ActualRanks.colorConfig cup false).Cup (u :: b :: ys) ∧
+            (xs ++ [a, u]).In S ∧ (u :: b :: ys).In S
+def ErdosSzekeres.Omission.Subsets.NoJunctionOn : (ℕ → ℕ → ℕ → Bool) → Finset ℕ → Prop :=
+fun cup S => ∀ (u : ℕ), ¬ErdosSzekeres.Omission.Subsets.JunctionOn cup S u
+def ErdosSzekeres.Omission.Partition.BalancedBound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : ErdosSzekeres.Omission.Configuration n),
+    ¬c.HasCap 7 → ¬c.HasCup 7 → ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) → n ≤ B
+def ErdosSzekeres.Omission.Partition.ResidualBound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : ErdosSzekeres.Omission.Configuration n),
+    ¬c.HasCap 6 →
+      ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) →
+        ErdosSzekeres.Omission.Subsets.NoJunctionOn c.cup (Finset.range n) → n ≤ B
+def OmissionZRow.N66Bound : ℕ → Prop :=
+fun B =>
+  ∀ (n : ℕ) (c : ErdosSzekeres.Omission.Configuration n),
+    ¬c.HasCap 6 → ¬c.HasCup 6 → ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ) → n ≤ B
+def OmissionZRow.zProfile : List ℕ → Bool :=
+fun xs => decide (xs.getD 0 0 ≤ 4) && decide (xs.getD 4 0 = 0)
+def OmissionZRow.Z : Finset (Fin 252) :=
+{i | OmissionZRow.zProfile (ErdosSzekeres.Omission.BalancedCatalog.catalog.getD ↑i []) = true}
+def OmissionZStarRow.zsProfile : List ℕ → Bool :=
+fun xs => decide (xs.getD 0 0 = 5) && decide (1 ≤ xs.getD 4 0)
+def OmissionZStarRow.Zs : Finset (Fin 252) :=
+{i | OmissionZStarRow.zsProfile (ErdosSzekeres.Omission.BalancedCatalog.catalog.getD ↑i []) = true}
+def OmissionBalancedZ.ExcludesHoleBudgetZ : ℕ → Prop :=
+fun budget =>
+  ¬∃ holes,
+      (∀ (i : Fin 252), holes i ≤ 1) ∧
+        (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧
+          (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧
+            15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ ∑ i, holes i ≤ budget
+def OmissionBalancedZF.ExcludesHoleBudgetZF : ℕ → Prop :=
+fun budget =>
+  ¬∃ holes,
+      holes 0 = 0 ∧
+        holes 1 = 0 ∧
+          (∀ (i : Fin 252), holes i ≤ 1) ∧
+            (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧
+              (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧
+                15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ ∑ i, holes i ≤ budget
+def OmissionBalancedZZsF.ExcludesHoleBudgetZZsF : ℕ → Prop :=
+fun budget =>
+  ¬∃ holes,
+      holes 0 = 0 ∧
+        holes 1 = 0 ∧
+          (∀ (i : Fin 252), holes i ≤ 1) ∧
+            (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧
+              (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧
+                15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ 15 ≤ ∑ i ∈ OmissionZStarRow.Zs, holes i ∧ ∑ i, holes i ≤ budget
+def OmissionBalancedZZsN.ExcludesHoleBudgetZZsN : ℕ → ℕ → Prop :=
+fun r budget =>
+  ¬∃ holes,
+      holes 0 = 0 ∧
+        holes 1 = 0 ∧
+          (∀ (i : Fin 252), holes i ≤ 1) ∧
+            (∀ (q : Fin 2685), OmissionBalanced.demand q ≤ ∑ i ∈ OmissionBalanced.support q, holes i) ∧
+              (∀ (q : Fin 446), BalancedCoverCutsV2.demand q ≤ ∑ i ∈ BalancedCoverCutsV2.support q, holes i) ∧
+                r ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ r ≤ ∑ i ∈ OmissionZStarRow.Zs, holes i ∧ ∑ i, holes i ≤ budget
+def OmissionBalanced.row : Fin 2685 → Finset (Fin 252) × ℕ × ℕ :=
+fun r => OmissionBalanced.rowChunks[↑r / 128]![↑r % 128]!
+def OmissionBalanced.support : Fin 2685 → Finset (Fin 252) :=
+fun r => (OmissionBalanced.row r).1
+def OmissionBalanced.demand : Fin 2685 → ℕ :=
+fun r => (OmissionBalanced.row r).2.1
+'CompAuditReview.zzsf_of_zeroSide' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompAuditReview.zzsn_of_zeroSide' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompAuditReview.zf_of_z' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompAuditReview.balanced_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompAuditReview.forces_306_of_305_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]

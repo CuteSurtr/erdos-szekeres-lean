@@ -1,0 +1,8 @@
+check 1: logs/encb_vendor.sha256: 16 files
+check 1: logs/geo_vendor.sha256: 16 files
+check 2: 14 own files scanned
+check 3: FAIL
+check 4: 45 modules, last build rc=0 and source unchanged since
+FAIL forbidden token 'sorry' in /home/jay/research/data/formalize-20261122/sevenfold/src/Geo7/ZZSelftest.lean
+FAIL tactic block in a declaration that mentions the instance: /home/jay/research/data/formalize-20261122/sevenfold/src/Geo7/ZZSelftest.lean: theorem zz2 (M : EncB.ModelO 7 8 10) : True := by trivial
+AUDIT FAIL

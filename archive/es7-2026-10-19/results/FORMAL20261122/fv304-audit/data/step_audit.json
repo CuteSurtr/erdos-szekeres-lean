@@ -1,0 +1,124 @@
+{
+ "unit": {
+  "job": "audit",
+  "unit": "esr-ag-fv4a-audit",
+  "utc_end": "2026-11-22T08:04:30Z",
+  "seconds": 643.9,
+  "gate": {
+   "yield": false,
+   "tctl": 84.4,
+   "cpu_free": 2,
+   "ag_mb": 1667,
+   "esr_mb": 3705
+  },
+  "systemd_run_rc": 0,
+  "systemd_run_stderr": "",
+  "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/Audit.lean",
+  "src_sha256": "908f9e9d4075d84c58b0badc693b9940382c7dda373b23060b0710fdabeddbf9",
+  "lean_rc": 0,
+  "exit_status": 0,
+  "signal": false,
+  "wall_s": 643.78,
+  "user_s": 251.48,
+  "max_rss_mb": 14303,
+  "major_faults": 1284049,
+  "cg_peak_mb": 4002,
+  "anon_peak_mb": 453,
+  "killed_80": false,
+  "events": {
+   "low": "0",
+   "high": "172838",
+   "max": "0",
+   "oom": "0",
+   "oom_kill": "0",
+   "oom_group_kill": "0",
+   "sock_throttled": "0"
+  },
+  "errors": [],
+  "sorry": false,
+  "axioms": [
+   [
+    "E304Z.Final.excludes_67",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ],
+   [
+    "E304Z.Final.forces_304_of_n66_res",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ],
+   [
+    "E304Z.root",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ],
+   [
+    "E304Z.C260801.ex0",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ],
+   [
+    "E304Z.C325201.ex0",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ]
+  ],
+  "olean": null,
+  "olean_sha256": null,
+  "reused": true
+ },
+ "statements": {
+  "E304Z.Final.excludes_67": "E304Z.Final.excludes_67 : OmissionBalancedZ.ExcludesHoleBudgetZ 67",
+  "E304Z.Final.forces_304_of_n66_res": "E304Z.Final.forces_304_of_n66_res (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 304 8",
+  "E304Z.root": "E304Z.root : \u00ac\u2203 holes, CompactChecker.FFeas CompactChecker.fcatZ 3132 252 67 (CompactChecker.pmask (CompactChecker.zerosF 252) []) holes"
+ },
+ "axioms": {
+  "E304Z.Final.excludes_67": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.Final.forces_304_of_n66_res": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.root": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.C260801.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "E304Z.C325201.ex0": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ]
+ },
+ "modules": 13199,
+ "modules_sha256": "f29645db889a6819054bcc0b986e6394f2dad3392d394b3e7cada93b192644b7",
+ "problems": [],
+ "findings": [],
+ "ok": true,
+ "utc_end": "2026-11-22T08:05:33Z",
+ "seconds": 0.0
+}

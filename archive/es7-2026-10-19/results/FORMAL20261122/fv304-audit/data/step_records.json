@@ -1,0 +1,104 @@
+{
+ "contexts": 8192,
+ "manifest_modules": 8207,
+ "expected_e304z_modules": 8217,
+ "exporter_tally": {
+  "eee1151c51d49f60a364f3358d1e3110dbc0740e54bdb37ab70cc41a2d118870": 8186,
+  "9fbce4ce0fbd9d7db6c1924be0a1cceaeca397fa827cada3b7a0d8acd36aacfd": 6
+ },
+ "sources_checked": 8217,
+ "source_check_tally": {
+  "manifest": 8207,
+  "recorded": 9,
+  "template": 1
+ },
+ "token_hits": {},
+ "first_tokens": {
+  "import": 24638,
+  "open": 8216,
+  "set_option": 32855,
+  "namespace": 8216,
+  "--": 32837,
+  "noncomputable": 261918,
+  "theorem": 785762,
+  "checkF2_feas": 261918,
+  "split_pm": 261917,
+  "#print": 8218,
+  "end": 8216,
+  "": 8216
+ },
+ "set_option_lines": {
+  "set_option maxRecDepth 100000": 8216,
+  "set_option Elab.async false": 8216,
+  "set_option linter.all false": 8216,
+  "set_option profiler true": 8207
+ },
+ "non_e304z_imports": {
+  "CompactChecker.FcatZ": 8207,
+  "CompactChecker.Path": 8216,
+  "CompactChecker.BridgeZ": 1,
+  "BalancedBudgetsZ": 1
+ },
+ "open_lines": {
+  "open CompactChecker": 8216
+ },
+ "print_lines": {
+  "#print axioms <name>": 8218
+ },
+ "by_count": 261918,
+ "by_decide_kernel_count": 261918,
+ "needs_reprint": [
+  "E304Z.C260801",
+  "E304Z.C311801",
+  "E304Z.C325201",
+  "E304Z.C634501"
+ ],
+ "silent_zero_axiom_rows": [
+  "E304Z.C634501"
+ ],
+ "no_run_tsv_row": [
+  "E304Z.C075201",
+  "E304Z.C075202",
+  "E304Z.C075203",
+  "E304Z.C075204",
+  "E304Z.C075301",
+  "E304Z.C126501",
+  "E304Z.C128701",
+  "E304Z.C128801",
+  "E304Z.C135601",
+  "E304Z.C135701",
+  "E304Z.C135801",
+  "E304Z.C135901",
+  "E304Z.C137001",
+  "E304Z.C137201",
+  "E304Z.C137301",
+  "E304Z.C137401",
+  "E304Z.C255301",
+  "E304Z.C255401",
+  "E304Z.C255501",
+  "E304Z.C255601",
+  "E304Z.C255801",
+  "E304Z.C255901",
+  "E304Z.C334201",
+  "E304Z.C334301",
+  "E304Z.C420801",
+  "E304Z.C751401"
+ ],
+ "pilot_or_extra_oleans_not_expected": [
+  "FinalTest",
+  "S12_1671",
+  "S12_376"
+ ],
+ "e304z_modules_tsv_sha256": "595465a8fa3aae3591be91dcf90d7692e7d789ec45edc2cded2a567644c8acaa",
+ "newest_olean": "E304Z.Final",
+ "problems": [],
+ "findings": [
+  "6 contexts [752, 753, 3342, 3343, 4208, 7514] carry exporter sha256 ['9fbce4ce0fbd'] (pilot version, not in git) instead of the git HEAD export_es304z.py eee1151c51d4; Lean checked their chunks like all others",
+  "4 logs lack a well-formed axiom line for the source's #print (profiler stderr spliced into it): ['E304Z.C260801', 'E304Z.C311801', 'E304Z.C325201', 'E304Z.C634501']; re-printed from the oleans in step reprint",
+  "FV304's driver accepted ['E304Z.C634501'] with 0 axiom lines and no ALERT (drive_es304z.verdict counts 'depends on axioms' substrings; a split line counts 0 = 0 standard)",
+  "26 modules have no run.tsv row (pilot compiles or driver restarts): ['E304Z.C075201', 'E304Z.C075202', 'E304Z.C075203', 'E304Z.C075204', 'E304Z.C075301', 'E304Z.C126501', 'E304Z.C128701', 'E304Z.C128801', 'E304Z.C135601', 'E304Z.C135701', 'E304Z.C135801', 'E304Z.C135901', 'E304Z.C137001', 'E304Z.C137201', 'E304Z.C137301', 'E304Z.C137401', 'E304Z.C255301', 'E304Z.C255401', 'E304Z.C255501', 'E304Z.C255601']; their per-module logs were used"
+ ],
+ "ok": true,
+ "utc_end": "2026-11-22T08:20:33Z",
+ "seconds": 214.2
+}

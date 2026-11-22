@@ -1,0 +1,8 @@
+OmissionZRow.N66Bound : ℕ → Prop
+ErdosSzekeres.Omission.ActualRanks.column : (ℕ → ℕ → ℕ → Bool) → ℕ → ℕ → ℕ
+N66Enc.base_unsat_of_cubes : N66Enc.CubesUnsat132 → ¬EncB.DimacsSatisfiable (N66Enc.baseCnf N66Enc.R0)
+ImportTest lean wall=2.10 s maxrss=3173292 KB
+'N66Geo.no_model_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.holds_baseS' depends on axioms: [propext, Classical.choice, Quot.sound]
+Model lean wall=2.53 s maxrss=3183728 KB
+rc=0

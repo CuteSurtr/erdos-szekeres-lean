@@ -1,0 +1,67 @@
+{
+ "marker": "/home/jay/research/data/formalize-20261122/fv304-audit/MARKER_START",
+ "marker_mtime": 1795333186.0496488,
+ "areas": {
+  "repo .lake": {
+   "dir": "/home/jay/research/lean/erdos-szekeres-lean/.lake",
+   "newer_than_marker": 0,
+   "examples": []
+  },
+  "chain311/olean": {
+   "dir": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean",
+   "newer_than_marker": 0,
+   "examples": []
+  },
+  "build/CompactChecker": {
+   "dir": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker",
+   "newer_than_marker": 0,
+   "examples": []
+  },
+  "build/ext": {
+   "dir": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/ext",
+   "newer_than_marker": 0,
+   "examples": []
+  },
+  "experiments dir (incl. __pycache__)": {
+   "dir": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05",
+   "newer_than_marker": 0,
+   "examples": []
+  },
+  "zrow/leanz/olean": {
+   "dir": "/home/jay/research/data/bal186-20261119/zrow/leanz/olean",
+   "newer_than_marker": 0,
+   "examples": []
+  },
+  "fv304-20261120": {
+   "dir": "/home/jay/research/data/fv304-20261120",
+   "newer_than_marker": 0,
+   "examples": []
+  },
+  "res118": {
+   "dir": "/home/jay/research/data/formalize-20261122/res118",
+   "newer_than_marker": 0,
+   "examples": []
+  },
+  "toolchain v4.24.0": {
+   "dir": "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0",
+   "newer_than_marker": 0,
+   "examples": []
+  },
+  "repo (all)": {
+   "dir": "/home/jay/research/lean/erdos-szekeres-lean",
+   "newer_than_marker": 3,
+   "examples": [
+    "/home/jay/research/lean/erdos-szekeres-lean/.git/objects/ce/b5b8819787f00cbf941c58c56e896d0bd90d11",
+    "/home/jay/research/lean/erdos-szekeres-lean/.git/objects/cb/dc11f0ee460fd73cc47ed241e779699f9e6240",
+    "/home/jay/research/lean/erdos-szekeres-lean/.git/objects/55/d09e7432d6badbb1b8d64ec5c1c9c8201a8226"
+   ]
+  }
+ },
+ "problems": [],
+ "findings": [
+  "repo: 3 files newer than the marker outside the read-only stores (not written by this audit, which has no repo writes): ['/home/jay/research/lean/erdos-szekeres-lean/.git/objects/ce/b5b8819787f00cbf941c58c56e896d0bd90d11', '/home/jay/research/lean/erdos-szekeres-lean/.git/objects/cb/dc11f0ee460fd73cc47ed241e779699f9e6240', '/home/jay/research/lean/erdos-szekeres-lean/.git/objects/55/d09e7432d6badbb1b8d64ec5c1c9c8201a8226']"
+ ],
+ "ok": true,
+ "utc_end": "2026-11-22T08:29:35Z",
+ "seconds": 2.9
+}

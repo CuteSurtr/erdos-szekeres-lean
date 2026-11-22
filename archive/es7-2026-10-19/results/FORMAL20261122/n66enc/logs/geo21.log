@@ -1,0 +1,172 @@
+N66Geo/Sem.lean:25:15: error: Invalid simp theorem: Expected a proposition, but found
+  Fin 70 → SLit
+N66Geo/Sem.lean:24:80: error: unsolved goals
+M : Model
+s : Fin 70
+⊢ M.meaning (N66Enc.guard s).2 = (N66Enc.guard s).1 ↔ ¬M.occ s
+N66Geo/Sem.lean:25:22: warning: This simp argument is unused:
+  meaning_sel
+
+Hint: Omit it from the simp argument list.
+  simp [Agree, guard,̵ ̵m̵e̵a̵n̵i̵n̵g̵_̵s̵e̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Geo/Sem.lean:68:58: warning: unused variable `h1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+N66Geo/Sem.lean:73:59: warning: This simp argument is unused:
+  show v < u by omega
+
+Hint: Omit it from the simp argument list.
+  simp only [show w < v by omega, s̵h̵o̵w̵ ̵v̵ ̵<̵ ̵u̵ ̵b̵y̵ ̵o̵m̵e̵g̵a̵,̵ ̵if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Geo/Sem.lean:73:89: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [show w < v by omega, show v < u by omega, if_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Geo/Sem.lean:74:41: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [show ¬̵ ̵w̵¬̲w̲ < v by omega, i̵f̵_̵t̵r̵u̵e̵,̵ ̵if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Geo/Sem.lean:74:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+N66Geo/Sem.lean:81:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+N66Geo/Sem.lean:88:39: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑v
+ b := ↑u
+ c := ↑w
+N66Geo/Sem.lean:88:39: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑v
+ b := ↑u
+ c := ↑w
+N66Geo/Sem.lean:88:39: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑u
+ b := ↑v
+ c := ↑w
+N66Geo/Sem.lean:88:39: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑u
+ b := ↑v
+ c := ↑w
+N66Geo/Sem.lean:88:39: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑u
+ b := ↑v
+ c := ↑w
+N66Geo/Sem.lean:87:46: warning: This simp argument is unused:
+  Bool.not_not
+
+Hint: Omit it from the simp argument list.
+  simp only [a1, a2, a3, if_true, if_false,̵ ̵B̵o̵o̵l̵.̵n̵o̵t̵_̵n̵o̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+N66Geo/Sem.lean:130:89: error: Application type mismatch: The argument
+  nyz
+has type
+  y ≠ z
+but is expected to have type
+  z ≠ ?m.193
+in the application
+  ori3_cyc M.cup (Ne.symm nxz) (Ne.symm ?m.195) nyz
+N66Geo/Sem.lean:129:58: error: unsolved goals
+M : Model
+a b c : Fin 70
+x y z : ℕ
+hab : a ≠ b
+hbc : b ≠ c
+hac : a ≠ c
+hx : x < M.n
+hy : y < M.n
+hz : z < M.n
+ha : idxOf M.cup x = ↑a
+hb : idxOf M.cup y = ↑b
+hc : idxOf M.cup z = ↑c
+nxy : x ≠ y
+nyz : y ≠ z
+nxz : x ≠ z
+h✝² : ¬a < b
+h✝¹ : ¬a < c
+h✝ : b < c
+⊢ ori3 M.cup y z x = ori3 M.cup z x y
+N66Geo/Sem.lean:134:47: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ori3 M.cup y z x
+in the target expression
+  ori3 M.cup z y x = ori3 M.cup y x z
+
+M : Model
+a b c : Fin 70
+x y z : ℕ
+hab : a ≠ b
+hbc : b ≠ c
+hac : a ≠ c
+hx : x < M.n
+hy : y < M.n
+hz : z < M.n
+ha : idxOf M.cup x = ↑a
+hb : idxOf M.cup y = ↑b
+hc : idxOf M.cup z = ↑c
+nxy : x ≠ y
+nyz : y ≠ z
+nxz : x ≠ z
+h✝² : ¬a < b
+h✝¹ : ¬a < c
+h✝ : ¬b < c
+⊢ ori3 M.cup z y x = ori3 M.cup y x z
+N66Geo/Sem.lean:163:35: error: failed to synthesize
+  Decidable (M.LabGe cup (if a < b then a else b) (if a < b then b else a) k)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'N66Geo.agree_befLit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N66Geo.agree_oriLit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'N66Geo.agree_geAtom' depends on axioms: [propext, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+Sem lean wall=3.14 s maxrss=3198416 KB
+rc=1

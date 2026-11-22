@@ -1,0 +1,10 @@
+2026-11-22 17:29:23 start: exe copy ca21e3e66e9e420aec47e804bbb858abb1d5d7025b5bbde449c6f501bcc7a305, original 98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46, cgroup /sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/ptyxis-spawn-943a119d-1f04-4264-a3de-95e054c41b5e.scope
+2026-11-22 17:29:23 p_eq rc=0 cmprc=0 rss_kb=7904 anon_kb=891660 wall=0.00 pipestatus=[0 0 0] nogate-selftest
+2026-11-22 17:29:23 p_diff rc=0 cmprc=1 rss_kb=3908 anon_kb=893524 wall=0.01 pipestatus=[0 0 0] nogate-selftest
+2026-11-22 17:29:23 p_short rc=0 cmprc=1 rss_kb=8020 anon_kb=896232 wall=0.00 pipestatus=[0 0 0] nogate-selftest
+2026-11-22 17:29:23 p_long rc=0 cmprc=1 rss_kb=7808 anon_kb=895872 wall=0.00 pipestatus=[0 0 0] nogate-selftest
+2026-11-22 17:29:23 p_seg rc=0 cmprc=0 rss_kb=8052 anon_kb=897364 wall=0.00 pipestatus=[0 0 0] nogate-selftest
+2026-11-22 17:29:23 p_segbad rc=0 cmprc=0 rss_kb=8132 anon_kb=898708 wall=0.00 pipestatus=[0 0 0] nogate-selftest
+2026-11-22 17:29:23 p_fail rc=3 cmprc=0 rss_kb=7576 anon_kb=897800 wall=0.00 pipestatus=[3 0 0] nogate-selftest
+2026-11-22 17:29:23 p_stdout rc=0 cmprc=NA rss_kb=7720 anon_kb=897640 wall=0.00 pipestatus=[0 0] nogate-selftest
+2026-11-22 17:29:23 end: cgroup memory.peak 31046737920 bytes (includes page cache)

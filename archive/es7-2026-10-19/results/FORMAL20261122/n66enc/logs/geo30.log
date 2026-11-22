@@ -1,0 +1,27 @@
+N66Geo/Pos.lean:94:16: error: Type mismatch
+  h1
+has type
+  List.foldl min x xs ≤ x
+but is expected to have type
+  List.foldl min (coordOf coord z) xs ≤ coordOf coord z
+N66Geo/Pos.lean:108:16: error: Type mismatch
+  h1
+has type
+  x ≤ List.foldl max x xs
+but is expected to have type
+  coordOf coord z ≤ List.foldl max (coordOf coord z) xs
+N66Geo/Pos.lean:166:43: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+N66Geo/Pos.lean:147:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+N66Geo/Pos.lean:187:8: error: (kernel) unknown constant 'N66Geo.tt_sound'
+'N66Geo.holds_pos' depends on axioms: [propext, Classical.choice, N66Geo.holds_pos, Quot.sound]
+Command exited with non-zero status 1
+Pos lean wall=9.12 s maxrss=3212324 KB
+rc=1

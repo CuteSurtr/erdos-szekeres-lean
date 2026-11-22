@@ -1,0 +1,96 @@
+{
+ "unit": {
+  "job": "combined",
+  "unit": "esr-ag-fv4a-combined",
+  "utc_end": "2026-11-22T08:12:50Z",
+  "seconds": 321.9,
+  "gate": {
+   "yield": false,
+   "tctl": 85.9,
+   "cpu_free": 4,
+   "ag_mb": 256,
+   "esr_mb": 2267
+  },
+  "systemd_run_rc": 0,
+  "systemd_run_stderr": "",
+  "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/FV4A/Combined.lean",
+  "src_sha256": "ada157eff6de74be4578e03498d015f06e39071bd4dddb96df04c393d53dc2e1",
+  "lean_rc": 0,
+  "exit_status": 0,
+  "signal": false,
+  "wall_s": 321.68,
+  "user_s": 103.55,
+  "max_rss_mb": 17767,
+  "major_faults": 719547,
+  "cg_peak_mb": 4002,
+  "anon_peak_mb": 464,
+  "killed_80": false,
+  "events": {
+   "low": "0",
+   "high": "91822",
+   "max": "0",
+   "oom": "0",
+   "oom_kill": "0",
+   "oom_group_kill": "0",
+   "sock_throttled": "0"
+  },
+  "errors": [],
+  "sorry": false,
+  "axioms": [
+   [
+    "FV4A.forces_304_of_slices_rows_n66",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ],
+   [
+    "Res118.forces_304_of_slices",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ],
+   [
+    "Res118.residual_bound_118_of_slices",
+    [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ]
+   ]
+  ],
+  "olean": "/home/jay/research/data/formalize-20261122/fv304-audit/olean/FV4A/Combined.olean",
+  "olean_sha256": "9e71de8761341db1afaadce264c9b4e60c206b8d7d70ebf636db650ac6a19ca8"
+ },
+ "statements": {
+  "FV4A.forces_304_of_slices_rows_n66": "FV4A.forces_304_of_slices_rows_n66 (n66 : OmissionZRow.N66Bound 55) (vP : Res118.BlockValid Res118.rowsP) (vQ : Res118.BlockValid Res118.rowsQ) (vU : Res118.BlockValid Res118.rowsU) (vA : Res118.BlockValid Res118.rowsA) (s33_18 : Res118.ResSliceExcludes [] 33 18) (s34_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 34 18) (s34_19 : Res118.ResSliceExcludes Res118.rowsP 34 19) (s35_18 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ) 35 18) (s35_19 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsU) 35 19) (s35_20 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA) 35 20) : ErdosSzekeres.ForcesConvexNGon 304 8",
+  "E304Z.Final.excludes_67": "E304Z.Final.excludes_67 : OmissionBalancedZ.ExcludesHoleBudgetZ 67"
+ },
+ "axioms": {
+  "FV4A.forces_304_of_slices_rows_n66": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "Res118.forces_304_of_slices": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "Res118.residual_bound_118_of_slices": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ]
+ },
+ "modules": 13381,
+ "modules_sha256": "6d92cebe85388644456284ad6e5b1e122222f4946cbf1de795c2ef558df8d551",
+ "problems": [],
+ "findings": [],
+ "ok": true,
+ "utc_end": "2026-11-22T08:12:50Z",
+ "seconds": 322.2
+}

@@ -1,0 +1,99 @@
+{
+ "C_R0_15_rows": 10859,
+ "C_R0_15_sorted_distinct": true,
+ "C_R0_15_all_have_state_outside_01": true,
+ "C_R0_15_rows_without_justification": 0,
+ "C_justified_demands": [
+  1
+ ],
+ "C_leaves_without_justification_file_[id,used_rows]": [
+  [
+   "hooooh",
+   0
+  ],
+  [
+   "hooohh",
+   0
+  ],
+  [
+   "hohooh",
+   0
+  ],
+  [
+   "hohohh",
+   0
+  ],
+  [
+   "hhoooh",
+   0
+  ],
+  [
+   "hhoohh",
+   0
+  ],
+  [
+   "hhhooh",
+   0
+  ],
+  [
+   "hhhohh",
+   0
+  ]
+ ],
+ "C_R0_15_rows_by_kind_any_leaf": {
+  "transported": 5318,
+  "mirror": 5292,
+  "core": 197,
+  "cycle": 52
+ },
+ "D_selftests": "pass",
+ "D_full_sets": {
+  "etv": {
+   "points": 50,
+   "class_ok": true,
+   "why": "ok",
+   "occupied": 50,
+   "distinct_states": true,
+   "violated_rows": 0,
+   "min_missing_over_rows": 1
+  },
+  "refl_y": {
+   "points": 50,
+   "class_ok": true,
+   "why": "ok",
+   "occupied": 50,
+   "distinct_states": true,
+   "violated_rows": 0,
+   "min_missing_over_rows": 1
+  },
+  "refl_x": {
+   "points": 50,
+   "class_ok": true,
+   "why": "ok",
+   "occupied": 50,
+   "distinct_states": true,
+   "violated_rows": 0,
+   "min_missing_over_rows": 1
+  },
+  "rot180": {
+   "points": 50,
+   "class_ok": true,
+   "why": "ok",
+   "occupied": 50,
+   "distinct_states": true,
+   "violated_rows": 0,
+   "min_missing_over_rows": 1
+  }
+ },
+ "D_etv_states_equal_record": true,
+ "D_etv_holes_equal_record": true,
+ "D_mirror_states_are_tau": true,
+ "D_subsets": {
+  "seed": 7,
+  "requested": 3000,
+  "tested": 3000,
+  "not_in_class": 0,
+  "violated_rows_total": 0,
+  "min_missing_over_all_rows_and_sets": 1
+ }
+}

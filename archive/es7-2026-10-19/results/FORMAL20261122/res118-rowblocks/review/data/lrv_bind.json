@@ -1,0 +1,474 @@
+{
+ "exe": "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/bin/rowprint",
+ "exe_sha_start": "eabe37912b332a844e8731d21f3bf4612a6ad2348a54a8d576c90c13476bd496",
+ "tables": {
+  "/home/jay/research/data/roadmap-20261115/pm1115/p307v/lrat-b35s20-v169/lrat-results.tsv": {
+   "sha": "a80cbba552f288f66da7e096dbea5ccd8d2eab59bb7abdb506d8d3ef85a6e0d2",
+   "summary_sha": "f80a720e3216b8b035fef6ee8713d0cfb0255772fb32ce5da78f1aa4bf3c1ec4",
+   "sha_ok": true,
+   "record_copies": {
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES307N20261118/data/lrat_recheck_v169_summary.json": "f80a720e3216b8b035fef6ee8713d0cfb0255772fb32ce5da78f1aa4bf3c1ec4"
+   },
+   "record_copies_equal": true,
+   "jobs": 1994
+  },
+  "/home/jay/research/data/roadmap-20261115/pm1115/p307v/lrat-b35s19-v16/lrat-results.tsv": {
+   "sha": "3b3155e99587f80ee3f8b530caa188f6287d42e17140a02a44c6c3d8e45855d7",
+   "summary_sha": "7b8d9eca5dad3cb7b679954bd9fcc20069fd1bce23b421878317e108795aa8ab",
+   "sha_ok": true,
+   "record_copies": {
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/VERIFY307/data/lrat-b35s19-v16/lrat-results.tsv": "3b3155e99587f80ee3f8b530caa188f6287d42e17140a02a44c6c3d8e45855d7",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/VERIFY307/data/lrat-b35s19-v16/lrat-summary.json": "7b8d9eca5dad3cb7b679954bd9fcc20069fd1bce23b421878317e108795aa8ab"
+   },
+   "record_copies_equal": true,
+   "jobs": 1057
+  }
+ },
+ "problems": [],
+ "exe_sha_end": "eabe37912b332a844e8731d21f3bf4612a6ad2348a54a8d576c90c13476bd496",
+ "rows": 2025,
+ "counts": {
+  "BOUND": 2025
+ },
+ "by_block": {
+  "P": 812,
+  "Q": 208,
+  "U": 35,
+  "A": 970
+ },
+ "distinct_supports": 2021,
+ "distinct_printed": 2021,
+ "fresh_sample": {
+  "P 0": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/4d3afdcf326e3e38.cnf.zst",
+   "fresh": "4d3afdcf326e3e3809ac39a89c6f097e18c0d2d86435546773ddf2706dffd768",
+   "equal_printed": true
+  },
+  "P 25": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/3fa1f524bb1226ea.cnf.zst",
+   "fresh": "3fa1f524bb1226eaa9a893ea10c6cdde27eae4e9436f2234aa0e8602f746051b",
+   "equal_printed": true
+  },
+  "P 50": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/70400586bca30e13.cnf.zst",
+   "fresh": "70400586bca30e13931359807a5f5abd6ff20ba36389c5678f9b842fccc3a42d",
+   "equal_printed": true
+  },
+  "P 75": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/af327d21eabfb9a3.cnf.zst",
+   "fresh": "af327d21eabfb9a3b1057020ad69690ad04ee072f42f89f5f4bf779a4d9f5013",
+   "equal_printed": true
+  },
+  "P 100": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/1bd40c916cbae11b.cnf.zst",
+   "fresh": "1bd40c916cbae11b68e275ec3e308b7443173ce6c973a647aab140e6339e483c",
+   "equal_printed": true
+  },
+  "P 125": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/325793cd102f5be9.cnf.zst",
+   "fresh": "325793cd102f5be9845f0ef8039bd305142f6c853cd9ae07f005d799a372d83d",
+   "equal_printed": true
+  },
+  "P 150": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/b2ff0a7edd32a928.cnf.zst",
+   "fresh": "b2ff0a7edd32a9283f9700dacc284c3ac5a54ad2cf95c4b67212760d011be827",
+   "equal_printed": true
+  },
+  "P 175": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/323b6320d5d8dbc8.cnf.zst",
+   "fresh": "323b6320d5d8dbc8f529403d759a1c25e26055481b8ad23a07b151a09b4d99fb",
+   "equal_printed": true
+  },
+  "P 200": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/4e3f1c185e9f1eb5.cnf.zst",
+   "fresh": "4e3f1c185e9f1eb53f58bd6f8af441033b11a8cc2b54d7b3631d2f2e807badb3",
+   "equal_printed": true
+  },
+  "P 225": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/1e7dbbd514c8755e.cnf.zst",
+   "fresh": "1e7dbbd514c8755e7e056656dd89eb62d2e2b6f2e9b04992dddc0e09edc3dc76",
+   "equal_printed": true
+  },
+  "P 250": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/839ddafc779b4c9c.cnf.zst",
+   "fresh": "839ddafc779b4c9c12235e8dbed569b996ed4a4e4c6a65a5ba3f9595ba838675",
+   "equal_printed": true
+  },
+  "P 275": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/67dfb11737906da9.cnf.zst",
+   "fresh": "67dfb11737906da96e3694ba234d7fbbb9ea1467adb847d7463a21b138b975fe",
+   "equal_printed": true
+  },
+  "P 300": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/6f3f7616feca169a.cnf.zst",
+   "fresh": "6f3f7616feca169a02a9ec7e9912787a2e04bd22f4e6b40c25e5eca75cb34e59",
+   "equal_printed": true
+  },
+  "P 325": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/881470bad2df875a.cnf.zst",
+   "fresh": "881470bad2df875a03d2a740424f188d223dcb8ddbbc7e78b1ac1f4667b7bb0a",
+   "equal_printed": true
+  },
+  "P 350": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/d68d69a3e032202c.cnf.zst",
+   "fresh": "d68d69a3e032202c26c3f91979655b55bc9defd22f4ff8a058b21d14e85a2a40",
+   "equal_printed": true
+  },
+  "P 375": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/25e7515efb39b7f7.cnf.zst",
+   "fresh": "25e7515efb39b7f74e264080205d4e0271c60fec4d7079b077701e359284cb81",
+   "equal_printed": true
+  },
+  "P 400": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/f79bb0dac8627e0e.cnf.zst",
+   "fresh": "f79bb0dac8627e0e63a59480245e3674c8610904ccabba484e3207a4aca1b7a9",
+   "equal_printed": true
+  },
+  "P 425": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/be14bc3a3ecfb0e8.cnf.zst",
+   "fresh": "be14bc3a3ecfb0e87d31962b87d7318a0ebd77609834b5c072160cd4c38dc96d",
+   "equal_printed": true
+  },
+  "P 450": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/991f553d9f788d1e.cnf.zst",
+   "fresh": "991f553d9f788d1e1b0ebf83c2fa152a63481c2df9256fa4f31015dfa4d71df0",
+   "equal_printed": true
+  },
+  "P 475": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/cac59a5d3c2367c0.cnf.zst",
+   "fresh": "cac59a5d3c2367c0880d1c3ed779106936648a52dbd4e9afe2efda21e8fe6937",
+   "equal_printed": true
+  },
+  "P 500": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/29579241e4b1d51b.cnf.zst",
+   "fresh": "29579241e4b1d51bf439d8db642e0f24459f31cbe3f801218fbd71e13baa850d",
+   "equal_printed": true
+  },
+  "P 525": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/e16d3fa72b57ed36.cnf.zst",
+   "fresh": "e16d3fa72b57ed360b7d135923a30e4a96d7acf8f20ad7bae3e1fc41f4f1dc8c",
+   "equal_printed": true
+  },
+  "P 550": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/3a2aab454a62dd6a.cnf.zst",
+   "fresh": "3a2aab454a62dd6a1526f4b40c1b25ee90f703016e9c2c35e5966752e0b48668",
+   "equal_printed": true
+  },
+  "P 575": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/19ca9d6ceb5f1693.cnf.zst",
+   "fresh": "19ca9d6ceb5f1693d4cb82d3cff8a0203dda98273d64d99ad53e33ed99b9f07a",
+   "equal_printed": true
+  },
+  "P 600": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/ac7806fdedbc2f41.cnf.zst",
+   "fresh": "ac7806fdedbc2f417fe919c0ea40ccdf42201698aa548077907092a470da26e5",
+   "equal_printed": true
+  },
+  "P 625": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/e8001d9590e17a14.cnf.zst",
+   "fresh": "e8001d9590e17a14e570471bdce0c47758a9bf922518d75eb5db4ac313fdfec1",
+   "equal_printed": true
+  },
+  "P 650": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/af564dad23a2d4cb.cnf.zst",
+   "fresh": "af564dad23a2d4cb5e93c38f99f0c4953d506b3daa4ea070dc6ee34839cd2f82",
+   "equal_printed": true
+  },
+  "P 675": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/f68425ad6a0ea6cc.cnf.zst",
+   "fresh": "f68425ad6a0ea6cc033a7aea7aae98e324d6851a36b181eaad3d0346f3fa7445",
+   "equal_printed": true
+  },
+  "P 700": {
+   "file": "/home/jay/research/data/fastbb-20261113/p2/proofs/4f4f9bbbf53fa37d.cnf.zst",
+   "fresh": "4f4f9bbbf53fa37d43d83cb1f6b791b0bead122b2c755fe4f7508013ad390b70",
+   "equal_printed": true
+  },
+  "P 725": {
+   "file": "/home/jay/research/data/fastbb-20261113/killtools/proofs/12a3d59634a9b895.cnf.zst",
+   "fresh": "12a3d59634a9b895e980f5770077c048f2af0136a3a9b6dc3e0bc1f47c9b2e0c",
+   "equal_printed": true
+  },
+  "P 750": {
+   "file": "/home/jay/research/data/fastbb-20261113/killtools/proofs/0a6367d74a3a45c4.cnf.zst",
+   "fresh": "0a6367d74a3a45c42d36f5a3b4c40deb8cd7bc7fd9897cfc7bde68ce358a5288",
+   "equal_printed": true
+  },
+  "P 775": {
+   "file": "/home/jay/research/data/fastbb-20261113/killtools/proofs/fde9934379fe6068.cnf.zst",
+   "fresh": "fde9934379fe606875eb856fdf48b0cfcb92921bbe3cae6e6ea328aaba0e5a70",
+   "equal_printed": true
+  },
+  "P 800": {
+   "file": "/home/jay/research/data/fastbb-20261113/killtools/proofs/46a21629842bfabd.cnf.zst",
+   "fresh": "46a21629842bfabdda1f5e1e26678b49de34bf2233c757ab5164c97ccb2bec58",
+   "equal_printed": true
+  },
+  "Q 13": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-near9/0006/system.cnf",
+   "fresh": "a921ffdd15f9cb48ee7ab33a2dc6cb72eacd3e4491c45168cf706715ee398d80",
+   "equal_printed": true
+  },
+  "Q 38": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-near9/0031/system.cnf",
+   "fresh": "15453ddc45dcf15f665b82bc1e3d9a55d65f7ec77c0eed6cbb953daa342f69cb",
+   "equal_printed": true
+  },
+  "Q 63": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-near9/0056/system.cnf",
+   "fresh": "91c414d8f677712bf3363ed6332d12f0eaa2c6fb021061a76f44e78dd0e519d3",
+   "equal_printed": true
+  },
+  "Q 88": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-near9/0081/system.cnf",
+   "fresh": "c1f4a75549a40d1caee43325b74d096bfbc43e87904acd42ab84bcb5f92f9473",
+   "equal_printed": true
+  },
+  "Q 113": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-near9/0106/system.cnf",
+   "fresh": "5fc61e28cbe09b67500acc45bfd67eef27265e75617f86a88801864f22b65363",
+   "equal_printed": true
+  },
+  "Q 138": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v3/0003/system.cnf",
+   "fresh": "96f40dc183ceb3d3f9ae1e4fdfef91706de75809803a41aeb4ac8e3271a5452d",
+   "equal_printed": true
+  },
+  "Q 163": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v6/0004/system.cnf",
+   "fresh": "29a26c964615ac40c7584228df2aec18b0a009372fe009b00c1d5bd920e25bdf",
+   "equal_printed": true
+  },
+  "Q 188": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v9/0003/system.cnf",
+   "fresh": "7b8e5fee2e13301f118cdc91449c845d1486577c0c627e3ff915d893abe2ebbb",
+   "equal_printed": true
+  },
+  "U 5": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v14/0005/system.cnf",
+   "fresh": "48a4221a2c0fb79520e6990634f1c7e5c2d34c4af8c0570273122bbcf847d27b",
+   "equal_printed": true
+  },
+  "U 30": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v16/0006/system.cnf",
+   "fresh": "422007513bc217f82b110d80b1e96950232e7cd334fb537ad065d9e70c381dfe",
+   "equal_printed": true
+  },
+  "A 20": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v104p/0000/system.cnf",
+   "fresh": "9a1c5f738ce7a161e309c11ca3573acd5ca2389bba8258aaf293b5833df9ef56",
+   "equal_printed": true
+  },
+  "A 45": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v107p/0011/system.cnf",
+   "fresh": "59386f1e89878144168fbfc0a5adf24c97b1e02c428d4c344d3d6eccdc8e2fa7",
+   "equal_printed": true
+  },
+  "A 70": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v110/0008/system.cnf",
+   "fresh": "19e62f3b6d62c32dee889ba7ae49a4387f48cf7367a330cee4d218dc2d3f7dc9",
+   "equal_printed": true
+  },
+  "A 95": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v115u/0010/system.cnf",
+   "fresh": "4379c5f9b5070b4c67ed820c81053855f74235c67a3463587c64a29b8de46942",
+   "equal_printed": true
+  },
+  "A 120": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v117u/0008/system.cnf",
+   "fresh": "b9a69027432f3ceac90575a4c16b0e8e809298fa6ad60af60e495e7ef1602889",
+   "equal_printed": true
+  },
+  "A 145": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v119u/0005/system.cnf",
+   "fresh": "65acc879af90c194e18454fd52c4a621ae42738bd3c228ecf814ad42a83b472c",
+   "equal_printed": true
+  },
+  "A 170": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v120u/0011/system.cnf",
+   "fresh": "0a192fcec857e33786eebd99bbf1274c1e5f04db3b6aee13de037660f7a2e959",
+   "equal_printed": true
+  },
+  "A 195": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v122u/0007/system.cnf",
+   "fresh": "7b13b9038ef45b643822e9abd89f4a34e9f8b300390f924fbd32acdbf11dcc72",
+   "equal_printed": true
+  },
+  "A 220": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v124u/0010/system.cnf",
+   "fresh": "bc28cf2d9b85332b11696e617bd83f485f5ccf5ff9f4d20679a895ffdac84067",
+   "equal_printed": true
+  },
+  "A 245": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v126u/0011/system.cnf",
+   "fresh": "c53b027f6db85dc2879561648f5986b6f279fd4da3cdec887ff4c3dfb665b273",
+   "equal_printed": true
+  },
+  "A 270": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v128u/0004/system.cnf",
+   "fresh": "e34204a56a1148e7301f313558f72c4ab6bb647d5be88c6c8f62a183c92b885a",
+   "equal_printed": true
+  },
+  "A 295": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v130u/0006/system.cnf",
+   "fresh": "516d505c17e70a4779f0efc52f7d27f64c90a5b95f0f185e1ab8103a7d1b069f",
+   "equal_printed": true
+  },
+  "A 320": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v132u/0005/system.cnf",
+   "fresh": "9b516c10cb3bcbf5679a07713c71ebaf7b5170e9c055082d84a9455f387b7774",
+   "equal_printed": true
+  },
+  "A 345": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v134u/0003/system.cnf",
+   "fresh": "5ac4357c29fa5492356156ad9851fb3d0d60eb6a28ccf24304038751c72dc34b",
+   "equal_printed": true
+  },
+  "A 370": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v135w2u/0007/system.cnf",
+   "fresh": "9f476a2b692c9cfa58ad479b314cbdd6570e056832637ad94a4a0bd2d3ec1535",
+   "equal_printed": true
+  },
+  "A 395": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v136w4u/0000/system.cnf",
+   "fresh": "82ac6adbd2a1c93a24e301b9ffa89c945502fc1ca25d152409c10109aea6e851",
+   "equal_printed": true
+  },
+  "A 420": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v138w1u/0001/system.cnf",
+   "fresh": "022a53c6dc0605df7f219bd054b66744504c39a0add4a7f9f7a562cecde8def1",
+   "equal_printed": true
+  },
+  "A 445": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v139w3u/0002/system.cnf",
+   "fresh": "86f187b8061e87e7ff37396dd7963825b5770366297905303537a381ad7c94f9",
+   "equal_printed": true
+  },
+  "A 470": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v141w1u/0003/system.cnf",
+   "fresh": "c9290f1e34420ed7cd855c20843b68fc89fe74314dfdf3a6ce10edc0e4f04469",
+   "equal_printed": true
+  },
+  "A 495": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v143w1u/0004/system.cnf",
+   "fresh": "d4bda1beb030c278709f46aaf93cf496af13f73dbdbf6f0c8199ebdb9df82afb",
+   "equal_printed": true
+  },
+  "A 520": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v144w2u/0005/system.cnf",
+   "fresh": "2275c1125df34777246b4f67421a433ac857142a3467a0f84678ca6fc0297d4e",
+   "equal_printed": true
+  },
+  "A 545": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v147w1u/0007/system.cnf",
+   "fresh": "581853c00826cc0067bb954e4a844fc069bc2e3025032280be7f4085f3c6ca3b",
+   "equal_printed": true
+  },
+  "A 570": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v150w1u/0000/system.cnf",
+   "fresh": "71450ef4fcc37f1569e8589f4501cb648286174175f4171819752db722150a8f",
+   "equal_printed": true
+  },
+  "A 595": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v151w2u/0001/system.cnf",
+   "fresh": "15fd75039f03cb1a7cf677741607045ae6b27189ef6a90dc8fd83b2de60c196c",
+   "equal_printed": true
+  },
+  "A 620": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v152w3u/0002/system.cnf",
+   "fresh": "6607ce5701a4d2cbcd0a43397d564fa213806b52244bd377a9425abde6a4fc53",
+   "equal_printed": true
+  },
+  "A 645": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v153w2u/0003/system.cnf",
+   "fresh": "b86207168f07d914932ea8a0c943e81117dbb12a3668a905a2653ff4338c2776",
+   "equal_printed": true
+  },
+  "A 670": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v154w3u/0004/system.cnf",
+   "fresh": "c2c9f8cfdd80761863c80f81bd0fd7c3bbcb179c9fbc4763f6f88da1837961a9",
+   "equal_printed": true
+  },
+  "A 695": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v155w1u/0005/system.cnf",
+   "fresh": "3fe6960d4979717f0957aa720e917f20ecf79182faca87025350bd45b2c5ad12",
+   "equal_printed": true
+  },
+  "A 720": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v156w1u/0006/system.cnf",
+   "fresh": "1ffdbc72068d6679d8b52c28806255cfb2c904211c1b588ce143737348b95efc",
+   "equal_printed": true
+  },
+  "A 745": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v157w1u/0007/system.cnf",
+   "fresh": "a99ba142db2926a912081b885209f60ba9fb35b4b5bead3f3ad42cc0b8947b0a",
+   "equal_printed": true
+  },
+  "A 770": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v159w1u/0000/system.cnf",
+   "fresh": "d567d5abb756c26a9ca833f17ee03c529ad844deb4a11d181c06f6f57865885c",
+   "equal_printed": true
+  },
+  "A 795": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v160w1u/0001/system.cnf",
+   "fresh": "fe244d23c25127955302831de9b7dabd81275a7d15ad4aeb3b9697ae0373fe0c",
+   "equal_printed": true
+  },
+  "A 820": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v162w1u/0002/system.cnf",
+   "fresh": "63dcd489c8273abad35452f81efc6d635c25d7a864320f465a6a6a833f4b3c6d",
+   "equal_printed": true
+  },
+  "A 845": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v163w2u/0003/system.cnf",
+   "fresh": "aec239af49d09e6610e5f44f4f99640cff5a415a91e72166b661967762afa85d",
+   "equal_printed": true
+  },
+  "A 870": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v165w2u/0004/system.cnf",
+   "fresh": "dbaba88dfbd826a7142dce519576c49dd59f845c418838d872a9ae8d4cfe43a6",
+   "equal_printed": true
+  },
+  "A 895": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v167w1u/0005/system.cnf",
+   "fresh": "dea57ba7172a632fda03480686123b143744289c87c7b3340a956886668d27ca",
+   "equal_printed": true
+  },
+  "A 920": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v167w6u/0006/system.cnf",
+   "fresh": "f730da86e9069109c9aec7535c6ffd3da9a909703500279dc3d42f05807e5d0c",
+   "equal_printed": true
+  },
+  "A 945": {
+   "file": "/home/jay/research/data/es308-20261114/cuts-v167w9u/0007/system.cnf",
+   "fresh": "70ac105a8acbcf9c5669e376fbe9902c01e15a1ed6d6eb86f66b4dde2e574f7c",
+   "equal_printed": true
+  }
+ },
+ "fresh_sample_all_equal": true,
+ "cadical_controls": {
+  "tiny_0_1_2": {
+   "rc": 10,
+   "expected": 10,
+   "ok": true,
+   "cnf_sha": "b9005f69a86512e73ebd4f66aeb5373b1f7709687ca822cc74bfd0f2e1609f35",
+   "args": "sup 0 1 2"
+  },
+  "row_U_0": {
+   "rc": 20,
+   "expected": 20,
+   "ok": true,
+   "cnf_sha": "da0de4140850787026a5807ae53bffbf5208b0fa7271bced2755672af84a2156",
+   "args": "row U 0"
+  },
+  "U0_minus_last_info": {
+   "rc": 10,
+   "expected": null,
+   "ok": true,
+   "cnf_sha": "3643b4bac7d73f2ea359fb91d9159e7cab3f5b8fc7f3e575b9cd66db01fe2971",
+   "args": "sup 28 36 40 46 63 69 73 81"
+  }
+ },
+ "seconds": 736.1,
+ "ok": true
+}

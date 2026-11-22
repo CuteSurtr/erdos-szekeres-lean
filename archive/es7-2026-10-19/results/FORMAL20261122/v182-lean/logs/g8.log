@@ -1,0 +1,81 @@
+V182Geo/Norm.lean:190:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  B.getD (↑3) 0
+in the target expression
+  2 ≤ B.getD 3 0
+
+φ : Sym2 V → Fin 5
+hφ : IsRainbowS φ
+hXne : ∀ (x x' : Fin 8), 3 ≤ ↑x → 3 ≤ ↑x' → x ≠ x' → φ (eXn x) ≠ φ (eXn x')
+hYne : ∀ (y y' : Fin 8), ↑y < 5 → ↑y' < 5 → y ≠ y' → φ (eYn y) ≠ φ (eYn y')
+hXY :
+  φ (eXn 3) ≠ φ (eYn 4) ∧
+    φ (eXn 3) ≠ φ (eYn 3) ∧
+      φ (eXn 3) ≠ φ (eXn 4) ∧ φ (eYn 4) ≠ φ (eYn 3) ∧ φ (eYn 4) ≠ φ (eXn 4) ∧ φ (eYn 3) ≠ φ (eXn 4)
+ex3 : s(vX0, vXa 3) = eXn 3
+ey4 : s(vXa 3, vY0) = eYn 4
+ey3 : s(vY0, vXa 4) = eYn 3
+ex4 : s(vXa 4, vX0) = eXn 4
+A : Fin 5 → Fin 5 := fun i => φ (eXn ⟨↑i + 3, ⋯⟩)
+hAinj : Function.Injective A
+ρ1 : Fin 5 ≃ Fin 5 := (Equiv.ofBijective A ⋯).symm
+hρ1 : ∀ (i : Fin 5), ρ1 (A i) = i
+hX1 : ∀ (x : Fin 8), 3 ≤ ↑x → ρ1 (φ (eXn x)) = xi x
+L5 : List (Fin 8) := [0, 1, 2, 3, 4]
+hL5 : ∀ z ∈ L5, ↑z < 5
+g : Fin 8 → ℕ := fun y => ↑(ρ1 (φ (eYn y)))
+B : List ℕ := List.map g L5
+hBnd : B.Nodup
+hBlt : ∀ x ∈ B, x < 5
+hBmem : B ∈ perms5
+hBget : ∀ (y : Fin 8), ↑y < 5 → B.getD (↑y) 0 = g y
+v0 : ρ1 (φ (eXn 3)) = 0
+v1 : ρ1 (φ (eXn 4)) = 1
+⊢ 2 ≤ B.getD 3 0
+V182Geo/Norm.lean:202:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  B.getD (↑4) 0
+in the target expression
+  2 ≤ B.getD 4 0
+
+φ : Sym2 V → Fin 5
+hφ : IsRainbowS φ
+hXne : ∀ (x x' : Fin 8), 3 ≤ ↑x → 3 ≤ ↑x' → x ≠ x' → φ (eXn x) ≠ φ (eXn x')
+hYne : ∀ (y y' : Fin 8), ↑y < 5 → ↑y' < 5 → y ≠ y' → φ (eYn y) ≠ φ (eYn y')
+hXY :
+  φ (eXn 3) ≠ φ (eYn 4) ∧
+    φ (eXn 3) ≠ φ (eYn 3) ∧
+      φ (eXn 3) ≠ φ (eXn 4) ∧ φ (eYn 4) ≠ φ (eYn 3) ∧ φ (eYn 4) ≠ φ (eXn 4) ∧ φ (eYn 3) ≠ φ (eXn 4)
+ex3 : s(vX0, vXa 3) = eXn 3
+ey4 : s(vXa 3, vY0) = eYn 4
+ey3 : s(vY0, vXa 4) = eYn 3
+ex4 : s(vXa 4, vX0) = eXn 4
+A : Fin 5 → Fin 5 := fun i => φ (eXn ⟨↑i + 3, ⋯⟩)
+hAinj : Function.Injective A
+ρ1 : Fin 5 ≃ Fin 5 := (Equiv.ofBijective A ⋯).symm
+hρ1 : ∀ (i : Fin 5), ρ1 (A i) = i
+hX1 : ∀ (x : Fin 8), 3 ≤ ↑x → ρ1 (φ (eXn x)) = xi x
+L5 : List (Fin 8) := [0, 1, 2, 3, 4]
+hL5 : ∀ z ∈ L5, ↑z < 5
+g : Fin 8 → ℕ := fun y => ↑(ρ1 (φ (eYn y)))
+B : List ℕ := List.map g L5
+hBnd : B.Nodup
+hBlt : ∀ x ∈ B, x < 5
+hBmem : B ∈ perms5
+hBget : ∀ (y : Fin 8), ↑y < 5 → B.getD (↑y) 0 = g y
+v0 : ρ1 (φ (eXn 3)) = 0
+v1 : ρ1 (φ (eXn 4)) = 1
+hB3 : 2 ≤ B.getD 3 0
+⊢ 2 ≤ B.getD 4 0
+V182Geo/Norm.lean:230:35: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+V182Geo/Norm.lean:124:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+V182Geo/Norm.lean:256:8: error: (kernel) unknown constant 'V182Geo.normalize'
+Command exited with non-zero status 1
+Norm lean wall=16.51 s maxrss=2095912 KB
+EXIT 1

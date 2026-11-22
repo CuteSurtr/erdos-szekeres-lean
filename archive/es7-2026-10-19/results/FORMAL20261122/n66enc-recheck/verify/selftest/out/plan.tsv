@@ -1,0 +1,8 @@
+p_eq	/home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt	-	eq /home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt
+p_diff	/home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt	-	diff /home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt
+p_short	/home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt	-	short /home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt
+p_long	/home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt	-	long /home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt
+p_seg	/home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt	--ignore-initial=0:11 --bytes=43	seg /home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt
+p_segbad	/home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt	--ignore-initial=0:11 --bytes=43	segbad /home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt
+p_fail	/home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt	-	fail /home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt
+p_stdout	-	-	eq /home/jay/research/data/formalize-20261122/n66enc-recheck/verify/selftest/ref/a.txt

@@ -1,0 +1,4 @@
+/home/jay/research/data/formalize-20261122/res118/controls/lean/Res118Ctl/BadLo.lean:9:76: error: Tactic `decide` proved that the proposition
+  ∀ (i : Fin 154), loProfile (ErdosSzekeres.Omission.ResidualCatalog.catalog.getD ↑i []) = true ↔ ↑i ∈ badLo
+is false
+rc=1

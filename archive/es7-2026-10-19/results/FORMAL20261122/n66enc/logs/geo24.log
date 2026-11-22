@@ -1,0 +1,109 @@
+N66Geo/Triple.lean:78:30: error: unsolved goals
+M : Model
+a b c : Fin 70
+hab : a ≠ b
+hbc : b ≠ c
+hac : a ≠ c
+cl : List SLit
+h✝ : ¬(!(can a b && can b c)) = true
+hcl :
+  cl ∈
+    have g3 := [N66Enc.guard a, N66Enc.guard b, N66Enc.guard c];
+    have ab := befLit a b;
+    have bc := befLit b c;
+    have trans := [ab.neg, bc.neg, befLit a c] ++ g3;
+    if (!can a c) = true then [trans]
+    else
+      have o := oriLit a b c;
+      have growth :=
+        List.flatMap
+          (fun cup =>
+            have gate := [ab.neg, bc.neg, if cup = true then o.neg else o];
+            List.map
+              (fun k =>
+                ((gate ++ if k = 1 then [] else [(false, geAtom cup a b k)]) ++
+                    if k = 4 then [] else [(true, geAtom cup b c (k + 1))]) ++
+                  g3)
+              [1, 2, 3, 4])
+          [false, true];
+      [trans] ++ growth ++
+        [[ab.neg, bc.neg, o, (true, Atom.chC 3 a b c)] ++ g3, [ab.neg, bc.neg, o.neg, (true, Atom.chU 3 a b c)] ++ g3]
+pre : List SLit
+h1 : (befLit a b).neg ∈ pre
+h2 : (befLit b c).neg ∈ pre
+h :
+  ∀ (x y z : ℕ),
+    x < M.n →
+      y < M.n →
+        z < M.n →
+          idxOf M.cup x = ↑a →
+            idxOf M.cup y = ↑b →
+              idxOf M.cup z = ↑c →
+                x < y → y < z → ∃ l ∈ pre ++ [N66Enc.guard a, N66Enc.guard b, N66Enc.guard c], Agree M l
+⊢ (N66Enc.guard ?m.102 ∈ pre ∨
+      N66Enc.guard ?m.102 = N66Enc.guard a ∨
+        N66Enc.guard ?m.102 = N66Enc.guard b ∨ N66Enc.guard ?m.102 = N66Enc.guard c) ∧
+    (N66Enc.guard ?m.103 ∈ pre ∨
+        N66Enc.guard ?m.103 = N66Enc.guard a ∨
+          N66Enc.guard ?m.103 = N66Enc.guard b ∨ N66Enc.guard ?m.103 = N66Enc.guard c) ∧
+      (N66Enc.guard ?m.104 ∈ pre ∨
+        N66Enc.guard ?m.104 = N66Enc.guard a ∨
+          N66Enc.guard ?m.104 = N66Enc.guard b ∨ N66Enc.guard ?m.104 = N66Enc.guard c)
+N66Geo/Triple.lean:93:57: error: Tactic `subst` failed: invalid equality proof, it is not of the form (x = t) or (t = x)
+  ∃ a_1,
+    (a_1 = false ∨ a_1 = true) ∧
+      ∃ a_2,
+        (a_2 = 1 ∨ a_2 = 2 ∨ a_2 = 3 ∨ a_2 = 4) ∧
+          (([(befLit a b).neg, (befLit b c).neg, if a_1 = true then (oriLit a b c).neg else oriLit a b c] ++
+                  if a_2 = 1 then [] else [(false, geAtom a_1 a b a_2)]) ++
+                if a_2 = 4 then [] else [(true, geAtom a_1 b c (a_2 + 1))]) ++
+              [N66Enc.guard a, N66Enc.guard b, N66Enc.guard c] =
+            cl
+
+case isFalse.isFalse.inl.inr
+M : Model
+a b c : Fin 70
+hab : a ≠ b
+hbc : b ≠ c
+hac : a ≠ c
+cl : List SLit
+h✝² : ¬(!(can a b && can b c)) = true
+hgen :
+  ∀ (pre : List SLit),
+    (befLit a b).neg ∈ pre →
+      (befLit b c).neg ∈ pre →
+        (∀ (x y z : ℕ),
+            x < M.n →
+              y < M.n →
+                z < M.n →
+                  idxOf M.cup x = ↑a →
+                    idxOf M.cup y = ↑b →
+                      idxOf M.cup z = ↑c →
+                        x < y → y < z → ∃ l ∈ pre ++ [N66Enc.guard a, N66Enc.guard b, N66Enc.guard c], Agree M l) →
+          ∃ l ∈ pre ++ [N66Enc.guard a, N66Enc.guard b, N66Enc.guard c], Agree M l
+htrans :
+  ∃ l ∈ [(befLit a b).neg, (befLit b c).neg, befLit a c] ++ [N66Enc.guard a, N66Enc.guard b, N66Enc.guard c], Agree M l
+h✝¹ : ¬(!can a c) = true
+h✝ :
+  ∃ a_1,
+    (a_1 = false ∨ a_1 = true) ∧
+      ∃ a_2,
+        (a_2 = 1 ∨ a_2 = 2 ∨ a_2 = 3 ∨ a_2 = 4) ∧
+          (([(befLit a b).neg, (befLit b c).neg, if a_1 = true then (oriLit a b c).neg else oriLit a b c] ++
+                  if a_2 = 1 then [] else [(false, geAtom a_1 a b a_2)]) ++
+                if a_2 = 4 then [] else [(true, geAtom a_1 b c (a_2 + 1))]) ++
+              [N66Enc.guard a, N66Enc.guard b, N66Enc.guard c] =
+            cl
+⊢ ∃ l ∈ cl, M.meaning l.2 = l.1
+N66Geo/Triple.lean:91:49: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_append, List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false, List.mem_flatMap,
+  ̲  ̲ ̲ ̲ ̲ ̲List.mem_map] at hcl
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'N66Geo.holds_triple' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Command exited with non-zero status 1
+Triple lean wall=2.61 s maxrss=3188972 KB
+rc=1

@@ -1,0 +1,134 @@
+{
+ "rebuilds": {
+  "CompactChecker.FcatZ": {
+   "job": "sup-FcatZ",
+   "unit": "esr-ag-fv4a-sup-FcatZ",
+   "utc_end": "2026-11-22T07:51:05Z",
+   "seconds": 2.7,
+   "gate": {
+    "yield": false,
+    "tctl": 85.4,
+    "cpu_free": 4,
+    "ag_mb": 190,
+    "esr_mb": 2033
+   },
+   "systemd_run_rc": 0,
+   "systemd_run_stderr": "",
+   "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/CompactChecker/FcatZ.lean",
+   "src_sha256": "da544bd95576acb24319931d9673b0c8431e7b0bade7f8c921df4128c457c040",
+   "lean_rc": 0,
+   "exit_status": 0,
+   "signal": false,
+   "wall_s": 2.51,
+   "user_s": 2.06,
+   "max_rss_mb": 3107,
+   "major_faults": 0,
+   "cg_peak_mb": 377,
+   "anon_peak_mb": 289,
+   "killed_80": false,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   },
+   "errors": [],
+   "sorry": false,
+   "axioms": [
+    [
+     "CompactChecker.fcatZ_wf",
+     [
+      "propext"
+     ]
+    ]
+   ],
+   "olean": "/home/jay/research/data/formalize-20261122/fv304-audit/recompile/CompactChecker/FcatZ.olean",
+   "olean_sha256": "7aba4aa713ddcdf9eb91a327874ef2e8e36a5a4c76c816ae2f9cccee583f1c2e",
+   "fv304_olean_sha256": "7aba4aa713ddcdf9eb91a327874ef2e8e36a5a4c76c816ae2f9cccee583f1c2e",
+   "byte_identical": true
+  },
+  "CompactChecker.BridgeZ": {
+   "job": "sup-BridgeZ",
+   "unit": "esr-ag-fv4a-sup-BridgeZ",
+   "utc_end": "2026-11-22T07:51:08Z",
+   "seconds": 3.1,
+   "gate": {
+    "yield": false,
+    "tctl": 85.0,
+    "cpu_free": 4,
+    "ag_mb": 329,
+    "esr_mb": 2172
+   },
+   "systemd_run_rc": 0,
+   "systemd_run_stderr": "",
+   "src": "/home/jay/research/data/formalize-20261122/fv304-audit/src/CompactChecker/BridgeZ.lean",
+   "src_sha256": "382bf3bc9ae0b5ea720f1603bd1e56d740640e399946d162f0f8ad65bb3bb0ea",
+   "lean_rc": 0,
+   "exit_status": 0,
+   "signal": false,
+   "wall_s": 2.89,
+   "user_s": 2.48,
+   "max_rss_mb": 3147,
+   "major_faults": 0,
+   "cg_peak_mb": 335,
+   "anon_peak_mb": 244,
+   "killed_80": false,
+   "events": {
+    "low": "0",
+    "high": "0",
+    "max": "0",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0",
+    "sock_throttled": "0"
+   },
+   "errors": [],
+   "sorry": false,
+   "axioms": [
+    [
+     "CompactChecker.BridgeZ.get_eq",
+     [
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "CompactChecker.BridgeZ.zsupp",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "CompactChecker.BridgeZ.fcatZ_rows",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ],
+    [
+     "CompactChecker.BridgeZ.balanced_z_of_root",
+     [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ]
+    ]
+   ],
+   "olean": "/home/jay/research/data/formalize-20261122/fv304-audit/recompile/CompactChecker/BridgeZ.olean",
+   "olean_sha256": "4481a28c247d945807e62465971975ab344c0a571e59e8ad4a949efc5ca2630f",
+   "fv304_olean_sha256": "4481a28c247d945807e62465971975ab344c0a571e59e8ad4a949efc5ca2630f",
+   "byte_identical": true
+  }
+ },
+ "problems": [],
+ "findings": [],
+ "ok": true,
+ "utc_end": "2026-11-22T07:51:08Z",
+ "seconds": 5.9
+}

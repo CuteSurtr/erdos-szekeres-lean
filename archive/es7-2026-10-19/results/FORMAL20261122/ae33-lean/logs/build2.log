@@ -1,0 +1,11 @@
+Gen lean wall=0.67 s maxrss=428644 KB
+Data lean wall=0.42 s maxrss=419144 KB
+AE33Enc/Main.lean:20:8: warning: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Main lean wall=0.31 s maxrss=417820 KB
+'AE33.mem_cnf' depends on axioms: [propext, Quot.sound]
+'AE33.parse_cnfText' depends on axioms: [propext, Quot.sound]
+'AE33.texts_iff_cnfs' depends on axioms: [propext, Quot.sound]
+Bridge lean wall=0.41 s maxrss=421848 KB
+rc=0

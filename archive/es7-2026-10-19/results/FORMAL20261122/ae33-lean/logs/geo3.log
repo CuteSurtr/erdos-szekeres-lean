@@ -1,0 +1,384 @@
+AE33Geo/Sem.lean:69:35: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≥ 1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑(j, i, -1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:45: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≥ 1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑(j, i, -1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≥ 1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑(j, i, -1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:35: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≤ -1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑(j, i, -1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:45: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≤ -1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑(j, i, -1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≥ 1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑(j, i, -1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:25: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≥ 1
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑k
+ d := ↑(j, i, -1).2.1
+AE33Geo/Sem.lean:69:35: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑k
+ d := ↑(j, i, -1).2.1
+AE33Geo/Sem.lean:69:45: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑k
+ d := ↑(j, i, -1).2.1
+AE33Geo/Sem.lean:69:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≥ 1
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑k
+ d := ↑(j, i, -1).2.1
+AE33Geo/Sem.lean:69:25: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  b - d ≤ 0
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑k
+ d := ↑(j, i, -1).2.1
+AE33Geo/Sem.lean:69:35: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  b - d ≤ 0
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑k
+ d := ↑(j, i, -1).2.1
+AE33Geo/Sem.lean:69:45: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  b - d ≤ 0
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑k
+ d := ↑(j, i, -1).2.1
+AE33Geo/Sem.lean:69:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  b - d ≤ 0
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑i
+ b := ↑j
+ c := ↑k
+ d := ↑(j, i, -1).2.1
+AE33Geo/Sem.lean:69:35: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≥ 1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑(i, j, 1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:45: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≥ 1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑(i, j, 1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≥ 1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑(i, j, 1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:35: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≤ -1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑(i, j, 1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:45: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≤ -1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑(i, j, 1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  b - d ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≥ 1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑(i, j, 1).2.1
+ d := ↑k
+AE33Geo/Sem.lean:69:25: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑k
+ d := ↑(i, j, 1).2.1
+AE33Geo/Sem.lean:69:35: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑k
+ d := ↑(i, j, 1).2.1
+AE33Geo/Sem.lean:69:45: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑k
+ d := ↑(i, j, 1).2.1
+AE33Geo/Sem.lean:69:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≥ 1
+where
+ a := ↑j
+ b := ↑i
+ c := ↑k
+ d := ↑(i, j, 1).2.1
+AE33Geo/Sem.lean:106:38: error: No goals to be solved
+AE33Geo/Sem.lean:125:29: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≤ -1
+where
+ a := x
+AE33Geo/Sem.lean:128:29: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 1
+where
+ a := x
+AE33Geo/Sem.lean:128:29: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+Command exited with non-zero status 1
+Sem lean wall=8.95 s maxrss=3361612 KB
+rc=1

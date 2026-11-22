@@ -1,0 +1,219 @@
+[
+ {
+  "name": "OmissionBalancedZ.composition_304_z",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/BalancedBudgetsZ.lean",
+  "statement": "OmissionBalancedZ.composition_304_z (trees : OmissionBalancedZ.ExcludesHoleBudgetZ 67) (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 304 8",
+  "axioms": "'OmissionBalancedZ.composition_304_z' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZ.ExcludesHoleBudgetZ 67); (n66 : OmissionZRow.N66Bound 55); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 304 8"
+ },
+ {
+  "name": "OmissionBalancedZ.composition_305_z",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/BalancedBudgetsZ.lean",
+  "statement": "OmissionBalancedZ.composition_305_z (trees : OmissionBalancedZ.ExcludesHoleBudgetZ 66) (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 305 8",
+  "axioms": "'OmissionBalancedZ.composition_305_z' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZ.ExcludesHoleBudgetZ 66); (n66 : OmissionZRow.N66Bound 55); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 305 8"
+ },
+ {
+  "name": "OmissionBalancedZF.composition_304_zf",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/FixedStatesZ.lean",
+  "statement": "OmissionBalancedZF.composition_304_zf (trees : OmissionBalancedZF.ExcludesHoleBudgetZF 67) (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 304 8",
+  "axioms": "'OmissionBalancedZF.composition_304_zf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZF.ExcludesHoleBudgetZF 67); (n66 : OmissionZRow.N66Bound 55); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 304 8"
+ },
+ {
+  "name": "OmissionBalancedZF.composition_303_zf",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/FixedStatesZ.lean",
+  "statement": "OmissionBalancedZF.composition_303_zf (trees : OmissionBalancedZF.ExcludesHoleBudgetZF 68) (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 303 8",
+  "axioms": "'OmissionBalancedZF.composition_303_zf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZF.ExcludesHoleBudgetZF 68); (n66 : OmissionZRow.N66Bound 55); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 303 8"
+ },
+ {
+  "name": "OmissionBalancedZZsF.composition_303_zzsf",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZs.lean",
+  "statement": "OmissionBalancedZZsF.composition_303_zzsf (trees : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 68) (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 303 8",
+  "axioms": "'OmissionBalancedZZsF.composition_303_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 68); (n66 : OmissionZRow.N66Bound 55); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 303 8"
+ },
+ {
+  "name": "OmissionBalancedZZsF.composition_302_zzsf",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZs.lean",
+  "statement": "OmissionBalancedZZsF.composition_302_zzsf (trees : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 69) (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 302 8",
+  "axioms": "'OmissionBalancedZZsF.composition_302_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 69); (n66 : OmissionZRow.N66Bound 55); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 302 8"
+ },
+ {
+  "name": "OmissionBalancedZZsF.composition_301_zzsf",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZs.lean",
+  "statement": "OmissionBalancedZZsF.composition_301_zzsf (trees : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 70) (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 301 8",
+  "axioms": "'OmissionBalancedZZsF.composition_301_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 70); (n66 : OmissionZRow.N66Bound 55); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 301 8"
+ },
+ {
+  "name": "OmissionBalancedZZsF.composition_300_zzsf",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZs.lean",
+  "statement": "OmissionBalancedZZsF.composition_300_zzsf (trees : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 71) (n66 : OmissionZRow.N66Bound 55) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 300 8",
+  "axioms": "'OmissionBalancedZZsF.composition_300_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 71); (n66 : OmissionZRow.N66Bound 55); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 300 8"
+ },
+ {
+  "name": "OmissionBalancedZZsN.composition_302_n54",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZsN.lean",
+  "statement": "OmissionBalancedZZsN.composition_302_n54 (trees : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69) (n66 : OmissionZRow.N66Bound 54) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 302 8",
+  "axioms": "'OmissionBalancedZZsN.composition_302_n54' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69); (n66 : OmissionZRow.N66Bound 54); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 302 8"
+ },
+ {
+  "name": "OmissionBalancedZZsN.composition_301_n53",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZsN.lean",
+  "statement": "OmissionBalancedZZsN.composition_301_n53 (trees : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 17 70) (n66 : OmissionZRow.N66Bound 53) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 301 8",
+  "axioms": "'OmissionBalancedZZsN.composition_301_n53' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(trees : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 17 70); (n66 : OmissionZRow.N66Bound 53); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 301 8"
+ },
+ {
+  "name": "composition_304",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES304N20261119/Composition304.lean",
+  "statement": "composition_304 (hB : ErdosSzekeres.Omission.Partition.BalancedBound 184) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 304 8",
+  "axioms": "'composition_304' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(hB : ErdosSzekeres.Omission.Partition.BalancedBound 184); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 304 8"
+ },
+ {
+  "name": "composition_303",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/Composition303.lean",
+  "statement": "composition_303 (hB : ErdosSzekeres.Omission.Partition.BalancedBound 183) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 303 8",
+  "axioms": "'composition_303' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(hB : ErdosSzekeres.Omission.Partition.BalancedBound 183); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 303 8"
+ },
+ {
+  "name": "composition_305",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/Composition305.lean",
+  "statement": "composition_305 (hB : ErdosSzekeres.Omission.Partition.BalancedBound 185) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 305 8",
+  "axioms": "'composition_305' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(hB : ErdosSzekeres.Omission.Partition.BalancedBound 185); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 305 8"
+ },
+ {
+  "name": "composition_306",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES306N20261119/Composition306.lean",
+  "statement": "composition_306 (hB : ErdosSzekeres.Omission.Partition.BalancedBound 186) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) : ErdosSzekeres.ForcesConvexNGon 306 8",
+  "axioms": "'composition_306' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(hB : ErdosSzekeres.Omission.Partition.BalancedBound 186); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118)  |  conclusion: ErdosSzekeres.ForcesConvexNGon 306 8"
+ },
+ {
+  "name": "OmissionZRow.z_row",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/LemmaZ.lean",
+  "statement": "OmissionZRow.z_row {n : ℕ} (n66 : OmissionZRow.N66Bound 55) (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7) (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ)) : 15 ≤ (OmissionZRow.Z \\ c.occupied noCap noCup).card",
+  "axioms": "'OmissionZRow.z_row' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(n66 : OmissionZRow.N66Bound 55); (c : ErdosSzekeres.Omission.Configuration n); (noCap : ¬c.HasCap 7); (noCup : ¬c.HasCup 7); (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ))  |  conclusion: 15 ≤ (OmissionZRow.Z \\ c.occupied noCap noCup).card"
+ },
+ {
+  "name": "OmissionZStarRow.zs_row",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/LemmaZStar.lean",
+  "statement": "OmissionZStarRow.zs_row {n : ℕ} (n66 : OmissionZRow.N66Bound 55) (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7) (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ)) : 15 ≤ (OmissionZStarRow.Zs \\ c.occupied noCap noCup).card",
+  "axioms": "'OmissionZStarRow.zs_row' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(n66 : OmissionZRow.N66Bound 55); (c : ErdosSzekeres.Omission.Configuration n); (noCap : ¬c.HasCap 7); (noCup : ¬c.HasCup 7); (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ))  |  conclusion: 15 ≤ (OmissionZStarRow.Zs \\ c.occupied noCap noCup).card"
+ },
+ {
+  "name": "OmissionBalancedZZsN.z_row_of",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZsN.lean",
+  "statement": "OmissionBalancedZZsN.z_row_of {B n : ℕ} (n66 : OmissionZRow.N66Bound B) (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7) (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ)) : 70 - B ≤ (OmissionZRow.Z \\ c.occupied noCap noCup).card",
+  "axioms": "'OmissionBalancedZZsN.z_row_of' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(n66 : OmissionZRow.N66Bound B); (c : ErdosSzekeres.Omission.Configuration n); (noCap : ¬c.HasCap 7); (noCup : ¬c.HasCup 7); (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ))  |  conclusion: 70 - B ≤ (OmissionZRow.Z \\ c.occupied noCap noCup).card"
+ },
+ {
+  "name": "OmissionBalancedZZsN.zs_row_of",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZsN.lean",
+  "statement": "OmissionBalancedZZsN.zs_row_of {B n : ℕ} (n66 : OmissionZRow.N66Bound B) (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7) (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ)) : 70 - B ≤ (OmissionZStarRow.Zs \\ c.occupied noCap noCup).card",
+  "axioms": "'OmissionBalancedZZsN.zs_row_of' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(n66 : OmissionZRow.N66Bound B); (c : ErdosSzekeres.Omission.Configuration n); (noCap : ¬c.HasCap 7); (noCup : ¬c.HasCup 7); (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ))  |  conclusion: 70 - B ≤ (OmissionZStarRow.Zs \\ c.occupied noCap noCup).card"
+ },
+ {
+  "name": "OmissionBalancedZ.balanced_bound_of_hole_budget_z",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/BalancedBudgetsZ.lean",
+  "statement": "OmissionBalancedZ.balanced_bound_of_hole_budget_z {budget : ℕ} (n66 : OmissionZRow.N66Bound 55) (verified : OmissionBalancedZ.ExcludesHoleBudgetZ budget) : ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)",
+  "axioms": "'OmissionBalancedZ.balanced_bound_of_hole_budget_z' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(n66 : OmissionZRow.N66Bound 55); (verified : OmissionBalancedZ.ExcludesHoleBudgetZ budget)  |  conclusion: ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)"
+ },
+ {
+  "name": "OmissionBalancedZZsF.balanced_bound_of_hole_budget_zzsf",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZs.lean",
+  "statement": "OmissionBalancedZZsF.balanced_bound_of_hole_budget_zzsf {budget : ℕ} (small : budget ≤ 249) (n66 : OmissionZRow.N66Bound 55) (verified : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF budget) : ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)",
+  "axioms": "'OmissionBalancedZZsF.balanced_bound_of_hole_budget_zzsf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(small : budget ≤ 249); (n66 : OmissionZRow.N66Bound 55); (verified : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF budget)  |  conclusion: ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)"
+ },
+ {
+  "name": "OmissionBalancedZZsN.balanced_bound_of_hole_budget_zzsn",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZsN.lean",
+  "statement": "OmissionBalancedZZsN.balanced_bound_of_hole_budget_zzsn {B budget : ℕ} (small : budget ≤ 249) (n66 : OmissionZRow.N66Bound B) (verified : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN (70 - B) budget) : ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)",
+  "axioms": "'OmissionBalancedZZsN.balanced_bound_of_hole_budget_zzsn' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(small : budget ≤ 249); (n66 : OmissionZRow.N66Bound B); (verified : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN (70 - B) budget)  |  conclusion: ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)"
+ },
+ {
+  "name": "OmissionZRow.Z_eq",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/LemmaZ.lean",
+  "statement": "OmissionZRow.Z_eq (i : Fin 252) : i ∈ OmissionZRow.Z ↔ ↑i ∈ OmissionZRow.zIndices",
+  "axioms": "'OmissionZRow.Z_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(i : Fin 252)  |  conclusion: i ∈ OmissionZRow.Z ↔ ↑i ∈ OmissionZRow.zIndices"
+ },
+ {
+  "name": "OmissionZStarRow.Zs_eq",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/LemmaZStar.lean",
+  "statement": "OmissionZStarRow.Zs_eq (i : Fin 252) : i ∈ OmissionZStarRow.Zs ↔ ↑i ∈ OmissionZStarRow.zsIndices",
+  "axioms": "'OmissionZStarRow.Zs_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(i : Fin 252)  |  conclusion: i ∈ OmissionZStarRow.Zs ↔ ↑i ∈ OmissionZStarRow.zsIndices"
+ },
+ {
+  "name": "OmissionBalancedZ.feasible_holes_z",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/BalancedBudgetsZ.lean",
+  "statement": "OmissionBalancedZ.feasible_holes_z (n66 : OmissionZRow.N66Bound 55) {n : ℕ} (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7) (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ)) : ∃ holes, (∀ (i : Fin 252), holes i ≤ 1) ∧ (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧ (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧ 15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ ∑ i, holes i + n = 252",
+  "axioms": "'OmissionBalancedZ.feasible_holes_z' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(n66 : OmissionZRow.N66Bound 55); (c : ErdosSzekeres.Omission.Configuration n); (noCap : ¬c.HasCap 7); (noCup : ¬c.HasCup 7); (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ))  |  conclusion: ∃ holes, (∀ (i : Fin 252), holes i ≤ 1) ∧ (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧ (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧ 15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ ∑ i, holes i + n = 252"
+ },
+ {
+  "name": "OmissionBalancedZF.feasible_holes_zf",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/FixedStatesZ.lean",
+  "statement": "OmissionBalancedZF.feasible_holes_zf (n66 : OmissionZRow.N66Bound 55) {n : ℕ} (c : ErdosSzekeres.Omission.Configuration n) (noCap : ¬c.HasCap 7) (noCup : ¬c.HasCup 7) (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ)) (hn : 2 ≤ n) : ∃ holes, holes 0 = 0 ∧ holes 1 = 0 ∧ (∀ (i : Fin 252), holes i ≤ 1) ∧ (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧ (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧ 15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ ∑ i, holes i + n = 252",
+  "axioms": "'OmissionBalancedZF.feasible_holes_zf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(n66 : OmissionZRow.N66Bound 55); (c : ErdosSzekeres.Omission.Configuration n); (noCap : ¬c.HasCap 7); (noCup : ¬c.HasCup 7); (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ)); (hn : 2 ≤ n)  |  conclusion: ∃ holes, holes 0 = 0 ∧ holes 1 = 0 ∧ (∀ (i : Fin 252), holes i ≤ 1) ∧ (∀ (r : Fin 2685), OmissionBalanced.demand r ≤ ∑ i ∈ OmissionBalanced.support r, holes i) ∧ (∀ (r : Fin 446), BalancedCoverCutsV2.demand r ≤ ∑ i ∈ BalancedCoverCutsV2.support r, holes i) ∧ 15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ ∑ i, holes i + n = 252"
+ },
+ {
+  "name": "OmissionBalancedZF.balanced_bound_of_hole_budget_zf",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/FixedStatesZ.lean",
+  "statement": "OmissionBalancedZF.balanced_bound_of_hole_budget_zf {budget : ℕ} (small : budget ≤ 249) (n66 : OmissionZRow.N66Bound 55) (verified : OmissionBalancedZF.ExcludesHoleBudgetZF budget) : ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)",
+  "axioms": "'OmissionBalancedZF.balanced_bound_of_hole_budget_zf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(small : budget ≤ 249); (n66 : OmissionZRow.N66Bound 55); (verified : OmissionBalancedZF.ExcludesHoleBudgetZF budget)  |  conclusion: ErdosSzekeres.Omission.Partition.BalancedBound (251 - budget)"
+ },
+ {
+  "name": "OmissionBalancedZZsN.zzsn_55_iff",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/BalancedBudgetsZZsN.lean",
+  "statement": "OmissionBalancedZZsN.zzsn_55_iff (b : ℕ) : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN (70 - 55) b ↔ OmissionBalancedZZsF.ExcludesHoleBudgetZZsF b",
+  "axioms": "'OmissionBalancedZZsN.zzsn_55_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(b : ℕ)  |  conclusion: OmissionBalancedZZsN.ExcludesHoleBudgetZZsN (70 - 55) b ↔ OmissionBalancedZZsF.ExcludesHoleBudgetZZsF b"
+ },
+ {
+  "name": "avoiding_302",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES303N20261120/Composition303.lean",
+  "statement": "avoiding_302 (hB : ErdosSzekeres.Omission.Partition.BalancedBound 183) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) (S : Finset ErdosSzekeres.Point) (gp : ErdosSzekeres.GeneralPosition S) (avoid : ¬ErdosSzekeres.HasConvexNGon 8 S) : S.card ≤ 302",
+  "axioms": "'avoiding_302' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(hB : ErdosSzekeres.Omission.Partition.BalancedBound 183); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118); (S : Finset ErdosSzekeres.Point); (gp : ErdosSzekeres.GeneralPosition S); (avoid : ¬ErdosSzekeres.HasConvexNGon 8 S)  |  conclusion: S.card ≤ 302"
+ },
+ {
+  "name": "avoiding_303",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES304N20261119/Composition304.lean",
+  "statement": "avoiding_303 (hB : ErdosSzekeres.Omission.Partition.BalancedBound 184) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) (S : Finset ErdosSzekeres.Point) (gp : ErdosSzekeres.GeneralPosition S) (avoid : ¬ErdosSzekeres.HasConvexNGon 8 S) : S.card ≤ 303",
+  "axioms": "'avoiding_303' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(hB : ErdosSzekeres.Omission.Partition.BalancedBound 184); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118); (S : Finset ErdosSzekeres.Point); (gp : ErdosSzekeres.GeneralPosition S); (avoid : ¬ErdosSzekeres.HasConvexNGon 8 S)  |  conclusion: S.card ≤ 303"
+ },
+ {
+  "name": "avoiding_304",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119/Composition305.lean",
+  "statement": "avoiding_304 (hB : ErdosSzekeres.Omission.Partition.BalancedBound 185) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) (S : Finset ErdosSzekeres.Point) (gp : ErdosSzekeres.GeneralPosition S) (avoid : ¬ErdosSzekeres.HasConvexNGon 8 S) : S.card ≤ 304",
+  "axioms": "'avoiding_304' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(hB : ErdosSzekeres.Omission.Partition.BalancedBound 185); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118); (S : Finset ErdosSzekeres.Point); (gp : ErdosSzekeres.GeneralPosition S); (avoid : ¬ErdosSzekeres.HasConvexNGon 8 S)  |  conclusion: S.card ≤ 304"
+ },
+ {
+  "name": "avoiding_305",
+  "file": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES306N20261119/Composition306.lean",
+  "statement": "avoiding_305 (hB : ErdosSzekeres.Omission.Partition.BalancedBound 186) (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118) (S : Finset ErdosSzekeres.Point) (gp : ErdosSzekeres.GeneralPosition S) (avoid : ¬ErdosSzekeres.HasConvexNGon 8 S) : S.card ≤ 305",
+  "axioms": "'avoiding_305' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "hypotheses": "(hB : ErdosSzekeres.Omission.Partition.BalancedBound 186); (hR : ErdosSzekeres.Omission.Partition.ResidualBound 118); (S : Finset ErdosSzekeres.Point); (gp : ErdosSzekeres.GeneralPosition S); (avoid : ¬ErdosSzekeres.HasConvexNGon 8 S)  |  conclusion: S.card ≤ 305"
+ }
+]

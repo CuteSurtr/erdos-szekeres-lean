@@ -1,0 +1,39 @@
+V182Chk/Walk lean wall=0.68 s maxrss=389404 KB
+V182Geo/Six.lean:83:6: error(lean.unknownIdentifier): Unknown constant `Nat.lor_comm`
+V182Geo/Six.lean:81:62: error: unsolved goals
+m m' : ℕ
+⊢ col6Big >>> (3 * ((8 * if popT (m ||| m') = 4 then m ||| m' else m &&& m') + popT ((m ^^^ m') - 1))) % 8 % 6 =
+    col6Big >>> (3 * ((8 * if popT (m' ||| m) = 4 then m' ||| m else m' &&& m) + popT ((m' ^^^ m) - 1))) % 8 % 6
+V182Geo/Six.lean:92:8: warning: unused variable `u`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+V182Geo/Six.lean:92:10: warning: unused variable `v`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Command exited with non-zero status 1
+V182Geo/Six lean wall=1.16 s maxrss=1633312 KB
+Command exited with non-zero status 1
+	Command being timed: "/home/jay/research/data/formalize-20261122/v182-lean/tools/build_mod.sh V182Chk/Walk V182Geo/Six"
+	User time (seconds): 1.56
+	System time (seconds): 0.27
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.85
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1633312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 48387
+	Voluntary context switches: 570
+	Involuntary context switches: 441
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1208
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+EXIT 1

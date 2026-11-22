@@ -1,0 +1,216 @@
+{
+ "roots": [
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean",
+  "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean",
+  "/home/jay/research/data/bal186-20261119/zrow/leanz/olean",
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean",
+  "/home/jay/research/data/formalize-20261122/res118/olean",
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean"
+ ],
+ "modules": 9677,
+ "duplicates": {},
+ "key_module_roots": {
+  "RowGeo/Blocks.olean": [
+   "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean"
+  ],
+  "RowGeo/Sound.olean": [
+   "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean"
+  ],
+  "RowGeo/Text.olean": [
+   "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean"
+  ],
+  "RowEnc/Enc.olean": [
+   "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean"
+  ],
+  "RowEnc/States.olean": [
+   "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean"
+  ],
+  "RowEnc/StatesData.olean": [
+   "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean"
+  ],
+  "Res118/Final.olean": [
+   "/home/jay/research/data/formalize-20261122/res118/olean"
+  ],
+  "Res118/Glue.olean": [
+   "/home/jay/research/data/formalize-20261122/res118/olean"
+  ],
+  "Res118/Rows.olean": [
+   "/home/jay/research/data/formalize-20261122/res118/olean"
+  ],
+  "EncB/Compose.olean": [
+   "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean"
+  ],
+  "EncB/Render.olean": [
+   "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean"
+  ],
+  "EncB/Dimacs.olean": [
+   "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean"
+  ],
+  "ErdosSzekeres/Omission/CoupledSemantics.olean": [
+   "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean"
+  ],
+  "ErdosSzekeres/Omission/Partition.olean": [
+   "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean"
+  ],
+  "Residual32Bridge2650/Rows.olean": [
+   "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean"
+  ],
+  "Transfer.olean": [
+   "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean"
+  ],
+  "LemmaZ.olean": [
+   "/home/jay/research/data/bal186-20261119/zrow/leanz/olean"
+  ],
+  "ZeroState.olean": [
+   "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean"
+  ]
+ },
+ "scan": {
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowEnc/Enc.lean": {
+   "decide": [
+    101,
+    130,
+    247
+   ]
+  },
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowEnc/Main.lean": {},
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowEnc/States.lean": {
+   "decide": [
+    26,
+    60,
+    60
+   ]
+  },
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowEnc/StatesData.lean": {},
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowGeo/Blocks.lean": {
+   "set_option": [
+    43,
+    45,
+    47,
+    49
+   ],
+   "decide": [
+    44,
+    46,
+    48,
+    50
+   ]
+  },
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowGeo/Bridge.lean": {
+   "variable": [
+    15,
+    54,
+    123
+   ],
+   "include": [
+    55
+   ],
+   "noncomputable": [
+    127
+   ],
+   "decide": [
+    127
+   ]
+  },
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowGeo/Decode.lean": {
+   "set_option": [
+    31
+   ]
+  },
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowGeo/Geo.lean": {
+   "set_option": [
+    24
+   ],
+   "decide": [
+    25,
+    190
+   ]
+  },
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowGeo/Members.lean": {},
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowGeo/Sound.lean": {
+   "instance": [
+    22
+   ],
+   "variable": [
+    30,
+    77
+   ],
+   "include": [
+    79
+   ],
+   "decide": [
+    113
+   ]
+  },
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/lean/RowGeo/Text.lean": {},
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/EncB/Render.lean": {
+   "decide": [
+    326,
+    328,
+    330,
+    332,
+    334,
+    335,
+    337,
+    339,
+    340,
+    341,
+    342,
+    343,
+    "... 50 total"
+   ]
+  },
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/EncB/Dimacs.lean": {
+   "decide": [
+    191
+   ]
+  },
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/EncB/Compose.lean": {
+   "decide": [
+    40
+   ]
+  },
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/EncB/Satisfiable.lean": {},
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/EncB/Gen.lean": {
+   "decide": [
+    92,
+    138,
+    177,
+    177,
+    188,
+    202,
+    202
+   ]
+  },
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/EncB/Coded.lean": {
+   "decide": [
+    171,
+    171,
+    376,
+    428,
+    428,
+    429,
+    432,
+    432
+   ],
+   "noncomputable": [
+    375
+   ]
+  },
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/EncB/Cover.lean": {
+   "decide": [
+    103
+   ]
+  }
+ }
+}

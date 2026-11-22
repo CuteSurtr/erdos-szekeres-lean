@@ -1,0 +1,172 @@
+EncB.Gen cc wall=2.23 s maxrss=113792 KB
+EncB.Dimacs cc wall=0.12 s maxrss=78564 KB
+EncB.Coded cc wall=1.12 s maxrss=93412 KB
+EncB.Cover cc wall=0.08 s maxrss=78196 KB
+EncB.Render cc wall=0.44 s maxrss=83444 KB
+States cc wall=0.38 s maxrss=87924 KB
+Atoms cc wall=0.29 s maxrss=86124 KB
+Clauses cc wall=0.56 s maxrss=88752 KB
+Alloc cc wall=0.20 s maxrss=82608 KB
+Cover cc wall=0.09 s maxrss=78668 KB
+Rows cc wall=0.09 s maxrss=79524 KB
+Full cc wall=0.07 s maxrss=78416 KB
+Print cc wall=0.18 s maxrss=82772 KB
+Main cc wall=0.65 s maxrss=103692 KB
+98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46  /home/jay/research/data/formalize-20261122/n66enc/build/bin/n66print
+0 oooooo_40o_52o_46o_44o_45o_39o MATCH
+1 oooooo_40o_52o_46o_44o_45o_39h MATCH
+2 oooooo_40o_52o_46o_44o_45h MATCH
+3 oooooo_40o_52o_46o_44h MATCH
+4 oooooo_40o_52o_46h_44o MATCH
+5 oooooo_40o_52o_46h_44h MATCH
+6 oooooo_40o_52h_46o_44o MATCH
+7 oooooo_40o_52h_46o_44h MATCH
+8 oooooo_40o_52h_46h MATCH
+9 oooooo_40h_52o_46o_44o MATCH
+10 oooooo_40h_52o_46o_44h MATCH
+11 oooooo_40h_52o_46h MATCH
+12 oooooo_40h_52h MATCH
+13 oooooh MATCH
+14 ooooho_40o_52o_46o MATCH
+15 ooooho_40o_52o_46h MATCH
+16 ooooho_40o_52h MATCH
+17 ooooho_40h MATCH
+18 oooohh_23o MATCH
+19 oooohh_23h MATCH
+20 ooohoo_40o_52o_46o MATCH
+21 ooohoo_40o_52o_46h MATCH
+22 ooohoo_40o_52h MATCH
+23 ooohoo_40h_52o_46o MATCH
+24 ooohoo_40h_52o_46h MATCH
+25 ooohoo_40h_52h MATCH
+26 ooohoh_23o_49o MATCH
+27 ooohoh_23o_49h MATCH
+28 ooohoh_23h MATCH
+29 ooohho_23o_49o MATCH
+30 ooohho_23o_49h MATCH
+31 ooohho_23h_49o MATCH
+32 ooohho_23h_49h MATCH
+33 ooohhh MATCH
+34 oohooo_40o_52o_46o MATCH
+35 oohooo_40o_52o_46h MATCH
+36 oohooo_40o_52h MATCH
+37 oohooo_40h MATCH
+38 oohooh_23o MATCH
+39 oohooh_23h MATCH
+40 oohoho_23o MATCH
+41 oohoho_23h MATCH
+42 oohohh MATCH
+43 oohhoo_23o_40o_52o MATCH
+44 oohhoo_23o_40o_52h MATCH
+45 oohhoo_23o_40h MATCH
+46 oohhoo_23h_49o_44o MATCH
+47 oohhoo_23h_49o_44h MATCH
+48 oohhoo_23h_49h MATCH
+49 oohhoh_23o_49o MATCH
+50 oohhoh_23o_49h MATCH
+51 oohhoh_23h MATCH
+52 oohhho_23o_49o_44o MATCH
+53 oohhho_23o_49o_44h MATCH
+54 oohhho_23o_49h MATCH
+55 oohhho_23h MATCH
+56 oohhhh MATCH
+57 ohoooo_40o_52o_46o MATCH
+58 ohoooo_40o_52o_46h MATCH
+59 ohoooo_40o_52h MATCH
+60 ohoooo_40h MATCH
+61 ohoooh_23o MATCH
+62 ohoooh_23h MATCH
+63 ohooho_23o MATCH
+64 ohooho_23h MATCH
+65 ohoohh MATCH
+66 ohohoo_23o_40o_52o MATCH
+67 ohohoo_23o_40o_52h MATCH
+68 ohohoo_23o_40h MATCH
+69 ohohoo_23h_49o_44o MATCH
+70 ohohoo_23h_49o_44h MATCH
+71 ohohoo_23h_49h MATCH
+72 ohohoh MATCH
+73 ohohho_23o_49o_44o MATCH
+74 ohohho_23o_49o_44h MATCH
+75 ohohho_23o_49h MATCH
+76 ohohho_23h_49o MATCH
+77 ohohho_23h_49h MATCH
+78 ohohhh MATCH
+79 ohhooo_23o MATCH
+80 ohhooo_23h MATCH
+81 ohhooh MATCH
+82 ohhoho_23o MATCH
+83 ohhoho_23h MATCH
+84 ohhohh MATCH
+85 ohhhoo_23o_49o_44o MATCH
+86 ohhhoo_23o_49o_44h MATCH
+87 ohhhoo_23o_49h MATCH
+88 ohhhoo_23h MATCH
+89 ohhhoh MATCH
+90 ohhhho MATCH
+91 ohhhhh MATCH
+92 hooooo MATCH
+93 hooooh MATCH
+94 hoooho_23o MATCH
+95 hoooho_23h MATCH
+96 hooohh MATCH
+97 hoohoo_23o MATCH
+98 hoohoo_23h MATCH
+99 hoohoh MATCH
+100 hoohho MATCH
+101 hoohhh MATCH
+102 hohooo_23o MATCH
+103 hohooo_23h MATCH
+104 hohooh MATCH
+105 hohoho MATCH
+106 hohohh MATCH
+107 hohhoo_23o_49o MATCH
+108 hohhoo_23o_49h MATCH
+109 hohhoo_23h MATCH
+110 hohhoh MATCH
+111 hohhho MATCH
+112 hohhhh MATCH
+113 hhoooo_23o MATCH
+114 hhoooo_23h MATCH
+115 hhoooh MATCH
+116 hhooho MATCH
+117 hhoohh MATCH
+118 hhohoo_23o_49o MATCH
+119 hhohoo_23o_49h MATCH
+120 hhohoo_23h MATCH
+121 hhohoh MATCH
+122 hhohho MATCH
+123 hhohhh MATCH
+124 hhhooo MATCH
+125 hhhooh MATCH
+126 hhhoho MATCH
+127 hhhohh MATCH
+128 hhhhoo MATCH
+129 hhhhoh MATCH
+130 hhhhho MATCH
+131 hhhhhh MATCH
+{"exe_sha256": "98d121bad04264221de66e583db0df08f4431d1093b4b7a05114316accccaa46", "rows_used_sha256": "236e46de2d9a075a5f6b240f54ff60d818a2cc37a6d7716a4a6711113018a609", "status_md_rows_with_trim_hash": 132, "match": 132, "leaves": 132, "distinct_printed_hashes": 125, "control_mutant_differs": true, "control_bad_index_refused": true, "control_bad_j_refused": true}
+	Command being timed: "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -I /home/jay/research/data/formalize-20261122/n66enc/tools/hash_binding.py /home/jay/research/data/formalize-20261122/n66enc/logs/m9_hash_binding.tsv"
+	User time (seconds): 398.91
+	System time (seconds): 53.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:33.72
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2410092
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 27285063
+	Voluntary context switches: 44124
+	Involuntary context switches: 6169
+	Swaps: 0
+	File system inputs: 2599120
+	File system outputs: 2192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rc=0

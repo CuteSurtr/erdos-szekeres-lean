@@ -1,0 +1,14 @@
+M9 paused at 18:21 after 63 rows (resumable)
+M9 resumed at 18:28 (unit esr-ag-lae-m9b)
+M9 paused at 18:32 after 83 MATCH rows, 0 FAIL
+M9 resumed at 18:34 (unit esr-ag-lae-m9c); exe unchanged 22e0574334a92de9
+M9 paused at 18:38 after 102 MATCH data rows, 0 FAIL
+M9 resumed at 18:47 (unit esr-ag-lae-m9d); exe 22e0574334a92de9
+CORRECTION (19:13): the row counts in the first two "paused" lines came from `grep -c MATCH`, which also counts the
+TSV header (its last column is named MATCH): they were 62 and 82 data rows, not 63 and 83. The third line used the
+awk data-row count (102). All four unit starts used the same exe, SHA-256 22e0574334a92de970f8f8af8206ddc902c4eeeecf17bdcc8d03971ac46ed748
+(link2.log; checked at start and end of the last run, m9_hash_binding.summary.json).
+M9 finished 19:10:36: 203/203 rows MATCH. Summary v1 reported PASS=false only because it required 203 distinct
+exe hashes; the record itself has 194 distinct CNFs (9 pairs of pairs share a CNF). Summary v2 (19:11:39) checks
+that the exe hashes group the pairs exactly as the recorded hashes do: PASS=true. v1 kept as
+m9_hash_binding.summary.v1.json.

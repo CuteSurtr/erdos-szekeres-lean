@@ -1,0 +1,12 @@
+W1.lean wall=0.12 s maxrss=359668 KB exit=0
+W2.lean:4:0: warning: declaration uses 'sorry'
+W2.lean wall=0.13 s maxrss=360852 KB exit=0
+W3.lean:4:0: warning: declaration uses 'sorry'
+W3.lean wall=0.14 s maxrss=362044 KB exit=0
+W4.lean:6:2: error: Tactic `split` failed: Could not split an `if` or `match` expression in the goal
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+a : Atom
+W5.lean wall=0.13 s maxrss=360772 KB exit=0
+rc=0
