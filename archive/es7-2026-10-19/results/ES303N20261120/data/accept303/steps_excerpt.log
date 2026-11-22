@@ -1,0 +1,4 @@
+2026-11-22 06:06:31 assemble+check_tree (v5) rc=0 ntexts": 30758, "big_contexts": 2007, "BIG_BYTES": 10000000, "SUB_NODES": 30000, "NW": 10, "NW_BIG": 3}
+2026-11-22 06:06:53 chain303: assembly did not pass; balcheck2 not started
+2026-11-22 06:08:37 main session: chain303's check read only the first line of the multi-line v5 summary (parse bug); the v5 summary itself has rc=0, label EXACT TREE and all pre-registered values; file checks redone by hand: files=32765 summary_files=32765 older_than_v5_start=0; balcheck2 (sha 951b90dc..., rows zzs_rows.json dc6a410f...) started manually with chain303's command (MemoryMax 9000M instead of 8G)
+2026-11-22 06:21:29 balcheck2 rc=0 {"verdict": "EXACT TREE (balcheck)", "budget": 68, "contexts": 32765, "failed": 0, "nodes": 246300833, "leaves": 123166799, "min_margin": 1, "rows": 3133, "cover": "complete with 1 lemma path(s) 0:1"}

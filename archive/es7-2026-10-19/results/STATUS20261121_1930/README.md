@@ -1,6 +1,6 @@
 # STATUS20261121_1930: Linux session of 21 November 2026 from 19:15 KST (handoff, updated as it goes)
 
-**Status: RESUMED 22 Nov 03:48 (owner: "start to research ES and #810 by utilizing all of these"); RUNNING.** Stopped 03:00–03:48 (§6). New caps (owner, about 03:55): memory at most 80 % in use, CPU at most 90 % (§6, "Resumed"). ES(8) ≤ 304 ([ES304N20261119](../ES304N20261119/README.md)) is unchanged. Nothing has been committed, pushed or e-mailed in this session.
+**Status: RESUMED 22 Nov 03:48 (owner: "start to research ES and #810 by utilizing all of these"); RUNNING.** Stopped 03:00–03:48 (§6). New caps (owner, about 03:55): memory at most 80 % in use, CPU at most 90 % (§6, "Resumed"). **ES(8) ≤ 303 established at 06:21** ([ES303N20261120](../ES303N20261120/README.md); computer-assisted, unrefereed). Nothing has been committed, pushed or e-mailed in this session.
 03:00:00 and 03:00:05; there was no kernel OOM kill. State at the stop and the resume commands are in §6. ES(8) ≤ 304 ([ES304N20261119](../ES304N20261119/README.md)) is unchanged: the budget-68 checks for 303 were stopped
 unfinished. Nothing has been committed, pushed or e-mailed in this session.
 - The Mac pushed its own handoff, `STATUS20261121`, on the unmerged branch `origin/es-mac-2026-11-21`. That name and the
@@ -45,6 +45,30 @@ rises. The block before the stop averaged about 2,800 s of wall time per 1,000 c
 | time | result | label | record |
 |---|---|---|---|
 | 19:55 | Rung N = 36 of the M(5;7) owner model, **case B** (`c36_tle22`): cake_lpr accepted the 13 Nov CaDiCaL 2.1.3 proof (heap 6,000 MB, 176 s; CNF `08b8ea9c…`, LRAT `a0d2cb92…` re-hashed) | **CERTIFIED** (modulo the written arguments of ETV7SAT §2) | [ETV7SAT20261113](../ETV7SAT20261113/README.md) §6.2 update |
+| 22 Nov 06:55 | **182-vertex graph of the #810 notes: no rainbow-C4 5-colouring, so χ_rainbow = 6.** All 4,404 pieces of
+the cube cover have an independent cake_lpr acceptance (1,623 from wave 1's verifier, 2,781 re-run by wave 3 on its own
+regenerated CNFs; the rebuild verifier re-ran all 2,781 again). The cover was checked by own code; the 6-colouring is
+exact | CERTIFIED (pieces) + EXACT (cover) + PROVED (reduction, wave 1); rebuild and soundness verifiers CONFIRMED;
+unrefereed | `~/research/data/e810-linux-20261121/v182-recheck` (README, `verify/`) |
+| 22 Nov ~07:30 | **Formalization, waves 1-2** (each reviewed for statement fidelity; standard axioms). (1) Composition
+audit: the 30x files rebuilt in one olean dir, closure check, 31 theorems standard. (2) `Res118.residual_bound_118_of_slices`:
+ResidualBound 118 as a Lean theorem modulo N66Bound 55, six slice exclusions and four row blocks; `forces_304_of_slices`.
+(3) `N66Geo.n66_bound_55_of_cubes : CubesUnsat132 → RowsValid R0 → N66Bound 55`. (4) `EncB.Geo7.sevenfold_es8_of_text`:
+the 7-fold (64) case modulo one cake_lpr verdict, the level of the sixfold case | Lean-checked modulo the named hypotheses;
+not refereed; review fixes listed in each VERIFY file | `~/research/data/formalize-20261122/{comp-audit,res118,n66enc,sevenfold}` |
+| 22 Nov ~07:30 | **#810 M(16) work (wave 3).**
+- P1, F(14,16) ≤ 57: re-run by own exact checkers inside the notes' generator, nauty 2.8.9 geng, so not a fully
+  independent route. COMPUTED.
+- P2, the unique 65-edge support: not re-established; its census stopped at 26 of 512 shards.
+- M(13) census: 11,461 graphs, equal to the notes' full census. M(14): 52 supports.
+- M(16) ≤ 72: forced structure PROVED (conditional on P1/P2) and encoder sound; base controls CERTIFIED, including a
+  march_cu cube-and-conquer refutation of 10/31; the 16/73 run itself has not been made
+| COMPUTED / PROVED (conditional) / CERTIFIED controls; verifiers confirmed | `~/research/data/e810-linux-20261121/{m16-premises,m16-le72}` |
+| 22 Nov 06:21 | **ES(8) ≤ 303.** Both tree checks of `ExcludesHoleBudgetZZsF 68` passed with every pre-registered value:
+check_tree via v5 at 06:06 and balcheck2 at 06:21. Files 32,765; nodes 246,300,833; leaves 123,166,799; minimum margin
+1; cover complete. The rows binding is asserted; `composition_303_zzsf` has standard axioms on Linux | EXACT TREE ×2 + Lean
+composition; N66 ≤ 55 CERTIFIED + written model; ResidualBound 118 a written chain; unrefereed; not found in the 21 Nov
+search | [ES303N20261120](../ES303N20261120/README.md) §5 |
 | 22 Nov 01:08 | **Budget-68 finder complete**: all 32,755 contexts closed (rc 0). The assembly + check_tree step was stopped cleanly by the memory guard twice (01:09:41 and 01:12:07; one context alone needs > 8 GB in v4). It was re-run from 01:26 with the memory-lean `balz_assemble_v5.py` (controls 27/27 equal, 7/7 negative caught); balcheck2 follows via `chain303.sh` | – (no claim yet) | [ES303N20261120](../ES303N20261120/README.md) §5 |
 | 22 Nov 00:40 | **sat_g(6) ≤ 11, sat_g(8) ≤ 26, sat_g(9) ≤ 39** (were 12, 27, 40): explicit saturated sets, five exact implementations agree, including the verifier's own code; cell counts equal the Euler count | **EXACT** (stated coordinates) | [SATG20261118](../SATG20261118/README.md) SAT4 addendum |
 | 22 Nov 00:45 | Radius 1 around AE33 is empty at the order-type level: all 203 two-point CNFs UNSAT, a fresh cake_lpr gives one verdict line each, all 223,165,944 clauses checked by own code | **CERTIFIED + PROVED soundness** (unrefereed; support evidence for ES(7) = 33 only) | [LOWERBOUND_RUN_1118](../ROADMAP20261115/LOWERBOUND_RUN_1118.md), claim `lb-l18-e72-ae33` |
@@ -177,6 +201,18 @@ finished. None of the workers' claims below reached the verifier stage: they are
   - **Not deleted, and must be kept: `~/research/data/es308-20261114/runs`.** The owner approved it as superseded
     307/308 evidence, but the check found that ES(8) ≤ 304, and the pending 303 and 302, use **ResidualBound 118**
     from ES307N20261118. Its slice trees (L10/L11: `runs/b35s18`–`b35s20`) live there.
+
+### Rebalance after the 303 checks (22 Nov 06:28)
+
+The bal track was free and the CPU at about 60 %. The drivers were stopped first, then the guards were swapped:
+- `esr-memguard-1122c` = `esr 30000 bal=9500 dlt=7000 n66=27000 r36=8500 ag=7000`;
+- `esv-memguard-1122b` = `esv 10000 fv=10000`.
+
+Together that is 40,000 MB, under the 80 % rule. The L15 driver now has 8 slots (`C15_RES_MB=3300`,
+`C15_CPU_CAP_MILLI=24500`), and FV304 runs `FV_JOBS=10`, `FV_MEM=9500`. At 06:29:
+- L15: 68 certified, 8 running, 25 queued;
+- FV304: 2,577 modules, 10 running, none failed;
+- machine: CPU 69 %, RAM 47 %, Tctl 77 °C.
 
 ### Formalization decisions (owner, 22 Nov 04:45-06:00)
 

@@ -1,11 +1,11 @@
-# N66 level-15 cube campaign: status (live)
+# N66 level-15 cube campaign: status (final)
 
-**N66 <= 54 is NOT decided.** N66 <= 55 (level 14 cube campaign, CERTIFIED) remains the bound. Written by `W/p2c15_driver.py` at 05:43:00 KST, 22 November 2026; plan and labels in `README.md` of this folder. W = `/home/jay/research/data/n66-20261113`; per-cube files in `W/p2/c15/<id>/it<k>/`; machine status `W/p2/c15/campaign_status.json`.
+**Every leaf has an accepted certificate (cover complete): N66 <= 54 follows (as N66 <= 55 did at level 14); needs an independent check before it is stated.** Written by `W/p2c15_driver.py` at 13:07:08 KST, 22 November 2026 (final); plan and labels in `README.md` of this folder. W = `/home/jay/research/data/n66-20261113`; per-cube files in `W/p2/c15/<id>/it<k>/`; machine status `W/p2/c15/campaign_status.json`.
 
 ## Allocation
 
-- Driver p2c15_driver.py (copy of p2c14_driver_r7.py; r4/r5 rules A1 P1-P3 with the time limits x 3: band >= 4 gets 7,200 s, else 3,600 s; MemoryMax 6500M; pre-split of band-6/7 cubes; A1 split order): cube units `esr-n66-c15-<id>`: 1 thread each (CPUQuota 98 %), MemorySwapMax 0, nice 10, RuntimeMaxSec ending by 08:00 KST 24 Nov. At most 7 at a time (now 7; memguard slot penalty 0). No new cube while the disk has less than 120 GB free. Partial files of timed-out runs: deleted (owner OK).
-- Each start also needs room: running cubes reserved at 3,300 MB each, n66 track + 3,300 <= n66 budget - 200 MB and all research units + 3,300 <= total - 500 MB (budgets from the running memguard: (23500, 34000)), and 0.98 free thread under the 16-thread cap (summed CPUQuota of active esr-* units).
+- Driver p2c15_driver.py (copy of p2c14_driver_r7.py; r4/r5 rules A1 P1-P3 with the time limits x 3: band >= 4 gets 7,200 s, else 3,600 s; MemoryMax 6500M; pre-split of band-6/7 cubes; A1 split order): cube units `esr-n66-c15-<id>`: 1 thread each (CPUQuota 98 %), MemorySwapMax 0, nice 10, RuntimeMaxSec ending by 08:00 KST 24 Nov. At most 8 at a time (now 8; memguard slot penalty 0). No new cube while the disk has less than 120 GB free. Partial files of timed-out runs: deleted (owner OK).
+- Each start also needs room: running cubes reserved at 3,300 MB each, n66 track + 3,300 <= n66 budget - 200 MB and all research units + 3,300 <= total - 500 MB (budgets from the running memguard: (27000, 30000)), and 0.98 free thread under the 16-thread cap (summed CPUQuota of active esr-* units).
 - The cake_lpr step runs inside the cube unit after CaDiCaL exits (p2_cert.sh -> p2_cake.py, unchanged; heap tiers 2000/3200/4500/5500 MB).
 - Driver unit `esr-n66-drv15`: CPUQuota 6 %, MemoryMax 300M. Calibration leaves from `W/p2/cal15` are adopted only through accept().
 
@@ -14,13 +14,13 @@
 - Split states 25 12 16 29 17 37, sel_s = 988541 + s; o = occupied = +sel_s, h = hole = -sel_s; cube ids list the six signs in that order, then `_<s><o|h>` for every re-split state. The 64 sign patterns are all assignments of the six variables, so their disjunction is a tautology.
 - Unit propagation on the 79 SB clauses refutes 8 of the 64 (all with 25 h, 29 o, 37 h): hhhohh, hhhooh, hhoohh, hhoooh, hohohh, hohooh, hooohh, hooooh. They run through the same pipeline; like every cube they count only with their own accepted certificate.
 - A cube whose CaDiCaL run reaches its time limit is replaced by its children c AND s occupied, c AND s hole, s = the first state of 40 52 46 44 45 39 32 30 20 57 14 53 38 47 33 19 50 58 62 35 23 49 not in c (A1 order since r4; corrected 16 Nov after CN issue 6). The two children cover the parent, so the leaves always cover the 2^6 split.
-- Leaves now: 98; exact leaf cover check: COVER_OK.
-- Accepted certificates: 65 of 98 leaves. Cover by accepted certificates (cube literals read from each verify.json): not complete.
+- Leaves now: 105; exact leaf cover check: COVER_OK.
+- Accepted certificates: 105 of 105 leaves. Cover by accepted certificates (cube literals read from each verify.json): COVER_OK.
 - Acceptance (level-14 README section 6, with L = 15): cert.json and verify.json ALL_OK; cake.out has the exact line `s VERIFIED UNSAT`; L = 15; W = range(70); the 27-pair SB list of b14h2; the cube field of layout, verify and cert equals the cube; 0 unclassified clauses; trim.cnf SHA-256 recomputed by the driver. Rows are justified by template_cert66 without cube assumptions.
 
 ## Counts
 
-certified: 65, queued: 26, running: 7, split: 34
+certified: 105, split: 41
 
 ## Cubes (priority order)
 
@@ -82,6 +82,12 @@ certified: 65, queued: 26, running: 7, split: 34
 | oohhoo_40h_52o | 3 |  | certified | 22:23:00 | 6996.7 | 18629916 | trim.cnf cd818c3d380f3acf26aa36d7d7981061d24efbbb61d73b9379c03839667352e8; rows 1226; peak 3240 MB |
 | ohohoo_40h_52o | 3 |  | certified | 23:48:40 | 5847.9 | 15874764 | trim.cnf 25a5aa9b12466e560a1605fc10a3d55f458b636b83707b28bce9a96d11cf202c; rows 990; peak 3207 MB |
 | ooohoo_40h_52h | 3 |  | certified | 03:49:21 | 4553.7 | 11198104 | trim.cnf ce8bad2f31943dc33518a77c2e7dad7956665303fef9e2d661fb5ffba29074bc; rows 1374; peak 2616 MB |
+| ooohho_40o_52h | 3 |  | certified | 05:49:48 | 4854.1 | 9480219 | trim.cnf 3ad5f313a2f7cdf58374ac6096a1d6b4ad92950fc8f4e95d13c972cb0167b66f; rows 1191; peak 2628 MB |
+| oohhoo_40o_52h | 3 |  | certified | 05:55:57 | 6182.2 | 12526973 | trim.cnf d158fa3dfe6614fdd4a52fb4d2922a7a0d9bd71686f9ddbdc0dec784e5913038; rows 1244; peak 3223 MB |
+| ohohoo_40o_52h | 3 |  | certified | 05:56:19 | 5793.8 | 12032336 | trim.cnf aff8c1d68e6a5c6c596f1a9b1b096443546715df50e773ec1e6900cee4333abb; rows 1160; peak 3229 MB |
+| ooohoo_40h_52o_46h | 3 |  | certified | 08:29:11 | 4174.8 | 9279539 | trim.cnf 30a754351ec007c4257ab56c236660212351bc2989c8227411acac1d5752bea3; rows 1272; peak 3213 MB |
+| oohhoo_40o_52o_46h | 3 |  | certified | 09:04:14 | 4914.2 | 10212154 | trim.cnf d9bf0e58cb15db4c7fc605fda5b7ce52386ba0ccac6b608ba070416aab7b917f; rows 1081; peak 2676 MB |
+| ohohoo_40o_52o_46h | 3 |  | certified | 09:11:50 | 4107.9 | 8733767 | trim.cnf 5a9a16d7d333cb7cfe2db702b3ce8f55f48758c51cb4c90e7b3a6dcabde73c61; rows 1025; peak 3130 MB |
 | oooohh | 2 |  | certified | 17:35:04 | 4893.6 | 15057643 | trim.cnf 6301283bed509e3d1ce3d31e85fb582e6da01d1479333e455333e707de75aee7; rows 1302; peak 2354 MB |
 | ooohoh | 2 |  | certified | 17:43:23 | 7703.7 | 27441498 | trim.cnf 86e5e8337211d6bf09168d04cc76e4810a098d45099d8940a923faed3166ac31; rows 1140; peak 3384 MB |
 | ooohho | 2 |  | split | 18:17:02 | 7220.6 | 27740720 | split on 40; peak 2742 MB |
@@ -100,39 +106,46 @@ certified: 65, queued: 26, running: 7, split: 34
 | ooohoo_40h | 2 |  | split | 00:20:29 | 7216.7 | 28762595 | split on 52; peak 2782 MB |
 | oohooo_40h | 2 |  | certified | 00:47:07 | 4200.5 | 12522004 | trim.cnf 9a1113080998e9d37f6dd4e9d96652dcf24f0f4e8cbe9e69fddb08db6f75e94c; rows 1557; peak 3197 MB |
 | ohoooo_40h | 2 |  | certified | 01:26:44 | 4560.7 | 13867320 | trim.cnf 9372e76545cf57b70efd6ceb3c247cd76b31ab2056856f7e7d96de9a1e339496; rows 1687; peak 3244 MB |
-| ooohho_40o | 2 |  | running | 03:49:24 |  |  | peak 2398 MB |
+| ooohho_40o | 2 |  | split | 03:49:24 | 7215.2 | 20349434 | split on 52; peak 2398 MB |
 | oohoho_40o | 2 |  | certified | 03:49:28 | 6461.1 | 14736401 | trim.cnf fceb4e4a21580566893db371226ba41c9acfef3da551067d787f36def09f0323; rows 1660; peak 2706 MB |
-| oohhoo_40o | 2 |  | running | 03:49:31 |  |  | peak 2633 MB |
-| ohooho_40o | 2 |  | running | 03:56:41 |  |  | systemd-run: Failed to start transient service unit: Unit esr-n66-c15-ohooho_40o.service was already loaded or has a fragment file.
-; peak 2686 MB |
-| ohohoo_40o | 2 |  | running | 03:55:52 |  |  | peak 2786 MB |
-| hoohoo_40o | 2 |  | running | 04:06:02 |  |  | peak 2782 MB |
-| oooooo_40h_52h | 2 |  | running | 05:05:45 |  |  | peak 2527 MB |
-| ooooho_40o_52h | 2 |  | running | 05:37:48 |  |  | peak 2389 MB |
-| ooohoo_40o_52h | 2 |  | queued |  |  |  |  |
-| oohooo_40o_52h | 2 |  | queued |  |  |  |  |
-| ohoooo_40o_52h | 2 |  | queued |  |  |  |  |
-| ooohoo_40h_52o | 2 |  | queued |  |  |  |  |
-| oooooo_40o_52h_46h | 2 |  | queued |  |  |  |  |
-| oooooo_40h_52o_46h | 2 |  | queued |  |  |  |  |
-| ooooho_40o_52o_46h | 2 |  | queued |  |  |  |  |
-| ooohoo_40o_52o_46h | 2 |  | queued |  |  |  |  |
-| oohooo_40o_52o_46h | 2 |  | queued |  |  |  |  |
-| ohoooo_40o_52o_46h | 2 |  | queued |  |  |  |  |
-| oooooo_40o_52o_46h_44h | 2 |  | queued |  |  |  |  |
-| oooooo_40o_52h_46o_44h | 2 |  | queued |  |  |  |  |
-| oooooo_40h_52o_46o_44h | 2 |  | queued |  |  |  |  |
-| oooooh | 1 |  | queued |  |  |  |  |
+| oohhoo_40o | 2 |  | split | 03:49:31 | 7214.6 | 17785757 | split on 52; peak 2633 MB |
+| ohooho_40o | 2 |  | certified | 03:56:41 | 7212.7 | 16607266 | trim.cnf 0fe8c7a5487be54b7c30ed9a6ac2da6dab7ffac5b0361cfbec10400927775de7; rows 1925; peak 2686 MB |
+| ohohoo_40o | 2 |  | split | 03:55:52 | 7214.1 | 17548901 | split on 52; peak 2786 MB |
+| hoohoo_40o | 2 |  | certified | 04:06:02 | 7954.9 | 18422663 | trim.cnf c043ee30d57fa51cc296b75d1f7d087606b48f9cdba7540ef7330eaf346534a5; rows 1606; peak 3251 MB |
+| hooooo_40h | 2 |  | certified | 11:39:49 | 3571.2 | 10413926 | trim.cnf c9feba1190e7b15428f57dd3f3f0eaa8ccbf52da76feec376528934d0afb8784; rows 1042; peak 3245 MB |
+| oooooo_40h_52h | 2 |  | certified | 05:05:45 | 2997.0 | 4113837 | trim.cnf 5016e9f55c395a9ad9e0a29790a83ff754036a01bb329ae4f99f07056ed486b5; rows 1395; peak 2527 MB |
+| ooooho_40o_52h | 2 |  | certified | 05:37:48 | 5121.0 | 9371639 | trim.cnf b9cb1fc994dbb45a01f13071e06ab80706c48216f895e4003cd499c581d5362e; rows 1571; peak 3203 MB |
+| ooohoo_40o_52h | 2 |  | certified | 05:49:52 | 7492.9 | 17093352 | trim.cnf 9a19070d16182de3fe37148d14a4ae94244347ec1c6ead2b93085d3db104da03; rows 1690; peak 3253 MB |
+| oohooo_40o_52h | 2 |  | certified | 05:57:41 | 3239.1 | 5412222 | trim.cnf cbcc73dd2b16bf25d4991b880e553b42f96ea940a38525e0bafbc8ec5fb59b13; rows 1464; peak 2687 MB |
+| ohoooo_40o_52h | 2 |  | certified | 06:19:29 | 3888.8 | 7280381 | trim.cnf f35c3e402b60ab92c311d84ac79353e6ea2953a15ebab351dd3dfae32dbdc5b9; rows 1537; peak 3177 MB |
+| ooohoo_40h_52o | 2 |  | split | 06:28:30 | 7220.5 | 20893527 | split on 46; peak 2849 MB |
+| ooohho_40o_52o | 2 |  | certified | 06:51:59 | 7081.2 | 16120223 | trim.cnf 7c3fef6fe5cf4758d4169c1e9c9b0b0f5452098fa08fe6fe196ce84b3e182c55; rows 1486; peak 2663 MB |
+| oohhoo_40o_52o | 2 |  | split | 07:03:38 | 7221.4 | 17458592 | split on 46; peak 2750 MB |
+| ohohoo_40o_52o | 2 |  | split | 07:11:11 | 7219.0 | 18373484 | split on 46; peak 2742 MB |
+| oooooo_40o_52h_46h | 2 |  | certified | 07:24:38 | 2222.2 | 2721568 | trim.cnf 0228c1280e2079eb19ad0a1a6204a145bc976007509167e152d6b5aa79b9095a; rows 1637; peak 2771 MB |
+| oooooo_40h_52o_46h | 2 |  | certified | 07:33:27 | 2717.8 | 4033427 | trim.cnf 42e89a2a788eecc4248a46cae1bce718d9597cf1fabd0ed55fbac13341351cd4; rows 1632; peak 2704 MB |
+| ooooho_40o_52o_46h | 2 |  | certified | 07:39:26 | 4453.0 | 8516925 | trim.cnf 212f691b2814fb50c152d3f32f46b94a88a932ea55ffd02836cecbef71b82b3b; rows 1597; peak 3184 MB |
+| ooohoo_40o_52o_46h | 2 |  | certified | 07:55:28 | 6010.8 | 13328042 | trim.cnf aa99ea90ddd7fe13713ce87b650d4cd281cbd6593902442ac7df89eab8560322; rows 1478; peak 3247 MB |
+| oohooo_40o_52o_46h | 2 |  | certified | 08:01:58 | 3109.4 | 5159011 | trim.cnf 6f4c871d95677398c34fab5e77ed8e0bdb21bdc9bb8f2c94b3c38a98f71b9ceb; rows 1433; peak 2793 MB |
+| ohoooo_40o_52o_46h | 2 |  | certified | 08:18:58 | 3426.8 | 5955145 | trim.cnf 2ac6fc43ab101fc84e5758f21de0348de33419df12f1a2da169b29b47520becc; rows 1549; peak 3213 MB |
+| ooohoo_40h_52o_46o | 2 |  | certified | 08:50:36 | 7249.7 | 17843982 | trim.cnf e326108f0b4a11f68da65dec6cffea0a0d87160561e4715c27507cf7ca653530; rows 1383; peak 2508 MB |
+| oohhoo_40o_52o_46o | 2 |  | certified | 09:16:30 | 5631.3 | 12093418 | trim.cnf 6a80c74ba027bf48493d4581b0b29f4112bb4669d7247493ebf765c57e3f6707; rows 1523; peak 3234 MB |
+| ohohoo_40o_52o_46o | 2 |  | certified | 09:31:00 | 5150.5 | 11929020 | trim.cnf a6234e3addfb69f60ec831d9bb21ad84a1f538fd0d5c416816023566ac096dcd; rows 1381; peak 2710 MB |
+| oooooo_40o_52o_46h_44h | 2 |  | certified | 08:53:59 | 2592.2 | 3127895 | trim.cnf 2a199b9f8198323456ce15b290fa83a8b714d0684a7529c189040f5807fccb3b; rows 1689; peak 2721 MB |
+| oooooo_40o_52h_46o_44h | 2 |  | certified | 08:54:19 | 2189.7 | 2452650 | trim.cnf c84b4ab55190be3680a53d5bb408b457df397e068b6eb5e026ddd9dbc9fa948c; rows 1674; peak 2775 MB |
+| oooooo_40h_52o_46o_44h | 2 |  | certified | 09:36:13 | 2191.5 | 3072834 | trim.cnf 5e046f5843c700e0780cf812018e05d3d5b1d36e3ec8d69f46d579542312f071; rows 1452; peak 2756 MB |
+| oooooh | 1 |  | certified | 09:37:35 | 6179.5 | 16619331 | trim.cnf 05ced6291e67e30e785cf1d7b3e55f37165c02893a178ac8e71681e7ed7f7081; rows 1691; peak 2775 MB |
 | ooooho | 1 |  | split |  |  |  | split on 40 |
 | ooohoo | 1 |  | split |  |  |  | split on 40 |
 | oohooo | 1 |  | split |  |  |  | split on 40 |
 | ohoooo | 1 |  | split |  |  |  | split on 40 |
-| hooooo | 1 |  | queued |  |  |  |  |
+| hooooo | 1 |  | split | 09:39:11 | 7218.2 | 24259626 | split on 40; peak 2824 MB |
 | oooooo_40h | 1 |  | split |  |  |  | split on 52 |
 | ooooho_40o | 1 |  | split |  |  |  | split on 52 |
 | ooohoo_40o | 1 |  | split |  |  |  | split on 52 |
 | oohooo_40o | 1 |  | split |  |  |  | split on 52 |
 | ohoooo_40o | 1 |  | split |  |  |  | split on 52 |
+| hooooo_40o | 1 |  | certified | 11:48:39 | 4677.7 | 18126978 | trim.cnf 4d256e44c7ee99bd489eaeae427c867925992efe4c184e970ea13967fdbb7990; rows 1381; peak 2657 MB |
 | oooooo_40o_52h | 1 |  | split |  |  |  | split on 46 |
 | oooooo_40h_52o | 1 |  | split |  |  |  | split on 46 |
 | ooooho_40o_52o | 1 |  | split |  |  |  | split on 46 |
@@ -142,68 +155,67 @@ certified: 65, queued: 26, running: 7, split: 34
 | oooooo_40o_52o_46h | 1 |  | split |  |  |  | split on 44 |
 | oooooo_40o_52h_46o | 1 |  | split |  |  |  | split on 44 |
 | oooooo_40h_52o_46o | 1 |  | split |  |  |  | split on 44 |
-| ooooho_40o_52o_46o | 1 |  | queued |  |  |  |  |
-| ooohoo_40o_52o_46o | 1 |  | queued |  |  |  |  |
-| oohooo_40o_52o_46o | 1 |  | queued |  |  |  |  |
-| ohoooo_40o_52o_46o | 1 |  | queued |  |  |  |  |
-| oooooo_40o_52o_46o_44h | 1 |  | queued |  |  |  |  |
-| oooooo_40o_52o_46h_44o | 1 |  | queued |  |  |  |  |
-| oooooo_40o_52h_46o_44o | 1 |  | queued |  |  |  |  |
-| oooooo_40h_52o_46o_44o | 1 |  | queued |  |  |  |  |
-| oooooo_40o_52o_46o_44o_45h | 1 |  | queued |  |  |  |  |
-| oooooo_40o_52o_46o_44o_45o_39h | 1 |  | queued |  |  |  |  |
+| ooooho_40o_52o_46o | 1 |  | certified | 10:13:01 | 5060.4 | 10433790 | trim.cnf 6fc4de0eb3a170d3a2bf08ea9bb7e47d8ae55e7ce10029be54b8a4d3b67bd831; rows 2185; peak 2936 MB |
+| ooohoo_40o_52o_46o | 1 |  | certified | 10:20:49 | 7026.2 | 17382800 | trim.cnf 6a44cc133bc9c8e9101b9668920422ff22c84d142060ecf395a05dec8f493a10; rows 2097; peak 3254 MB |
+| oohooo_40o_52o_46o | 1 |  | certified | 10:26:33 | 3464.5 | 5950090 | trim.cnf 28bf62e62aeb40e71dc12589166ede5531046e24a6c48a6ca75d9d32150f79e6; rows 1889; peak 2420 MB |
+| ohoooo_40o_52o_46o | 1 |  | certified | 10:51:01 | 3829.4 | 6866120 | trim.cnf 57d176815fdb370defb547fd4f7039a5442e93256322060d2054062ae8b0e65e; rows 1973; peak 3241 MB |
+| oooooo_40o_52o_46o_44h | 1 |  | certified | 10:52:07 | 3372.3 | 5117901 | trim.cnf 53350e0f1c29d6490c2eeff7a58c7b54f17108e5a895aa6a08882d692701d60a; rows 1711; peak 3258 MB |
+| oooooo_40o_52o_46h_44o | 1 |  | certified | 10:57:19 | 2432.8 | 3017994 | trim.cnf 05c8f1c19fce562fc1c30b3763d4c9ad28993812e15ee06d535434298531e290; rows 2005; peak 2806 MB |
+| oooooo_40o_52h_46o_44o | 1 |  | certified | 11:21:16 | 1870.0 | 1695947 | trim.cnf cf360c787fbf21334f2a0c3933140f5acdf68e93a4572486b06b3b6443638835; rows 1752; peak 2777 MB |
+| oooooo_40h_52o_46o_44o | 1 |  | certified | 11:24:42 | 2671.8 | 3682803 | trim.cnf af4dd15ae1562e43207b0b6ae8efd32719ffab708f5ea7a9cc36ea367586ca4e; rows 1658; peak 2579 MB |
+| oooooo_40o_52o_46o_44o_45h | 1 |  | certified | 11:37:56 | 1386.5 | 874830 | trim.cnf 8128d6d961a71ad8488a3a63c0c2e6d2aa11f7dcc6530549809ee4b68c02d836; rows 1561; peak 2815 MB |
+| oooooo_40o_52o_46o_44o_45o_39h | 1 |  | certified | 11:38:16 | 1354.3 | 802918 | trim.cnf 0f75e41f396b080de6c4ecd54e3d6844a2c99e5f38c96e76237c97b5c5acd242; rows 1770; peak 2818 MB |
 | oooooo | 0 |  | split |  |  |  | split on 40 |
 | oooooo_40o | 0 |  | split |  |  |  | split on 52 |
 | oooooo_40o_52o | 0 |  | split |  |  |  | split on 46 |
 | oooooo_40o_52o_46o | 0 |  | split |  |  |  | split on 44 |
 | oooooo_40o_52o_46o_44o | 0 |  | split |  |  |  | split on 45 |
 | oooooo_40o_52o_46o_44o_45o | 0 |  | split |  |  |  | split on 39 |
-| oooooo_40o_52o_46o_44o_45o_39o | 0 |  | queued |  |  |  |  |
+| oooooo_40o_52o_46o_44o_45o_39o | 0 |  | certified | 11:52:34 | 1156.6 | 653589 | trim.cnf b7cdd8f9e70ed6e509e270df0019bfa6613f5c6f0ffd8d3588f3c597e6e69408; rows 2032; peak 2979 MB |
 
 ## Log (last 40)
 
 ```
-22:37:16 end hohooo: certified ok (wall 5922.5 s, conflicts 16085435)
-22:37:17 start hhoooo (holes 2, band 4, UP False, limit 7200 s, MemoryMax 6500M)
-23:25:09 end ohohoo_40h: split  (wall 7218.9 s, conflicts 22822088)
-23:25:09 start ohohoo_40h_52h (holes 4, band 3, UP False, limit 3600 s, MemoryMax 6500M)
-23:48:39 end hoohoo_40h: certified ok (wall 4393.2 s, conflicts 12480441)
-23:48:40 start ohohoo_40h_52o (holes 3, band 4, UP False, limit 7200 s, MemoryMax 6500M)
-00:20:24 end oohhoo_40h_52o: certified ok (wall 6996.7 s, conflicts 18629916)
-00:20:25 end ohohoo_40h_52h: certified ok (wall 3288.1 s, conflicts 7810055)
-00:20:25 start ooooho_40h (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-00:20:29 start ooohoo_40h (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-00:47:06 end hhoooo: certified ok (wall 7747.9 s, conflicts 21703163)
-00:47:07 start oohooo_40h (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-01:26:43 end ohohoo_40h_52o: certified ok (wall 5847.9 s, conflicts 15874764)
-01:26:44 start ohoooo_40h (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-01:57:28 end oohooo_40h: certified ok (wall 4200.5 s, conflicts 12522004)
-01:57:29 start ooohho_40o (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-02:01:22 end ooooho_40h: certified ok (wall 6021.1 s, conflicts 19967748)
-02:01:23 start oohoho_40o (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-02:20:58 end ooohoo_40h: split  (wall 7216.7 s, conflicts 28762595)
-02:20:59 start ooohoo_40h_52h (holes 3, band 4, UP False, limit 7200 s, MemoryMax 6500M)
-02:43:16 end ohoooo_40h: certified ok (wall 4560.7 s, conflicts 13867320)
-02:43:17 start oohhoo_40o (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-03:01:01 main session: ooohho_40o, oohoho_40o, oohhoo_40o, ooohoo_40h_52h set back to queued (stopped unfinished at the owner stop, 22 Nov 03:00 (partials renamed *.stopped-20261122))
-03:49:20 driver c15 restarted; state loaded; 5 slots, band limits 3600/7200 s, presplit, A1 order, disk floor 120 GB, delete partials True
-03:49:21 start ooohoo_40h_52h (holes 3, band 4, UP False, limit 7200 s, MemoryMax 6500M)
-03:49:24 start ooohho_40o (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-03:49:28 start oohoho_40o (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-03:49:31 start oohhoo_40o (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-03:55:32 driver c15 restarted; state loaded; 6 slots, band limits 3600/7200 s, presplit, A1 order, disk floor 120 GB, delete partials True
-03:55:33 launch failed ohooho_40o: systemd-run: Failed to start transient service unit: Unit esr-n66-c15-ohooho_40o.service was already loaded or has a fragment file.
-
-03:55:52 start ohohoo_40o (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-03:56:40 main session: ohooho_40o set back to queued after the restart race (old instance launched it at restart)
-03:56:41 driver c15 restarted; state loaded; 6 slots, band limits 3600/7200 s, presplit, A1 order, disk floor 120 GB, delete partials True
-03:56:41 start ohooho_40o (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-04:06:01 driver c15 restarted; state loaded; 7 slots, band limits 3600/7200 s, presplit, A1 order, disk floor 120 GB, delete partials True
-04:06:02 start hoohoo_40o (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-05:05:44 end ooohoo_40h_52h: certified ok (wall 4553.7 s, conflicts 11198104)
-05:05:45 start oooooo_40h_52h (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
-05:37:47 end oohoho_40o: certified ok (wall 6461.1 s, conflicts 14736401)
-05:37:48 start ooooho_40o_52h (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
+09:36:13 start oooooo_40h_52o_46o_44h (holes 2, band 5, UP False, limit 7200 s, MemoryMax 6500M)
+09:37:33 end oooooo_40o_52o_46h_44h: certified ok (wall 2592.2 s, conflicts 3127895)
+09:37:35 start oooooh (holes 1, band 5, UP False, limit 7200 s, MemoryMax 6500M)
+09:39:10 end ooohoo_40h_52o_46h: certified ok (wall 4174.8 s, conflicts 9279539)
+09:39:11 start hooooo (holes 1, band 5, UP False, limit 7200 s, MemoryMax 6500M)
+10:13:00 end oooooo_40h_52o_46o_44h: certified ok (wall 2191.5 s, conflicts 3072834)
+10:13:01 start ooooho_40o_52o_46o (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+10:20:48 end ohohoo_40o_52o_46h: certified ok (wall 4107.9 s, conflicts 8733767)
+10:20:49 start ooohoo_40o_52o_46o (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+10:26:32 end oohhoo_40o_52o_46h: certified ok (wall 4914.2 s, conflicts 10212154)
+10:26:33 start oohooo_40o_52o_46o (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+10:51:00 end oohhoo_40o_52o_46o: certified ok (wall 5631.3 s, conflicts 12093418)
+10:51:01 start ohoooo_40o_52o_46o (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+10:52:06 end ooohoo_40h_52o_46o: certified ok (wall 7249.7 s, conflicts 17843982)
+10:52:07 start oooooo_40o_52o_46o_44h (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+10:57:18 end ohohoo_40o_52o_46o: certified ok (wall 5150.5 s, conflicts 11929020)
+10:57:19 start oooooo_40o_52o_46h_44o (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+11:21:15 end oooooh: certified ok (wall 6179.5 s, conflicts 16619331)
+11:21:16 start oooooo_40o_52h_46o_44o (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+11:24:40 end oohooo_40o_52o_46o: certified ok (wall 3464.5 s, conflicts 5950090)
+11:24:42 start oooooo_40h_52o_46o_44o (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+11:37:55 end ooooho_40o_52o_46o: certified ok (wall 5060.4 s, conflicts 10433790)
+11:37:56 start oooooo_40o_52o_46o_44o_45h (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+11:38:15 end oooooo_40o_52o_46h_44o: certified ok (wall 2432.8 s, conflicts 3017994)
+11:38:16 start oooooo_40o_52o_46o_44o_45o_39h (holes 1, band 6, UP False, limit 7200 s, MemoryMax 6500M)
+11:39:48 end hooooo: split  (wall 7218.2 s, conflicts 24259626)
+11:39:49 start hooooo_40h (holes 2, band 4, UP False, limit 7200 s, MemoryMax 6500M)
+11:48:37 end oooooo_40o_52o_46o_44h: certified ok (wall 3372.3 s, conflicts 5117901)
+11:48:39 start hooooo_40o (holes 1, band 5, UP False, limit 7200 s, MemoryMax 6500M)
+11:52:33 end oooooo_40o_52h_46o_44o: certified ok (wall 1870.0 s, conflicts 1695947)
+11:52:34 start oooooo_40o_52o_46o_44o_45o_39o (holes 0, band 7, UP False, limit 7200 s, MemoryMax 6500M)
+11:55:12 end ohoooo_40o_52o_46o: certified ok (wall 3829.4 s, conflicts 6866120)
+12:01:05 end oooooo_40o_52o_46o_44o_45o_39h: certified ok (wall 1354.3 s, conflicts 802918)
+12:01:21 end oooooo_40o_52o_46o_44o_45h: certified ok (wall 1386.5 s, conflicts 874830)
+12:09:26 end oooooo_40h_52o_46o_44o: certified ok (wall 2671.8 s, conflicts 3682803)
+12:11:57 end oooooo_40o_52o_46o_44o_45o_39o: certified ok (wall 1156.6 s, conflicts 653589)
+12:18:30 end ooohoo_40o_52o_46o: certified ok (wall 7026.2 s, conflicts 17382800)
+12:39:50 end hooooo_40h: certified ok (wall 3571.2 s, conflicts 10413926)
+13:07:07 end hooooo_40o: certified ok (wall 4677.7 s, conflicts 18126978)
+13:07:08 driver end
 ```
 
 ## Monitor

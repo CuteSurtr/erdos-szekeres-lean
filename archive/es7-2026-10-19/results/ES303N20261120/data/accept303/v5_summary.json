@@ -1,0 +1,25 @@
+{
+ "label": "EXACT TREE (check_tree on every assembled file; files above BIG_BYTES piecewise by the unchanged check_tree, one_big)",
+ "budget": 68,
+ "rows": 3133,
+ "z_row": {
+  "support_size": 70,
+  "rhs": 15
+ },
+ "zstar_row": {
+  "support_size": 70,
+  "rhs": 15
+ },
+ "files": 32765,
+ "bad": [],
+ "leaves": 123166799,
+ "nodes": 246300833,
+ "minimum_margin": 1,
+ "occ_master_sha256": "7d00302cb81790072774ea7991485cddaad7462565e81e56e6050db2127caef2",
+ "mis_master_sha256": null,
+ "zero_side_only": true,
+ "assembler": "balz_assemble_v5.py",
+ "big_contexts": 2007,
+ "BIG_BYTES": 10000000,
+ "SUB_NODES": 30000
+}

@@ -1,0 +1,8 @@
+catalog /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json sha256 acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72
+balzs.rows 9135465aac32b575d3f859192891b5088b6a23c6d521687aef1b032e64e2f2b8
+balz.rows 7076dd8212c382caf19b7fe39fca9b81de9ae8fba9150727efa1997d54f6288f
+zrow.json b43ba5f80582f7754fe6acf04cbbf81fc7822a5f784fb8c5ddedf643cce51258
+zstar.json 26d8886058cc53972dfe274e04150c4aee0ff4fffafb974a8c7c89cd57cef328
+ASSERTED: balzs.rows rows 0..3130 = catalog constraints in order (support, rhs); row 3131 = Z-row = zrow.json (70, rhs 15); row 3132 = Z*-row = data/zstar.json (70, rhs 15); balz.rows (304) = rows 0..3131
+ASSERTED: Lean OmissionBalanced.row r = rowChunks[r/128][r%128]; rowChunks = #[rows0, rows128, ...] in order; chunks of 128 (last shorter), 2,685 rows; support/demand = components 1 and 2
+With rows_match.py (exit 0, 0 mismatches over the 3,131 catalog rows vs the Lean rows) this binds the 303 tree rows to ExcludesHoleBudgetZZsF 68; the Z/Z* supports are pinned in Lean by Z_eq and Zs_eq (decide +kernel).

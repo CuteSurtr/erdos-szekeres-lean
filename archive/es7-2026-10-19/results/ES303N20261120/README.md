@@ -1,6 +1,13 @@
 # ES303N20261120: the Z*-row and the budget-68 tree (target ES(8) ≤ 303)
 
-**Status (22 Nov 2026, 03:05 KST): FINDER COMPLETE; CHECKS STOPPED UNFINISHED. No ES(8) ≤ 303 claim.** All 32,755 contexts are closed (finder rc = 0 at 01:08:17). The memory-lean re-run of assembly + check_tree (`balz_assemble_v5.py`, §5) was stopped at 03:00 by the owner's stop after writing 12,168 of 32,765 files; it has no resume and must be re-run from the start (§8). balcheck2 never started.
+**Status (22 Nov 2026, 06:21 KST): ES(8) ≤ 303 ESTABLISHED. Computer-assisted and unrefereed, with the same kind of evidence as ES(8) ≤ 304.** Every 303 points in general position contain 8 points in convex position. The chain is `composition_303_zzsf : ExcludesHoleBudgetZZsF 68 → N66Bound 55 → ResidualBound 118 → ForcesConvexNGon 303 8`, Lean-checked with standard axioms; Linux audit 22 Nov, §5. Its three hypotheses:
+- the budget-68 tree, **EXACT TREE by two independent checks**: check_tree via v5, and balcheck2, which reads every file
+  whole (§5);
+- `N66Bound 55`: CERTIFIED cubes plus a written model (N66N20261113);
+- `ResidualBound 118`: a written, computer-assisted chain (ES307N20261118).
+
+This is **not** Lean-checked end to end. In the literature: not found in the 21 Nov search (the public bound is
+Schroeder's 319, unrefereed; the refereed bound is 408).
 
 The budget-68 finder ran in unit `esr-bal-zbs68` (started 20 Nov 01:33:35, finished 22 Nov 01:08:17). The claim needs two things:
 - both tree checks pass (check_tree and balcheck2, §5);
@@ -197,12 +204,80 @@ All files are in `data/`.
   - The start marker is `b68zs/asm_v5_start.txt`.
   - `tools/chain303.sh` (unit `esr-bal-chain303`) then requires the EXACT TREE line, file count = summary
     `files` and no file older than the marker. Only then does it start balcheck2 (unit `esr-bal-zbs68bc`, 4 threads).
-- Check A (check_tree, via v5): **STOPPED UNFINISHED** at 03:00:0x (owner stop, STATUS20261121_1930 §6) after 12,168 of
-  32,765 files in 93.5 minutes: all 2,007 big contexts (they run first) and part of the small ones. v5 writes its summary
-  only at the end, so there is no result. Re-run from the start (§8).
-- Check B (balcheck2): not started.
+- Re-run after the stop: started 22 Nov 03:48:48 (fresh marker), same v5 SHA and parameters.
+- **Check A (check_tree, via v5): PASSED** at 06:06:31, rc 0.
+  - The label is "EXACT TREE (check_tree on every assembled file; files above BIG_BYTES piecewise by the unchanged
+    check_tree, one_big)".
+  - Results: files 32,765; nodes 246,300,833; leaves 123,166,799; minimum margin 1; `bad: []`; rows 3,133; Z-row and
+    Z*-row support 70 at rhs 15; zero side only.
+  - Every value equals the pre-registered one.
+- **chain303 parse bug (22 Nov 06:06:53).** The v5 summary that `steps.log` receives spans several lines.
+  - `chain303.sh` read only the first one, which lacks the label, so it wrote "assembly did not pass" and did not
+    start balcheck2.
+  - The main session redid the chain's file checks: files 32,765 = summary `files`, 0 files older than the marker.
+  - It then started balcheck2 by hand with the chain's command: unit `esr-bal-zbs68bc`, 4 threads, binary
+    `951b90dc…`, rows `zzs_rows.json` `dc6a410f…`, MemoryMax 9000M instead of 8G. This is logged in `steps.log`.
+- **Check B (balcheck2): PASSED** at 06:21:29, rc 0: `{"verdict": "EXACT TREE (balcheck)", "budget": 68, "contexts":
+  32765, "failed": 0, "nodes": 246300833, "leaves": 123166799, "min_margin": 1, "rows": 3133, "cover": "complete with 1
+  lemma path(s) 0:1"}`.
+  - balcheck2 reads every file whole, so the result does not rest on v5's piecewise cutting alone.
+  - Memory peak 6.6 GB of 9 GB.
+
+**Acceptance (22 Nov 06:30, main session; every criterion pre-registered at 01:50):**
+
+| criterion | result |
+|---|---|
+| v5 label EXACT TREE, files = 32,765, nodes = 246,300,833, leaves = 123,166,799, minimum margin ≥ 1, `bad: []`, rows 3,133 | met: all equal (`data/accept303/v5_summary.json`) |
+| balcheck2 `failed 0`, cover complete | met (`data/accept303/balcheck.json`) |
+| v5 and balcheck2 agree on nodes, leaves, minimum margin | met: 246,300,833 / 123,166,799 / 1 |
+| every file newer than the re-run marker; file count = summary `files` | met: 0 older, 32,765 = 32,765 |
+
+House replay items (es-research §2):
+- **The rows are exactly the stated ones.** `data/accept303/rows_binding_assert.txt` asserts it with own code, 22 Nov:
+  - `balzs.rows` rows 0–3,130 equal the catalog constraints in order (catalog `acaf6323…`);
+  - row 3,131 is the Z-row (`zrow.json`, 70, rhs 15) and row 3,132 the Z*-row (`data/zstar.json`, 70, rhs 15);
+  - `balz.rows` is rows 0–3,131;
+  - Lean's `OmissionBalanced.row r = rowChunks[r/128][r%128]` with `rowChunks = #[rows0, rows128, …]` in order;
+  - with ES305's `tools/rows_match.py` (exit 0, 0 mismatches) this binds the tree rows to `ExcludesHoleBudgetZZsF 68`.
+- **The extra rows are justified:** the Z-row by `z_row` (LemmaZ) and the Z*-row by `zs_row` (LemmaZStar), both Lean,
+  with standard axioms. `Z_eq` and `Zs_eq` (`decide +kernel`) pin their supports.
+- **The cover is complete:** balcheck2 reports "complete with 1 lemma path(s) 0:1", and v5 checks covered + upper = N in
+  every file. The files are the 32,755 contexts plus the 10 master-closed weighted leaves.
+- **The only pending side is "state 0 missing"** (zero side only). The statement's `holes 0 = 0 ∧ holes 1 = 0` is
+  discharged by `zero_mem_occupied` and `one_mem_occupied` (FixedStatesZ, Lean).
+- **Inputs re-hashed against the pins (22 Nov):** `balzs.rows` `9135465a…`, `zbs_run0.sh` `78bb3051…`, `fastbb256` `df17fa74…`,
+  `scripts/omission_tree.py` `35cb3050…`, `balz_assemble_v5.py` `964b0000…`, balcheck2 `951b90dc…`, `zzs_rows.json`
+  `dc6a410f…`, catalog `acaf6323…`.
+- **Axioms on Linux:** the composition audit (formalize wave 1) rebuilt the nine 30x files into one olean directory with
+  an import-closure check.
+  - Its `BalancedBudgetsZZs.lean` copy hashes to the record's `7684a1de…`; lean rc 0.
+  - `#print axioms OmissionBalancedZZsF.composition_303_zzsf` gives `[propext, Classical.choice, Quot.sound]`
+    (`data/accept303/axioms_comp_audit_20261122.txt`).
+  - The audit's own reviewer had not reported yet when this was filed.
+- **balcheck2 assurance (wave 3, finished 22 Nov; both verifiers confirmed):**
+  - Verdict: no defect can make balcheck2 print "failed 0 / cover complete" wrongly.
+  - Build identity (EXACT): the production binary `951b90dc…` is `g++ -O2 -std=c++17 balcheck2.cpp -lz`, bit for bit.
+  - Overflow and index bounds (EXACT) hold for lists under 2^31 entries and K + lemma paths ≤ 8,521,760. The 303 run has
+    K = 32,765.
+  - Sanitized runs and 77 controls (COMPUTED) found nothing; bounded model checks (COMPUTED) found nothing within their
+    bounds.
+  - Two findings, neither of which applies to this acceptance:
+    - F1, a use-after-free in the error message for a corrupt gzip file. Error path only.
+    - F2, the reported global minimum margin is wrong when some context has margin -1. Here `failed 0`, so no context is
+      at -1.
+  - Reports: `/home/jay/research/data/bal186-20261119/assure-wave3/` (README, `verify/`).
 
 ## 6. Files and hashes (SHA-256)
+
+**Budget-68 run (22 Nov), work dir `/home/jay/research/data/bal186-20261119/zrow/b68zs` (143 GB; certificate, keep):**
+
+| file | SHA-256 |
+|---|---|
+| `occ/master.json` | `7d00302cb81790072774ea7991485cddaad7462565e81e56e6050db2127caef2` |
+| `files/summary.json` (v5) | `fb84e3ff2cd44c00ad45e20ff33257b9a71704bad7dbdd352dbd3ceae47e4c99` |
+| `balcheck.json` | `c01da0306586f6fc22609b85cc17da960ca544ee5e9c70d7ce6ebd313bf5632b` |
+| `balcheck.tsv` (32,766 lines) | `2a42aaa1f0a86155e666a84b196a52b4f7e6b28da21fc32030e79e4969e0589a` |
+| `data/accept303/axioms_comp_audit_20261122.txt` | `52e6c7cc6c90d8d14c49101c685dd10e5bc1f315864037c5cfcd67d8d189ee24` |
 
 | file | SHA-256 |
 |---|---|

@@ -5,7 +5,10 @@ D=/home/jay/research/data/bal186-20261119/zrow; O=$D/b68zs; L=$O/steps.log
 CAT=/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json
 until ! systemctl --user is-active -q esr-bal-zbs68asm; do sleep 30; done
 line=$(grep 'assemble+check_tree (v5) rc=' $L | tail -1)
-if ! echo "$line" | grep -q 'rc=0 .*"label": "EXACT TREE'; then echo "$(date '+%F %T') chain303: assembly did not pass; balcheck2 not started" >> $L; exit 1; fi
+# 22 Nov 2026 fix: the v5 summary appended to steps.log spans several lines, so the label is not on the rc line;
+# read rc from the log line and the label from files/summary.json (the 22 Nov 06:06 run hit this bug; see README §5).
+lab=$(python3 -I -c "import json; print(json.load(open('$O/files/summary.json')).get('label',''))" 2>/dev/null)
+if ! echo "$line" | grep -q 'rc=0 ' || ! echo "$lab" | grep -q '^EXACT TREE'; then echo "$(date '+%F %T') chain303: assembly did not pass; balcheck2 not started" >> $L; exit 1; fi
 K=$(find $O/files -name 'ctx-*-zb68.json.gz' | wc -l)
 S=$(python3 -I -c "import json; print(json.load(open('$O/files/summary.json'))['files'])")
 old=$(find $O/files -name 'ctx-*-zb68.json.gz' ! -newer $O/asm_v5_start.txt | wc -l)
