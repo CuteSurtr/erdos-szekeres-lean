@@ -45,6 +45,14 @@ rises. The block before the stop averaged about 2,800 s of wall time per 1,000 c
 | time | result | label | record |
 |---|---|---|---|
 | 19:55 | Rung N = 36 of the M(5;7) owner model, **case B** (`c36_tle22`): cake_lpr accepted the 13 Nov CaDiCaL 2.1.3 proof (heap 6,000 MB, 176 s; CNF `08b8ea9c…`, LRAT `a0d2cb92…` re-hashed) | **CERTIFIED** (modulo the written arguments of ETV7SAT §2) | [ETV7SAT20261113](../ETV7SAT20261113/README.md) §6.2 update |
+| 22 Nov 16:45 | **N66 ≤ 54.** The L15 campaign ended at 13:07 with 105 certified leaves and a complete cover. vfy15 did
+all four checks on all 105 (fresh cake_lpr, trim ⊆ cert, cert = F_c + units, rows). Own exact partition on the cube
+literals and on the real unit literals (measure 1). L = 15 confirmed; F_c `2f78368f…` | CERTIFIED + PROVED (written model, L =
+15); unrefereed | [N66N20261113/cubes20261120](../N66N20261113/cubes20261120/README.md) §8 |
+| 22 Nov 12:19 | **FV304 complete:** `E304Z.Final.excludes_67 : ExcludesHoleBudgetZ 67` and `forces_304_of_n66_res`,
+standard axioms. ES(8) ≤ 304 is Lean-checked modulo N66Bound 55 and ResidualBound 118 (with Res118: modulo N66Bound 55,
+six slices and four row blocks) | Lean-checked modulo the named hypotheses; closing pin and import audit running (wave 4) |
+`/home/jay/research/data/fv304-20261120` |
 | 22 Nov 06:55 | **182-vertex graph of the #810 notes: no rainbow-C4 5-colouring, so χ_rainbow = 6.** All 4,404 pieces of
 the cube cover have an independent cake_lpr acceptance (1,623 from wave 1's verifier, 2,781 re-run by wave 3 on its own
 regenerated CNFs; the rebuild verifier re-ran all 2,781 again). The cover was checked by own code; the 6-colouring is
@@ -201,6 +209,59 @@ finished. None of the workers' claims below reached the verifier stage: they are
   - **Not deleted, and must be kept: `~/research/data/es308-20261114/runs`.** The owner approved it as superseded
     307/308 evidence, but the check found that ES(8) ≤ 304, and the pending 303 and 302, use **ResidualBound 118**
     from ES307N20261118. Its slice trees (L10/L11: `runs/b35s18`–`b35s20`) live there.
+
+### Afternoon of 22 Nov (from 16:18; the machine had been idle since about 13:14)
+
+- **Guards** (no drivers running at the swap): `esr-memguard-1122d` = `esr 36000 bal=9500 ag=8000 r36=8500 m16=6000 p2=4000
+  fvr=6000 dlt=7000 n66=4000`; `esv-memguard-1122c` = `esv 4000 fv=4000`.
+- **Yield guard:** fixed. Its memory trigger is now relative to the running esr total, and it runs for up to 48 h.
+- **Guard opened for 302:** marker `zrow/N66_LE_54_VERIFIED`, which names the N66 record §8.
+- **b69 finder:** only the finder step runs (`zrow/zbs54_finder.sh 69 16 16384`, unit `esr-bal-zbs69`, 16 threads), from
+  16:25. Its inputs re-hashed equal to the pins (`balzs_n54.rows` `9e2dc29a…`, fastbb256 `df17fa74…`, `zzs_rows_n54.json`
+  `8419984c…`). The checks will use a v5 variant at rhs 16 and a chain with the fixed summary check, both being prepared.
+  No finish time is quoted.
+- **Wave 4** (`wave4-squeeze-1122`):
+  - b69 check preparation;
+  - the FV304 closing audit and a combined Lean theorem for 304;
+  - the P2 census resumed (`esr-p2-census`);
+  - M(16) ≤ 72 cube-and-conquer (`esr-m16-cnc`);
+  - the rung-36 RQ1 fix;
+  - the n66enc byte-identity re-run on the frozen exe;
+  - the small residual slices in Lean (`esr-fvr-*`).
+- **"Lean verify everything" (owner, about 17:00):** formalization wave 3 (`formalize-wave3-1122`) has five Lean
+  encoder projects, each with a statement-fidelity review:
+  - the four coupled-row blocks of ResidualBound 118;
+  - RowsValid R0 for N66 ≤ 55;
+  - N66 ≤ 54 at level 15 (the N66 input of 302);
+  - χ_rainbow = 6 for the 182-vertex graph (#810);
+  - AE33 radius 1.
+- **b69 CPU cap:** the finder's CPUQuota was set live to 1400 % so that the total stays at or below 90 % with the
+  wave-4 jobs and the Lean compiles.
+- **Not started:**
+  - the large residual slice trees (s20, b35s19, b35s20: hundreds of CPU-h and up to about 300-500 GB of oleans);
+  - FV302, after b69's checks;
+  - FV303, skipped because 302 supersedes it.
+  Each needs an advisor check before launch.
+- **Commit and push** of the N66 ≤ 54 record and these notes: blocked by the permission system, which read the
+  owner's "yeah" as not explicit enough for a push; an explicit OK is needed.
+- **Cleanup sets whose conditions now hold** (not approved): C42 and C43a (the L15 campaign has ended) and C44 (after
+  the FV304 closing audit).
+
+### Cleanup, NOW bucket (22 Nov ~07:45, owner-approved)
+
+- **Basis:** the ledger workflow `ledger-1122` (27 agents) mapped all 195 records and all 64 data folders; skeptics
+  overruled 9 of the 44 candidates. Plan: `~/research/data/ledger-20261122/CLEANUP_PLAN.md`.
+- **Approved:** the owner approved the NOW bucket only (16 sets).
+- **Checks before deleting:** the advisor reviewed the list; every survivor condition was re-checked; a re-grep of all
+  work after the skeptic pass and of the two new commits found no reference; C12's 27 paths contain no kept certified
+  CNF; nothing had changed since 05:30.
+- **Deleted:** 59 exact paths, 13.71 GB. All 1,302 must-keep paths are still present.
+- **Two proof sets among them:**
+  - C03 removed two cake-accepted proofs that are byte-identical duplicates of `encblean-m9/resolve-smoke-fix`;
+  - C31 removed two partial proof traces without a verdict (THEORY310N §7a: deletable with the owner's OK).
+- **Result:** `df` shows 949 GB used, 791 GB free. Manifest: `~/research/data/cleanup-20261122/manifest.txt`.
+- **Not approved yet:** the other buckets (after copy/note 34.4 GB, narrowed 16.6, after L15 8.1, after FV304 20.7,
+  waiver 5.9, declined 15.4).
 
 ### Rebalance after the 303 checks (22 Nov 06:28)
 

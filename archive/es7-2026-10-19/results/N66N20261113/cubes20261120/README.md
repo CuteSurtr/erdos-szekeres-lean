@@ -1,7 +1,10 @@
 # N66 level 15 (N66 ≤ 54): cube-and-conquer campaign (20 November 2026)
 
-**Status: RUNNING. N66 ≤ 54 is NOT decided. N66 ≤ 55 (level-14 cube campaign, `../cubes20261115/`, CERTIFIED) remains
-the bound.** The live status table is `STATUS_campaign.md` in this folder, written by the driver.
+**Status (22 Nov 2026, 16:45 KST): COMPLETE. N66 ≤ 54 is CERTIFIED** (every leaf; cake_lpr) plus the written model
+soundness of the level-14 record with L = 15. It has the same standard as N66 ≤ 55. Unrefereed.
+- The campaign ended 22 Nov 13:07: 105 certified leaves, 41 split nodes, nothing queued; leaf cover and certified
+  cover ok.
+- Independent checks are in §8.
 
 Labels: **CERTIFIED** = CaDiCaL 2.1.3 LRAT accepted by cake_lpr (`s VERIFIED UNSAT`, grepped) for the stated CNF, with
 row justification and p2_verify (all inside `p2_cert.sh`); **COMPUTED** = solver verdict only; **HEURISTIC** =
@@ -73,3 +76,26 @@ systemd-run --user --unit=esr-n66-drv15 -p CPUQuota=6% -p MemoryMax=300M -p Memo
 re-run with L = 15 and the level-15 F_c (`vfy15/fc/cert.cnf`, `2f78368f…`), by unit `esr-vfy-drv15` (child units
 `esr-vfy-<step>`, 65 % CPU, one at a time) while the campaign runs. Smoke test on the first 14 leaves: 14/14 pass all
 four checks; negative controls (level-14 F_c; genchk2 at L = 14) fail as they must.
+
+
+## 8. Acceptance (22 Nov 2026, main session, after the advisor's blocking checks)
+
+| check | result | evidence |
+|---|---|---|
+| driver | final, 105 certified, 41 split, 0 queued/running; `leaf_cover_ok` and `certified_cover_ok` true | `p2/c15/campaign_status.json` (sha256 `4802dc9a946cefa3b855b8c495becc0fb33491a89e5472c9722ccb9d0c8138f5`) |
+| independent verifier vfy15 (U1-style, own code), all 105 leaves | fresh cake_lpr `s VERIFIED UNSAT` 105/105; trim ⊆ cert 105; cert = F_c + cube units (own generator `genchk2`, K = 15) 105; rows justified (own check) 105; discrepancies none | `vfy15/summary.json` (sha256 `87b82b7a0029496176bdffdeabb87d95bd7f03eba844e576f31b826084927181`), `data/vfy15_tally.json`, `data/vfy15_summary_table.md` |
+| exact partition, own code, on the campaign's cube literals | 105 leaves pairwise disjoint, total measure exactly 1; 64 roots; every one of the 41 split nodes has exactly its two children | `data/own_cover_check_20261122.txt` |
+| exact partition on the REAL unit literals of the certified CNFs (vfy15 `units` read from each cert.cnf) | 0 overlapping pairs, total measure exactly 1; unit counts = cube literal counts | `data/acceptance_checks_20261122.txt` |
+| join | status ids = vfy15 ids (105 = 105); trim.cnf/trim.lrat sha256 equal for every leaf; every leaf passes every vfy15 check | same |
+| level | L = 15 throughout: driver `LEVEL = 15`; F_c built by `vfy15/bin/mkfc15.py` (asserts L = 15); vfy15 generator run with K = 15 (sequential counter "at most 15 holes") | F_c = `vfy15/fc/cert.cnf`, 684,497,868 bytes, sha256 `2f78368f5e00ba52dc04104bbfb66289212d3dbf05d1aa3e0c798a814c4fee29` |
+
+**Statement.** N66 ≤ 54: every set of points in general position (distinct x) with no 6-cap, no 6-cup and no convex
+octagon has at most 54 points.
+- Label: CERTIFIED (all 105 leaves of an exact cover) + PROVED (the written soundness of the relaxation: level-14
+  README §2 and §6, unchanged except L = 15).
+- Not Lean-checked. The Lean encoder of `formalize-20261122/n66enc` covers level 14 (N66 ≤ 55) modulo its cube
+  verdicts and RowsValid.
+
+**Consequence.** `composition_302_n54 : ExcludesHoleBudgetZZsN 16 69 → N66Bound 54 → ResidualBound 118 →
+ForcesConvexNGon 302 8` (ES303N20261120, Lean, standard axioms) now needs only the budget-69 tree with both extra rows
+at rhs 16. That run starts after this record; see ES303N20261120 §7.
