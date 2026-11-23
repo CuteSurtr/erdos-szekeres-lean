@@ -406,3 +406,13 @@ displaced layers") with the unchanged tools of this record in the same work dire
   measured rates, that is about 20 × 10 minutes + 93 × 23 minutes, roughly 40 CPU-hours of CaDiCaL plus cake_lpr
   (HEURISTIC). The ring "two displaced layers" is therefore **not finished**, and no k = 9 statement beyond the
   individual cases follows yet.
+
+## Proof re-check (24 November 2026)
+
+The 179 kept proofs of part C (`k9/cubes`) were re-checked on 24 Nov by a fresh cake_lpr run each
+(`receipts/recheck_set.py`: the CNF, BASE0 plus the cube's units, rebuilt and required to have its recorded SHA-256;
+the proof decompressed and required to have its recorded LRAT SHA-256): **179/179 `s VERIFIED UNSAT`, 0 alerts**, so
+each cube has now been accepted by cake_lpr twice (campaign and re-check). `receipts/k9_satopen_recheck_20261124.tsv`
+(sha256 `834ea72a428385f432f2e31fdce0f883ae0eb2a7097a294e554018b9f0e0e904`, built by `receipts/receipts_set.py`) lists
+per proof the `.zst` size and SHA-256, the decompressed LRAT SHA-256 now, the CNF and its SHA-256, the campaign's and
+the re-check's cake_lpr lines, the tool hashes and `check` (179/179 OK). The proofs are kept.

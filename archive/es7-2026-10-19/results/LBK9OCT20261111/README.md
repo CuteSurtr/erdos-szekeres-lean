@@ -447,3 +447,18 @@ python3 $T/controls2.py 'fam/t{t}' <sets...>    # after: for t in 10 12 13 14 15
 The recorded proofs are `<lb-k9oct-work-dir>/sat/cubes*/c_r/proof.lrat.zst`; `zstd -dc` restores the proof whose
 SHA-256 is in `logs/cubes*/c_r/result.txt`.
 
+
+## Proof re-check (24 November 2026)
+
+- The 68 kept certificate proofs of Theorems 1-4 (`sat/cubes` 16, `cubes13` 14, `cubes14` 12, `cubesV1` 13,
+  `cubesV4` 13) were re-checked on 24 Nov by a fresh cake_lpr run each (`receipts/recheck_set.py`: CNF = base plus
+  the cube's units, rebuilt and required to have its recorded SHA-256; proof decompressed and required to have its
+  recorded LRAT SHA-256): **68/68 `s VERIFIED UNSAT`, 0 alerts**, so each has been accepted by cake_lpr twice.
+  `receipts/k9lb_recheck_20261124.tsv` (sha256 `dac1a32fc4a0880fa9a32e598d39fa1b053be82e1d018ddd8a57c4e942d24123`;
+  68/68 OK).
+- The 4 G3 cube proofs (S11, `sat/cubes11/c_0..c_3`; G3 = monotone on layers 1..14, stopped on 11 Nov after 4 of its
+  15 cubes because G5 contains it, `logs/notes.txt` 23:37:52) had only CaDiCaL verdicts. Their first cake_lpr run, the
+  same re-check: **4/4 `s VERIFIED UNSAT`** (`receipts/k9g3_first_cake_20261124.tsv`, sha256
+  `c46641d4b732efed00851d8a9fbdc9be477870fe7264c5b42ceb0aaa1a2005ae`). These four cube verdicts are now CERTIFIED; no
+  statement of this record rests on them (Theorem 2 implies G3), so no claim changes.
+- All these proofs are kept.
