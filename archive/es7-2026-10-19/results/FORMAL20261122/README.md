@@ -1,5 +1,14 @@
 # FORMAL20261122: Lean formalizations of 22 November 2026 (sources, reviews, hash bindings)
 
+> **Proof deletion (24 Nov 2026, owner OK):** the 4,405 kept proofs of the 182-vertex campaign (31.8 GB; the 4,404
+> piece verdicts behind `V182Geo.chiRainbow_eq_six`, plus the k7 proof) are deleted after
+> `evidence/v182-proof-receipts-20261124.tsv` was committed and pushed: per proof, the file hash and size, the
+> decompressed LRAT hash recomputed on 24 Nov, and the independent re-check that had accepted exactly that proof
+> (wave 1's verifier 1,624, v182-recheck 2,781). The N66 cube proofs behind `CubesUnsat132`/`CubesUnsat105R` go the same
+> way (receipts in N66N20261113/receipts). Bindings this breaks: re-running cake_lpr on those proofs (trust item E2
+> becomes "two recorded acceptances" instead of "re-runnable"). The Lean statements are unchanged.
+
+
 **Status (23 Nov 2026, 00:50 KST): RECORD OF LEAN WORK; formalization waves 3 and 5 finished and reviewed.** The work was done in waves (owner: "formalize
 everything", "lean verify everything"; end state for SAT-certificate parts: **Lean + cake_lpr**). Every item below
 compiles with only `propext`, `Classical.choice` and `Quot.sound`, and had an independent statement-fidelity review

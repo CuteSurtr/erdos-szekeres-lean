@@ -1,5 +1,17 @@
 # N66N20261113: the internal catalog for (no 6-cap, no 6-cup, no convex octagon) (13 November 2026)
 
+> **Proof deletion (24 Nov 2026, owner: "verify every one of these git push and commit, then delete"):** the 237
+> kept cube proofs (trim.lrat.zst of the 132 level-14 leaves in p2/c14 and the 105 level-15 leaves in p2/c15 and
+> p2/cal15; 96.5 GB) are deleted after this receipt file was committed and pushed: `receipts/n66_cube_proofs_20261124.tsv`.
+> Each row: the proof file's SHA-256 and size; the SHA-256 of the decompressed proof, recomputed on 24 Nov and equal
+> to cert.json's trim_lrat_sha256; the trim.cnf hash (recomputed, equal to cert.json); the campaign's exact
+> cake_lpr line; and the independent fresh re-check that had already accepted it (level 14: U1 76, VB 15 Nov 23, VB 16
+> Nov 6, VB 18 Nov 27 cubes, per cubes20261115/VERIFY_N66LE55_FINAL.md; level 15: vfy15). 237 of 237 OK. The
+> certified trim.cnf files, cert.json, the cake outputs and the compressed full CNFs stay. After deletion nobody can
+> re-run cake_lpr on these proofs without re-solving the cubes; the Lean theorems keep the verdicts as named
+> hypotheses, now backed by two recorded cake_lpr acceptances each.
+
+
 Track A of the 13 November evening session (phase 1, 16:53–19:40 KST, cut off without warning by a usage limit at
 about 19:40) and task A2 of phase 2 (from 20:25 KST). Work directory `/home/jay/research/data/n66-20261113/`
 (abbreviated W; not in Git). Small tools are copied to `tools/`, certificate data to `data/`. Nothing is committed.
