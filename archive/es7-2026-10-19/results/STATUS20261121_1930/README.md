@@ -215,6 +215,70 @@ finished. None of the workers' claims below reached the verifier stage: they are
 
 ## 6. Resume
 
+### Cleanup and the M(16) re-check (23 Nov 00:50-04:30; stopped for the day after them)
+
+- **Owner, 23 Nov:** "delete that is already verified or not needed for our future" (00:50); "can we start to formalize
+  everything clean up whatever is left so that we can use our space effectively" (00:58); answers at about 01:05:
+  s35_20 **not now**; **keep** Lean chunk sources (so FV304's export C44 stays too); b69 checks **wait** for the owner's
+  OK; M(16) kept proofs: **re-check, then delete**. Later: "do not add additional agents"; "if these two finishes we
+  call it a day". The open questions 1-4 of the next subsection are answered by this.
+- **Audit** (read-only workflow `cleanup-formalize-audit-1123`, 22 agents, two skeptics per candidate set, nothing
+  deleted by agents): `~/research/data/cleanup-20261123/plan/PLAN.md`, `plan.json`, `owner_question.md`, and the
+  formalize-to-free map `formalize-map/FORMALIZE_TO_FREE.md`.
+- **Deleted (set A, 04:05, advisor-checked; manifest `~/research/data/cleanup-20261123/manifest.txt`):** C42 (11
+  `cert.cnf` of SIGTERM-killed N66 CEGAR iterations, no verdict), C43a (2 temp dirs), NO-A2 (1 temp CNF): 14 paths,
+  7.48 GB. The certified twin `p2/b13g/it1/cert.cnf` and the F_c `p2/b14h2/it1/cert.cnf` stay; the ledger's 1,302
+  must-keep paths: 0 missing.
+- **Set B, owner answer about 04:35 ("can they be deleted?"; ticked: small safe groups, duplicates, Delta-3 traces,
+  stopped searches; compress the N66 cube CNFs and the CNFs beside proofs).** Executed 16:19 by
+  `cleanup-20261123/exec-b/delete_B.py` (every duplicate re-checked byte for byte against its surviving copy just before
+  deletion; no protected path inside a deleted folder; no process using a path; advisor-checked): **4,783 paths, 81.07 GB
+  freed** (df 718.45 -> 799.52 GB). Sets: C18a, C15a, NO-B8, C42b, C32 (the trace only), C33, two crash reports, C23a,
+  N66-B2, C24, NB03, C29, C30, NO-B9, NB01 (b68z), NO-B16 (10 unanswered K9 bases), C37 (budget 65 abandoned), C40.
+  Small logs and models copied aside to `cleanup-20261123/kept/` first. Record notes (local, uncommitted): DELTA3N,
+  VERIFY309N, ES309N, ES306N, LBK9OCT, N66N cubes20261115/VERIFY_N66CUBES.md. Kept on purpose: N66-B5/B6 (inside the N66
+  keep folders), NO-B11 (desktop indexer: a desktop setting), the K9 G3 family (owner kept it on 18 Nov), NB02 (after
+  the b69 checks), C35 and C27 (record-cited proofs and replay masters inside), NO-B5 (Mac bundle) and NO-B10
+  (installer) (not named in the question), and the unpicked groups (FV304 chunk sources per "keep sources", b67 finder
+  contexts, superseded FASTBB/K9 trees, after-commit items, #810 B2 proofs, Mathlib cache). After: must-keep 1,302: 0
+  missing.
+- **Compression (owner-approved):** `exec-b/compress_B.py` packs the 131 N66 level-14 cube `p2/c14/<id>/it1/cert.cnf` (now
+  `cert.cnf.zst`; decompressed bytes checked against `cert.json` full_cnf_sha256 before each original goes) and 158 CNFs
+  beside verified proofs (rot45 imp4/imp5, six10 recert_cake, lb-k9oct cnf; checked against their own pre-compression
+  hash). Ledger `exec-b/compress_ledger.jsonl`. Readers that open these CNFs by name (the U1/VB/VN step-3 re-runs, the
+  N66 FULL control, the rot45/six10/K9 recert scripts) need `zstd -dc` first.
+  Done 16:25: 289 of 289 packed (131 + 60 + 96 + 2), 0 ALERT, 0 SKIP, **87.21 GB saved**; free disk 886.6 GB.
+- **Finished while the session was paused (about 05:20-16:15):**
+  - **s35_19 Lean check** (driver end 05:00:55; 1,411 modules, root, final, five-slice specialisation). **Accepted by
+    the res-slices-fv §9 finish recipe at 16:30:** standard axioms for `RS.s35_19` and `RS.residual_bound_118_fv`, audit
+    7,763,206 leaves / 307 units / 1,411 modules, 42 profiler-split axiom lines re-printed (n_problems 0), snapshot in
+    `res-slices-fv/data/spec-snapshots/`. Not yet: its independent review, and `combined/src/Combined/Switch3519L15.lean`
+    (about 7 min) that would drop H-S3519 from `Combined.es304_l15`. Remaining slice in Lean: s35_20 (not launched).
+  - **P2 census** (09:22): 512 of 512 shards, exactly 1 survivor (shard 301), 0 mismatches against the notes' per-shard
+    calls, rejects, survivors and output sha256 (COMPUTED; own census code). So the P2 premise of M(16) <= 73 is
+    re-established by an independent run; P1 (F(14,16) <= 57) remains a COMPUTED re-run inside the notes' generator.
+  - **M(16)** at 16:19: 95,162 cubes certified (A 36,839, B1 21,913, B2 36,410), 0 SAT, 0 alerts, not paused;
+    written-bytes sum 416.6 GB of the 1,200 budget; the re-checker has re-checked and deleted 81,858 proofs, 0 alerts.
+- **M(16) re-check and delete (owner-approved):** unit `esr-rck-m16` (since 04:11; `--delete --follow --jobs 1`, 1
+  thread, MemoryMax 2600M) re-checks each kept proof with its own code (CNF rebuilt from the base CNF and split files
+  and matched to the recorded hash; LRAT matched to its recorded hash; a fresh cake_lpr; exact line), writes the
+  ledger `e810-linux-20261121/m16-recheck/ledger.jsonl`, and only then unlinks the `.lrat.zst` (the run's `.cake.out`
+  stays). Hourly copy: timer `esr-rck-m16-copy` into `e810-linux-20261121/m16-ledger-copy`. **Both are keep-set**: they
+  are the only licence for each deleted proof. Label: a second cake_lpr run by separate code on the same machine, not an
+  external referee; after deletion no third party can re-run cake_lpr on those proofs without re-solving. Tool review:
+  85/85 controls, two reviewers, one fix round confirmed (`m16-recheck/review/`). Final certification:
+  `m16-recheck/README_RECHECK.md` §9.3 (`audit_rck.py --ledger`, exit 0 only).
+- **First checks (04:12-04:18):** 461 proofs re-checked and deleted, 0 alerts, 0 torn-tail warnings; sampled proofs gone
+  with their `.cake.out` kept; `audit_rck.py --ledger` on a live snapshot (deleter paused): exit 2 (open work), 0
+  problems, rechecked_deleted 461 = DELETED lines, 3/3 sample re-checks accepted (`m16-recheck/snap-live1/`).
+- **M(16) driver restarted 04:16** with `--proof-budget-gb 1200` (copy `m16-recheck/restart_with_preflight_b1200.sh`,
+  diff = that number only), original end 24 Nov 17:29:54 kept. Gate: live audit clean, YIELD absent, Tctl 5-minute mean
+  80.0 C (< 83 C). Preflight T1 closed (0 problems, 2/2 re-checks); resumed with 48,719 tasks queued, not paused, no
+  alerts, counts at or above the earlier ones. The written-bytes sum was 146 GB at 04:16, rising about 19 GB/h over the
+  last 2.7 h (HEURISTIC): about 850 GB by the end, under 1,200.
+- **b69 finder DONE 02:36:16:** 32,334 of 32,334 contexts closed (rc 0). A candidate tree for ES(8) ≤ 302, **not a
+  claim**: the two prepared checks (`bal186-20261119/b69prep`, review 6/6) wait for the owner's OK.
+
 ### Night of 22-23 Nov (stopped 00:50; owner: "do not add new agents from now on, formalize wave 5 1122 finishes then we call it a day")
 
 - **No agents or workflows run.** Formalization wave 5 (`formalize-wave5-1122`, 21:05 to 00:43) is in §4 and in
@@ -223,7 +287,7 @@ finished. None of the workers' claims below reached the verifier stage: they are
 
 | unit | job | state | deadline |
 |---|---|---|---|
-| `esr-bal-zbs69` | budget-69 finder (`zrow/zbs54_finder.sh 69 16 16384`; CPUQuota 1400 %, CPUs 5-15,21-31) | 21,684 of 32,334 contexts closed after 7.8 h | 26 Nov 03:45 |
+| `esr-bal-zbs69` | budget-69 finder (`zrow/zbs54_finder.sh 69 16 16384`; CPUQuota 1400 %, CPUs 5-15,21-31) | **DONE 23 Nov 02:36:16**: 32,334 of 32,334 contexts closed, rc 0 (checks wait for the owner) | ended |
 | `esr-fvr-drv` + 3 `esr-fvr-c3519-*` | s35_19 Lean check (`res-slices-fv/tools/drive.py`, `FVR_JOBS=3`) | 626 of about 1,412 modules; no root or final yet | driver 23 Nov 21:03 |
 | `esr-p2-census` | #810 P2 census (4 shard workers, CPUs 0-4,16-20) | 190 of 512 shards, 1 survivor (shard 301), 0 mismatches against the notes | 24 Nov 16:45 |
 | `esr-m16-cnc` | M(16) ≤ 72 cube-and-conquer (3 lanes) | 32,249 cubes certified, 0 SAT, 0 rejected, 0 errors; 49,268 open; kept proofs 79.9 GB | 24 Nov 17:29; it pauses itself at 250 GB of kept proofs |
@@ -264,8 +328,22 @@ systemd-run --user --unit=esr-fvr-drv -p CPUQuota=20% -p MemoryMax=400M -p Memor
 systemd-run --user --unit=esr-p2-census -p CPUQuota=400% -p MemoryMax=3600M -p MemorySwapMax=0 -p RuntimeMaxSec=172800 \
   --nice=10 --working-directory=/home/jay/research/data/e810-linux-20261121/p2-census \
   /usr/bin/taskset -c 0-4,16-20 tools/p2_driver.sh
-systemd-run --user --unit=esr-m16-cnc -p CPUQuota=300% -p MemoryMax=5400M -p MemorySwapMax=0 -p RuntimeMaxSec=172800 \
-  --nice=10 --working-directory=/home/jay/research/data/e810-linux-20261121/m16-le72-run tools/restart_with_preflight.sh
+# M(16) since 23 Nov 04:16: the copy with --proof-budget-gb 1200 (the running sum of written proof bytes; the 250 GB
+# free-disk floor stays). The old tools/restart_with_preflight.sh (budget 250) would pause the run.
+systemd-run --user --unit=esr-m16-cnc -p CPUQuota=300% -p MemoryMax=5400M -p MemorySwapMax=0 \
+  -p RuntimeMaxSec=$(( $(date -d "2026-11-24 17:29:54" +%s) - $(date +%s) )) --nice=10 \
+  --working-directory=/home/jay/research/data/e810-linux-20261121/m16-le72-run \
+  /home/jay/research/data/e810-linux-20261121/m16-recheck/restart_with_preflight_b1200.sh
+# M(16) re-check and delete (23 Nov; resumable; one instance per ledger) and its hourly ledger copy
+W=/home/jay/research/data/e810-linux-20261121/m16-recheck; R=/home/jay/research/data/e810-linux-20261121/m16-le72-run
+PY=/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python
+SPECS="A=cnf/f73A.cnf=cnf/f73A_d8.icnf B1=cnf/f73B1.cnf=cnf/f73B1_d8.icnf B2=cnf/f73B2.cnf=cnf/f73B2_d8.icnf"
+systemd-run --user --unit=esr-rck-m16 -p CPUQuota=100% -p MemoryMax=2600M -p MemorySwapMax=0 -p RuntimeMaxSec=172800 \
+  --nice=10 --working-directory=$W bash -c "exec $PY -I $W/recheck_delete.py --root $R run $SPECS --delete --follow \
+  --jobs 1 --ledger $W/ledger.jsonl >> $W/rck_m16.log 2>&1"
+systemd-run --user --unit=esr-rck-m16-copy --on-calendar='*:23' -p CPUQuota=100% -p MemoryMax=500M -p MemorySwapMax=0 \
+  -p RuntimeMaxSec=900 --nice=10 --working-directory=$W $PY -I $W/ledger_copy.py $W/ledger.jsonl \
+  /home/jay/research/data/e810-linux-20261121/m16-ledger-copy
 ```
 
 ### Resumed 22 Nov 03:48 (owner: research ES and #810 with the new tools; fully use the PC)

@@ -1,5 +1,10 @@
 # ES306N20261119: steps toward ES(8) ≤ 306 (19 November 2026)
 
+> **Retention update (23 Nov 2026, owner OK):** the open-partial budget-65 campaign is abandoned. The context files
+> of 37 contexts in bal186-20261119/runs (ctx-<id>-b65.json.gz and .result.json; cleanup set C37) were deleted;
+> campaign/ctx-N.log and ctx-3, ctx-1291, ctx-1548 stay. Exact paths: ~/research/data/cleanup-20261123/manifest.txt.
+
+
 > **Superseded for the bound (17:42): ES(8) ≤ 305, see [ES305N20261119](../ES305N20261119/README.md).** One extra
 > balanced row from N66 ≤ 55 (the Z-row) shrinks the balanced trees by about 1e4. The Lean-rows-only budget-65
 > campaign below was stopped at 17:19 with 40 contexts done. It would still give a 306 that does not use Lemma Z.

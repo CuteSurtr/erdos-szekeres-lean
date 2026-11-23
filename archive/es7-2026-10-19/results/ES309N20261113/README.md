@@ -1,5 +1,9 @@
 # ES309N20261113 — ES(8) ≤ 309
 
+> **Retention update (23 Nov 2026, owner OK):** the verify309-codex copies named in VERIFY309N's retention update
+> (C24 residual proof copies, C32 UNKNOWN trace, C33 second proof) were deleted; the originals and the receipts stay.
+
+
 13 November 2026, after the independent audit in [VERIFY309N20261113](../VERIFY309N20261113/README.md).
 
 **PROVED (computer-assisted, with written geometric arguments and CERTIFIED / EXACT TREE components).**

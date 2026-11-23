@@ -1,5 +1,14 @@
 # VERIFY309N20261113 — independent audit of the proposed ES(8) ≤ 309 chain
 
+> **Retention update (23 Nov 2026, owner OK; supersedes "Do not delete those directories" for these files only):**
+> deleted from verify309-codex-20261113: (C24) residual/ copies of the 448 pool-row proofs and CNFs (*.lrat.zst,
+> *.lrat, *.cnf.gz) and current.cnf, after a byte check against their twins in fastbb-20261113/p2/proofs (identical
+> after decompression, 896 of 896); the *.cake.log, *.cadical.log, recert.jsonl and certificates.jsonl stay. (C32)
+> followup56/fresh/proof.lrat.zst, the 600 s UNKNOWN trace (the small files beside it stay). (C33) fresh57.lrat.zst,
+> a second proof of the superseded N66 <= 57 link; the original n66-20261113/p2/b12/it1/trim.lrat.zst stays. Exact
+> paths: ~/research/data/cleanup-20261123/manifest.txt.
+
+
 Started 13 November 2026, 22:09 KST; completed 22:38 KST. **All three required links confirmed.**
 ES(8) ≤ 309 may be stated as a computer-assisted result with the trust boundary below; it is not a
 fully Lean-checked theorem. The complete chain is in `../ES309N20261113/README.md`.

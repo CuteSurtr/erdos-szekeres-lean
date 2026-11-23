@@ -1,5 +1,14 @@
 # Delta conjecture: third research pass, 13 November 2026
 
+> **Retention update (23 Nov 2026, owner OK):** the 39 no-verdict proof traces of this record were deleted: 34 UNKNOWN
+> traces (cleanup set C29), 4 traces of SAT runs (C30: cup15-a and forced16-a proof.blrat.zst, scheduled-cup-n6-m15
+> and terminal7-a/m15 case/proof.lrat.zst) and 1 UNKNOWN probe trace (NO-B9). None was a certificate; their hashes stay
+> pinned in coordinator/data/archives.json and the archive manifests, and the SAT models stay in each run's kept
+> cadical.log. Every certified proof, extension/low16-n7-a included, is kept. This supersedes the "retained" statements
+> at README l.343-349, resume/selection/README.md l.116, ROOTED.md l.90, VERIFY_ROOTED.md l.212 and
+> longcup16/README.md l.53-54. Exact paths: ~/research/data/cleanup-20261123/manifest.txt.
+
+
 **New result: the cup-side strengthening of D(5,6) is false for real point
 sets.** A 15-point integer counterexample is exhibited and certified below.
 **CERTIFIED:** cup-side D(5,8) holds for all 14-point signotopes, extending its

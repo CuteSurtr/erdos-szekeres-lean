@@ -1,5 +1,10 @@
 # LBK9OCT20261111: an 8-fold set of 128 points without a convex 9-gon? (11–12 November 2026)
 
+> **Retention update (23 Nov 2026, owner OK):** the base CNFs of the stopped, unanswered runs S1-S6, S9, S10, S12 and
+> S15 (10 files under sat/) were deleted; they certify nothing and regenerate with tools/gen.py and the families of
+> section 2. The certificate inputs (S8, the 16 cubes, Theorems 3-4) and the G3 family (S11, cubes11) are kept.
+
+
 **Question.** Is there a set of 128 = 2^7 points in general position, invariant under a rotation of order 8, with no
 9 points in convex position? This is the k = 9 case of the PRIMEFOLD conjecture (`PRIMEFOLD` §7). By the layer lemma
 (K = 9 <= 2m = 16; `LAYERLEAN`, Lean-checked) such a set is t = 16 nested regular octagons without the centre. The
