@@ -1,0 +1,371 @@
+{
+ "pos": [
+  {
+   "name": "balz_assemble_n54.py out_v4n54",
+   "rc": 0,
+   "summary": {
+    "label": "EXACT TREE (check_tree on every assembled file)",
+    "budget": 68,
+    "rows": 3133,
+    "z_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "zstar_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "requires": "N66 <= 54",
+    "files": 8,
+    "bad": [],
+    "leaves": 22760,
+    "nodes": 45512,
+    "minimum_margin": 1,
+    "occ_master_sha256": "e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605",
+    "mis_master_sha256": null,
+    "zero_side_only": true
+   },
+   "stdout_tail": "\"rhs\": 16}, \"zstar_row\": {\"support_size\": 70, \"rhs\": 16}, \"requires\": \"N66 <= 54\", \"files\": 8, \"bad\": [], \"leaves\": 22760, \"nodes\": 45512, \"minimum_margin\": 1, \"occ_master_sha256\": \"e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605\", \"mis_master_sha256\": null, \"zero_side_only\": true}\n",
+   "stderr_tail": ""
+  },
+  {
+   "name": "balz_assemble_v5n54.py out_v5n54_small",
+   "rc": 0,
+   "summary": {
+    "label": "EXACT TREE (check_tree on every assembled file; files above BIG_BYTES piecewise by the unchanged check_tree, one_big)",
+    "budget": 68,
+    "rows": 3133,
+    "z_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "zstar_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "requires": "N66 <= 54",
+    "files": 8,
+    "bad": [],
+    "leaves": 22760,
+    "nodes": 45512,
+    "minimum_margin": 1,
+    "occ_master_sha256": "e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605",
+    "mis_master_sha256": null,
+    "zero_side_only": true,
+    "assembler": "balz_assemble_v5n54.py",
+    "big_contexts": 0,
+    "BIG_BYTES": 10000000,
+    "SUB_NODES": 30000
+   },
+   "stdout_tail": " [], \"leaves\": 22760, \"nodes\": 45512, \"minimum_margin\": 1, \"occ_master_sha256\": \"e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605\", \"mis_master_sha256\": null, \"zero_side_only\": true, \"assembler\": \"balz_assemble_v5n54.py\", \"big_contexts\": 0, \"BIG_BYTES\": 10000000, \"SUB_NODES\": 30000}\n",
+   "stderr_tail": "",
+   "same_files_as_v4n54": true,
+   "same_summary_keys_as_v4n54": true
+  },
+  {
+   "name": "balz_assemble_v5n54.py out_v5n54_big30000",
+   "rc": 0,
+   "summary": {
+    "label": "EXACT TREE (check_tree on every assembled file; files above BIG_BYTES piecewise by the unchanged check_tree, one_big)",
+    "budget": 68,
+    "rows": 3133,
+    "z_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "zstar_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "requires": "N66 <= 54",
+    "files": 8,
+    "bad": [],
+    "leaves": 22760,
+    "nodes": 45512,
+    "minimum_margin": 1,
+    "occ_master_sha256": "e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605",
+    "mis_master_sha256": null,
+    "zero_side_only": true,
+    "assembler": "balz_assemble_v5n54.py",
+    "big_contexts": 8,
+    "BIG_BYTES": 0,
+    "SUB_NODES": 30000
+   },
+   "stdout_tail": " \"bad\": [], \"leaves\": 22760, \"nodes\": 45512, \"minimum_margin\": 1, \"occ_master_sha256\": \"e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605\", \"mis_master_sha256\": null, \"zero_side_only\": true, \"assembler\": \"balz_assemble_v5n54.py\", \"big_contexts\": 8, \"BIG_BYTES\": 0, \"SUB_NODES\": 30000}\n",
+   "stderr_tail": "",
+   "same_files_as_v4n54": true,
+   "same_summary_keys_as_v4n54": true
+  },
+  {
+   "name": "balz_assemble_v5n54.py out_v5n54_big1500",
+   "rc": 0,
+   "summary": {
+    "label": "EXACT TREE (check_tree on every assembled file; files above BIG_BYTES piecewise by the unchanged check_tree, one_big)",
+    "budget": 68,
+    "rows": 3133,
+    "z_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "zstar_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "requires": "N66 <= 54",
+    "files": 8,
+    "bad": [],
+    "leaves": 22760,
+    "nodes": 45512,
+    "minimum_margin": 1,
+    "occ_master_sha256": "e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605",
+    "mis_master_sha256": null,
+    "zero_side_only": true,
+    "assembler": "balz_assemble_v5n54.py",
+    "big_contexts": 8,
+    "BIG_BYTES": 0,
+    "SUB_NODES": 1500
+   },
+   "stdout_tail": ", \"bad\": [], \"leaves\": 22760, \"nodes\": 45512, \"minimum_margin\": 1, \"occ_master_sha256\": \"e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605\", \"mis_master_sha256\": null, \"zero_side_only\": true, \"assembler\": \"balz_assemble_v5n54.py\", \"big_contexts\": 8, \"BIG_BYTES\": 0, \"SUB_NODES\": 1500}\n",
+   "stderr_tail": "",
+   "same_files_as_v4n54": true,
+   "same_summary_keys_as_v4n54": true
+  },
+  {
+   "name": "balz_assemble_v5n54.py out_v5n54_big97",
+   "rc": 0,
+   "summary": {
+    "label": "EXACT TREE (check_tree on every assembled file; files above BIG_BYTES piecewise by the unchanged check_tree, one_big)",
+    "budget": 68,
+    "rows": 3133,
+    "z_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "zstar_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "requires": "N66 <= 54",
+    "files": 8,
+    "bad": [],
+    "leaves": 22760,
+    "nodes": 45512,
+    "minimum_margin": 1,
+    "occ_master_sha256": "e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605",
+    "mis_master_sha256": null,
+    "zero_side_only": true,
+    "assembler": "balz_assemble_v5n54.py",
+    "big_contexts": 8,
+    "BIG_BYTES": 0,
+    "SUB_NODES": 97
+   },
+   "stdout_tail": " 8, \"bad\": [], \"leaves\": 22760, \"nodes\": 45512, \"minimum_margin\": 1, \"occ_master_sha256\": \"e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605\", \"mis_master_sha256\": null, \"zero_side_only\": true, \"assembler\": \"balz_assemble_v5n54.py\", \"big_contexts\": 8, \"BIG_BYTES\": 0, \"SUB_NODES\": 97}\n",
+   "stderr_tail": "",
+   "same_files_as_v4n54": true,
+   "same_summary_keys_as_v4n54": true
+  },
+  {
+   "name": "prereg302",
+   "rc": 0,
+   "files_nodes_leaves": [
+    8,
+    45512,
+    22760
+   ],
+   "equal_to_v4n54": true,
+   "errors": []
+  },
+  {
+   "name": "balcheck2 n54_lemma",
+   "rc": 0,
+   "json": "{\"verdict\": \"EXACT TREE (balcheck)\", \"budget\": 68, \"contexts\": 8, \"failed\": 0, \"nodes\": 45512, \"leaves\": 22760, \"min_margin\": 1, \"rows\": 3133, \"cover\": \"complete with 1 lemma path(s) 0:1\"}",
+   "agrees_with_v4n54": true
+  },
+  {
+   "name": "v4n54 b67",
+   "rc": 0,
+   "summary": {
+    "label": "EXACT TREE (check_tree on every assembled file)",
+    "budget": 67,
+    "rows": 3133,
+    "z_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "zstar_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "requires": "N66 <= 54",
+    "files": 1,
+    "bad": [],
+    "leaves": 1,
+    "nodes": 1,
+    "minimum_margin": 7,
+    "occ_master_sha256": "2b5c0fb670f9c6631e159c7ce5bac543cbc595f976f771f23beb0ae9094f6176",
+    "mis_master_sha256": null,
+    "zero_side_only": true
+   },
+   "stdout_tail": "e\": 70, \"rhs\": 16}, \"zstar_row\": {\"support_size\": 70, \"rhs\": 16}, \"requires\": \"N66 <= 54\", \"files\": 1, \"bad\": [], \"leaves\": 1, \"nodes\": 1, \"minimum_margin\": 7, \"occ_master_sha256\": \"2b5c0fb670f9c6631e159c7ce5bac543cbc595f976f771f23beb0ae9094f6176\", \"mis_master_sha256\": null, \"zero_side_only\": true}\n",
+   "stderr_tail": ""
+  },
+  {
+   "name": "v5n54 b67",
+   "rc": 0,
+   "summary": {
+    "label": "EXACT TREE (check_tree on every assembled file; files above BIG_BYTES piecewise by the unchanged check_tree, one_big)",
+    "budget": 67,
+    "rows": 3133,
+    "z_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "zstar_row": {
+     "support_size": 70,
+     "rhs": 16
+    },
+    "requires": "N66 <= 54",
+    "files": 1,
+    "bad": [],
+    "leaves": 1,
+    "nodes": 1,
+    "minimum_margin": 7,
+    "occ_master_sha256": "2b5c0fb670f9c6631e159c7ce5bac543cbc595f976f771f23beb0ae9094f6176",
+    "mis_master_sha256": null,
+    "zero_side_only": true,
+    "assembler": "balz_assemble_v5n54.py",
+    "big_contexts": 0,
+    "BIG_BYTES": 10000000,
+    "SUB_NODES": 30000
+   },
+   "stdout_tail": ", \"bad\": [], \"leaves\": 1, \"nodes\": 1, \"minimum_margin\": 7, \"occ_master_sha256\": \"2b5c0fb670f9c6631e159c7ce5bac543cbc595f976f771f23beb0ae9094f6176\", \"mis_master_sha256\": null, \"zero_side_only\": true, \"assembler\": \"balz_assemble_v5n54.py\", \"big_contexts\": 0, \"BIG_BYTES\": 10000000, \"SUB_NODES\": 30000}\n",
+   "stderr_tail": "",
+   "same_files_as_v4n54": true,
+   "same_summary_keys_as_v4n54": true
+  }
+ ],
+ "neg": [
+  {
+   "name": "v5 rhs15 b67",
+   "rc": 1,
+   "summary": null,
+   "stdout_tail": "{\"small_contexts\": 1, \"big_contexts\": 0, \"BIG_BYTES\": 10000000, \"SUB_NODES\": 30000, \"NW\": 1, \"NW_BIG\": 1}\n{\"big_done\": 0}\n",
+   "stderr_tail": ".py\", line 367, in map\n    return self._map_async(func, iterable, mapstar, chunksize).get()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/usr/lib/python3.14/multiprocessing/pool.py\", line 774, in get\n    raise self._value\nValueError: Nonpositive leaf margin at node 2\n"
+  },
+  {
+   "name": "balz_assemble_v5.py out_v5_rhs15",
+   "rc": 1,
+   "summary": null,
+   "stdout_tail": "{\"small_contexts\": 8, \"big_contexts\": 0, \"BIG_BYTES\": 10000000, \"SUB_NODES\": 30000, \"NW\": 1, \"NW_BIG\": 1}\n{\"big_done\": 0}\n",
+   "stderr_tail": "py\", line 367, in map\n    return self._map_async(func, iterable, mapstar, chunksize).get()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/usr/lib/python3.14/multiprocessing/pool.py\", line 774, in get\n    raise self._value\nValueError: Nonpositive leaf margin at node 15\n"
+  },
+  {
+   "name": "balcheck2 rhs15_lemma",
+   "rc": 1,
+   "json": "{\"verdict\": \"NOT CONFIRMED\", \"budget\": 68, \"contexts\": 8, \"failed\": 8, \"nodes\": 0, \"leaves\": 0, \"min_margin\": -1, \"rows\": 3133, \"cover\": \"not checked (failed files)\"}"
+  },
+  {
+   "name": "balcheck2 n54_nolemma",
+   "rc": 1,
+   "json": "{\"verdict\": \"NOT CONFIRMED\", \"budget\": 68, \"contexts\": 8, \"failed\": 0, \"nodes\": 45512, \"leaves\": 22760, \"min_margin\": 1, \"rows\": 3133, \"cover\": \"incomplete cover: a branch has a missing side\"}"
+  },
+  {
+   "name": "balz_assemble_v5n54.py out_v5n54_wrongB",
+   "rc": 1,
+   "summary": null,
+   "stdout_tail": "",
+   "stderr_tail": "ay/research/data/bal186-20261119/b69prep/balz_assemble_v5n54.py\", line 54, in descriptors\n    assert m['budget'] == expect_budget, (side_dir, m['budget'], expect_budget)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('/home/jay/research/data/bal186-20261119/b69prep/ctl/b68c8/occ', 68, 69)\n"
+  },
+  {
+   "neg": "capacity x1000 in one leaf",
+   "context": 0,
+   "one": "raised ValueError: Nonpositive leaf margin at node 7407",
+   "one_big1500": "raised ValueError: Nonpositive leaf margin at node 451",
+   "one_big97": "raised ValueError: Nonpositive leaf margin at node 43",
+   "rejected_by_all": true
+  },
+  {
+   "neg": "branch child reused",
+   "context": 0,
+   "one": "raised ValueError: Repeated or invalid tree node",
+   "one_big1500": "raised ValueError: Repeated or invalid tree node",
+   "one_big97": "raised ValueError: Repeated or invalid tree node",
+   "rejected_by_all": true
+  },
+  {
+   "neg": "unreachable node",
+   "context": 0,
+   "one": "raised ValueError: Unreachable tree nodes",
+   "one_big1500": "raised ValueError: Unreachable tree nodes",
+   "one_big97": "raised ValueError: Unreachable tree nodes",
+   "rejected_by_all": true
+  },
+  {
+   "neg": "leaf replaced by pending",
+   "context": 0,
+   "one": "returned ok=False",
+   "one_big1500": "returned ok=False",
+   "one_big97": "returned ok=False",
+   "rejected_by_all": true
+  },
+  {
+   "neg": "branch on fixed vertex 0",
+   "context": 0,
+   "one": "raised ValueError: Repeated or invalid branch variable",
+   "one_big1500": "raised ValueError: Repeated or invalid branch variable",
+   "one_big97": "raised ValueError: Repeated or invalid branch variable",
+   "rejected_by_all": true
+  },
+  {
+   "neg": "bool as child index",
+   "context": 0,
+   "one": "raised ValueError: Repeated or invalid tree node",
+   "one_big1500": "raised ValueError: Repeated or invalid branch variable",
+   "one_big97": "raised ValueError: Repeated or invalid branch variable",
+   "rejected_by_all": true
+  },
+  {
+   "neg": "bool as vertex",
+   "context": 0,
+   "one": "raised ValueError: Repeated or invalid branch variable",
+   "one_big1500": "raised ValueError: Repeated or invalid branch variable",
+   "one_big97": "raised ValueError: Repeated or invalid branch variable",
+   "rejected_by_all": true
+  },
+  {
+   "neg": "context fixings differ from the master path",
+   "context": 0,
+   "one": "raised AssertionError: ('fastbb context fixings differ from the master path', 0)",
+   "one_big1500": "raised AssertionError: ('fastbb context fixings differ from the master path', 0)",
+   "one_big97": "raised AssertionError: ('fastbb context fixings differ from the master path', 0)",
+   "rejected_by_all": true
+  }
+ ],
+ "verdict": {
+  "positive_all_equal": true,
+  "negative_all_rejected": true,
+  "control_context": 0,
+  "context_nodes": 14785,
+  "reference_files": 8,
+  "reference_summary": {
+   "budget": 68,
+   "rows": 3133,
+   "z_row": {
+    "support_size": 70,
+    "rhs": 16
+   },
+   "zstar_row": {
+    "support_size": 70,
+    "rhs": 16
+   },
+   "requires": "N66 <= 54",
+   "files": 8,
+   "bad": [],
+   "leaves": 22760,
+   "nodes": 45512,
+   "minimum_margin": 1,
+   "occ_master_sha256": "e0ed6a94cad122e93a4a132d191b44bbea552906e64f5b857ced6f860cb7f605",
+   "zero_side_only": true
+  }
+ }
+}

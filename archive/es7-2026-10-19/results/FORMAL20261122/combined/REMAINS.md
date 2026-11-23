@@ -1,5 +1,9 @@
 # REMAINS: what each bound still rests on after `combined` part 2 (23 Nov 2026, 00:05 KST)
 
+> **Update 24 Nov 2026 (main session):** H-T69 now has evidence: the budget-69 tree is an EXACT TREE by two in-project
+> checks (ES302N20261124), so `Combined.es302_l15` states ES(8) <= 302 with every hypothesis evidenced; the tree is not in
+> Lean. H-T68's tree (b68zs) is deleted on 24 Nov (owner OK, after the 302 record); 303 is superseded by 302.
+
 Labels follow es-research §2 (PROVED / CERTIFIED / EXACT TREE / COMPUTED / HEURISTIC). "Lean-checked" means
 kernel-checked with axioms exactly `propext`, `Classical.choice`, `Quot.sound` (a `#guard_msgs` guard in each module).
 Lean's kernel does not re-check imported oleans against their sources; the oleans imported here are pinned by sha256

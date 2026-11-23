@@ -1,6 +1,6 @@
 # STATUS20261121_1930: Linux session of 21 November 2026 from 19:15 KST (handoff, updated as it goes)
 
-**Status (23 Nov 00:50): STOPPED FOR THE NIGHT; four jobs keep running unattended (§6, "Night of 22-23 Nov").** Owner, about 21:55: no new agents, stop after formalization wave 5. ES(8) ≤ 303 established 22 Nov 06:21 ([ES303N20261120](../ES303N20261120/README.md); computer-assisted, unrefereed). Commits of this session: b01f0acd9, 708f7c917, 7c1562871 and 59becd99c (pushed), and the wave-5 commit that carries this page (owner, about 22:00: commit and push at wrap-up). Nothing was e-mailed.
+**Status (24 Nov 02:40): ES(8) ≤ 302 ESTABLISHED (ES302N20261124; the budget-69 tree passed both in-project checks; not reviewed independently, not in Lean). Verify-then-delete running (§6).** Earlier: **Status (23 Nov 00:50): STOPPED FOR THE NIGHT; four jobs keep running unattended (§6, "Night of 22-23 Nov").** Owner, about 21:55: no new agents, stop after formalization wave 5. ES(8) ≤ 303 established 22 Nov 06:21 ([ES303N20261120](../ES303N20261120/README.md); computer-assisted, unrefereed). Commits of this session: b01f0acd9, 708f7c917, 7c1562871 and 59becd99c (pushed), and the wave-5 commit that carries this page (owner, about 22:00: commit and push at wrap-up). Nothing was e-mailed.
 - The Mac pushed its own handoff, `STATUS20261121`, on the unmerged branch `origin/es-mac-2026-11-21`. That name and the
   Mac's record names (ES8CHECK20261121, M57R36N20261121, M57R36E20261121, PREFIX20261121) are taken. This Linux page uses a
   time suffix.

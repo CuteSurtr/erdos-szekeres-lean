@@ -1,5 +1,9 @@
 # ES303N20261120: the Z*-row and the budget-68 tree (target ES(8) ≤ 303)
 
+> **Superseded for the bound (24 Nov 2026): ES(8) ≤ 302, see [ES302N20261124](../ES302N20261124/README.md).** The 303
+> statement stays true; its budget-68 tree (b68zs) is to be deleted on 24 Nov with the owner's OK, only after this
+> update and the 302 record are pushed (data-side manifest verify-20261124/manifest_deletions.txt); this record keeps its counts, hashes and check outputs.
+
 **Status (22 Nov 2026, 06:21 KST): ES(8) ≤ 303 ESTABLISHED. Computer-assisted and unrefereed, with the same kind of evidence as ES(8) ≤ 304.** Every 303 points in general position contain 8 points in convex position. The chain is `composition_303_zzsf : ExcludesHoleBudgetZZsF 68 → N66Bound 55 → ResidualBound 118 → ForcesConvexNGon 303 8`, Lean-checked with standard axioms; Linux audit 22 Nov, §5. Its three hypotheses:
 - the budget-68 tree, **EXACT TREE by two independent checks**: check_tree via v5, and balcheck2, which reads every file
   whole (§5);

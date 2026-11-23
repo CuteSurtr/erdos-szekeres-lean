@@ -1,0 +1,19 @@
+BindN54_neg15.lean:15:31: error: Type mismatch
+  Iff.rfl
+has type
+  ?m.69 ↔ ?m.69
+but is expected to have type
+  OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69 ↔
+    ¬∃ holes,
+        holes 0 = 0 ∧
+          holes 1 = 0 ∧
+            (∀ (i : Fin 252), holes i ≤ 1) ∧
+              (∀ (q : Fin 2685), OmissionBalanced.demand q ≤ ∑ i ∈ OmissionBalanced.support q, holes i) ∧
+                (∀ (q : Fin 446), BalancedCoverCutsV2.demand q ≤ ∑ i ∈ BalancedCoverCutsV2.support q, holes i) ∧
+                  15 ≤ ∑ i ∈ OmissionZRow.Z, holes i ∧ 16 ≤ ∑ i ∈ OmissionZStarRow.Zs, holes i ∧ ∑ i, holes i ≤ 69
+OmissionBalancedZZsN.composition_302_n54 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69 →
+  OmissionZRow.N66Bound 54 → ErdosSzekeres.Omission.Partition.ResidualBound 118 → ErdosSzekeres.ForcesConvexNGon 302 8
+'b69prep_instance' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'b69prep_Z' depends on axioms: [propext, Classical.choice, Quot.sound]
+'b69prep_Zs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedZZsN.composition_302_n54' depends on axioms: [propext, Classical.choice, Quot.sound]

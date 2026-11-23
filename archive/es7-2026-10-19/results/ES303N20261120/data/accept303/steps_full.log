@@ -1,0 +1,14 @@
+2026-11-20 01:33:35 start B=68 T=14 C=16384 (zero side only, Z*-row)
+2026-11-20 11:01:36 start B=68 T=10 C=16384 (zero side only, Z*-row)
+2026-11-20 14:37:14 start B=68 T=11 C=16384 (zero side only, Z*-row)
+2026-11-20 17:41:33 start B=68 T=22 C=16384 (zero side only, Z*-row)
+2026-11-21 19:23:11 start B=68 T=22 C=16384 (zero side only, Z*-row)
+2026-11-22 01:08:17 occ (0 occupied) rc=0
+2026-11-22 01:26:33 start assemble (v5 sha 964b00007e5b..., NW=10 NW_BIG=3 BIG_BYTES=10000000 SUB_NODES=30000; v4 stopped by the memory guard 01:09:41)
+2026-11-22 03:48:48 start assemble (v5 sha 964b00007e5b..., re-run after the 22 Nov 03:00 stop; NW=10 NW_BIG=3 BIG_BYTES=10000000 SUB_NODES=30000)
+2026-11-22 06:06:31 assemble+check_tree (v5) rc=0 ntexts": 30758, "big_contexts": 2007, "BIG_BYTES": 10000000, "SUB_NODES": 30000, "NW": 10, "NW_BIG": 3}
+{"big_done": 2007}
+{"label": "EXACT TREE (check_tree on every assembled file; files above BIG_BYTES piecewise by the unchanged check_tree, one_big)", "budget": 68, "rows": 3133, "z_row": {"support_size": 70, "rhs": 15}, "zstar_row": {"support_size": 70, "rhs": 15}, "files": 32765, "bad": [], "leaves": 123166799, "nodes": 246300833, "minimum_margin": 1, "occ_master_sha256": "7d00302cb81790072774ea7991485cddaad7462565e81e56e6050db2127caef2", "mis_master_sha256": null, "zero_side_only": true, "assembler": "balz_assemble_v5.py", "big_contexts": 2007, "BIG_BYTES": 10000000, "SUB_NODES": 30000}
+2026-11-22 06:06:53 chain303: assembly did not pass; balcheck2 not started
+2026-11-22 06:08:37 main session: chain303's check read only the first line of the multi-line v5 summary (parse bug); the v5 summary itself has rc=0, label EXACT TREE and all pre-registered values; file checks redone by hand: files=32765 summary_files=32765 older_than_v5_start=0; balcheck2 (sha 951b90dc..., rows zzs_rows.json dc6a410f...) started manually with chain303's command (MemoryMax 9000M instead of 8G)
+2026-11-22 06:21:29 balcheck2 rc=0 {"verdict": "EXACT TREE (balcheck)", "budget": 68, "contexts": 32765, "failed": 0, "nodes": 246300833, "leaves": 123166799, "min_margin": 1, "rows": 3133, "cover": "complete with 1 lemma path(s) 0:1"}

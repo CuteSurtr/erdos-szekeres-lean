@@ -1,0 +1,89 @@
+{
+ "budget": 69,
+ "files": 32618,
+ "nodes": 87902270,
+ "leaves": 43967444,
+ "contexts": 32334,
+ "master_closed_leaves": 284,
+ "master_nodes": 65235,
+ "closed_events": 32334,
+ "start_events": 1,
+ "sum_context_nodes": 87901986,
+ "largest_contexts": [
+  [
+   4116,
+   139815
+  ],
+  [
+   1024,
+   109581
+  ],
+  [
+   1049,
+   90779
+  ],
+  [
+   4128,
+   88397
+  ],
+  [
+   6400,
+   84195
+  ],
+  [
+   17900,
+   74139
+  ],
+  [
+   3232,
+   71411
+  ],
+  [
+   1040,
+   68443
+  ],
+  [
+   1153,
+   67671
+  ],
+  [
+   4256,
+   66771
+  ],
+  [
+   20,
+   65813
+  ],
+  [
+   545,
+   62895
+  ],
+  [
+   3618,
+   62881
+  ],
+  [
+   6306,
+   60713
+  ],
+  [
+   6256,
+   59649
+  ],
+  [
+   16348,
+   59133
+  ]
+ ],
+ "top3_nodes": 340175,
+ "top4_nodes": 428572,
+ "HEURISTIC_one_big_MB_top1": 381,
+ "HEURISTIC_one_big_MB_top3": 926,
+ "HEURISTIC_balcheck2_MB_4threads": 1718,
+ "occ_out_sha256": "20d6c62c053695450cc82903c10ba6a565d545de43199d00c4bf7e020820b960",
+ "master_sha256": "b156be6eded17c79f0648b230296b944fd3e38603b23a4b468ed911d065155d0",
+ "computed_at": "2026-11-24 01:10:58",
+ "ok": true,
+ "errors": [],
+ "rule": "ES303N20261120 section 5: files = contexts + master leaves; nodes = sum n_c + master leaves; leaves = sum (n_c + 1)/2 + master leaves"
+}

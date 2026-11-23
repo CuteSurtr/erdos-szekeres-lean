@@ -1,3 +1,7 @@
+> Update (main session, 24 Nov 02:40): the budget-69 tree exists and passed both checks (ES302N20261124), so
+> `composition_302_n54` now has evidence for all three hypotheses and ES(8) <= 302 is established at the 303 standard
+> (tree: EXACT TREE by two in-project checks, not in Lean; N66 <= 54: CERTIFIED, Lean modulo verdicts). The "prepared;
+> no evidence yet" wording of the headline table and §4.6 below is superseded.
 > Agent inventory (ledger workflow `ledger-1122`, Lean-status agent, 22 Nov 04:25-04:50 KST), copied unchanged from
 > `/home/jay/research/data/ledger-20261122/lean/LEAN_STATUS.md`. Not evidence; claims tagged [R] are from records.
 > Correction (main session, 05:50): the 303 and 302 tree costs in section 7 confuse kiloseconds with hours. At

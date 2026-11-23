@@ -1,0 +1,14 @@
+2026-11-22 16:25:13 start finder B=69 T=16 C=16384 (zero side only, Z-row and Z*-row at rhs 16, N66 <= 54; zbs54_finder.sh)
+2026-11-23 02:36:16 occ (0 occupied) rc=0
+2026-11-24 01:10:58 start302: pre-registration rc=0 sha256 5400245acfb68ed4a62307b25340d33ff29727b66958bbb89f74d878e4f7e3fa: {'files': 32618, 'nodes': 87902270, 'leaves': 43967444, 'contexts': 32334, 'master_closed_leaves': 284, 'largest_contexts': [[4116, 139815], [1024, 109581], [1049, 90779], [4128, 88397], [6400, 84195], [17900, 74139], [3232, 71411], [1040, 68443], [1153, 67671], [4256, 66771], [20, 65813], [545, 62895], [3618, 62881], [6306, 60713], [6256, 59649], [16348, 59133]], 'errors': []}
+2026-11-24 01:10:59 start302: HEURISTIC memory projection (b68-scaled): one_big top-3 926 MB of 8192M: ok; balcheck2 4 threads 1718 MB of 9000M: ok
+2026-11-24 01:10:59 start302: start assemble (v5n54 sha a390dd91eda1..., NW=10 NW_BIG=3 BIG_BYTES=10000000 SUB_NODES=30000)
+2026-11-24 01:10:59 start302: assembly unit esr-bal-zbs69asm started (rc 0)
+2026-11-24 01:10:59 start302: chain unit esr-bal-chain302 started (rc 0)
+2026-11-24 01:37:12 assemble+check_tree (v5n54) rc=0 ntexts": 222, "BIG_BYTES": 10000000, "SUB_NODES": 30000, "NW": 10, "NW_BIG": 3}
+{"big_done": 222}
+{"label": "EXACT TREE (check_tree on every assembled file; files above BIG_BYTES piecewise by the unchanged check_tree, one_big)", "budget": 69, "rows": 3133, "z_row": {"support_size": 70, "rhs": 16}, "zstar_row": {"support_size": 70, "rhs": 16}, "requires": "N66 <= 54", "files": 32618, "bad": [], "leaves": 43967444, "nodes": 87902270, "minimum_margin": 1, "occ_master_sha256": "b156be6eded17c79f0648b230296b944fd3e38603b23a4b468ed911d065155d0", "mis_master_sha256": null, "zero_side_only": true, "assembler": "balz_assemble_v5n54.py", "big_contexts": 222, "BIG_BYTES": 10000000, "SUB_NODES": 30000}
+2026-11-24 01:37:31 chain302: files=32618 summary_files=32618 older_than_v5n54_start=0
+2026-11-24 01:38:31 chain302: balcheck2 unit started (rc 0)
+2026-11-24 01:42:43 balcheck2 rc=0 {"verdict": "EXACT TREE (balcheck)", "budget": 69, "contexts": 32618, "failed": 0, "nodes": 87902270, "leaves": 43967444, "min_margin": 1, "rows": 3133, "cover": "complete with 1 lemma path(s) 0:1"}
+2026-11-24 01:43:06 chain302: met     prereg consistent (ok, no errors);met     v5n54 label starts EXACT TREE, bad = [];met     v5n54 rows 3133, Z/Z* rhs 16, requires N66 <= 54, zero side only, assembler v5n54;met     budget equal in prereg, v5n54, balcheck2;met     occ master sha256 = prereg;met     files = prereg 32618;met     nodes = prereg 87902270;met     leaves = prereg 43967444;met     v5n54 minimum margin >= 1;met     balcheck2 verdict EXACT TREE (balcheck), failed 0;met     balcheck2 contexts = files;met     balcheck2 nodes, leaves, min margin = v5n54;met     balcheck2 rows 3133, cover complete with lemma path 0:1;ACCEPT302: all criteria met;
