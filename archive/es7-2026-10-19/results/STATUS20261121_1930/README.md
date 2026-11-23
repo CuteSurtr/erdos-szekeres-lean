@@ -215,6 +215,33 @@ finished. None of the workers' claims below reached the verifier stage: they are
 
 ## 6. Resume
 
+### Verify, push, then delete (24 Nov from 01:00; owner: "verify every one of these git push and commit, then delete"; "you can fully utilize this pc to verify them"; no additional agents)
+
+- **Protocol per set:** an independent check (or the record of one), then a receipts file in git (per proof: file hash,
+  decompressed proof hash, CNF hash, the campaign's exact cake_lpr line, the independent re-check line), pushed, then an
+  advisor check, then `verify-20261124/delete_proofs.py` (re-hashes every file against the pushed receipts just before
+  deleting; refuses if a Lean project file, a FORMAL "original in" line or a running unit names a file). Manifest:
+  `~/research/data/verify-20261124/manifest_deletions.txt`. The keep-set override is recorded there and in memory.
+- **Batch 1 done (01:50-02:00): 128.3 GB.** The 237 N66 cube proofs (receipts `N66N20261113/receipts/`, 237 of 237:
+  decompressed hash = cert.json, plus U1/VB re-checks for level 14 per VERIFY_N66LE55_FINAL.md and vfy15's full hash for
+  level 15) and the 4,405 proofs of the 182-vertex campaign (receipts and the campaign/verifier records in
+  `FORMAL20261122/evidence/`; 4,405 of 4,405 matched to the re-check that accepted them). Kept: every trim.cnf,
+  cert.json and cake output, all 4,617 182-vertex CNFs. Pushed: 8432cb070, e42dee1bb, 79c9eaa7a.
+- **Running:**
+  - the b69 tree checks (`start302`, 01:10; pre-registration `5400245a`: 32,618 files, 43,967,444 leaves). If both pass,
+    ES(8) <= 302 (EXACT TREE by two checks, resting on N66 <= 54) supersedes 303, and b68zs (178 GB) can go after the 302
+    record is pushed;
+  - `esr-vfy-all`: own fresh cake_lpr re-check (`verify-20261124/recheck_set.py`; controls 5 of 5) of the K9 proofs
+    (satopen 179, lb-k9oct 68, the 4 G3 proofs: their first cake_lpr run would change their label from COMPUTED) and the
+    96 c6upper proofs; deletion only after receipts are pushed; c6upper keeps its CNFs (ENCBLEAN reads them);
+  - **s35_20 Lean campaign** (owner, 24 Nov about 01:25: "Run the Lean campaign"; supersedes "Not now"; chunk sources
+    kept): `esr-fvr-drv` with drive_v3, FVR_JOBS=4 (exporter + 3 compiles, then 4), exporter from 01:38; launch note
+    `formalize-20261122/s3520-gate/LAUNCH_NOTE_20261124.md`. Its tree (es308 runs/b35s20, inputs/b35s20-v169),
+    res-slices-fv and s3520-gate are off every deletion list until its finish recipe is accepted.
+- **Heat:** with about 14 threads busy (the b69 assembly is the hot part) Tctl's 5-minute mean reached 87 C at 01:22 and
+  the yield guard (now its own unit `esr-ygd-guard`) paused M(16) and the s35_20 start until it cooled; it cleared before
+  01:38. Heat, not the thread cap, sets the load. Guard: `esr-memguard-1124b` (vfy=20000, fvr=16000).
+
 ### Cleanup and the M(16) re-check (23 Nov 00:50-04:30; stopped for the day after them)
 
 - **Owner, 23 Nov:** "delete that is already verified or not needed for our future" (00:50); "can we start to formalize
