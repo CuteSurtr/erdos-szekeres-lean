@@ -227,10 +227,15 @@ finished. None of the workers' claims below reached the verifier stage: they are
   level 15) and the 4,405 proofs of the 182-vertex campaign (receipts and the campaign/verifier records in
   `FORMAL20261122/evidence/`; 4,405 of 4,405 matched to the re-check that accepted them). Kept: every trim.cnf,
   cert.json and cake output, all 4,617 182-vertex CNFs. Pushed: 8432cb070, e42dee1bb, 79c9eaa7a.
+- **ES(8) <= 302 established (01:43; record ES302N20261124, pushed fb2c03376).** The budget-69 tree passed both
+  in-project checks with every pre-registered criterion met (ACCEPT302). Caveats: no independent review yet, tree not
+  in Lean, N66 <= 54 rests on 105 cube verdicts accepted twice (proofs deleted today after receipts), no new
+  literature search. 303 is superseded.
+- **Batch 2 done (02:50): about 213 GB.** The 303 tree `zrow/b68zs` (178.5 GB; check logs and a certificate digest
+  are in ES303N data/accept303) and the 32,334 raw b69 context files (34.2 GB). Kept: the 302 certificate
+  (`b69zs54/files`, 32,618 files, digest in ES302N; `occ/master.json`, `contexts.json`). Loss, stated in the manifest:
+  if 302 were withdrawn on review, the bound falls back to 304 and 303 would need a finder re-run. Free disk: 1,257.6 GB.
 - **Running:**
-  - the b69 tree checks (`start302`, 01:10; pre-registration `5400245a`: 32,618 files, 43,967,444 leaves). If both pass,
-    ES(8) <= 302 (EXACT TREE by two checks, resting on N66 <= 54) supersedes 303, and b68zs (178 GB) can go after the 302
-    record is pushed;
   - `esr-vfy-all`: own fresh cake_lpr re-check (`verify-20261124/recheck_set.py`; controls 5 of 5) of the K9 proofs
     (satopen 179, lb-k9oct 68, the 4 G3 proofs: their first cake_lpr run would change their label from COMPUTED) and the
     96 c6upper proofs; deletion only after receipts are pushed; c6upper keeps its CNFs (ENCBLEAN reads them);
