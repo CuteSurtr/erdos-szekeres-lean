@@ -347,3 +347,18 @@ with the cube CNFs and logs; outside Git, not public.
 `k8s:cor:geom`(a) (revised the same day in `WRITEUP/note/k8_soundness.tex` and P1). Encoder A, the cross-check, still
 uses the unit Y(1,2). The written soundness proof (not refereed, gaps (G1)–(G4)) and the Lean-checked reduction
 remain.
+
+## 8. Proof retention (24 November 2026)
+
+The 96 kept proofs (64 of the hash-bound replay §6, `replay-2026-11-06`: encoders A and B, 32 cubes each; 32 of
+the ¬Y(1,2) run §7, `noty12-2026-11-06`) were re-checked on 24 Nov by a fresh cake_lpr run each
+(`receipts/recheck_set.py`: the CNF rebuilt and required to have its recorded SHA-256, the proof decompressed and
+required to have its recorded LRAT SHA-256, then cake_lpr; 96/96 `s VERIFIED UNSAT`, 0 alerts). Together with the
+recorded campaign verdicts, each proof has now been accepted by cake_lpr twice. `receipts/c6upper_proofs_20261124.tsv`
+(sha256 `f14dec049ae2892ff73684b9d518d77ad46071d81ceef5db6a379d3fa6fce100`; built by `receipts/receipts_c6.py`)
+lists per proof the `.zst` size and SHA-256, the decompressed LRAT SHA-256 now (equal to the recorded one), the kept
+CNF and its SHA-256, the campaign's cake_lpr line, the fresh re-check line with the cake_lpr and tool hashes, and
+`check` (96/96 OK). With the owner's approval (24 Nov: "verify every one of these, git push and commit, then
+delete"), the 96 `.lrat.zst` files (43.34 GB) are deleted after this table is pushed, by `receipts/delete_proofs.py`
+(re-hashes every file against the pushed table first; dry run: 96 files, problems 0). **The CNFs are kept** (the Lean
+encoder B work reads them). A new check of a cube now needs a re-solve (CaDiCaL 2.1.3, `tools/cake.sh`) and cake_lpr.
