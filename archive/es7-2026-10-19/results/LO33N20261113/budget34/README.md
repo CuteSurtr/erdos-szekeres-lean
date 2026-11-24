@@ -540,3 +540,6 @@ bb-v11test, bb-v11test2, bb-v12test*, bb-r1118*}` (51 exact paths, 2,466 files, 
 documents of `tools/` (V11_REVIEW.md, V12_REVIEW.md, VERIFY_V11*.md, the claims s1-v11-*, s1r-v11-review,
 r-v12-review-1118) lose in-place reproducibility. Never touched: `bb`, `bb-s1` (the s35_20 tree, input of its running
 Lean campaign) and `bb-hc1*`.
+
+**Done 25 Nov 06:13:** deleted after the push and an advisor check; a whole-repo grep for the packet stems found only
+these records. Checked after: `bb`, `bb-s1`, `bb-hc1`, `bb-hc1-inbox`, `bb-hc1-logs` present.

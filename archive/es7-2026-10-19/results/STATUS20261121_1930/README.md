@@ -226,8 +226,12 @@ finished. None of the workers' claims below reached the verifier stage: they are
   Not done: lossless compression (27.5 GB, HEURISTIC; it would rename CNFs that Lean work and scripts bind by path).
 - s35_20: FVR_JOINMEM 18000 and guard esr-memguard-1125a (fvr 19000) for its Root join; units 1793/2080 re-export
   identically. FV302: export complete (acceptance item 2 met), 13 of 32 sub-roots compiled.
-- Owner questions open: the b35s20 finder test packets (C38, 15.4 GB, declined 18 Nov) and the FV304 chunk sources (C44,
-  20.7 GB, keep 23 Nov).
+- Owner (25 Nov ~02:10): "yeah keep cleaning and formalize and verify everything and delete what has already been
+  formalized". Deleted: the FV304 chunk sources (20.62 GB; regenerate byte-identically from the kept 304 tree, 44/44
+  sampled incl. all 12 multi-module contexts; compiled proof kept) and the b35s20 test packets (15.35 GB; bb, bb-s1,
+  bb-hc1* kept). Rule adopted: for a finished, accepted Lean check keep the compiled proof (oleans) and the compact
+  tree it was exported from, delete the generated chunk sources after a per-exporter regeneration test. FV302 and
+  s35_20 sources (about 335 GB) follow only after their acceptance; nothing in res-slices-fv until its driver exits.
 
 ### FV302 and the s35_19 switch (24 Nov from 02:56; owner: "then fully formalize and verify it, even if it takes multiples of days? you have my permission. go"; no additional agents)
 

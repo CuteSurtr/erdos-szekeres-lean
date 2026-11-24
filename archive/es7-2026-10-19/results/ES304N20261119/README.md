@@ -102,3 +102,10 @@ the 22 files of `scan-ledger-b/c44_keep_in_place.txt` (Final, Root, S3_0..S3_7, 
 pilot chunks, which came from a pilot exporter that is not in git), `export/ctx`, `contexts.jsonl`, `fcatz-source.json`,
 and the 304 tree `zrow/b67/files` (8.18 GB), so the sources can be rebuilt (`export_es304z.py --contexts contexts.jsonl
 --source fcatz-source.json --out <dir> --all`, checked against the export/ctx manifests).
+
+**Done 25 Nov 06:11:** before the deletion, all 12 non-pilot contexts that span several modules (281, 344, 496, 536, 660,
+670, 671, 700, 2632, 2690, 3108, 3121) were also re-exported: 24 of 24 modules byte-identical (with the 20 sampled
+single-module contexts: 44 of 44). A whole-repo and Lean-folder grep for `fv304-20261120/export/src` found only records
+and fv304-audit's own tools (README, sample_rebuild.py), which now need a regeneration first. Then the 8,198 chunk sources
+were deleted (set fv304-chunks-20261125). Checked after: the 22 kept sources, 8,192 export/ctx manifests and 8,220 E304Z
+oleans present. **zrow/b67/files is now the only input from which these sources can be regenerated: keep it.**
