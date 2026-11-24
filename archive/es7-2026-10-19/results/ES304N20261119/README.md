@@ -90,3 +90,15 @@ cd /home/jay/research/data/bal186-20261119/zrow
 ./zb_check.sh 67 12          # re-run assembly + check_tree + balcheck on the kept packets
 ./zb_run0.sh 68 14 16384     # budget 68 (resumable: rerun with the same arguments)
 ```
+
+**FV304 chunk sources (25 Nov 2026; owner: "yeah keep cleaning and formalize and verify everything and delete what has
+already been formalized", answering whether the FV304 chunk sources may go).** The 8,198 generated chunk sources
+`~/research/data/fv304-20261120/export/src/E304Z/C*.lean` (20.62 GB; list sha256 f65b7456…, the 23 Nov route (a)) are
+deleted after `receipts/fv304_chunk_sources_20261125.tsv` (path, size, SHA-256 of each) is pushed and an advisor check.
+**Regenerable:** on 25 Nov 20 randomly chosen contexts (seed 20261125; `~/research/data/cleanup-20261125/fv304-regen`)
+were re-exported from `zrow/b67/files` with `experiments/omission-compact-checker-2026-11-05/export_es304z.py` and all 20
+modules came out byte-identical to the kept sources. **Kept:** the compiled proof `fv304-20261120/olean/E304Z` (26.4 GB),
+the 22 files of `scan-ledger-b/c44_keep_in_place.txt` (Final, Root, S3_0..S3_7, FinalTest, S12_376, S12_1671 and the 9
+pilot chunks, which came from a pilot exporter that is not in git), `export/ctx`, `contexts.jsonl`, `fcatz-source.json`,
+and the 304 tree `zrow/b67/files` (8.18 GB), so the sources can be rebuilt (`export_es304z.py --contexts contexts.jsonl
+--source fcatz-source.json --out <dir> --all`, checked against the export/ctx manifests).
