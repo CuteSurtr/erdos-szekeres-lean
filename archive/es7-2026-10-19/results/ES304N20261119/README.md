@@ -8,6 +8,9 @@
 > (the 8,192 assembled files, FV304's input and check B's), both pinned `master.json`, `contexts.json`, `master.txt`,
 > `fastbb.log.jsonl`, `occ.out`, `mis.out`. Lost: re-running check A exactly as recorded (assembly from the finder
 > output); check B and FV304 still run from `files/`. ES(8) <= 304 is superseded by ES(8) <= 302 (ES302N20261124).
+> **Done 25 Nov 01:17:** before the deletion the 8,192 kept `files/` were hashed against FV304's recorded
+> `gz_sha256` (fv304-20261120/contexts.jsonl): 8,192 of 8,192 equal. Then the 8,192 contexts were deleted (8.76 GB,
+> manifest `~/research/data/verify-20261124/manifest_deletions.txt`, set b67-contexts-20261125).
 
 **Status (20:55 KST).** ES(8) ≤ 304. The balanced budget-67 tree is an **EXACT TREE**, checked by two
 implementations (§3). Together with N66 ≤ 55 (CERTIFIED) and the residual half of ES(8) ≤ 307, this gives the bound.

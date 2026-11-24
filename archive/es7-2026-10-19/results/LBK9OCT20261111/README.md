@@ -463,9 +463,13 @@ SHA-256 is in `logs/cubes*/c_r/result.txt`.
   statement of this record rests on them (Theorem 2 implies G3), so no claim changes.
 - All these proofs are kept.
 
-**Deletion (25 Nov 2026, owner: "delete unnecessary files please"; earlier: "delete that is already verified"):** the 72
+**Deletion (25 Nov 2026; owner, 24 Nov, answering "Delete the K9 proofs, or keep them?": "delete redundant or useless
+files"; the K9 hold before that was the main session's own):** the 72
 re-checked proofs listed in `receipts/k9lb_recheck_20261124.tsv` and `receipts/k9g3_first_cake_20261124.tsv` are deleted after the advisor check, with the guarded
 `receipts/delete_proofs.py`-style script (`verify-20261124/delete_proofs.py`: every file re-hashed against the pushed
 table first; dry run: 0 problems, 0 bindings). Every CNF (base CNFs and cube unit files), cake output, log and record
 stays; the claims keep their labels (each cube's verdict is on record, accepted by cake_lpr twice, the G3 cubes once,
 and no claim rests on G3). A new check of a cube now needs a re-solve (CaDiCaL 2.1.3) and cake_lpr.
+**Done 25 Nov 01:19:** 72 proofs deleted (set k9-proofs-20261125 with the other record's; manifest
+`~/research/data/verify-20261124/manifest_deletions.txt`); every base CNF and cube unit file checked present
+afterwards. This supersedes "The proofs are kept" / "All these proofs are kept" above and the 23 Nov retention line at the top ("the 16 cubes ... and the G3 family ... are kept").
