@@ -215,6 +215,20 @@ finished. None of the workers' claims below reached the verifier stage: they are
 
 ## 6. Resume
 
+### 25 Nov from 01:00 (owner: "delete unnecessary files please?"; "you can deploy more agents ... 10% of weekly quota")
+
+- Deleted after pushed receipts, an advisor check and the guarded script: the b67 finder contexts (8.76 GB; FV304
+  accepted as the independent check of the 304 tree; b67/files verified 8,192/8,192 first), all 251 K9 proofs
+  (75.83 GB; re-checked 24 Nov), the b69 review sandboxes (2.01 GB) and 2,114 Mac-bundle duplicates (1.15 GB).
+  Records: ES304N, SATOPEN, LBK9OCT, ES302N §10, ES8B64MAC.
+- Two read-only mapping agents (data/cleanup-20261125/{formalize,evidence}) found nothing else safely deletable. Their
+  N66 trace items were dropped: they included a certified level-15 leaf folder and the state files of 14 level-14 leaves.
+  Not done: lossless compression (27.5 GB, HEURISTIC; it would rename CNFs that Lean work and scripts bind by path).
+- s35_20: FVR_JOINMEM 18000 and guard esr-memguard-1125a (fvr 19000) for its Root join; units 1793/2080 re-export
+  identically. FV302: export complete (acceptance item 2 met), 13 of 32 sub-roots compiled.
+- Owner questions open: the b35s20 finder test packets (C38, 15.4 GB, declined 18 Nov) and the FV304 chunk sources (C44,
+  20.7 GB, keep 23 Nov).
+
 ### FV302 and the s35_19 switch (24 Nov from 02:56; owner: "then fully formalize and verify it, even if it takes multiples of days? you have my permission. go"; no additional agents)
 
 - **s35_19 switch done** (formalize-20261122/combined, recipe §2.9 steps 1-6): `Combined.Switch3519L15` compiled

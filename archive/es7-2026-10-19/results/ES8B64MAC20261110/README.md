@@ -138,3 +138,7 @@ duplicates (1.15 GB; `receipts/mac_bundle_duplicates_20261125.tsv` lists each wi
 deleted after this table is pushed and an advisor check. The bundle's other trees, `SHA256SUMS` and the result files
 stay. `sha256sum -c SHA256SUMS` inside the bundle now reports these 2,114 as missing; check them against the survivors
 with the receipt table instead.
+
+**Done 25 Nov 01:58:** the 2,114 duplicates were deleted after the push (commit 40af6aa1f), an advisor check and a
+whole-repo grep (no script reads the bundle; only this record and LEAN_STATUS_20261122 name it). Manifest: set
+macbundle-dups-20261125 in `~/research/data/verify-20261124/manifest_deletions.txt`.

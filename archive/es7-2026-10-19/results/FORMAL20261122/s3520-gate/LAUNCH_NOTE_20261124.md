@@ -72,3 +72,14 @@ unit 1,269); compare them when they are.
   leaves, 18.8 %), all lean_rc 0; 734 leaves/s over the last 2 h at 10 jobs (HEURISTIC: chunks done about 26 Nov 03:30,
   then the Root join).
 - 17:3x FVR_JOBS=13, FVR_MEM=10000 (the M(16) run ended 17:29:54; its 3 lanes and the re-checker freed). Restart command = launch command with these two values.
+
+## 25 Nov 01:22: FVR_JOINMEM re-derived (18000) and the guard's fvr track raised (19000)
+Measured base: the s35_19 Root (one module holding all unit and upper joins and importing the whole slice) peaked at
+916 MB anon + shmem with 1,411 modules, 307 units, 9.13 GB of oleans (run.tsv `root3519`, 4 min 42 s). s35_20: 21,495
+modules (x15.2), 3,212 units (x10.5), about 140-150 GB of oleans when complete (67.8 GB at 45 %). Linear in modules:
+0.22 + 0.696 x 15.2 = 10.8 GB; in olean GB: 0.22 + 0.076 x 145 = 11.2 GB; in units: 7.5 GB (HEURISTIC, one data point).
+The 14000 placeholder would leave the guard's stop point (95 % = 13,300 MB) only about 20 % above the estimate, so the
+driver was restarted with FVR_JOINMEM=18000 (stop at 17,100 MB; Root, Final and the specialisation run alone in the fvr
+track after the last compile) and the guard replaced: esr-memguard-1125a (fvr=19000, total 36000 unchanged).
+Restart command = the launch command with FVR_JOBS=13, FVR_MEM=10000, FVR_JOINMEM=18000.
+- 25 Nov 01:25 determinism, units 1793 and 2080: the gate's 68 chunk modules of these units are byte-identical to the campaign's (cmp); ctx-1793.json and ctx-2080.json differ only in "seconds". The gate's extra U2080.lean is its own sub-root test (README M6), not a campaign module. With unit 161 (24 Nov): all three gate units re-export identically.
