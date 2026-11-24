@@ -416,3 +416,10 @@ each cube has now been accepted by cake_lpr twice (campaign and re-check). `rece
 (sha256 `834ea72a428385f432f2e31fdce0f883ae0eb2a7097a294e554018b9f0e0e904`, built by `receipts/receipts_set.py`) lists
 per proof the `.zst` size and SHA-256, the decompressed LRAT SHA-256 now, the CNF and its SHA-256, the campaign's and
 the re-check's cake_lpr lines, the tool hashes and `check` (179/179 OK). The proofs are kept.
+
+**Deletion (25 Nov 2026, owner: "delete unnecessary files please"; earlier: "delete that is already verified"):** the 179
+re-checked proofs listed in `receipts/k9_satopen_recheck_20261124.tsv` are deleted after the advisor check, with the guarded
+`receipts/delete_proofs.py`-style script (`verify-20261124/delete_proofs.py`: every file re-hashed against the pushed
+table first; dry run: 0 problems, 0 bindings). Every CNF (base CNFs and cube unit files), cake output, log and record
+stays; the claims keep their labels (each cube's verdict is on record, accepted by cake_lpr twice, the G3 cubes once,
+and no claim rests on G3). A new check of a cube now needs a re-solve (CaDiCaL 2.1.3) and cake_lpr.

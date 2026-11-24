@@ -462,3 +462,10 @@ SHA-256 is in `logs/cubes*/c_r/result.txt`.
   `c46641d4b732efed00851d8a9fbdc9be477870fe7264c5b42ceb0aaa1a2005ae`). These four cube verdicts are now CERTIFIED; no
   statement of this record rests on them (Theorem 2 implies G3), so no claim changes.
 - All these proofs are kept.
+
+**Deletion (25 Nov 2026, owner: "delete unnecessary files please"; earlier: "delete that is already verified"):** the 72
+re-checked proofs listed in `receipts/k9lb_recheck_20261124.tsv` and `receipts/k9g3_first_cake_20261124.tsv` are deleted after the advisor check, with the guarded
+`receipts/delete_proofs.py`-style script (`verify-20261124/delete_proofs.py`: every file re-hashed against the pushed
+table first; dry run: 0 problems, 0 bindings). Every CNF (base CNFs and cube unit files), cake output, log and record
+stays; the claims keep their labels (each cube's verdict is on record, accepted by cake_lpr twice, the G3 cubes once,
+and no claim rests on G3). A new check of a cube now needs a re-solve (CaDiCaL 2.1.3) and cake_lpr.

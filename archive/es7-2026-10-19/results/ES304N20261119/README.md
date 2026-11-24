@@ -1,5 +1,14 @@
 # ES304N20261119: ES(8) ≤ 304 (computer-assisted, unrefereed; 19 November 2026)
 
+> **Retention update (25 Nov 2026, owner):** asked whether FV304 (the Lean check `E304Z.Final.excludes_67`, standard
+> axioms, closing audit in FORMAL20261122/fv304-audit) may count as the independent check named in section 4, the
+> owner answered "delete unnecessary files please". So the finder's raw contexts `zrow/b67/occ/ctx-*.json.gz` and
+> `zrow/b67/mis/ctx-*.json.gz` (8,192 files, 8.76 GB) are deleted after `receipts/b67_finder_contexts_20261125.tsv`
+> (path, size and SHA-256 of each file) is pushed, with the guarded `verify-20261124/delete_proofs.py`. Kept: `files/`
+> (the 8,192 assembled files, FV304's input and check B's), both pinned `master.json`, `contexts.json`, `master.txt`,
+> `fastbb.log.jsonl`, `occ.out`, `mis.out`. Lost: re-running check A exactly as recorded (assembly from the finder
+> output); check B and FV304 still run from `files/`. ES(8) <= 304 is superseded by ES(8) <= 302 (ES302N20261124).
+
 **Status (20:55 KST).** ES(8) ≤ 304. The balanced budget-67 tree is an **EXACT TREE**, checked by two
 implementations (§3). Together with N66 ≤ 55 (CERTIFIED) and the residual half of ES(8) ≤ 307, this gives the bound.
 - Lean checks everything except those three computational inputs:
