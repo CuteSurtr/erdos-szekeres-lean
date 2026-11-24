@@ -7,6 +7,23 @@
 > cadical.log. Every certified proof, extension/low16-n7-a included, is kept. This supersedes the "retained" statements
 > at README l.343-349, resume/selection/README.md l.116, ROOTED.md l.90, VERIFY_ROOTED.md l.212 and
 > longcup16/README.md l.53-54. Exact paths: ~/research/data/cleanup-20261123/manifest.txt.
+>
+> **Retention update (24 Nov 2026, owner: "delete redundant or useless files", after "verify ..., git push and commit,
+> then delete"):** 52 proofs of the 15-16 Nov tracks in `~/research/data/roadmap-20261115` (DELTA3N `attack20261115/`)
+> were re-checked by a fresh cake_lpr run each on 24 Nov (`receipts/recheck_set.py`; the CNF required to have its
+> recorded SHA-256, the proof decompressed and required to have its recorded LRAT SHA-256): **52/52 `s VERIFIED UNSAT`,
+> 0 alerts**.
+> - 49 (`receipts/roadmap_proofs_A_20261124.tsv`, sha256 `56f282941a0f7329…`, 21.07 GB of .zst): accepted in their
+>   campaign (`certify.jsonl` and the `.cake.out` beside the proof), so each has now been accepted at least twice.
+> - 3 (`receipts/roadmap_proofs_H_20261124.tsv`, `fdfae6461c358994…`, 8.90 GB): their own campaign's cake_lpr ran out
+>   of heap. `lrr7_m15` (LRR(7) at 15) was accepted before by the main session (MAINSESSION_1115EV.md, heap 4,500 MB)
+>   and `v1_base_m16` by VERIFY_RERUNS_1115EV.md; today's run is their second acceptance. The untrimmed `d48_m16` had no
+>   earlier verdict; today's run (heap 11,000 MB) is its first. The **trimmed** `d48_m16.trim.lrat.zst`, accepted twice
+>   (ROUND6.md), certifies the same CNF and is kept. No label changes.
+> These 52 `.lrat.zst` files are deleted after this note and the tables are pushed (guarded `receipts/delete_proofs.py`:
+> every file re-hashed against the pushed table first). Their CNFs, cake outputs, logs and `certify.jsonl` stay, so a new
+> check needs a re-solve. This supersedes "every certified proof ... is kept" above for these 52 files only. The track
+> map of the folder is `ROADMAP20261115/CLEANUP_MAP_20261124.md`.
 
 
 **New result: the cup-side strengthening of D(5,6) is false for real point
