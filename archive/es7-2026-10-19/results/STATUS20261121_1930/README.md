@@ -243,6 +243,12 @@ finished. None of the workers' claims below reached the verifier stage: they are
   9.3 result 17:52: pass_rc 0 (745 last proofs re-checked OK and deleted), audit_rc 2 (open work), problems [];
   audited ledger sha256 `32657d28…` = the last ledger copy. Audit counts: A 68,126 leaves / 10,644 open, B1 52,702 /
   23,994, B2 82,262 / 13,539, no cover missing. No 9.4 record (needs audit_rc 0).
+- **Owner 24 Nov ~17:55: "keep cleaning, commit and push, delete redundant or useless files, map roadmaps, and consider
+  starting m16 if its necessary".** Record edits pushed (9acd1e9c3). Roadmap map: ROADMAP20261115/CLEANUP_MAP_20261124.md.
+  52 roadmap proofs re-checked 52/52, receipts pushed (6e39be770), advisor, deleted 19:18-19:25 (29.97 GB; 6709ee1b8).
+  M(16) not restarted (own projection >= 5.7e4 CPU-h). Open for the owner: the b67 finder contexts (8.8 GB) need an
+  explicit "FV304 is the independent check of the 304 tree" (ES304N §4 keeps them until one); FV304 chunk sources
+  stay (owner, 23 Nov).
 - **Re-check finished 06:11** (`esr-vfy-all`, fresh cake_lpr each, 0 alerts): K9 satopen 179/179, c6upper 96/96, K9
   lower-bound cubes 68/68, the 4 G3 (S11) cube proofs 4/4 (their first cake_lpr acceptance: COMPUTED → CERTIFIED per
   cube; G3 is a stopped family implied by Theorem 2 of LBK9OCT, so no claim changes). K9 proofs are kept (K9 is not
