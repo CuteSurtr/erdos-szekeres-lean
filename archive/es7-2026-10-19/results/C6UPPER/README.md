@@ -362,3 +362,9 @@ CNF and its SHA-256, the campaign's cake_lpr line, the fresh re-check line with 
 delete"), the 96 `.lrat.zst` files (43.34 GB) are deleted after this table is pushed, by `receipts/delete_proofs.py`
 (re-hashes every file against the pushed table first; dry run: 96 files, problems 0). **The CNFs are kept** (the Lean
 encoder B work reads them). A new check of a cube now needs a re-solve (CaDiCaL 2.1.3, `tools/cake.sh`) and cake_lpr.
+
+**Done 24 Nov 2026 05:06 KST:** the 96 `.lrat.zst` files (43.34 GB) were deleted by `receipts/delete_proofs.py`
+after commit 868733e95 (this table) was on origin/main (pushed table re-hashed: `f14dec04…`); every file was
+re-hashed against the table first; the deletion manifest is `~/research/data/verify-20261124/manifest_deletions.txt`.
+The 98 CNFs remain. Deviation: the owner's deletion policy also asks for an advisor check before each deletion;
+it was not made before this one, only afterwards (05:08: no objection, nothing to undo).

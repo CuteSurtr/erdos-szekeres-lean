@@ -40,3 +40,7 @@ date	engine	query	useful_results
 2026-10-21	WebSearch (extended)	"Erdős–Szekeres" mirror symmetric OR "line of symmetry" OR "axis of symmetry" configuration "convex hexagon" OR "convex heptagon" SAT	Springer chapter 10.1007/978-3-032-07021-0_3 (Subercaseaux et al.); arXiv:2604.20120 3-fold 25-point example for a variant; Bogdan "hardest symmetric configurations"; nothing on reflection symmetry
 2026-10-21	WebSearch (standard)	"Automated Symmetric Constructions in Discrete Geometry" Springer CICM 2025 LNCS 10.1007/978-3-032-07021-0_3	only arXiv:2506.00224 abstract (rotational symmetry); Springer page not indexed
 2026-10-21	WebSearch (standard)	Erdős–Szekeres 32 points no convex 7-gon two-fold OR "2-fold" OR "centrally symmetric" symmetric SAT realizable	no 2-fold/central-symmetry result; Mackey CMU thesis announcement calls 32-point 7-gon-free configurations open
+2026-11-24	arXiv MCP (sort date, from 2026-10-01)	abs:"Erdos-Szekeres" AND (abs:"convex position" OR abs:"happy ending")	0 results
+2026-11-24	arXiv MCP (sort date)	all:"Erdos Szekeres" AND all:convex	9 results, newest 1808.00453; index misses accented titles; nothing on ES(8)
+2026-11-24	WebSearch (standard)	Erdős–Szekeres problem eight points convex position new upper bound 2026	general bounds only (Suk; Holmsen–Mojarrad–Pach–Tardos; SoCG 2025 decomposable sets); no ES(8) bound
+2026-11-24	WebSearch (extended)	"ES(8)" upper bound happy ending problem SAT	arXiv:2403.00737, 2409.03122, 2607.02958 (h(6,7)=24; already in LIT/RELATED.md); no ES(8) bound below 319 found

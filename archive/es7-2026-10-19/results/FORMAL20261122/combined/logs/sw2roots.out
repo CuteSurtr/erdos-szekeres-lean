@@ -1,0 +1,40 @@
+{
+ "roots": 20,
+ "duplicates": {},
+ "negative_control": {
+  "added_root": "/home/jay/research/data/formalize-20261122/n66-rowsvalid/build/olean",
+  "refused": true,
+  "duplicates": [
+   "RowEnc/Main.olean"
+  ],
+  "n_duplicates": 1
+ },
+ "n66_oleans": 149,
+ "by_store": {
+  "/home/jay/research/data/formalize-20261122/n66-level15/build/olean": 33,
+  "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/olean": 116
+ },
+ "newest_n66_olean_mtime": "2026-11-22 21:57:15",
+ "marker2_mtime": 1795358886.1603518,
+ "n66_oleans_digest": "280d4d14929d9d42fcd48c3c88246c93ad89c0132753c8f5e2d5bff472707472",
+ "n66_oleans_tsv_sha256": "591934dcfde4a56722d0379f89727f6e532a43d01991f1d8ea720fc45b6407be",
+ "manifests": {
+  "/home/jay/research/data/formalize-20261122/n66-l15-rows/logs/source_manifest.sha256": {
+   "entries": 148,
+   "bad": []
+  },
+  "/home/jay/research/data/formalize-20261122/n66-l15-rows/logs/freeze_manifest.sha256": {
+   "entries": 152,
+   "bad": []
+  },
+  "/home/jay/research/data/formalize-20261122/n66-level15/logs/final_source_manifest.sha256": {
+   "entries": 59,
+   "bad": []
+  },
+  "/home/jay/research/data/formalize-20261122/n66-level15/logs/freeze_manifest.sha256": {
+   "entries": 39,
+   "bad": []
+  }
+ },
+ "problems": []
+}

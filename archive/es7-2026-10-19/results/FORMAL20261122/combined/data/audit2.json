@@ -1,14 +1,16 @@
 {
  "logs": [
-  "/home/jay/research/data/formalize-20261122/combined/logs/N66L15.log",
-  "/home/jay/research/data/formalize-20261122/combined/logs/ES304L15.log"
+  "logs/N66L15.log",
+  "logs/ES304L15.log",
+  "logs/Switch3519L15.log"
  ],
  "modules_per_log": {
   "N66L15": 5561,
-  "ES304L15": 13778
+  "ES304L15": 13778,
+  "Switch3519L15": 15205
  },
- "closure": 13784,
- "rows": 13784,
+ "closure": 15205,
+ "rows": 15205,
  "lean_path": [
   "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean",
   "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean",
@@ -48,8 +50,8 @@
   "/home/jay/research/data/fv304-20261120/olean": 8230,
   "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean": 16,
   "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean": 10,
-  "/home/jay/research/data/formalize-20261122/combined/links": 230,
-  "/home/jay/research/data/formalize-20261122/combined/out": 4,
+  "/home/jay/research/data/formalize-20261122/combined/links": 1649,
+  "/home/jay/research/data/formalize-20261122/combined/out": 6,
   "/home/jay/research/data/formalize-20261122/n66-level15/build/olean": 32,
   "/home/jay/research/data/formalize-20261122/n66-l15-rows/build/olean": 114
  },
@@ -65,27 +67,29 @@
   "links.json: res-slices-fv data/audit-3418.json": 12,
   "links.json: res-slices-fv data/audit-3419.json": 155,
   "links.json: res-slices-fv data/audit-3518.json": 48,
+  "links.json: res-slices-fv data/audit-3519.json": 1419,
   "links.json: res118 data/olean_sha256_after_resume.txt": 5,
   "n66-level15 review_compile.log + roots2": 6,
   "part 1 data/manifest.sha256": 4,
   "res118-rowblocks manifest.sha256": 10,
-  "sevenfold review oleans_before.sha256": 16
+  "sevenfold review oleans_before.sha256": 16,
+  "this build": 2
  },
  "by_status": {
-  "ok": 13784
+  "ok": 15205
  },
  "e304z_modules": 8217,
- "digest_all": "5278c86a7060492864dfe9e3c47126add3074cbc172b84ef1340147b8e483a22",
+ "digest_all": "f2de642a49cd542d1dfaa40a306fb29da27806e44ccd44ba4b55a596045e6082",
  "digest_e304z": "fa02576ef5752c7fa509ea9f74b95feb46e4fdce9de26292b6df19c654b36c76",
  "digest_e304z_fv304_audit": "fa02576ef5752c7fa509ea9f74b95feb46e4fdce9de26292b6df19c654b36c76",
  "companions": 3464,
  "companions_in_fv304_table": 3464,
  "companions_digest": "81fbc1d084c2cf599ecd217839d074cd28d787394a18a2f4229bdb53349417fa",
- "newest_imported_mtime": 1795352235.7595391,
- "marker_mtime": 1795358886.1603518,
+ "newest_imported_mtime": 1795377409.8544185,
+ "marker_mtime": 1795456660.2645984,
  "part1_closure_modules": 13635,
  "part1_closure_inside": 13635,
  "n66_modules": 146,
- "closure_tsv_sha256": "56896f3c436e1b7975fbff929796bd70af8cb6101cf742fbce60b698eb533d4f",
+ "closure_tsv_sha256": "c8865023d77cec0fcd96774051cac78e240d0552a32b8c0f7e34ea1119e14bb4",
  "problems": []
 }

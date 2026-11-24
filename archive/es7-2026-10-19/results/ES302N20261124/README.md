@@ -13,10 +13,12 @@ Lean-checked with standard axioms (ES303N20261120 / comp-audit of FORMAL20261122
   (N66N20261113/receipts): the two recorded acceptances remain, a re-run needs a re-solve;
 - `ResidualBound 118`: the written, computer-assisted chain of ES307N20261118, Lean-checked modulo the 2,025 Res118 row
   verdicts and the slice exclusions s35_19 (its Lean check finished 23 Nov and was accepted by its finish recipe; the
-  combined switch is not compiled yet) and s35_20 (EXACT TREE by three implementations; its Lean campaign started 24 Nov).
+  combined switch compiled 24 Nov 03:22) and s35_20 (EXACT TREE by three implementations; its Lean campaign started 24 Nov).
 
 In Lean, `Combined.es302_l15` (FORMAL20261122, wave 5) states the same bound with every hypothesis named; the budget-69
-tree is its only hypothesis that this record supplies, and that tree is **not** in Lean (FV302 is not started).
+tree is its only hypothesis that this record supplies, and that tree is **not** in Lean yet: FV302, the Lean check
+of all 32,618 files by the compact checker, runs since 24 Nov 04:47 (work dir `~/research/data/fv302-20261124`,
+PLAN.md with the pre-registration; pilot, a corrupted-certificate control and a swapped-join control passed).
 
 Literature: not compared again today. In the 21 Nov search the public bound was Schroeder's 319 (unrefereed) and the
 refereed bound 408; "new" means only "not found in that search". The previous bound of this project was 303
@@ -101,8 +103,10 @@ review of 6 of 6 items (wave 4).
 ## 7. What remains
 
 - An independent review of the two checks' outputs (no agents were available on 24 Nov).
-- The tree in Lean (FV302; the 303/304 experience suggests a few hundred CPU-h and hundreds of GB of oleans, HEURISTIC).
-- s35_20 in Lean (running) and the s35_19 switch, for `Combined.es302_l15` to lose its slice hypotheses.
+- The tree in Lean: FV302 runs (24 Nov 04:47; HEURISTIC 230-305 CPU-h, about 195 GB of sources and oleans). Its
+  Final module proves `ExcludesHoleBudgetZZsN 16 69` from the Root and composes it with `composition_302_n54`.
+- s35_20 in Lean (running); the s35_19 switch is compiled and audited (24 Nov 03:22/03:28:
+  `Combined.es302_l15_s3519`, 8 hypotheses), so `Combined` keeps only s35_20 and the tree besides the verdicts.
 - Clean-up made possible by this record (owner, 24 Nov: verify, push, then delete): the 303 tree (b68zs, 178 GB) is
   superseded; the b69 raw contexts can go if the owner accepts that check A cannot then be re-run from them.
 

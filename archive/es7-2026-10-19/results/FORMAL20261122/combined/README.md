@@ -246,6 +246,11 @@ Switch (when res-slices-fv has accepted `RS.s35_19`):
 5. `tools/start2.sh sw4audit 2048 1800 1 /bin/bash -c 'MARKER=data/MARKER_SWITCH2 python3 -I -B tools/audit2.py logs/N66L15.log logs/ES304L15.log logs/Switch3519L15.log; rc=$?; tools/readonly2.sh; exit $rc'`
 6. REMAINS.md: drop H-S3519 from the four lists; new manifest.
 
+**Done 24 Nov 2026 (main session):** steps 1-3 before 03:20; step 4 compiled 03:22 (lean_rc 0; STMT 7 / 7 / 8 / 8
+hypotheses, none mentions N66Bound; guards passed); step 5 audit 03:28 (`problems []`, 13,635 part-1 closure modules
+inside, 146 N66 modules, closure2.tsv `c8865023…`); step 6 at 05:10: REMAINS.md rewritten for the `_s3519` forms
+(the state before: `part2/REMAINS.before-switch-step6.md`) and `data/manifest3.sha256` (47 files).
+
 ### 2.10 Rules followed, deviations, disclosures
 
 - Lean only as stated; no lake, no lean-lsp, no git, no web, no installs. Every compile, hash run and audit ran in a

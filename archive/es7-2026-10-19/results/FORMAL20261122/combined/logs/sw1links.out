@@ -1,0 +1,54 @@
+{
+ "tags": [
+  "3318",
+  "3418",
+  "3518",
+  "3419",
+  "3519"
+ ],
+ "lean_path": [
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean",
+  "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean",
+  "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean",
+  "/home/jay/research/data/bal186-20261119/zrow/leanz/olean",
+  "/home/jay/research/data/fv304-20261120/olean",
+  "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/.lake/build/lib/lean",
+  "/home/jay/research/data/formalize-20261122/res118-rowblocks/build/olean",
+  "/home/jay/research/data/formalize-20261122/combined/links",
+  "/home/jay/research/data/formalize-20261122/combined/out"
+ ],
+ "links": 1649,
+ "by_status": {
+  "first recorded here": 1,
+  "ok": 1648
+ },
+ "duplicates": {},
+ "negative_control": {
+  "added_root": "/home/jay/research/data/formalize-20261122/res118/olean",
+  "refused": true,
+  "duplicates": [
+   "BalancedBudgetsZ.olean",
+   "CompactChecker/Fast.olean",
+   "CompactChecker/Fast2.olean",
+   "CompactChecker/Packed.olean",
+   "CompactChecker/Path.olean",
+   "CompactChecker/Split.olean",
+   "CompactChecker/WordPack.olean",
+   "Res118/Adapter.olean",
+   "Res118/Final.olean",
+   "Res118/Glue.olean",
+   "Res118/LemmaA.olean",
+   "Res118/Rows.olean"
+  ]
+ },
+ "problems": []
+}

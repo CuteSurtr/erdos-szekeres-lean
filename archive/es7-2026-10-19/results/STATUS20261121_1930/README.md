@@ -215,6 +215,39 @@ finished. None of the workers' claims below reached the verifier stage: they are
 
 ## 6. Resume
 
+### FV302 and the s35_19 switch (24 Nov from 02:56; owner: "then fully formalize and verify it, even if it takes multiples of days? you have my permission. go"; no additional agents)
+
+- **s35_19 switch done** (formalize-20261122/combined, recipe §2.9 steps 1-6): `Combined.Switch3519L15` compiled
+  03:22 (`es302_l15_s3519`: 8 hypotheses, none N66Bound), import audit 03:28 (`problems []`), REMAINS.md rewritten and
+  `data/manifest3.sha256` 05:10. The combined 302 theorem now assumes only the cake_lpr verdict props, s35_20 and the tree.
+- **FV302 runs** (`~/research/data/fv302-20261124`, PLAN.md = log + pre-registration): unit `esr-fv2-drv`
+  (tools/drive302.py: export → chunks → 32 sub-roots → Root → Final; FV2_JOBS 8, MEM 11000, TMAX 86, YIELD honoured;
+  restart = the command in PLAN.md, it adopts running units). New Lean: `CompactChecker.FcatZZs16`, `BridgeZZs16`
+  (`zzsn16_of_root`). Gates passed: pilot 13 modules, corrupted-certificate and swapped-join controls rejected by Lean,
+  multi-level join, Root and the exact Final template over stubs. HEURISTIC: 230-305 CPU-h, about 2 days.
+- **s35_20** sets the finish date: 119 M leaves at about 0.010 s/leaf, about 340 CPU-h (3.5 days at 4 jobs); raise
+  FVR_JOBS when `esr-vfy-all` ends. Its 9 axiom ALERTs are profiler text inside the axiom lines (LAUNCH_NOTE, 04:55;
+  `fv302-20261124/tools/axiom_audit.py`); unit 161 re-exports byte-identically.
+- **c6upper proofs deleted 05:06** (96, 43.34 GB) after a fresh cake_lpr re-check 96/96 and pushed receipts (868733e95,
+  C6UPPER §8); CNFs kept. The advisor check of the protocol above was made only afterwards (no objection).
+- **Guards:** `esr-memguard-1124d` (fv2=12500, total 36000); `esr-ygd-guard` restarted 05:09 with a 10-day horizon (the
+  old one would have exited 26 Nov 01:11); `esr-pin-guard` (agents-20261121/pin_guard.sh, to about 18:14) keeps the
+  M(16) cubes on cores 0-3 and moves unpinned bulk jobs to cores 4-15.
+- **Keep:** `bal186-20261119/b69prep` (ES302N §8 resume command and the control trees) and the 302 certificate
+  `b69zs54/files` (FV302's input).
+- **M(16) run ended 17:29:54 by RuntimeMaxSec, NOT closed** (open cubes A 10,646, B1 23,995, B2 13,539; certified
+  unsat cubes 68,124 / 52,701 / 82,262; no SAT, no rejection): M(16) <= 72 undecided, the run resumable. Re-checker
+  stopped; README_RECHECK 9.3 final pass + audit from 17:40 (unit esr-rck-final). Its cores went to s35_20
+  (FVR_JOBS 13 from 17:31); the pin guard was stopped. Relaunching M(16) is the owner's call (it competes with the
+  Lean campaigns for the heat budget).
+  9.3 result 17:52: pass_rc 0 (745 last proofs re-checked OK and deleted), audit_rc 2 (open work), problems [];
+  audited ledger sha256 `32657d28…` = the last ledger copy. Audit counts: A 68,126 leaves / 10,644 open, B1 52,702 /
+  23,994, B2 82,262 / 13,539, no cover missing. No 9.4 record (needs audit_rc 0).
+- **Re-check finished 06:11** (`esr-vfy-all`, fresh cake_lpr each, 0 alerts): K9 satopen 179/179, c6upper 96/96, K9
+  lower-bound cubes 68/68, the 4 G3 (S11) cube proofs 4/4 (their first cake_lpr acceptance: COMPUTED → CERTIFIED per
+  cube; G3 is a stopped family implied by Theorem 2 of LBK9OCT, so no claim changes). K9 proofs are kept (K9 is not
+  formalized); receipts pushed 8afcc9efd (SATOPEN, LBK9OCT). s35_20: 6 jobs from 06:13, 10 from 08:48 (FVR_MEM 8000).
+
 ### Verify, push, then delete (24 Nov from 01:00; owner: "verify every one of these git push and commit, then delete"; "you can fully utilize this pc to verify them"; no additional agents)
 
 - **Protocol per set:** an independent check (or the record of one), then a receipts file in git (per proof: file hash,
