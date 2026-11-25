@@ -233,6 +233,9 @@ finished. None of the workers' claims below reached the verifier stage: they are
 - **Deletion now follows fv2a, not part 3** (advisor): FV302's 32,953 chunk sources (78.06 GiB; receipts
   `FORMAL20261122/fv302/receipts/fv302_chunk_sources_20261125.tsv`) go by `verify-20261124/delete_proofs.py` after this
   push and a clean dry run; `export/ctx` and the join sources stay.
+- **Deleted ~21:40:** FV302's 32,953 chunk sources (83.82 GB; dry run and execute clean; free 1,115.3 GB). s35_20's
+  Root rebuilt as 30 sub-roots (`res-slices-fv/tools/split_root.py`, pure partition: block digest `7d268ff7…` equal,
+  flat original kept in `export/3520/root-flat/`); compiles next.
 - **C2 upload from the Mac** (owner 21:00): private archive branch `research/c2-certificates` + release
   `c2-p8-1-9-2026-11-25`: the half-turn (central34) proof P8_1-9 (2,398,761,295 B, sha256 `ef13b40d…` = the Mac
   inventory) and replay tools; being downloaded and checked here with cake_lpr.
