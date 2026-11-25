@@ -1,5 +1,14 @@
 # C2RECHECK: re-checks of the central 34-point records
 
+> **25 Nov 2026: P8_1-9's proof re-checked on Linux.** The Mac uploaded the archived proof to the private archive
+> repository (release `c2-p8-1-9-2026-11-25`, branch `research/c2-certificates`); its compressed SHA-256 `ef13b40d…` and
+> size 2,398,761,295 B equal this record's `local.jsonl` entry. The formula was rebuilt here with this repository's
+> `SYMZ/zcnf.py rot 17 7 --m 2 --hull` (base `b0061e90…`, as in C2P2) plus the case's 114 units (`08267898…`, as in
+> `local.jsonl` and `C2C34/logs/p8_units.tsv`); the decompressed proof hashed `45999d1a…`; cake_lpr `c14ff498…`
+> (heap 8000) printed `s VERIFIED UNSAT` in 4:53 (8.2 GB). The proof is the campaign's CaDiCaL 3.0.1 proof, so this
+> is a hash-bound acceptance by this machine's cake_lpr, not a new CaDiCaL 2.1.3 certification. Files:
+> `linux-p8-20261125/` (script, log, cake output and timing); the proof is kept in `~/research/data/gh-c2-20261125/release/`.
+
 Local runs on an Apple M5 Pro, 1–2 November 2026 (UTC). The records re-checked are those of `C2FINAL` (`es7-cloud` at
 1946685ae, unchanged since).
 
