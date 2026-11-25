@@ -70,3 +70,10 @@ the whole path must report no module file with two providers.
   leaf count (238,116,145 nodes). The Lean-side sum pre-registered for s35_20 is 119,054,033 = 119,054,034 minus
   the "state 0 missing" leaf (`zero_mem_residualOccupied`), as for s35_19 (7,763,207 tree leaves, Lean sum
   7,763,206). Found by the advisor consult; no result was known when it was corrected.
+- 25 Nov 2026 ~19:40 KST, before any part-3 compile: §5's estimate (anon+shmem 1-3 GB, MemoryMax 12G) is contradicted
+  by the s35_20 Root: the flat `RS3520/Root.lean` (21,495 imports, 23,485 join theorems) held 7.0 GB anonymous for the
+  s35_20 closure alone, reached 23.9 GB maximum RSS, and aborted twice with "Stack overflow detected" (lean_rc 134;
+  logs/RS3520_Root.try2-20261125.log). Gate 2 cannot hold until the Root is rebuilt as sub-roots (res-slices-fv
+  deviation of 25 Nov). New rule: the MemoryMax of `ES302Final`, `Bad302` and `Audit3` is set from the measured peak of
+  the new s35_20 Root plus FV302 Final's 1,437 MB, with the 80 % stop level, and every compile that imports a whole
+  closure runs alone. Part 3 is therefore not a result of 25 Nov.

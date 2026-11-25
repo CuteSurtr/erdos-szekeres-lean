@@ -1,0 +1,12 @@
+{
+ "verdict": "ACCEPT",
+ "problems": [],
+ "n_problems": 0,
+ "deviations": [
+  "PLAN item 3 says 'driver.log without ALERT'; driver.log has profiler-interleaving ALERTs (count in item3). Since 24 Nov 04:55 (PLAN.md log, after the launch) item 3 is decided by axiom_audit.py's rule over every module log.",
+  "Compiles adopted at the 04:56 driver restart have leaves -1 in run.tsv (list in item3); their manifests, sources and logs are checked like all others.",
+  "drive302.py was re-pinned after the first pin (PLAN.md: done-cache and 3 s cycle added at launch).",
+  "The pre-launch advisor call timed out; the launch rested on the pilot, two controls and the gates.",
+  "The join sources (S_*, P_*, Root, Final) are not shape-checked by the exporter; the token scan covers them."
+ ]
+}

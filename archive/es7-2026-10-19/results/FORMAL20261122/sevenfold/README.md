@@ -4,6 +4,13 @@ Work directory of the formalization wave of 22 Nov 2026 (item `sevenfold-encoder
 in the repository was edited (read-only use of ENCBLEAN's sources, oleans and exe). Labels follow es-research §2.
 Not refereed; no independent person or agent has re-run this yet.
 
+> **Update 25 Nov 2026 (RECERT20261125):** the verdict this theorem rests on now also exists on Linux, hash-bound and
+> with the proof kept: CNF `b4d29017…` regenerated (gen_b.py and this record's Lean printer `encb_dimacs twin-base 7 8
+> 10`, byte-identical), CaDiCaL 2.1.3 proof `17707d6c…`, cake_lpr `c14ff498…` `s VERIFIED UNSAT`, and cake_lpr
+> c14ff498's parse of the text equals it line for line (E3 for this text). So the E2 caveat below (CaDiCaL 3.0.1,
+> macOS cake_lpr `2fee767a…`, never CERTIFIED) no longer limits the label: D2 is Lean-checked modulo a CERTIFIED
+> verdict and trust items E1, E3–E6.
+
 ## 1. Headline (22 Nov 2026, 06:40 KST)
 
 **D2 (every 7-fold rotationally symmetric set of ≥ 65 points in general position has a convex octagon) is

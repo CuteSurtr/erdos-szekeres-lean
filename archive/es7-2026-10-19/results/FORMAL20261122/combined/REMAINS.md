@@ -1,5 +1,9 @@
 # REMAINS: what each bound still rests on after `combined` part 2 (23 Nov 2026, 00:05 KST)
 
+> **Update 25 Nov 2026 ~20:45 (main session): H-T69 has a Lean proof.** FV302 was accepted: `E302ZZ.Final.excludes_69`
+> proves the budget-69 tree statement with standard axioms. The next step, part 3 (PART3.md), plugs it and `RS.s35_20`
+> into `es302_l15_s3519`; s35_20's Root join aborted twice on 25 Nov (stack overflow) and is being rebuilt as sub-roots.
+
 > **Update 24 Nov 2026 03:29 (main session): H-S3519 is dropped.** `RS.s35_19` was accepted by its finish recipe
 > (23 Nov 16:30) and `src/Combined/Switch3519L15.lean` compiled (lean_rc 0; statement checks: 7 / 7 / 8 / 8 hypotheses,
 > none mentions N66Bound; axiom guards passed); the import audit with MARKER_SWITCH2 reports no problems. The
@@ -64,7 +68,7 @@ What is no longer a hypothesis (each Lean-checked by its own project, plugged in
 | H-S3519 | `s35_19 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsU) 35 19` | none since the switch (was: all four) | **EXACT TREE** (fresh_replay_v3: 15,533,581 nodes, 7,763,207 leaves, minimum margin 1; tcheck_b35 + pycheck_b35, VB CONFIRMED) | tree `es308-20261114/runs/b35s19/bb` (master `249497e8…`), rows `inputs/b35s19-v16/extra.json` (`1257c4a1…`) | **in Lean**: `RS.s35_19` (res-slices-fv, accepted by its finish recipe 23 Nov 16:30), used by `Combined.Switch3519L15` (compiled 24 Nov 03:22, audit 03:28) |
 | H-S3520 | `s35_20 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA) 35 20` | all four | **EXACT TREE by three implementations** (ES307 T5-T7: 238,116,145 nodes, 119,054,034 leaves, minimum margin 1; VR CONFIRMED) | tree `es308-20261114/runs/b35s20/bb-s1` (master `71993a47…`), rows `inputs/b35s20-v169/extra.json` (`de4bcceb…`) | **Lean campaign running** in res-slices-fv since 24 Nov 01:28 (unit esr-fvr-drv; gate s3520-gate) |
 | H-T68 | `tree68 : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 68` | 303 | **EXACT TREE by two in-project checks** (check_tree via v5 and balcheck2: 32,765 files, 246,300,833 nodes, 123,166,799 leaves, minimum margin 1, cover complete); the tree b68zs was deleted on 24 Nov, so it cannot be re-checked or put into Lean (corrected 25 Nov) | ES303N20261120 §5 | not started |
-| H-T69 | `tree69 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` | 302 | **EXACT TREE by two in-project checks** (check A v5n54 + check B balcheck2: 32,618 files, 87,902,270 nodes, 43,967,444 leaves, minimum margin 1, cover complete; ACCEPT302 24 Nov 01:43) | ES302N20261124 §4 | **Lean campaign running** (FV302, `~/research/data/fv302-20261124`, unit esr-fv2-drv since 24 Nov 04:47) |
+| H-T69 | `tree69 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` | 302 | **EXACT TREE by two in-project checks** (check A v5n54 + check B balcheck2: 32,618 files, 87,902,270 nodes, 43,967,444 leaves, minimum margin 1, cover complete; ACCEPT302 24 Nov 01:43) | ES302N20261124 §4 | **Lean-checked** since 25 Nov: `E302ZZ.Final.excludes_69 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` (FV302 ACCEPTED ~20:40 by its pre-registered items 1-4; FORMAL20261122/fv302). It stays a binder of `es302_l15_s3519` until part 3 (`Combined.ES302Final`, PART3.md) compiles |
 
 **Trust items** (ENCBLEAN wording) for H-N66C, H-N66R and H-ROWS:
 - **E1**: the printers' output equals the certified bytes. Checked: rows 2,025/2,025 (`rowprint`); N66 cube trims

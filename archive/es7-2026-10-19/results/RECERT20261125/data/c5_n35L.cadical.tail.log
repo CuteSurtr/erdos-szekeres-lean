@@ -1,0 +1,25 @@
+c minishrunken:             426228        21.97 %  learned literals
+c otfs:                        260         0.76 %  of conflict
+c propagations:           26753260         0.44 M  per second
+c reduced:                   10278        29.87 %  per conflict
+c rephased:                      7      4915.57    interval
+c restarts:                   1373        25.06    interval
+c stabilizing:                   3        38.97 %  of conflicts
+c subsumed:                 252804         1.46 %  of all clauses
+c strengthened:            1433598         8.26 %  of all clauses
+c ternary:                   34064         0.76 %  of resolved
+c vivified:                  40190         0.23 %  of all clauses
+c walked:                        1     34409.00    interval
+c weakened:                8490619        15.80    average size
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:        62.08    seconds
+c total real time since initialization:           62.19    seconds
+c maximum resident set size of process:         2280.06    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

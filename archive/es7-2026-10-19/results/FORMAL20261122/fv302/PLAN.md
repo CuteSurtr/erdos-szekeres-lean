@@ -93,3 +93,30 @@ Raise FV2_JOBS when esr-vfy-all (K9/c6 re-check) ends.
 - 05:14 pin guard esr-pin-guard (agents-20261121/pin_guard.sh, until M16 ends 17:29; RuntimeMaxSec 13h): M16 cubes (cover cap 3600 s) on cores 0-3 of their own (0-3,16-19); unpinned bulk (s35_20 units, cake_lpr re-checks) moved to 4-15,20-31; FV302 units stay at 5-15,21-31.
 - 20:51 export complete. Acceptance item 2 checked: 32,618 manifests (= contexts302.jsonl, every gz_sha256 equal), leaves 43,967,444 (= pre-registration), minimum margin 1, one exporter sha256 6ae42d7a… (= pins-launch.sha256 export302.py), 32,953 modules, no duplicate module names. 6,747 modules compiled, all lean_rc 0; 21 axiom ALERTs, all profiler interleaving (logs/false_alerts.log).
 - 25 Nov 01:59: 13 of 32 sub-roots compiled (S_00000-S_01100), all lean_rc 0, standard axioms, 17 s - 3 min 19 s, peak 615-777 MB; no root302 failure in driver.log; 14,089 modules done.
+- 25 Nov 19:22 driver end: Root compiled 17:15-18:13 (57:48, peak anon 1,435 MB, `E302ZZ.root` standard axioms), Final
+  18:13-19:22 (1:09:06, peak anon 1,437 MB; `excludes_69` and `forces_302_of_n54_res` [propext, Classical.choice,
+  Quot.sound]; Final.lean byte-equal to the FINAL template). 32,953 chunk modules, 32 sub-roots, 4 pilot joins.
+- **25 Nov ~20:40 ACCEPTED** (pre-registered items 1-4 all hold; `formalize-20261122/fv302-audit`, tools/fv2a.py,
+  result.json verdict ACCEPT, 0 problems; mirrored in FORMAL20261122/fv302/acceptance):
+  1. Final: as above. 2. 32,618 manifests, gz_sha256 = contexts302.jsonl, one exporter sha256 = pin, leaves
+  43,967,444, minimum margin 1, lean_test_failures 0, and all 32,953 chunk sources re-hashed = manifest sha256.
+  3. run.tsv: every module lean_rc 0; 42 rows with a profiler-split axiom line are confirmed standard by the log audit
+  (axiom_audit.py's rule over all 32,991 logs). 4. Import closure (`Audit302.lean`, compiled without -o; it re-printed
+  `forces_302_of_n54_res` standard from the oleans): 37,972 modules; 32,989 from this olean root; 4,983 equal (resolved
+  file and sha256) to the audited combined closure2.tsv; one provider file per module (8 CompactChecker modules are
+  reached through this root's symlinks and FV304's root: the same files). Extra checks: forbidden-token scan of the 40
+  join/support sources clean; every E302ZZ olean newer than its imports.
+  Deviations (stated): item 3's "driver.log without ALERT" replaced by the log audit (42 profiler ALERTs); 4 adopted
+  compiles with leaves -1; drive302.py re-pinned at launch; the pre-launch advisor call timed out; the first fv2a run
+  flagged the 8 symlinked modules as two providers (a bug in fv2a, fixed: symlinks resolved).
+  **Result: `OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` is Lean-checked (`E302ZZ.Final.excludes_69`).**
+  Additions to the acceptance entry (advisor consult, 25 Nov ~21:00): (a) item 3 is literally "every module lean_rc 0
+  in run.tsv"; run.tsv has 32,974 module rows and the closure 32,991 E302ZZ module logs: the 17 without a row are the
+  pilot's (13 chunk modules of contexts 4116 x9, 12975, 8558, 9085, 9086; the joins P_12975, P_4116, P_sib; FinalTest),
+  compiled 04:25-04:38 before the driver's run.tsv existed; all 17 logs pass the log audit (lean_rc 0, standard
+  axioms). (b) The printed statements of `Audit302.log` (=== CHECK, === DEFS) were compared with the pre-registration:
+  `excludes_69 : ExcludesHoleBudgetZZsN 16 69`, `forces_302_of_n54_res (n66 : N66Bound 54) (hR : ResidualBound 118) :
+  ForcesConvexNGon 302 8`, and the body of ExcludesHoleBudgetZZsN (h0 = h1 = 0, 0/1, the 2,685 balanced rows, the 446
+  cuts, r <= h(Z), r <= h(Z*), sum <= budget) as in ES302N §2. (c) **Review status:** the acceptance was decided by the
+  session's own tool (tools/fv2a.py, written 25 Nov, fixed after its first run returned NOT ACCEPTED because of a
+  symlink bug in item 4); it has had no independent review.

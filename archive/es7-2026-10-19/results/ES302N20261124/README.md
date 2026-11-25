@@ -1,5 +1,13 @@
 # ES302N20261124: the budget-69 tree with both Z-rows at 16 (ES(8) ≤ 302)
 
+> **Update 25 Nov 2026 ~20:45: the budget-69 tree is Lean-checked.** FV302 compiled all 32,618 files of this
+> certificate with the compact checker and was ACCEPTED by its pre-registered items 1-4: `E302ZZ.Final.excludes_69 :
+> ExcludesHoleBudgetZZsN 16 69` with axioms [propext, Classical.choice, Quot.sound] (FORMAL20261122/fv302). So
+> `E302ZZ.Final.forces_302_of_n54_res : N66Bound 54 → ResidualBound 118 → ForcesConvexNGon 302 8` holds in Lean with
+> no tree hypothesis. The end theorem with every hypothesis named still waits for s35_20 in Lean (PART3.md).
+> The acceptance was decided by the session's own tool (fv2a.py; fixed after its first run returned NOT ACCEPTED on a
+> symlink bug) and has had no independent review; deviations are listed at the end of FORMAL20261122/fv302/PLAN.md.
+
 **Status (24 Nov 2026, 01:43 KST): ES(8) ≤ 302 ESTABLISHED, with the same kind of evidence as ES(8) ≤ 303.
 Computer-assisted and unrefereed.** Every 302 points in general position contain 8 points in convex position. The chain
 is `composition_302_n54 : ExcludesHoleBudgetZZsN 16 69 → N66Bound 54 → ResidualBound 118 → ForcesConvexNGon 302 8`,

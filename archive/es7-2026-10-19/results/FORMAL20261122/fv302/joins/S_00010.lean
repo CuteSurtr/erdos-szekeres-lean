@@ -1,0 +1,3133 @@
+import E302ZZ.C204801
+import E302ZZ.C204901
+import E302ZZ.C205001
+import E302ZZ.C205101
+import E302ZZ.C205201
+import E302ZZ.C205301
+import E302ZZ.C205401
+import E302ZZ.C205501
+import E302ZZ.C205601
+import E302ZZ.C205701
+import E302ZZ.C205801
+import E302ZZ.C205901
+import E302ZZ.C206001
+import E302ZZ.C206101
+import E302ZZ.C206201
+import E302ZZ.C206301
+import E302ZZ.C206401
+import E302ZZ.C206501
+import E302ZZ.C206601
+import E302ZZ.C206701
+import E302ZZ.C206801
+import E302ZZ.C206802
+import E302ZZ.C206901
+import E302ZZ.C207001
+import E302ZZ.C207101
+import E302ZZ.C207201
+import E302ZZ.C207301
+import E302ZZ.C207401
+import E302ZZ.C207501
+import E302ZZ.C207601
+import E302ZZ.C207701
+import E302ZZ.C207801
+import E302ZZ.C207901
+import E302ZZ.C208001
+import E302ZZ.C208101
+import E302ZZ.C208201
+import E302ZZ.C208202
+import E302ZZ.C208301
+import E302ZZ.C208401
+import E302ZZ.C208501
+import E302ZZ.C208601
+import E302ZZ.C208701
+import E302ZZ.C208801
+import E302ZZ.C208901
+import E302ZZ.C209001
+import E302ZZ.C209101
+import E302ZZ.C209201
+import E302ZZ.C209301
+import E302ZZ.C209401
+import E302ZZ.C209501
+import E302ZZ.C209601
+import E302ZZ.C209701
+import E302ZZ.C209702
+import E302ZZ.C209801
+import E302ZZ.C209901
+import E302ZZ.C210001
+import E302ZZ.C210101
+import E302ZZ.C210201
+import E302ZZ.C210301
+import E302ZZ.C210401
+import E302ZZ.C210501
+import E302ZZ.C210601
+import E302ZZ.C210701
+import E302ZZ.C210801
+import E302ZZ.C210901
+import E302ZZ.C211001
+import E302ZZ.C211101
+import E302ZZ.C211201
+import E302ZZ.C211202
+import E302ZZ.C211301
+import E302ZZ.C211401
+import E302ZZ.C211501
+import E302ZZ.C211601
+import E302ZZ.C211701
+import E302ZZ.C211801
+import E302ZZ.C211901
+import E302ZZ.C212001
+import E302ZZ.C212101
+import E302ZZ.C212201
+import E302ZZ.C212301
+import E302ZZ.C212401
+import E302ZZ.C212501
+import E302ZZ.C212601
+import E302ZZ.C212701
+import E302ZZ.C212801
+import E302ZZ.C212901
+import E302ZZ.C213001
+import E302ZZ.C213101
+import E302ZZ.C213201
+import E302ZZ.C213301
+import E302ZZ.C213401
+import E302ZZ.C213501
+import E302ZZ.C213601
+import E302ZZ.C213701
+import E302ZZ.C213801
+import E302ZZ.C213901
+import E302ZZ.C214001
+import E302ZZ.C214101
+import E302ZZ.C214201
+import E302ZZ.C214301
+import E302ZZ.C214401
+import E302ZZ.C214501
+import E302ZZ.C214601
+import E302ZZ.C214701
+import E302ZZ.C214801
+import E302ZZ.C214901
+import E302ZZ.C215001
+import E302ZZ.C215101
+import E302ZZ.C215201
+import E302ZZ.C215301
+import E302ZZ.C215401
+import E302ZZ.C215501
+import E302ZZ.C215601
+import E302ZZ.C215701
+import E302ZZ.C215801
+import E302ZZ.C215901
+import E302ZZ.C216001
+import E302ZZ.C216101
+import E302ZZ.C216201
+import E302ZZ.C216301
+import E302ZZ.C216401
+import E302ZZ.C216501
+import E302ZZ.C216601
+import E302ZZ.C216701
+import E302ZZ.C216801
+import E302ZZ.C216901
+import E302ZZ.C217001
+import E302ZZ.C217101
+import E302ZZ.C217201
+import E302ZZ.C217301
+import E302ZZ.C217401
+import E302ZZ.C217501
+import E302ZZ.C217601
+import E302ZZ.C217701
+import E302ZZ.C217702
+import E302ZZ.C217801
+import E302ZZ.C217901
+import E302ZZ.C218001
+import E302ZZ.C218101
+import E302ZZ.C218201
+import E302ZZ.C218301
+import E302ZZ.C218401
+import E302ZZ.C218501
+import E302ZZ.C218601
+import E302ZZ.C218701
+import E302ZZ.C218801
+import E302ZZ.C218901
+import E302ZZ.C219001
+import E302ZZ.C219101
+import E302ZZ.C219201
+import E302ZZ.C219301
+import E302ZZ.C219401
+import E302ZZ.C219501
+import E302ZZ.C219601
+import E302ZZ.C219701
+import E302ZZ.C219801
+import E302ZZ.C219901
+import E302ZZ.C220001
+import E302ZZ.C220101
+import E302ZZ.C220201
+import E302ZZ.C220301
+import E302ZZ.C220401
+import E302ZZ.C220501
+import E302ZZ.C220601
+import E302ZZ.C220701
+import E302ZZ.C220801
+import E302ZZ.C220802
+import E302ZZ.C220803
+import E302ZZ.C220901
+import E302ZZ.C221001
+import E302ZZ.C221101
+import E302ZZ.C221201
+import E302ZZ.C221202
+import E302ZZ.C221301
+import E302ZZ.C221401
+import E302ZZ.C221501
+import E302ZZ.C221601
+import E302ZZ.C221701
+import E302ZZ.C221801
+import E302ZZ.C221901
+import E302ZZ.C222001
+import E302ZZ.C222101
+import E302ZZ.C222201
+import E302ZZ.C222301
+import E302ZZ.C222401
+import E302ZZ.C222501
+import E302ZZ.C222601
+import E302ZZ.C222701
+import E302ZZ.C222801
+import E302ZZ.C222901
+import E302ZZ.C223001
+import E302ZZ.C223101
+import E302ZZ.C223201
+import E302ZZ.C223301
+import E302ZZ.C223401
+import E302ZZ.C223501
+import E302ZZ.C223601
+import E302ZZ.C223701
+import E302ZZ.C223801
+import E302ZZ.C223901
+import E302ZZ.C224001
+import E302ZZ.C224101
+import E302ZZ.C224201
+import E302ZZ.C224301
+import E302ZZ.C224401
+import E302ZZ.C224501
+import E302ZZ.C224601
+import E302ZZ.C224701
+import E302ZZ.C224801
+import E302ZZ.C224901
+import E302ZZ.C225001
+import E302ZZ.C225101
+import E302ZZ.C225201
+import E302ZZ.C225301
+import E302ZZ.C225401
+import E302ZZ.C225501
+import E302ZZ.C225601
+import E302ZZ.C225701
+import E302ZZ.C225801
+import E302ZZ.C225901
+import E302ZZ.C226001
+import E302ZZ.C226101
+import E302ZZ.C226201
+import E302ZZ.C226301
+import E302ZZ.C226401
+import E302ZZ.C226501
+import E302ZZ.C226601
+import E302ZZ.C226701
+import E302ZZ.C226801
+import E302ZZ.C226901
+import E302ZZ.C227001
+import E302ZZ.C227101
+import E302ZZ.C227201
+import E302ZZ.C227301
+import E302ZZ.C227401
+import E302ZZ.C227501
+import E302ZZ.C227601
+import E302ZZ.C227701
+import E302ZZ.C227801
+import E302ZZ.C227901
+import E302ZZ.C228001
+import E302ZZ.C228101
+import E302ZZ.C228201
+import E302ZZ.C228301
+import E302ZZ.C228401
+import E302ZZ.C228501
+import E302ZZ.C228601
+import E302ZZ.C228701
+import E302ZZ.C228801
+import E302ZZ.C228901
+import E302ZZ.C229001
+import E302ZZ.C229101
+import E302ZZ.C229201
+import E302ZZ.C229301
+import E302ZZ.C229401
+import E302ZZ.C229501
+import E302ZZ.C229601
+import E302ZZ.C229701
+import E302ZZ.C229801
+import E302ZZ.C229901
+import E302ZZ.C230001
+import E302ZZ.C230101
+import E302ZZ.C230201
+import E302ZZ.C230301
+import E302ZZ.C230401
+import E302ZZ.C230501
+import E302ZZ.C230601
+import E302ZZ.C230701
+import E302ZZ.C230801
+import E302ZZ.C230901
+import E302ZZ.C231001
+import E302ZZ.C231101
+import E302ZZ.C231201
+import E302ZZ.C231301
+import E302ZZ.C231401
+import E302ZZ.C231501
+import E302ZZ.C231601
+import E302ZZ.C231701
+import E302ZZ.C231801
+import E302ZZ.C231901
+import E302ZZ.C232001
+import E302ZZ.C232101
+import E302ZZ.C232201
+import E302ZZ.C232301
+import E302ZZ.C232401
+import E302ZZ.C232501
+import E302ZZ.C232601
+import E302ZZ.C232701
+import E302ZZ.C232801
+import E302ZZ.C232901
+import E302ZZ.C233001
+import E302ZZ.C233101
+import E302ZZ.C233201
+import E302ZZ.C233301
+import E302ZZ.C233401
+import E302ZZ.C233501
+import E302ZZ.C233601
+import E302ZZ.C233602
+import E302ZZ.C233701
+import E302ZZ.C233801
+import E302ZZ.C233901
+import E302ZZ.C234001
+import E302ZZ.C234101
+import E302ZZ.C234201
+import E302ZZ.C234301
+import E302ZZ.C234401
+import E302ZZ.C234501
+import E302ZZ.C234601
+import E302ZZ.C234701
+import E302ZZ.C234801
+import E302ZZ.C234901
+import E302ZZ.C235001
+import E302ZZ.C235101
+import E302ZZ.C235201
+import E302ZZ.C235301
+import E302ZZ.C235401
+import E302ZZ.C235501
+import E302ZZ.C235601
+import E302ZZ.C235701
+import E302ZZ.C235801
+import E302ZZ.C235901
+import E302ZZ.C236001
+import E302ZZ.C236101
+import E302ZZ.C236201
+import E302ZZ.C236301
+import E302ZZ.C236401
+import E302ZZ.C236501
+import E302ZZ.C236601
+import E302ZZ.C236701
+import E302ZZ.C236801
+import E302ZZ.C236901
+import E302ZZ.C237001
+import E302ZZ.C237101
+import E302ZZ.C237201
+import E302ZZ.C237301
+import E302ZZ.C237401
+import E302ZZ.C237501
+import E302ZZ.C237601
+import E302ZZ.C237701
+import E302ZZ.C237801
+import E302ZZ.C237901
+import E302ZZ.C238001
+import E302ZZ.C238101
+import E302ZZ.C238201
+import E302ZZ.C238301
+import E302ZZ.C238401
+import E302ZZ.C238501
+import E302ZZ.C238601
+import E302ZZ.C238701
+import E302ZZ.C238801
+import E302ZZ.C238901
+import E302ZZ.C239001
+import E302ZZ.C239101
+import E302ZZ.C239201
+import E302ZZ.C239301
+import E302ZZ.C239401
+import E302ZZ.C239501
+import E302ZZ.C239601
+import E302ZZ.C239701
+import E302ZZ.C239801
+import E302ZZ.C239901
+import E302ZZ.C240001
+import E302ZZ.C240101
+import E302ZZ.C240201
+import E302ZZ.C240301
+import E302ZZ.C240401
+import E302ZZ.C240501
+import E302ZZ.C240601
+import E302ZZ.C240701
+import E302ZZ.C240801
+import E302ZZ.C240901
+import E302ZZ.C241001
+import E302ZZ.C241101
+import E302ZZ.C241201
+import E302ZZ.C241301
+import E302ZZ.C241401
+import E302ZZ.C241501
+import E302ZZ.C241601
+import E302ZZ.C241701
+import E302ZZ.C241801
+import E302ZZ.C241901
+import E302ZZ.C242001
+import E302ZZ.C242101
+import E302ZZ.C242201
+import E302ZZ.C242301
+import E302ZZ.C242401
+import E302ZZ.C242501
+import E302ZZ.C242601
+import E302ZZ.C242701
+import E302ZZ.C242801
+import E302ZZ.C242901
+import E302ZZ.C243001
+import E302ZZ.C243101
+import E302ZZ.C243201
+import E302ZZ.C243301
+import E302ZZ.C243401
+import E302ZZ.C243501
+import E302ZZ.C243601
+import E302ZZ.C243701
+import E302ZZ.C243801
+import E302ZZ.C243901
+import E302ZZ.C244001
+import E302ZZ.C244101
+import E302ZZ.C244201
+import E302ZZ.C244301
+import E302ZZ.C244401
+import E302ZZ.C244501
+import E302ZZ.C244601
+import E302ZZ.C244701
+import E302ZZ.C244801
+import E302ZZ.C244901
+import E302ZZ.C245001
+import E302ZZ.C245101
+import E302ZZ.C245201
+import E302ZZ.C245301
+import E302ZZ.C245401
+import E302ZZ.C245501
+import E302ZZ.C245601
+import E302ZZ.C245701
+import E302ZZ.C245801
+import E302ZZ.C245901
+import E302ZZ.C246001
+import E302ZZ.C246101
+import E302ZZ.C246201
+import E302ZZ.C246301
+import E302ZZ.C246401
+import E302ZZ.C246501
+import E302ZZ.C246601
+import E302ZZ.C246701
+import E302ZZ.C246801
+import E302ZZ.C246901
+import E302ZZ.C247001
+import E302ZZ.C247101
+import E302ZZ.C247201
+import E302ZZ.C247301
+import E302ZZ.C247401
+import E302ZZ.C247501
+import E302ZZ.C247601
+import E302ZZ.C247701
+import E302ZZ.C247801
+import E302ZZ.C247901
+import E302ZZ.C248001
+import E302ZZ.C248101
+import E302ZZ.C248201
+import E302ZZ.C248301
+import E302ZZ.C248401
+import E302ZZ.C248501
+import E302ZZ.C248601
+import E302ZZ.C248701
+import E302ZZ.C248801
+import E302ZZ.C248901
+import E302ZZ.C249001
+import E302ZZ.C249101
+import E302ZZ.C249201
+import E302ZZ.C249301
+import E302ZZ.C249401
+import E302ZZ.C249501
+import E302ZZ.C249601
+import E302ZZ.C249701
+import E302ZZ.C249801
+import E302ZZ.C249901
+import E302ZZ.C250001
+import E302ZZ.C250101
+import E302ZZ.C250201
+import E302ZZ.C250301
+import E302ZZ.C250401
+import E302ZZ.C250501
+import E302ZZ.C250601
+import E302ZZ.C250701
+import E302ZZ.C250801
+import E302ZZ.C250901
+import E302ZZ.C251001
+import E302ZZ.C251101
+import E302ZZ.C251201
+import E302ZZ.C251301
+import E302ZZ.C251401
+import E302ZZ.C251501
+import E302ZZ.C251601
+import E302ZZ.C251701
+import E302ZZ.C251801
+import E302ZZ.C251901
+import E302ZZ.C252001
+import E302ZZ.C252101
+import E302ZZ.C252201
+import E302ZZ.C252301
+import E302ZZ.C252401
+import E302ZZ.C252501
+import E302ZZ.C252601
+import E302ZZ.C252701
+import E302ZZ.C252801
+import E302ZZ.C252901
+import E302ZZ.C253001
+import E302ZZ.C253101
+import E302ZZ.C253201
+import E302ZZ.C253301
+import E302ZZ.C253401
+import E302ZZ.C253501
+import E302ZZ.C253601
+import E302ZZ.C253701
+import E302ZZ.C253801
+import E302ZZ.C253901
+import E302ZZ.C254001
+import E302ZZ.C254101
+import E302ZZ.C254201
+import E302ZZ.C254301
+import E302ZZ.C254401
+import E302ZZ.C254501
+import E302ZZ.C254601
+import E302ZZ.C254701
+import E302ZZ.C254801
+import E302ZZ.C254901
+import E302ZZ.C255001
+import E302ZZ.C255101
+import E302ZZ.C255201
+import E302ZZ.C255301
+import E302ZZ.C255401
+import E302ZZ.C255501
+import E302ZZ.C255601
+import E302ZZ.C255701
+import E302ZZ.C255801
+import E302ZZ.C255901
+import E302ZZ.C256001
+import E302ZZ.C256101
+import E302ZZ.C256102
+import E302ZZ.C256201
+import E302ZZ.C256301
+import E302ZZ.C256401
+import E302ZZ.C256402
+import E302ZZ.C256501
+import E302ZZ.C256601
+import E302ZZ.C256701
+import E302ZZ.C256801
+import E302ZZ.C256901
+import E302ZZ.C257001
+import E302ZZ.C257101
+import E302ZZ.C257201
+import E302ZZ.C257301
+import E302ZZ.C257401
+import E302ZZ.C257501
+import E302ZZ.C257601
+import E302ZZ.C257701
+import E302ZZ.C257801
+import E302ZZ.C257901
+import E302ZZ.C258001
+import E302ZZ.C258002
+import E302ZZ.C258101
+import E302ZZ.C258201
+import E302ZZ.C258301
+import E302ZZ.C258401
+import E302ZZ.C258501
+import E302ZZ.C258601
+import E302ZZ.C258701
+import E302ZZ.C258801
+import E302ZZ.C258901
+import E302ZZ.C259001
+import E302ZZ.C259101
+import E302ZZ.C259201
+import E302ZZ.C259202
+import E302ZZ.C259203
+import E302ZZ.C259301
+import E302ZZ.C259302
+import E302ZZ.C259401
+import E302ZZ.C259501
+import E302ZZ.C259601
+import E302ZZ.C259701
+import E302ZZ.C259801
+import E302ZZ.C259901
+import E302ZZ.C260001
+import E302ZZ.C260101
+import E302ZZ.C260201
+import E302ZZ.C260301
+import E302ZZ.C260401
+import E302ZZ.C260501
+import E302ZZ.C260601
+import E302ZZ.C260701
+import E302ZZ.C260801
+import E302ZZ.C260901
+import E302ZZ.C261001
+import E302ZZ.C261101
+import E302ZZ.C261201
+import E302ZZ.C261301
+import E302ZZ.C261401
+import E302ZZ.C261501
+import E302ZZ.C261601
+import E302ZZ.C261701
+import E302ZZ.C261801
+import E302ZZ.C261901
+import E302ZZ.C262001
+import E302ZZ.C262101
+import E302ZZ.C262201
+import E302ZZ.C262301
+import E302ZZ.C262401
+import E302ZZ.C262501
+import E302ZZ.C262601
+import E302ZZ.C262701
+import E302ZZ.C262801
+import E302ZZ.C262901
+import E302ZZ.C263001
+import E302ZZ.C263101
+import E302ZZ.C263201
+import E302ZZ.C263301
+import E302ZZ.C263401
+import E302ZZ.C263501
+import E302ZZ.C263601
+import E302ZZ.C263701
+import E302ZZ.C263801
+import E302ZZ.C263901
+import E302ZZ.C264001
+import E302ZZ.C264101
+import E302ZZ.C264201
+import E302ZZ.C264301
+import E302ZZ.C264401
+import E302ZZ.C264501
+import E302ZZ.C264601
+import E302ZZ.C264701
+import E302ZZ.C264801
+import E302ZZ.C264901
+import E302ZZ.C265001
+import E302ZZ.C265101
+import E302ZZ.C265201
+import E302ZZ.C265301
+import E302ZZ.C265401
+import E302ZZ.C265501
+import E302ZZ.C265601
+import E302ZZ.C265701
+import E302ZZ.C265801
+import E302ZZ.C265901
+import E302ZZ.C266001
+import E302ZZ.C266002
+import E302ZZ.C266101
+import E302ZZ.C266201
+import E302ZZ.C266301
+import E302ZZ.C266401
+import E302ZZ.C266501
+import E302ZZ.C266601
+import E302ZZ.C266701
+import E302ZZ.C266801
+import E302ZZ.C266901
+import E302ZZ.C267001
+import E302ZZ.C267101
+import E302ZZ.C267201
+import E302ZZ.C267301
+import E302ZZ.C267401
+import E302ZZ.C267501
+import E302ZZ.C267601
+import E302ZZ.C267701
+import E302ZZ.C267801
+import E302ZZ.C267901
+import E302ZZ.C268001
+import E302ZZ.C268101
+import E302ZZ.C268201
+import E302ZZ.C268301
+import E302ZZ.C268401
+import E302ZZ.C268501
+import E302ZZ.C268601
+import E302ZZ.C268701
+import E302ZZ.C268801
+import E302ZZ.C268901
+import E302ZZ.C269001
+import E302ZZ.C269101
+import E302ZZ.C269201
+import E302ZZ.C269301
+import E302ZZ.C269401
+import E302ZZ.C269501
+import E302ZZ.C269601
+import E302ZZ.C269701
+import E302ZZ.C269801
+import E302ZZ.C269901
+import E302ZZ.C270001
+import E302ZZ.C270101
+import E302ZZ.C270201
+import E302ZZ.C270301
+import E302ZZ.C270401
+import E302ZZ.C270501
+import E302ZZ.C270601
+import E302ZZ.C270701
+import E302ZZ.C270801
+import E302ZZ.C270901
+import E302ZZ.C271001
+import E302ZZ.C271101
+import E302ZZ.C271201
+import E302ZZ.C271301
+import E302ZZ.C271401
+import E302ZZ.C271501
+import E302ZZ.C271601
+import E302ZZ.C271701
+import E302ZZ.C271801
+import E302ZZ.C271901
+import E302ZZ.C272001
+import E302ZZ.C272101
+import E302ZZ.C272201
+import E302ZZ.C272301
+import E302ZZ.C272401
+import E302ZZ.C272501
+import E302ZZ.C272601
+import E302ZZ.C272701
+import E302ZZ.C272801
+import E302ZZ.C272901
+import E302ZZ.C273001
+import E302ZZ.C273101
+import E302ZZ.C273201
+import E302ZZ.C273301
+import E302ZZ.C273401
+import E302ZZ.C273501
+import E302ZZ.C273601
+import E302ZZ.C273701
+import E302ZZ.C273801
+import E302ZZ.C273901
+import E302ZZ.C274001
+import E302ZZ.C274101
+import E302ZZ.C274201
+import E302ZZ.C274301
+import E302ZZ.C274401
+import E302ZZ.C274501
+import E302ZZ.C274601
+import E302ZZ.C274701
+import E302ZZ.C274801
+import E302ZZ.C274901
+import E302ZZ.C275001
+import E302ZZ.C275101
+import E302ZZ.C275201
+import E302ZZ.C275301
+import E302ZZ.C275401
+import E302ZZ.C275501
+import E302ZZ.C275601
+import E302ZZ.C275701
+import E302ZZ.C275801
+import E302ZZ.C275901
+import E302ZZ.C276001
+import E302ZZ.C276101
+import E302ZZ.C276201
+import E302ZZ.C276301
+import E302ZZ.C276401
+import E302ZZ.C276501
+import E302ZZ.C276601
+import E302ZZ.C276701
+import E302ZZ.C276801
+import E302ZZ.C276901
+import E302ZZ.C277001
+import E302ZZ.C277101
+import E302ZZ.C277201
+import E302ZZ.C277301
+import E302ZZ.C277401
+import E302ZZ.C277501
+import E302ZZ.C277601
+import E302ZZ.C277701
+import E302ZZ.C277801
+import E302ZZ.C277901
+import E302ZZ.C278001
+import E302ZZ.C278101
+import E302ZZ.C278201
+import E302ZZ.C278301
+import E302ZZ.C278401
+import E302ZZ.C278402
+import E302ZZ.C278501
+import E302ZZ.C278601
+import E302ZZ.C278701
+import E302ZZ.C278801
+import E302ZZ.C278901
+import E302ZZ.C279001
+import E302ZZ.C279101
+import E302ZZ.C279201
+import E302ZZ.C279301
+import E302ZZ.C279401
+import E302ZZ.C279501
+import E302ZZ.C279601
+import E302ZZ.C279701
+import E302ZZ.C279801
+import E302ZZ.C279901
+import E302ZZ.C280001
+import E302ZZ.C280101
+import E302ZZ.C280201
+import E302ZZ.C280301
+import E302ZZ.C280401
+import E302ZZ.C280501
+import E302ZZ.C280601
+import E302ZZ.C280701
+import E302ZZ.C280801
+import E302ZZ.C280901
+import E302ZZ.C281001
+import E302ZZ.C281101
+import E302ZZ.C281201
+import E302ZZ.C281301
+import E302ZZ.C281401
+import E302ZZ.C281501
+import E302ZZ.C281601
+import E302ZZ.C281701
+import E302ZZ.C281801
+import E302ZZ.C281901
+import E302ZZ.C282001
+import E302ZZ.C282101
+import E302ZZ.C282201
+import E302ZZ.C282301
+import E302ZZ.C282401
+import E302ZZ.C282501
+import E302ZZ.C282601
+import E302ZZ.C282701
+import E302ZZ.C282801
+import E302ZZ.C282901
+import E302ZZ.C283001
+import E302ZZ.C283101
+import E302ZZ.C283201
+import E302ZZ.C283301
+import E302ZZ.C283401
+import E302ZZ.C283501
+import E302ZZ.C283601
+import E302ZZ.C283701
+import E302ZZ.C283801
+import E302ZZ.C283901
+import E302ZZ.C284001
+import E302ZZ.C284101
+import E302ZZ.C284201
+import E302ZZ.C284301
+import E302ZZ.C284401
+import E302ZZ.C284501
+import E302ZZ.C284601
+import E302ZZ.C284701
+import E302ZZ.C284801
+import E302ZZ.C284901
+import E302ZZ.C285001
+import E302ZZ.C285101
+import E302ZZ.C285201
+import E302ZZ.C285301
+import E302ZZ.C285401
+import E302ZZ.C285501
+import E302ZZ.C285601
+import E302ZZ.C285701
+import E302ZZ.C285801
+import E302ZZ.C285901
+import E302ZZ.C286001
+import E302ZZ.C286101
+import E302ZZ.C286201
+import E302ZZ.C286301
+import E302ZZ.C286401
+import E302ZZ.C286501
+import E302ZZ.C286601
+import E302ZZ.C286701
+import E302ZZ.C286801
+import E302ZZ.C286901
+import E302ZZ.C287001
+import E302ZZ.C287101
+import E302ZZ.C287201
+import E302ZZ.C287301
+import E302ZZ.C287401
+import E302ZZ.C287501
+import E302ZZ.C287601
+import E302ZZ.C287701
+import E302ZZ.C287801
+import E302ZZ.C287901
+import E302ZZ.C288001
+import E302ZZ.C288101
+import E302ZZ.C288201
+import E302ZZ.C288301
+import E302ZZ.C288401
+import E302ZZ.C288501
+import E302ZZ.C288601
+import E302ZZ.C288701
+import E302ZZ.C288801
+import E302ZZ.C288901
+import E302ZZ.C289001
+import E302ZZ.C289101
+import E302ZZ.C289201
+import E302ZZ.C289301
+import E302ZZ.C289401
+import E302ZZ.C289501
+import E302ZZ.C289601
+import E302ZZ.C289701
+import E302ZZ.C289801
+import E302ZZ.C289901
+import E302ZZ.C290001
+import E302ZZ.C290101
+import E302ZZ.C290201
+import E302ZZ.C290301
+import E302ZZ.C290401
+import E302ZZ.C290501
+import E302ZZ.C290601
+import E302ZZ.C290701
+import E302ZZ.C290801
+import E302ZZ.C290901
+import E302ZZ.C291001
+import E302ZZ.C291101
+import E302ZZ.C291201
+import E302ZZ.C291301
+import E302ZZ.C291401
+import E302ZZ.C291501
+import E302ZZ.C291601
+import E302ZZ.C291701
+import E302ZZ.C291801
+import E302ZZ.C291901
+import E302ZZ.C292001
+import E302ZZ.C292101
+import E302ZZ.C292201
+import E302ZZ.C292301
+import E302ZZ.C292401
+import E302ZZ.C292501
+import E302ZZ.C292601
+import E302ZZ.C292701
+import E302ZZ.C292801
+import E302ZZ.C292901
+import E302ZZ.C293001
+import E302ZZ.C293101
+import E302ZZ.C293201
+import E302ZZ.C293301
+import E302ZZ.C293401
+import E302ZZ.C293501
+import E302ZZ.C293601
+import E302ZZ.C293701
+import E302ZZ.C293801
+import E302ZZ.C293901
+import E302ZZ.C294001
+import E302ZZ.C294101
+import E302ZZ.C294201
+import E302ZZ.C294301
+import E302ZZ.C294401
+import E302ZZ.C294501
+import E302ZZ.C294601
+import E302ZZ.C294701
+import E302ZZ.C294801
+import E302ZZ.C294901
+import E302ZZ.C295001
+import E302ZZ.C295101
+import E302ZZ.C295201
+import E302ZZ.C295301
+import E302ZZ.C295401
+import E302ZZ.C295501
+import E302ZZ.C295601
+import E302ZZ.C295701
+import E302ZZ.C295801
+import E302ZZ.C295901
+import E302ZZ.C296001
+import E302ZZ.C296101
+import E302ZZ.C296201
+import E302ZZ.C296301
+import E302ZZ.C296401
+import E302ZZ.C296501
+import E302ZZ.C296601
+import E302ZZ.C296701
+import E302ZZ.C296801
+import E302ZZ.C296901
+import E302ZZ.C297001
+import E302ZZ.C297101
+import E302ZZ.C297201
+import E302ZZ.C297301
+import E302ZZ.C297401
+import E302ZZ.C297501
+import E302ZZ.C297601
+import E302ZZ.C297701
+import E302ZZ.C297801
+import E302ZZ.C297901
+import E302ZZ.C298001
+import E302ZZ.C298101
+import E302ZZ.C298201
+import E302ZZ.C298301
+import E302ZZ.C298401
+import E302ZZ.C298501
+import E302ZZ.C298601
+import E302ZZ.C298701
+import E302ZZ.C298801
+import E302ZZ.C298901
+import E302ZZ.C299001
+import E302ZZ.C299101
+import E302ZZ.C299201
+import E302ZZ.C299301
+import E302ZZ.C299401
+import E302ZZ.C299501
+import E302ZZ.C299601
+import E302ZZ.C299701
+import E302ZZ.C299801
+import E302ZZ.C299901
+import E302ZZ.C300001
+import E302ZZ.C300101
+import E302ZZ.C300201
+import E302ZZ.C300301
+import E302ZZ.C300401
+import E302ZZ.C300501
+import E302ZZ.C300601
+import E302ZZ.C300701
+import E302ZZ.C300801
+import E302ZZ.C300901
+import E302ZZ.C301001
+import E302ZZ.C301101
+import E302ZZ.C301201
+import E302ZZ.C301301
+import E302ZZ.C301401
+import E302ZZ.C301501
+import E302ZZ.C301601
+import E302ZZ.C301701
+import E302ZZ.C301801
+import E302ZZ.C301901
+import E302ZZ.C302001
+import E302ZZ.C302101
+import E302ZZ.C302201
+import E302ZZ.C302301
+import E302ZZ.C302401
+import E302ZZ.C302501
+import E302ZZ.C302601
+import E302ZZ.C302701
+import E302ZZ.C302801
+import E302ZZ.C302901
+import E302ZZ.C303001
+import E302ZZ.C303101
+import E302ZZ.C303201
+import E302ZZ.C303301
+import E302ZZ.C303401
+import E302ZZ.C303501
+import E302ZZ.C303601
+import E302ZZ.C303701
+import E302ZZ.C303801
+import E302ZZ.C303901
+import E302ZZ.C304001
+import E302ZZ.C304101
+import E302ZZ.C304201
+import E302ZZ.C304301
+import E302ZZ.C304401
+import E302ZZ.C304501
+import E302ZZ.C304601
+import E302ZZ.C304701
+import E302ZZ.C304801
+import E302ZZ.C304901
+import E302ZZ.C305001
+import E302ZZ.C305101
+import E302ZZ.C305201
+import E302ZZ.C305301
+import E302ZZ.C305401
+import E302ZZ.C305501
+import E302ZZ.C305601
+import E302ZZ.C305701
+import E302ZZ.C305801
+import E302ZZ.C305901
+import E302ZZ.C306001
+import E302ZZ.C306101
+import E302ZZ.C306201
+import E302ZZ.C306301
+import E302ZZ.C306401
+import E302ZZ.C306501
+import E302ZZ.C306601
+import E302ZZ.C306701
+import E302ZZ.C306801
+import E302ZZ.C306901
+import E302ZZ.C307001
+import E302ZZ.C307101
+import CompactChecker.Path
+open CompactChecker
+set_option maxRecDepth 100000
+set_option Elab.async false
+set_option linter.all false
+namespace E302ZZ.S_00010
+-- FV302 (24 Nov 2026): joins of the ES(8) <= 302 compact check (budget-69 Z/Z*-row tree); Lean checks each step
+theorem k02068_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 47 E302ZZ.C206801.ex1 E302ZZ.C206802.ex8288
+theorem k02082_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 238 E302ZZ.C208201.ex1 E302ZZ.C208202.ex14216
+theorem k02097_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(40, 1), (221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(40, 1), (221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 238 E302ZZ.C209701.ex1 E302ZZ.C209702.ex18220
+theorem k02112_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 47 E302ZZ.C211201.ex1 E302ZZ.C211202.ex7956
+theorem k02177_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 1), (221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 1), (221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 238 E302ZZ.C217701.ex1 E302ZZ.C217702.ex23766
+theorem k02208_21107 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(238, 2), (47, 1), (217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(238, 2), (47, 1), (217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 199 E302ZZ.C220802.ex21108 E302ZZ.C220803.ex43589
+theorem k02208_21106 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(47, 1), (217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(47, 1), (217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 238 k02208_21107 E302ZZ.C220803.ex46244
+theorem k02208_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 47 E302ZZ.C220801.ex1 k02208_21106
+theorem k02212_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 238 E302ZZ.C221201.ex1 E302ZZ.C221202.ex18824
+theorem k02336_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 238 E302ZZ.C233601.ex1 E302ZZ.C233602.ex22640
+theorem k02561_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 1), (221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 1), (221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C256101.ex1 E302ZZ.C256102.ex22036
+theorem k02564_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 238 E302ZZ.C256401.ex1 E302ZZ.C256402.ex19100
+theorem k02580_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 238 E302ZZ.C258001.ex1 E302ZZ.C258002.ex18622
+theorem k02592_14946 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(47, 1), (217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(47, 1), (217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C259202.ex14947 E302ZZ.C259203.ex33324
+theorem k02592_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 47 E302ZZ.C259201.ex1 k02592_14946
+theorem k02593_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 1), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 1), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C259301.ex1 E302ZZ.C259302.ex19582
+theorem k02660_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(217, 2), (221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C266001.ex1 E302ZZ.C266002.ex23180
+theorem k02784_0 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(168, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(168, 2), (221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 47 E302ZZ.C278401.ex1 E302ZZ.C278402.ex14696
+theorem t_00010000000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C204801.ex0 E302ZZ.C204901.ex0
+theorem t_00010000000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C205001.ex0 E302ZZ.C205101.ex0
+theorem t_00010000000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C205201.ex0 E302ZZ.C205301.ex0
+theorem t_00010000000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C205401.ex0 E302ZZ.C205501.ex0
+theorem t_00010000000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C205601.ex0 E302ZZ.C205701.ex0
+theorem t_00010000000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C205801.ex0 E302ZZ.C205901.ex0
+theorem t_00010000000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C206001.ex0 E302ZZ.C206101.ex0
+theorem t_00010000000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C206201.ex0 E302ZZ.C206301.ex0
+theorem t_00010000001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C206401.ex0 E302ZZ.C206501.ex0
+theorem t_00010000001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C206601.ex0 E302ZZ.C206701.ex0
+theorem t_00010000001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02068_0 E302ZZ.C206901.ex0
+theorem t_00010000001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C207001.ex0 E302ZZ.C207101.ex0
+theorem t_00010000001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C207201.ex0 E302ZZ.C207301.ex0
+theorem t_00010000001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C207401.ex0 E302ZZ.C207501.ex0
+theorem t_00010000001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C207601.ex0 E302ZZ.C207701.ex0
+theorem t_00010000001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C207801.ex0 E302ZZ.C207901.ex0
+theorem t_00010000010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C208001.ex0 E302ZZ.C208101.ex0
+theorem t_00010000010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02082_0 E302ZZ.C208301.ex0
+theorem t_00010000010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C208401.ex0 E302ZZ.C208501.ex0
+theorem t_00010000010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C208601.ex0 E302ZZ.C208701.ex0
+theorem t_00010000010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C208801.ex0 E302ZZ.C208901.ex0
+theorem t_00010000010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C209001.ex0 E302ZZ.C209101.ex0
+theorem t_00010000010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C209201.ex0 E302ZZ.C209301.ex0
+theorem t_00010000010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C209401.ex0 E302ZZ.C209501.ex0
+theorem t_00010000011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 40 E302ZZ.C209601.ex0 k02097_0
+theorem t_00010000011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C209801.ex0 E302ZZ.C209901.ex0
+theorem t_00010000011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(40, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(40, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 E302ZZ.C210001.ex0 E302ZZ.C210101.ex0
+theorem t_00010000011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(40, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(40, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 E302ZZ.C210201.ex0 E302ZZ.C210301.ex0
+theorem t_00010000011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C210401.ex0 E302ZZ.C210501.ex0
+theorem t_00010000011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C210601.ex0 E302ZZ.C210701.ex0
+theorem t_00010000011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C210801.ex0 E302ZZ.C210901.ex0
+theorem t_00010000011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C211001.ex0 E302ZZ.C211101.ex0
+theorem t_00010000100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02112_0 E302ZZ.C211301.ex0
+theorem t_00010000100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C211401.ex0 E302ZZ.C211501.ex0
+theorem t_00010000100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C211601.ex0 E302ZZ.C211701.ex0
+theorem t_00010000100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C211801.ex0 E302ZZ.C211901.ex0
+theorem t_00010000100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C212001.ex0 E302ZZ.C212101.ex0
+theorem t_00010000100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C212201.ex0 E302ZZ.C212301.ex0
+theorem t_00010000100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C212401.ex0 E302ZZ.C212501.ex0
+theorem t_00010000100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C212601.ex0 E302ZZ.C212701.ex0
+theorem t_00010000101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C212801.ex0 E302ZZ.C212901.ex0
+theorem t_00010000101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C213001.ex0 E302ZZ.C213101.ex0
+theorem t_00010000101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C213201.ex0 E302ZZ.C213301.ex0
+theorem t_00010000101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C213401.ex0 E302ZZ.C213501.ex0
+theorem t_00010000101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C213601.ex0 E302ZZ.C213701.ex0
+theorem t_00010000101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C213801.ex0 E302ZZ.C213901.ex0
+theorem t_00010000101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C214001.ex0 E302ZZ.C214101.ex0
+theorem t_00010000101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C214201.ex0 E302ZZ.C214301.ex0
+theorem t_00010000110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C214401.ex0 E302ZZ.C214501.ex0
+theorem t_00010000110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C214601.ex0 E302ZZ.C214701.ex0
+theorem t_00010000110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 49 E302ZZ.C214801.ex0 E302ZZ.C214901.ex0
+theorem t_00010000110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C215001.ex0 E302ZZ.C215101.ex0
+theorem t_00010000110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C215201.ex0 E302ZZ.C215301.ex0
+theorem t_00010000110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C215401.ex0 E302ZZ.C215501.ex0
+theorem t_00010000110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C215601.ex0 E302ZZ.C215701.ex0
+theorem t_00010000110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C215801.ex0 E302ZZ.C215901.ex0
+theorem t_00010000111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C216001.ex0 E302ZZ.C216101.ex0
+theorem t_00010000111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C216201.ex0 E302ZZ.C216301.ex0
+theorem t_00010000111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C216401.ex0 E302ZZ.C216501.ex0
+theorem t_00010000111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C216601.ex0 E302ZZ.C216701.ex0
+theorem t_00010000111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 40 E302ZZ.C216801.ex0 E302ZZ.C216901.ex0
+theorem t_00010000111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C217001.ex0 E302ZZ.C217101.ex0
+theorem t_00010000111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C217201.ex0 E302ZZ.C217301.ex0
+theorem t_00010000111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C217401.ex0 E302ZZ.C217501.ex0
+theorem t_00010001000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C217601.ex0 k02177_0
+theorem t_00010001000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C217801.ex0 E302ZZ.C217901.ex0
+theorem t_00010001000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C218001.ex0 E302ZZ.C218101.ex0
+theorem t_00010001000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C218201.ex0 E302ZZ.C218301.ex0
+theorem t_00010001000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C218401.ex0 E302ZZ.C218501.ex0
+theorem t_00010001000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C218601.ex0 E302ZZ.C218701.ex0
+theorem t_00010001000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C218801.ex0 E302ZZ.C218901.ex0
+theorem t_00010001000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C219001.ex0 E302ZZ.C219101.ex0
+theorem t_00010001001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C219201.ex0 E302ZZ.C219301.ex0
+theorem t_00010001001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C219401.ex0 E302ZZ.C219501.ex0
+theorem t_00010001001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C219601.ex0 E302ZZ.C219701.ex0
+theorem t_00010001001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C219801.ex0 E302ZZ.C219901.ex0
+theorem t_00010001001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C220001.ex0 E302ZZ.C220101.ex0
+theorem t_00010001001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C220201.ex0 E302ZZ.C220301.ex0
+theorem t_00010001001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C220401.ex0 E302ZZ.C220501.ex0
+theorem t_00010001001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C220601.ex0 E302ZZ.C220701.ex0
+theorem t_00010001010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02208_0 E302ZZ.C220901.ex0
+theorem t_00010001010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C221001.ex0 E302ZZ.C221101.ex0
+theorem t_00010001010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02212_0 E302ZZ.C221301.ex0
+theorem t_00010001010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C221401.ex0 E302ZZ.C221501.ex0
+theorem t_00010001010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C221601.ex0 E302ZZ.C221701.ex0
+theorem t_00010001010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C221801.ex0 E302ZZ.C221901.ex0
+theorem t_00010001010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C222001.ex0 E302ZZ.C222101.ex0
+theorem t_00010001010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C222201.ex0 E302ZZ.C222301.ex0
+theorem t_00010001011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C222401.ex0 E302ZZ.C222501.ex0
+theorem t_00010001011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C222601.ex0 E302ZZ.C222701.ex0
+theorem t_00010001011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C222801.ex0 E302ZZ.C222901.ex0
+theorem t_00010001011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C223001.ex0 E302ZZ.C223101.ex0
+theorem t_00010001011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C223201.ex0 E302ZZ.C223301.ex0
+theorem t_00010001011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C223401.ex0 E302ZZ.C223501.ex0
+theorem t_00010001011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C223601.ex0 E302ZZ.C223701.ex0
+theorem t_00010001011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C223801.ex0 E302ZZ.C223901.ex0
+theorem t_00010001100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 49 E302ZZ.C224001.ex0 E302ZZ.C224101.ex0
+theorem t_00010001100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C224201.ex0 E302ZZ.C224301.ex0
+theorem t_00010001100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C224401.ex0 E302ZZ.C224501.ex0
+theorem t_00010001100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C224601.ex0 E302ZZ.C224701.ex0
+theorem t_00010001100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C224801.ex0 E302ZZ.C224901.ex0
+theorem t_00010001100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C225001.ex0 E302ZZ.C225101.ex0
+theorem t_00010001100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C225201.ex0 E302ZZ.C225301.ex0
+theorem t_00010001100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C225401.ex0 E302ZZ.C225501.ex0
+theorem t_00010001101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C225601.ex0 E302ZZ.C225701.ex0
+theorem t_00010001101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C225801.ex0 E302ZZ.C225901.ex0
+theorem t_00010001101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C226001.ex0 E302ZZ.C226101.ex0
+theorem t_00010001101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C226201.ex0 E302ZZ.C226301.ex0
+theorem t_00010001101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C226401.ex0 E302ZZ.C226501.ex0
+theorem t_00010001101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C226601.ex0 E302ZZ.C226701.ex0
+theorem t_00010001101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C226801.ex0 E302ZZ.C226901.ex0
+theorem t_00010001101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C227001.ex0 E302ZZ.C227101.ex0
+theorem t_00010001110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C227201.ex0 E302ZZ.C227301.ex0
+theorem t_00010001110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C227401.ex0 E302ZZ.C227501.ex0
+theorem t_00010001110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C227601.ex0 E302ZZ.C227701.ex0
+theorem t_00010001110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C227801.ex0 E302ZZ.C227901.ex0
+theorem t_00010001110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C228001.ex0 E302ZZ.C228101.ex0
+theorem t_00010001110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C228201.ex0 E302ZZ.C228301.ex0
+theorem t_00010001110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C228401.ex0 E302ZZ.C228501.ex0
+theorem t_00010001110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C228601.ex0 E302ZZ.C228701.ex0
+theorem t_00010001111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 40 E302ZZ.C228801.ex0 E302ZZ.C228901.ex0
+theorem t_00010001111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C229001.ex0 E302ZZ.C229101.ex0
+theorem t_00010001111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C229201.ex0 E302ZZ.C229301.ex0
+theorem t_00010001111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C229401.ex0 E302ZZ.C229501.ex0
+theorem t_00010001111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C229601.ex0 E302ZZ.C229701.ex0
+theorem t_00010001111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C229801.ex0 E302ZZ.C229901.ex0
+theorem t_00010001111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C230001.ex0 E302ZZ.C230101.ex0
+theorem t_00010001111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C230201.ex0 E302ZZ.C230301.ex0
+theorem t_00010010000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (54, 2), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (54, 2), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 E302ZZ.C230401.ex0 E302ZZ.C230501.ex0
+theorem t_00010010000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (54, 2), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (54, 2), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 E302ZZ.C230601.ex0 E302ZZ.C230701.ex0
+theorem t_00010010000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C230801.ex0 E302ZZ.C230901.ex0
+theorem t_00010010000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C231001.ex0 E302ZZ.C231101.ex0
+theorem t_00010010000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (54, 2), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (54, 2), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 E302ZZ.C231201.ex0 E302ZZ.C231301.ex0
+theorem t_00010010000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (54, 2), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (54, 2), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 E302ZZ.C231401.ex0 E302ZZ.C231501.ex0
+theorem t_00010010000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C231601.ex0 E302ZZ.C231701.ex0
+theorem t_00010010000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 49 E302ZZ.C231801.ex0 E302ZZ.C231901.ex0
+theorem t_00010010001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C232001.ex0 E302ZZ.C232101.ex0
+theorem t_00010010001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C232201.ex0 E302ZZ.C232301.ex0
+theorem t_00010010001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C232401.ex0 E302ZZ.C232501.ex0
+theorem t_00010010001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C232601.ex0 E302ZZ.C232701.ex0
+theorem t_00010010001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C232801.ex0 E302ZZ.C232901.ex0
+theorem t_00010010001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C233001.ex0 E302ZZ.C233101.ex0
+theorem t_00010010001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C233201.ex0 E302ZZ.C233301.ex0
+theorem t_00010010001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C233401.ex0 E302ZZ.C233501.ex0
+theorem t_00010010010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02336_0 E302ZZ.C233701.ex0
+theorem t_00010010010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C233801.ex0 E302ZZ.C233901.ex0
+theorem t_00010010010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C234001.ex0 E302ZZ.C234101.ex0
+theorem t_00010010010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C234201.ex0 E302ZZ.C234301.ex0
+theorem t_00010010010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C234401.ex0 E302ZZ.C234501.ex0
+theorem t_00010010010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C234601.ex0 E302ZZ.C234701.ex0
+theorem t_00010010010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C234801.ex0 E302ZZ.C234901.ex0
+theorem t_00010010010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C235001.ex0 E302ZZ.C235101.ex0
+theorem t_00010010011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C235201.ex0 E302ZZ.C235301.ex0
+theorem t_00010010011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C235401.ex0 E302ZZ.C235501.ex0
+theorem t_00010010011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C235601.ex0 E302ZZ.C235701.ex0
+theorem t_00010010011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C235801.ex0 E302ZZ.C235901.ex0
+theorem t_00010010011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C236001.ex0 E302ZZ.C236101.ex0
+theorem t_00010010011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C236201.ex0 E302ZZ.C236301.ex0
+theorem t_00010010011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C236401.ex0 E302ZZ.C236501.ex0
+theorem t_00010010011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C236601.ex0 E302ZZ.C236701.ex0
+theorem t_00010010100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C236801.ex0 E302ZZ.C236901.ex0
+theorem t_00010010100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C237001.ex0 E302ZZ.C237101.ex0
+theorem t_00010010100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C237201.ex0 E302ZZ.C237301.ex0
+theorem t_00010010100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C237401.ex0 E302ZZ.C237501.ex0
+theorem t_00010010100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C237601.ex0 E302ZZ.C237701.ex0
+theorem t_00010010100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C237801.ex0 E302ZZ.C237901.ex0
+theorem t_00010010100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C238001.ex0 E302ZZ.C238101.ex0
+theorem t_00010010100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C238201.ex0 E302ZZ.C238301.ex0
+theorem t_00010010101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C238401.ex0 E302ZZ.C238501.ex0
+theorem t_00010010101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C238601.ex0 E302ZZ.C238701.ex0
+theorem t_00010010101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C238801.ex0 E302ZZ.C238901.ex0
+theorem t_00010010101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C239001.ex0 E302ZZ.C239101.ex0
+theorem t_00010010101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C239201.ex0 E302ZZ.C239301.ex0
+theorem t_00010010101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C239401.ex0 E302ZZ.C239501.ex0
+theorem t_00010010101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C239601.ex0 E302ZZ.C239701.ex0
+theorem t_00010010101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C239801.ex0 E302ZZ.C239901.ex0
+theorem t_00010010110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C240001.ex0 E302ZZ.C240101.ex0
+theorem t_00010010110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C240201.ex0 E302ZZ.C240301.ex0
+theorem t_00010010110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C240401.ex0 E302ZZ.C240501.ex0
+theorem t_00010010110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C240601.ex0 E302ZZ.C240701.ex0
+theorem t_00010010110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C240801.ex0 E302ZZ.C240901.ex0
+theorem t_00010010110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C241001.ex0 E302ZZ.C241101.ex0
+theorem t_00010010110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C241201.ex0 E302ZZ.C241301.ex0
+theorem t_00010010110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C241401.ex0 E302ZZ.C241501.ex0
+theorem t_00010010111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C241601.ex0 E302ZZ.C241701.ex0
+theorem t_00010010111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C241801.ex0 E302ZZ.C241901.ex0
+theorem t_00010010111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C242001.ex0 E302ZZ.C242101.ex0
+theorem t_00010010111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C242201.ex0 E302ZZ.C242301.ex0
+theorem t_00010010111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C242401.ex0 E302ZZ.C242501.ex0
+theorem t_00010010111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C242601.ex0 E302ZZ.C242701.ex0
+theorem t_00010010111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C242801.ex0 E302ZZ.C242901.ex0
+theorem t_00010010111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C243001.ex0 E302ZZ.C243101.ex0
+theorem t_00010011000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C243201.ex0 E302ZZ.C243301.ex0
+theorem t_00010011000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C243401.ex0 E302ZZ.C243501.ex0
+theorem t_00010011000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C243601.ex0 E302ZZ.C243701.ex0
+theorem t_00010011000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C243801.ex0 E302ZZ.C243901.ex0
+theorem t_00010011000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C244001.ex0 E302ZZ.C244101.ex0
+theorem t_00010011000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C244201.ex0 E302ZZ.C244301.ex0
+theorem t_00010011000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C244401.ex0 E302ZZ.C244501.ex0
+theorem t_00010011000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C244601.ex0 E302ZZ.C244701.ex0
+theorem t_00010011001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C244801.ex0 E302ZZ.C244901.ex0
+theorem t_00010011001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C245001.ex0 E302ZZ.C245101.ex0
+theorem t_00010011001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C245201.ex0 E302ZZ.C245301.ex0
+theorem t_00010011001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C245401.ex0 E302ZZ.C245501.ex0
+theorem t_00010011001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C245601.ex0 E302ZZ.C245701.ex0
+theorem t_00010011001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C245801.ex0 E302ZZ.C245901.ex0
+theorem t_00010011001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C246001.ex0 E302ZZ.C246101.ex0
+theorem t_00010011001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C246201.ex0 E302ZZ.C246301.ex0
+theorem t_00010011010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C246401.ex0 E302ZZ.C246501.ex0
+theorem t_00010011010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C246601.ex0 E302ZZ.C246701.ex0
+theorem t_00010011010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C246801.ex0 E302ZZ.C246901.ex0
+theorem t_00010011010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C247001.ex0 E302ZZ.C247101.ex0
+theorem t_00010011010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C247201.ex0 E302ZZ.C247301.ex0
+theorem t_00010011010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C247401.ex0 E302ZZ.C247501.ex0
+theorem t_00010011010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C247601.ex0 E302ZZ.C247701.ex0
+theorem t_00010011010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C247801.ex0 E302ZZ.C247901.ex0
+theorem t_00010011011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C248001.ex0 E302ZZ.C248101.ex0
+theorem t_00010011011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C248201.ex0 E302ZZ.C248301.ex0
+theorem t_00010011011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C248401.ex0 E302ZZ.C248501.ex0
+theorem t_00010011011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C248601.ex0 E302ZZ.C248701.ex0
+theorem t_00010011011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C248801.ex0 E302ZZ.C248901.ex0
+theorem t_00010011011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C249001.ex0 E302ZZ.C249101.ex0
+theorem t_00010011011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C249201.ex0 E302ZZ.C249301.ex0
+theorem t_00010011011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C249401.ex0 E302ZZ.C249501.ex0
+theorem t_00010011100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C249601.ex0 E302ZZ.C249701.ex0
+theorem t_00010011100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C249801.ex0 E302ZZ.C249901.ex0
+theorem t_00010011100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C250001.ex0 E302ZZ.C250101.ex0
+theorem t_00010011100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C250201.ex0 E302ZZ.C250301.ex0
+theorem t_00010011100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C250401.ex0 E302ZZ.C250501.ex0
+theorem t_00010011100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C250601.ex0 E302ZZ.C250701.ex0
+theorem t_00010011100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C250801.ex0 E302ZZ.C250901.ex0
+theorem t_00010011100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C251001.ex0 E302ZZ.C251101.ex0
+theorem t_00010011101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C251201.ex0 E302ZZ.C251301.ex0
+theorem t_00010011101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C251401.ex0 E302ZZ.C251501.ex0
+theorem t_00010011101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C251601.ex0 E302ZZ.C251701.ex0
+theorem t_00010011101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C251801.ex0 E302ZZ.C251901.ex0
+theorem t_00010011101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C252001.ex0 E302ZZ.C252101.ex0
+theorem t_00010011101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C252201.ex0 E302ZZ.C252301.ex0
+theorem t_00010011101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C252401.ex0 E302ZZ.C252501.ex0
+theorem t_00010011101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C252601.ex0 E302ZZ.C252701.ex0
+theorem t_00010011110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C252801.ex0 E302ZZ.C252901.ex0
+theorem t_00010011110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C253001.ex0 E302ZZ.C253101.ex0
+theorem t_00010011110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C253201.ex0 E302ZZ.C253301.ex0
+theorem t_00010011110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C253401.ex0 E302ZZ.C253501.ex0
+theorem t_00010011110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C253601.ex0 E302ZZ.C253701.ex0
+theorem t_00010011110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C253801.ex0 E302ZZ.C253901.ex0
+theorem t_00010011110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C254001.ex0 E302ZZ.C254101.ex0
+theorem t_00010011110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C254201.ex0 E302ZZ.C254301.ex0
+theorem t_00010011111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C254401.ex0 E302ZZ.C254501.ex0
+theorem t_00010011111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C254601.ex0 E302ZZ.C254701.ex0
+theorem t_00010011111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C254801.ex0 E302ZZ.C254901.ex0
+theorem t_00010011111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C255001.ex0 E302ZZ.C255101.ex0
+theorem t_00010011111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C255201.ex0 E302ZZ.C255301.ex0
+theorem t_00010011111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C255401.ex0 E302ZZ.C255501.ex0
+theorem t_00010011111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C255601.ex0 E302ZZ.C255701.ex0
+theorem t_00010011111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C255801.ex0 E302ZZ.C255901.ex0
+theorem t_00010100000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C256001.ex0 k02561_0
+theorem t_00010100000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C256201.ex0 E302ZZ.C256301.ex0
+theorem t_00010100000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02564_0 E302ZZ.C256501.ex0
+theorem t_00010100000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C256601.ex0 E302ZZ.C256701.ex0
+theorem t_00010100000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C256801.ex0 E302ZZ.C256901.ex0
+theorem t_00010100000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C257001.ex0 E302ZZ.C257101.ex0
+theorem t_00010100000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C257201.ex0 E302ZZ.C257301.ex0
+theorem t_00010100000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C257401.ex0 E302ZZ.C257501.ex0
+theorem t_00010100001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C257601.ex0 E302ZZ.C257701.ex0
+theorem t_00010100001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C257801.ex0 E302ZZ.C257901.ex0
+theorem t_00010100001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02580_0 E302ZZ.C258101.ex0
+theorem t_00010100001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C258201.ex0 E302ZZ.C258301.ex0
+theorem t_00010100001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C258401.ex0 E302ZZ.C258501.ex0
+theorem t_00010100001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C258601.ex0 E302ZZ.C258701.ex0
+theorem t_00010100001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C258801.ex0 E302ZZ.C258901.ex0
+theorem t_00010100001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C259001.ex0 E302ZZ.C259101.ex0
+theorem t_00010100010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02592_0 k02593_0
+theorem t_00010100010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C259401.ex0 E302ZZ.C259501.ex0
+theorem t_00010100010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C259601.ex0 E302ZZ.C259701.ex0
+theorem t_00010100010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C259801.ex0 E302ZZ.C259901.ex0
+theorem t_00010100010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C260001.ex0 E302ZZ.C260101.ex0
+theorem t_00010100010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C260201.ex0 E302ZZ.C260301.ex0
+theorem t_00010100010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C260401.ex0 E302ZZ.C260501.ex0
+theorem t_00010100010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C260601.ex0 E302ZZ.C260701.ex0
+theorem t_00010100011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C260801.ex0 E302ZZ.C260901.ex0
+theorem t_00010100011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C261001.ex0 E302ZZ.C261101.ex0
+theorem t_00010100011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C261201.ex0 E302ZZ.C261301.ex0
+theorem t_00010100011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C261401.ex0 E302ZZ.C261501.ex0
+theorem t_00010100011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C261601.ex0 E302ZZ.C261701.ex0
+theorem t_00010100011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C261801.ex0 E302ZZ.C261901.ex0
+theorem t_00010100011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C262001.ex0 E302ZZ.C262101.ex0
+theorem t_00010100011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C262201.ex0 E302ZZ.C262301.ex0
+theorem t_00010100100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C262401.ex0 E302ZZ.C262501.ex0
+theorem t_00010100100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C262601.ex0 E302ZZ.C262701.ex0
+theorem t_00010100100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C262801.ex0 E302ZZ.C262901.ex0
+theorem t_00010100100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C263001.ex0 E302ZZ.C263101.ex0
+theorem t_00010100100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C263201.ex0 E302ZZ.C263301.ex0
+theorem t_00010100100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C263401.ex0 E302ZZ.C263501.ex0
+theorem t_00010100100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C263601.ex0 E302ZZ.C263701.ex0
+theorem t_00010100100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C263801.ex0 E302ZZ.C263901.ex0
+theorem t_00010100101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C264001.ex0 E302ZZ.C264101.ex0
+theorem t_00010100101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C264201.ex0 E302ZZ.C264301.ex0
+theorem t_00010100101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C264401.ex0 E302ZZ.C264501.ex0
+theorem t_00010100101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C264601.ex0 E302ZZ.C264701.ex0
+theorem t_00010100101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C264801.ex0 E302ZZ.C264901.ex0
+theorem t_00010100101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C265001.ex0 E302ZZ.C265101.ex0
+theorem t_00010100101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C265201.ex0 E302ZZ.C265301.ex0
+theorem t_00010100101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C265401.ex0 E302ZZ.C265501.ex0
+theorem t_00010100110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C265601.ex0 E302ZZ.C265701.ex0
+theorem t_00010100110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C265801.ex0 E302ZZ.C265901.ex0
+theorem t_00010100110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 k02660_0 E302ZZ.C266101.ex0
+theorem t_00010100110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C266201.ex0 E302ZZ.C266301.ex0
+theorem t_00010100110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C266401.ex0 E302ZZ.C266501.ex0
+theorem t_00010100110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C266601.ex0 E302ZZ.C266701.ex0
+theorem t_00010100110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C266801.ex0 E302ZZ.C266901.ex0
+theorem t_00010100110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C267001.ex0 E302ZZ.C267101.ex0
+theorem t_00010100111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C267201.ex0 E302ZZ.C267301.ex0
+theorem t_00010100111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C267401.ex0 E302ZZ.C267501.ex0
+theorem t_00010100111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C267601.ex0 E302ZZ.C267701.ex0
+theorem t_00010100111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C267801.ex0 E302ZZ.C267901.ex0
+theorem t_00010100111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C268001.ex0 E302ZZ.C268101.ex0
+theorem t_00010100111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C268201.ex0 E302ZZ.C268301.ex0
+theorem t_00010100111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C268401.ex0 E302ZZ.C268501.ex0
+theorem t_00010100111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C268601.ex0 E302ZZ.C268701.ex0
+theorem t_00010101000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C268801.ex0 E302ZZ.C268901.ex0
+theorem t_00010101000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C269001.ex0 E302ZZ.C269101.ex0
+theorem t_00010101000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C269201.ex0 E302ZZ.C269301.ex0
+theorem t_00010101000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C269401.ex0 E302ZZ.C269501.ex0
+theorem t_00010101000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C269601.ex0 E302ZZ.C269701.ex0
+theorem t_00010101000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C269801.ex0 E302ZZ.C269901.ex0
+theorem t_00010101000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C270001.ex0 E302ZZ.C270101.ex0
+theorem t_00010101000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C270201.ex0 E302ZZ.C270301.ex0
+theorem t_00010101001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C270401.ex0 E302ZZ.C270501.ex0
+theorem t_00010101001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C270601.ex0 E302ZZ.C270701.ex0
+theorem t_00010101001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C270801.ex0 E302ZZ.C270901.ex0
+theorem t_00010101001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C271001.ex0 E302ZZ.C271101.ex0
+theorem t_00010101001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C271201.ex0 E302ZZ.C271301.ex0
+theorem t_00010101001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C271401.ex0 E302ZZ.C271501.ex0
+theorem t_00010101001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C271601.ex0 E302ZZ.C271701.ex0
+theorem t_00010101001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C271801.ex0 E302ZZ.C271901.ex0
+theorem t_00010101010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C272001.ex0 E302ZZ.C272101.ex0
+theorem t_00010101010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C272201.ex0 E302ZZ.C272301.ex0
+theorem t_00010101010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C272401.ex0 E302ZZ.C272501.ex0
+theorem t_00010101010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C272601.ex0 E302ZZ.C272701.ex0
+theorem t_00010101010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C272801.ex0 E302ZZ.C272901.ex0
+theorem t_00010101010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C273001.ex0 E302ZZ.C273101.ex0
+theorem t_00010101010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C273201.ex0 E302ZZ.C273301.ex0
+theorem t_00010101010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C273401.ex0 E302ZZ.C273501.ex0
+theorem t_00010101011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C273601.ex0 E302ZZ.C273701.ex0
+theorem t_00010101011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C273801.ex0 E302ZZ.C273901.ex0
+theorem t_00010101011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C274001.ex0 E302ZZ.C274101.ex0
+theorem t_00010101011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C274201.ex0 E302ZZ.C274301.ex0
+theorem t_00010101011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C274401.ex0 E302ZZ.C274501.ex0
+theorem t_00010101011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C274601.ex0 E302ZZ.C274701.ex0
+theorem t_00010101011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C274801.ex0 E302ZZ.C274901.ex0
+theorem t_00010101011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C275001.ex0 E302ZZ.C275101.ex0
+theorem t_00010101100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C275201.ex0 E302ZZ.C275301.ex0
+theorem t_00010101100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C275401.ex0 E302ZZ.C275501.ex0
+theorem t_00010101100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C275601.ex0 E302ZZ.C275701.ex0
+theorem t_00010101100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C275801.ex0 E302ZZ.C275901.ex0
+theorem t_00010101100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C276001.ex0 E302ZZ.C276101.ex0
+theorem t_00010101100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C276201.ex0 E302ZZ.C276301.ex0
+theorem t_00010101100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C276401.ex0 E302ZZ.C276501.ex0
+theorem t_00010101100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C276601.ex0 E302ZZ.C276701.ex0
+theorem t_00010101101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C276801.ex0 E302ZZ.C276901.ex0
+theorem t_00010101101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C277001.ex0 E302ZZ.C277101.ex0
+theorem t_00010101101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C277201.ex0 E302ZZ.C277301.ex0
+theorem t_00010101101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C277401.ex0 E302ZZ.C277501.ex0
+theorem t_00010101101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C277601.ex0 E302ZZ.C277701.ex0
+theorem t_00010101101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C277801.ex0 E302ZZ.C277901.ex0
+theorem t_00010101101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C278001.ex0 E302ZZ.C278101.ex0
+theorem t_00010101101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C278201.ex0 E302ZZ.C278301.ex0
+theorem t_00010101110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 k02784_0 E302ZZ.C278501.ex0
+theorem t_00010101110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C278601.ex0 E302ZZ.C278701.ex0
+theorem t_00010101110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C278801.ex0 E302ZZ.C278901.ex0
+theorem t_00010101110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C279001.ex0 E302ZZ.C279101.ex0
+theorem t_00010101110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C279201.ex0 E302ZZ.C279301.ex0
+theorem t_00010101110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C279401.ex0 E302ZZ.C279501.ex0
+theorem t_00010101110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C279601.ex0 E302ZZ.C279701.ex0
+theorem t_00010101110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C279801.ex0 E302ZZ.C279901.ex0
+theorem t_00010101111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C280001.ex0 E302ZZ.C280101.ex0
+theorem t_00010101111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C280201.ex0 E302ZZ.C280301.ex0
+theorem t_00010101111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C280401.ex0 E302ZZ.C280501.ex0
+theorem t_00010101111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C280601.ex0 E302ZZ.C280701.ex0
+theorem t_00010101111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C280801.ex0 E302ZZ.C280901.ex0
+theorem t_00010101111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C281001.ex0 E302ZZ.C281101.ex0
+theorem t_00010101111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C281201.ex0 E302ZZ.C281301.ex0
+theorem t_00010101111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C281401.ex0 E302ZZ.C281501.ex0
+theorem t_00010110000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C281601.ex0 E302ZZ.C281701.ex0
+theorem t_00010110000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C281801.ex0 E302ZZ.C281901.ex0
+theorem t_00010110000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C282001.ex0 E302ZZ.C282101.ex0
+theorem t_00010110000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C282201.ex0 E302ZZ.C282301.ex0
+theorem t_00010110000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C282401.ex0 E302ZZ.C282501.ex0
+theorem t_00010110000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C282601.ex0 E302ZZ.C282701.ex0
+theorem t_00010110000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C282801.ex0 E302ZZ.C282901.ex0
+theorem t_00010110000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C283001.ex0 E302ZZ.C283101.ex0
+theorem t_00010110001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C283201.ex0 E302ZZ.C283301.ex0
+theorem t_00010110001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C283401.ex0 E302ZZ.C283501.ex0
+theorem t_00010110001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C283601.ex0 E302ZZ.C283701.ex0
+theorem t_00010110001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C283801.ex0 E302ZZ.C283901.ex0
+theorem t_00010110001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C284001.ex0 E302ZZ.C284101.ex0
+theorem t_00010110001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C284201.ex0 E302ZZ.C284301.ex0
+theorem t_00010110001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C284401.ex0 E302ZZ.C284501.ex0
+theorem t_00010110001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C284601.ex0 E302ZZ.C284701.ex0
+theorem t_00010110010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 E302ZZ.C284801.ex0 E302ZZ.C284901.ex0
+theorem t_00010110010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 E302ZZ.C285001.ex0 E302ZZ.C285101.ex0
+theorem t_00010110010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C285201.ex0 E302ZZ.C285301.ex0
+theorem t_00010110010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C285401.ex0 E302ZZ.C285501.ex0
+theorem t_00010110010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C285601.ex0 E302ZZ.C285701.ex0
+theorem t_00010110010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C285801.ex0 E302ZZ.C285901.ex0
+theorem t_00010110010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C286001.ex0 E302ZZ.C286101.ex0
+theorem t_00010110010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C286201.ex0 E302ZZ.C286301.ex0
+theorem t_00010110011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C286401.ex0 E302ZZ.C286501.ex0
+theorem t_00010110011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C286601.ex0 E302ZZ.C286701.ex0
+theorem t_00010110011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C286801.ex0 E302ZZ.C286901.ex0
+theorem t_00010110011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C287001.ex0 E302ZZ.C287101.ex0
+theorem t_00010110011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C287201.ex0 E302ZZ.C287301.ex0
+theorem t_00010110011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C287401.ex0 E302ZZ.C287501.ex0
+theorem t_00010110011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C287601.ex0 E302ZZ.C287701.ex0
+theorem t_00010110011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C287801.ex0 E302ZZ.C287901.ex0
+theorem t_00010110100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C288001.ex0 E302ZZ.C288101.ex0
+theorem t_00010110100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C288201.ex0 E302ZZ.C288301.ex0
+theorem t_00010110100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C288401.ex0 E302ZZ.C288501.ex0
+theorem t_00010110100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C288601.ex0 E302ZZ.C288701.ex0
+theorem t_00010110100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C288801.ex0 E302ZZ.C288901.ex0
+theorem t_00010110100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C289001.ex0 E302ZZ.C289101.ex0
+theorem t_00010110100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C289201.ex0 E302ZZ.C289301.ex0
+theorem t_00010110100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C289401.ex0 E302ZZ.C289501.ex0
+theorem t_00010110101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C289601.ex0 E302ZZ.C289701.ex0
+theorem t_00010110101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C289801.ex0 E302ZZ.C289901.ex0
+theorem t_00010110101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C290001.ex0 E302ZZ.C290101.ex0
+theorem t_00010110101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C290201.ex0 E302ZZ.C290301.ex0
+theorem t_00010110101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C290401.ex0 E302ZZ.C290501.ex0
+theorem t_00010110101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C290601.ex0 E302ZZ.C290701.ex0
+theorem t_00010110101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C290801.ex0 E302ZZ.C290901.ex0
+theorem t_00010110101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C291001.ex0 E302ZZ.C291101.ex0
+theorem t_00010110110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C291201.ex0 E302ZZ.C291301.ex0
+theorem t_00010110110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C291401.ex0 E302ZZ.C291501.ex0
+theorem t_00010110110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C291601.ex0 E302ZZ.C291701.ex0
+theorem t_00010110110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C291801.ex0 E302ZZ.C291901.ex0
+theorem t_00010110110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C292001.ex0 E302ZZ.C292101.ex0
+theorem t_00010110110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C292201.ex0 E302ZZ.C292301.ex0
+theorem t_00010110110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C292401.ex0 E302ZZ.C292501.ex0
+theorem t_00010110110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C292601.ex0 E302ZZ.C292701.ex0
+theorem t_00010110111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C292801.ex0 E302ZZ.C292901.ex0
+theorem t_00010110111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C293001.ex0 E302ZZ.C293101.ex0
+theorem t_00010110111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C293201.ex0 E302ZZ.C293301.ex0
+theorem t_00010110111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C293401.ex0 E302ZZ.C293501.ex0
+theorem t_00010110111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C293601.ex0 E302ZZ.C293701.ex0
+theorem t_00010110111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C293801.ex0 E302ZZ.C293901.ex0
+theorem t_00010110111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C294001.ex0 E302ZZ.C294101.ex0
+theorem t_00010110111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 E302ZZ.C294201.ex0 E302ZZ.C294301.ex0
+theorem t_00010111000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C294401.ex0 E302ZZ.C294501.ex0
+theorem t_00010111000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C294601.ex0 E302ZZ.C294701.ex0
+theorem t_00010111000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C294801.ex0 E302ZZ.C294901.ex0
+theorem t_00010111000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C295001.ex0 E302ZZ.C295101.ex0
+theorem t_00010111000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C295201.ex0 E302ZZ.C295301.ex0
+theorem t_00010111000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C295401.ex0 E302ZZ.C295501.ex0
+theorem t_00010111000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C295601.ex0 E302ZZ.C295701.ex0
+theorem t_00010111000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C295801.ex0 E302ZZ.C295901.ex0
+theorem t_00010111001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C296001.ex0 E302ZZ.C296101.ex0
+theorem t_00010111001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C296201.ex0 E302ZZ.C296301.ex0
+theorem t_00010111001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C296401.ex0 E302ZZ.C296501.ex0
+theorem t_00010111001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C296601.ex0 E302ZZ.C296701.ex0
+theorem t_00010111001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C296801.ex0 E302ZZ.C296901.ex0
+theorem t_00010111001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C297001.ex0 E302ZZ.C297101.ex0
+theorem t_00010111001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C297201.ex0 E302ZZ.C297301.ex0
+theorem t_00010111001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C297401.ex0 E302ZZ.C297501.ex0
+theorem t_00010111010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C297601.ex0 E302ZZ.C297701.ex0
+theorem t_00010111010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C297801.ex0 E302ZZ.C297901.ex0
+theorem t_00010111010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C298001.ex0 E302ZZ.C298101.ex0
+theorem t_00010111010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C298201.ex0 E302ZZ.C298301.ex0
+theorem t_00010111010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C298401.ex0 E302ZZ.C298501.ex0
+theorem t_00010111010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C298601.ex0 E302ZZ.C298701.ex0
+theorem t_00010111010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C298801.ex0 E302ZZ.C298901.ex0
+theorem t_00010111010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 E302ZZ.C299001.ex0 E302ZZ.C299101.ex0
+theorem t_00010111011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C299201.ex0 E302ZZ.C299301.ex0
+theorem t_00010111011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C299401.ex0 E302ZZ.C299501.ex0
+theorem t_00010111011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C299601.ex0 E302ZZ.C299701.ex0
+theorem t_00010111011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C299801.ex0 E302ZZ.C299901.ex0
+theorem t_00010111011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C300001.ex0 E302ZZ.C300101.ex0
+theorem t_00010111011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C300201.ex0 E302ZZ.C300301.ex0
+theorem t_00010111011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C300401.ex0 E302ZZ.C300501.ex0
+theorem t_00010111011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C300601.ex0 E302ZZ.C300701.ex0
+theorem t_00010111100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C300801.ex0 E302ZZ.C300901.ex0
+theorem t_00010111100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C301001.ex0 E302ZZ.C301101.ex0
+theorem t_00010111100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C301201.ex0 E302ZZ.C301301.ex0
+theorem t_00010111100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C301401.ex0 E302ZZ.C301501.ex0
+theorem t_00010111100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C301601.ex0 E302ZZ.C301701.ex0
+theorem t_00010111100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C301801.ex0 E302ZZ.C301901.ex0
+theorem t_00010111100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C302001.ex0 E302ZZ.C302101.ex0
+theorem t_00010111100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C302201.ex0 E302ZZ.C302301.ex0
+theorem t_00010111101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C302401.ex0 E302ZZ.C302501.ex0
+theorem t_00010111101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C302601.ex0 E302ZZ.C302701.ex0
+theorem t_00010111101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C302801.ex0 E302ZZ.C302901.ex0
+theorem t_00010111101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C303001.ex0 E302ZZ.C303101.ex0
+theorem t_00010111101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C303201.ex0 E302ZZ.C303301.ex0
+theorem t_00010111101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C303401.ex0 E302ZZ.C303501.ex0
+theorem t_00010111101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C303601.ex0 E302ZZ.C303701.ex0
+theorem t_00010111101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C303801.ex0 E302ZZ.C303901.ex0
+theorem t_00010111110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C304001.ex0 E302ZZ.C304101.ex0
+theorem t_00010111110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C304201.ex0 E302ZZ.C304301.ex0
+theorem t_00010111110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C304401.ex0 E302ZZ.C304501.ex0
+theorem t_00010111110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C304601.ex0 E302ZZ.C304701.ex0
+theorem t_00010111110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C304801.ex0 E302ZZ.C304901.ex0
+theorem t_00010111110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C305001.ex0 E302ZZ.C305101.ex0
+theorem t_00010111110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C305201.ex0 E302ZZ.C305301.ex0
+theorem t_00010111110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C305401.ex0 E302ZZ.C305501.ex0
+theorem t_00010111111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C305601.ex0 E302ZZ.C305701.ex0
+theorem t_00010111111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C305801.ex0 E302ZZ.C305901.ex0
+theorem t_00010111111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C306001.ex0 E302ZZ.C306101.ex0
+theorem t_00010111111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C306201.ex0 E302ZZ.C306301.ex0
+theorem t_00010111111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C306401.ex0 E302ZZ.C306501.ex0
+theorem t_00010111111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C306601.ex0 E302ZZ.C306701.ex0
+theorem t_00010111111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 2), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C306801.ex0 E302ZZ.C306901.ex0
+theorem t_00010111111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(221, 1), (54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 217 E302ZZ.C307001.ex0 E302ZZ.C307101.ex0
+theorem t_0001000000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000000000 t_00010000000001
+theorem t_0001000000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000000010 t_00010000000011
+theorem t_0001000000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000000100 t_00010000000101
+theorem t_0001000000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000000110 t_00010000000111
+theorem t_0001000000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000001000 t_00010000001001
+theorem t_0001000000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000001010 t_00010000001011
+theorem t_0001000000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000001100 t_00010000001101
+theorem t_0001000000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000001110 t_00010000001111
+theorem t_0001000001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000010000 t_00010000010001
+theorem t_0001000001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000010010 t_00010000010011
+theorem t_0001000001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000010100 t_00010000010101
+theorem t_0001000001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000010110 t_00010000010111
+theorem t_0001000001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000011000 t_00010000011001
+theorem t_0001000001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 40 t_00010000011010 t_00010000011011
+theorem t_0001000001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000011100 t_00010000011101
+theorem t_0001000001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000011110 t_00010000011111
+theorem t_0001000010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000100000 t_00010000100001
+theorem t_0001000010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000100010 t_00010000100011
+theorem t_0001000010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000100100 t_00010000100101
+theorem t_0001000010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000100110 t_00010000100111
+theorem t_0001000010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000101000 t_00010000101001
+theorem t_0001000010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000101010 t_00010000101011
+theorem t_0001000010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000101100 t_00010000101101
+theorem t_0001000010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000101110 t_00010000101111
+theorem t_0001000011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000110000 t_00010000110001
+theorem t_0001000011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000110010 t_00010000110011
+theorem t_0001000011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000110100 t_00010000110101
+theorem t_0001000011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000110110 t_00010000110111
+theorem t_0001000011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000111000 t_00010000111001
+theorem t_0001000011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000111010 t_00010000111011
+theorem t_0001000011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000111100 t_00010000111101
+theorem t_0001000011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010000111110 t_00010000111111
+theorem t_0001000100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001000000 t_00010001000001
+theorem t_0001000100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001000010 t_00010001000011
+theorem t_0001000100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001000100 t_00010001000101
+theorem t_0001000100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001000110 t_00010001000111
+theorem t_0001000100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001001000 t_00010001001001
+theorem t_0001000100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001001010 t_00010001001011
+theorem t_0001000100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001001100 t_00010001001101
+theorem t_0001000100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001001110 t_00010001001111
+theorem t_0001000101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001010000 t_00010001010001
+theorem t_0001000101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001010010 t_00010001010011
+theorem t_0001000101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001010100 t_00010001010101
+theorem t_0001000101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001010110 t_00010001010111
+theorem t_0001000101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001011000 t_00010001011001
+theorem t_0001000101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001011010 t_00010001011011
+theorem t_0001000101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001011100 t_00010001011101
+theorem t_0001000101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001011110 t_00010001011111
+theorem t_0001000110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001100000 t_00010001100001
+theorem t_0001000110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001100010 t_00010001100011
+theorem t_0001000110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001100100 t_00010001100101
+theorem t_0001000110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001100110 t_00010001100111
+theorem t_0001000110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001101000 t_00010001101001
+theorem t_0001000110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001101010 t_00010001101011
+theorem t_0001000110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001101100 t_00010001101101
+theorem t_0001000110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001101110 t_00010001101111
+theorem t_0001000111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001110000 t_00010001110001
+theorem t_0001000111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001110010 t_00010001110011
+theorem t_0001000111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001110100 t_00010001110101
+theorem t_0001000111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001110110 t_00010001110111
+theorem t_0001000111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001111000 t_00010001111001
+theorem t_0001000111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001111010 t_00010001111011
+theorem t_0001000111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001111100 t_00010001111101
+theorem t_0001000111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010001111110 t_00010001111111
+theorem t_0001001000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_00010010000000 t_00010010000001
+theorem t_0001001000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010000010 t_00010010000011
+theorem t_0001001000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_00010010000100 t_00010010000101
+theorem t_0001001000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010000110 t_00010010000111
+theorem t_0001001000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010001000 t_00010010001001
+theorem t_0001001000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010001010 t_00010010001011
+theorem t_0001001000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010001100 t_00010010001101
+theorem t_0001001000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010001110 t_00010010001111
+theorem t_0001001001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010010000 t_00010010010001
+theorem t_0001001001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010010010 t_00010010010011
+theorem t_0001001001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010010100 t_00010010010101
+theorem t_0001001001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010010110 t_00010010010111
+theorem t_0001001001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010011000 t_00010010011001
+theorem t_0001001001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010011010 t_00010010011011
+theorem t_0001001001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010011100 t_00010010011101
+theorem t_0001001001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010011110 t_00010010011111
+theorem t_0001001010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010100000 t_00010010100001
+theorem t_0001001010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010100010 t_00010010100011
+theorem t_0001001010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010100100 t_00010010100101
+theorem t_0001001010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010100110 t_00010010100111
+theorem t_0001001010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010101000 t_00010010101001
+theorem t_0001001010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010101010 t_00010010101011
+theorem t_0001001010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010101100 t_00010010101101
+theorem t_0001001010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010101110 t_00010010101111
+theorem t_0001001011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010110000 t_00010010110001
+theorem t_0001001011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010110010 t_00010010110011
+theorem t_0001001011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010110100 t_00010010110101
+theorem t_0001001011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010110110 t_00010010110111
+theorem t_0001001011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010111000 t_00010010111001
+theorem t_0001001011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010111010 t_00010010111011
+theorem t_0001001011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010111100 t_00010010111101
+theorem t_0001001011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010010111110 t_00010010111111
+theorem t_0001001100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011000000 t_00010011000001
+theorem t_0001001100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011000010 t_00010011000011
+theorem t_0001001100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011000100 t_00010011000101
+theorem t_0001001100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011000110 t_00010011000111
+theorem t_0001001100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011001000 t_00010011001001
+theorem t_0001001100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011001010 t_00010011001011
+theorem t_0001001100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011001100 t_00010011001101
+theorem t_0001001100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011001110 t_00010011001111
+theorem t_0001001101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011010000 t_00010011010001
+theorem t_0001001101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011010010 t_00010011010011
+theorem t_0001001101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011010100 t_00010011010101
+theorem t_0001001101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011010110 t_00010011010111
+theorem t_0001001101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011011000 t_00010011011001
+theorem t_0001001101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011011010 t_00010011011011
+theorem t_0001001101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011011100 t_00010011011101
+theorem t_0001001101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011011110 t_00010011011111
+theorem t_0001001110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011100000 t_00010011100001
+theorem t_0001001110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011100010 t_00010011100011
+theorem t_0001001110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011100100 t_00010011100101
+theorem t_0001001110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011100110 t_00010011100111
+theorem t_0001001110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011101000 t_00010011101001
+theorem t_0001001110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011101010 t_00010011101011
+theorem t_0001001110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011101100 t_00010011101101
+theorem t_0001001110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011101110 t_00010011101111
+theorem t_0001001111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011110000 t_00010011110001
+theorem t_0001001111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011110010 t_00010011110011
+theorem t_0001001111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011110100 t_00010011110101
+theorem t_0001001111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011110110 t_00010011110111
+theorem t_0001001111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011111000 t_00010011111001
+theorem t_0001001111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011111010 t_00010011111011
+theorem t_0001001111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011111100 t_00010011111101
+theorem t_0001001111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010011111110 t_00010011111111
+theorem t_0001010000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100000000 t_00010100000001
+theorem t_0001010000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100000010 t_00010100000011
+theorem t_0001010000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100000100 t_00010100000101
+theorem t_0001010000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100000110 t_00010100000111
+theorem t_0001010000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100001000 t_00010100001001
+theorem t_0001010000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100001010 t_00010100001011
+theorem t_0001010000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100001100 t_00010100001101
+theorem t_0001010000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100001110 t_00010100001111
+theorem t_0001010001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100010000 t_00010100010001
+theorem t_0001010001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100010010 t_00010100010011
+theorem t_0001010001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100010100 t_00010100010101
+theorem t_0001010001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100010110 t_00010100010111
+theorem t_0001010001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100011000 t_00010100011001
+theorem t_0001010001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100011010 t_00010100011011
+theorem t_0001010001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100011100 t_00010100011101
+theorem t_0001010001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100011110 t_00010100011111
+theorem t_0001010010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100100000 t_00010100100001
+theorem t_0001010010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100100010 t_00010100100011
+theorem t_0001010010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100100100 t_00010100100101
+theorem t_0001010010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100100110 t_00010100100111
+theorem t_0001010010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100101000 t_00010100101001
+theorem t_0001010010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100101010 t_00010100101011
+theorem t_0001010010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100101100 t_00010100101101
+theorem t_0001010010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100101110 t_00010100101111
+theorem t_0001010011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100110000 t_00010100110001
+theorem t_0001010011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100110010 t_00010100110011
+theorem t_0001010011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100110100 t_00010100110101
+theorem t_0001010011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100110110 t_00010100110111
+theorem t_0001010011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100111000 t_00010100111001
+theorem t_0001010011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100111010 t_00010100111011
+theorem t_0001010011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100111100 t_00010100111101
+theorem t_0001010011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010100111110 t_00010100111111
+theorem t_0001010100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101000000 t_00010101000001
+theorem t_0001010100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101000010 t_00010101000011
+theorem t_0001010100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101000100 t_00010101000101
+theorem t_0001010100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101000110 t_00010101000111
+theorem t_0001010100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101001000 t_00010101001001
+theorem t_0001010100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101001010 t_00010101001011
+theorem t_0001010100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101001100 t_00010101001101
+theorem t_0001010100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101001110 t_00010101001111
+theorem t_0001010101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101010000 t_00010101010001
+theorem t_0001010101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101010010 t_00010101010011
+theorem t_0001010101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101010100 t_00010101010101
+theorem t_0001010101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101010110 t_00010101010111
+theorem t_0001010101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101011000 t_00010101011001
+theorem t_0001010101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101011010 t_00010101011011
+theorem t_0001010101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101011100 t_00010101011101
+theorem t_0001010101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101011110 t_00010101011111
+theorem t_0001010110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101100000 t_00010101100001
+theorem t_0001010110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101100010 t_00010101100011
+theorem t_0001010110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101100100 t_00010101100101
+theorem t_0001010110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101100110 t_00010101100111
+theorem t_0001010110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101101000 t_00010101101001
+theorem t_0001010110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101101010 t_00010101101011
+theorem t_0001010110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101101100 t_00010101101101
+theorem t_0001010110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101101110 t_00010101101111
+theorem t_0001010111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101110000 t_00010101110001
+theorem t_0001010111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101110010 t_00010101110011
+theorem t_0001010111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101110100 t_00010101110101
+theorem t_0001010111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101110110 t_00010101110111
+theorem t_0001010111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101111000 t_00010101111001
+theorem t_0001010111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101111010 t_00010101111011
+theorem t_0001010111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101111100 t_00010101111101
+theorem t_0001010111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010101111110 t_00010101111111
+theorem t_0001011000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110000000 t_00010110000001
+theorem t_0001011000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110000010 t_00010110000011
+theorem t_0001011000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110000100 t_00010110000101
+theorem t_0001011000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110000110 t_00010110000111
+theorem t_0001011000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110001000 t_00010110001001
+theorem t_0001011000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110001010 t_00010110001011
+theorem t_0001011000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110001100 t_00010110001101
+theorem t_0001011000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110001110 t_00010110001111
+theorem t_0001011001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_00010110010000 t_00010110010001
+theorem t_0001011001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110010010 t_00010110010011
+theorem t_0001011001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110010100 t_00010110010101
+theorem t_0001011001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110010110 t_00010110010111
+theorem t_0001011001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110011000 t_00010110011001
+theorem t_0001011001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110011010 t_00010110011011
+theorem t_0001011001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110011100 t_00010110011101
+theorem t_0001011001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110011110 t_00010110011111
+theorem t_0001011010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110100000 t_00010110100001
+theorem t_0001011010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110100010 t_00010110100011
+theorem t_0001011010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110100100 t_00010110100101
+theorem t_0001011010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110100110 t_00010110100111
+theorem t_0001011010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110101000 t_00010110101001
+theorem t_0001011010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110101010 t_00010110101011
+theorem t_0001011010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110101100 t_00010110101101
+theorem t_0001011010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110101110 t_00010110101111
+theorem t_0001011011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110110000 t_00010110110001
+theorem t_0001011011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110110010 t_00010110110011
+theorem t_0001011011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110110100 t_00010110110101
+theorem t_0001011011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110110110 t_00010110110111
+theorem t_0001011011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110111000 t_00010110111001
+theorem t_0001011011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110111010 t_00010110111011
+theorem t_0001011011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110111100 t_00010110111101
+theorem t_0001011011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010110111110 t_00010110111111
+theorem t_0001011100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111000000 t_00010111000001
+theorem t_0001011100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111000010 t_00010111000011
+theorem t_0001011100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111000100 t_00010111000101
+theorem t_0001011100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111000110 t_00010111000111
+theorem t_0001011100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111001000 t_00010111001001
+theorem t_0001011100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111001010 t_00010111001011
+theorem t_0001011100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111001100 t_00010111001101
+theorem t_0001011100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111001110 t_00010111001111
+theorem t_0001011101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111010000 t_00010111010001
+theorem t_0001011101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111010010 t_00010111010011
+theorem t_0001011101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111010100 t_00010111010101
+theorem t_0001011101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111010110 t_00010111010111
+theorem t_0001011101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111011000 t_00010111011001
+theorem t_0001011101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111011010 t_00010111011011
+theorem t_0001011101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111011100 t_00010111011101
+theorem t_0001011101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111011110 t_00010111011111
+theorem t_0001011110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111100000 t_00010111100001
+theorem t_0001011110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111100010 t_00010111100011
+theorem t_0001011110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111100100 t_00010111100101
+theorem t_0001011110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111100110 t_00010111100111
+theorem t_0001011110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111101000 t_00010111101001
+theorem t_0001011110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111101010 t_00010111101011
+theorem t_0001011110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111101100 t_00010111101101
+theorem t_0001011110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111101110 t_00010111101111
+theorem t_0001011111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111110000 t_00010111110001
+theorem t_0001011111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111110010 t_00010111110011
+theorem t_0001011111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111110100 t_00010111110101
+theorem t_0001011111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111110110 t_00010111110111
+theorem t_0001011111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111111000 t_00010111111001
+theorem t_0001011111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111111010 t_00010111111011
+theorem t_0001011111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 2), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111111100 t_00010111111101
+theorem t_0001011111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(54, 1), (84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 221 t_00010111111110 t_00010111111111
+theorem t_000100000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000000000 t_0001000000001
+theorem t_000100000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000000010 t_0001000000011
+theorem t_000100000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000000100 t_0001000000101
+theorem t_000100000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000000110 t_0001000000111
+theorem t_000100000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000001000 t_0001000001001
+theorem t_000100000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000001010 t_0001000001011
+theorem t_000100000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000001100 t_0001000001101
+theorem t_000100000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000001110 t_0001000001111
+theorem t_000100001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000010000 t_0001000010001
+theorem t_000100001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000010010 t_0001000010011
+theorem t_000100001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000010100 t_0001000010101
+theorem t_000100001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000010110 t_0001000010111
+theorem t_000100001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000011000 t_0001000011001
+theorem t_000100001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000011010 t_0001000011011
+theorem t_000100001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000011100 t_0001000011101
+theorem t_000100001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000011110 t_0001000011111
+theorem t_000100010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000100000 t_0001000100001
+theorem t_000100010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000100010 t_0001000100011
+theorem t_000100010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000100100 t_0001000100101
+theorem t_000100010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000100110 t_0001000100111
+theorem t_000100010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000101000 t_0001000101001
+theorem t_000100010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000101010 t_0001000101011
+theorem t_000100010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000101100 t_0001000101101
+theorem t_000100010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000101110 t_0001000101111
+theorem t_000100011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000110000 t_0001000110001
+theorem t_000100011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000110010 t_0001000110011
+theorem t_000100011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000110100 t_0001000110101
+theorem t_000100011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000110110 t_0001000110111
+theorem t_000100011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000111000 t_0001000111001
+theorem t_000100011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000111010 t_0001000111011
+theorem t_000100011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000111100 t_0001000111101
+theorem t_000100011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001000111110 t_0001000111111
+theorem t_000100100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(214, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001000000 t_0001001000001
+theorem t_000100100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(214, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001000010 t_0001001000011
+theorem t_000100100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001000100 t_0001001000101
+theorem t_000100100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001000110 t_0001001000111
+theorem t_000100100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001001000 t_0001001001001
+theorem t_000100100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001001010 t_0001001001011
+theorem t_000100100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001001100 t_0001001001101
+theorem t_000100100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001001110 t_0001001001111
+theorem t_000100101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001010000 t_0001001010001
+theorem t_000100101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001010010 t_0001001010011
+theorem t_000100101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001010100 t_0001001010101
+theorem t_000100101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001010110 t_0001001010111
+theorem t_000100101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001011000 t_0001001011001
+theorem t_000100101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001011010 t_0001001011011
+theorem t_000100101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001011100 t_0001001011101
+theorem t_000100101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001011110 t_0001001011111
+theorem t_000100110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001100000 t_0001001100001
+theorem t_000100110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001100010 t_0001001100011
+theorem t_000100110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001100100 t_0001001100101
+theorem t_000100110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001100110 t_0001001100111
+theorem t_000100110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001101000 t_0001001101001
+theorem t_000100110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001101010 t_0001001101011
+theorem t_000100110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001101100 t_0001001101101
+theorem t_000100110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001101110 t_0001001101111
+theorem t_000100111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001110000 t_0001001110001
+theorem t_000100111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001110010 t_0001001110011
+theorem t_000100111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001110100 t_0001001110101
+theorem t_000100111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001110110 t_0001001110111
+theorem t_000100111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001111000 t_0001001111001
+theorem t_000100111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001111010 t_0001001111011
+theorem t_000100111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001111100 t_0001001111101
+theorem t_000100111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001001111110 t_0001001111111
+theorem t_000101000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010000000 t_0001010000001
+theorem t_000101000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010000010 t_0001010000011
+theorem t_000101000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010000100 t_0001010000101
+theorem t_000101000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010000110 t_0001010000111
+theorem t_000101000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010001000 t_0001010001001
+theorem t_000101000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010001010 t_0001010001011
+theorem t_000101000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010001100 t_0001010001101
+theorem t_000101000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010001110 t_0001010001111
+theorem t_000101001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010010000 t_0001010010001
+theorem t_000101001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010010010 t_0001010010011
+theorem t_000101001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010010100 t_0001010010101
+theorem t_000101001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010010110 t_0001010010111
+theorem t_000101001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010011000 t_0001010011001
+theorem t_000101001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010011010 t_0001010011011
+theorem t_000101001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010011100 t_0001010011101
+theorem t_000101001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010011110 t_0001010011111
+theorem t_000101010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010100000 t_0001010100001
+theorem t_000101010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010100010 t_0001010100011
+theorem t_000101010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010100100 t_0001010100101
+theorem t_000101010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010100110 t_0001010100111
+theorem t_000101010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010101000 t_0001010101001
+theorem t_000101010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010101010 t_0001010101011
+theorem t_000101010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010101100 t_0001010101101
+theorem t_000101010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010101110 t_0001010101111
+theorem t_000101011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010110000 t_0001010110001
+theorem t_000101011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010110010 t_0001010110011
+theorem t_000101011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010110100 t_0001010110101
+theorem t_000101011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010110110 t_0001010110111
+theorem t_000101011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010111000 t_0001010111001
+theorem t_000101011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010111010 t_0001010111011
+theorem t_000101011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010111100 t_0001010111101
+theorem t_000101011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001010111110 t_0001010111111
+theorem t_000101100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011000000 t_0001011000001
+theorem t_000101100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011000010 t_0001011000011
+theorem t_000101100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011000100 t_0001011000101
+theorem t_000101100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011000110 t_0001011000111
+theorem t_000101100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(214, 2), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011001000 t_0001011001001
+theorem t_000101100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(214, 1), (95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011001010 t_0001011001011
+theorem t_000101100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011001100 t_0001011001101
+theorem t_000101100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011001110 t_0001011001111
+theorem t_000101101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011010000 t_0001011010001
+theorem t_000101101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011010010 t_0001011010011
+theorem t_000101101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011010100 t_0001011010101
+theorem t_000101101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011010110 t_0001011010111
+theorem t_000101101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011011000 t_0001011011001
+theorem t_000101101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011011010 t_0001011011011
+theorem t_000101101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011011100 t_0001011011101
+theorem t_000101101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011011110 t_0001011011111
+theorem t_000101110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011100000 t_0001011100001
+theorem t_000101110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011100010 t_0001011100011
+theorem t_000101110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(214, 2), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011100100 t_0001011100101
+theorem t_000101110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(214, 1), (95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011100110 t_0001011100111
+theorem t_000101110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(214, 2), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011101000 t_0001011101001
+theorem t_000101110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(214, 1), (95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011101010 t_0001011101011
+theorem t_000101110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011101100 t_0001011101101
+theorem t_000101110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011101110 t_0001011101111
+theorem t_000101111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011110000 t_0001011110001
+theorem t_000101111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011110010 t_0001011110011
+theorem t_000101111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011110100 t_0001011110101
+theorem t_000101111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011110110 t_0001011110111
+theorem t_000101111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011111000 t_0001011111001
+theorem t_000101111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011111010 t_0001011111011
+theorem t_000101111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 2), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011111100 t_0001011111101
+theorem t_000101111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(84, 1), (95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 54 t_0001011111110 t_0001011111111
+theorem t_00010000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100000000 t_000100000001
+theorem t_00010000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100000010 t_000100000011
+theorem t_00010000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100000100 t_000100000101
+theorem t_00010000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100000110 t_000100000111
+theorem t_00010000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100001000 t_000100001001
+theorem t_00010000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100001010 t_000100001011
+theorem t_00010000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100001100 t_000100001101
+theorem t_00010000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100001110 t_000100001111
+theorem t_00010001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100010000 t_000100010001
+theorem t_00010001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100010010 t_000100010011
+theorem t_00010001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100010100 t_000100010101
+theorem t_00010001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100010110 t_000100010111
+theorem t_00010001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100011000 t_000100011001
+theorem t_00010001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100011010 t_000100011011
+theorem t_00010001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100011100 t_000100011101
+theorem t_00010001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100011110 t_000100011111
+theorem t_00010010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 214 t_000100100000 t_000100100001
+theorem t_00010010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100100010 t_000100100011
+theorem t_00010010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100100100 t_000100100101
+theorem t_00010010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100100110 t_000100100111
+theorem t_00010010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100101000 t_000100101001
+theorem t_00010010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100101010 t_000100101011
+theorem t_00010010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100101100 t_000100101101
+theorem t_00010010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100101110 t_000100101111
+theorem t_00010011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100110000 t_000100110001
+theorem t_00010011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100110010 t_000100110011
+theorem t_00010011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100110100 t_000100110101
+theorem t_00010011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100110110 t_000100110111
+theorem t_00010011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100111000 t_000100111001
+theorem t_00010011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100111010 t_000100111011
+theorem t_00010011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100111100 t_000100111101
+theorem t_00010011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000100111110 t_000100111111
+theorem t_00010100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101000000 t_000101000001
+theorem t_00010100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101000010 t_000101000011
+theorem t_00010100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101000100 t_000101000101
+theorem t_00010100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101000110 t_000101000111
+theorem t_00010100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101001000 t_000101001001
+theorem t_00010100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101001010 t_000101001011
+theorem t_00010100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101001100 t_000101001101
+theorem t_00010100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101001110 t_000101001111
+theorem t_00010101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101010000 t_000101010001
+theorem t_00010101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101010010 t_000101010011
+theorem t_00010101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(168, 2), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101010100 t_000101010101
+theorem t_00010101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(168, 1), (62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101010110 t_000101010111
+theorem t_00010101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101011000 t_000101011001
+theorem t_00010101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101011010 t_000101011011
+theorem t_00010101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101011100 t_000101011101
+theorem t_00010101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101011110 t_000101011111
+theorem t_00010110000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101100000 t_000101100001
+theorem t_00010110001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101100010 t_000101100011
+theorem t_00010110010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 214 t_000101100100 t_000101100101
+theorem t_00010110011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101100110 t_000101100111
+theorem t_00010110100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101101000 t_000101101001
+theorem t_00010110101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101101010 t_000101101011
+theorem t_00010110110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101101100 t_000101101101
+theorem t_00010110111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101101110 t_000101101111
+theorem t_00010111000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101110000 t_000101110001
+theorem t_00010111001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 214 t_000101110010 t_000101110011
+theorem t_00010111010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 214 t_000101110100 t_000101110101
+theorem t_00010111011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101110110 t_000101110111
+theorem t_00010111100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101111000 t_000101111001
+theorem t_00010111101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101111010 t_000101111011
+theorem t_00010111110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 2), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101111100 t_000101111101
+theorem t_00010111111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(95, 1), (62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 84 t_000101111110 t_000101111111
+theorem t_0001000000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010000000 t_00010000001
+theorem t_0001000001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010000010 t_00010000011
+theorem t_0001000010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010000100 t_00010000101
+theorem t_0001000011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010000110 t_00010000111
+theorem t_0001000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010001000 t_00010001001
+theorem t_0001000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010001010 t_00010001011
+theorem t_0001000110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010001100 t_00010001101
+theorem t_0001000111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010001110 t_00010001111
+theorem t_0001001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010010000 t_00010010001
+theorem t_0001001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010010010 t_00010010011
+theorem t_0001001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010010100 t_00010010101
+theorem t_0001001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010010110 t_00010010111
+theorem t_0001001100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010011000 t_00010011001
+theorem t_0001001101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010011010 t_00010011011
+theorem t_0001001110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010011100 t_00010011101
+theorem t_0001001111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010011110 t_00010011111
+theorem t_0001010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010100000 t_00010100001
+theorem t_0001010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010100010 t_00010100011
+theorem t_0001010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010100100 t_00010100101
+theorem t_0001010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010100110 t_00010100111
+theorem t_0001010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010101000 t_00010101001
+theorem t_0001010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 168 t_00010101010 t_00010101011
+theorem t_0001010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010101100 t_00010101101
+theorem t_0001010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010101110 t_00010101111
+theorem t_0001011000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010110000 t_00010110001
+theorem t_0001011001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010110010 t_00010110011
+theorem t_0001011010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010110100 t_00010110101
+theorem t_0001011011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010110110 t_00010110111
+theorem t_0001011100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010111000 t_00010111001
+theorem t_0001011101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010111010 t_00010111011
+theorem t_0001011110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 2), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010111100 t_00010111101
+theorem t_0001011111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(62, 1), (43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 95 t_00010111110 t_00010111111
+theorem t_000100000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 2), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001000000 t_0001000001
+theorem t_000100001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 1), (77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001000010 t_0001000011
+theorem t_000100010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 2), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001000100 t_0001000101
+theorem t_000100011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 1), (77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001000110 t_0001000111
+theorem t_000100100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 2), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001001000 t_0001001001
+theorem t_000100101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 1), (77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001001010 t_0001001011
+theorem t_000100110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 2), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001001100 t_0001001101
+theorem t_000100111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 1), (77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001001110 t_0001001111
+theorem t_000101000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 2), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001010000 t_0001010001
+theorem t_000101001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 1), (77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001010010 t_0001010011
+theorem t_000101010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 2), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001010100 t_0001010101
+theorem t_000101011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 1), (77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001010110 t_0001010111
+theorem t_000101100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 2), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001011000 t_0001011001
+theorem t_000101101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 1), (77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001011010 t_0001011011
+theorem t_000101110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 2), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001011100 t_0001011101
+theorem t_000101111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(43, 1), (77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 62 t_0001011110 t_0001011111
+theorem t_00010000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(77, 2), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 43 t_000100000 t_000100001
+theorem t_00010001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(77, 1), (232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 43 t_000100010 t_000100011
+theorem t_00010010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(77, 2), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 43 t_000100100 t_000100101
+theorem t_00010011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(77, 1), (232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 43 t_000100110 t_000100111
+theorem t_00010100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(77, 2), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 43 t_000101000 t_000101001
+theorem t_00010101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(77, 1), (232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 43 t_000101010 t_000101011
+theorem t_00010110 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(77, 2), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 43 t_000101100 t_000101101
+theorem t_00010111 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(77, 1), (232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 43 t_000101110 t_000101111
+theorem t_0001000 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(232, 2), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 77 t_00010000 t_00010001
+theorem t_0001001 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(232, 1), (152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 77 t_00010010 t_00010011
+theorem t_0001010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(232, 2), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 77 t_00010100 t_00010101
+theorem t_0001011 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(232, 1), (152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 77 t_00010110 t_00010111
+theorem t_000100 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(152, 2), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 232 t_0001000 t_0001001
+theorem t_000101 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(152, 1), (169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 232 t_0001010 t_0001011
+theorem t_00010 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes :=
+  split_pm fcatZZs16 3133 252 69 (zerosF 252) [(169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)] 152 t_000100 t_000101
+theorem root : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcatZZs16 3133 252 69 (pmask (zerosF 252) [(169, 2), (102, 1), (25, 2), (233, 2), (122, 2), (0, 2)]) holes := t_00010
+#print axioms root
+end E302ZZ.S_00010

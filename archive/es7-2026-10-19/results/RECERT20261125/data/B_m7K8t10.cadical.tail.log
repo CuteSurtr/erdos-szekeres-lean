@@ -1,0 +1,25 @@
+c otfs:                       2788         0.41 %  of conflict
+c propagations:         2579838387         4.80 M  per second
+c reduced:                  472039        68.69 %  per conflict
+c rephased:                     36     19089.53    interval
+c restarts:                  22853        30.07    interval
+c stabilizing:                   5        50.37 %  of conflicts
+c substituted:                  14         0.02 %  of all variables
+c subsumed:                 295359         3.07 %  of all clauses
+c strengthened:              96132         1.00 %  of all clauses
+c ternary:                   87899         0.22 %  of resolved
+c vivified:                  27270         0.28 %  of all clauses
+c walked:                       11     62474.82    interval
+c weakened:                 678014         3.56    average size
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:       537.63    seconds
+c total real time since initialization:          538.01    seconds
+c maximum resident set size of process:          532.46    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

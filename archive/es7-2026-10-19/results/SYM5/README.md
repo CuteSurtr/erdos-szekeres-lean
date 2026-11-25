@@ -1,5 +1,9 @@
 # SYM5: 5-fold symmetric sets of 35 or more points contain a convex 7-gon
 
+> **Linux re-certification (25 Nov 2026): CERTIFIED.** The formula of this record was regenerated from the generator
+> here (hash equal to the record), solved with CaDiCaL 2.1.3 and accepted by cake_lpr c14ff498 (`s VERIFIED UNSAT`),
+> proof kept: [RECERT20261125](../RECERT20261125/README.md). The Mac verdicts below remain as earlier evidence.
+
 One local machine (Apple M5 Pro), 2026-10-29: solver runs at about 00:20 to 00:30 UTC, proof checks at about 02:05 to
 02:20 UTC. README revised 1 November 2026 (UTC). Paths are relative to `cloud/es7-2026-10-19/results`.
 

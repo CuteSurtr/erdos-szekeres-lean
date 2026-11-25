@@ -1,5 +1,9 @@
 # C7UPPER: the largest 7-fold symmetric octagon-free set has exactly 64 points
 
+> **Linux re-certification (25 Nov 2026): CERTIFIED.** The formula of this record was regenerated from the generator
+> here (hash equal to the record), solved with CaDiCaL 2.1.3 and accepted by cake_lpr c14ff498 (`s VERIFIED UNSAT`),
+> proof kept: [RECERT20261125](../RECERT20261125/README.md). The Mac verdicts below remain as earlier evidence.
+
 2–3 November 2026 (UTC). Computer-assisted.
 
 **Statement.** Every configuration of 10 nested regular heptagons about a common centre, in general position (the

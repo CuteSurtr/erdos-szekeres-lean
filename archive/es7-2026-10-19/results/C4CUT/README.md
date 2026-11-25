@@ -1,5 +1,9 @@
 # C4CUT: a certificate for the fourfold 32-point exclusion
 
+> **Linux re-certification (25 Nov 2026): CERTIFIED.** The formula of this record was regenerated from the generator
+> here (hash equal to the record), solved with CaDiCaL 2.1.3 and accepted by cake_lpr c14ff498 (`s VERIFIED UNSAT`),
+> proof kept: [RECERT20261125](../RECERT20261125/README.md). The Mac verdicts below remain as earlier evidence.
+
 Local runs on an Apple M5 Pro, 1 November 2026 (UTC). README revised 1 November 2026 (UTC).
 
 **Statement.** Every set of 32 points in general position with a fourfold rotational symmetry contains a convex 7-gon.

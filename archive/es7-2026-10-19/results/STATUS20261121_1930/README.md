@@ -215,6 +215,30 @@ finished. None of the workers' claims below reached the verifier stage: they are
 
 ## 6. Resume
 
+### 25 Nov evening (to ~21:15): FV302 accepted, s35_20 Root aborted, C4/C5/D2 re-certified
+
+- **FV302 ACCEPTED ~20:40** (pre-registered items 1-4; formalize-20261122/fv302-audit, tools/fv2a.py; mirror
+  FORMAL20261122/fv302): Root 17:15-18:13, Final 18:13-19:22, `E302ZZ.Final.excludes_69 : ExcludesHoleBudgetZZsN 16 69`
+  and `forces_302_of_n54_res : N66Bound 54 → ResidualBound 118 → ForcesConvexNGon 302 8`, standard axioms. **The
+  budget-69 tree is Lean-checked.** Checked by the session's own tool only (no independent review); deviations in
+  fv302/PLAN.md (pilot modules without run.tsv rows, the fv2a symlink bug fixed after a first NOT ACCEPTED).
+- **s35_20 Root join failed twice** (lean_rc 134, "Stack overflow detected"; 21,495 imports and 23,485 joins in one
+  file; memory.high throttling; tries exhausted, driver ended). Next: sub-roots as a pure partition (res-slices README,
+  deviation of 25 Nov). PART3 gates 2-3 wait for it; PART3's memory rule was corrected (dated) before any compile.
+- **Re-certified on Linux (RECERT20261125):** C5 `c4_n32L_cuts`, C4 `c5_n35L`, D2 `B_m7K8t10` (CaDiCaL 2.1.3, cake_lpr
+  c14ff498, proofs kept); RESULTS rows C4, C5, D2 raised back to CERTIFIED; D2 Lean-checked modulo that verdict and E1,
+  E3-E6 (sevenfold record updated).
+- **E3 on every text:** cake_lpr's parse = the Lean printers' texts for all 2,759 verdict texts of the end theorem
+  (`~/research/data/e3-20261125/e3all.json`).
+- **Deletion now follows fv2a, not part 3** (advisor): FV302's 32,953 chunk sources (78.06 GiB; receipts
+  `FORMAL20261122/fv302/receipts/fv302_chunk_sources_20261125.tsv`) go by `verify-20261124/delete_proofs.py` after this
+  push and a clean dry run; `export/ctx` and the join sources stay.
+- **C2 upload from the Mac** (owner 21:00): private archive branch `research/c2-certificates` + release
+  `c2-p8-1-9-2026-11-25`: the half-turn (central34) proof P8_1-9 (2,398,761,295 B, sha256 `ef13b40d…` = the Mac
+  inventory) and replay tools; being downloaded and checked here with cake_lpr.
+- **Paper:** `~/research/data/paper302-20261125/paper/main.pdf`, 74 pages, compiles; 66 TODOs. Owner: no more agents
+  after the paper workflow; all further work solo.
+
 ### 25 Nov from 15:15 (owner: "keep cleaning ... 1.8 tb"; "formalize everything first"; scope "302 + SAT results' encoders"; paper written here; adversarial checks of theorems and citations; "upload them to my github repo")
 
 - **Disk:** 1,061 GB free. `df -h` shows 1.8T as the disk size, so 1.8 TB free is out of reach. Tiers: about
