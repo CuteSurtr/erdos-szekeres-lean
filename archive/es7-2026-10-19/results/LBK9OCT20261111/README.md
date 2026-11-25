@@ -1,5 +1,20 @@
 # LBK9OCT20261111: an 8-fold set of 128 points without a convex 9-gon? (11–12 November 2026)
 
+> **Floating-point steps re-checked (25 Nov 2026, main session; files in `recheck-20261125/`).**
+> (a) The threshold-order step: `recheck.py` imports `tools/thr_rules2.py` and `tools/cell_thr.py` unchanged and
+> replaces only their `verify` (the sign of Delta on an open phase interval) by outward-rounded interval arithmetic
+> (mpmath iv, 120 bits; the same Taylor bound, the same exact endpoint algebra in Q(zeta_2N)), then runs them as
+> `tools/build_base.sh` does. Both outputs are **byte-identical** to the certified files: `thr2_m8t16.clauses`
+> 8,550 clauses (sha256 `175a1508…`, 40,500 pairs tested) and `cellthrB2_m8t16.clauses` 29,700 clauses
+> (`512d23ce…`, 131,520 tested). So every one of the 38,250 clauses has its sign premise proved with rigorous bounds;
+> none depended on double rounding. (b) Encoder A's binary64 angular classification at m = 8 (`gen.py` patterns and
+> `angle_config`, eps 1e-9): `encA_float_m.py` (written by a read-only audit agent on 25 Nov, re-run by the main
+> session) compares the 96 float directions with the exact ones (pi enclosed by 50-digit rationals): every reduction
+> `% (2*math.pi)` is a no-op, the largest error is 6.737e-16, and exact directions differ from 0 and pi by at least
+> pi/16, so the float classification equals the exact one (the rounding argument of `WRITEUP/note/k8_soundness.tex`
+> for m = 6 and 7, now computed for m = 8; m = 6 and 7 reproduce the note's maxima). Label of D11 unchanged otherwise:
+> recorded cube verdicts on written soundness arguments, not refereed.
+
 > **Retention update (23 Nov 2026, owner OK):** the base CNFs of the stopped, unanswered runs S1-S6, S9, S10, S12 and
 > S15 (10 files under sat/) were deleted; they certify nothing and regenerate with tools/gen.py and the families of
 > section 2. The certificate inputs (S8, the 16 cubes, Theorems 3-4) and the G3 family (S11, cubes11) are kept.
