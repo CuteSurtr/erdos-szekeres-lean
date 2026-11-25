@@ -46,8 +46,8 @@ Unreviewed and non-journal claims I am aware of:
   unquantified o(1) terms, so these are not proved finite values; the 14 Oct survey reaches the
   same conclusion.
 - Schroeder, Zenodo record 22842891 (19 Sept 2026, per the 14 Oct survey): ES(7) ≤ 81 and
-  ES(8) ≤ 319 with a Lean development that uses `native_decide`. I could not reach Zenodo and
-  the search engine did not index the record, so I have not read it myself in this session.
+  ES(8) ≤ 319 with a Lean development that uses `native_decide`. (Corrected 25 Nov: the record page and the PDF were
+  read on 6 Nov, §6 below; the earlier note that Zenodo was unreachable is out of date.)
 - This repository, branch main (commit c019a54): ES(8) ≤ 311, kernel-checked in Lean.
 
 No paper from 2024 to 2026 that settles ES(7), or gives a peer-reviewed bound below 113 / 408,
@@ -103,9 +103,9 @@ bound.
   symmetric extremal constructions exist for all k ≥ 7. According to the 14 Oct survey it lists
   two-fold symmetry as future work. The abstract does not mention reflection symmetry, and I did
   not find any reflection or dihedral case in the snippets.
-- **Morris–Soltan 2000** (Bull. AMS 37, 437–458): survey. It records symmetric or almost
-  symmetric extremal constructions for variants of the problem (for example minimizing convex
-  pentagons), and the Lovász form of the 2^{n−2} construction. Its p. 443 also states the
+- **Morris–Soltan 2000** (Bull. AMS 37, 437–458): survey. (Corrected 25 Nov: the survey does not mention symmetry; an earlier version of
+  this line said it records symmetric constructions, which C2FINAL/README.md already retracted.) It gives the Lovász
+  form of the 2^{n−2} construction. Its p. 443 also states the
   Erdős–Tuza–Valtr inequality, in a form that is false as printed: "m(n,k,l) ≤
   Σ_{i=n−l}^{k−2} C(k−2, i)", where m(n,k,l) is the least number such that every set of that
   many points in general position contains n points in convex position, a k-cup or an l-cap.
@@ -153,8 +153,7 @@ a convex hexagon (Subercaseaux et al. 2025), which is a different (n, k).
 **(c) ES(8) ≤ 311.** The best peer-reviewed upper bound we found is Mojarrad–Vlachos 2016,
 ES(n) ≤ C(2n−5, n−2) − C(2n−8, n−3) + 2 for n ≥ 6, which gives ES(8) ≤ 408 (our arithmetic). The
 best earlier public bound we know of is Schroeder's unreviewed Zenodo record, ES(8) ≤ 319
-(September 2026; reported from the 14 Oct survey, not re-read here because Zenodo was
-unreachable). The value 324 in Koshelev–Koshka's 2026 table is attributed to Norin–Yuditsky,
+(19 September 2026, Zenodo preprint version 1, doi:10.5281/zenodo.22842891; read on 6 Nov, §6). The value 324 in Koshelev–Koshka's 2026 table is attributed to Norin–Yuditsky,
 whose result is only asymptotic, so it should not be cited as a proved bound. We did not find
 prior work stating ES(8) ≤ 311 or any bound below 319. The lower bound ES(8) ≥ 65 is the
 classical Erdős–Szekeres construction.
