@@ -11,8 +11,8 @@ No bound and no research label changes before §6 holds and the advisor has been
 2. **s35_20 accepted** by the res-slices-fv §9 finish recipe with tag 3520: `RS.s35_20` and `RS.residual_bound_118_fv`
    print [propext, Classical.choice, Quot.sound] with `lean_rc=0`; `audit.py 3520` reports `"problems": []` apart
    from split axiom lines, which `axlines.py 3520 --reprint` settles (`"n_problems": 0`); every unit manifest has
-   `min_margin` 1 and `lean_test_failures` 0; the leaf sum is **119,054,034** (the pre-registered tree: 238,116,145
-   nodes, REMAINS.md H-S3520); the six-slice specialisation is snapshotted in `data/spec-snapshots/`.
+   `min_margin` 1 and `lean_test_failures` 0; the leaf sum is **119,054,033** (corrected 25 Nov 16:35, see §7: the tree's 119,054,034 leaves minus the
+   pending "state 0 missing" leaf that Lean discharges; s3520-gate README §2 and LAUNCH_PLAN l.165-166); the six-slice specialisation is snapshotted in `data/spec-snapshots/`.
 3. Both drivers (`esr-fv2-drv`, `esr-fvr-drv`) have exited; no YIELD file; Tctl < 86 C; `cpu_free.sh esr` >= 1.
 
 ## 2. Source and statement
@@ -63,3 +63,10 @@ the whole path must report no module file with two providers.
    (629) and H-ROWS (2,025), trust items E1-E6 (E3 tested, not proved)**. Stated in REMAINS.md and the records only
    after the advisor consult. Known limits to state with it: the 105 N66 cube proofs were deleted on 24 Nov (two
    recorded acceptances; a re-run needs a re-solve); no external review.
+
+## 7. Corrections (dated; the original text is in git, commit 7311d7e66)
+
+- 25 Nov 2026 16:35 KST, before either driver ended: gate 2 first said the leaf sum is 119,054,034, the tree's
+  leaf count (238,116,145 nodes). The Lean-side sum pre-registered for s35_20 is 119,054,033 = 119,054,034 minus
+  the "state 0 missing" leaf (`zero_mem_residualOccupied`), as for s35_19 (7,763,207 tree leaves, Lean sum
+  7,763,206). Found by the advisor consult; no result was known when it was corrected.
