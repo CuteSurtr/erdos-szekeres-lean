@@ -1,0 +1,32 @@
+== 1. vendored modules
+VENDOR.sha256 OK
+vendored files equal the repository files: 11 checked
+== 2. shared modules equal LEANLB20261111
+lakefile.toml: only the comment line differs
+23 shared files identical
+== 3. data files
+OK   LeanLB/Data/C3N31.lean <- SYMMAX/c3_31points.txt (31 rows, sha256 f02201938dc5a52b85fc5854abf7dabc7a4a92e56eafcbd8f4dfcabbff7b6d01)
+OK   LeanLB/Data/C6N30.lean <- SYMMAX/c6_30points.txt (30 rows, sha256 40745fe61e5bd7a80d2fb0bd89fcaac98ad6b9ab4c945a2ee7a6c51b1fb76700)
+OK   LeanLB/Data/C4N28.lean <- SYMMAX/c4_28points.txt (28 rows, sha256 86d4e0bf800197f224f942b6648fedece339a3e835ee7ddcc7acd1252bf5288d)
+OK   LeanLB/Data/C2N32.lean <- SYM2/sym7_32points.txt (32 rows, sha256 7246a30aa9669c9cae70328209c2020ae6487e6662af1cad9fe98a858ef6e074)
+OK   LeanLB/Data/MirN32.lean <- SYMMAX/mirror_32points.txt (32 rows, sha256 255e2390694b7fbbd29556ee41a96454221d5f60bcb8da9249a822ef1c69f217)
+OK   LeanLB/Data/C5N31.lean <- SYMMAX/c5_31points.txt (31 rows, sha256 4f1e2e6351a76f3844e1810ef669bf57d8dbfabb3aaa350dbecfc0ea7d9e3af8)
+OK   SYMMAX/c3_31points.txt tracked, unmodified (last change 8621eb159 2026-11-14)
+OK   SYMMAX/c6_30points.txt tracked, unmodified (last change 8621eb159 2026-11-14)
+OK   SYMMAX/c4_28points.txt tracked, unmodified (last change 8621eb159 2026-11-14)
+OK   SYM2/sym7_32points.txt tracked, unmodified (last change 8621eb159 2026-11-14)
+OK   SYMMAX/mirror_32points.txt tracked, unmodified (last change 8621eb159 2026-11-14)
+OK   SYMMAX/c5_31points.txt tracked, unmodified (last change 8621eb159 2026-11-14)
+== 4. forbidden tokens
+scanned 48 files: OK
+== 5. axiom audit and controls
+OK   LeanLB.threefold31
+OK   LeanLB.sixfold30
+OK   LeanLB.fourfold28
+OK   LeanLB.halfturn32
+OK   LeanLB.mirror32
+OK   LeanLB.fivefold31
+OK   LeanLB.not_forcesConvexNGon_32_7
+OK   LeanLB.heptagon_lower_bound
+OK   tests/Reject7.lean: 4 of 4 controls rejected
+AUDIT PASS

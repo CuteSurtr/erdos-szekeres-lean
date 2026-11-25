@@ -1,0 +1,29 @@
+✔ [1947/1956] Built LeanLB.Data.C3N31 (203ms)
+✔ [1948/1956] Built LeanLB.Data.C6N30 (293ms)
+✔ [1949/1956] Built LeanLB.Data.C4N28 (185ms)
+✔ [1951/2044] Built LeanLB.Data.C2N32 (280ms)
+✔ [1952/2044] Built LeanLB.Data.MirN32 (194ms)
+⚠ [2024/2044] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2032/2044] Built LeanLB.Data.C5N31 (275ms)
+✔ [2033/2044] Built LeanLB.Check.C2N32 (11s)
+✔ [2034/2044] Built LeanLB.Check.MirN32 (13s)
+✔ [2035/2044] Built LeanLB.Check.C4N28 (6.8s)
+✔ [2036/2044] Built LeanLB.Check.C6N30 (7.3s)
+✔ [2037/2044] Built LeanLB.Check.C3N31 (10s)
+✔ [2038/2044] Built LeanLB.Check.C5N31 (9.7s)
+✔ [2039/2044] Built LeanLB.Statement7 (1.1s)
+✔ [2040/2044] Built LeanLB.Check.Rows7 (1.2s)
+✔ [2041/2044] Built LeanLB.Main7 (1.3s)
+ℹ [2042/2044] Built LeanLB.Audit7 (9.9s)
+info: LeanLB/Audit7.lean:41:0: 'LeanLB.threefold31' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:42:0: 'LeanLB.sixfold30' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:43:0: 'LeanLB.fourfold28' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:44:0: 'LeanLB.halfturn32' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:45:0: 'LeanLB.mirror32' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:46:0: 'LeanLB.fivefold31' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2043/2044] Built LeanLB (1.0s)
+Build completed successfully (2044 jobs).
+wall 43.94 s, peak RSS 3596644 KB, exit 0

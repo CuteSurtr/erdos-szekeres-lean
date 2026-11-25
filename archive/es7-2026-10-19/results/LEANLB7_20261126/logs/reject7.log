@@ -1,0 +1,16 @@
+tests/Reject7.lean:13:43: error: Tactic `decide` proved that the proposition
+  checkAll 4 c2N32Nat = true
+is false
+tests/Reject7.lean:16:69: error: Tactic `decide` proved that the proposition
+  gpOK ((0, 0) :: (1, 1) :: (2, 2) :: c2N32Nat) = true
+is false
+tests/Reject7.lean:20:81: error: Tactic `decide` proved that the proposition
+  (List.map (fun p => (p.1, p.2.1 + 2, p.2.2)) (List.take 1 c5N31L)).all
+      (G.certOK G.lo5 G.D5 c5N31Sc c5N31Shift.1 c5N31Shift.2 c5N31Mx) =
+    true
+is false
+tests/Reject7.lean:24:2: error: Tactic `decide` proved that the proposition
+  G.checkAll (G.opA (8 * c5N31Mx + 8)) (G.abA 1 (2 + 2 * 1)) 4 c5N31L = true
+is false
+Command exited with non-zero status 1
+wall 2.30 s, peak RSS 2382560 KB, exit 1

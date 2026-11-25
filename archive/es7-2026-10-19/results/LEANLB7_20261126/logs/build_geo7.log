@@ -1,0 +1,33 @@
+✔ [1936/1942] Built LeanLB.Checker (279ms)
+✔ [1937/1943] Built LeanLB.Data.C6N60 (302ms)
+✔ [1939/1943] Built LeanLB.Data.C4N52 (345ms)
+✔ [1940/1944] Built LeanLB.Data.C2N64 (445ms)
+✔ [1941/1945] Built LeanLB.Data.MirN46 (237ms)
+✔ [1942/1947] Built ErdosSzekeres.Definitions (1.9s)
+✔ [1943/1947] Built LeanLB.Data.C3N61 (512ms)
+✔ [1944/1949] Built LeanLB.Data.C5N56 (1.2s)
+✔ [1945/1949] Built LeanLB.Data.C7N64 (2.7s)
+✔ [1946/1949] Built LeanLB.CheckerSound (1.9s)
+✔ [1947/1951] Built ErdosSzekeres.Basic (1.1s)
+✔ [1949/2026] Built LeanLB.Statement (1.5s)
+✔ [2011/2026] Built LeanLB.G.Checker (206ms)
+✔ [2012/2026] Built ErdosSzekeres.Orientation (850ms)
+✔ [2013/2026] Built ErdosSzekeres.OrientationGeometry (1.2s)
+✔ [2014/2026] Built ErdosSzekeres.Suk.TriangleOrder (2.3s)
+✔ [2015/2026] Built ErdosSzekeres.Suk.BaseChart (1.9s)
+✔ [2016/2026] Built ErdosSzekeres.Suk.BaseOrder (1.3s)
+✔ [2017/2026] Built ErdosSzekeres.Suk.SupportingLines (2.5s)
+✔ [2018/2026] Built ErdosSzekeres.Suk.TriangleMembership (2.5s)
+✔ [2019/2026] Built LeanLB.Bridge (1.8s)
+✔ [2020/2026] Built LeanLB.G.Sound (3.1s)
+⚠ [2021/2026] Built LeanLB.Geometry (4.2s)
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2022/2026] Built LeanLB.G.Bridge (2.2s)
+✔ [2023/2026] Built LeanLB.G.Cyclo (1.9s)
+✔ [2024/2026] Built LeanLB.G.Approx (4.5s)
+✔ [2025/2026] Built LeanLB.G.Five (2.8s)
+✔ [2026/2026] Built LeanLB.Geometry7 (2.0s)
+Build completed successfully (2026 jobs).
+wall 37.60 s, peak RSS 2374500 KB, exit 0
