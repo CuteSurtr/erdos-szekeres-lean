@@ -253,6 +253,12 @@ finished. None of the workers' claims below reached the verifier stage: they are
 - **21:41 s35_20 Root compiled** (the 30-sub-root form; lean_rc 0, `'RS3520.root' depends on axioms: [propext,
   Classical.choice, Quot.sound]`, 1:06:11, anon peak 2.6 GB sampled); the flat form's stack overflow did not recur.
   Driver restarted 21:42 (FVR_JOBS 1, JOINMEM 30000): `RS/Final3520`, then the six-slice spec `Res118FV`.
+- **26 Nov 01:14 s35_20 ACCEPTED** (finish recipe: audit with only profiler-split axiom lines, settled by the 671-line
+  reprint; axlines 23,485/23,485; leaf sum 119,054,033): all six slices Lean-checked; spec `RS.residual_bound_118_fv`
+  compiled. **01:23 deleted** the slices' generated chunk sources (23,098 files, 108.1 GB; receipts 5962af2bd).
+  Part 3 (ES302Final, Bad302, Audit3, audit3) running unattended (`combined/tools/run_part3c.sh`).
+- **26 Nov 00:39 budget-70 finder** (exploratory, `bal186-20261119/zrow/b70zs54/PLAN.md`; owner: use the PC at 80 %).
+  N66 re-solve at 7-8 jobs; D1 sixfold re-solve (96 cubes) queued after it.
 - **22:56 second LRAT checker: 2,654 / 2,654 accepted** ([LEANLRAT20261125](../LEANLRAT20261125/README.md)): every
   kept proof behind H-ROWS (2,025) and H-N66R (629), by Lean core's verified `LRAT.check` on the frozen printers' texts
   (two driver bugs and one memory-guard stop on the way, all in §3 there).
