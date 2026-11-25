@@ -3,6 +3,10 @@
 > **Linux re-certification (25 Nov 2026): CERTIFIED.** The formula of this record was regenerated from the generator
 > here (hash equal to the record), solved with CaDiCaL 2.1.3 and accepted by cake_lpr c14ff498 (`s VERIFIED UNSAT`),
 > proof kept: [RECERT20261125](../RECERT20261125/README.md). The Mac verdicts below remain as earlier evidence.
+>
+> **Lean (25 Nov 2026):** the theorem (in the form "at least 32 points", and "at least 31 points" without the centre)
+> is also Lean-checked modulo one CERTIFIED verdict on a different formula, encoder B's `twin-base 5 7 7`:
+> [FORMAL20261122/fivefold](../FORMAL20261122/fivefold/README.md). The formulas of this record have no Lean encoder.
 
 One local machine (Apple M5 Pro), 2026-10-29: solver runs at about 00:20 to 00:30 UTC, proof checks at about 02:05 to
 02:20 UTC. README revised 1 November 2026 (UTC). Paths are relative to `cloud/es7-2026-10-19/results`.
