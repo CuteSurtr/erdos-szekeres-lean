@@ -57,6 +57,16 @@ to compile with two errors (`logs/bad5.out`).
   `26a5be67…`), cake_lpr `c14ff498…` (heap 4000) printed `s VERIFIED UNSAT` in 1 s (`data/certify_577.jsonl`,
   `data/encB_577.cake.out`). Proof kept: `~/research/data/c4-encb-20261125/out/encB_577.lrat.zst` (6,292,981 B,
   `05ffe60c…`, `data/files.sha256`).
+- **E2, second checker (25 Nov 21:20)**: the same LRAT proof (decompressed, SHA-256 `26a5be67…` = the
+  record) is also accepted by **Lean core's verified checker** `Std.Tactic.BVDecide.LRAT.check` (Lean 4.24.0;
+  `LRAT.check_sound : check proof cnf = true → cnf.Unsat` is proved in core): `lrat-lean/LeanLrat.lean`, run natively
+  with `lean --run` (trust: the Lean compiler and runtime, not the kernel), printed `s VERIFIED UNSAT (...)` in 2 s at
+  0.58 GB (`lrat-lean/check_577.out`). Its DIMACS parser is not verified; per file, core's printer
+  `Std.Sat.CNF.dimacs` applied to the parsed formula reproduced the input text byte for byte. Controls
+  (`lrat-lean/test/`): PHP(4,3) accepted; the satisfiable PHP(4,3) minus one clause, a final step whose hint is a
+  missing clause id, and a proof with its first lemma dropped are all rejected (`s NOT VERIFIED`); removing one
+  hint of the final step is accepted, correctly, since the remaining hints still give the conflict. So the verdict
+  rests on two independently verified checkers (CakeML/HOL4 and Lean).
 - **E3** (DIMACS semantics): cake_lpr reads the text as `parseDimacs` does. Tested, not proved: the evidence is
   ENCBLEAN's (`ENCBLEAN/logs/m9_a2_cake_parse.log`) for texts of the same printer `cnfText`; this text has one `p`
   line, no comment line, and ends with `0\n`.
