@@ -52,6 +52,8 @@ which Lean discharges (`zero_mem_occupied`).
 - **Finder:** `zrow/zbs54_finder.sh 69 16 16384` (fastbb256, 16 threads, CPUs 5-15,21-31), unit `esr-bal-zbs69`, 22 Nov
   16:25:13 to 23 Nov 02:36:16 (36,032 s): `{"event": "DONE", "contexts": 32334, "contexts_closed": 32334, ...}`. The finder only
   finds trees; the checks below are the trusted part.
+  Cost (HEURISTIC; added 25 Nov 2026 from the systemd journal, line `esr-bal-zbs69.service: Consumed 5d 22h 5min
+  48.992s CPU time over 10h 11min 3.496s wall clock time, 8G memory peak`): 142.1 CPU-h.
 - **Checks** (prepared and reviewed 22 Nov, review 6 of 6; `tools/`; 11 input pins checked at launch):
   `start302.sh` (24 Nov 01:10:58) wrote the pre-registration `data/prereg302.json` (sha256 `5400245a…`) before any check
   output existed, then started the v5n54 assembly with check_tree on every assembled file (check A; unit
