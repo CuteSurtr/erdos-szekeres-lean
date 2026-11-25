@@ -44,3 +44,5 @@ date	engine	query	useful_results
 2026-11-24	arXiv MCP (sort date)	all:"Erdos Szekeres" AND all:convex	9 results, newest 1808.00453; index misses accented titles; nothing on ES(8)
 2026-11-24	WebSearch (standard)	Erdős–Szekeres problem eight points convex position new upper bound 2026	general bounds only (Suk; Holmsen–Mojarrad–Pach–Tardos; SoCG 2025 decomposable sets); no ES(8) bound
 2026-11-24	WebSearch (extended)	"ES(8)" upper bound happy ending problem SAT	arXiv:2403.00737, 2409.03122, 2607.02958 (h(6,7)=24; already in LIT/RELATED.md); no ES(8) bound below 319 found
+2026-11-25	arXiv MCP (sort date, 2026-11-01..25)	abs:"Erdos-Szekeres" OR abs:"Erdős-Szekeres" OR abs:"Erdős–Szekeres" OR abs:"happy ending" OR abs:"convex position"	9 results; arXiv:2611.29344v1 (Hu-Shao-Shen, 22 Nov 2026): claims ES(n) <= 2^{n+O(n^{1/3})} (abstract only); nothing on ES(8)
+2026-11-25	arXiv MCP (sort date, 2026-10-15..11-25)	abs:"convex octagon" OR abs:"convex heptagon" OR abs:"cups and caps" OR abs:"Tuza" OR abs:"empty hexagon" OR ti:"Szekeres"	10 results; only 2611.29344 relevant; nothing on ES(8), N(8;6,6) or symmetric sets

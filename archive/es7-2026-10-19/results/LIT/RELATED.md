@@ -268,3 +268,11 @@ non-English sources beyond a few Russian- and Chinese-language web searches.
 BibTeX for Mackey's thesis, Georgiev et al. and Miyata–Moriyama–Imai was added to `references.bib`; Koshelev–Koshka and
 Krapivin–Przybocki–Heule were already there. Bokowski–Richter, Bokowski–Sturmfels, Borwein–Wolkowicz, the GLitchfield
 repository and the drat-trim tracker are cited inline only.
+
+## 7. 25 November 2026 arXiv refresh
+
+Two arXiv searches (rows of 25 Nov in `searches.tsv`; the 24 Nov arXiv search had missed accented titles) found one
+related new preprint: **Hu, Shao and Shen, "A new upper bound for the Erdős–Szekeres conjecture", arXiv:2611.29344v1
+(math.CO, 22 Nov 2026)**, whose abstract claims `ES(n) ≤ 2^{n+O(n^{1/3})}` (improving Suk's `2^{n+O(n^{2/3} log n)}`).
+Only the abstract was read; the claim is asymptotic and unrefereed and says nothing about ES(8). No new work on ES(8),
+N(8;6,6) or symmetric configurations was found on arXiv. Other sources (Zenodo, journals, web) were not searched again.
