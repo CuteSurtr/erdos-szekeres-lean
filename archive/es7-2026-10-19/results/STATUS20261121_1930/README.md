@@ -250,6 +250,11 @@ finished. None of the workers' claims below reached the verifier stage: they are
   the sevenfold development's generic encoder-B lemmas at (5,7,7); `twin-base 5 7 7` UNSAT (CaDiCaL 2.1.3 2 s, cake_lpr
   `s VERIFIED UNSAT`), control (5,7,6) SAT, Lean control Bad5 fails. C5 by the same route: `twin-base 4 7 8` is SAT, so
   no (C5 keeps needing its realizability cuts).
+- **21:41 s35_20 Root compiled** (the 30-sub-root form; lean_rc 0, `'RS3520.root' depends on axioms: [propext,
+  Classical.choice, Quot.sound]`, 1:06:11, anon peak 2.6 GB sampled); the flat form's stack overflow did not recur.
+  Driver restarted 21:42 (FVR_JOBS 1, JOINMEM 30000): `RS/Final3520`, then the six-slice spec `Res118FV`.
+- **21:25 second LRAT checker campaign** (Lean core's verified `LRAT.check`; `~/research/data/lrat-lean-20261125`):
+  the 2,025 + 629 kept row proofs of the 302 theorem; T 208 (trimmed) accepted by hand with the header-tolerant variant.
 - **Paper (21:00):** FV302 TODOs filled, 11 citations added (all Crossref-checked), numbers checked against the
   acceptance files; 75 pages, 40 TODOs left (most wait for s35_20 and part 3).
 
