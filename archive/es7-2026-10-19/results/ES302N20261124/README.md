@@ -97,8 +97,12 @@ review of 6 of 6 items (wave 4).
 - `tools/balz_assemble_v5n54.py` `a390dd91eda14de25087d6575cb48b2c1807de88b8cec85d1329184e28bb789e`;
   balcheck2 binary `951b90dc19c8b54c3f65871481f300dc6678338dbd2c76a80147e5feed984661`
 - The certificate (assembled tree, 32,618 files, about 32 GB) stays on disk: `/home/jay/research/data/bal186-20261119/zrow/b69zs54/files`
-  plus `occ/master.json`. The finder's raw context output `b69zs54/occ` (about 32 GB) is the input of check A's
-  assembly; see §7.
+  plus `occ/master.json`. The finder's raw context output `b69zs54/occ/ctx-*.json.gz` (32,334 files, 34.2 GB) was the
+  input of check A's assembly. **It was deleted on 24 Nov 01:57:10** with the owner's OK (manifest
+  `verify-20261124/manifest_deletions.txt` l.4656: file count and bytes, no per-file hashes), one minute after this
+  record's first commit, before any independent review. **Check A as recorded therefore cannot be re-run**: it
+  validated the in-memory trees built from those raw files and never re-read `files/`. Check B (balcheck2) reads the
+  kept `files/` whole; FV302, the Lean check, reads them through its exporter (correction 25 Nov, adversarial audit).
 
 ## 7. What remains
 
@@ -108,7 +112,8 @@ review of 6 of 6 items (wave 4).
 - s35_20 in Lean (running); the s35_19 switch is compiled and audited (24 Nov 03:22/03:28:
   `Combined.es302_l15_s3519`, 8 hypotheses), so `Combined` keeps only s35_20 and the tree besides the verdicts.
 - Clean-up made possible by this record (owner, 24 Nov: verify, push, then delete): the 303 tree (b68zs, 178 GB) is
-  superseded; the b69 raw contexts can go if the owner accepts that check A cannot then be re-run from them.
+  superseded; the b69 raw contexts can go if the owner accepts that check A cannot then be re-run from them (both
+  deleted on 24 Nov 01:57; see §6).
 
 ## 8. Resume
 

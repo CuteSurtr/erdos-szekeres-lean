@@ -1,5 +1,16 @@
 # VERIFY_N66CUBES15: independent check of the N66 level-15 cube campaign (started 20 November 2026)
 
+**Update 25 Nov 2026 (adversarial audit): this file was never finalized, and it does NOT confirm N66 ≤ 54 in the
+es-research sense (own code).** What exists instead: (i) all 105 level-15 cube leaves were accepted by cake_lpr in the
+campaign and again by vfy15's fresh run (`data/vfy15_tally.json`: all four checks 105/105), but vfy15 ran copies of
+VB's tools under the main session's driver, so it is a second acceptance, not independent code; (ii) the Lean theorem
+`N66R15.n66_bound_54 : CubesUnsat105R → RowCertsUnsat → N66Bound 54` (FORMAL20261122 n66-l15-rows; its review
+`review/VERIFY_n66-l15-rows.md`: statement, hash binding, non-vacuity, axioms), with E1 checked 105/105 (the Lean
+printer re-prints every certified trim CNF byte for byte); (iii) **no cube proof remains**: the 105 LRATs were deleted
+on 24 Nov after their receipts were pushed (`N66N20261113/receipts`), so a new check needs a re-solve, about 104 CPU-h
+of CaDiCaL by the wall column of `STATUS_campaign.md` (HEURISTIC). Label: CERTIFIED by two recorded acceptances,
+proofs deleted, not independently confirmed. The original status line follows unchanged.
+
 **Status: NOT CONFIRMED (in progress).** The campaign is running. N66 ≤ 54 is not decided until every leaf of the cover
 has passed all four checks below and the exact cover check is complete. Until then the bound is N66 ≤ 55.
 

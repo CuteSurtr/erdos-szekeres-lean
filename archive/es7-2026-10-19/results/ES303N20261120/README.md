@@ -1,11 +1,14 @@
 # ES303N20261120: the Z*-row and the budget-68 tree (target ES(8) ≤ 303)
 
 > **Superseded for the bound (24 Nov 2026): ES(8) ≤ 302, see [ES302N20261124](../ES302N20261124/README.md).** The 303
-> statement stays true; its budget-68 tree (b68zs) is to be deleted on 24 Nov with the owner's OK, only after this
-> update and the 302 record are pushed (data-side manifest verify-20261124/manifest_deletions.txt); this record keeps its counts, hashes and check outputs.
+> statement stays true; its budget-68 tree (b68zs, 178.5 GB) **was deleted on 24 Nov 01:57:10** with the owner's OK, after this
+> update and the 302 record were pushed (data-side manifest verify-20261124/manifest_deletions.txt l.4655); this record keeps its counts, hashes and check outputs.
+> No independent re-check was made before the deletion, and none can be made now: **ES(8) ≤ 303 has no re-checkable
+> evidence of its own and stands through ES(8) ≤ 302** (correction 25 Nov, adversarial audit).
 
 **Status (22 Nov 2026, 06:21 KST): ES(8) ≤ 303 ESTABLISHED. Computer-assisted and unrefereed, with the same kind of evidence as ES(8) ≤ 304.** Every 303 points in general position contain 8 points in convex position. The chain is `composition_303_zzsf : ExcludesHoleBudgetZZsF 68 → N66Bound 55 → ResidualBound 118 → ForcesConvexNGon 303 8`, Lean-checked with standard axioms; Linux audit 22 Nov, §5. Its three hypotheses:
-- the budget-68 tree, **EXACT TREE by two independent checks**: check_tree via v5, and balcheck2, which reads every file
+- the budget-68 tree, **EXACT TREE by two in-project checks** (the project's own scripts, not independent in the
+  es-research sense; the tree was deleted on 24 Nov): check_tree via v5, and balcheck2, which reads every file
   whole (§5);
 - `N66Bound 55`: CERTIFIED cubes plus a written model (N66N20261113);
 - `ResidualBound 118`: a written, computer-assisted chain (ES307N20261118).
@@ -273,7 +276,7 @@ House replay items (es-research §2):
 
 ## 6. Files and hashes (SHA-256)
 
-**Budget-68 run (22 Nov), work dir `/home/jay/research/data/bal186-20261119/zrow/b68zs` (143 GB; certificate, keep):**
+**Budget-68 run (22 Nov), work dir `/home/jay/research/data/bal186-20261119/zrow/b68zs` (143 GB; certificate; deleted 24 Nov 01:57, see the banner):**
 
 | file | SHA-256 |
 |---|---|
@@ -306,7 +309,8 @@ The shared inputs (catalog rows, Z-row, LemmaZ, FixedStatesZ, balcheck2, check_t
 
 - The budget-68 finder, then both checks. After that the headline can say ES(8) ≤ 303 (computer-assisted,
   unrefereed).
-- An independent re-check by another reader or agent: the Z*-lemma, both tree checks and the Lean chain.
+- An independent re-check by another reader or agent: the Z*-lemma, both tree checks and the Lean chain (the tree
+  checks can no longer be re-run: b68zs was deleted on 24 Nov).
 - The next steps (HEURISTIC prices in ES305N20261119 §8):
   - budget 69 with the present rows costs about 5.5e9 nodes;
   - N66 ≤ 54 moves both capacity rows to 16 (root LP 67.6);

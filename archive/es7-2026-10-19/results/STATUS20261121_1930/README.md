@@ -382,8 +382,11 @@ finished. None of the workers' claims below reached the verifier stage: they are
     `res-slices-fv/data/spec-snapshots/`. Not yet: its independent review, and `combined/src/Combined/Switch3519L15.lean`
     (about 7 min) that would drop H-S3519 from `Combined.es304_l15`. Remaining slice in Lean: s35_20 (not launched).
   - **P2 census** (09:22): 512 of 512 shards, exactly 1 survivor (shard 301), 0 mismatches against the notes' per-shard
-    calls, rejects, survivors and output sha256 (COMPUTED; own census code). So the P2 premise of M(16) <= 73 is
-    re-established by an independent run; P1 (F(14,16) <= 57) remains a COMPUTED re-run inside the notes' generator.
+    calls, rejects, survivors and output sha256 (COMPUTED; own checker, but nauty geng with the notes' exact arguments
+    and 512-way split). So the P2 premise of M(16) <= 73 is re-run with an own checker inside the notes' generator and
+    split, conditional on P1 (-D6); the census README's post-run `tools/verify_census.sh` was never run and the
+    second-party review covers the first 29-32 shards only (corrected 25 Nov, adversarial audit; earlier wording
+    'independent run' overstated it). P1 (F(14,16) <= 57) remains a COMPUTED re-run inside the notes' generator.
   - **M(16)** at 16:19: 95,162 cubes certified (A 36,839, B1 21,913, B2 36,410), 0 SAT, 0 alerts, not paused;
     written-bytes sum 416.6 GB of the 1,200 budget; the re-checker has re-checked and deleted 81,858 proofs, 0 alerts.
 - **M(16) re-check and delete (owner-approved):** unit `esr-rck-m16` (since 04:11; `--delete --follow --jobs 1`, 1

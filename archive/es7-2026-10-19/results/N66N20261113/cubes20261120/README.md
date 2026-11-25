@@ -1,7 +1,10 @@
 # N66 level 15 (N66 ≤ 54): cube-and-conquer campaign (20 November 2026)
 
 **Status (22 Nov 2026, 16:45 KST): COMPLETE. N66 ≤ 54 is CERTIFIED** (every leaf; cake_lpr) plus the written model
-soundness of the level-14 record with L = 15. It has the same standard as N66 ≤ 55. Unrefereed.
+soundness of the level-14 record with L = 15. It has the same standard as N66 ≤ 55 for the verdicts, but not for the
+independent check: N66 ≤ 55 is CONFIRMED by VS and VN, while for N66 ≤ 54 the verify file was never finalized and
+the second acceptance (vfy15) ran copies of the same tools; all 105 cube proofs were deleted on 24 Nov (see
+`VERIFY_N66CUBES15.md`, update of 25 Nov). Unrefereed.
 - The campaign ended 22 Nov 13:07: 105 certified leaves, 41 split nodes, nothing queued; leaf cover and certified
   cover ok.
 - Independent checks are in §8.
