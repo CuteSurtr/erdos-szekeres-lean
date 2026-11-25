@@ -215,9 +215,9 @@ finished. None of the workers' claims below reached the verifier stage: they are
 
 ## 6. Resume
 
-### 25 Nov evening (to ~21:15): FV302 accepted, s35_20 Root aborted, C4/C5/D2 re-certified
+### 25 Nov evening (to 20:35; header corrected 21:10 from "to ~21:15"): FV302 accepted, s35_20 Root aborted, C4/C5/D2 re-certified
 
-- **FV302 ACCEPTED ~20:40** (pre-registered items 1-4; formalize-20261122/fv302-audit, tools/fv2a.py; mirror
+- **FV302 ACCEPTED 20:13** (result.json; corrected 21:10 from "~20:40") (pre-registered items 1-4; formalize-20261122/fv302-audit, tools/fv2a.py; mirror
   FORMAL20261122/fv302): Root 17:15-18:13, Final 18:13-19:22, `E302ZZ.Final.excludes_69 : ExcludesHoleBudgetZZsN 16 69`
   and `forces_302_of_n54_res : N66Bound 54 → ResidualBound 118 → ForcesConvexNGon 302 8`, standard axioms. **The
   budget-69 tree is Lean-checked.** Checked by the session's own tool only (no independent review); deviations in
@@ -233,14 +233,25 @@ finished. None of the workers' claims below reached the verifier stage: they are
 - **Deletion now follows fv2a, not part 3** (advisor): FV302's 32,953 chunk sources (78.06 GiB; receipts
   `FORMAL20261122/fv302/receipts/fv302_chunk_sources_20261125.tsv`) go by `verify-20261124/delete_proofs.py` after this
   push and a clean dry run; `export/ctx` and the join sources stay.
-- **Deleted ~21:40:** FV302's 32,953 chunk sources (83.82 GB; dry run and execute clean; free 1,115.3 GB). s35_20's
+- **Deleted, done 20:29:26** (corrected 21:10 from "~21:40"): FV302's 32,953 chunk sources (83.82 GB; dry run and execute clean; free 1,115.3 GB). s35_20's
   Root rebuilt as 30 sub-roots (`res-slices-fv/tools/split_root.py`, pure partition: block digest `7d268ff7…` equal,
   flat original kept in `export/3520/root-flat/`); compiles next.
-- **C2 upload from the Mac** (owner 21:00): private archive branch `research/c2-certificates` + release
+- **C2 upload from the Mac** (owner, before 20:25; corrected 21:10 from "21:00"): private archive branch `research/c2-certificates` + release
   `c2-p8-1-9-2026-11-25`: the half-turn (central34) proof P8_1-9 (2,398,761,295 B, sha256 `ef13b40d…` = the Mac
   inventory) and replay tools; being downloaded and checked here with cake_lpr.
 - **Paper:** `~/research/data/paper302-20261125/paper/main.pdf`, 74 pages, compiles; 66 TODOs. Owner: no more agents
   after the paper workflow; all further work solo.
+- **20:32** P8_1-9 accepted by cake_lpr on Linux (C2RECHECK, pushed d356cc92e). **20:35** s35_20's split Root compiling
+  (unit `esr-fvr-r3520`, MemoryMax 30G; reads its 135 GB of oleans many times over, as the flat tries did).
+- **20:51 N66 re-solve launched** (`~/research/data/n66-resolve-20261125`, PLAN.md pre-registered 20:44): the 105
+  level-15 cube leaves whose proofs were deleted 24 Nov, all 105 `trim.cnf` hashes = receipts; driver `esr-vfy-n66drv`,
+  4 jobs, proofs kept; labels change only when `tally.py` gives 105/105. Advisor timed out; launched on my own review.
+- **21:01-21:07 C4 Lean-checked modulo one CERTIFIED verdict** ([FORMAL20261122/fivefold](../FORMAL20261122/fivefold/README.md)):
+  the sevenfold development's generic encoder-B lemmas at (5,7,7); `twin-base 5 7 7` UNSAT (CaDiCaL 2.1.3 2 s, cake_lpr
+  `s VERIFIED UNSAT`), control (5,7,6) SAT, Lean control Bad5 fails. C5 by the same route: `twin-base 4 7 8` is SAT, so
+  no (C5 keeps needing its realizability cuts).
+- **Paper (21:00):** FV302 TODOs filled, 11 citations added (all Crossref-checked), numbers checked against the
+  acceptance files; 75 pages, 40 TODOs left (most wait for s35_20 and part 3).
 
 ### 25 Nov from 15:15 (owner: "keep cleaning ... 1.8 tb"; "formalize everything first"; scope "302 + SAT results' encoders"; paper written here; adversarial checks of theorems and citations; "upload them to my github repo")
 

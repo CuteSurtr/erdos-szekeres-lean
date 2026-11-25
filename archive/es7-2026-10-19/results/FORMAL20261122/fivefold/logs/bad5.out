@@ -1,0 +1,17 @@
+Geo5/Bad5.lean:144:56: error: Application type mismatch: The argument
+  hcard
+has type
+  31 ≤ S.card
+but is expected to have type
+  32 ≤ S.card
+in the application
+  fivefold_heptagon (fivefold35_of_text h) S c hgp hinv hcard
+Geo5/Bad5.lean:189:74: error: Application type mismatch: The argument
+  hcard
+has type
+  32 ≤ S.card
+but is expected to have type
+  31 ≤ S.card
+in the application
+  fivefold_heptagon_of_text h S c hgp (invariant_fifth_of_order5 hj hinv) hcard
+lean_rc=1

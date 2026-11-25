@@ -1,0 +1,93 @@
+=== 2026-11-25T21:05:03+09:00 Geo5.Main5 (a88f91c312aae708)
+EncB.Geo5.fivefold35_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 5 7 7) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G) :
+  EncB.Geo5.Fivefold35
+EncB.Geo5.fivefold_heptagon_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 5 7 7) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 5)) S)
+  (hcard : 32 ≤ S.card) : ErdosSzekeres.HasConvexNGon 7 S
+EncB.Geo5.fivefold_heptagon_of_centre_not_mem_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 5 7 7) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 5)) S) (hc : c ∉ S)
+  (hcard : 31 ≤ S.card) : ErdosSzekeres.HasConvexNGon 7 S
+EncB.Geo5.text577_iff :
+  (∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 5 7 7) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G) ↔
+    ¬EncB.DimacsSatisfiable (EncB.encB 5 7 7)
+def EncB.Geo5.Fivefold35 : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition S →
+    S.card = 35 →
+      c ∉ S →
+        ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 5)) S →
+          ErdosSzekeres.HasConvexNGon 7 S
+'EncB.Geo5.geo5Bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.fivefold35_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.fivefold35_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.fivefold_heptagon_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.fivefold_heptagon_of_centre_not_mem_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.text577_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.04
+	Maximum resident set size (kbytes): 2337384
+rc=0
+=== 2026-11-25T21:05:44+09:00 Geo5.Main5 (03837caf6c95884c)
+EncB.Geo5.fivefold35_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 5 7 7) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G) :
+  EncB.Geo5.Fivefold35
+EncB.Geo5.fivefold_heptagon_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 5 7 7) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 5)) S)
+  (hcard : 32 ≤ S.card) : ErdosSzekeres.HasConvexNGon 7 S
+EncB.Geo5.fivefold_heptagon_of_centre_not_mem_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 5 7 7) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 5)) S) (hc : c ∉ S)
+  (hcard : 31 ≤ S.card) : ErdosSzekeres.HasConvexNGon 7 S
+EncB.Geo5.text577_iff :
+  (∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 5 7 7) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G) ↔
+    ¬EncB.DimacsSatisfiable (EncB.encB 5 7 7)
+EncB.Geo5.fivefold_heptagon_order5_of_text
+  (h :
+    ∀ (nv : ℕ) (G : List (List ℤ)),
+      EncB.parseDimacs (EncB.cnfText (EncB.encode 5 7 7) []) = some (nv, G) → ¬EncB.DimacsSatisfiable G)
+  (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point) (hgp : ErdosSzekeres.GeneralPosition S) (j : ℕ)
+  (hj : 1 ≤ j ∧ j ≤ 4)
+  (hinv : ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi * ↑j / 5)) S)
+  (hcard : 32 ≤ S.card) : ErdosSzekeres.HasConvexNGon 7 S
+def EncB.Geo5.Fivefold35 : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition S →
+    S.card = 35 →
+      c ∉ S →
+        ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 5)) S →
+          ErdosSzekeres.HasConvexNGon 7 S
+'EncB.Geo5.geo5Bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.fivefold35_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.fivefold35_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.fivefold_heptagon_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.fivefold_heptagon_of_centre_not_mem_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.text577_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo5.fivefold_heptagon_order5_of_text' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.81
+	Maximum resident set size (kbytes): 2348704
+rc=0
+=== 2026-11-25T21:06:30+09:00 Geo5.Main5 (ecd23106819bcd47)
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.87
+	Maximum resident set size (kbytes): 2352056
+rc=0

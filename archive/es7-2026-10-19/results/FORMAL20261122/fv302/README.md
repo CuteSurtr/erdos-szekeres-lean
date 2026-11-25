@@ -1,7 +1,7 @@
 # fv302 (mirror): the Lean check of the ES(8) <= 302 budget-69 tree (FV302)
 
 Mirror of the small files of the work dir `~/research/data/fv302-20261124` (25 Nov 2026; updated 20:45 KST).
-**Status: ACCEPTED 25 Nov ~20:40** by the pre-registered items 1-4 of `PLAN.md` (log at the end of PLAN.md;
+**Status: ACCEPTED 25 Nov 20:13** (result.json written 20:13:32; corrected 21:10 from "~20:40") by the pre-registered items 1-4 of `PLAN.md` (log at the end of PLAN.md;
 `acceptance/`: fv2a.py, result.json, step files, closure302.tsv, Audit302.lean and its log). **The budget-69 tree
 `OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` is Lean-checked** (`E302ZZ.Final.excludes_69`, standard axioms),
 and `E302ZZ.Final.forces_302_of_n54_res : N66Bound 54 → ResidualBound 118 → ForcesConvexNGon 302 8`.
@@ -18,7 +18,7 @@ and `E302ZZ.Final.forces_302_of_n54_res : N66Bound 54 → ResidualBound 118 → 
 - Not mirrored: the generated chunk sources export/src/E302ZZ/C*.lean (84 GB = 78.06 GiB; regenerable byte for byte
   by export302.py, test of 25 Nov in `regen-test/`: 83 contexts / 137 modules identical), the oleans and the module
   logs. The join sources (S_*, P_*, Root, Final, FinalTest) are mirrored in `joins/`.
-- **Deleted 25 Nov 2026 ~21:40** (owner rule of 25 Nov "delete what has already been formalized"; advisor-checked;
+- **Deleted 25 Nov 2026, done 20:29:26** (manifest time; corrected 21:10 from "~21:40") (owner rule of 25 Nov "delete what has already been formalized"; advisor-checked;
   receipts pushed in c8e052d39): the 32,953 generated chunk sources `export/src/E302ZZ/C*.lean` (83.82 GB) by
   `verify-20261124/delete_proofs.py` (dry run and execute: every file re-hashed = receipt, 0 problems, 0 bindings;
   manifest `verify-20261124/manifest_deletions.txt`). Kept: the 38 join sources, all 32,618 `export/ctx` manifests,

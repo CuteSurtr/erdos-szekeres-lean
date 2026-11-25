@@ -96,7 +96,7 @@ Raise FV2_JOBS when esr-vfy-all (K9/c6 re-check) ends.
 - 25 Nov 19:22 driver end: Root compiled 17:15-18:13 (57:48, peak anon 1,435 MB, `E302ZZ.root` standard axioms), Final
   18:13-19:22 (1:09:06, peak anon 1,437 MB; `excludes_69` and `forces_302_of_n54_res` [propext, Classical.choice,
   Quot.sound]; Final.lean byte-equal to the FINAL template). 32,953 chunk modules, 32 sub-roots, 4 pilot joins.
-- **25 Nov ~20:40 ACCEPTED** (pre-registered items 1-4 all hold; `formalize-20261122/fv302-audit`, tools/fv2a.py,
+- **25 Nov 20:13 ACCEPTED** (result.json 20:13:32; corrected 21:10 from "~20:40") (pre-registered items 1-4 all hold; `formalize-20261122/fv302-audit`, tools/fv2a.py,
   result.json verdict ACCEPT, 0 problems; mirrored in FORMAL20261122/fv302/acceptance):
   1. Final: as above. 2. 32,618 manifests, gz_sha256 = contexts302.jsonl, one exporter sha256 = pin, leaves
   43,967,444, minimum margin 1, lean_test_failures 0, and all 32,953 chunk sources re-hashed = manifest sha256.
@@ -110,7 +110,7 @@ Raise FV2_JOBS when esr-vfy-all (K9/c6 re-check) ends.
   compiles with leaves -1; drive302.py re-pinned at launch; the pre-launch advisor call timed out; the first fv2a run
   flagged the 8 symlinked modules as two providers (a bug in fv2a, fixed: symlinks resolved).
   **Result: `OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` is Lean-checked (`E302ZZ.Final.excludes_69`).**
-  Additions to the acceptance entry (advisor consult, 25 Nov ~21:00): (a) item 3 is literally "every module lean_rc 0
+  Additions to the acceptance entry (advisor consult, 25 Nov between 20:13 and 20:23; corrected 21:10 from "~21:00"): (a) item 3 is literally "every module lean_rc 0
   in run.tsv"; run.tsv has 32,974 module rows and the closure 32,991 E302ZZ module logs: the 17 without a row are the
   pilot's (13 chunk modules of contexts 4116 x9, 12975, 8558, 9085, 9086; the joins P_12975, P_4116, P_sib; FinalTest),
   compiled 04:25-04:38 before the driver's run.tsv existed; all 17 logs pass the log audit (lean_rc 0, standard
