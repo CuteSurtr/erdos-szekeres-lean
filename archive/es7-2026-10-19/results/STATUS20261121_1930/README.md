@@ -215,6 +215,44 @@ finished. None of the workers' claims below reached the verifier stage: they are
 
 ## 6. Resume
 
+### 25 Nov from 15:15 (owner: "keep cleaning ... 1.8 tb"; "formalize everything first"; scope "302 + SAT results' encoders"; paper written here; adversarial checks of theorems and citations; "upload them to my github repo")
+
+- **Disk:** 1,061 GB free. `df -h` shows 1.8T as the disk size, so 1.8 TB free is out of reach. Tiers: about
+  1,235 GB once the generated chunk sources of FV302 and s35_20 go, about 1,520 GB with the oleans as well, about
+  1,770 GB with the evidence moved off this disk. Archive target: the owner's Google Drive (5 TB, rclone not
+  installed). Waits until the formalization program is done; no evidence-tier deletion before then.
+- **Tonight (critical path):** FV302 Final → `formalize-20261122/fv302-audit` (fv2a.py: PLAN items 1-4, token scan,
+  olean order, deviations; compile `src/Audit302.lean` without -o first) → s35_20 by the res-slices-fv §9 recipe,
+  tag 3520, Lean leaf sum **119,054,033** → `combined/PART3.md` (pre-registered, pushed 7311d7e66; leaf sum corrected
+  f2c925d1f): links3 from the module list of `logs/RS_Final3520.log`, compile `src/Combined/ES302Final.lean`,
+  control `controls/Bad302.lean` must fail, audit3 → records → push. Only then delete `export/src/E302ZZ/C*.lean`
+  (regen test passed: `cleanup-20261125/fv302-regen`, 83 contexts / 137 modules byte-identical; the join sources and
+  the two new Lean modules are mirrored in `FORMAL20261122/fv302/`).
+- **fv2a dry run 25 Nov ~17:00:** item2 ok (32,618 manifests, 32,953 chunk modules, 43,967,444 leaves, min margin 1,
+  one exporter = pin, all 84 GB of chunk sources = manifest sha256), scan ok (33 join sources + 2 modules), order ok
+  (30,921 oleans); item3: 42 profiler-split axiom lines confirmed standard by the log audit; open only the logs of
+  running compiles; item1/item4 wait for Final.
+- **Re-solves (pre-registered `~/research/data/resolve-sym-20261125/PLAN.md`):** C4 `c5_n35L` (90dea1cf…), C5
+  `c4_n32L_cuts` (2aa18f1e…) and D2 `B_m7K8t10` (b4d29017…) regenerated from the repository generators, all five
+  hashes MATCH (`cnf/regen.log`). Next: certify_cnf.sh (CaDiCaL 2.1.3 + cake_lpr) one at a time after s35_20's Root
+  join, cake heap per formula (C5: 8000 with stack 4000), read every cake output before recording a rejection.
+- **Checks made today (read-only agents; reports in `~/research/data/audit-20261125/`):**
+  - end-theorem statement review (2 lenses): `ForcesConvexNGon 302 8` is ES(8) ≤ 302 exactly; no blocker.
+  - adversarial theorem audit (8 areas + 10 skeptics, `AUDIT.md`): 0 blockers, 11 major (all confirmed, all
+    downgraded to minor: labels and stale records, no false theorem), 43 minor, 25 info. Fixes pending, one commit,
+    lowering labels only: N66 ≤ 54 VERIFY wording (state the Lean theorem, E1 105/105, two recorded acceptances and
+    that no cube proof remains), ES302N check A text, ES303N stale label, D1/D11 "recorded verdicts", D2/C4/C5 label
+    until the Linux re-solves, C2, D10 (δ = reduced offset; ROT456 model), D11 (second float step; window 0..11),
+    STATUS P2 wording.
+  - citation audit (208 references, `CITATIONS.md`): 172 verified, **0 fabricated**, 21 content and 13 metadata
+    mismatches (25 touch .tex manuscripts), 2 unclear (keep out of the paper); references.bib `Schroeder2026Zenodo`
+    needs its real title, given name, DOI and "Zenodo preprint, version 1".
+  - SAT-encoder map: D2 already Lean-checked modulo one verdict (FORMAL20261122/sevenfold); C4 → C5 next (symcnf
+    port); D11 first only the exact re-check of its 38,250 float-accepted clauses; C3, C2 and D11 encoders take
+    weeks (C2's verdicts cannot be re-checked): ask the owner whether the archive waits for them.
+  - paper dossiers A-E: `~/research/data/paper302-20261125/dossiers/`; drafting waits for the label fixes.
+- **Token budget:** about 16 M subagent tokens today; no new workflows until part 3 is accepted (advisor).
+
 ### 25 Nov from 01:00 (owner: "delete unnecessary files please?"; "you can deploy more agents ... 10% of weekly quota")
 
 - Deleted after pushed receipts, an advisor check and the guarded script: the b67 finder contexts (8.76 GB; FV304
