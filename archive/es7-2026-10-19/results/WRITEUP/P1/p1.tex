@@ -92,7 +92,7 @@ label. The half-turn and the threefold, fourfold and fivefold cases remain open.
 plane contains $k$ points in convex position. Erd\H{o}s and Szekeres proved that $ES(k)$ exists~\cite{ES35}, constructed
 $2^{k-2}$ points in general position without $k$ points in convex position~\cite{ES61}, and conjectured
 $ES(k)=2^{k-2}+1$. The conjecture holds for $k\le6$: $ES(4)=5$ (E.~Klein, see~\cite{ES35}), $ES(5)=9$ (Makai, as
-reported in~\cite[p.~464]{ES35}, and Makai and Tur\'an according to~\cite{ES61}; unpublished; published proof by Kalbfleisch, Kalbfleisch and Stanton~\cite{KKS70}) and
+reported in~\cite[p.~463]{ES35}, and Makai and Tur\'an according to~\cite{ES61}; unpublished; published proof by Kalbfleisch, Kalbfleisch and Stanton~\cite{KKS70}) and
 $ES(6)=17$, proved by Szekeres and Peters with a computer search~\cite{SP06} (Mari\'c~\cite{Mar19}, with a
 formally verified reduction, and Scheucher~\cite{Sche20} independently verified it by SAT; faster SAT proofs are
 in~\cite{Sche23,HS24}, and a Lean-verified encoding gives $ES(6)\le17$ as a corollary~\cite[\S7]{SNGCCH24}). It is open for $k=7$ and $k=8$. The best
@@ -336,10 +336,10 @@ was internally reviewed, this is said.
 \end{itemize}
 
 \paragraph{Supplementary material.} Paths such as \dirn{C6UPPER} refer to directories under
-\dirn{cloud/es7-2026-10-19/results} of the project repository~\cite{Supp} (paths beginning with \dirn{experiments/}, to
+\dirn{archive/es7-2026-10-19/results} of the project repository~\cite{Supp} (paths beginning with \dirn{experiments/}, to
 its root), which contain the programs, logs, point
 sets, Lean files, hashes and reproduction commands. Proof files are in local archives outside the repository and are
-not public; an archived public deposit of the supplementary material with a DOI is an open item of this draft.
+not public, except those deleted after a fresh \cakelpr{} re-check, which are named where they are described; an archived public deposit of the supplementary material with a DOI is an open item of this draft.
 
 %======================================================================================================================
 \section{The layer reduction (Lean-checked core)}\label{sec:layer}
@@ -672,8 +672,9 @@ none was rejected. Each verdict is recorded together with the hashes of its form
 \item The $24$ fresh phase-order proofs differ from those of Table~\ref{tab:c6cert}; for these formulas the certificate
 is the fresh proof.
 \end{itemize}
-The run took $63{,}539$\,s of CaDiCaL wall time, first on one lane and then on six. The accepted proofs are kept
-compressed ($28.4$\,GB, outside the repository, not public).
+The run took $63{,}539$\,s of CaDiCaL wall time, first on one lane and then on six. The accepted proofs ($28.4$\,GB
+compressed) were accepted again by a fresh \cakelpr{} run and then deleted on 24 November 2026; their hashes and
+receipts remain (\dirn{C6UPPER/receipts}), and a new check needs a re-solve.
 
 \paragraph{The cubes with $\neg Y(1,2)$ (encoder~B).} On 6 November 2026, from 12:47 to 15:40 KST, the $32$ cube
 formulas ``encoder~B base $(6,8,11)$ $+\,\neg Y(1,2)$ $+$ pattern'' were written, hashed before any solving and checked
@@ -683,8 +684,8 @@ Every solver run ended UNSAT, and \cakelpr{} accepted all $32$ proofs (\texttt{s
 rejected. Each verdict is recorded together with the hashes of its formula and proof (\dirn{results.tsv}). The run took
 $35{,}411$\,s of CaDiCaL time ($0.8$ to $3{,}921$\,s per cube: $2{,}320$ to $3{,}921$\,s for each of the twelve
 phase-order cubes, at most $1.0$\,s for each of the twenty others) and $2{,}471$\,s of \cakelpr{} time. The proofs
-total $56.3$\,GB; they are kept compressed ($14.9$\,GB of \texttt{.lrat.zst}, $16.8$\,GB for the whole data directory
-with the cube files and logs; outside the repository, not public). A check run after the job from the files alone
+totalled $56.3$\,GB ($14.9$\,GB as \texttt{.lrat.zst}); after a fresh \cakelpr{} re-check they were deleted on
+24 November 2026, and the cube files, logs, hashes and receipts remain. A check run after the job from the files alone
 (\dirn{verify_final64.py}, result PASS) confirmed the tool, base-formula and cube hashes, the cover of all $2^6$
 patterns, and, for each of the $32$ new cubes, that its accepted row, the file on disk, the hash list written before
 solving, the \cakelpr{} log line and the decompressed proof agree; each of the other $32$ cubes has the hash of an
@@ -1018,9 +1019,9 @@ Lemma~\ref{k8s:lem:generic}(b)), encoder~A, the lower bounds and the affine symm
 
 \paragraph{Further limitations.} (1)~The proof files ($1.7$\,GB and $1.6$\,GB for $m=7$; $41.0$\,GB and $46.5$\,GB for
 $m=6$) are in local archives (\dirn{es8-c7-octagon-2026-11-03} and \dirn{es8-c6-octagon-2026-11-03};
-the formulas regenerated for the replay of 4 November are in \dirn{es8-c6c7-review-2026-11-04}) and are not public, and so are the proofs of the sixfold replay of 6 November
-($28.4$\,GB compressed) and those of encoder~B's cubes with $\neg Y(1,2)$ ($14.9$\,GB compressed, in
-\dirn{c6upper-noty12-20261106}); no public deposit with a DOI exists yet. The formulas can be regenerated, and solved and checked
+the formulas regenerated for the replay of 4 November are in \dirn{es8-c6c7-review-2026-11-04}) and are not public; the proofs of the sixfold replay of 6 November ($28.4$\,GB compressed) and those of encoder~B's
+cubes with $\neg Y(1,2)$ ($14.9$\,GB compressed) were deleted on 24 November 2026 after a fresh \cakelpr{}
+re-check (hashes and receipts remain; a new check needs a re-solve); no public deposit with a DOI exists yet. The formulas can be regenerated, and solved and checked
 again, with the commands of Section~\ref{sec:repro} (a new solver run need not reproduce the same proof file; in the
 replay of 6 November, with CaDiCaL~2.1.3, $24$ of the $64$ proofs differed from the archived ones). (2)~Some program comments in \dirn{C7UPPER/gen_b.py} and the angular docstring of
 \dirn{C7UPPER/gen.py} still state chain implications in the reverse direction, and that docstring omits the antipodal
@@ -1030,12 +1031,12 @@ refereed.
 %======================================================================================================================
 \section{Reproducibility}\label{sec:repro}
 
-All commands run from \dirn{cloud/es7-2026-10-19/results}; tool locations are passed as environment variables.
+All commands run from \dirn{archive/es7-2026-10-19/results}; tool locations are passed as environment variables.
 
 \paragraph{Lean.} From the repository root (dependencies prebuilt; $23$\,s and $2.6$\,GB on 6 November):
 {\footnotesize
 \begin{verbatim}
-lake env lean cloud/es7-2026-10-19/results/LAYERLEAN/LayerLemma.lean
+lake env lean archive/es7-2026-10-19/results/LAYERLEAN/LayerLemma.lean
 \end{verbatim}}
 \noindent The Lean route for the sixfold bound via encoder~B (Section~\ref{sec:trust}), from \dirn{ENCBLEAN/geo}
 (its \texttt{lake-manifest.json} pins Mathlib \texttt{f897ebcf}; do not run \texttt{lake update}), and the hash
@@ -1235,7 +1236,7 @@ which checks the hashes and that the rows other than the centre are exactly the 
 \begin{thebibliography}{99}\small
 \setlength{\itemsep}{1pt}\setlength{\parsep}{0pt}
 \bibitem{Bae25} J.~Baek, On the Erd\H{o}s--Tuza--Valtr conjecture, \emph{European J. Combin.} 124 (2025), 104085;
-arXiv:2206.04260. Theorem numbers refer to the arXiv version.
+arXiv:2206.04260v2. Theorem numbers refer to arXiv v2.
 \bibitem{BB25} J.~Baek and M.~Balko, The Erd\H{o}s--Szekeres conjecture revisited, in \emph{SoCG 2025}, LIPIcs 332
 (2025), 13:1--13:15, doi:10.4230/LIPIcs.SoCG.2025.13. Journal version: \emph{J. Combin. Theory Ser.~A} 222 (2026), 106195 (not read).
 \bibitem{BV17} M.~Balko and P.~Valtr, A SAT attack on the Erd\H{o}s--Szekeres conjecture, \emph{European J. Combin.}
@@ -1267,8 +1268,8 @@ problem, \emph{J. Eur. Math. Soc.} 22 (2020), 3981--3995.
 \bibitem{KK26} V.~Koshelev and A.~Koshka, Combinatorial geometry of Erd\H{o}s--Szekeres type problems: SAT/ASP
 modeling and linear subreduction, arXiv:2604.20120 (2026).
 \bibitem{KPH26} A.~Krapivin, B.~Przybocki and M.~J.~H.~Heule, Toward satisfiability modulo realizability,
-arXiv:2607.02958 (2026); to appear in \emph{CICM 2026} (arXiv comment; no proceedings record found on
-6 November 2026).
+arXiv:2607.02958 (2026); also in \emph{Intelligent Computer Mathematics (CICM 2026)}, Lecture Notes in Computer
+Science, Springer, published online 29 September 2026, 197--215, doi:10.1007/978-3-032-38214-6\_12.
 \bibitem{Mac25} E.~Mackey, \emph{Pinwheels and Polygons: Symmetric Realizations of Polygon-Free Point Placements via
 SAT}, M.S. thesis, Carnegie Mellon University, Technical Report CMU-CS-25-108 (2025).
 \bibitem{Mar19} F.~Mari\'c, Fast formal proof of the Erd\H{o}s--Szekeres conjecture for convex polygons with at most 6
@@ -1281,7 +1282,7 @@ points, \emph{J. Automat. Reason.} 62 (2019), 301--329.
 \bibitem{Sche20} M.~Scheucher, Two disjoint 5-holes in point sets, \emph{Comput. Geom.} 91 (2020), 101670,
 doi:10.1016/\allowbreak j.comgeo.2020.101670 (not read; cited as in~\cite{HS24,SMQH25}).
 \bibitem{Sche23} M.~Scheucher, A SAT attack on Erd\H{o}s--Szekeres numbers in $\mathbb{R}^d$ and the empty hexagon
-theorem, \emph{Comput. Geom. Topol.} 2(1) (2023), 2:1--2:13, doi:10.57717/cgt.v2i1.12 (not read; cited as in~\cite{HS24}).
+theorem, \emph{Comput. Geom. Topol.} 2(1) (2023), 2:1--2:13, doi:10.57717/cgt.v2i1.12.
 \bibitem{Sch26} M.~Schroeder, Erd\H{o}s--Szekeres: upper bounds for convex heptagons and octagons, archive version~1,
 19 September 2026, doi:10.5281/zenodo.22842891 (unreviewed).
 \bibitem{SMHM24} B.~Subercaseaux, J.~Mackey, M.~J.~H.~Heule and R.~Martins, Automated mathematical discovery and
@@ -1300,14 +1301,14 @@ doi:10.1007/978-3-032-07021-0\_3 (Crossref metadata; chapter text not accessed).
 \dirn{C6C7REVIEW}, \dirn{SIX60}, \dirn{PRIMEFOLD}, \dirn{ES8SYM}, \dirn{K8EXACT20261106}, \dirn{LRATCHECK20261105},
 \dirn{CHORD20261105}, \dirn{ROT456}, \dirn{ROTREFINE20261104}, \dirn{ROT45CHORD20261105}, \dirn{SYMLEAN}, \dirn{SYM5},
 \dirn{STATUS20261104}, \dirn{THREEFOLDRELAX}, \dirn{C3FINAL}, \dirn{C3SPOT}, \dirn{WRITEUP/note}, \dirn{WRITEUP/P1},
-\dirn{NOVELTY20261106} and \dirn{LIT} under \dirn{cloud/es7-2026-10-19/results}, and, for the $ES(8)\le311$ remark,
+\dirn{NOVELTY20261106} and \dirn{LIT} under \dirn{archive/es7-2026-10-19/results}, and, for the $ES(8)\le311$ remark,
 \dirn{experiments/omission-final311-2026-10-14} and \dirn{experiments/omission-compact-checker-2026-11-05}, of the
-project repository, branch \texttt{es7-night-2026-11-01} (the records cited are those at commit \texttt{31d905a6e} or
-later; the commit to cite is to be fixed before circulation); proof archives \dirn{es8-c7-octagon-2026-11-03} and
+project repository, branch \texttt{main} (the records were moved there from \dirn{cloud/} on 14 November 2026;
+\dirn{archive/LOOKUP.tsv} maps the old paths; the commit to cite is to be fixed before circulation); proof archives \dirn{es8-c7-octagon-2026-11-03} and
 \dirn{es8-c6-octagon-2026-11-03}, the review archive \dirn{es8-c6c7-review-2026-11-04} (regenerated formulas, models,
-witnesses), the proofs of the sixfold replay of
-6 November, \dirn{c6upper-replay-20261106}, and those of encoder~B's cubes with $\neg Y(1,2)$,
-\dirn{c6upper-noty12-20261106} (not public). [A public deposit with a DOI, of
+witnesses), the hashes and receipts of the proofs of the sixfold replay of
+6 November and of encoder~B's cubes with $\neg Y(1,2)$ (\dirn{C6UPPER/receipts}; those proofs were deleted on
+24 November 2026 after a fresh \cakelpr{} re-check). [A public deposit with a DOI, of
 the generators, cube files, logs, proof hashes, replay logs and, where size permits, the LRAT proofs, is to be made
 before circulation.]
 \bibitem{SP06} G.~Szekeres and L.~Peters, Computer solution to the 17-point Erd\H{o}s--Szekeres problem, \emph{ANZIAM
