@@ -1,0 +1,12 @@
+{
+ "item": "cert T 208",
+ "printer": "r15rowprint st 208 n66-rowsvalid/data/trim208.idx (4b78ab70...)",
+ "text_sha256": "349b6c6c7b95d396e578ace1196cadff1cea0071387fad68b10ea20155057a12",
+ "want_text_sha256": "349b6c6c7b95d396e578ace1196cadff1cea0071387fad68b10ea20155057a12",
+ "lrat_sha256": "d0e97e7422e3c14460c2910b887b8f3ab866744c511b4359c6cb0a5d11238569",
+ "want_lrat_sha256": "d0e97e7422e3c14460c2910b887b8f3ab866744c511b4359c6cb0a5d11238569",
+ "checker": "leanlrat2 (LeanLrat2.lean: header may declare unused variables; clause lines byte-equal to core's printer)",
+ "checker_sha256": "434655337cf912cc9554c9bb56245b4a8bd508ca5d041c3363f75ee6de2f94f9",
+ "result": "ACCEPT",
+ "note": "strict leanlrat: NOT CHECKED (header declares 30247 variables, the largest used is smaller); first try stopped by the memory guard (printer 2.9 GB in the 3000 MB track)"
+}

@@ -1,0 +1,4 @@
+c parsed: header p cnf 11135 189437; clauses 189437; byte round trip through Std.Sat.CNF.dimacs: true
+c proof actions: 268794
+s VERIFIED UNSAT (Std.Tactic.BVDecide.LRAT.check; sound by LRAT.check_sound)
+1.42 s 190460 KB

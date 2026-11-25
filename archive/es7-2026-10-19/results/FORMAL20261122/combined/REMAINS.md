@@ -73,7 +73,10 @@ What is no longer a hypothesis (each Lean-checked by its own project, plugged in
 **Trust items** (ENCBLEAN wording) for H-N66C, H-N66R and H-ROWS:
 - **E1**: the printers' output equals the certified bytes. Checked: rows 2,025/2,025 (`rowprint`); N66 cube trims
   105/105 (`n66r15print` `65865b1e…`); N66 certificates 629/629 (`r15rowprint` `6b9af2c6…`).
-- **E2**: the cake_lpr verdicts (exact line `s VERIFIED UNSAT`).
+- **E2**: the cake_lpr verdicts (exact line `s VERIFIED UNSAT`). Second check (25 Nov 2026,
+  [LEANLRAT20261125](../../LEANLRAT20261125/README.md)): all 2,025 H-ROWS and all 629 H-N66R kept proofs are also
+  accepted by Lean core's verified checker `Std.Tactic.BVDecide.LRAT.check` (run natively, on the texts of the frozen
+  printers, hash-checked); H-N66C (105) is not covered (proofs deleted 24 Nov; re-solve running).
 - **E3**: cake_lpr parses each file as `EncB.parseDimacs` / `parseDimacsBytes` does. Tested, **not proved**.
 - **E4**: the Lean compiler and runtime of the three printers.
 - **E5**: the kernel, Mathlib `f897ebcf` and the definitions.

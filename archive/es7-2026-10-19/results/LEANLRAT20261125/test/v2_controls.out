@@ -1,0 +1,8 @@
+php43.cnf php43.lrat => s VERIFIED UNSAT (Std.Tactic.BVDecide.LRAT.check; sound by LRAT.check_sound)
+php43_sat.cnf php43.lrat => s NOT VERIFIED
+php43.cnf php43_missing.lrat => s NOT VERIFIED
+php43.cnf php43_dropfirst.lrat => s NOT VERIFIED
+php43_bighdr.cnf php43.lrat => s VERIFIED UNSAT (Std.Tactic.BVDecide.LRAT.check; sound by LRAT.check_sound)
+php43_smallhdr.cnf php43.lrat => s NOT CHECKED (round trip differs)
+/home/jay/research/data/c4-encb-20261125/encB_577.cnf /home/jay/research/data/lrat-lean-20261125/c4/encB_577.lrat => s VERIFIED UNSAT (Std.Tactic.BVDecide.LRAT.check; sound by LRAT.check_sound)
+/home/jay/research/data/lrat-lean-20261125/t208/t208.cnf /home/jay/research/data/lrat-lean-20261125/t208/t208.lrat => s VERIFIED UNSAT (Std.Tactic.BVDecide.LRAT.check; sound by LRAT.check_sound)
