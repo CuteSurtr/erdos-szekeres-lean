@@ -85,7 +85,7 @@ Each record's README states what it shows and how it was checked, in the words a
 written. Later records supersede some earlier ones, and some early labels were revised later. The top-level
 [README.md](../README.md) gives the current status. None of the project's own results has been peer reviewed:
 where a record calls one of the project's written proofs "refereed" (for example in `C2ENC`, `C2FINAL` and
-`C4CUT`), that means an internal review.
+`C4CUT`), that means an internal review by AI models, not by a person and not by a journal.
 
 Experiments and notes outside this directory were not moved, even where they are superseded, so that relative
 links and Lean imports keep working.
