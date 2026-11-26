@@ -31,6 +31,13 @@ printed AUDIT PASS (`leanlb7_restore_audit.log`). That restored copy is the one 
 The check columns of RESULTS rows C7, D4 and D1 and the READMEs of LEANLB7_20261126, LEANLB20261111 and ENCBLEAN now
 start with the restore step.
 
+**Second set (owner-approved in the 26 Nov wrap-up)**, receipt `receipt2.json` (from `receipt2.py`):
+
+| target | files | GB | why it can go | restore |
+|---|---|---|---|---|
+| `tools/e810-lean/research/hall-reduction/.lake/packages` (#810 project) | 60,176 | 6.42 | duplicate of the same Mathlib `f897ebcf` (`pkgs.json`: 60,075 equal files, none missing; the rest Lake bookkeeping and `.git` internals) | `cp -a <repository>/.lake/packages .lake/` |
+| `bal186-20261119/zrow/b70zs54/occ` | 118 | 18.71 | resumable state of the stopped exploratory budget-70 finder: 98 of 16,384 contexts, no witness, no result claimed; the owner does not want the 301 search restarted. `PLAN.md`, `steps.log` and `occ.out` stay | none (a new run starts from zero) |
+
 **Kept:** everything the ES(8) ≤ 302 theorem imports (`closure3.tsv`: about 281 GB of oleans), the trees and inputs
 that regenerate its chunk sources, every kept SAT proof, `cleanup-20261125/fv304-regen` (its verdict is only in prose),
-and the #810 project's package copy and the stopped b70 search state, which wait for the owner.
+and (after the second set) nothing else.

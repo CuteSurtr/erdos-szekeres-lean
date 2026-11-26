@@ -1,0 +1,16 @@
+{
+ "pkg-e810-hall-reduction": {
+  "path": "/home/jay/research/tools/e810-lean/research/hall-reduction/.lake/packages",
+  "why": "duplicate Mathlib f897ebcf package copy of the #810 project; 60,075 of 60,176 files equal to the repository's .lake/packages, the rest Lake .trace/.setup.json bookkeeping (20) and .git internals (54), none missing (pkgs.json); restore: cp -a ~/research/lean/erdos-szekeres-lean/.lake/packages .lake/",
+  "files": 60176,
+  "bytes": 6422577752,
+  "digest": "c6157b7712ae4f648e3b51601b0439aa50c0156ffeeca2b27c5bc6ee5bbb966d"
+ },
+ "b70zs54-occ": {
+  "path": "/home/jay/research/data/bal186-20261119/zrow/b70zs54/occ",
+  "why": "resumable state of the stopped exploratory budget-70 finder (98 of 16,384 contexts closed, no witness, no result claimed; stopped by memguard 26 Nov 07:46); its PLAN.md, steps.log and occ.out stay; owner 26 Nov: do not restart the 301 search",
+  "files": 118,
+  "bytes": 18712933093,
+  "digest": "54bc7cff0d8ebcb01fdc0fd9ff28c66b5a378617e9033e325212e52087f027a4"
+ }
+}
