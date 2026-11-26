@@ -1,0 +1,6 @@
+m9_join (26 Nov 2026): the re-solved CNFs against the Lean hash binding of CubesUnsat105R
+binding: ~/research/data/formalize-20261122/n66-l15-rows/logs/m9_hash_binding.tsv (column printed = the text n66r15print writes; verdict MATCH 105/105)
+binding rows 105 distinct printed texts 98
+re-solved leaves with s VERIFIED UNSAT 105 distinct cnf_sha256 98
+leaf ids = leaves.tsv ids: True | each cnf_sha256 = leaves.tsv (receipt) hash: True
+multiset of re-solved cnf_sha256 = multiset of printed hashes: True

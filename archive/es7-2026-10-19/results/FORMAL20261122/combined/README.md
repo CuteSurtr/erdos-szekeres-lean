@@ -1,7 +1,58 @@
 # combined: one end theorem per bound (ES(8) ≤ 304, 303, 302)
 
-**Part 2 (slot `lcb2`, 22-23 Nov 2026) is on top; part 1's README follows unchanged below the line** (pinned copy:
+**Part 3 (26 Nov 2026) is on top, then part 2 (slot `lcb2`, 22-23 Nov 2026); part 1's README follows unchanged below the line** (pinned copy:
 `part1/README.md`, sha256 `71e4aea3…` = `data/manifest.sha256`; `part1/REMAINS.md` `8ea201ee…`).
+
+## Part 3: the budget-69 tree (FV302) and the slice s35_20 discharged (26 Nov 2026)
+
+Pre-registration `PART3.md` (25 Nov 16:02; dated corrections in its §7). Same work directory; units
+`esr-vfy-lcb3-<job>` (memguard track vfy), one at a time, started by `tools/start3.sh` (gates: no YIELD file, Tctl
+< 86 °C, a free CPU, vfy memory; log `logs/gates3.log`) through `tools/unit_lean.sh`; chain `tools/run_part3*.sh`
+(unit esr-vfy-p3chain, log `data/part3_run.log`).
+
+**Result** (label as in REMAINS.md): **ES(8) ≤ 302, Lean-checked modulo 2,759 cake_lpr verdicts (H-N66C 105, H-N66R
+629, H-ROWS 2,025) and trust items E1-E6 (E3 tested, not proved)**: `Combined.es302_verdicts` (with
+`es304_verdicts`, `residual_bound_118_verdicts`) in `src/Combined/ES302Final.lean` (`950be932…`).
+Limits:
+- Unrefereed; part 3 has not been reviewed.
+- One build on one machine; the imported oleans are hash-pinned, not recompiled.
+- 2,654 of the verdicts (H-ROWS, H-N66R) are also accepted by Lean core's verified LRAT checker (LEANLRAT20261125).
+  The 105 cube verdicts (H-N66C), whose proofs were re-solved and kept on 25-26 Nov (`n66-resolve-20261125`,
+  105/105 CERTIFIED), are not.
+
+<!-- STATUS3 -->
+- 10:38:58 **audit3 ok** (`tools/audit3.py logs/Audit3.log`, 4 min 20 s, O_DIRECT; `data/audit3.json`):
+  - closure 69,731 modules (the module list of `src/Audit3.lean`, which imports `Combined.ES302Final` alone), one
+    provider each;
+  - 69,731/69,731 olean sha256 equal their pins;
+  - part 2's 15,205 closure modules are inside with the same file and hash;
+  - E304Z digest = fv304-audit's; 3,464 companions = fv304-audit's table;
+  - no imported file newer than `MARKER_START3` (01:38:27).
+
+  Two rows read "first recorded here": `CompactChecker.BridgeZ` and `CompactChecker.FcatZ`, reached through the
+  FV302 root (a link to the FV304 olean). Their hashes equal fv304-audit's `closure_combined.tsv` and part 2's
+  `closure2.tsv`. `closure3.tsv` (17 MB, `fb687142…`) stays in the work directory.
+- 10:31:35 the first audit3 attempt stopped after 1 s with an IndexError, before any check: its default log list
+  also named `logs/ES302Final.log`, which has no module list (PART3.md §7, 10:34). It was resumed with
+  `logs/Audit3.log` alone (`tools/run_part3f.sh`).
+- 10:31:34 **Audit3** (statement check and module list): lean_rc 0, 2:23:48 wall. STMT lines: 6 hypotheses each;
+  none mentions `N66Bound`, the tree or a slice.
+- 08:07:46 **Bad302** failed as required: lean_rc 1 with exactly one error, `Type mismatch` at
+  `controls/Bad302.lean:9:2` (`ForcesConvexNGon 302 8` where `301 8` is expected).
+- 05:32:45 **ES302Final** compiled: lean_rc 0, 3:54:18 wall, anon+shmem peak 5.0 GB. Its `#check` equals PART3.md §2
+  (`data/es302final_check.txt`), and its three axiom guards and four `example`s passed.
+- 01:38:27 links3 ok (`data/links3.json`) and the marker set; 01:14:41 the s35_20 finish recipe ok (res-slices-fv).
+- Resumes and deviations: `run_part3.sh` to `run_part3f.sh` (PART3.md §7, dated 00:38, 01:26, 01:35 and 10:34).
+  `tools/gate_relief.sh` ran from 06:38 to 10:31 and never acted (`logs/gate_relief.log`). It was there to freeze the
+  exploratory b70 finder if a gate waited 10 polls.
+- Manifests:
+  - Parts 1-2 (`data/manifest.sha256`, `manifest2.sha256`) verify, except README/REMAINS and the four files the 24 Nov
+    switch changed by its recipe (§2.9: `data/links.json`, `closure2.tsv`, `audit2.json`, and `logs/gates2.log`,
+    which was appended to).
+  - The pre-switch copies in `part2/` match those manifests; the switch's `data/manifest3.sha256` verifies except
+    README/REMAINS.
+  - Part 3: `data/manifest4.sha256` (33 files).
+- **Keep:** the oleans listed in `closure3.tsv` are the evidence of this theorem; no cleanup may delete them.
 
 ## Part 2: N66 from the level-15 verdicts (n66-l15-rows) plugged in
 

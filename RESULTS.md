@@ -10,6 +10,10 @@ labels lowered or qualified only, rows C2, C4, C5, D1, D2, D10 and D11). Later t
 back to CERTIFIED by a Linux re-certification with the proofs kept (RECERT20261125), and D11's floating-point steps were
 re-checked rigorously. Results after 12 November (ES(8) ≤ 309 to
 302) are in the ES30xN records and the STATUS pages, not yet in this index.
+Lean status of ES(8) ≤ 302 (26 November 2026): `Combined.es302_verdicts : … → ForcesConvexNGon 302 8`, whose only
+hypotheses are 2,759 cake_lpr verdict propositions (trust items E1-E6). That is, ES(8) ≤ 302 is Lean-checked modulo
+those verdicts, in [FORMAL20261122/combined](archive/es7-2026-10-19/results/FORMAL20261122/combined/REMAINS.md)
+(part 3, not reviewed). The strongest bound with an unconditional Lean theorem is still A1 (310).
 
 All statements concern finite sets of points in the real plane in general position (no three on a line). A convex
 k-gon is a set of k of the points in convex position; other points of the set may lie inside it. ES(k) is the least N

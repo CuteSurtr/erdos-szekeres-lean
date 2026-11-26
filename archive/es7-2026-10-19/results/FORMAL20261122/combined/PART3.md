@@ -77,3 +77,35 @@ the whole path must report no module file with two providers.
   deviation of 25 Nov). New rule: the MemoryMax of `ES302Final`, `Bad302` and `Audit3` is set from the measured peak of
   the new s35_20 Root plus FV302 Final's 1,437 MB, with the 80 % stop level, and every compile that imports a whole
   closure runs alone. Part 3 is therefore not a result of 25 Nov.
+- 26 Nov 2026 00:38 KST, before any part-3 compile: the 25 Nov 19:40 rule (MemoryMax from the measured peaks: 2,645 +
+  1,437 + 533 = 4,615 MB, so 7G with the stop at 5,734 MB) is withdrawn for the compiles: with memguard's memory.high at
+  the unit limit it would leave about 2.5 GB of page cache for a closure of about 245 GB of oleans. ES302Final, Bad302
+  and Audit3 run at §5's first registration, MemoryMax 12G (stop at 9,830 MB), RuntimeMaxSec 21600 (§5 said 10800;
+  page-cache bound). Unit logs are `logs/p3_<job>.out` (`links.out` and `audit3.out` belong to parts 1-2). Chain:
+  `tools/run_part3c.sh` (unit esr-vfy-p3chain); its finish-recipe step re-ran axlines after RP3520 (lean_rc 0, 671 lines).
+- 26 Nov 2026 01:26 KST, before any part-3 compile: the two-providers check (§3) failed in mklinks3.py on 23 module
+  files (CompactChecker/*) that both the FV304 and the FV302 olean roots provide; all 23 resolve to the same physical
+  file (both roots link the shared CompactChecker build; checked: 23 same real path, 0 different bytes). As FV302's
+  fv2a item 4 decided on 25 Nov, roots that resolve to the same file count as one provider: mklinks3.py and audit3.py
+  (closure modules and companions) now flag only providers that resolve to different files. The negative control
+  (adding res118/olean, real copies) must still be refused. Chain resumed as `tools/run_part3d.sh` from §3.
+  Negative control under that rule: adding res118/olean must still be refused; it is, through its real copies
+  (BalancedBudgetsZ.olean, a regular file there), while its CompactChecker/* entries, links to the shared build, are no
+  longer duplicates; the control now requires exactly that (BalancedBudgetsZ in, CompactChecker/Fast2 out).
+- 26 Nov 2026 01:35 KST, before any part-3 compile had run: ES302Final stopped after 5 s with "object file
+  .../fv304-20261120/olean/CompactChecker/FcatZZs16.olean ... does not exist": Lean resolves a module through the FIRST
+  LEAN_PATH root that holds its package directory, and env3.sh had appended the FV302 root after the FV304 root (both
+  have CompactChecker/) and links3 after links (both have RS/). env3.sh now inserts the FV302 root right before the
+  FV304 root (its CompactChecker/ = the same 23 files + FcatZZs16, BridgeZZs16) and links3 right before links;
+  mklinks3.py adds to links3/RS a link for every links/RS entry (same targets; pins from part 2's data/links.json), so
+  each package resolves to a directory that holds all of its modules. Nothing else changed. Chain resumed from §3.
+- 26 Nov 2026 10:34 KST, after ES302Final (lean_rc 0), Bad302 (failed as required: one error, the type mismatch
+  `ForcesConvexNGon 302 8` / `301 8` at `bad301`, line 9) and Audit3 (lean_rc 0, the three STMT lines): audit3.py
+  stopped after 1 s with an IndexError before checking anything (no data/audit3.json). Its default log list (Audit3,
+  ES302Final) was carried over from audit2.py, whose two end modules each printed a module list; in part 3 only
+  `src/Audit3.lean` prints one (§5: it imports Combined.ES302Final alone, so its list is that module's import closure
+  plus the module itself), and ES302Final.lean prints only `=== CHECK`. audit3.py now gets `logs/Audit3.log` as its
+  one argument (script unchanged). Chain resumed as `tools/run_part3f.sh` (unit esr-vfy-p3chain) with only that step,
+  RuntimeMaxSec 10800 for the unit (3600 before; the closure is about 245 GB of oleans). run_part3e.sh's last step
+  (restart the N66 re-solve driver) is dropped: the re-solve ended at 06:13 with 105/105 CERTIFIED and its driver has
+  ended (n66-resolve-20261125/PLAN.md).

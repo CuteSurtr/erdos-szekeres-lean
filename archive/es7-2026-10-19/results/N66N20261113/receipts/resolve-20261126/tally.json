@@ -1,0 +1,955 @@
+{
+ "leaves": 105,
+ "certified": 105,
+ "not_accepted": [],
+ "pending": 0,
+ "cadical_h": 36.5,
+ "cake_h": 4.9,
+ "certified_leaves": [
+  {
+   "leaf": "c15_ooohoh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "791ffb90f6ef7c73f43f09faedbd28cbada372e7f8fc298f5cc2440a0ef1dd03",
+   "cadical_s": 2912,
+   "cake_s": 394,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohhho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "8517f3e7374ca3a7d00e9ef0a4603402ab553dd1098ca89dac6290b4b65327a5",
+   "cadical_s": 4019,
+   "cake_s": 410,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohhhoo",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "25caa96eb6fccf69732a6b65d595a9aa8bf598a16179b64ba512ca9c8278be31",
+   "cadical_s": 3794,
+   "cake_s": 397,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohohho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "743a2754223345098eb0317b2a9574a4745ffa2906b2eac0f2c993ed05a7f4ca",
+   "cadical_s": 3621,
+   "cake_s": 381,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhoooo",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "832c1c82adf3887320b9632661730af5c27f3b6969f35f102973bcb26ef6cf55",
+   "cadical_s": 3353,
+   "cake_s": 344,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohho_40h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "72e37cc113444b766d1b47d9af11e7a1350b517f055ef2bf25d5a8eb6463b03c",
+   "cadical_s": 2770,
+   "cake_s": 351,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooooho_40h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "8c9fc31335ec56551312af08a4cdba788dbeec3fff91f5531ff517a257d5b261",
+   "cadical_s": 2514,
+   "cake_s": 313,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhohoo",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4fb64180f8ac8c70c3520403ea455a90d1a7ad7e78103d61f68f1511037860a9",
+   "cadical_s": 3230,
+   "cake_s": 328,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hohhoo",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "1c44b577f5eb86e87c4088e60a9bd77c0bed520968b45382c2de6dd5615827d3",
+   "cadical_s": 2487,
+   "cake_s": 291,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohhoo_40h_52o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "21e40493e2895b40c53b06062365d57b848c952a15e32d92313c9b8082e79d58",
+   "cadical_s": 2807,
+   "cake_s": 278,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hoohoo_40o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "e27954e9009e7d6dcd87aaa2d17d69187f157392b765eb8288d19a522807683c",
+   "cadical_s": 2150,
+   "cake_s": 266,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hooooo_40o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "6bd79f349f1a0a98e008ba3ee8360fab2cb86410f0919559482651c26cd0e700",
+   "cadical_s": 2865,
+   "cake_s": 381,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hoooho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "a67ea0ca256e2afd69a37223b651742b4bfab67cb5eee9be7a19aec213a8d990",
+   "cadical_s": 2745,
+   "cake_s": 386,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohoo_40h_52o_46o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "742b53db0e341947c1a03080f2c842571c0186d48124230ea68b454fe10be045",
+   "cadical_s": 3015,
+   "cake_s": 359,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohoo_40o_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "15f3dd3f2af3d3b6fbca56b16d4e2aa8de31b4851ef6287a19e22203f5ba4c9b",
+   "cadical_s": 2690,
+   "cake_s": 377,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "01e09e657948bcdbd89fa70149074d8fd60c2d37d62ef7006363a9a44cb3e7f5",
+   "cadical_s": 2255,
+   "cake_s": 284,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohoo_40o_52o_46o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "77fc7fcd93b726823c9a19c5aa27e368e91d3f6c7ea5487a039a32414ee154b6",
+   "cadical_s": 2762,
+   "cake_s": 345,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohohoh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "bfb5b8ea1ea5788ced9b0e885fe78d953ee2b082eacd7eeeb9176830fe6eeb19",
+   "cadical_s": 2503,
+   "cake_s": 301,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohho_40o_52o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "662c4ddb13a1f1a4d77c1dfb2935e7a9bf5fb71c25c7beed439b49329eba1ff8",
+   "cadical_s": 2520,
+   "cake_s": 286,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hohooo",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "17e7cc49659df2e0bdb6d86ea2e6dae2be148a73950a333c00a8938cffe0bbea",
+   "cadical_s": 2624,
+   "cake_s": 329,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohooho_40o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "225af18b64d3d24a6b2a921f7e898a1fe34b4914b5cd38911bbb0e4842ae769f",
+   "cadical_s": 3014,
+   "cake_s": 361,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooohh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "bf85ced1f823494064114c35fd817fbeb2667c391c5ed46b5c8fb5fe6a312e03",
+   "cadical_s": 2065,
+   "cake_s": 332,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohohoo_40h_52o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "cb8ed528847d8dbd553ea33913e8ba6cfebb2ce8c1787f2967c339af43616135",
+   "cadical_s": 2976,
+   "cake_s": 370,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohoho_40o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "6787302495a8853e33946f31e8f24cd6f593621bfcd2813cb0e6eeab64ce59e9",
+   "cadical_s": 2650,
+   "cake_s": 347,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohoooo_40h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "512ca9aa128948133fd3074a5bb130323b7c4cd07c24b03f49e5528ad55faf29",
+   "cadical_s": 1811,
+   "cake_s": 258,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohooh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "d8f9b142210dd0a8a39e7aee439e81f81ca5eefd0fa5ac17525851953d49a553",
+   "cadical_s": 1569,
+   "cake_s": 223,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohoo_40o_52o_46h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "416e1fcb323d670e906fb0a712e061ee8f394ec3d041953504e140910e8880fa",
+   "cadical_s": 2092,
+   "cake_s": 263,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hoohho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "bd4b4bf8e3a332e4b2daff1aa90fff3923d50741cc6edd906cdb7c3d3c412ae0",
+   "cadical_s": 1908,
+   "cake_s": 278,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohhh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "f3eb9d37033e0580bf56d7c438fd8c0a9f569cb5e4c10e4431f7f1a1e3e8b894",
+   "cadical_s": 1600,
+   "cake_s": 223,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohoooh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "d97e744095c3f0839c3c5d827cdb6cf2f02d3e6d579c017be80e141d573d3fd3",
+   "cadical_s": 1727,
+   "cake_s": 236,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hoohoo_40h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "ff2574a0508cdec2a461fba112d0ae3f3614eaef25a81d9de2f7952149963eb6",
+   "cadical_s": 1671,
+   "cake_s": 214,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohhoh_40o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "8e65496bddc6ac6cf46b376706ca6ea3dff01cbd0a39762dbceb45583d491787",
+   "cadical_s": 1981,
+   "cake_s": 258,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohhoo_40o_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "a9b611c71a6bcf3d3c785238a95d4e3280e2133d5d955f07f6ebdf6f74846d33",
+   "cadical_s": 2055,
+   "cake_s": 237,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohooo_40h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "fa9e55d4460394a080adcb731c6a9d7ffb32b2da00181ea08699c0320dc64013",
+   "cadical_s": 1340,
+   "cake_s": 193,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohohoo_40o_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "198a0042c57d06792929e793e972159c1d65b026333f17ca1da635fed74a0c47",
+   "cadical_s": 2100,
+   "cake_s": 277,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohhooo",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "12e0ad4f593879efbea887d4e4b9ca0087989557c907a44f1443ff8dfde56dbf",
+   "cadical_s": 1255,
+   "cake_s": 179,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohhoo_40o_52o_46o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "43ac32ea7ae27dcf8efe94a7552a9b3e21aadc4d6bfa19bcd746242efb12f1d9",
+   "cadical_s": 1696,
+   "cake_s": 236,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohoo_40h_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "10e4134263c6ebdc77ec4ccb8c2ef5d4d3aa88360d6389f7d73a3aa6b6e21513",
+   "cadical_s": 1212,
+   "cake_s": 186,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohoho_40h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "45c8af25f6aac8f957581a01f05ff7bce0200b8a9d96fd857b10cbe624aea60d",
+   "cadical_s": 1826,
+   "cake_s": 258,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohohoo_40o_52o_46o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "a7a316249275bd2b31ce301b24067b450dd365719d12226bbd3bb42288deb5c0",
+   "cadical_s": 1837,
+   "cake_s": 244,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhooho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "ed32507a1a1925fa097a3f3c2eeb205d74c282b2797fc39dcfa354f92e41f2c4",
+   "cadical_s": 1397,
+   "cake_s": 209,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohooho_40h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4965f1037a9e20080e180af66804e88f85618f500f8375ebd8440afbd076c636",
+   "cadical_s": 1766,
+   "cake_s": 263,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hooooo_40h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "001c680acf8e6c02fbea8820428e9b6cf86bd8f7c8564068b360f6bacbb08a46",
+   "cadical_s": 1204,
+   "cake_s": 209,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohhoo_40o_52o_46h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "473ed551c1ac28716b0fec361869093730e524331fc43d7dba11ed66d4817d97",
+   "cadical_s": 1554,
+   "cake_s": 202,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohhhho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "1e0d1564e5cb9a69f8ed98273624ab551d4bb82c0621223d88ef35efd9bed27a",
+   "cadical_s": 1060,
+   "cake_s": 165,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hohoho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "b9bfdf6bfac451684415a9946f50533d47d3d2b6a52c49eb17ef7045c15344f4",
+   "cadical_s": 1427,
+   "cake_s": 231,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooooho_40o_52o_46o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "bc393499b4da998032b092a8190d5d83718cdd3a41c09e9015a007094adb269f",
+   "cadical_s": 1323,
+   "cake_s": 199,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohhoho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4fdd97f7fccf09896ae6d0053f64984980a4d8f582541dc5830ddf83ed529fe3",
+   "cadical_s": 1172,
+   "cake_s": 184,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohho_40o_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "fad8780e1974221c41f1ff60c0e0c58658a21a5a3894e5ba6ee73d925f4a20ae",
+   "cadical_s": 983,
+   "cake_s": 171,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooooho_40o_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "ca4ba0557567ffd8c41733cf31de688cd363a1de692e82cc11a1ca67a3975d6a",
+   "cadical_s": 820,
+   "cake_s": 160,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooohoo_40h_52o_46h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "0c5eb7458fc6bb7bc412d473eb82bc1171d1cf04bac5970fb68a7d9a0e91a004",
+   "cadical_s": 1216,
+   "cake_s": 187,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhhhoo",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "f6a6a25ff872f8648fad6d09e28dd9dfe476f05a4b7759befa197515ae05f3ed",
+   "cadical_s": 1062,
+   "cake_s": 144,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohohh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "63833afc012fbd574a4de69055f5077b3210283d51a6019b5c30f734ff076c5f",
+   "cadical_s": 983,
+   "cake_s": 157,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohohoo_40o_52o_46h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "f3c0fc62ebc756b58f42ecd43ee8a3a1b2eb964c61ed45e484c61ae731aecd20",
+   "cadical_s": 1027,
+   "cake_s": 158,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohhoo_40h_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "08f055b816a2ea3e17ef3ebc5f43c2075243ad8b5945db6ebdb608846fe09245",
+   "cadical_s": 953,
+   "cake_s": 170,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohoohh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "7385816110d3c314b822ac032e89d667f6cc68008c731215b32b53005d489f0a",
+   "cadical_s": 1001,
+   "cake_s": 142,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ooooho_40o_52o_46h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "1c8bd27eef5b8de5b667f0f6a407c0c7027988de49a29aa8041c5d226cdfe552",
+   "cadical_s": 1023,
+   "cake_s": 150,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhhooo",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "3d798e1355155c3a87bc788288db5e1ecdd4a228752a3f6e34d5c45045549eb7",
+   "cadical_s": 798,
+   "cake_s": 141,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohohoo_40h_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "e8c6edfe2fb65496fe6ddf4ab3ebbc1109839fd3a77b07f5920798b460e3c68b",
+   "cadical_s": 973,
+   "cake_s": 143,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohhhh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "c8442d4a60a916fec9703ac892230743ce1901c9354d934cb92a542329f72094",
+   "cadical_s": 698,
+   "cake_s": 119,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohhoh_40h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "bff2f793312582b763e0351c6e9c538d1d1a4b7362de3031ef8c7ce622a700f8",
+   "cadical_s": 707,
+   "cake_s": 117,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohohhh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "59719a55a7bf22fec80993cf32ed87c90148b46f2fe8409448479f0850af51f0",
+   "cadical_s": 722,
+   "cake_s": 133,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hoohoh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "20892570214fae0aac044285a51b8588199d882e0facf9aba135df23acae6b5c",
+   "cadical_s": 637,
+   "cake_s": 133,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hohhho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "943f10468dc5c93baa144a328d2fb83429f419d8358a5fc7e6468d06647f0b60",
+   "cadical_s": 762,
+   "cake_s": 116,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohoooo_40o_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "cd3188af42f41d7d93c403568757cfe54bcbcb5259189bd75265f3f5fd6e2ac3",
+   "cadical_s": 761,
+   "cake_s": 126,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhohho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "8e0aefdd557aaf87e5467ee5a7e850ee2dec4696a20f2d7ac1e721ce3b777985",
+   "cadical_s": 738,
+   "cake_s": 121,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohhhoh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "d6d7a0725360ab262a7ad5b2692d70678037dd1a2e1b80e24b4fbb31d1e40e03",
+   "cadical_s": 588,
+   "cake_s": 101,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohoooo_40o_52o_46o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "d243d37d342bdf21f7ae1a34b53fb689fc9831e31ee435ea5f1f865c1f01497e",
+   "cadical_s": 756,
+   "cake_s": 118,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohoooo_40o_52o_46h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "972040b3c36b7f6cf70dc27cf5aa2dee0d2e34fb7c4946da3f3098bdc0ebd1bd",
+   "cadical_s": 608,
+   "cake_s": 88,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohooo_40o_52o_46o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "b18c241e61965e1d5048eccae8d3f48b9bc314ba06c0c2e4e9308b0b1f03a04a",
+   "cadical_s": 550,
+   "cake_s": 85,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohhooh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "8453471ea7530b011714ae9722b6576be48eeb1fabea9f48b5e5b03fe0d7fee4",
+   "cadical_s": 466,
+   "cake_s": 93,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohooo_40o_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "baea937ec301edd5cf07b3ebc049f7e0b5af3cb40a5da10ee611e87e5cf4c40f",
+   "cadical_s": 433,
+   "cake_s": 81,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oohooo_40o_52o_46h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4d8d85c8243d0e7d0b4afd2eede525c3a68d93bde7d5f0200a7c89635cbed559",
+   "cadical_s": 421,
+   "cake_s": 68,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40o_52o_46o_44h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "a87a7d41679f550158d0479a96b36598a0e7f0514f8692a579977709087c1f73",
+   "cadical_s": 560,
+   "cake_s": 78,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hohhoh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "e5ad8a276843f64361aedf44f37c5fcbfe215e3ca49b85c2bf05aa703a20dbe0",
+   "cadical_s": 364,
+   "cake_s": 63,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhohoh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "a322cf6e1dc57c27935b7c26e0b8833e4f7f0e4cd043d2f5abe781b78353f4f6",
+   "cadical_s": 306,
+   "cake_s": 53,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40h_52h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "9cb836faa7b21ad96b12175a7fd76a54db1eba95429c0619f4a4b1c2fa5e80f4",
+   "cadical_s": 311,
+   "cake_s": 62,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhhoho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "34fa058ebb6eb4f0e4490bc6e017952aedb5a37eb3cd5097a6325091b31d24cd",
+   "cadical_s": 289,
+   "cake_s": 67,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40h_52o_46h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "f74199ce8f3da358c96523671ca2889062453f57a9dd4e7761838839210e53c4",
+   "cadical_s": 290,
+   "cake_s": 74,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohhohh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "fdd6859da6fb436d4cb9a598fd338c0f539fd4129b2776682d8687182d8a389c",
+   "cadical_s": 306,
+   "cake_s": 47,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40h_52o_46o_44o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "0d2fd6c63081061d6b0a9c6e1cae1e7817d19d1f58014115132b57ca27c9e8d5",
+   "cadical_s": 303,
+   "cake_s": 47,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40o_52o_46h_44h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "a13d3c27f4e403275d969f580891b0a8240aac5b76f1f807f2aba76a509076d2",
+   "cadical_s": 229,
+   "cake_s": 58,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40h_52o_46o_44h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "67a406f8ec31c3a147e77b2e01ceb4c9ffc59c3723ea4924decd16124808837a",
+   "cadical_s": 192,
+   "cake_s": 45,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_ohhhhh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "abd4ce064f8ef4c4d2cce92159a19a4368e8a4b6a4d0fb79351448b57e1d65fa",
+   "cadical_s": 204,
+   "cake_s": 33,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40o_52o_46h_44o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "0c4bfe4f05d5d071fc302af612dcaea0227d7ecf2979ca6e4051a395074c8657",
+   "cadical_s": 190,
+   "cake_s": 32,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhhhho",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "e2caef0847022c5b5439d340a2752149f65485816b7b42f485c58d15e94a3fdc",
+   "cadical_s": 210,
+   "cake_s": 56,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40o_52h_46h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "66eaf1ce3aaf19b3a99578303fb00330d277518b75e3863ce10ee26942b9d893",
+   "cadical_s": 181,
+   "cake_s": 38,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hoohhh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "05de0724138838c481aaa1d4bae1d0e146637bad7582d5217f606a60068e5beb",
+   "cadical_s": 145,
+   "cake_s": 25,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40o_52h_46o_44h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "f63356dccc583e219a5505ca45a142c6186e15ed468060974ae71c967bf83e8f",
+   "cadical_s": 146,
+   "cake_s": 42,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhhhoh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "1487d7ed2a9b9d1b028e2b6f92962b2390ea9833ca38fa9db09937c94b55cc87",
+   "cadical_s": 103,
+   "cake_s": 20,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40o_52h_46o_44o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "a07ad2f9832400d8107ce8e009a2bb912a2c81956c6bfdda5ddb7ebe367a5fef",
+   "cadical_s": 98,
+   "cake_s": 32,
+   "attempts": 1
+  },
+  {
+   "leaf": "cal15_hohhhh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "98668a4545e46eba2043d82507e1a752119003e681d6aa6ff19831a18cd2eb60",
+   "cadical_s": 66,
+   "cake_s": 21,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhohhh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4f22122a93f10a0d4034c6c63bb0216e5b5f3341edd769b410da716332843ab2",
+   "cadical_s": 64,
+   "cake_s": 21,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40o_52o_46o_44o_45h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "505ff25405a137252235672890031a78d3deee454ef35c3751048d614a0c05ce",
+   "cadical_s": 35,
+   "cake_s": 15,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40o_52o_46o_44o_45o_39h",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "bc8df6c8fb2800fa865efb5bca8fb7485eb5302e5c2bdfbb96722df8a56681be",
+   "cadical_s": 31,
+   "cake_s": 7,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_oooooo_40o_52o_46o_44o_45o_39o",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "142fafe0f35657ac3f58e5b1df003d889509ca66c751e8de385afa56e4898a10",
+   "cadical_s": 23,
+   "cake_s": 5,
+   "attempts": 1
+  },
+  {
+   "leaf": "cal15_hhhhhh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "330c647ce0d5f59fc9be59941086d63b7b3eac6c7a6f8a69af51b16b8c77b25c",
+   "cadical_s": 17,
+   "cake_s": 4,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhhohh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "cadical_s": 0,
+   "cake_s": 0,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhhooh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "cadical_s": 0,
+   "cake_s": 0,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhoohh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "cadical_s": 0,
+   "cake_s": 0,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hhoooh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "cadical_s": 0,
+   "cake_s": 0,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hohohh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "cadical_s": 0,
+   "cake_s": 0,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hohooh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "cadical_s": 0,
+   "cake_s": 0,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hooohh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "cadical_s": 0,
+   "cake_s": 0,
+   "attempts": 1
+  },
+  {
+   "leaf": "c15_hooooh",
+   "verdict": "s VERIFIED UNSAT",
+   "cnf_ok": true,
+   "lrat_sha256": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+   "cadical_s": 0,
+   "cake_s": 0,
+   "attempts": 1
+  }
+ ]
+}

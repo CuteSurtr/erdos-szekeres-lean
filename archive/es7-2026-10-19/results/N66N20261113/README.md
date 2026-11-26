@@ -1,5 +1,9 @@
 # N66N20261113: the internal catalog for (no 6-cap, no 6-cup, no convex octagon) (13 November 2026)
 
+> **Re-solve (25-26 Nov 2026):** the 105 level-15 cube proofs deleted on 24 Nov were re-solved with the proofs kept:
+> 105/105 `s VERIFIED UNSAT` (cake_lpr). Each `trim.cnf` equals its receipt hash, and the texts match the Lean hash
+> binding of `CubesUnsat105R`. See `receipts/resolve-20261126/README.md`. The 132 level-14 proofs were not re-solved.
+
 > **Proof deletion (24 Nov 2026, owner: "verify every one of these git push and commit, then delete"):** the 237
 > kept cube proofs (trim.lrat.zst of the 132 level-14 leaves in p2/c14 and the 105 level-15 leaves in p2/c15 and
 > p2/cal15; 96.5 GB) are deleted after this receipt file was committed and pushed: `receipts/n66_cube_proofs_20261124.tsv`.

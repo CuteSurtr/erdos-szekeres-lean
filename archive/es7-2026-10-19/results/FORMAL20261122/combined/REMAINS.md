@@ -1,5 +1,38 @@
 # REMAINS: what each bound still rests on after `combined` part 2 (23 Nov 2026, 00:05 KST)
 
+> **Update 26 Nov 2026 10:50 (main session): part 3 accepted. ES(8) ≤ 302 has an end theorem whose only hypotheses
+> are cake_lpr verdict props.** `Combined.es302_verdicts` (`src/Combined/ES302Final.lean`, `950be932…`, PART3.md)
+> compiled: lean_rc 0, three axiom guards [propext, Classical.choice, Quot.sound], four type-pinning `example`s, and
+> the `#check` equal to PART3.md §2. Its six hypotheses are H-N66C, H-N66R and H-ROWS (`hP`, `hQ`, `hU`, `hA`), so the
+> budget-69 tree (H-T69) and the slice s35_20 (H-S3520) are no longer hypotheses. The control `controls/Bad302.lean`,
+> the same term at 301, fails with exactly one error, the type mismatch. The import audit over the 69,731-module
+> closure reports `"problems": []`: every module comes from one root, every olean hash equals its pin, and part 2's
+> 15,205-module closure is inside with the same files and hashes. PART3.md §6 items 1-3 hold, and the advisor was
+> consulted (es-research §7).
+> **Label (PART3.md §6.4): ES(8) ≤ 302, Lean-checked modulo 2,759 cake_lpr verdicts (H-N66C 105, H-N66R 629,
+> H-ROWS 2,025) and trust items E1-E6 (E3 tested, not proved).**
+> Limits:
+> - Unrefereed; part 3 has had no review of any kind (parts 1 and 2 each had an in-project review,
+>   `review/VERIFY_combined*.md`).
+> - One build on one machine; the imported oleans are hash-pinned, not recompiled.
+> - The 105 N66 cube proofs (H-N66C), deleted on 24 Nov, were re-solved with the proofs kept: 105/105 CERTIFIED,
+>   26 Nov 06:13.
+>
+> Details: "Part 3" below and README.md "Part 3".
+
+## The end theorems (part 3: the budget-69 tree and s35_20 discharged, 26 Nov 2026)
+
+| bound | Lean theorem (module `Combined.ES302Final`) | hypotheses | label |
+|---|---|---|---|
+| ES(8) ≤ 302 | `Combined.es302_verdicts` | 6: H-N66C, H-N66R, H-ROWS (4) | Lean-checked modulo H-N66C, H-N66R, H-ROWS (2,759 cake_lpr verdicts; trust items E1-E6) |
+| ES(8) ≤ 304 | `Combined.es304_verdicts` | the same 6 | the same |
+| ResidualBound 118 | `Combined.residual_bound_118_verdicts` | the same 6 | the same |
+
+ES(8) ≤ 303 has no part-3 form: 302 supersedes it, and its tree (H-T68) was deleted on 24 Nov. `src/Audit3.lean`
+re-checks the three statements mechanically: 6 hypotheses each, and none mentions `OmissionZRow.N66Bound`,
+`ExcludesHoleBudgetZZsN` or `Res118.ResSliceExcludes` (`logs/Audit3.log`, STMT lines). The part-2 tables below stay
+valid for the part-2 forms.
+
 > **Update 25 Nov 2026 ~20:45 (main session): H-T69 has a Lean proof.** FV302 was accepted: `E302ZZ.Final.excludes_69`
 > proves the budget-69 tree statement with standard axioms. The next step, part 3 (PART3.md), plugs it and `RS.s35_20`
 > into `es302_l15_s3519`; s35_20's Root join aborted twice on 25 Nov (stack overflow) and is being rebuilt as sub-roots.
@@ -62,13 +95,13 @@ What is no longer a hypothesis (each Lean-checked by its own project, plugged in
 
 | id | Lean hypothesis (exact type) | used by | label today | evidence | Lean status |
 |---|---|---|---|---|---|
-| H-N66C | `cubes : N66R15Enc.CubesUnsat105R`, i.e. `∀ c ∈ N66E15.leaves105, ¬ EncB.DimacsSatisfiable (N66E15.fullCnf N66R15Enc.R1_15 c)` | all four | **CERTIFIED**: 105 level-15 cube leaves, exact cover, one cake_lpr `s VERIFIED UNSAT` per certified `trim.cnf`; second acceptance vfy15 (copies of VB's tools, not independent code): fresh cake_lpr 105/105. **All 105 cube proofs were deleted on 24 Nov** (receipts N66N20261113/receipts); a new check needs a re-solve, about 104 CPU-h (HEURISTIC; corrected 25 Nov) | N66N20261113/cubes20261120 §8; hash binding of the printed trims to the certified files 105/105 (n66-l15-rows M9; re-printed by its reviewer, 105/105 byte-identical) | a named cake_lpr verdict prop. Its meaning in terms of the certified bytes is the Lean theorem `N66R15.cubesUnsat105R_of_texts` (each leaf's printed `render nvHeader L` refuted ⇒ `CubesUnsat105R`); trust items E1-E6 |
+| H-N66C | `cubes : N66R15Enc.CubesUnsat105R`, i.e. `∀ c ∈ N66E15.leaves105, ¬ EncB.DimacsSatisfiable (N66E15.fullCnf N66R15Enc.R1_15 c)` | all four | **CERTIFIED**: 105 level-15 cube leaves, exact cover, one cake_lpr `s VERIFIED UNSAT` per certified `trim.cnf`; second acceptance vfy15 (copies of VB's tools, not independent code): fresh cake_lpr 105/105. The 105 proofs deleted on 24 Nov (receipts N66N20261113/receipts) were **re-solved on 25-26 Nov with the proofs kept** (`n66-resolve-20261125`: each `trim.cnf` = its receipt hash; the 105 texts, 98 distinct, = the multiset M9 binds; CaDiCaL 2.1.3, cake_lpr `s VERIFIED UNSAT` 105/105 at 06:13 on 26 Nov; 121 GB zstd) | N66N20261113/cubes20261120 §8; hash binding of the printed trims to the certified files 105/105 (n66-l15-rows M9; re-printed by its reviewer, 105/105 byte-identical) | a named cake_lpr verdict prop. Its meaning in terms of the certified bytes is the Lean theorem `N66R15.cubesUnsat105R_of_texts` (each leaf's printed `render nvHeader L` refuted ⇒ `CubesUnsat105R`); trust items E1-E6 |
 | H-N66R | `certs : N66R15Geo.RowCertsUnsat`, i.e. `(∀ t ∈ N66R15Enc.templates, ¬ DimacsSatisfiable (certCnf t)) ∧ ∀ k ∈ N66R15Enc.cores, ¬ DimacsSatisfiable (certCnf k)` (421 templates, 208 cores) | all four | **CERTIFIED**: 629 row-certificate verdicts, namely **628 full CNFs plus the trimmed sub-CNF of template T208** (`T_849f8a5e23a1fc77`, `349b6c6c…`) | VB's records (exact line 628/628 and T208's `.trimmed.cake.out`); n66-rowsvalid's fresh cake_lpr 629/629; n66-l15-rows' fresh run on the 161 certificates the 595 new rows use, 161/161; its reviewer's fresh sample 13/13; printed texts = VB's CNFs 629/629 (m9rows; reviewer 628/628 + T208) | a named cake_lpr verdict prop; meaning via `N66R15.rowCertsUnsat_of_texts` (T208 through `subUnsat_of_text`, any index list); trust items E1-E6 |
 | H-ROWS | `hP : RowGeo.RowsTextUnsat Res118.rowsP`, `hQ : … rowsQ`, `hU : … rowsU`, `hA : … rowsA` (812 + 208 + 35 + 970 = 2,025 rows, 2,021 distinct supports) | all four | **CERTIFIED** per row (one cake_lpr verdict each) | as in part 1: T4 re-check jobs ES307 v169 (1,994 accepted, `f80a720e…`) and VERIFY307 b35s19-v16 (1,057 accepted, `7b8d9eca…`); printed text = certified CNF 2,025/2,025 (res118-rowblocks M9, re-run by its reviewer); cake outputs in `FORMAL20261122/evidence/res118-rowblocks-e2/`. The cut-row LRATs named in the T4 TSVs are now stored as `.lrat.zst` (same content hash; part 1 review nit 2) | a named cake_lpr verdict prop on the bytes `rowprint row B I` writes (`rowprint` `eabe3791…`); trust items E1-E6 |
 | H-S3519 | `s35_19 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsU) 35 19` | none since the switch (was: all four) | **EXACT TREE** (fresh_replay_v3: 15,533,581 nodes, 7,763,207 leaves, minimum margin 1; tcheck_b35 + pycheck_b35, VB CONFIRMED) | tree `es308-20261114/runs/b35s19/bb` (master `249497e8…`), rows `inputs/b35s19-v16/extra.json` (`1257c4a1…`) | **in Lean**: `RS.s35_19` (res-slices-fv, accepted by its finish recipe 23 Nov 16:30), used by `Combined.Switch3519L15` (compiled 24 Nov 03:22, audit 03:28) |
-| H-S3520 | `s35_20 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA) 35 20` | all four | **EXACT TREE by three implementations** (ES307 T5-T7: 238,116,145 nodes, 119,054,034 leaves, minimum margin 1; VR CONFIRMED) | tree `es308-20261114/runs/b35s20/bb-s1` (master `71993a47…`), rows `inputs/b35s20-v169/extra.json` (`de4bcceb…`) | **Lean campaign running** in res-slices-fv since 24 Nov 01:28 (unit esr-fvr-drv; gate s3520-gate) |
+| H-S3520 | `s35_20 : Res118.ResSliceExcludes (Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA) 35 20` | all four | **EXACT TREE by three implementations** (ES307 T5-T7: 238,116,145 nodes, 119,054,034 leaves, minimum margin 1; VR CONFIRMED) | tree `es308-20261114/runs/b35s20/bb-s1` (master `71993a47…`), rows `inputs/b35s20-v169/extra.json` (`de4bcceb…`) | **Lean-checked** since 26 Nov: `RS.s35_20` (res-slices-fv, finish recipe ok 01:14:41); discharged in `Combined.ES302Final` (part 3) |
 | H-T68 | `tree68 : OmissionBalancedZZsF.ExcludesHoleBudgetZZsF 68` | 303 | **EXACT TREE by two in-project checks** (check_tree via v5 and balcheck2: 32,765 files, 246,300,833 nodes, 123,166,799 leaves, minimum margin 1, cover complete); the tree b68zs was deleted on 24 Nov, so it cannot be re-checked or put into Lean (corrected 25 Nov) | ES303N20261120 §5 | not started |
-| H-T69 | `tree69 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` | 302 | **EXACT TREE by two in-project checks** (check A v5n54 + check B balcheck2: 32,618 files, 87,902,270 nodes, 43,967,444 leaves, minimum margin 1, cover complete; ACCEPT302 24 Nov 01:43) | ES302N20261124 §4 | **Lean-checked** since 25 Nov: `E302ZZ.Final.excludes_69 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` (FV302 ACCEPTED ~20:40 by its pre-registered items 1-4; FORMAL20261122/fv302). It stays a binder of `es302_l15_s3519` until part 3 (`Combined.ES302Final`, PART3.md) compiles |
+| H-T69 | `tree69 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` | 302 | **EXACT TREE by two in-project checks** (check A v5n54 + check B balcheck2: 32,618 files, 87,902,270 nodes, 43,967,444 leaves, minimum margin 1, cover complete; ACCEPT302 24 Nov 01:43) | ES302N20261124 §4 | **Lean-checked** since 25 Nov: `E302ZZ.Final.excludes_69 : OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` (FV302 ACCEPTED ~20:40 by its pre-registered items 1-4; FORMAL20261122/fv302). Discharged in `Combined.ES302Final` (part 3, 26 Nov) |
 
 **Trust items** (ENCBLEAN wording) for H-N66C, H-N66R and H-ROWS:
 - **E1**: the printers' output equals the certified bytes. Checked: rows 2,025/2,025 (`rowprint`); N66 cube trims
@@ -76,11 +109,17 @@ What is no longer a hypothesis (each Lean-checked by its own project, plugged in
 - **E2**: the cake_lpr verdicts (exact line `s VERIFIED UNSAT`). Second check (25 Nov 2026,
   [LEANLRAT20261125](../../LEANLRAT20261125/README.md)): all 2,025 H-ROWS and all 629 H-N66R kept proofs are also
   accepted by Lean core's verified checker `Std.Tactic.BVDecide.LRAT.check` (run natively, on the texts of the frozen
-  printers, hash-checked); H-N66C (105) is not covered (proofs deleted 24 Nov; re-solve running).
+  printers, hash-checked); H-N66C (105) is not covered: its proofs were re-solved on 25-26 Nov and are kept, but at up to about 10 GB raw each they
+  exceed that checker's memory (it loads a whole proof).
 - **E3**: cake_lpr parses each file as `EncB.parseDimacs` / `parseDimacsBytes` does. Tested, **not proved**.
 - **E4**: the Lean compiler and runtime of the three printers.
 - **E5**: the kernel, Mathlib `f897ebcf` and the definitions.
 - **E6**: SHA-256.
+
+## Per bound, the exact remaining list (part 3 forms)
+
+- **ES(8) ≤ 302, ES(8) ≤ 304, ResidualBound 118** (`Combined.es302_verdicts`, `es304_verdicts`,
+  `residual_bound_118_verdicts`): H-N66C, H-N66R, H-ROWS. Nothing else.
 
 ## Per bound, the exact remaining list (part 2 forms)
 
