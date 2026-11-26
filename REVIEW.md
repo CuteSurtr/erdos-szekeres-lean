@@ -80,8 +80,9 @@ Times and memory were measured on one machine: AMD Ryzen 9 9950X3D (16 cores), a
 | second check of 2,654 verdicts | `LEANLRAT20261125` (Lean core's `LRAT.check`) | 4,016 s in total | 4.7 GB peak |
 | E1 bindings | the printers' hash checks (`res118-rowblocks` and `n66-l15-rows` M9) | minutes | up to 2.5 GB |
 
-The trees that regenerate the chunk sources are kept on the project machine. Since 26 Nov they are being uploaded to
-the owner's private archive (release `trees-302-20261126`).
+The trees that regenerate the chunk sources are kept on the project machine and, since 26 Nov, in the owner's private
+archive (release `trees-302-20261126`: 46 parts, 85.9 GB; GitHub's SHA-256 of every part equals the local one; record
+`archive/es7-2026-10-19/results/CLEANUP20261126/README.md`, "Trees upload").
 
 ## 5. What is not checked
 

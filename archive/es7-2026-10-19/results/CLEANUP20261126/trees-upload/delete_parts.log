@@ -1,0 +1,50 @@
+2026-11-26 16:07:01 delete the 46 temporary tar parts (each listed OK in verify.tsv); originals stay
+free before: 931 GB (df -B1G)
+1992294400 b67.tar.part000
+1992294400 b67.tar.part001
+1992294400 b67.tar.part002
+1992294400 b67.tar.part003
+818216960 b67.tar.part004
+1992294400 b69zs54.tar.part000
+1992294400 b69zs54.tar.part001
+1992294400 b69zs54.tar.part002
+1992294400 b69zs54.tar.part003
+1992294400 b69zs54.tar.part004
+1992294400 b69zs54.tar.part005
+1992294400 b69zs54.tar.part006
+1992294400 b69zs54.tar.part007
+1992294400 b69zs54.tar.part008
+1992294400 b69zs54.tar.part009
+1992294400 b69zs54.tar.part010
+1992294400 b69zs54.tar.part011
+1992294400 b69zs54.tar.part012
+1992294400 b69zs54.tar.part013
+1992294400 b69zs54.tar.part014
+1992294400 b69zs54.tar.part015
+1992294400 b69zs54.tar.part016
+468776960 b69zs54.tar.part017
+148070400 ctx-manifests.tar.part000
+1992294400 es308-runs-inputs.tar.part000
+1992294400 es308-runs-inputs.tar.part001
+1992294400 es308-runs-inputs.tar.part002
+1992294400 es308-runs-inputs.tar.part003
+1992294400 es308-runs-inputs.tar.part004
+1992294400 es308-runs-inputs.tar.part005
+1992294400 es308-runs-inputs.tar.part006
+1992294400 es308-runs-inputs.tar.part007
+1992294400 es308-runs-inputs.tar.part008
+1992294400 es308-runs-inputs.tar.part009
+1992294400 es308-runs-inputs.tar.part010
+1992294400 es308-runs-inputs.tar.part011
+1992294400 es308-runs-inputs.tar.part012
+1992294400 es308-runs-inputs.tar.part013
+1992294400 es308-runs-inputs.tar.part014
+1992294400 es308-runs-inputs.tar.part015
+1992294400 es308-runs-inputs.tar.part016
+1992294400 es308-runs-inputs.tar.part017
+1992294400 es308-runs-inputs.tar.part018
+1992294400 es308-runs-inputs.tar.part019
+1992294400 es308-runs-inputs.tar.part020
+788439040 es308-runs-inputs.tar.part021
+free after: 1011 GB (df -B1G)
+2026-11-26 16:07:01 done; parts left: 0
