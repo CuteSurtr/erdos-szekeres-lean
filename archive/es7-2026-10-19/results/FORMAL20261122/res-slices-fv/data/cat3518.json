@@ -1,0 +1,29 @@
+{
+ "tag": "3518",
+ "budget": 35,
+ "T": 18,
+ "extra": "/home/jay/research/data/es308-20261114/inputs/b35s18-v13/extra.json",
+ "extra_sha256": "c9c922c0a113c78effbbbef330c000af90b528152c9c511592f6210c1040caa7",
+ "rows": 3672,
+ "unit_rows": 1020,
+ "rows_expr": "(Res118.rowsP ++ Res118.rowsQ)",
+ "new_nodes": 3067,
+ "new_rows": 1022,
+ "reused": 2046,
+ "extracted": 4090,
+ "parts": [
+  "RS/Cat3518_p0",
+  "RS/Cat3518_p1",
+  "RS/Cat3518_p2",
+  "RS/Cat3518_p3",
+  "RS/Cat3518"
+ ],
+ "part_sha256": {
+  "RS/Cat3518_p0": "6cb232c563f07188be0bb876d50650b2e6e621e0e41a4d37f8749da215703721",
+  "RS/Cat3518_p1": "ba5fba339fb3a072e818294bcea6bb0a1be1960bea9caa16218fbeca0af69068",
+  "RS/Cat3518_p2": "cfc47b2335427704debdf45dbaccd6001e20998e9f5130dd7839f287f2acae14",
+  "RS/Cat3518_p3": "4a0ceed0afa04bfc7b1c6501b945b68de8e8867b69a143805b633b0d602de29e",
+  "RS/Cat3518": "afd4dc61e7a76215448abc6d0ea9e12267f3cc9dc41896e17aec1521cfac88f5"
+ },
+ "bridge_sha256": "2e8389942c3fb81a954e05b430fa603807e7d0d6eb4ec4faadd077e582aba4f1"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "3520",
+ "budget": 35,
+ "T": 20,
+ "extra": "/home/jay/research/data/es308-20261114/inputs/b35s20-v169/extra.json",
+ "extra_sha256": "de4bcceba6d0c80ce6f63cbef15822cac8300780607c738569999a7d94b81916",
+ "rows": 4642,
+ "unit_rows": 1990,
+ "rows_expr": "(Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsA)",
+ "new_nodes": 4585,
+ "new_rows": 1992,
+ "reused": 2594,
+ "extracted": 5186,
+ "parts": [
+  "RS/Cat3520_p0",
+  "RS/Cat3520_p1",
+  "RS/Cat3520_p2",
+  "RS/Cat3520_p3",
+  "RS/Cat3520_p4",
+  "RS/Cat3520_p5",
+  "RS/Cat3520"
+ ],
+ "part_sha256": {
+  "RS/Cat3520_p0": "52b6cb5562683d4ebddf9cb6838c21b16a0b71d31f9c45a30e961a2741c7fefd",
+  "RS/Cat3520_p1": "201f1d6e02ec21095b493cc6fdad33ac77ed13d5b987ca6feee18afce9a2f68f",
+  "RS/Cat3520_p2": "128be7efa4a389f43d63612af51a7fbd6f6820f755a11a942b771b32dd496444",
+  "RS/Cat3520_p3": "d5237f33b6ea67c3247f27fc13310bbbbade0ecab6b2cc53f6bcf50d74eec18d",
+  "RS/Cat3520_p4": "92395eac9d8359393997c2fff8db0a715998dac7294ae19ff1431965d8f2a703",
+  "RS/Cat3520_p5": "543ba652720658db973611483e9adb1efca11f37f7ca1367e68547c4ff2d0236",
+  "RS/Cat3520": "7c7f9adc65d187458acc7edc94ed8e54d68a56e89c2e9b54aea7ba3dfb820c8f"
+ },
+ "bridge_sha256": "f62f8588d177b893d415fe70d52fa1e0bc23ee150d70cf25b59b7c5e1417f978"
+}

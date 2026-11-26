@@ -1,0 +1,24 @@
+{
+ "tag": "3318",
+ "theorem": "RS.s33_18",
+ "axioms": "[propext, Classical.choice, Quot.sound]",
+ "leaves": 1907,
+ "units": 1,
+ "modules": 1,
+ "master_sha256": "4abbf0674016800249b20a5d0172a71a6e2df89fa96857cdd6fbc7bcb6b2b3fc",
+ "contexts_digest": "b1f5b94a235314f0f67c93bdbbc2a3be1ddfebe761d0b18a808678d0c4233982",
+ "extra_sha256": "1d6141afc91e3a4af67d713293f12a872c4d153e555e297b3d55028d9197d26d",
+ "problems": [],
+ "files": {
+  "export/3318/src/RS3318/C000001.lean": "da83a87c617b805fd092e0bd4b96682a70b8706b048bcd431816145b27144f08",
+  "olean/RS3318/C000001.olean": "338c0ab5244e4c8c719a75da4fc528828c97abeafbfa199202b2a8189e49ea91",
+  "lean/RS/Cat3318.lean": "6439745768c313ecdd05b4c352dfb3acb37b22c113d5b63fbd85006ff319e447",
+  "olean/RS/Cat3318.olean": "9ff7b4e864dcfb2e169cd035ccb4fe76cb707877179bb4aedb2d25ff9bb5fd39",
+  "export/3318/src/RS3318/Root.lean": "e7bb27d4823095b35eb6d9b4b8144e0b9bf29d0438c047a662dbe4942a2c26b4",
+  "olean/RS3318/Root.olean": "1f6271c81dd3efb1ec6c88b4892c97e8b448fc4c8a14455d57e715d96f5e996d",
+  "lean/RS/Bridge3318.lean": "ec39d5d06ffc36aee41ce3f6241263d3f753ef8d9093862b60385fedc6527824",
+  "olean/RS/Bridge3318.olean": "eaf3416bb69e35828e63c275a8def905c92672fd96fcfb1cc6b54bcf7cc02890",
+  "lean/RS/Final3318.lean": "7296f6f0dacf5535b3fb9d7aa40ffa7efa88bf6fdaeaa409a1c9b2d4dea837a9",
+  "olean/RS/Final3318.olean": "ae40b37059a31eafa2db54239ee6da22c73d99eccd8bcafb8af2428d9e1dd359"
+ }
+}

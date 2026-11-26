@@ -1,0 +1,29 @@
+{
+ "tag": "3519",
+ "budget": 35,
+ "T": 19,
+ "extra": "/home/jay/research/data/es308-20261114/inputs/b35s19-v16/extra.json",
+ "extra_sha256": "1257c4a15a52d89451b7c73736d6182fd859892febdea421e7e4a72b74f5f25c",
+ "rows": 3707,
+ "unit_rows": 1055,
+ "rows_expr": "(Res118.rowsP ++ Res118.rowsQ ++ Res118.rowsU)",
+ "new_nodes": 3104,
+ "new_rows": 1057,
+ "reused": 2048,
+ "extracted": 4094,
+ "parts": [
+  "RS/Cat3519_p0",
+  "RS/Cat3519_p1",
+  "RS/Cat3519_p2",
+  "RS/Cat3519_p3",
+  "RS/Cat3519"
+ ],
+ "part_sha256": {
+  "RS/Cat3519_p0": "22af0aa3d5380e843e295dace91961f8dc7670e104a915f17e0447ca265201f0",
+  "RS/Cat3519_p1": "86665bd9c0c33a80d9607c8c8f6cbc3523c9f56b3e1da4e966d91543e75c3e2e",
+  "RS/Cat3519_p2": "c9b0bb3dbaa75cbd9c4ab04016cbbff7801c9a305773f667bf92401fb54f73d9",
+  "RS/Cat3519_p3": "9113ce98fee370fd9122926eba214b525758653abe30a179639cd6a4b4a4b048",
+  "RS/Cat3519": "b383f084441f2e532ebaf7b128912f18695a83ebbb720b07ebe3c5b93d056cdc"
+ },
+ "bridge_sha256": "d237860690050a437dbb7b9b8d1d79eba5928996108613ea2cbddb1eb228dbe3"
+}

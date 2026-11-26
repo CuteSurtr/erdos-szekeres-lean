@@ -21,3 +21,10 @@ the conditions of an AI model review (not a person) met: the resumed chain's own
 23,098 files, 108.10 GB, by `verify-20261124/delete_proofs.py` (`receipts/delete_slices.sh`; dry run and execute: every
 file re-hashed = receipt, 0 problems; manifest `verify-20261124/manifest_deletions.txt`). Free disk 1,046.4 ->
 1,141.7 GB (the N66 re-solve was writing proofs at the same time).
+
+**Mirrored 26 Nov 2026** (owner's wrap-up request): `lean/RS/` (the slice library, 46 sources: 6 bridges, 27
+catalog files, 6 `Final` modules from `Final3318` to `Final3520`, 5 `FinalTest` controls, `Lib` and `Res118FV`) and
+`data/` (the slice audits `audit-*.json`, catalogs, inputs, the olean baseline hashes, and the sources, logs and hashes
+of the spec snapshots), copied byte for byte from the work directory. Not mirrored: the generated chunk sources
+(deleted after the regeneration tests, `regen-test/`), all oleans (including those of the spec snapshots) and the
+per-module compile logs.

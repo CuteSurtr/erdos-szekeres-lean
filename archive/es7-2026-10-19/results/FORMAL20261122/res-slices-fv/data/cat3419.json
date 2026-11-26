@@ -1,0 +1,27 @@
+{
+ "tag": "3419",
+ "budget": 34,
+ "T": 19,
+ "extra": "/home/jay/research/data/es308-20261114/inputs/s19/extra.json",
+ "extra_sha256": "770d276db7b51d369e9a6fa1b9f36abb15d2539d224a71b19bf5fa738cbd9983",
+ "rows": 3464,
+ "unit_rows": 812,
+ "rows_expr": "Res118.rowsP",
+ "new_nodes": 2651,
+ "new_rows": 814,
+ "reused": 1838,
+ "extracted": 3674,
+ "parts": [
+  "RS/Cat3419_p0",
+  "RS/Cat3419_p1",
+  "RS/Cat3419_p2",
+  "RS/Cat3419"
+ ],
+ "part_sha256": {
+  "RS/Cat3419_p0": "dd432848c44ddfa5f79e5ae9980983ad243ea8ecd82ed41735406abdde01bceb",
+  "RS/Cat3419_p1": "d9fab6268b1505a6da45b714ce62d4ee8610f9c2458aaccdae538f18ba04be41",
+  "RS/Cat3419_p2": "78501bd578afc10827cd06c3fe2bb95e22d91ce6effe9657ca8fadc48f914723",
+  "RS/Cat3419": "8d3ae41d504a4eb76f41703590de9b7780ffcefc6617dc5ea9d180c1e0ce13e5"
+ },
+ "bridge_sha256": "40886619c05c31c2ae96bb592a1149f9efce3352603f2188047931b0ae97f747"
+}
