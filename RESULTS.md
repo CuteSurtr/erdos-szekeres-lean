@@ -11,10 +11,12 @@ back to CERTIFIED by a Linux re-certification with the proofs kept (RECERT202611
 re-checked rigorously. On 26 November D1 was raised back to CERTIFIED by a re-solve of its 96 cube proofs
 (byte-identical to the deleted ones, kept; C6UPPER/receipts/resolve-20261126). Results after 12 November (ES(8) ≤ 309 to
 302) are in the ES30xN records and the STATUS pages, not yet in this index.
-Lean status of ES(8) ≤ 302 (26 November 2026): `Combined.es302_verdicts : … → ForcesConvexNGon 302 8`, whose only
-hypotheses are 2,759 cake_lpr verdict propositions (trust items E1-E6). That is, ES(8) ≤ 302 is Lean-checked modulo
-those verdicts, in [FORMAL20261122/combined](archive/es7-2026-10-19/results/FORMAL20261122/combined/REMAINS.md)
-(part 3, not reviewed). The strongest bound with an unconditional Lean theorem is still A1 (310).
+
+**The two ES(8) upper bounds (status of 26 November 2026; nothing is refereed):**
+- **ES(8) ≤ 310** (row A1): Lean-checked, standard axioms only, no hypotheses.
+- **ES(8) ≤ 302** (`Combined.es302_verdicts`, [FORMAL20261122/combined](archive/es7-2026-10-19/results/FORMAL20261122/combined/REMAINS.md)):
+  Lean-checked modulo 2,759 SAT verdicts certified by cake_lpr (2,654 also accepted by Lean core's LRAT checker; the
+  105 N66 cubes by cake_lpr only). Not reviewed by any person.
 
 All statements concern finite sets of points in the real plane in general position (no three on a line). A convex
 k-gon is a set of k of the points in convex position; other points of the set may lie inside it. ES(k) is the least N
@@ -78,7 +80,7 @@ residual rows over 154 states. [math.md](math.md) §3 and §6 give the details.
 
 | # | Result | Status | Lean declaration / certificate | Record | Reproduce |
 |---|---|---|---|---|---|
-| A1 | **ES(8) ≤ 310**: every set of 310 points contains a convex octagon; an octagon-free set has at most 1 + 187 + 121 = 309 points | **Lean-checked** on 10 November 2026 by a compact reflective checker, in real mode, with all six gates passed. Not refereed | `ErdosSzekeres.Omission.Compact310.forces_convex_octagon_310 : ForcesConvexNGon 310 8`, from `balanced_population_187` (no balanced hole vector with at most 64 holes: 4,096 trees, 7,048,218 leaves) and `residual_population_121` (A5); checker soundness `CompactChecker.checkF2_sound` | [10 November section](experiments/omission-compact-checker-2026-11-05/README.md#10-november-2026-es8--310-is-lean-checked-compact-checker-unrefereed), [final310-compact.json](experiments/omission-compact-checker-2026-11-05/logs/es310/final310-compact.json); search: [ES8UPPER20261105](archive/es7-2026-10-19/results/ES8UPPER20261105/README.md), [ES8B64MAC20261110](archive/es7-2026-10-19/results/ES8B64MAC20261110/README.md) | [OPERATOR.md](experiments/omission-compact-checker-2026-11-05/logs/es310/OPERATOR.md) §B, ending in the checker directory with `bash assemble_final310.sh --dry-run` and `A310_MEM=24G bash assemble_final310.sh`; 36.7 CPU-hours of Lean. Needs data outside Git (see below) |
+| A1 | **ES(8) ≤ 310**: every set of 310 points contains a convex octagon; an octagon-free set has at most 1 + 187 + 121 = 309 points | **Lean-checked**, standard axioms only, no hypotheses: on 10 November 2026 by a compact reflective checker, in real mode, with all six gates passed. Not refereed | `ErdosSzekeres.Omission.Compact310.forces_convex_octagon_310 : ForcesConvexNGon 310 8`, from `balanced_population_187` (no balanced hole vector with at most 64 holes: 4,096 trees, 7,048,218 leaves) and `residual_population_121` (A5); checker soundness `CompactChecker.checkF2_sound` | [10 November section](experiments/omission-compact-checker-2026-11-05/README.md#10-november-2026-es8--310-is-lean-checked-compact-checker-unrefereed), [final310-compact.json](experiments/omission-compact-checker-2026-11-05/logs/es310/final310-compact.json); search: [ES8UPPER20261105](archive/es7-2026-10-19/results/ES8UPPER20261105/README.md), [ES8B64MAC20261110](archive/es7-2026-10-19/results/ES8B64MAC20261110/README.md) | [OPERATOR.md](experiments/omission-compact-checker-2026-11-05/logs/es310/OPERATOR.md) §B, ending in the checker directory with `bash assemble_final310.sh --dry-run` and `A310_MEM=24G bash assemble_final310.sh`; 36.7 CPU-hours of Lean. Needs data outside Git (see below) |
 | A2 | ES(8) ≤ 311, second Lean check (5–6 November 2026) | Lean-checked. A reproduction of A3 with the compact checker (same trees, catalogs and kernel), not an independent proof; superseded | `ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311` | [compact recheck](experiments/omission-compact-checker-2026-11-05/README.md#6-november-2026-the-compact-recheck-is-complete), `logs/es311/` | that section, "6. How to reproduce" (about 10 CPU-hours); the balanced tree `tree-63` is left out |
 | A3 | ES(8) ≤ 311 (19 October 2026): balanced bound 188 (budget 63, 782,437 leaves) | Lean-checked on one machine (catalog, 18,066 certificate parts and root; about 175 CPU-hours); superseded | `ErdosSzekeres.Omission.forces_convex_octagon_311`, `convex_octagon_of_card_ge_311` | [omission-final311-2026-10-14](experiments/omission-final311-2026-10-14/README.md) | its "Reproduction"; `tree-63` is left out |
 | A4 | ES(8) ≤ 312 (14 October 2026): balanced bound 189 (budget 62, 93,988 leaves) | Lean-checked on one machine (2,169 certificate modules; about 58 CPU-hours); superseded | `ErdosSzekeres.Omission.forces_convex_octagon_312` | [omission-final312-2026-10-13](experiments/omission-final312-2026-10-13/README.md) | its "Kernel check"; `tree-62` is left out |
@@ -153,7 +155,8 @@ octagon-free rotationally symmetric sets; it is a dated search, not a priority c
 
 ## Open problems
 
-- **ES(8).** 65 ≤ ES(8) ≤ 310 (B3, A1). Within the omission method:
+- **ES(8).** 65 ≤ ES(8) ≤ 310 (B3, A1); ES(8) ≤ 302 is Lean-checked modulo 2,759 SAT verdicts (see the top of this
+  file). Within the omission method:
   - balanced budget 65 has not been attempted;
   - an exact 71-hole vector satisfies all 3,131 balanced rows, so these rows cannot give better than ES(8) ≤ 304
     ([ES8UPPER20261105](archive/es7-2026-10-19/results/ES8UPPER20261105/README.md));
@@ -168,7 +171,8 @@ octagon-free rotationally symmetric sets; it is a dated search, not a priority c
 - **ES(7).** Whether ES(7) = 33 is open. Symmetric counterexamples are excluded (C1). Whether N(7, 5, 7) = 26, the
   Erdős–Tuza–Valtr case (7, 5, 7), is open; C9 connects it with splits of heptagon-free sets.
 - **Octagons, other symmetry types.** The 3-, 4- and 5-fold maxima are open: the known sets have 61, 52 and 56
-  points (D4), the next possible sizes are 63 or 64, 56, and 60 or 61, and the only upper bound is ES(8) ≤ 310.
+  points (D4), the next possible sizes are 63 or 64, 56, and 60 or 61, and the only upper bounds are ES(8) ≤ 310 and,
+  modulo 2,759 SAT verdicts, ES(8) ≤ 302.
   Searches for larger sets found none
   ([LBK8SYM20261111](archive/es7-2026-10-19/results/LBK8SYM20261111/README.md), computational evidence), and the
   solver runs on the 5- and 4-fold threshold formulas closed no cube

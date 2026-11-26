@@ -7,10 +7,13 @@ three on a line) contain n points in convex position; the convex polygon may con
 ## What is proved
 
 - **ES(8) ≤ 310.** Every set of 310 points in general position contains a convex octagon:
-  `ErdosSzekeres.Omission.Compact310.forces_convex_octagon_310`, Lean-checked on 10 November 2026 with a compact
-  reflective checker ([record](experiments/omission-compact-checker-2026-11-05/README.md#10-november-2026-es8--310-is-lean-checked-compact-checker-unrefereed)).
+  `ErdosSzekeres.Omission.Compact310.forces_convex_octagon_310`. Lean-checked, standard axioms only, no hypotheses
+  (10 November 2026, with a compact reflective checker; [record](experiments/omission-compact-checker-2026-11-05/README.md#10-november-2026-es8--310-is-lean-checked-compact-checker-unrefereed)).
   Octagon-free sets have at most 1 + 187 + 121 = 309 points. The proof builds on Michael Schroeder's omission method
   and catalogs ([attribution](#attribution-and-licence)); earlier Lean checks gave 317 down to 311.
+- **ES(8) ≤ 302.** `Combined.es302_verdicts` (26 November 2026; [record](archive/es7-2026-10-19/results/FORMAL20261122/combined/REMAINS.md),
+  [how to review it](REVIEW.md)). Lean-checked modulo 2,759 SAT verdicts certified by cake_lpr (2,654 also accepted
+  by Lean core's LRAT checker; the 105 N66 cubes by cake_lpr only). Not reviewed by any person.
 - **ES(n) ≥ 2^(n−2) + 1** for n ≥ 3, by the Erdős–Szekeres construction; hence **65 ≤ ES(8) ≤ 310**.
 - **Suk's bound** ES(n) ≤ 2^(n + 6n^(2/3) log₂ n) and the **Holmsen–Nassajian Mojarrad–Pach–Tardos bound**
   ES(n) ≤ 2^(n + (8√2/3 + ε)√(n log₂ n)) for all large n, for ordinary real point sets (formalized, not improved).
