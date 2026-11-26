@@ -366,5 +366,10 @@ encoder B work reads them). A new check of a cube now needs a re-solve (CaDiCaL 
 **Done 24 Nov 2026 05:06 KST:** the 96 `.lrat.zst` files (43.34 GB) were deleted by `receipts/delete_proofs.py`
 after commit 868733e95 (this table) was on origin/main (pushed table re-hashed: `f14dec04…`); every file was
 re-hashed against the table first; the deletion manifest is `~/research/data/verify-20261124/manifest_deletions.txt`.
+
+**Re-solved 26 Nov 2026 (proofs kept again):** all 96 cubes were re-solved from the kept CNFs: CaDiCaL 2.1.3, then
+cake_lpr `c14ff498`, 96/96 with the exact line `s VERIFIED UNSAT` (06:54-12:32 KST). Every formula hash equals the
+receipt's, and every new proof is byte-identical to the deleted one (96/96 LRAT SHA-256 equal to the recorded hash).
+The proofs are kept: 41 GB zstd, round trip checked 96/96. Details are in `receipts/resolve-20261126/README.md`.
 The 98 CNFs remain. Deviation: the owner's deletion policy also asks for an advisor check before each deletion;
 it was not made before this one, only afterwards (05:08: no objection, nothing to undo).

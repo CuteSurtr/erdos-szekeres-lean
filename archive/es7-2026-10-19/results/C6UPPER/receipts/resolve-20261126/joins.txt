@@ -1,0 +1,9 @@
+joins (d1 re-solve, 26 Nov 2026) against the pushed records
+cake.out files with the exact line 's VERIFIED UNSAT': 96; certify.jsonl verdict lines: 96
+receipt C6UPPER/receipts/c6upper_proofs_20261124.tsv: 96 rows; ids = re-solved ids: True
+  cnf sha256 = receipt cnf_sha256: 96 / 96
+  cnf path = receipt cnf_kept: 96 / 96
+  new LRAT sha256 = receipt lrat_sha256_recorded (the deleted proofs): 96 / 96
+ENCBLEAN M9 binding of CubesUnsat64 (logs/m9_review_fix_hash_binding.log): 64 cubes; encoder-B re-solves 64; names equal: True; every cnf sha256 = printed text sha256: True
+encoder A against replay-2026-11-06/results.tsv enc A rows: 32 rows, 32 re-solves; names equal: True; hashes equal: True (encoder A has no Lean printer)
+proofs shared by several cubes (same LRAT bytes, each checked against its own CNF): {'637e640a08a3': ['c6r_B_c00010', 'c6r_B_c00011'], '62e58c28ebda': ['c6n_n11000', 'c6n_n11001', 'c6n_n11010', 'c6n_n11011'], 'dd7b24adc280': ['c6n_n10000', 'c6n_n10001', 'c6n_n10010', 'c6n_n10011'], '94913b2e3b91': ['c6r_B_c00100', 'c6r_B_c00101', 'c6r_B_c00110', 'c6r_B_c00111'], '0dbdc02fbfd4': ['c6r_B_c10110', 'c6r_B_c10111'], '8b9ae8f1ef98': ['c6r_A_c10010', 'c6r_A_c10011'], '84e0192faf8e': ['c6n_n11100', 'c6n_n11101'], '90ef58c69862': ['c6n_n01000', 'c6n_n01001'], 'da2179cb4bc2': ['c6r_A_c00100', 'c6r_A_c00101', 'c6r_A_c00110', 'c6r_A_c00111'], '86732bb856bd': ['c6n_n01100', 'c6n_n01101'], '4581a9ca2b52': ['c6r_B_c10010', 'c6r_B_c10011'], '4dcb71802cb0': ['c6r_A_c01100', 'c6r_A_c01101', 'c6r_A_c01110', 'c6r_A_c01111'], '8cb5dbd25e32': ['c6r_B_c01100', 'c6r_B_c01101', 'c6r_B_c01110', 'c6r_B_c01111'], 'af78004e05bd': ['c6r_A_c10110', 'c6r_A_c10111'], 'f2d85a4df887': ['c6r_A_c00010', 'c6r_A_c00011']}

@@ -1,4 +1,4 @@
-# n66-resolve-20261125: restore re-checkable proofs for N66 <= 54 (PRE-REGISTRATION, 25 Nov 2026 ~20:45 KST)
+# n66-resolve-20261125: restore re-checkable proofs for N66 <= 54 (PRE-REGISTRATION, 25 Nov 2026 20:38 KST: file birth time 20:38:26; first header said "~20:45", corrected 26 Nov from stat)
 
 **Why.** `N66Bound 54` (an input of ES(8) <= 302) rests on the cube leaves of the level-15 campaign. Each was accepted
 by cake_lpr twice, and all their LRAT proofs were deleted on 24 Nov after the receipts were pushed
@@ -7,7 +7,7 @@ re-run them needs a re-solve. The certified trim formulas are all on disk. Re-so
 proofs kept, which the paper and any e-mail need.
 
 **What.** For each of the 105 level-15 rows of the receipts (`level = L15`: 103 in `p2/c15/<id>/it1`, 2 in
-`p2/cal15/<id>/it1`; checked 25 Nov 20:5x: all 105 `trim.cnf` present, 1.86 GB, every SHA-256 = the receipt):
+`p2/cal15/<id>/it1`; checked 25 Nov by 20:51 (leaves.tsv written 20:51:12): all 105 `trim.cnf` present, 1.86 GB, every SHA-256 = the receipt):
 1. `trim.cnf` must hash to the receipt's `trim_cnf_sha256_recorded` (mismatch: stop that leaf, report);
 2. `.claude/skills/es-research/scripts/certify_cnf.sh trim.cnf OUT 4000 --keep` (CaDiCaL 2.1.3 `--lrat`, cake_lpr
    c14ff498, verdict only on the exact line `s VERIFIED UNSAT`; the new proof kept as `.lrat.zst`);
