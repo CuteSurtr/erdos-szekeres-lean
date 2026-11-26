@@ -419,7 +419,7 @@ the re-check's cake_lpr lines, the tool hashes and `check` (179/179 OK). The pro
 
 **Deletion (25 Nov 2026; owner, 24 Nov, answering "Delete the K9 proofs, or keep them?": "delete redundant or useless
 files"; the K9 hold before that was the main session's own):** the 179
-re-checked proofs listed in `receipts/k9_satopen_recheck_20261124.tsv` are deleted after the advisor check, with the guarded
+re-checked proofs listed in `receipts/k9_satopen_recheck_20261124.tsv` are deleted after an AI model review (not a person), with the guarded
 `receipts/delete_proofs.py`-style script (`verify-20261124/delete_proofs.py`: every file re-hashed against the pushed
 table first; dry run: 0 problems, 0 bindings). Every CNF (base CNFs and cube unit files), cake output, log and record
 stays; the claims keep their labels (each cube's verdict is on record, accepted by cake_lpr twice, the G3 cubes once,

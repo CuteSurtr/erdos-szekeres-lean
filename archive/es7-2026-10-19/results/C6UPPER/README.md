@@ -371,5 +371,5 @@ re-hashed against the table first; the deletion manifest is `~/research/data/ver
 cake_lpr `c14ff498`, 96/96 with the exact line `s VERIFIED UNSAT` (06:54-12:32 KST). Every formula hash equals the
 receipt's, and every new proof is byte-identical to the deleted one (96/96 LRAT SHA-256 equal to the recorded hash).
 The proofs are kept: 41 GB zstd, round trip checked 96/96. Details are in `receipts/resolve-20261126/README.md`.
-The 98 CNFs remain. Deviation: the owner's deletion policy also asks for an advisor check before each deletion;
+The 98 CNFs remain. Deviation: the owner's deletion policy also asks for an AI model review (not a person) before each deletion;
 it was not made before this one, only afterwards (05:08: no objection, nothing to undo).

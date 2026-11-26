@@ -30,7 +30,7 @@ this repository, so each formula can be regenerated here, matched byte for byte,
 ## Outcome and labels
 
 - Per formula: CNF sha256 = record, `s VERIFIED UNSAT`, proof kept (zstd) → that formula is CERTIFIED in the §2 sense
-  on this machine. The results' labels change only after the advisor consult; the Mac verdicts stay recorded as
+  on this machine. The results' labels change only after an AI model review (not a person); the Mac verdicts stay recorded as
   earlier evidence (CaDiCaL 3.0.1, macOS cake_lpr).
 - C4/C5 encoder soundness stays a written argument until a Lean encoder exists; D2 is already Lean-checked modulo this
   one verdict (FORMAL20261122/sevenfold), so its Lean label then rests on a Linux CERTIFIED verdict.

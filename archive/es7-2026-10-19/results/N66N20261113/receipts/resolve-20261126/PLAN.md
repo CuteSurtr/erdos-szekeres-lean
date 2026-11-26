@@ -22,7 +22,7 @@ it at heap 4000), RuntimeMaxSec 4 h. At most 6 jobs at once while Lean compiles 
 guard and Tctl gates as usual. About 11-17 h wall.
 
 **Outcome.** (Labels: HEURISTIC above; the verdicts below are CERTIFIED only by cake_lpr's line.) Every leaf `s VERIFIED UNSAT` with its proof kept: N66 <= 54's cube leaves are CERTIFIED again (record
-update in N66N20261113/cubes20261120 and REMAINS H-N66C after the advisor). Any leaf not accepted: stop, report, no
+update in N66N20261113/cubes20261120 and REMAINS H-N66C after an AI model review, not a person). Any leaf not accepted: stop, report, no
 label change. Labels do not change before all 105 are done.
 
 - 2026-11-26 04:12: unit esr-n66-hold-tctl (sleep, 8 h) holds one of the 7 slots, so the driver runs 6 cube jobs: Tctl read 86-88 °C at 78 % CPU and part 3 launches its next units only when Tctl < 86 °C.

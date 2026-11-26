@@ -24,9 +24,9 @@
 > every file re-hashed against the pushed table first). Their CNFs, cake outputs, logs and `certify.jsonl` stay, so a new
 > check needs a re-solve. This supersedes "every certified proof ... is kept" above for these 52 files only. The track
 > map of the folder is `ROADMAP20261115/CLEANUP_MAP_20261124.md`.
-> **Done 24 Nov 2026:** 51 of the 52 deleted at 19:18 (26.65 GB), after the advisor check, with every file re-hashed
+> **Done 24 Nov 2026:** 51 of the 52 deleted at 19:18 (26.65 GB), after an AI model review (not a person), with every file re-hashed
 > against the pushed tables (commit 6e39be770). Before the untrimmed `d48_m16` went, its kept trimmed proof was checked
-> again (advisor's condition): decompressed SHA-256 `1abf185657fb6509…` = ROUND6.md, CNF `fcc31f0428a5ffce…`, cake_lpr
+> again (a condition of the AI model review, not a person): decompressed SHA-256 `1abf185657fb6509…` = ROUND6.md, CNF `fcc31f0428a5ffce…`, cake_lpr
 > heap 4,000 MB: `s VERIFIED UNSAT` (`receipts/trim_d48_m16_check_20261124.jsonl`); the untrimmed `d48_m16` (3.32 GB)
 > was then deleted at 19:25. Manifest: `~/research/data/verify-20261124/manifest_deletions.txt`. Total 29.97 GB.
 

@@ -22,7 +22,7 @@ Then a final end theorem `ForcesConvexNGon 302 8` modulo exactly those verdicts,
 
 ## Gates before the full run (as FV304)
 pilot (a few contexts incl. a multi-module one and a depth-15 one), corruption control rejected, calibration (s/leaf,
-memory), pins, pre-registration written here before any chunk, advisor check, heat/memory plan with s35_20.
+memory), pins, pre-registration written here before any chunk, AI model review (not a person), heat/memory plan with s35_20.
 
 ## Status
 - ~03:05 plan written. Next: FcatZZs16 + BridgeZZs16.
@@ -71,7 +71,7 @@ Launch: unit esr-fv2-drv, FV2_JOBS 6 (exporters included, at most 2 at once, eac
 FV2_MEM 9000, FV2_TMAX 86, YIELD file honoured, disk floor 150 GB; memguard esr-memguard-1124c track fv2=10000.
 Raise FV2_JOBS when esr-vfy-all (K9/c6 re-check) ends.
 - 04:47:49 LAUNCHED: unit esr-fv2-drv (FV2_JOBS 6, FV2_EXPMAX 1, FV2_MEM 9000, FV2_TMAX 86); drive302.py sha256
-  bba444dd… (pins-launch.sha256 rewritten at launch: done-cache + 3 s cycle added after the first pin). The advisor
+  bba444dd… (pins-launch.sha256 rewritten at launch: done-cache + 3 s cycle added after the first pin). The AI model review (not a person)
   call before launch timed out; launched on my own review (pilot, both controls, gates). Exporter 0:8155 first.
 - 04:55 tools/axiom_audit.py (strips the profiler fragment ".olean serialization took N ms" that can land inside a
   `#print axioms` line, then requires standard axioms, lean_rc=0, no sorryAx/ofReduceBool): s35_20's 9 axiom ALERTs
@@ -82,7 +82,7 @@ Raise FV2_JOBS when esr-vfy-all (K9/c6 re-check) ends.
   restart (records their verdicts; leaves -1 in run.tsv) — sha256 d39d7b4a… (pins-launch.sha256 rewritten);
   FV2_JOBS 8, FV2_MEM 11000. Restart command = the launch command with these values.
 - 05:10 yield guard esr-ygd-guard restarted with a 10-day horizon (YG_HORIZON=864000, RuntimeMaxSec 10d; it was due to
-  exit 26 Nov 01:11, before the campaigns end; both drivers honour its YIELD file). Advisor (post-launch, 05:08): keep
+  exit 26 Nov 01:11, before the campaigns end; both drivers honour its YIELD file). AI model review (post-launch, 05:08; not a person): keep
   running; test root302 --root and a multi-level --sub before the campaign reaches them.
 - 05:15 join tests (scratch-roottest/, never the real olean dir): T_multi = root302 --sub 0000000000 (32 compiled
   contexts, 36 modules, 5 trie levels + 5 skeleton joins): lean_rc 0, standard axioms, 7 s. Root = root302 --root 5
@@ -107,10 +107,10 @@ Raise FV2_JOBS when esr-vfy-all (K9/c6 re-check) ends.
   reached through this root's symlinks and FV304's root: the same files). Extra checks: forbidden-token scan of the 40
   join/support sources clean; every E302ZZ olean newer than its imports.
   Deviations (stated): item 3's "driver.log without ALERT" replaced by the log audit (42 profiler ALERTs); 4 adopted
-  compiles with leaves -1; drive302.py re-pinned at launch; the pre-launch advisor call timed out; the first fv2a run
+  compiles with leaves -1; drive302.py re-pinned at launch; the pre-launch AI model review call timed out; the first fv2a run
   flagged the 8 symlinked modules as two providers (a bug in fv2a, fixed: symlinks resolved).
   **Result: `OmissionBalancedZZsN.ExcludesHoleBudgetZZsN 16 69` is Lean-checked (`E302ZZ.Final.excludes_69`).**
-  Additions to the acceptance entry (advisor consult, 25 Nov between 20:13 and 20:23; corrected 21:10 from "~21:00"): (a) item 3 is literally "every module lean_rc 0
+  Additions to the acceptance entry (AI model review, not a person, 25 Nov between 20:13 and 20:23; corrected 21:10 from "~21:00"): (a) item 3 is literally "every module lean_rc 0
   in run.tsv"; run.tsv has 32,974 module rows and the closure 32,991 E302ZZ module logs: the 17 without a row are the
   pilot's (13 chunk modules of contexts 4116 x9, 12975, 8558, 9085, 9086; the joins P_12975, P_4116, P_sib; FinalTest),
   compiled 04:25-04:38 before the driver's run.tsv existed; all 17 logs pass the log audit (lean_rc 0, standard

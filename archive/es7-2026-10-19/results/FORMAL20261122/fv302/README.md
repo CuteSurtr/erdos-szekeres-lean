@@ -18,7 +18,7 @@ and `E302ZZ.Final.forces_302_of_n54_res : N66Bound 54 → ResidualBound 118 → 
 - Not mirrored: the generated chunk sources export/src/E302ZZ/C*.lean (84 GB = 78.06 GiB; regenerable byte for byte
   by export302.py, test of 25 Nov in `regen-test/`: 83 contexts / 137 modules identical), the oleans and the module
   logs. The join sources (S_*, P_*, Root, Final, FinalTest) are mirrored in `joins/`.
-- **Deleted 25 Nov 2026, done 20:29:26** (manifest time; corrected 21:10 from "~21:40") (owner rule of 25 Nov "delete what has already been formalized"; advisor-checked;
+- **Deleted 25 Nov 2026, done 20:29:26** (manifest time; corrected 21:10 from "~21:40") (owner rule of 25 Nov "delete what has already been formalized"; checked in an AI model review (not a person);
   receipts pushed in c8e052d39): the 32,953 generated chunk sources `export/src/E302ZZ/C*.lean` (83.82 GB) by
   `verify-20261124/delete_proofs.py` (dry run and execute: every file re-hashed = receipt, 0 problems, 0 bindings;
   manifest `verify-20261124/manifest_deletions.txt`). Kept: the 38 join sources, all 32,618 `export/ctx` manifests,

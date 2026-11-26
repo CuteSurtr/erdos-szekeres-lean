@@ -7,9 +7,9 @@ we need". What: every receipt row (64 encoder B: 32 c6upper-replay/B + 32 c6uppe
 re-hashed against the receipt (checked 26 Nov: 96/96 equal), then certify_cnf.sh (CaDiCaL 2.1.3 --lrat, cake_lpr
 c14ff498 at heap 8000 as in the 24 Nov re-check, verdict only on the exact line), proof kept. Runs after the N66
 re-solve (run_queue.sh d1 3 10: 3 at once, 10 GB units, guard track n66). Labels: none change before 96/96, then
-the advisor. HEURISTIC: old proofs 43.3 GB zstd in total.
+an AI model review (not a person). HEURISTIC: old proofs 43.3 GB zstd in total.
 
-- 2026-11-26 12:10:19 (deviation, after an advisor consult): JOBS 3 -> 4. Measured over 2,622 samples (10:54:18-12:09:12,
+- 2026-11-26 12:10:19 (deviation, after an AI model review (not a person)): JOBS 3 -> 4. Measured over 2,622 samples (10:54:18-12:09:12,
   `measure_mem.sh`, `mem_samples.tsv`, memory.stat anon per unit): CaDiCaL phase 416-545 MB, cake_lpr phase 8,037-8,046 MB
   (heap 8000, unchanged), max total over the d1 units 16,583 MB. Rule: JOBS = floor(0.85 x track / 8,046 MB); the
   memguard n66 track was widened 26,000 -> 38,000 MB inside the unchanged esr total of 40,000 MB (guard

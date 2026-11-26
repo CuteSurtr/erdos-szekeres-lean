@@ -57,7 +57,7 @@ Made on 20 Nov:
 - Level-15 disk policy: partial files of timed-out cube runs are deleted; certified leaves keep `trim.lrat.zst` and
   `cert.cnf.zst`, and the originals are removed only after the hash check (`c15_post.sh`).
 - memguard n66 track 17 GB, with the total at 24 GB.
-- Main model Opus, advisor Fable; consult points in `.claude/skills/es-research/SKILL.md` §7.
+- Main model Opus; reviews by a second AI model (Fable), not by a person; consult points in `.claude/skills/es-research/SKILL.md` §7.
 
 Open:
 - Deletions:
@@ -76,7 +76,7 @@ Open:
   Holdout-test a projection before quoting it.
 - Check the memguard track budget before launching on a track: the L15 pilot was stopped at the 3,000 MB default.
 - The first start of the L15 driver crashed because its output folder did not exist (fixed: makedirs).
-- The verifier copy kept the level-14 F_c hash constant in `summarize.py`. The advisor's pre-launch review caught it.
+- The verifier copy kept the level-14 F_c hash constant in `summarize.py`. The pre-launch AI model review (not a person) caught it.
 
 - **OOM kill at 18:21 (my error).** The first formal-verification helper (`esv-fv-ctx`, MemoryMax 1G) was started
   before any memory guard covered `esv-*` units, and a full JSON parse of the large tree files reached the limit: the

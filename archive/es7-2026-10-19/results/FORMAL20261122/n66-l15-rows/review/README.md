@@ -18,7 +18,7 @@ Nothing outside this directory is edited. Deliverable: `VERIFY_n66-l15-rows.md` 
 
 ## Status
 - 22:47 started.
-- 23:39 VERIFY file final (advisor's wording fixes: 56 axiom lines; supporting-theorem paragraph; not-re-run list; worker source manifest 148/148).
+- 23:39 VERIFY file final (wording fixes from an AI model review, not a person: 56 axiom lines; supporting-theorem paragraph; not-re-run list; worker source manifest 148/148).
 - 23:37 R4-R6 done. Verdict: statement faithful; label confirmed (Lean-checked modulo CubesUnsat105R and RowCertsUnsat under E1-E6); co-import compile not re-run (static check only).
 - 23:12 R3 done: 105/105 trims byte-identical (own code), E2 record lines 105/105, 5/5 controls. R4 (unit e1r) running, then R5 (unit cake) via review/driver.sh.
 - 23:02 R1, R2 done: all static checks pass; the one compile is rc 0 with standard axioms only; restatements accepted; both own kernel negative controls evaluate to false; #eval dump of R1_15 = rows_used15.txt.

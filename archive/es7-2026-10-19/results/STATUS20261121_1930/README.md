@@ -230,7 +230,7 @@ finished. None of the workers' claims below reached the verifier stage: they are
   E3-E6 (sevenfold record updated).
 - **E3 on every text:** cake_lpr's parse = the Lean printers' texts for all 2,759 verdict texts of the end theorem
   (`~/research/data/e3-20261125/e3all.json`).
-- **Deletion now follows fv2a, not part 3** (advisor): FV302's 32,953 chunk sources (78.06 GiB; receipts
+- **Deletion now follows fv2a, not part 3** (AI model review, not a person): FV302's 32,953 chunk sources (78.06 GiB; receipts
   `FORMAL20261122/fv302/receipts/fv302_chunk_sources_20261125.tsv`) go by `verify-20261124/delete_proofs.py` after this
   push and a clean dry run; `export/ctx` and the join sources stay.
 - **Deleted, done 20:29:26** (corrected 21:10 from "~21:40"): FV302's 32,953 chunk sources (83.82 GB; dry run and execute clean; free 1,115.3 GB). s35_20's
@@ -245,7 +245,7 @@ finished. None of the workers' claims below reached the verifier stage: they are
   (unit `esr-fvr-r3520`, MemoryMax 30G; reads its 135 GB of oleans many times over, as the flat tries did).
 - **20:51 N66 re-solve launched** (`~/research/data/n66-resolve-20261125`, PLAN.md pre-registered 20:44): the 105
   level-15 cube leaves whose proofs were deleted 24 Nov, all 105 `trim.cnf` hashes = receipts; driver `esr-vfy-n66drv`,
-  4 jobs, proofs kept; labels change only when `tally.py` gives 105/105. Advisor timed out; launched on my own review.
+  4 jobs, proofs kept; labels change only when `tally.py` gives 105/105. The AI model review timed out; launched on my own review.
 - **21:01-21:07 C4 Lean-checked modulo one CERTIFIED verdict** ([FORMAL20261122/fivefold](../FORMAL20261122/fivefold/README.md)):
   the sevenfold development's generic encoder-B lemmas at (5,7,7); `twin-base 5 7 7` UNSAT (CaDiCaL 2.1.3 2 s, cake_lpr
   `s VERIFIED UNSAT`), control (5,7,6) SAT, Lean control Bad5 fails. C5 by the same route: `twin-base 4 7 8` is SAT, so
@@ -303,11 +303,11 @@ finished. None of the workers' claims below reached the verifier stage: they are
     port); D11 first only the exact re-check of its 38,250 float-accepted clauses; C3, C2 and D11 encoders take
     weeks (C2's verdicts cannot be re-checked): ask the owner whether the archive waits for them.
   - paper dossiers A-E: `~/research/data/paper302-20261125/dossiers/`; drafting waits for the label fixes.
-- **Token budget:** about 16 M subagent tokens today; no new workflows until part 3 is accepted (advisor).
+- **Token budget:** about 16 M subagent tokens today; no new workflows until part 3 is accepted (AI model review, not a person).
 
 ### 25 Nov from 01:00 (owner: "delete unnecessary files please?"; "you can deploy more agents ... 10% of weekly quota")
 
-- Deleted after pushed receipts, an advisor check and the guarded script: the b67 finder contexts (8.76 GB; FV304
+- Deleted after pushed receipts, an AI model review (not a person) and the guarded script: the b67 finder contexts (8.76 GB; FV304
   accepted as the independent check of the 304 tree; b67/files verified 8,192/8,192 first), all 251 K9 proofs
   (75.83 GB; re-checked 24 Nov), the b69 review sandboxes (2.01 GB) and 2,114 Mac-bundle duplicates (1.15 GB).
   Records: ES304N, SATOPEN, LBK9OCT, ES302N §10, ES8B64MAC.
@@ -337,7 +337,7 @@ finished. None of the workers' claims below reached the verifier stage: they are
   FVR_JOBS when `esr-vfy-all` ends. Its 9 axiom ALERTs are profiler text inside the axiom lines (LAUNCH_NOTE, 04:55;
   `fv302-20261124/tools/axiom_audit.py`); unit 161 re-exports byte-identically.
 - **c6upper proofs deleted 05:06** (96, 43.34 GB) after a fresh cake_lpr re-check 96/96 and pushed receipts (868733e95,
-  C6UPPER §8); CNFs kept. The advisor check of the protocol above was made only afterwards (no objection).
+  C6UPPER §8); CNFs kept. The AI model review (not a person) of the protocol above was made only afterwards (no objection).
 - **Guards:** `esr-memguard-1124d` (fv2=12500, total 36000); `esr-ygd-guard` restarted 05:09 with a 10-day horizon (the
   old one would have exited 26 Nov 01:11); `esr-pin-guard` (agents-20261121/pin_guard.sh, to about 18:14) keeps the
   M(16) cubes on cores 0-3 and moves unpinned bulk jobs to cores 4-15.
@@ -353,7 +353,7 @@ finished. None of the workers' claims below reached the verifier stage: they are
   23,994, B2 82,262 / 13,539, no cover missing. No 9.4 record (needs audit_rc 0).
 - **Owner 24 Nov ~17:55: "keep cleaning, commit and push, delete redundant or useless files, map roadmaps, and consider
   starting m16 if its necessary".** Record edits pushed (9acd1e9c3). Roadmap map: ROADMAP20261115/CLEANUP_MAP_20261124.md.
-  52 roadmap proofs re-checked 52/52, receipts pushed (6e39be770), advisor, deleted 19:18-19:25 (29.97 GB; 6709ee1b8).
+  52 roadmap proofs re-checked 52/52, receipts pushed (6e39be770), AI model review (not a person), deleted 19:18-19:25 (29.97 GB; 6709ee1b8).
   M(16) not restarted (own projection >= 5.7e4 CPU-h). Open for the owner: the b67 finder contexts (8.8 GB) need an
   explicit "FV304 is the independent check of the 304 tree" (ES304N §4 keeps them until one); FV304 chunk sources
   stay (owner, 23 Nov).
@@ -366,7 +366,7 @@ finished. None of the workers' claims below reached the verifier stage: they are
 
 - **Protocol per set:** an independent check (or the record of one), then a receipts file in git (per proof: file hash,
   decompressed proof hash, CNF hash, the campaign's exact cake_lpr line, the independent re-check line), pushed, then an
-  advisor check, then `verify-20261124/delete_proofs.py` (re-hashes every file against the pushed receipts just before
+  AI model review (not a person), then `verify-20261124/delete_proofs.py` (re-hashes every file against the pushed receipts just before
   deleting; refuses if a Lean project file, a FORMAL "original in" line or a running unit names a file). Manifest:
   `~/research/data/verify-20261124/manifest_deletions.txt`. The keep-set override is recorded there and in memory.
 - **Batch 1 done (01:50-02:00): 128.3 GB.** The 237 N66 cube proofs (receipts `N66N20261113/receipts/`, 237 of 237:
@@ -404,14 +404,14 @@ finished. None of the workers' claims below reached the verifier stage: they are
 - **Audit** (read-only workflow `cleanup-formalize-audit-1123`, 22 agents, two skeptics per candidate set, nothing
   deleted by agents): `~/research/data/cleanup-20261123/plan/PLAN.md`, `plan.json`, `owner_question.md`, and the
   formalize-to-free map `formalize-map/FORMALIZE_TO_FREE.md`.
-- **Deleted (set A, 04:05, advisor-checked; manifest `~/research/data/cleanup-20261123/manifest.txt`):** C42 (11
+- **Deleted (set A, 04:05, checked in an AI model review (not a person); manifest `~/research/data/cleanup-20261123/manifest.txt`):** C42 (11
   `cert.cnf` of SIGTERM-killed N66 CEGAR iterations, no verdict), C43a (2 temp dirs), NO-A2 (1 temp CNF): 14 paths,
   7.48 GB. The certified twin `p2/b13g/it1/cert.cnf` and the F_c `p2/b14h2/it1/cert.cnf` stay; the ledger's 1,302
   must-keep paths: 0 missing.
 - **Set B, owner answer about 04:35 ("can they be deleted?"; ticked: small safe groups, duplicates, Delta-3 traces,
   stopped searches; compress the N66 cube CNFs and the CNFs beside proofs).** Executed 16:19 by
   `cleanup-20261123/exec-b/delete_B.py` (every duplicate re-checked byte for byte against its surviving copy just before
-  deletion; no protected path inside a deleted folder; no process using a path; advisor-checked): **4,783 paths, 81.07 GB
+  deletion; no protected path inside a deleted folder; no process using a path; checked in an AI model review, not a person): **4,783 paths, 81.07 GB
   freed** (df 718.45 -> 799.52 GB). Sets: C18a, C15a, NO-B8, C42b, C32 (the trace only), C33, two crash reports, C23a,
   N66-B2, C24, NB03, C29, C30, NO-B9, NB01 (b68z), NO-B16 (10 unanswered K9 bases), C37 (budget 65 abandoned), C40.
   Small logs and models copied aside to `cleanup-20261123/kept/` first. Record notes (local, uncommitted): DELTA3N,
@@ -478,7 +478,7 @@ finished. None of the workers' claims below reached the verifier stage: they are
 - About 24 threads are busy, under the cap of 28. The yield guard runs as a background shell of the main session and ends
   with it; the b69 watcher already exited (8 h heartbeat). The memory guards stay.
 - **Nothing new starts** (owner): not b69's checks when the finder ends, not the s35_20 campaign, not rung-36 case A.
-- **Next steps, each after the owner's OK and an advisor check:**
+- **Next steps, each after the owner's OK and an AI model review (not a person):**
   - b69 finder ended: its checks are prepared in `bal186-20261119/b69prep` (v5n54 assembly, chain302; review 6 of 6).
   - s35_19 finished: accept it by `res-slices-fv/README.md` §9, then compile `combined/src/Combined/Switch3519L15.lean`
     (`combined/README.md` §2.9).
@@ -600,7 +600,7 @@ systemd-run --user --unit=esr-rck-m16-copy --on-calendar='*:23' -p CPUQuota=100%
   - the large residual slice trees (s20, b35s19, b35s20: hundreds of CPU-h and up to about 300-500 GB of oleans);
   - FV302, after b69's checks;
   - FV303, skipped because 302 supersedes it.
-  Each needs an advisor check before launch.
+  Each needs an AI model review (not a person) before launch.
 - **Commit and push** of the N66 ≤ 54 record and these notes: blocked by the permission system, which read the
   owner's "yeah" as not explicit enough for a push; an explicit OK is needed.
 - **Cleanup sets whose conditions now hold** (not approved): C42 and C43a (the L15 campaign has ended) and C44 (after
@@ -611,7 +611,7 @@ systemd-run --user --unit=esr-rck-m16-copy --on-calendar='*:23' -p CPUQuota=100%
 - **Basis:** the ledger workflow `ledger-1122` (27 agents) mapped all 195 records and all 64 data folders; skeptics
   overruled 9 of the 44 candidates. Plan: `~/research/data/ledger-20261122/CLEANUP_PLAN.md`.
 - **Approved:** the owner approved the NOW bucket only (16 sets).
-- **Checks before deleting:** the advisor reviewed the list; every survivor condition was re-checked; a re-grep of all
+- **Checks before deleting:** an AI model (not a person) reviewed the list; every survivor condition was re-checked; a re-grep of all
   work after the skeptic pass and of the two new commits found no reference; C12's 27 paths contain no kept certified
   CNF; nothing had changed since 05:30.
 - **Deleted:** 59 exact paths, 13.71 GB. All 1,302 must-keep paths are still present.

@@ -26,7 +26,7 @@ against its receipt, went through `certify_cnf.sh` (CaDiCaL 2.1.3 `--lrat`, cake
 **Proofs kept:** in the work directory's `out/` (41 GB zstd, 162.8 GB raw), not in git. `verify_zst.sh` decompressed
 each `.lrat.zst` and compared its SHA-256 with the hash recorded before compression: 96/96 OK (`zst_roundtrip.tsv`).
 
-**Deviation:** JOBS 3 → 4 at 12:10:19, after an advisor consult (`PLAN.md`; peak memory measured by `measure_mem.sh`
+**Deviation:** JOBS 3 → 4 at 12:10:19, after an AI model review (not a person) (`PLAN.md`; peak memory measured by `measure_mem.sh`
 → `mem_samples.tsv`).
 
 **Not done:** no second LRAT check (Lean core's checker loads a whole proof); no review; nothing about encoder A's

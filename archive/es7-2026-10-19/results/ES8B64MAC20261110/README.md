@@ -135,10 +135,10 @@ So it never finds a live job, and `campaign/STATUS` shows `"running": []` while 
 The bundle's `runs/` held 2,114 files byte-identical (SHA-256, both copies hashed on 25 Nov) to the same-named files in
 `~/research/data/es8-b64-pilot-20261105/runs` (the imported copies, which the ES(8) <= 310 re-check reads). These 2,114
 duplicates (1.15 GB; `receipts/mac_bundle_duplicates_20261125.tsv` lists each with its survivor and both hashes) are
-deleted after this table is pushed and an advisor check. The bundle's other trees, `SHA256SUMS` and the result files
+deleted after this table is pushed and an AI model review (not a person). The bundle's other trees, `SHA256SUMS` and the result files
 stay. `sha256sum -c SHA256SUMS` inside the bundle now reports these 2,114 as missing; check them against the survivors
 with the receipt table instead.
 
-**Done 25 Nov 01:58:** the 2,114 duplicates were deleted after the push (commit 40af6aa1f), an advisor check and a
+**Done 25 Nov 01:58:** the 2,114 duplicates were deleted after the push (commit 40af6aa1f), an AI model review (not a person) and a
 whole-repo grep (no script reads the bundle; only this record and LEAN_STATUS_20261122 name it). Manifest: set
 macbundle-dups-20261125 in `~/research/data/verify-20261124/manifest_deletions.txt`.

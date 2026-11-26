@@ -344,7 +344,7 @@ avoiding_305 (hB : ErdosSzekeres.Omission.Partition.BalancedBound 186)
     `git ls-files --error-unmatch <file>` and `git diff --quiet HEAD -- <file>`.
   - `.git/index` was last modified at 05:47:37 KST, which is commit `b01f0acd9`'s time and before this session's
     first git command.
-- **The memory-rule reading is mine.** It was reviewed by the advisor and pre-registered in the README before
+- **The memory-rule reading is mine.** It was reviewed by an AI model (not a person) and pre-registered in the README before
   any compile.
 
 ## 10. Files

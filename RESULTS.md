@@ -32,6 +32,10 @@ such that every N such points contain a convex k-gon.
   encoder.
 - **Recorded verdicts**: pieces that were certified in this way when they were solved and whose proofs were deleted
   afterwards. The records keep the verdicts and hashes; such a piece can be checked again only by solving it again.
+- **AI model review**: some records say that a step was checked by an AI model consulted for review; that model is
+  never a person. Older records, and archived tool files, logs and generated outputs (left byte-identical because
+  their hashes are pinned), call it the "advisor": the word means that AI model, not a human supervisor. The prose
+  of the records was reworded on 26 November 2026 ([WORDING20261126](archive/es7-2026-10-19/results/WORDING20261126.md)).
 - **EXACT TREE**: a branch-and-bound certificate whose every leaf margin was recomputed in exact integers by
   `scripts/omission_tree.check_tree`.
 - **EXACT**: an exact computation (integer or exact algebraic arithmetic) on explicit objects, such as point sets.

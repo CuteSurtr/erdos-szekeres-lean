@@ -138,12 +138,12 @@ systemd-run --user --unit=esr-bal-start302 -p CPUQuota=10% -p MemoryMax=500M -p 
 
 The b69 review's own sandboxes `~/research/data/bal186-20261119/b69prep/verify/ctl/{neg,negroot,rvself}` and
 `verify/chain/*` (987 files, 2.01 GB; listed with sizes and SHA-256 in `receipts/b69prep_reviewer_scratch_20261125.tsv`)
-are deleted after this table is pushed and an advisor check. The review itself calls them "re-creatable scratch. They
+are deleted after this table is pushed and an AI model review (not a person). The review itself calls them "re-creatable scratch. They
 can be deleted after this review is read" (`data/b69prep/verify/VERIFY_b69-prep.md` §8, which also gives the commands
 that rebuild them). Kept: everything else in b69prep, in particular `start302.sh`, `chain302.sh` (the resume command of
 §8), the checks' own control trees `ctl/b67c16`, `ctl/b68c8`, `ctl/dry_*` and `ctl/ctl_result.json` (§5).
 
-**Done 25 Nov 01:57:** the 987 files were deleted after the push (commit 40af6aa1f) and an advisor check, which first
+**Done 25 Nov 01:57:** the 987 files were deleted after the push (commit 40af6aa1f) and an AI model review (not a person), which first
 confirmed that every input of `verify/tools/` still exists, so the sandboxes remain re-creatable; the empty directories
 under the 22 roots were then removed (`find -depth -type d -empty -delete`). Manifest: set b69prep-scratch-20261125 in
 `~/research/data/verify-20261124/manifest_deletions.txt`.

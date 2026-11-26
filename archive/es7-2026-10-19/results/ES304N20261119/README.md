@@ -94,7 +94,7 @@ cd /home/jay/research/data/bal186-20261119/zrow
 **FV304 chunk sources (25 Nov 2026; owner: "yeah keep cleaning and formalize and verify everything and delete what has
 already been formalized", answering whether the FV304 chunk sources may go).** The 8,198 generated chunk sources
 `~/research/data/fv304-20261120/export/src/E304Z/C*.lean` (20.62 GB; list sha256 f65b7456…, the 23 Nov route (a)) are
-deleted after `receipts/fv304_chunk_sources_20261125.tsv` (path, size, SHA-256 of each) is pushed and an advisor check.
+deleted after `receipts/fv304_chunk_sources_20261125.tsv` (path, size, SHA-256 of each) is pushed and an AI model review (not a person).
 **Regenerable:** on 25 Nov 20 randomly chosen contexts (seed 20261125; `~/research/data/cleanup-20261125/fv304-regen`)
 were re-exported from `zrow/b67/files` with `experiments/omission-compact-checker-2026-11-05/export_es304z.py` and all 20
 modules came out byte-identical to the kept sources. **Kept:** the compiled proof `fv304-20261120/olean/E304Z` (26.4 GB),

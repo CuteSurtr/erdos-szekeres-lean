@@ -152,7 +152,7 @@
   ones, `Root: …RS3520.root` and `Final: …RS.s35_20` (the gate has neither).
 - 22:38 final hashes (`data/tools-frozen.sha256`, `data/gate-files.sha256`), diffs regenerated, `LAUNCH_PLAN.md`
   written.
-- 22:38–22:46 after the advisor's final review:
+- 22:38–22:46 after the final AI model review (not a person):
   - sandbox scenario E (`tools/test_drive_v3_sandbox.py`): with the plan's environment the driver launches the
     exporter plus exactly 3 chunk compiles, estimates 450 + leaves // 20 (800 MB at 7,000 leaves in `driver.log`),
     `compile.sh` arguments as v2; all 5 scenarios OK (`logs/test_drive_v3_sandbox.out`);

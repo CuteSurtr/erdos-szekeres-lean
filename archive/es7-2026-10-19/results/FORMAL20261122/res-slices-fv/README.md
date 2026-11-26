@@ -17,7 +17,7 @@ joins (Root, Sub*), `root-flat/`, `export/*/ctx` manifests and skeletons, `repri
 input directories, which are now the only source to regenerate the chunk sources.
 
 **Deleted 26 Nov 2026, 01:16-01:23 KST** (owner, 25 Nov evening: "delete things that are already formalized and verified";
-advisor's conditions met: the resumed chain's own "finish recipe ok", receipts pushed in 5962af2bd, dry run clean):
+the conditions of an AI model review (not a person) met: the resumed chain's own "finish recipe ok", receipts pushed in 5962af2bd, dry run clean):
 23,098 files, 108.10 GB, by `verify-20261124/delete_proofs.py` (`receipts/delete_slices.sh`; dry run and execute: every
 file re-hashed = receipt, 0 problems; manifest `verify-20261124/manifest_deletions.txt`). Free disk 1,046.4 ->
 1,141.7 GB (the N66 re-solve was writing proofs at the same time).

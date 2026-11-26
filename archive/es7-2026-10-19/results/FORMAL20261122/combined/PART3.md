@@ -2,7 +2,7 @@
 
 Written before `E302ZZ.Final` (FV302) and `RS.Final3520` (res-slices-fv) exist: at 16:02 FV302 had 29,905 chunk
 modules and 29 of 32 sub-roots compiled, s35_20 20,855 modules (no Root, no Final). Nothing here has been compiled.
-No bound and no research label changes before §6 holds and the advisor has been consulted (es-research §7).
+No bound and no research label changes before §6 holds and an AI model has been consulted for review (not a person; es-research §7).
 
 ## 1. Gates (all must hold before the first compile)
 
@@ -61,7 +61,7 @@ the whole path must report no module file with two providers.
 3. `audit3` reports `"problems": []` (every closure module from exactly one root, every file hash equal to its pin).
 4. The label then reads: **ES(8) ≤ 302, Lean-checked modulo the cake_lpr verdict propositions H-N66C (105), H-N66R
    (629) and H-ROWS (2,025), trust items E1-E6 (E3 tested, not proved)**. Stated in REMAINS.md and the records only
-   after the advisor consult. Known limits to state with it: the 105 N66 cube proofs were deleted on 24 Nov (two
+   after the AI model review (not a person). Known limits to state with it: the 105 N66 cube proofs were deleted on 24 Nov (two
    recorded acceptances; a re-run needs a re-solve); no external review.
 
 ## 7. Corrections (dated; the original text is in git, commit 7311d7e66)
@@ -69,7 +69,7 @@ the whole path must report no module file with two providers.
 - 25 Nov 2026 16:35 KST, before either driver ended: gate 2 first said the leaf sum is 119,054,034, the tree's
   leaf count (238,116,145 nodes). The Lean-side sum pre-registered for s35_20 is 119,054,033 = 119,054,034 minus
   the "state 0 missing" leaf (`zero_mem_residualOccupied`), as for s35_19 (7,763,207 tree leaves, Lean sum
-  7,763,206). Found by the advisor consult; no result was known when it was corrected.
+  7,763,206). Found by the AI model review (not a person); no result was known when it was corrected.
 - 25 Nov 2026 ~19:40 KST, before any part-3 compile: §5's estimate (anon+shmem 1-3 GB, MemoryMax 12G) is contradicted
   by the s35_20 Root: the flat `RS3520/Root.lean` (21,495 imports, 23,485 join theorems) held 7.0 GB anonymous for the
   s35_20 closure alone, reached 23.9 GB maximum RSS, and aborted twice with "Stack overflow detected" (lean_rc 134;
@@ -109,3 +109,5 @@ the whole path must report no module file with two providers.
   RuntimeMaxSec 10800 for the unit (3600 before; the closure is about 245 GB of oleans). run_part3e.sh's last step
   (restart the N66 re-solve driver) is dropped: the re-solve ended at 06:13 with 105/105 CERTIFIED and its driver has
   ended (n66-resolve-20261125/PLAN.md).
+- 26 Nov 2026 (owner's wrap-up request), wording only: "advisor" was replaced by "AI model review (not a person)" in
+  lines 5, 64 and 72; nothing else changed. `data/manifest4.sha256` pins the version accepted at 10:50 (git 54908d4ad).

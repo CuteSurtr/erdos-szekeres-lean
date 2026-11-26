@@ -1,7 +1,7 @@
 # CLEANUP20261126: unnecessary Lean files and an already-uploaded copy deleted (26 Nov 2026)
 
 Owner, 26 Nov: "upload every verified things to my github repo and clean this pc up ... clean up by delete already
-uploaded and unnecessary lean files". The advisor was consulted (es-research §7). `receipt.json` (from `receipt.py`)
+uploaded and unnecessary lean files". An AI model was consulted for review (not a person; es-research §7). `receipt.json` (from `receipt.py`)
 gives, per deleted target, its file count, bytes and a content digest; `receipt.py check` re-hashed every target right
 before deletion.
 

@@ -81,7 +81,7 @@ re-run with L = 15 and the level-15 F_c (`vfy15/fc/cert.cnf`, `2f78368f…`), by
 four checks; negative controls (level-14 F_c; genchk2 at L = 14) fail as they must.
 
 
-## 8. Acceptance (22 Nov 2026, main session, after the advisor's blocking checks)
+## 8. Acceptance (22 Nov 2026, main session, after the blocking checks of an AI model review (not a person))
 
 | check | result | evidence |
 |---|---|---|

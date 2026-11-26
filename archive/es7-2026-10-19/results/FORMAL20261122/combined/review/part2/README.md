@@ -28,7 +28,7 @@ lean at 80 % of MemoryMax (4,915 MB). Hash/print units: MemoryMax 2G-5G as sized
 ## Status
 - 23 Nov 00:20 R0 done. s35_19 not finished at 00:10 (the driver `esr-fvr-drv` is compiling `esr-fvr-c3519-C0119xx`
   chunks). cpu_free.sh esr = 3, Tctl 84 C at 00:10.
-- 00:24:51 R2 started: unit `esr-ag-rv5-p2ax`, `lean/RV5P2Review.lean` sha256 `c441ce98…` (B9 moved last, B3 per-pair try/catch, per the advisor). Tools `tools/rv5p2_audit.py` and `tools/rv5p2_bind.py` written while it runs.
+- 00:24:51 R2 started: unit `esr-ag-rv5-p2ax`, `lean/RV5P2Review.lean` sha256 `c441ce98…` (B9 moved last, B3 per-pair try/catch, per an AI model review, not a person). Tools `tools/rv5p2_audit.py` and `tools/rv5p2_bind.py` written while it runs.
 - 00:34:28 R2 done. Axioms of all four worker theorems and of the reviewer's re-elaborations exactly [propext, Classical.choice, Quot.sound]; TYPEEQ alpha=true defeq=true for the four end theorems and both N66 bounds; binders 8/8/9/9, none intermediate; RS.s35_19 MISSING; interpreter dumps equal rows_used15.txt (f45e25f1) and the l15 reviewer's leaves dump (5f188424).
 - 00:37 R3 done (audit: 13,786 modules, one provider, all hashes equal earlier records, 0 component-env mismatches, ctime bounds hold, 4 N66 manifests clean; bind: 5 trims, 3 templates + 1 core, T208 sub-list, 4 rows byte-identical; fresh cake_lpr 5/5 ACCEPT, 1/1 negative rejected).
 - 00:37:29 status.json read once (read-only): s35_19 still not done (3519 at 651 modules, no root/final).

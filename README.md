@@ -30,6 +30,10 @@ and the [open problems](RESULTS.md#open-problems). The [exposition](math.md) giv
   from the geometry to the formula is a written encoder proof unless stated otherwise.
 - **EXACT TREE**: a branch-and-bound certificate whose every leaf was recomputed in exact integers.
 - **Written proof**: not machine-checked; some were reviewed inside the project.
+- **AI model review**: some records say that a step was checked by an AI model consulted for review; that model is
+  never a person. Older records, and archived tool files, logs and generated outputs (left byte-identical because
+  their hashes are pinned), call it the "advisor": the word means that AI model, not a human supervisor. The prose
+  of the records was reworded on 26 November 2026 ([WORDING20261126](archive/es7-2026-10-19/results/WORDING20261126.md)).
 
 **None of the project's results has been refereed.** [RESULTS.md](RESULTS.md#status-labels) defines all labels.
 

@@ -536,10 +536,10 @@ MemoryMax 4 G). Cut/search loop on a packet: `tools/continue34_v3.py --deadline=
 **Retention (25 Nov 2026; owner re-approved after declining on 18 Nov: "yeah keep cleaning ...", answering whether the
 b35s20 finder test packets may go).** The finder test packets `~/research/data/es308-20261114/runs/b35s20/{bb-v9test,
 bb-v11test, bb-v11test2, bb-v12test*, bb-r1118*}` (51 exact paths, 2,466 files, 15.35 GB; cleanup id C38) are deleted after
-`receipts/b35s20_test_packets_20261125.tsv` is pushed and an advisor check. No result depends on them; the V11/V12 review
+`receipts/b35s20_test_packets_20261125.tsv` is pushed and an AI model review (not a person). No result depends on them; the V11/V12 review
 documents of `tools/` (V11_REVIEW.md, V12_REVIEW.md, VERIFY_V11*.md, the claims s1-v11-*, s1r-v11-review,
 r-v12-review-1118) lose in-place reproducibility. Never touched: `bb`, `bb-s1` (the s35_20 tree, input of its running
 Lean campaign) and `bb-hc1*`.
 
-**Done 25 Nov 06:13:** deleted after the push and an advisor check; a whole-repo grep for the packet stems found only
+**Done 25 Nov 06:13:** deleted after the push and an AI model review (not a person); a whole-repo grep for the packet stems found only
 these records. Checked after: `bb`, `bb-s1`, `bb-hc1`, `bb-hc1-inbox`, `bb-hc1-logs` present.

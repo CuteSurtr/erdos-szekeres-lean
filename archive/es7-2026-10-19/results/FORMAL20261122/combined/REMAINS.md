@@ -7,7 +7,7 @@
 > budget-69 tree (H-T69) and the slice s35_20 (H-S3520) are no longer hypotheses. The control `controls/Bad302.lean`,
 > the same term at 301, fails with exactly one error, the type mismatch. The import audit over the 69,731-module
 > closure reports `"problems": []`: every module comes from one root, every olean hash equals its pin, and part 2's
-> 15,205-module closure is inside with the same files and hashes. PART3.md §6 items 1-3 hold, and the advisor was
+> 15,205-module closure is inside with the same files and hashes. PART3.md §6 items 1-3 hold, and an AI model (not a person) was
 > consulted (es-research §7).
 > **Label (PART3.md §6.4): ES(8) ≤ 302, Lean-checked modulo 2,759 cake_lpr verdicts (H-N66C 105, H-N66R 629,
 > H-ROWS 2,025) and trust items E1-E6 (E3 tested, not proved).**

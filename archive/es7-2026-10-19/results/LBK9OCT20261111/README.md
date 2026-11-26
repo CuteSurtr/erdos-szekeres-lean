@@ -480,7 +480,7 @@ SHA-256 is in `logs/cubes*/c_r/result.txt`.
 
 **Deletion (25 Nov 2026; owner, 24 Nov, answering "Delete the K9 proofs, or keep them?": "delete redundant or useless
 files"; the K9 hold before that was the main session's own):** the 72
-re-checked proofs listed in `receipts/k9lb_recheck_20261124.tsv` and `receipts/k9g3_first_cake_20261124.tsv` are deleted after the advisor check, with the guarded
+re-checked proofs listed in `receipts/k9lb_recheck_20261124.tsv` and `receipts/k9g3_first_cake_20261124.tsv` are deleted after an AI model review (not a person), with the guarded
 `receipts/delete_proofs.py`-style script (`verify-20261124/delete_proofs.py`: every file re-hashed against the pushed
 table first; dry run: 0 problems, 0 bindings). Every CNF (base CNFs and cube unit files), cake output, log and record
 stays; the claims keep their content, and their label becomes **recorded verdicts** in RESULTS.md's vocabulary
