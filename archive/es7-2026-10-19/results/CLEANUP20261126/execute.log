@@ -1,0 +1,17 @@
+free before: 963 GB
+OK   pkg-LEANLB20261111 60177 6406074795
+OK   pkg-ENCBLEAN-geo 60177 6406074795
+OK   pkg-LEANLB7_20261126 60177 6406281852
+OK   regen-fv302 220 1258001114
+OK   regen-s3520 361 1564535424
+OK   regen-slices 383 1529725306
+OK   gh-c2-release-copy 1 2398761295
+check rc=0
+2026-11-26 13:55:45 deleted pkg-LEANLB20261111 60177 files 6406074795 bytes exists after: False
+2026-11-26 13:55:45 deleted pkg-ENCBLEAN-geo 60177 files 6406074795 bytes exists after: False
+2026-11-26 13:55:46 deleted pkg-LEANLB7_20261126 60177 files 6406281852 bytes exists after: False
+2026-11-26 13:55:46 deleted regen-fv302 220 files 1258001114 bytes exists after: False
+2026-11-26 13:55:46 deleted regen-s3520 361 files 1564535424 bytes exists after: False
+2026-11-26 13:55:46 deleted regen-slices 383 files 1529725306 bytes exists after: False
+2026-11-26 13:55:46 deleted gh-c2-release-copy 1 files 2398761295 bytes exists after: False
+free after: 988 GB

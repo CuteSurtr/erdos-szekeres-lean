@@ -5,6 +5,10 @@ uploaded and unnecessary lean files". The advisor was consulted (es-research §7
 gives, per deleted target, its file count, bytes and a content digest; `receipt.py check` re-hashed every target right
 before deletion.
 
+**Done 26 Nov 2026 13:55:45-13:55:46 KST** (`execute.log`): after commit 13c189ede (this receipt) was on origin/main and
+the pushed `receipt.json` equalled the local one, `receipt.py check` re-hashed all 7 targets (7 OK) and they were deleted
+(25.97 GB; free space 963 -> 988 GB, `df -B1G`).
+
 | target | files | GB | why it can go | restore |
 |---|---|---|---|---|
 | `LEANLB20261111/.lake/packages` | 60,177 | 6.41 | duplicate of the repository's Mathlib `f897ebcf` packages | `cp -a <repository>/.lake/packages .lake/` |
