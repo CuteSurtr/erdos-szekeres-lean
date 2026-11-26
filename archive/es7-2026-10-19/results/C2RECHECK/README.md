@@ -7,7 +7,9 @@
 > `local.jsonl` and `C2C34/logs/p8_units.tsv`); the decompressed proof hashed `45999d1a…`; cake_lpr `c14ff498…`
 > (heap 8000) printed `s VERIFIED UNSAT` in 4:53 (8.2 GB). The proof is the campaign's CaDiCaL 3.0.1 proof, so this
 > is a hash-bound acceptance by this machine's cake_lpr, not a new CaDiCaL 2.1.3 certification. Files:
-> `linux-p8-20261125/` (script, log, cake output and timing); the proof is kept in `~/research/data/gh-c2-20261125/release/`.
+> `linux-p8-20261125/` (script, log, cake output and timing); the proof is kept in the private archive repository's release `c2-p8-1-9-2026-11-25` (two parts and their `SHA256SUMS`).
+> The local copy in `~/research/data/gh-c2-20261125/release/` was deleted on 26 Nov after its two halves hashed equal to
+> that release's `SHA256SUMS` (CLEANUP20261126).
 
 Local runs on an Apple M5 Pro, 1–2 November 2026 (UTC). The records re-checked are those of `C2FINAL` (`es7-cloud` at
 1946685ae, unchanged since).

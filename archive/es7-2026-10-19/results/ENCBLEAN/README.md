@@ -280,6 +280,7 @@ cd cloud/es7-2026-10-19/results/ENCBLEAN/geo
 export PATH=$HOME/.elan/bin:$PATH
 CAP="systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10"
 lake exe cache get          # Mathlib oleans for f897ebcf (7335 files, about 6 GB in geo/.lake; network)
+#   offline instead: cp -a <repository>/.lake/packages .lake/   (same f897ebcf; geo's copy deleted 26 Nov, CLEANUP20261126)
 $CAP lake build             # M4: 32 s wall, 2176 jobs, 2.9 GB (logs/m4_build.log); M5–M8 add 6 modules, about 10 s, 2.4 GB (logs/m8_build.log, logs/m8_fix_build.log)
 scripts/audit_geo.sh        # read-only; exit 0 iff AUDIT PASS (logs/m8_fix_audit.log); about 47 s
 scripts/audit_geo.sh --selftest   # plants 22 violations in a temporary copy; exit 0 iff SELFTEST PASS (logs/m8_fix_selftest.log); about 10 s

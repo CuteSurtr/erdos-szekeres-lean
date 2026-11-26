@@ -1,0 +1,37 @@
+⚠ [2026/2044] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [2042/2044] Replayed LeanLB.Audit7
+info: LeanLB/Audit7.lean:45:0: 'LeanLB.threefold31' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:46:0: 'LeanLB.sixfold30' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:47:0: 'LeanLB.fourfold28' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:48:0: 'LeanLB.halfturn32' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:49:0: 'LeanLB.mirror32' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:50:0: 'LeanLB.fivefold31' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:51:0: 'LeanLB.not_forcesConvexNGon_32_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit7.lean:52:0: 'LeanLB.heptagon_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2044 jobs).
+	Command being timed: "systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 lake build"
+	User time (seconds): 1.07
+	System time (seconds): 0.37
+	Percent of CPU this job got: 43%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.29
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 724244
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5436
+	Minor (reclaiming a frame) page faults: 68968
+	Voluntary context switches: 27058
+	Involuntary context switches: 165
+	Swaps: 0
+	File system inputs: 1258624
+	File system outputs: 1856
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

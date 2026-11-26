@@ -1,0 +1,51 @@
+{
+ "pkg-LEANLB20261111": {
+  "path": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LEANLB20261111/.lake/packages",
+  "why": "duplicate Mathlib f897ebcf package copy; 60,103 of 60,177 files equal to the main repository's .lake/packages, the rest Lake .trace/.setup.json bookkeeping (20) and .git internals (42); restore: cp -a ~/research/lean/erdos-szekeres-lean/.lake/packages .lake/",
+  "files": 60177,
+  "bytes": 6406074795,
+  "digest": "9b5db8a3a14dff3745bb1b2d76973085bcfd7d43065242a007a0f22b33287489"
+ },
+ "pkg-ENCBLEAN-geo": {
+  "path": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ENCBLEAN/geo/.lake/packages",
+  "why": "the same (geo's copy, from lake exe cache get on 7 Nov); restore as above, in ENCBLEAN/geo",
+  "files": 60177,
+  "bytes": 6406074795,
+  "digest": "295ba39b5e59455ac878a092a26a560f18ec6e4b90ec2c354532f118a8c05145"
+ },
+ "pkg-LEANLB7_20261126": {
+  "path": "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LEANLB7_20261126/.lake/packages",
+  "why": "the copy restored from the main repository at 13:52:36 for the restore test (the original copy, digest in pkgs.json, was deleted at 13:52:35); restore as above",
+  "files": 60177,
+  "bytes": 6406281852,
+  "digest": "2672084ee5bbdca526618d9cf4917d1945ae0c83b0c9e803579bbeb4659cda46"
+ },
+ "regen-fv302": {
+  "path": "/home/jay/research/data/cleanup-20261125/fv302-regen/export",
+  "why": "regenerated FV302 chunk sources of the 25 Nov regeneration test; verdict in git: FORMAL20261122/fv302/regen-test/compare.json (= work copy)",
+  "files": 220,
+  "bytes": 1258001114,
+  "digest": "7d5d1bb617b110d606c88cecfc2bba1cf1212b1cbdc893906866f1c58507ae9c"
+ },
+ "regen-s3520": {
+  "path": "/home/jay/research/data/cleanup-20261125/s3520-regen/out",
+  "why": "regenerated s35_20 chunk sources of the 25 Nov test; verdict in git: FORMAL20261122/res-slices-fv/regen-test/compare3520.{json,tsv}",
+  "files": 361,
+  "bytes": 1564535424,
+  "digest": "b05e61d8df3cd5831b5a4f63d0e16b748f5a5c766bc8f407d4dd975625fc5abd"
+ },
+ "regen-slices": {
+  "path": "/home/jay/research/data/cleanup-20261125/slices-regen/out",
+  "why": "regenerated slice chunk sources (3318-3519) of the 25 Nov test; verdict in git: res-slices-fv/regen-test/compare_slices.{json,tsv}",
+  "files": 383,
+  "bytes": 1529725306,
+  "digest": "2e097a035ede581806818618c9625ad5ad0f7f6857390252d7d20c3c0369131c"
+ },
+ "gh-c2-release-copy": {
+  "path": "/home/jay/research/data/gh-c2-20261125/release/P8_1-9.lrat.zst",
+  "why": "local copy of the C2 P8_1-9 proof; on GitHub as release c2-p8-1-9-2026-11-25 of the private archive repository (two parts); both halves of this file hash to that release's SHA256SUMS (fetched live, 26 Nov)",
+  "files": 1,
+  "bytes": 2398761295,
+  "digest": "ef13b40d219044d36310a06e233dc4960d4313e6e5c11ff3c7a7c37bbe79b43e"
+ }
+}

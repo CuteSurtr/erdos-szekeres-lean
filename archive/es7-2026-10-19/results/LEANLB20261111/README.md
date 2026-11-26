@@ -152,7 +152,9 @@ rejected (`Tactic decide proved that the proposition ... is false`, three errors
 
 The package is separate from the repository's Lake package (whose `.lake` is not touched). `.lake/packages` is a
 copy of `ENCBLEAN/geo/.lake/packages` (Mathlib `f897ebcf` with its prebuilt oleans, same toolchain; nothing was
-downloaded or rebuilt). Lake 5.0 has no job limit and each kernel-check module needs 4–8 GB, so the build is
+downloaded or rebuilt). **Deleted on 26 Nov 2026** (CLEANUP20261126): restore it first with
+`cp -a <repository>/.lake/packages .lake/` (the same Mathlib `f897ebcf`; the copies differed only in Lake `.trace` bookkeeping and
+`.git` internals). Lake 5.0 has no job limit and each kernel-check module needs 4–8 GB, so the build is
 staged, one module group at a time, each step in a scope of 2 CPUs and 12 GB at nice 10:
 
 ```

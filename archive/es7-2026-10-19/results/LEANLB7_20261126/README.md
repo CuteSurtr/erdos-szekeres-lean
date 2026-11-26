@@ -107,5 +107,6 @@ each; the whole package 74 s wall, peak RSS 3.5 GB.
 
 `LeanLB/` (sources; `Statement7`, `Geometry7`, `Main7`, `Audit7`, `Check/*`, `Data/*` of the six sets are new, the
 rest is copied), `ErdosSzekeres/` (vendored, `VENDOR.sha256`), `scripts/` (`gen_data7.py`, `gen_checks7.py`,
-`audit7.sh`; `gen_data.py` copied), `tests/Reject7.lean`, `logs/`, `SOURCES.sha256`. Reproduce: `lake build`
+`audit7.sh`; `gen_data.py` copied), `tests/Reject7.lean`, `logs/`, `SOURCES.sha256`. Reproduce: restore the Mathlib copy, deleted on 26 Nov (CLEANUP20261126), with `cp -a <repository>/.lake/packages .lake/`
+(the same Mathlib `f897ebcf`; tested on 26 Nov: `lake build` replays and `audit7.sh` passes); then `lake build`
 (Mathlib `f897ebcf` in `.lake/packages`, a copy of LEANLB20261111's), then `scripts/audit7.sh`.
